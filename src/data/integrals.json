@@ -1,0 +1,10 @@
+[
+  {
+    "body": "\\int \\frac{1}{x \\ln{x}} \\space dx",
+    "level": "trivial",
+    "tags": {
+      "topics": ["log"],
+      "method": ["sub", "layer cake"]
+    }
+  }
+]
