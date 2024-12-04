@@ -1,5 +1,5 @@
 {
-	"name": "~",
+	"name": "integrity",
 	"version": "1.0",
 	"private": true,
 	"scripts": {
@@ -9,9 +9,8 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.2",
-		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/kit": "^2.9.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"mdsvex": "^0.11.2",
 		"sass": "^1.77.6",
 		"svelte": "^4.2.7",
 		"svelte-preprocess": "^6.0.1",
