@@ -29,7 +29,7 @@ const config = {
   preprocess: [
     sveltePreprocess({
       scss: {
-        prependData: ``,
+        prependData: `@use './src/styles/mixins/colours' as *;`,
       }
     }),
   ],
