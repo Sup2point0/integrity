@@ -12,7 +12,7 @@ let { children }: Props = $props();
 
 
 <header>
-  <h1> {@render children()} </h1>
+  <h1> {@render children?.()} </h1>
 </header>
 
 

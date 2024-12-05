@@ -7,72 +7,72 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
-<Header title="Integrals" />
+<Header> Integrals </Header>
 
 <div class="content">
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />
   <QuestionCard
     title="Testing"
-    question={"\\int_{a}^{b} f(x) \\, dx"}
+    latex={"\\int_{a}^{b} f(x) \\, dx"}
     date="2024 December"
     tags={["trig", "horror", "sub", "long", "integral", "parts"]}
   />

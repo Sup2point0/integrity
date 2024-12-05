@@ -6,6 +6,7 @@ import Nav from "#parts/core/nav.svelte";
 import Footer from "#parts/core/footer.svelte";
 
 import { fade } from "svelte/transition";
+import { quadIn } from "svelte/easing";
 import { onMount } from "svelte";
 
 
@@ -36,7 +37,7 @@ onMount(() => {
   <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
   <aside class="overlay"
     on:click={() => { active = false; }}
-    transition:fade={{ duration: 500 }}
+    transition:fade={{ duration: 500, easing: quadIn }}
   >
     <div class="content">
       <h1> integrity </h1>
@@ -63,7 +64,7 @@ main {
 aside.overlay {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
@@ -78,11 +79,16 @@ aside.overlay {
   }
   
   h1 {
+    margin-bottom: 1rem;
     color: white;
+    font-weight: 200;
+    font-size: 500%;
   }
 
   p {
     color: white;
+    font-weight: 300;
+    font-size: 150%;
   }
 }
 

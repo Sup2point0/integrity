@@ -27,7 +27,7 @@ import Card from "#parts/ui/card.svelte";
     />
   </div>
 
-  <Clicky text="testing" />
+  <!-- <Clicky text="testing" /> -->
 </div>
 
 
