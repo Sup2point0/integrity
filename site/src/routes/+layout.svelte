@@ -1,5 +1,7 @@
 <script lang="ts">
 
+import "#styles/essence.scss";
+
 import Nav from "#parts/core/nav.svelte";
 
 import { fade } from "svelte/transition";
