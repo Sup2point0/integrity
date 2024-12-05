@@ -45,7 +45,7 @@ a.nav-link {
   @include focus-outline;
 
   img {
-    max-height: 3em;
+    max-height: 2em;
   }
   
   p {

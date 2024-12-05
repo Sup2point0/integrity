@@ -68,7 +68,7 @@ a.credits {
 
 
 img#integrity-title {
-  max-width: 20rem;
+  max-width: 15vw;
 }
 
 img#purple-portal {
