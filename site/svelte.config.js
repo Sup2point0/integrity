@@ -31,6 +31,7 @@ const config = {
       scss: {
         prependData: `
           @use './src/styles/mixins/~colours' as *;
+          @use './src/styles/mixins/~fonts' as *;
           @use './src/styles/mixins/~interact' as *;
         `,
       }

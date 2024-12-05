@@ -31,7 +31,7 @@ let { text, pict, link, intern }: Props = $props();
 <style lang="scss">
 
 a.nav-link {
-  padding: 0.25em 0.5em;
+  padding: 0.1em 0.5em;
   text-decoration: none;
   border-radius: 0.5em;
 
@@ -41,6 +41,7 @@ a.nav-link {
 
 p {
   color: $col-text;
+  @include font-ui;
   font-weight: 400;
 }
 

@@ -2,6 +2,8 @@
 
 
 @mixin interact {
+  transition: background-color 0.12s ease-out;
+  
   &:hover {
     background-color: $col-hover;
   }
