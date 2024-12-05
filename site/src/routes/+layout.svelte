@@ -1,5 +1,7 @@
 <script lang="ts">
 
+import Nav from "#parts/core/nav.svelte";
+
 import { fade } from "svelte/transition";
 import { onMount } from "svelte";
 
@@ -15,6 +17,8 @@ onMount(() => {
 
 </script>
 
+
+<Nav />
 
 <slot />
 

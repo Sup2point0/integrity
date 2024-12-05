@@ -10,7 +10,7 @@ interface Props {
   intern?: string;
 }
 
-let { text, link, intern }: Props = $props();
+let { text, pict, link, intern }: Props = $props();
 
 </script>
 
@@ -35,7 +35,8 @@ a.nav-link {
   text-decoration: none;
   border-radius: 0.5em;
 
-  @include interactive;
+  @include interact;
+  @include focus;
 }
 
 p {
