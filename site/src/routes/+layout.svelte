@@ -45,7 +45,9 @@ aside.overlay {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 10;
+  top: 0;
+  left: 0;
+  z-index: 20;
   display: flex;
   flex-direction: row;
   justify-content: center;
