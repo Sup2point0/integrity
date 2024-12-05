@@ -1,0 +1,16 @@
+@mixin interact {
+  &:hover {
+    background-color: $col-hover;
+  }
+
+  &:active {
+    background-color: $col-click;
+  }
+}
+
+
+@mixin focus {
+  &:focus {
+    outline: 1px solid $col-prot;
+  }
+}
