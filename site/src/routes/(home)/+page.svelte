@@ -12,7 +12,41 @@ import Card from "#parts/ui/card.svelte";
 <main>
   <Clicky text="testing" />
 
-  <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+  <div class="browse-questions">
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+  </div>
 </main>
 
 <!-- {#each Site.integrals as question}
@@ -29,6 +63,12 @@ import Card from "#parts/ui/card.svelte";
 
 main {
   text-align: center; 
+}
+
+.browse-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 </style>

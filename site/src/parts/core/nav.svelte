@@ -40,7 +40,7 @@ nav {
   align-items: center;
   gap: 0.5rem;
   background: transparent;
-  backdrop-filter: blur(16px) brightness(0.96);
+  backdrop-filter: blur(16px) brightness(0.99);
 }
 
 section {

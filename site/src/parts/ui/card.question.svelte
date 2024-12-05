@@ -86,6 +86,7 @@ a.question-card {
 }
 
 .tags {
+  margin-top: 1em;
   display: flex;
   justify-content: start;
   align-items: start;
