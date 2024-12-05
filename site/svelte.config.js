@@ -1,6 +1,8 @@
 import adapter from "@sveltejs/adapter-static";
 import { sveltePreprocess } from "svelte-preprocess";
 
+import scss_config from "./scss-config.js";
+
 
 const config = {
   kit: {
@@ -27,13 +29,7 @@ const config = {
 
   preprocess: [
     sveltePreprocess({
-      scss: {
-        prependData: `
-          @use './src/styles/mixins/~colours' as *;
-          @use './src/styles/mixins/~fonts' as *;
-          @use './src/styles/mixins/~interact' as *;
-        `,
-      }
+      scss: scss_config,
     }),
   ],
 };
