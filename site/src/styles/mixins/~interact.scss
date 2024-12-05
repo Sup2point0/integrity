@@ -1,15 +1,17 @@
 @use './src/styles/mixins/~colours' as *;
 
 
-@mixin interact {
-  transition: background-color 0.12s ease-out;
+@mixin interact($hover, $click, $t: 0.1) {
+  transition: background-color #{$t}s ease-out;
   
   &:hover {
-    background-color: $col-hover;
+    cursor: pointer;
+    background-color: $hover;
   }
 
   &:active {
-    background-color: $col-click;
+    cursor: pointer;
+    background-color: $click;
   }
 }
 

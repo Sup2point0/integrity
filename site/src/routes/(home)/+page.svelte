@@ -2,14 +2,17 @@
 
 import Site from "#scripts/site";
 
-import Button from "#src/parts/clicky.svelte";
-import Card from "#parts/card.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
+import QuestionCard from "#parts/ui/card.question.svelte";
+import Card from "#parts/ui/card.svelte";
 
 </script>
 
 
 <main>
-  <Button text="testing" />
+  <Clicky text="testing" />
+
+  <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
 </main>
 
 <!-- {#each Site.integrals as question}

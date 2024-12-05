@@ -31,11 +31,14 @@ let { text, pict, link, intern }: Props = $props();
 <style lang="scss">
 
 a.nav-link {
-  padding: 0.1em 0.5em;
+  padding: 0.75em 0.75em;
   text-decoration: none;
-  border-radius: 0.5em;
+  border-radius: 1em;
 
-  @include interact;
+  @include interact(
+    $hover: $col-hover,
+    $click: $col-click,
+  );
   @include focus;
 }
 

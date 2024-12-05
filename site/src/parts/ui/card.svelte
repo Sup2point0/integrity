@@ -4,7 +4,7 @@
 
 <script lang="ts">
 
-import Tag from "#parts/tag.svelte";
+import Tag from "#parts/ui/tag.svelte";
 
 import { base } from "$app/paths";
 

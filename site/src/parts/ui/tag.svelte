@@ -1,6 +1,4 @@
-<!-- @component Tag
-
--->
+<!-- @component Tag -->
 
 <script lang="ts">
 
@@ -24,7 +22,17 @@ let { shard }: Props = $props();
 <style lang="scss">
 
 a {
+  padding: 0.15em 0.4em;
+  display: inline-block;
+  color: white;
   text-decoration: none;
+  background-color: $col-prot;
+  border-radius: 0.5em;
+
+  @include interact(
+    $hover: color-mix(in oklch, $col-prot, black 8%),
+    $click: color-mix(in oklch, $col-prot, black 16%),
+  );
 }
 
 </style>

@@ -30,7 +30,7 @@ import NavLink from "#parts/core/nav.link.svelte";
 nav {
   width: 100%;
   margin-bottom: 1rem;
-  padding: 0.5rem 5rem;
+  padding: 0.5em 5rem;
   position: sticky;
   top: 0;
   z-index: 20;

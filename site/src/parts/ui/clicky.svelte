@@ -45,17 +45,12 @@ let { text, link, intern, button }: Props = $props();
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 1.5px 2px -0.5px $col-line;
-  transition: all 0.1s ease-out;
 
-  &:hover {
-    cursor: pointer;
-    background-color: oklch(98% 0 0);
-  }
-
-  &:active {
-    cursor: pointer;
-    background-color: oklch(95% 0 0);
-  }
+  @include interact(
+    $hover: oklch(98% 0 0),
+    $click: oklch(95% 0 0),
+    $t: 0.12,
+  );
 }
 
 </style>
