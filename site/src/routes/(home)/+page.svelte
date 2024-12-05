@@ -2,76 +2,46 @@
 
 import Site from "#scripts/site";
 
+import Header from "#parts/core/header.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
-import QuestionCard from "#parts/ui/card.question.svelte";
 import Card from "#parts/ui/card.svelte";
-import Katex from "#parts/katex.svelte";
 
 </script>
 
 
-<main>
-  <h1> What fun are we having today? </h1>
+<div class="content">
+  <Header> What fun are we having today? </Header>
 
-  <Katex text={"\\int_{a}^{b} f(x) \\, dx"} inline={false} />
+  <div class="browse">
+    <Card title="Integrals"
+      intern="integrals"
+      latex={"\\int f(x) \\, dx"}
+    />
+    <Card title="Graph Drawing"
+      intern="graphs"
+      latex={"f(x) = \\ln{x}"}
+    />
+    <Card title="Completing the Square"
+      intern="complete-the-square"
+      latex={"a(x - p)^2 + q"}
+    />
+  </div>
 
   <Clicky text="testing" />
-
-  <div class="browse-questions">
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-    <QuestionCard title="Testing" date="2024 December" tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
-  </div>
-</main>
-
-<!-- {#each Site.integrals as question}
-  <Card
-    intern={question.shard}
-    title={question.title}
-    date={question.date}
-    tags={question.tags}
-  />
-{/each} -->
+</div>
 
 
 <style lang="scss">
 
-main {
-  text-align: center; 
+.content {
+  text-align: center;
 }
 
-.browse-questions {
+.browse {
+  margin: 1rem;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 }

@@ -9,18 +9,25 @@ import NavLink from "#parts/core/nav.link.svelte";
 
 <nav>
   <section class="left">
-    <NavLink pict="integrity-title.svg" link="https://sup2point0.github.io/integrity" />
+    <NavLink pict="integrity-title.svg"
+      link="https://sup2point0.github.io/integrity" />
   </section>
 
   <section class="centre">
-    <NavLink text="Integrals" intern="integrals" />
-    <NavLink text="Graph Drawing" intern="graphs" />
-    <NavLink text="Completing the Square" intern="complete-the-square" />
-    <NavLink text="Addvent" intern="addvent" />
+    <NavLink text="Integrals"
+      intern="integrals" />
+    <NavLink text="Graph Drawing"
+      intern="graphs" />
+    <NavLink text="Completing the Square"
+      intern="complete-the-square" />
+    <NavLink text="Addvent"
+      intern="addvent" />
   </section>
 
   <section class="right">
-    <NavLink text="GitHub" link="https://github.com/Sup2point0/integrity" />
+    <NavLink text="GitHub"
+      collapse={true}
+      link="https://github.com/Sup2point0/integrity" />
   </section>
 </nav>
 
@@ -38,6 +45,7 @@ nav {
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 0.5rem;
   background: transparent;
   backdrop-filter: blur(12px);
@@ -50,6 +58,7 @@ section {
 
   &.centre {
     flex: 1 1 auto;
+    column-gap: 0.5rem;
   }
 }
 

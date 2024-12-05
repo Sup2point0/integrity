@@ -3,16 +3,16 @@
 <script lang="ts">
 
 interface Props {
-  title: string;
+  children?: any;
 }
 
-let { title }: Props = $props();
+let { children }: Props = $props();
 
 </script>
 
 
 <header>
-  <h1> {title} </h1>
+  <h1> {@render children()} </h1>
 </header>
 
 

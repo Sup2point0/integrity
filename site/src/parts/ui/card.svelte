@@ -1,27 +1,22 @@
 <!-- @component Card
 
--->
+A generic card. -->
 
 <script lang="ts">
 
-import Tag from "#parts/ui/tag.svelte";
+import Katex from "#parts/katex.svelte";
 
 import { base } from "$app/paths";
 
 
 interface Props {
-  intern: string;
   title: string;
-  date: string;
-  tags: string[];
+  intern?: string;
+  latex?: string;
+  pict?: string;
 }
 
-let {
-  title,
-  date = "",
-  tags = [],
-  intern,
-}: Props = $props();
+let { title, intern, latex, pict }: Props = $props();
 
 </script>
 
@@ -29,20 +24,57 @@ let {
 <a class="card"
   href="{base}/{intern}"
 >
-  <div class="integral"></div>
+  <div class="preview">
+    {#if pict}
+      <img src="{base}/{pict}" />
+    {:else if latex}
+      <Katex text={latex} inline={false} />
+    {:else}
+    {/if}
+  </div>
+
   <div class="info">
     <h4> {title} </h4>
-    <p> {date} </p>
-
-    {#each tags as tag}
-      <Tag shard={tag} />
-    {/each}
   </div>
 </a>
 
 
 <style lang="scss">
 
+a.card {
+  min-width: 12em;
+  max-width: 20vw;
+  padding: 0.75em;
+  display: block;
+  @include font-ui;
+  color: $col-text;
+  text-decoration: none;
+  background: white;
+  border: 1px solid $col-line;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 2px -0.5px $col-line;
 
+  @include interact(
+    $hover: oklch(99% 0 0),
+    $click: oklch(96% 0 0),
+    $t: 0.16,
+  );
+}
+
+.preview {
+  min-height: 4em;
+  padding: 1rem;
+}
+
+.info {
+  padding: 1em 0.4em 0.4em;
+  text-align: center;
+  border-top: 1px solid $col-line;
+
+  h4 {
+    font-size: 150%;
+    font-weight: 350;
+  }
+}
 
 </style>

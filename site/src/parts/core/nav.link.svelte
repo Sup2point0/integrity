@@ -8,14 +8,16 @@ interface Props {
   pict?: string;
   link?: string;
   intern?: string;
+  collapse: boolean;
 }
 
-let { text, pict, link, intern }: Props = $props();
+let { text, pict, link, intern, collapse = false }: Props = $props();
 
 </script>
 
 
 <a class="nav-link"
+  class:collapse
   href={link || `${base}/${intern}`}
 >
   {#if pict}
@@ -50,6 +52,12 @@ a.nav-link {
     color: $col-text;
     @include font-ui;
     font-weight: 400;
+  }
+}
+
+@media (max-width: 50rem) {
+  a.nav-link.collapse {
+    display: none;
   }
 }
 

@@ -4,8 +4,10 @@ A card for selecting a question. -->
 
 <script lang="ts">
 
+import type { Latex } from "#scripts/types";
+
 import Tag from "#parts/ui/tag.svelte";
-import Katex from "../katex.svelte";
+import Katex from "#parts/katex.svelte";
 
 import { base } from "$app/paths";
 
@@ -13,12 +15,12 @@ import { base } from "$app/paths";
 interface Props {
   title: string;
   intern?: string;
-  question?: string;
+  latex?: Latex;
   date?: string;
   tags?: string[];
 }
 
-let { title, intern, question, date, tags }: Props = $props();
+let { title, intern, latex, date, tags }: Props = $props();
 
 </script>
 
@@ -27,8 +29,8 @@ let { title, intern, question, date, tags }: Props = $props();
   href="{base}/{intern}"
 >
   <div class="question">
-    {#if question}
-      <Katex text={question} inline={false} />
+    {#if latex}
+      <Katex text={latex} inline={false} />
     {/if}
   </div>
 

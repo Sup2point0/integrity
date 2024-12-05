@@ -49,7 +49,7 @@ onMount(() => {
 <style lang="scss">
 
 .layout {
-  padding: 1rem 2rem 4rem;
+  padding: 1rem 1rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +57,7 @@ onMount(() => {
 
 main {
   width: min(100%, 60rem);
-  min-height: 100vh;
+  min-height: 75vh;
 }
 
 aside.overlay {

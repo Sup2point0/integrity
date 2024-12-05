@@ -56,9 +56,11 @@ footer {
 .right { text-align: right; }
 
 a.credits {
+  padding: 1em;
   display: flex;
   flex-direction: row;
   text-decoration: none;
+  border-radius: 1em;
 
   @include interact($col-hover, $col-click);
   @include focus-outline;
