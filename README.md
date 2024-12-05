@@ -1,12 +1,12 @@
-![integrity’](.assets/banner.png)
+![integrity’](assets/integrity-banner.png)
 
 <div align="center">
 
 <a href="https://sup2point0.github.io/integrity">
-  <img height="69px" alt="site" src=".assets/link.site.png" />
+  <img height="69px" alt="site" src="assets/link.site.png" />
 </a>
 <a href="docs/">
-  <img height="69px" alt="docs" src=".assets/link.docs.png" />
+  <img height="69px" alt="docs" src="assets/link.docs.png" />
 </a>
 
 </div>
