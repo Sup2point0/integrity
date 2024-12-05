@@ -39,7 +39,7 @@ a.nav-link {
     $hover: $col-hover,
     $click: $col-click,
   );
-  @include focus;
+  @include focus-outline;
 }
 
 p {

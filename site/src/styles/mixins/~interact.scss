@@ -16,7 +16,7 @@
 }
 
 
-@mixin focus {
+@mixin focus-outline {
   &:focus {
     outline: 1px solid $col-prot;
   }

@@ -3,6 +3,7 @@
 import "#styles/essence.scss";
 
 import Nav from "#parts/core/nav.svelte";
+import Footer from "#parts/core/footer.svelte";
 
 import { fade } from "svelte/transition";
 import { onMount } from "svelte";
@@ -22,7 +23,13 @@ onMount(() => {
 
 <Nav />
 
-<slot />
+<div class="layout">
+  <main>
+    <slot />
+  </main>
+</div>
+
+<Footer />
 
 {#if active}
   <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -41,6 +48,18 @@ onMount(() => {
 
 <style lang="scss">
 
+.layout {
+  padding: 1rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: min(100%, 80rem);
+  min-height: 100vh;
+}
+
 aside.overlay {
   width: 100%;
   height: 100%;
@@ -53,19 +72,18 @@ aside.overlay {
   justify-content: center;
   align-items: center;
   background-color: $col-prot;
-}
+  
+  .content {
+    text-align: center;
+  }
+  
+  h1 {
+    color: white;
+  }
 
-div.content {
-  text-align: center;
-}
-
-
-h1 {
-  color: white;
-}
-
-p {
-  color: white;
+  p {
+    color: white;
+  }
 }
 
 </style>

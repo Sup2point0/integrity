@@ -26,7 +26,7 @@ import { base } from "$app/paths";
         <img id="purple-portal"
           alt="Sup#2.0"
           src="{base}/purple-portal.png" />
-      </div>
+      </a>
     </div>
 
   </div>
@@ -37,7 +37,8 @@ import { base } from "$app/paths";
 
 footer {
   width: 100%;
-  padding: 1rem 0 4rem;
+  padding: 4rem 0 4rem;
+  background-color: oklch(97% 0 0);
 
   .content {
     width: 80%;
@@ -55,10 +56,12 @@ footer {
 .right { text-align: right; }
 
 a.credits {
-  text-decoration; none;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
 
-  @include interact;
-  @include focus;
+  @include interact($col-hover, $col-click);
+  @include focus-outline;
 }
 
 
@@ -67,7 +70,8 @@ img#integrity-title {
 }
 
 img#purple-portal {
-  max-width: 10rem;
+  max-height: 3em;
+  aspect-ratio: 1;
 }
 
 </style>
