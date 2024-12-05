@@ -5,6 +5,7 @@ A card for selecting a question. -->
 <script lang="ts">
 
 import Tag from "#parts/ui/tag.svelte";
+import Katex from "../katex.svelte";
 
 import { base } from "$app/paths";
 
@@ -27,7 +28,7 @@ let { title, intern, question, date, tags }: Props = $props();
 >
   <div class="question">
     {#if question}
-      {@html question}
+      <Katex text={question} inline={false} />
     {/if}
   </div>
 
@@ -67,10 +68,11 @@ a.question-card {
 
 .question {
   min-height: 4rem;
+  padding: 1rem;
 }
 
 .info {
-  padding: 0.4em;
+  padding: 1em 0.4em 0.4em;
   text-align: left;
   border-top: 1px solid $col-line;
 
@@ -86,7 +88,7 @@ a.question-card {
 }
 
 .tags {
-  margin-top: 1em;
+  margin-top: 1.5em;
   display: flex;
   justify-content: start;
   align-items: start;

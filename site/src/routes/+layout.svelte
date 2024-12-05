@@ -56,7 +56,7 @@ onMount(() => {
 }
 
 main {
-  width: min(100%, 80rem);
+  width: min(100%, 60rem);
   min-height: 100vh;
 }
 

@@ -13,7 +13,7 @@ import { base } from "$app/paths";
     <div class="left">
       <img id="integrity-title"
         alt="integrity’"
-        src="{base}/title.svg" />
+        src="{base}/integrity-title.svg" />
     </div>
   
     <div class="right">
@@ -38,7 +38,7 @@ import { base } from "$app/paths";
 footer {
   width: 100%;
   padding: 4rem 0 4rem;
-  background-color: oklch(97% 0 0);
+  background-color: oklch(98% 0 0);
 
   .content {
     width: 80%;

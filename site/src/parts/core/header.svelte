@@ -20,8 +20,10 @@ let { title }: Props = $props();
 
 header {
   width: 100%;
-  padding: 2rem 0 4rem;
+  margin-bottom: 4rem;
+  padding: 2rem 0 2rem;
   text-align: center;
+  border-bottom: 1px solid $col-line;
 }
 
 h1 {
