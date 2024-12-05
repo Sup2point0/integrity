@@ -40,6 +40,7 @@ let { text, link, intern, button }: Props = $props();
 
 .clicky {
   padding: 0.4em 0.8em;
+  @include font-ui;
   background: white;
   border: 1px solid $col-line;
   border-radius: 0.5em;
