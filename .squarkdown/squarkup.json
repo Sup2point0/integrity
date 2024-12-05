@@ -1,0 +1,18 @@
+{
+  // "$schema": "https://sup2point0.github.io/stranger-quarkdown/squarkup-schema.json",
+
+  "repo": "integrity",
+  "site": "site",
+
+  "if-no-dir": ["warn", "create"],
+
+  "bases": "",
+  "page.svelte": "",
+  "page-styles": "",
+  "assets": "assets",
+  "site-assets": "assets/site",
+  "fonts": [
+    "Geologica:wght@100..900",
+    "Crimson+Pro:ital,wght@0,200..900;1,200..900"
+  ]
+}
