@@ -32,20 +32,25 @@ let { text, pict, link, intern }: Props = $props();
 
 a.nav-link {
   padding: 0.75em 0.75em;
+  &:has(img) { padding: 0; }
   text-decoration: none;
-  border-radius: 1em;
+  border-radius: 0.5em;
 
   @include interact(
     $hover: $col-hover,
     $click: $col-click,
   );
   @include focus-outline;
-}
 
-p {
-  color: $col-text;
-  @include font-ui;
-  font-weight: 400;
+  img {
+    max-height: 3em;
+  }
+  
+  p {
+    color: $col-text;
+    @include font-ui;
+    font-weight: 400;
+  }
 }
 
 </style>

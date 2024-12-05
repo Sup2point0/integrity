@@ -9,7 +9,7 @@ import NavLink from "#parts/core/nav.link.svelte";
 
 <nav>
   <section class="left">
-    <NavLink pict="integrity.png" />
+    <NavLink pict="integrity-title.svg" link="https://sup2point0.github.io/integrity" />
   </section>
 
   <section class="centre">
@@ -40,7 +40,7 @@ nav {
   align-items: center;
   gap: 0.5rem;
   background: transparent;
-  backdrop-filter: blur(16px) brightness(0.99);
+  backdrop-filter: blur(12px);
 }
 
 section {

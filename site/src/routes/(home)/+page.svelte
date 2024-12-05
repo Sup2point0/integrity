@@ -5,11 +5,16 @@ import Site from "#scripts/site";
 import Clicky from "#parts/ui/clicky.svelte";
 import QuestionCard from "#parts/ui/card.question.svelte";
 import Card from "#parts/ui/card.svelte";
+import Katex from "#parts/katex.svelte";
 
 </script>
 
 
 <main>
+  <h1> What fun are we having today? </h1>
+
+  <Katex text={"\\int_{a}^{b} f(x) \\, dx"} inline={false} />
+
   <Clicky text="testing" />
 
   <div class="browse-questions">

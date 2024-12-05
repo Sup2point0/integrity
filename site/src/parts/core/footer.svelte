@@ -25,7 +25,7 @@ import { base } from "$app/paths";
   
         <img id="purple-portal"
           alt="Sup#2.0"
-          src="{base}/purple-portal.png" />
+          src="https://sup2point0.github.io/purple-portal.png" />
       </a>
     </div>
 
