@@ -1,8 +1,8 @@
 /**
- * Handles loading integrals data.
+ * Handles loading question data.
  */
 
-import { Integral } from "#scripts/types";
+import type { Question } from "#scripts/types";
 
 
 const raw_data = (await import("../data/integrals.json")).default;

@@ -1,4 +1,3 @@
-export type { Latex } from "./root";
+export type { Latex, TextBlock } from "./root";
 
-export { Integral } from "./integral";
-export type { IntegralData } from "./integral";
+export { Question } from "./question";
