@@ -13,7 +13,7 @@ import { base } from "$app/paths";
     <div class="left">
       <img id="integrity-title"
         alt="integrity’"
-        src="{base}/integrity-title.svg" />
+        src="{base}/integrity-title.png" />
     </div>
   
     <div class="right">

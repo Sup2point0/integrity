@@ -9,7 +9,7 @@ import NavLink from "#parts/core/nav.link.svelte";
 
 <nav>
   <section class="left">
-    <NavLink pict="integrity-title.svg"
+    <NavLink pict="integrity-title.png"
       link="https://sup2point0.github.io/integrity" />
   </section>
 
