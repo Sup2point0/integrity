@@ -21,3 +21,15 @@ html, body {
 p {
   @include font-ui;
 }
+
+
+::selection {
+  background-color: $col-prot !important;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
