@@ -2,6 +2,8 @@
 
 <script lang="ts">
 
+import Link from "#parts/ui/link.svelte";
+
 import { base } from "$app/paths";
 
 </script>
@@ -14,6 +16,13 @@ import { base } from "$app/paths";
       <img id="integrity-title"
         alt="integrity’"
         src="{base}/integrity-title.png" />
+
+        <div class="quicklinks">
+          <Link text="synopsis" intern="meta/synopsis" />
+          <Link text="docs" link="https://github.com/Sup2point0/integrity/tree/main/docs" />
+          <Link text="decoded" intern="meta/decoded" />
+          <Link text="license" intern="meta/license" />
+        </div>
     </div>
   
     <div class="right">
@@ -70,6 +79,7 @@ a.credits {
 
 img#integrity-title {
   max-width: 15vw;
+  margin-bottom: 1rem;
 }
 
 img#purple-portal {

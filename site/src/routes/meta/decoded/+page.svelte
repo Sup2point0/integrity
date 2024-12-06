@@ -16,11 +16,13 @@ import Header from "#parts/core/header.svelte";
 
 <Header> decoded: integrity </Header>
 
-<Content />
+<article>
+  <Content />
+</article>
 
 
 <style lang="scss">
 
-@use './src/styles/article.svelte.scss' as *;
+@use './src/styles/article' as *;
 
 </style>

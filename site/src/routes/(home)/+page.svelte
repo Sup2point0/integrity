@@ -12,7 +12,7 @@ import Header from "#parts/core/header.svelte";
 
 
 <div class="content">
-  <Header> What fun are we having today? </Header>
+  <Header title="What fun are we having today?"> What fun are we having today? </Header>
 
   <section class="browse">
     <Card title="Integrals"
@@ -27,13 +27,6 @@ import Header from "#parts/core/header.svelte";
       intern="complete-the-square"
       latex={"a(x - p)^2 + q"}
     />
-  </section>
-
-  <section class="quicklinks">
-    <Link text="synopsis" intern="meta/synopsis" />
-    <Link text="docs" link="https://github.com/Sup2point0/integrity/tree/main/docs" />
-    <Link text="decoded" intern="meta/decoded" />
-    <Link text="license" intern="meta/license" />
   </section>
 </div>
 
@@ -51,15 +44,6 @@ section.browse {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-section.quicklinks {
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
 }
 
 </style>
