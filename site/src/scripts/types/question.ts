@@ -8,7 +8,7 @@ export class Question
   title?: string;
   desc?: string;
   date?: Date;
-  tags: string[] = [];
+  tags: string[];
 
   /** The question line. */
   question: Latex | TextBlock = "";
@@ -25,6 +25,12 @@ export class Question
   constructor(data: Partial<Question>)
   {
     Object.assign(this, data);
+    this.question = data.question[0];
+    // this.title = data.title;
+    // this.desc = data.desc;
+    // this.date = data.date && new Date(data.date);
+    // this.tags = data.tags ?? [];
+    // this.question = data.question;
   }
 }
 

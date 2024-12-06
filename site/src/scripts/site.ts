@@ -1,18 +1,18 @@
 import { data } from "./data";
-import type { QuestionsData } from "#scripts/types";
+import type { Question, QuestionsData } from "#scripts/types";
 
 
 interface SiteData {
   questions: QuestionsData;
+
+  get_questions: (topic: string) => Question[];
 }
 
 const Site: SiteData = {
   questions: data,
+
+  get_questions: (topic) => {
+    return Object.values(Site.questions[topic].questions);
+  }
 };
-
-Site.get_questions = (topic: string) => {
-  return Object.values(Site.questions[topic].questions);
-}
-
 export default Site;
-console.log("site =", Site.questions)

@@ -9,13 +9,13 @@
         "horror"
       ],
       "shard": "q24cu-hr1",
-      "Question": [
+      "question": [
         {
           "kind": "latex",
           "content": "e^2 + 2(x - 2) - \\frac{7 \\pi}{3} (2 - x)^2"
         }
       ],
-      "Hint": {
+      "hint": {
         "1": [
           {
             "kind": "text",
@@ -35,26 +35,26 @@
           }
         ]
       },
-      "Answer": [
+      "answer": [
         {
           "kind": "latex",
           "content": "\\frac{7 \\pi}{3} \\left(  (x - 2)^2 + \\frac{6}{7 \\pi}\\right)"
         }
       ],
-      "Solution": {
-        "Rewrite": [
+      "solution": {
+        "rewrite": [
           {
             "kind": "latex",
             "content": "\\begin{align}&= e^{2}+2\\left(x-2\\right)-\\frac{7\\pi}{3}\\left(2-x\\right)^{2}  \\\\&= e^{2}+2\\left(x-2\\right)-\\frac{7\\pi}{3}\\left(x-2\\right)^{2}\\end{align}"
           }
         ],
-        "Substitute": [
+        "substitute": [
           {
             "kind": "latex",
             "content": "x - 2 = t"
           }
         ],
-        "Complete the Square": [
+        "complete the square": [
           {
             "kind": "latex",
             "content": "\\begin{align}&= e^{2}+2t-\\frac{7\\pi}{3}t^{2}  \\\\&= -\\frac{7\\pi}{3}\\left(t^{2}-\\frac{6}{7\\pi}t\\right)+e^{2}  \\\\&= -\\frac{7\\pi}{3}\\left(\\left(t-\\frac{3}{7\\pi}\\right)^{2}-\\left(\\frac{3}{7\\pi}\\right)^{2}\\right)+e^{2}  \\\\&= -\\frac{7\\pi}{3}\\left(t-\\frac{3}{7\\pi}\\right)^{2}+\\frac{7\\pi}{3}\\cdot\\frac{3^{2}}{7^{2}\\cdot\\pi^{2}}+e^{2}  \\\\&= -\\frac{7\\pi}{3}\\left(t-\\frac{3}{7\\pi}\\right)^{2}+\\frac{3}{7\\pi}+e^{2}  \\\\\\end{align}"

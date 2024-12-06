@@ -12,12 +12,14 @@ import Header from "#parts/core/header.svelte";
 <Header> Completing the Square </Header>
 
 <div class="content">
-  {#each Object.values(Site.questions["complete-square"].questions) as question}
+  {#each Site.get_questions("complete-square") as q}
+    {@const t = console.log(q)}
     <QuestionCard
-      title={question.title}
-      latex={question.question.content}
-      date={question.date}
-      tags={question.tags}
+      title={q.title}
+      intern="complete-the-square/{q.shard}"
+      latex={q.question.content}
+      date={q.date}
+      tags={q.tags}
     />
   {/each}
 </div>

@@ -35,7 +35,7 @@ def process(shard:, file:)
 
     # start new section
     if line.start_with?("## ")
-      _, _, section = line.partition("## ")
+      _, _, section = line.downcase.partition("## ")
       subsection = nil
       load = []
     end
@@ -43,7 +43,7 @@ def process(shard:, file:)
     # start new subsection
     if line.start_with?("### ")
       if section
-        _, _, subsection = line.partition("### ")
+        _, _, subsection = line.downcase.partition("### ")
         load = []
       end
     end
