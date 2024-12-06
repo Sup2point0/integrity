@@ -3,17 +3,13 @@
 <div align="center">
 
 <a href="https://sup2point0.github.io/integrity">
-  <img height="36px" alt="site" src="assets/links/site.png" />
-</a>
+  <img height="36px" alt="site" src="assets/links/site.png" /> </a>
 <a href="docs/">
-  <img height="36px" alt="docs" src="assets/links/docs.png" />
-</a>
+  <img height="36px" alt="docs" src="assets/links/docs.png" /> </a>
 <a href="synopsis.md">
-  <img height="36px" alt="synopsis" src="assets/links/synopsis.png" />
-</a>
+  <img height="36px" alt="synopsis" src="assets/links/synopsis.png" /> </a>
 <a href="edu.md">
-  <img height="36px" alt="decoded" src="assets/links/decoded.png" />
-</a>
+  <img height="36px" alt="decoded" src="assets/links/decoded.png" /> </a>
 
 </div>
 
