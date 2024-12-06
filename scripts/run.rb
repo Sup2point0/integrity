@@ -12,7 +12,7 @@ log "finding question files..."
 ROOT = Pathname(__dir__).parent
 
 SOURCE = ROOT / "questions"
-files = SOURCE.glob("**/*.md")
+files = SOURCE.glob("**/*-*.md")
 total = files.length
 
 log success: "found #{total} question files!"

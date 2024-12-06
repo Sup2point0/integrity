@@ -31,7 +31,6 @@ Try making a substitution!
 
 
 ## Answer
-
 ```math
 \frac{7 \pi}{3} \left(
   (x - 2)^2 + \frac{6}{7 \pi}
