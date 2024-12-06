@@ -5,16 +5,57 @@ A search bar and associated filters.
 
 <script lang="ts>
 
+import Site from "#scripts";
 import { search } from "#scripts/stores";
+
+import Clicky from "#parts/ui/clicky.svelte";
+import Toggle from "#parts/ui/toggle.svelte";
+
+import { fade } from "svelte/transition";
+
+
+interface Props {
+  tags?: string[];
+}
+
+let { tags = [] }: Props = $props();
+
+
+open = $state(false)
 
 </script>
 
 
 <search>
-  <input type="search"
-    placeholder="search"
-    bind:value={search.query}
-  ></input>
+  <div class="layout">
+
+    <div>
+      <input type="search"
+        placeholder="search"
+        bind:value={search.query}
+      ></input>
+
+      <Clicky text="X"
+        button={() => { open = !open; }}
+      />
+    </div>
+
+    {#if open}
+      <table class="search-filters"
+        transition:fade={{ duration: 200 }}
+      ><tbody>
+        <tr>
+          <th> Topics </th>
+          <td>
+            {#each tags as tag}
+              <Toggle text={tag.toUpperCase()} />
+            {/each}
+          </td>
+        </tr>
+      </tbody></table>
+    {/if}
+
+  </div>
 </search>
 
 
