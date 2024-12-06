@@ -69,6 +69,7 @@ a.credits {
   display: flex;
   flex-direction: row;
   column-gap: 1rem;
+  color: $col-text;
   text-decoration: none;
   border-radius: 1em;
 
@@ -85,10 +86,16 @@ img#integrity-title {
 img#purple-portal {
   max-height: 4em;
   aspect-ratio: 1;
+  transition: transform 0.5s ease-out;
 }
 
 p#sup2point0 {
+  color: $col-prot;
   font-size: 200%;
+}
+
+a.credits:hover img#purple-portal {
+  transform: rotate(80deg);
 }
 
 </style>
