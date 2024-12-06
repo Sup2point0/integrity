@@ -88,18 +88,20 @@ a.question-card {
   border-top: 1px solid $col-line;
 
   h4 {
+    margin-bottom: 0.2em;
     font-size: 125%;
     font-weight: 450;
   }
 
   p {
+    color: $col-text-deut;
     font-size: 100%;
     font-weight: 250;
   }
 }
 
 .tags {
-  margin-top: 1.5em;
+  margin-top: 1em;
   display: flex;
   justify-content: start;
   align-items: start;
