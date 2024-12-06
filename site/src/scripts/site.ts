@@ -7,7 +7,7 @@ interface SiteData {
 }
 
 const Site: SiteData = {
-  integrals: data,
+  // integrals: data,
 };
 
 export default Site;
