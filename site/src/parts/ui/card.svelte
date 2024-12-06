@@ -14,14 +14,15 @@ interface Props {
   intern?: string;
   latex?: string;
   pict?: string;
+  style: "block" | "row";
 }
 
-let { title, intern, latex, pict }: Props = $props();
+let { title, intern, latex, pict, style = "block" }: Props = $props();
 
 </script>
 
 
-<a class="card"
+<a class="card {style}"
   href="{base}/{intern}"
 >
   <div class="preview">
@@ -42,10 +43,10 @@ let { title, intern, latex, pict }: Props = $props();
 <style lang="scss">
 
 a.card {
-  min-width: 12em;
-  max-width: 20vw;
+  min-width: 16em;
   padding: 0.75em;
   display: block;
+  flex: 1 0 auto;
   @include font-ui;
   color: $col-text;
   text-decoration: none;
@@ -59,6 +60,13 @@ a.card {
     $click: oklch(96% 0 0),
     $t: 0.16,
   );
+
+  &.block {
+    max-width: 20vw;
+  }
+  &.row {
+    width: 100%;
+  }
 }
 
 .preview {

@@ -18,14 +18,15 @@ interface Props {
   latex?: Latex;
   date?: string;
   tags?: string[];
+  style: "block" | "row";
 }
 
-let { title, intern, latex, date, tags }: Props = $props();
+let { title, intern, latex, date, tags, style = "block" }: Props = $props();
 
 </script>
 
 
-<a class="question-card"
+<a class="question-card {style}"
   href="{base}/{intern}"
 >
   <div class="question">
@@ -50,9 +51,10 @@ let { title, intern, latex, date, tags }: Props = $props();
 <style lang="scss">
 
 a.question-card {
-  max-width: 20vw;
+  min-width: 12em;
   padding: 0.75em;
   display: block;
+  flex: 1 0 auto;
   @include font-ui;
   color: $col-text;
   text-decoration: none;
@@ -66,6 +68,13 @@ a.question-card {
     $click: oklch(96% 0 0),
     $t: 0.16,
   );
+
+  &.block {
+    max-width: 20vw;
+  }
+  &.row {
+    width: 100%;
+  }
 }
 
 .question {

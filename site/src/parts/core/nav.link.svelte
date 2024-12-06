@@ -8,7 +8,7 @@ interface Props {
   pict?: string;
   link?: string;
   intern?: string;
-  collapse: boolean;
+  collapse?: boolean;
 }
 
 let { text, pict, link, intern, collapse = false }: Props = $props();

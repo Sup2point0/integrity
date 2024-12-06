@@ -20,13 +20,12 @@ import NavLink from "#parts/core/nav.link.svelte";
       intern="graphs" />
     <NavLink text="Completing the Square"
       intern="complete-the-square" />
-    <NavLink text="Addvent"
+    <NavLink text="Addvent" collapse={true}
       intern="addvent" />
   </section>
 
   <section class="right">
-    <NavLink text="GitHub"
-      collapse={true}
+    <NavLink text="GitHub" collapse={true}
       link="https://github.com/Sup2point0/integrity" />
   </section>
 </nav>
