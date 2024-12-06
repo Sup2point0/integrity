@@ -59,6 +59,7 @@ a.credits {
   padding: 1em;
   display: flex;
   flex-direction: row;
+  column-gap: 1rem;
   text-decoration: none;
   border-radius: 1em;
 
@@ -72,8 +73,12 @@ img#integrity-title {
 }
 
 img#purple-portal {
-  max-height: 3em;
+  max-height: 4em;
   aspect-ratio: 1;
+}
+
+p#sup2point0 {
+  font-size: 200%;
 }
 
 </style>
