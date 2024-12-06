@@ -61,6 +61,42 @@
           }
         ]
       }
+    },
+    "q24cu-tr1": {
+      "topic": "complete-square",
+      "title": "why",
+      "desc": "I, too, am a huge fan of completing the square.",
+      "date": "2024 November",
+      "tags": [
+        "horror"
+      ],
+      "shard": "q24cu-tr1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "6x\\sin\\left(\\frac{\\pi}{6}\\right)-\\frac{6x+1}{6x}"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What is $\\sin{\\frac{\\pi}{6}}$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Multiply through by $x$ (but remember to divide by it at the end!)."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{3}{x}\\left(x-\\frac{1}{6}\\right)^{2}-\\frac{1}{4x}"
+        }
+      ]
     }
   }
 }
