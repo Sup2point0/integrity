@@ -10,7 +10,7 @@ import Search from "#parts/ui/search.svelte";
 
 <Header> Integrals </Header>
 
-<Search />
+<Search tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
 
 <div class="content">
   <QuestionCard

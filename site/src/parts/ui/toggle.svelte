@@ -1,4 +1,7 @@
-<!-- @component Toggle -->
+<!-- @component Toggle
+ 
+A clicky that toggles a variable.
+-->
 
 <script lang="ts">
 
@@ -7,13 +10,13 @@ interface Props {
   value: any;
 }
 
-let { text, any }: Props = $props();
+let { text, value }: Props = $props();
 
 </script>
 
 
 <button class="toggle"
-  class:active={toggle}
+  class:active={value}
   onclick={() => { value = !value; }}
 >
   {text}
@@ -37,12 +40,14 @@ let { text, any }: Props = $props();
   );
 
   &.active {
-    background-color: color-mix(in oklch, $col-prot, transparent 90%);
-    box-shadow: 0 1.5px 2px -0.5px $col-prot;
+    // background-color: color-mix(in oklch, $col-prot, transparent 95%);
+    color: white;
+    background-color: $col-prot;
+    box-shadow: none;
     
     @include interact(
-      $hover: color-mix(in oklch, $col-prot, transparent 80%),
-      $click: color-mix(in oklch, $col-prot, transparent 75%),
+      $hover: color-mix(in oklch, $col-prot, black 8%),
+      $click: color-mix(in oklch, $col-prot, black 16%),
     );
   }
   
