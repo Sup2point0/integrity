@@ -1,10 +1,14 @@
 import adapter from "@sveltejs/adapter-static";
 import { sveltePreprocess } from "svelte-preprocess";
 
+import { mdsvex } from "mdsvex";
+
 import scss_config from "./scss-config.js";
 
 
 const config = {
+  extensions: [".svelte", ".md"],
+  
   kit: {
     adapter: adapter({
       pages: "build",
@@ -28,10 +32,20 @@ const config = {
   },
 
   preprocess: [
+    mdsvex({
+      extensions: [".md"],
+    }),
     sveltePreprocess({
       scss: scss_config,
     }),
   ],
+  
+  onwarn: (warning, handler) => {
+    if (warning.code === "css-unused-selector") {
+      return;
+    }
+    handler(warning);
+  },
 };
 
 export default config;
