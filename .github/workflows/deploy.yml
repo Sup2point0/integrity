@@ -1,0 +1,68 @@
+name: 'Github Pages Deployment'
+
+on:
+  workflow_dispatch:
+  push:
+    paths: '*.yml'
+  schedule:
+    - cron: '20 4 * * 6'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: './site'
+        
+    steps:
+      - name: 'git / checkout'
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: 'ruby / setup'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
+
+      - name: 'ruby / squarkdown / install'
+        run: cd ../.stranger-quarkdown && bundle install
+
+      - name: 'node / setup'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: './site/package-lock.json'
+
+      - name: 'node / install'
+        run: npm install
+
+      - name: 'svelte / build'
+        env:
+          BASE_PATH: '/${{ github.event.repository.name }}/site'
+        run: |
+          npm run buildx
+
+      - name: 'github / upload artifacts'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'site/build/'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 'github / deploy'
+        id: deployment
+        uses: actions/deploy-pages@v4
