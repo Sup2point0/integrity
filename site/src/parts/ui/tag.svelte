@@ -14,21 +14,23 @@ let { shard }: Props = $props();
 </script>
 
 
-<a href="{base}/search?tag={shard}" class="tag">
+<button class="tag"
+  onclick={() => { window.location.href = `${base}/search?tag=${shard}` }}
+>
   {shard.toUpperCase()}
-</a>
+</button>
 
 
 <style lang="scss">
 
-a {
+button.tag {
   padding: 0.15em 0.4em;
   display: inline-block;
   @include font-ui;
   color: white;
   font-size: 90%;
-  text-decoration: none;
   background-color: $col-prot;
+  border: none;
   border-radius: 0.5em;
 
   @include interact(

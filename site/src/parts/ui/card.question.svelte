@@ -18,7 +18,7 @@ interface Props {
   latex?: Latex;
   date?: string;
   tags?: string[];
-  style: "block" | "row";
+  style?: "block" | "row";
 }
 
 let { title, intern, latex, date, tags, style = "block" }: Props = $props();
@@ -58,7 +58,7 @@ a.question-card {
   @include font-ui;
   color: $col-text;
   text-decoration: none;
-  background: white;
+  background-color: white;
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 2px 2px -0.5px $col-line;

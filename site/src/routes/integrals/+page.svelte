@@ -3,11 +3,14 @@
 import QuestionCard from "#parts/ui/card.question.svelte";
 
 import Header from "#parts/core/header.svelte";
+import Search from "#parts/ui/search.svelte";
 
 </script>
 
 
 <Header> Integrals </Header>
+
+<Search />
 
 <div class="content">
   <QuestionCard

@@ -5,7 +5,7 @@ A search bar and associated filters.
 
 <script lang="ts">
 
-import Site from "#scripts";
+import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 
 import Clicky from "#parts/ui/clicky.svelte";
@@ -21,7 +21,7 @@ interface Props {
 let { tags = [] }: Props = $props();
 
 
-open = $state(false)
+let open = $state(false)
 
 </script>
 
@@ -29,11 +29,11 @@ open = $state(false)
 <search>
   <div class="layout">
 
-    <div>
+    <div class="search-bar">
       <input type="search"
         placeholder="search"
         bind:value={search.query}
-      ></input>
+      />
 
       <Clicky text="X"
         button={() => { open = !open; }}
@@ -63,22 +63,53 @@ open = $state(false)
 
 search {
   max-width: 80vw;
+  margin: 1rem 0;
   padding: 0.5rem;
 }
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    column-gap: 0.5em;
+  }
+}
+
+
 input[type='search'] {
-  padding: 0.5em 1em;
+  appearance: none;
+  min-width: max(50%, 12em);
+  padding: 0.75em 1.25em;
   @include font-ui;
   color: $col-text;
-  background: white;
+  background-color: white;
   border: 1px solid oklch(90% 0 0);
   border-radius: 0.5em;
+  box-shadow: 0 1.5px 2px -0.5px $col-line;
   
   @include interact(
     $hover: oklch(98% 0 0),
     $click: oklch(95% 0 0),
   );
-  @include focus-outline;
+
+  &:hover {
+    cursor: text;
+  }
+  &:focus, &:active {
+    outline: none;
+  }
 }
 
 </style>
