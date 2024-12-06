@@ -14,7 +14,7 @@ export class Question
   question: Latex | TextBlock = "";
 
   /** A hint. */
-  hints: TextBlock[];
+  hints?: TextBlock[];
 
   /** The intended solution. */
   solution?: TextBlock[];
@@ -26,4 +26,20 @@ export class Question
   {
     Object.assign(this, data);
   }
+}
+
+/**
+ * Represents a collection of questions from different topics.
+ */
+export interface QuestionsData
+{
+  [shard: string]: QuestionCollection;
+}
+
+/**
+ * A dictionary of questions from a single topic.
+ */
+export interface QuestionCollection
+{
+  [shard: string]: Question;
 }

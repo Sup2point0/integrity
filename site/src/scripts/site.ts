@@ -1,13 +1,12 @@
 import { data } from "./data";
-import type { Integral } from "#scripts/types";
+import type { QuestionsData } from "#scripts/types";
 
 
 interface SiteData {
-  integrals: Integral[];
+  questions: QuestionsData;
 }
 
 const Site: SiteData = {
-  // integrals: data,
+  questions: data,
 };
-
 export default Site;
