@@ -1,13 +1,14 @@
 {
   "complete-square": {
     "q24cu-hr1": {
-      "kind": "complete-square",
+      "topic": "complete-square",
       "title": "no",
       "desc": "Ok, so you know how to complete the square, but do you <em>know</em> how to complete the square?",
       "date": "2024 November",
       "tags": [
         "horror"
       ],
+      "shard": "q24cu-hr1",
       "Question": [
         {
           "kind": "latex",

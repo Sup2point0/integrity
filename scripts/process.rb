@@ -3,12 +3,13 @@ require "front_matter_parser"
 require "pathname"
 
 
-def process(filepath:)
-  load = FrontMatterParser::Parser.parse_file(filepath)
-  data = load.front_matter
-  lines = load.content.split "\n"
+def process(shard:, file:)
+  parsed = FrontMatterParser::Parser.parse_file(file)
+  data = parsed.front_matter
+  data["shard"] = shard
 
-  ## FIXME
+  lines = parsed.content.split "\n"
+
   section = nil
   subsection = nil
   load = nil

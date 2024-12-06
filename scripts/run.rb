@@ -26,14 +26,12 @@ files.each do |file|
   
   shard = file.basename(".*")
 
-  out = process(filepath: file)
-  kind = out["kind"]
-  if kind.nil? then continue end
+  out = process(shard:, file:)
+  topic = out["topic"]
+  if topic.nil? then next end
 
-  if data[kind].nil?
-    data[kind] = {}
-  end
-  data[kind][shard] = out
+  if data[topic].nil? then data[topic] = {} end
+  data[topic][shard] = out
 
   i += 1
 end

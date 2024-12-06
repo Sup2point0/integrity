@@ -9,5 +9,10 @@ interface SiteData {
 const Site: SiteData = {
   questions: data,
 };
+
+Site.get_questions = (topic: string) => {
+  return Object.values(Site.questions[topic].questions);
+}
+
 export default Site;
-console.log("site =", Site)
+console.log("site =", Site.questions)

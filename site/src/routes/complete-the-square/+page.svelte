@@ -1,5 +1,7 @@
 <script lang="ts">
 
+import Site from "#scripts/site";
+
 import QuestionCard from "#parts/ui/card.question.svelte";
 
 import Header from "#parts/core/header.svelte";
@@ -10,36 +12,14 @@ import Header from "#parts/core/header.svelte";
 <Header> Completing the Square </Header>
 
 <div class="content">
-  <QuestionCard
-    title="Testing"
-    latex={"\\int_{a}^{b} f(x) \\, dx"}
-    date="2024 December"
-    tags={["trig", "horror", "sub", "long", "integral", "parts"]}
-  />
-  <QuestionCard
-    title="Testing"
-    latex={"\\int_{a}^{b} f(x) \\, dx"}
-    date="2024 December"
-    tags={["trig", "horror", "sub", "long", "integral", "parts"]}
-  />
-  <QuestionCard
-    title="Testing"
-    latex={"\\int_{a}^{b} f(x) \\, dx"}
-    date="2024 December"
-    tags={["trig", "horror", "sub", "long", "integral", "parts"]}
-  />
-  <QuestionCard
-    title="Testing"
-    latex={"\\int_{a}^{b} f(x) \\, dx"}
-    date="2024 December"
-    tags={["trig", "horror", "sub", "long", "integral", "parts"]}
-  />
-  <QuestionCard
-    title="Testing"
-    latex={"\\int_{a}^{b} f(x) \\, dx"}
-    date="2024 December"
-    tags={["trig", "horror", "sub", "long", "integral", "parts"]}
-  />
+  {#each Object.values(Site.questions["complete-square"].questions) as question}
+    <QuestionCard
+      title={question.title}
+      latex={question.question.content}
+      date={question.date}
+      tags={question.tags}
+    />
+  {/each}
 </div>
 
 
