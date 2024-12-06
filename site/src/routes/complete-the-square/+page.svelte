@@ -13,7 +13,6 @@ import Header from "#parts/core/header.svelte";
 
 <div class="content">
   {#each Site.get_questions("complete-square") as q}
-    {@const t = console.log(q)}
     <QuestionCard
       title={q.title}
       intern="complete-the-square/{q.shard}"

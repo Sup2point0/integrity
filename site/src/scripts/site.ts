@@ -15,4 +15,5 @@ const Site: SiteData = {
     return Object.values(Site.questions[topic].questions);
   }
 };
+
 export default Site;
