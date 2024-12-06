@@ -3,7 +3,7 @@
 A search bar and associated filters.
 -->
 
-<script lang="ts>
+<script lang="ts">
 
 import Site from "#scripts";
 import { search } from "#scripts/stores";
