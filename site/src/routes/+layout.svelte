@@ -79,15 +79,16 @@ aside.overlay {
   }
   
   h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5em;
+    @include font-serif;
     color: white;
     font-weight: 200;
     font-size: 500%;
   }
 
   p {
-    color: white;
-    font-weight: 300;
+    color: rgb(white, 60%);
+    font-weight: 200;
     font-size: 150%;
   }
 }
