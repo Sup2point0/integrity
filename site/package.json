@@ -8,6 +8,7 @@
     "prep": "cd ../.stranger-quarkdown && rake squark[fonts,scss] && cd ../site",
       "prepx": "cd ../.stranger-quarkdown && rake squark[fonts,scss,assets] && cd ../site",
 		"build": "vite build",
+      "buildx": "npm run prepx && vite build";
 		"preview": "vite preview"
 	},
 	"devDependencies": {
