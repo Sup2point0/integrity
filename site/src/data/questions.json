@@ -1,0 +1,40 @@
+{
+  "complete-square": {
+    "q24cu-hr1": {
+      "kind": "complete-square",
+      "title": "no",
+      "desc": "Ok, so you know how to complete the square, but do you <em>know</em> how to complete the square?",
+      "date": "2024 November",
+      "tags": {
+        "topic": null,
+        "other": [
+          "horror"
+        ]
+      },
+      "": [],
+      "Question": [],
+      "Hint": [],
+      "1": [],
+      "2": [
+        {
+          "kind": "latex",
+          "ctx": "block",
+          "text": "```math\ne^2 + 2(x - 2) - \\frac{7 \\pi}{3} (x - 2)^2\n```"
+        }
+      ],
+      "3": [],
+      "Answer": [
+        {
+          "kind": "latex",
+          "ctx": "block",
+          "text": "```math\n\\frac{7 \\pi}{3} \\left(\n  (x - 2)^2 + \\frac{6}{7 \\pi}\n\\right)\n```"
+        }
+      ],
+      "Solution": [],
+      "Rewrite": [],
+      "Substitute": [],
+      "Complete the Square": [],
+      "Solve": []
+    }
+  }
+}

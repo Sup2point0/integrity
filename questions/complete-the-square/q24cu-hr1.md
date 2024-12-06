@@ -1,6 +1,6 @@
 ---
 kind: complete-square
-title: 
+title: 'no'
 desc: Ok, so you know how to complete the square, but do you <em>know</em> how to complete the square?
 date: 2024 November
 tags:
