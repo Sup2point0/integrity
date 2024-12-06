@@ -1,4 +1,4 @@
-import { data } from "./data";
+// import { data } from "./data";
 import type { QuestionsData } from "#scripts/types";
 
 
@@ -7,6 +7,6 @@ interface SiteData {
 }
 
 const Site: SiteData = {
-  questions: data,
+  // questions: data,
 };
 export default Site;

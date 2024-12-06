@@ -6,31 +6,56 @@ require "pathname"
 def process(filepath:)
   load = FrontMatterParser::Parser.parse_file(filepath)
   data = load.front_matter
-  text = load.content
-
-  sections = text.split "## "
+  lines = load.content.split "\n"
 
   ## FIXME
-  sections.each do |section|
-    title, _, load = section.partition("\n")
-    data[title] = extract_groups(section)
+  section = nil
+  load = nil
+
+  lines.each do |line|
+    if line.start_with?("## ")
+      if section and load
+        data[section] = extract_groups(load)
+      end
+
+      _, _, section = line.partition("## ")
+      load = []
+    end
+    
+    if section
+      load.push(line)
+    end
   end
 
   return data
 end
 
 
-def extract_groups(text)
+def extract_groups(lines)
   out = []
-  lines = text.split "\n\n"
+  load = ""
+  ctx = nil
 
   lines.each do |line|
+    if ctx == "math"
+      if line.end_with?("```")
+        out.push({
+          "kind" => "latex",
+          "content" => load,
+        })
+        ctx = nil
+      else
+        load.concat(line)
+      end
+    else
+      if line
+        load.concat(line)
+      end
+    end
+
     if line.start_with?("```math")
-      out.append({
-        "kind" => "latex",
-        "ctx" => "block",
-        "text": line,
-      })
+      ctx = "math"
+      load = ""
     end
   end
 

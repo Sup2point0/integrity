@@ -11,30 +11,24 @@
           "horror"
         ]
       },
-      "": [],
-      "Question": [],
-      "Hint": [],
-      "1": [],
-      "2": [
+      "Question": [
         {
           "kind": "latex",
-          "ctx": "block",
-          "text": "```math\ne^2 + 2(x - 2) - \\frac{7 \\pi}{3} (x - 2)^2\n```"
+          "content": "e^2 + 2(x - 2) - \\frac{7 \\pi}{3} (2 - x)^2"
         }
       ],
-      "3": [],
+      "Hint": [
+        {
+          "kind": "latex",
+          "content": "e^2 + 2(x - 2) - \\frac{7 \\pi}{3} (x - 2)^2### 3Try making a substitution!"
+        }
+      ],
       "Answer": [
         {
           "kind": "latex",
-          "ctx": "block",
-          "text": "```math\n\\frac{7 \\pi}{3} \\left(\n  (x - 2)^2 + \\frac{6}{7 \\pi}\n\\right)\n```"
+          "content": "\\frac{7 \\pi}{3} \\left(  (x - 2)^2 + \\frac{6}{7 \\pi}\\right)"
         }
-      ],
-      "Solution": [],
-      "Rewrite": [],
-      "Substitute": [],
-      "Complete the Square": [],
-      "Solve": []
+      ]
     }
   }
 }
