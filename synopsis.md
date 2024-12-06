@@ -1,8 +1,4 @@
 # Synopsis
-<!-- #SQUARK live!
-| dest = synopsis
-| desc = All about integrity
--->
 
 Y’know what, in recent years I’ve come to really enjoy writing my own maths questions. Much like [*Assort*](https://github.com/Sup2point0/Assort) is a repository of all my creations, *integrity* is a collection of all my maths questions.
 

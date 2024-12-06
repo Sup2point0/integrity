@@ -1,10 +1,4 @@
 # *decoded* – integrity
-<!-- #SQUARK live!
-| dest = decoded
-| title = decoded
-| desc = Learnings, challenges and discoveries from developing integrity.
-| head = <em>decoded:</em> integrity
--->
 
 > [!Note]
 > This is part of my [*decoded*](https://github.com/Sup2point0/Assort/blob/origin/~dev/decoded.md) series, a collection of lessons learnt from each major project I’ve undertaken.

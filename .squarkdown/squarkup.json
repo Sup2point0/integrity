@@ -4,8 +4,8 @@
   "repo": "integrity",
   "site": "site",
 
-  "sources": null,
   "if-no-dir": ["warn", "create"],
+  "on-error": "kill",
 
   "assets": "assets",
   "site-assets": "assets/site",
