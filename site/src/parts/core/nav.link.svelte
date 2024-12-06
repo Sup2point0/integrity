@@ -51,12 +51,18 @@ a.nav-link {
   p {
     color: $col-text;
     @include font-ui;
-    font-weight: 400;
+    font-weight: 350;
   }
 }
 
 @media (max-width: 50rem) {
   a.nav-link.collapse {
+    display: none;
+  }
+}
+
+@media (max-width: 40rem) {
+  a.nav-link:has(img) p {
     display: none;
   }
 }
