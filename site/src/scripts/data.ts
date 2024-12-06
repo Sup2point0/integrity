@@ -3,7 +3,7 @@
  */
 
 import { Question } from "#scripts/types";
-import type { QuestionsData, QuestionCollection, TagDictionary } from "#scripts/types";
+import type { QuestionsData, QuestionCollection } from "#scripts/types";
 
 
 const raw_data = (await import("../data/questions.json")).default;
@@ -13,10 +13,11 @@ export const data = process_data(raw_data);
 function process_data(raw: any)
 {
   let out: QuestionsData = {};
+  let collection: QuestionCollection;
 
   for (let [kind, questions] of Object.entries(raw)) {
-    data = construct_questions(questions)
-    out[kind] = data;
+    collection = construct_collection(questions)
+    out[kind] = collection;
   }
 
   return out;
@@ -26,7 +27,7 @@ function process_data(raw: any)
 function construct_collection(raw: any): QuestionCollection
 {
   let out: QuestionCollection = {
-    tags: {},
+    tags: [],
     questions: {},
   };
 

@@ -41,7 +41,7 @@ export interface QuestionsData
  */
 export interface QuestionCollection
 {
-  tags: TagDictionary;
+  tags: string[];
   questions: QuestionDictionary;
 }
 
@@ -51,12 +51,4 @@ export interface QuestionCollection
 export interface QuestionDictionary
 {
   [shard: string]: Question;
-}
-
-/**
- * An index of tags and questions with those tags.
- */
-export interface TagDictionary
-{
-  [tag: string]: string[];
 }
