@@ -1,3 +1,5 @@
+assets/*.pptx
+
 # output
 static/
 build/
