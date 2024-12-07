@@ -9,13 +9,13 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
-<Header> Completing the Square </Header>
+<Header> Addvent </Header>
 
 <div class="content">
-  {#each Site.get_questions("complete-square") as q}
+  {#each Site.get_questions("addvent") as q}
     <QuestionCard
       title={q.title}
-      intern="complete-the-square/question?shard={q.shard}"
+      intern="addvent/question?shard={q.shard}"
       latex={q.question.content}
       date={q.date}
       tags={q.tags}

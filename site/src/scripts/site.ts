@@ -12,7 +12,7 @@ const Site: SiteData = {
   questions: data,
 
   get_questions: (topic) => {
-    return Object.values(Site.questions[topic].questions);
+    return Object.values(Site.questions[topic]?.questions ?? {});
   }
 };
 
