@@ -9,15 +9,16 @@ import katex from "katex";
 
 interface Props {
   text: string;
-  inline: boolean;
+  inline?: boolean;
 }
 
 let { text, inline = true }: Props = $props();
+
+
 const opts = {
   displayMode: !inline,
   throwOnError: false,
 }
-
 
 let out = $derived(katex.renderToString(text, opts))
 

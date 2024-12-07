@@ -13,10 +13,10 @@ import { base } from "$app/paths";
 
 
 interface Props {
-  title: string;
+  title?: string;
   intern?: string;
   latex?: Latex;
-  date?: string;
+  date?: Date;
   tags?: string[];
   style?: "block" | "row";
 }
@@ -36,8 +36,12 @@ let { title, intern, latex, date, tags, style = "block" }: Props = $props();
   </div>
 
   <div class="info">
-    <h4> {title} </h4>
-    <p> {date} </p>
+    {#if title}
+      <h4> {title} </h4>
+    {/if}
+    {#if date}
+      <p> {date} </p>
+    {/if}
 
     <div class="tags">
       {#each tags ?? [] as tag}

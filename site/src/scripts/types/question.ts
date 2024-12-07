@@ -1,28 +1,30 @@
-import type { Latex, TextBlock } from "./root";
+import type { Latex, Block } from "./root";
 
 /**
  * Represents a generic question.
  */
 export class Question
 {
+  shard: string;
+
   title?: string;
   desc?: string;
   date?: Date;
   tags: string[];
 
   /** The question line. */
-  question: Latex | TextBlock = "";
+  question: Block
 
   /** A hint. */
-  hints?: TextBlock[];
+  hints?: Block[];
 
   /** The intended solution. */
-  solution?: TextBlock[];
+  solution?: Block[];
 
   /** Alternate solutions. */
-  alternates?: TextBlock[];
+  alternates?: Block[];
 
-  constructor(data: Partial<Question>)
+  constructor(data: any)
   {
     Object.assign(this, data);
     this.question = data.question[0];
