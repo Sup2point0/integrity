@@ -38,13 +38,12 @@ function construct_collection(raw: any): QuestionCollection
     out.questions[shard] = question;
     
     for (let tag of question.tags) {
-      if (!out.tags[tag]) {
-        out.tags[tag] = [];
-      }
-
-      out.tags[tag].push(shard);
+      if (out.tags.includes(tag)) continue;
+      out.tags.push(tag);
     }
   }
+
+  console.log(out)
 
   return out;
 }
