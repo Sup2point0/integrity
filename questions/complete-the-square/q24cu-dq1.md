@@ -1,6 +1,6 @@
 ---
 topic: complete-square
-title: yes
+title: 'yes'
 desc: 
 date: 2024 November
 tags:

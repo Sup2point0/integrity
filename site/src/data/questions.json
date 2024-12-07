@@ -150,6 +150,49 @@
         ]
       }
     },
+    "q24cu-pi1": {
+      "topic": "complete-square",
+      "title": "mm",
+      "desc": null,
+      "date": "2024 November",
+      "tags": [
+        "horror",
+        "pi"
+      ],
+      "shard": "q24cu-pi1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\left(x-\\frac{2\\pi}{3}\\right)\\left(x+\\frac{3\\pi}{5}\\right)"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "There are no hints for this one."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Just brute force it."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Enjoy!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\left(x-\\frac{\\pi}{30}\\right)^{2}-\\frac{361\\pi^{2}}{900}"
+        }
+      ]
+    },
     "q24cu-tr1": {
       "topic": "complete-square",
       "title": "why",
