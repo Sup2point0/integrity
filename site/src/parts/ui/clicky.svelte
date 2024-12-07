@@ -6,15 +6,28 @@ import { base } from "$app/paths";
 
 
 interface Props {
-  text: string;
+  text?: string;
+  pict?: string;
   link?: string;
   intern?: string;
   button?: () => void;
+  children: any;
 }
 
-let { text, link, intern, button }: Props = $props();
+let { text, pict, link, intern, button, children }: Props = $props();
 
 </script>
+
+
+{#snippet content()}
+  {#if text}
+    {text}
+  {:else if pict}
+    <img alt="" src="{base}/{pict}" />
+  {:else}
+    {@render children?.()}
+  {/if}
+{/snippet}
 
 
 {#if link}
@@ -22,15 +35,15 @@ let { text, link, intern, button }: Props = $props();
     href={link || `${base}/${intern}`}
   >
     <button>
-      {text}
+      {@render content()}
     </button>
   </a>
 
-  {:else}
+{:else}
   <button class="clicky"
     onclick={button}
   >
-    {text}
+    {@render content()}
   </button>
 
 {/if}
@@ -51,6 +64,10 @@ let { text, link, intern, button }: Props = $props();
     $click: oklch(95% 0 0),
     $t: 0.12,
   );
+}
+
+img {
+  max-width: 100%;
 }
 
 </style>

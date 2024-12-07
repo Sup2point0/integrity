@@ -11,6 +11,7 @@ import Clicky from "#parts/ui/clicky.svelte";
 import Toggle from "#parts/ui/toggle.svelte";
 
 import { fade } from "svelte/transition";
+import { base } from "$app/paths";
 
 
 interface Props {
@@ -34,9 +35,11 @@ let open = $state(false)
         bind:value={search.query}
       />
 
-      <Clicky text="X"
-        button={() => { open = !open; }}
-      />
+      <Clicky button={() => { open = !open; }}>
+        <img id="arrow" alt="/" src="{base}/arrow.svg"
+          style:transform={open ? "rotate(180deg)" : "rotate(0deg)"}
+        />
+      </Clicky>
     </div>
 
     {#if open}
@@ -97,8 +100,8 @@ input[type='search'] {
   box-shadow: 0 1.5px 2px -0.5px $col-line;
   
   @include interact(
-    $hover: oklch(98% 0 0),
-    $click: oklch(95% 0 0),
+    $hover: oklch(99% 0 0),
+    $click: oklch(96% 0 0),
   );
 
   &:hover {
@@ -107,6 +110,12 @@ input[type='search'] {
   &:focus, &:active {
     outline: none;
   }
+}
+
+img#arrow {
+  max-width: 1em;
+  opacity: 50%;
+  transition: transform 0.16s ease-out;
 }
 
 
