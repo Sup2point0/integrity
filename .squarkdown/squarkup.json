@@ -10,7 +10,7 @@
   "assets": "assets",
   "site-assets": "assets/site",
   "fonts": [
-    "Geologica:wght@100..900",
+    "Geologica:slnt,wght,CRSV@-12..0,100..900,1",
     "Crimson+Pro:ital,wght@0,200..900;1,200..900"
   ]
 }

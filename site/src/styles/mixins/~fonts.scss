@@ -1,6 +1,10 @@
 @mixin font-ui {
   font-family: 'Geologica', 'Segoe UI', system-ui, sans-serif;
   font-weight: 300;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 1,
+    "SHRP" 0;
 }
 
 @mixin font-serif {
