@@ -9,7 +9,7 @@ import Search from "#parts/ui/search.svelte";
 
 
 <svelte:head>
-  <title> Integrals · Integrity · Sup#2.0 </title>
+  <title> Integrals · Integrity </title>
 </svelte:head>
 
 

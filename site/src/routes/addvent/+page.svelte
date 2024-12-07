@@ -10,7 +10,7 @@ import Header from "#parts/core/header.svelte";
 
 
 <svelte:head>
-  <title> Addvent · Integrity · Sup#2.0 </title>
+  <title> Addvent · Integrity </title>
 </svelte:head>
 
 

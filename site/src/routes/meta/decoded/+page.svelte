@@ -8,13 +8,13 @@ import Header from "#parts/core/header.svelte";
 
 
 <svelte:head>
-  <title> decoded · Integrity · Sup#2.0 </title>
+  <title> decoded · Integrity </title>
   <meta name="description"
     content="Learnings, challenges and discoveries from developing integrity." />
 </svelte:head>
 
 
-<Header> decoded: integrity </Header>
+<Header> decoded: Integrity </Header>
 
 <article>
   <Content />

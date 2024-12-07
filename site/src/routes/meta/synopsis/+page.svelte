@@ -8,7 +8,7 @@ import Header from "#parts/core/header.svelte";
 
 
 <svelte:head>
-  <title> Synopsis · Integrity · Sup#2.0 </title>
+  <title> Synopsis · Integrity </title>
   <meta name="description"
     content="Learnings, challenges and discoveries from developing Integrity." />
 </svelte:head>

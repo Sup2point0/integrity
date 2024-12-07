@@ -19,7 +19,7 @@ let filtered = $derived(filter_questions(
 
 
 <svelte:head>
-  <title> Completing the Square · Integrity · Sup#2.0 </title>
+  <title> Completing the Square · Integrity </title>
 </svelte:head>
 
 

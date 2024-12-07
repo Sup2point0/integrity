@@ -8,7 +8,7 @@ import Header from "#parts/core/header.svelte";
 
 
 <svelte:head>
-  <title> Graph Drawing · Integrity · Sup#2.0 </title>
+  <title> Graph Drawing · Integrity </title>
 </svelte:head>
 
 
