@@ -27,7 +27,7 @@ jobs:
           bundler-cache: true
 
       - name: 'ruby / install'
-        run: cd ../.stranger-quarkdown && bundle install && cd../scripts && bundle install
+        run: cd ../.stranger-quarkdown && bundle install && cd ../scripts && bundle install
 
       - name: 'node / setup'
         uses: actions/setup-node@v4
