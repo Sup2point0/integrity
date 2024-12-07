@@ -18,7 +18,7 @@ let active = true;
 onMount(() => {
   setTimeout(() => {
     active = false;
-  }, 1000);
+  }, 800);
 })
 
 </script>
@@ -50,6 +50,8 @@ onMount(() => {
       <h1> integrity </h1>
       <p> by Sup#2.0 </p>
     </div>
+
+    <small> If you’re still reading this, JavaScript might be broken. </small>
   </aside>
 {/if}
 
@@ -76,13 +78,18 @@ aside.overlay {
   left: 0;
   z-index: 20;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $col-prot;
   
   .content {
+    flex-grow: 1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   h1 {
@@ -97,6 +104,13 @@ aside.overlay {
     color: rgb(white, 60%);
     font-weight: 200;
     font-size: 150%;
+  }
+
+  small {
+    padding: 1em;
+    flex-grow: 0;
+    color: rgb(black, 10%);
+    font-size: 80%;
   }
 }
 
