@@ -7,6 +7,11 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
+<svelte:head>
+  <title> Graph Drawing · Integrity · Sup#2.0 </title>
+</svelte:head>
+
+
 <Header title="Graph Drawing" />
 
 <div class="content">

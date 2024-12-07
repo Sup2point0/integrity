@@ -18,6 +18,11 @@ let filtered = $derived(filter_questions(
 </script>
 
 
+<svelte:head>
+  <title> Completing the Square · Integrity · Sup#2.0 </title>
+</svelte:head>
+
+
 <Header title="Completing the Square" />
 
 <Search tags={["trig", "horror", "sub", "long", "integral", "parts"]} />

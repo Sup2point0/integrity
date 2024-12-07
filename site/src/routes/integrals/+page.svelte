@@ -8,6 +8,11 @@ import Search from "#parts/ui/search.svelte";
 </script>
 
 
+<svelte:head>
+  <title> Integrals · Integrity · Sup#2.0 </title>
+</svelte:head>
+
+
 <Header title="Integrals" />
 
 <Search tags={["trig", "horror", "sub", "long", "integral", "parts"]} />

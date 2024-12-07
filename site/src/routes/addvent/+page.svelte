@@ -9,6 +9,11 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
+<svelte:head>
+  <title> Addvent · Integrity · Sup#2.0 </title>
+</svelte:head>
+
+
 <Header title="Addvent"
   desc="Christmas-themed questions for 12 days of maths questions!"
 />
