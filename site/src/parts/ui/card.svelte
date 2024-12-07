@@ -44,9 +44,13 @@ let { title, intern, latex, pict, style = "block" }: Props = $props();
 
 a.card {
   min-width: 16em;
+  min-height: 8em;
   padding: 0.75em;
-  display: block;
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
   @include font-ui;
   color: $col-text;
   text-decoration: none;
@@ -72,6 +76,16 @@ a.card {
 .preview {
   min-height: 4em;
   padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .info {

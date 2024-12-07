@@ -21,11 +21,15 @@ import Header from "#parts/core/header.svelte";
     />
     <Card title="Graph Drawing"
       intern="graphs"
-      latex={"f(x) = \\ln{x}"}
+      pict="previews/graph-drawing.png"
     />
     <Card title="Completing the Square"
       intern="complete-the-square"
       latex={"a(x - p)^2 + q"}
+    />
+    <Card title="Addvent"
+      intern="addvent"
+      pict="previews/addvent-text.png"
     />
   </section>
 </div>
