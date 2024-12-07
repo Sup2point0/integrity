@@ -51,22 +51,6 @@ let open = $state(false)
             {/each}
           </td>
         </tr>
-        <tr>
-          <th> Topics </th>
-          <td class="flex">
-            {#each tags as tag}
-              <Toggle text={tag.toUpperCase()} />
-            {/each}
-          </td>
-        </tr>
-        <tr>
-          <th> Topics </th>
-          <td class="flex">
-            {#each tags as tag}
-              <Toggle text={tag.toUpperCase()} />
-            {/each}
-          </td>
-        </tr>
       </tbody></table>
     {/if}
 
