@@ -53,8 +53,12 @@ let { title, intern, latex, date, tags, style = "block" }: Props = $props();
 a.question-card {
   min-width: 12em;
   padding: 0.75em;
-  display: block;
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+
   @include font-ui;
   color: $col-text;
   text-decoration: none;
@@ -80,6 +84,13 @@ a.question-card {
 .question {
   min-height: 4rem;
   padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-x: auto;
 }
 
 .info {

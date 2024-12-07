@@ -51,6 +51,7 @@ a.card {
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
+  
   @include font-ui;
   color: $col-text;
   text-decoration: none;

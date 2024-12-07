@@ -36,6 +36,10 @@ import { base } from "$app/paths";
           alt="Sup#2.0"
           src="https://sup2point0.github.io/purple-portal.png" />
       </a>
+
+      <a class="credits" href="https://svelte.dev">
+        <p> built with Svelte+Kit </p>
+      </a>
     </div>
 
   </div>
@@ -46,7 +50,7 @@ import { base } from "$app/paths";
 
 footer {
   width: 100%;
-  padding: 4rem 0 4rem;
+  padding: 4rem 0 6rem;
   background-color: oklch(99% 0 0);
 
   .content {
