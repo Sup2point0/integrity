@@ -1,5 +1,93 @@
 {
   "complete-square": {
+    "q24cu-dq1": {
+      "topic": "complete-square",
+      "title": true,
+      "desc": null,
+      "date": "2024 November",
+      "tags": [
+        "scare"
+      ],
+      "shard": "q24cu-dq1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\left(\\frac{x}{2}-\\frac{x}{3}+\\frac{x}{5}\\right)^{2}-\\left(\\frac{x}{2}+\\frac{x}{3}-\\frac{x}{5}\\right)^{2}"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Ignore what’s in the brackets for now."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What if we wrote the expression as $p^2 - q^2$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{4}{15}x^{2}"
+        }
+      ],
+      "solution": {
+        "difference of 2 squares": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align}&= \\left(\\frac{x}{2}-\\frac{x}{3}+\\frac{x}{5}\\right)^{2}-\\left(\\frac{x}{2}+\\frac{x}{3}-\\frac{x}{5}\\right)^{2}\\\\ &= \\left(\\frac{x}{2}-\\frac{x}{3}+\\frac{x}{5}-\\left(\\frac{x}{2}+\\frac{x}{3}-\\frac{x}{5}\\right)\\right)\\left(\\frac{x}{2}-\\frac{x}{3}+\\frac{x}{5}+\\frac{x}{2}+\\frac{x}{3}-\\frac{x}{5}\\right)\\end{align}"
+          }
+        ]
+      }
+    },
+    "q24cu-dq2": {
+      "topic": "complete-square",
+      "title": "yay",
+      "desc": null,
+      "date": "2024 November",
+      "tags": [
+        "speed"
+      ],
+      "shard": "q24cu-dq2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\left(x+3\\right)\\left(3-x\\right)-6\\left(x-3\\right)"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What if you flip $(x + 3)$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Does $(3 + x)(3 - x)$ look familiar?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\left(x+3\\right)^{2}+36"
+        }
+      ],
+      "solution": {
+        "difference of 2 squares": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align}&= \\left(x+3\\right)\\left(3-x\\right)-6\\left(x-3\\right)\\\\ &= \\left(3+x\\right)\\left(3-x\\right)-6\\left(x-3\\right)\\\\ &= 9-x^{2}-6x+18\\end{align}"
+          }
+        ]
+      }
+    },
     "q24cu-hr1": {
       "topic": "complete-square",
       "title": "no",
@@ -96,7 +184,15 @@
           "kind": "latex",
           "content": "\\frac{3}{x}\\left(x-\\frac{1}{6}\\right)^{2}-\\frac{1}{4x}"
         }
-      ]
+      ],
+      "solution": {
+        "rewrite": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align} A &= 3x-\\frac{6x+1}{6x}\\\\ &= 3x-\\left(1+\\frac{1}{6x}\\right)\\\\ &= 3x-1-\\frac{1}{6x}\\end{align}"
+          }
+        ]
+      }
     }
   }
 }

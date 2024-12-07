@@ -46,12 +46,6 @@ Multiply through by $x$ (but remember to divide by it at the end!).
 &= \frac{1}{x}\left(3x^{2}-x-\frac{1}{6}\right)
 \\ &= \frac{1}{x}\left(3\left(x^{2}-\frac{1}{3}x\right)-\frac{1}{6}\right)
 \\ &= \frac{1}{x}\left(3\left(x-\frac{1}{6}\right)^{2}-\frac{1}{12}-\frac{1}{6}\right)
-\end{align}
-```
-
-### Answer
-```math
-\begin{align}
-A = \frac{3}{x}\left(x-\frac{1}{6}\right)^{2}-\frac{1}{4x}
+\\ &= \frac{3}{x}\left(x-\frac{1}{6}\right)^{2}-\frac{1}{4x}
 \end{align}
 ```
