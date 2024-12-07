@@ -9,6 +9,14 @@ export function filter_questions(
 {
   let out: Question[] = [...questions];
 
+  if (Object.values(options.tags).includes(true)) {
+    out = out.filter(
+      question => Object.keys(options.tags).some(tag =>
+        options.tags[tag] && question.tags.includes(tag)
+      )
+    );
+  }
+
   if (options.query) {
     let query: string = options.query.toLowerCase();
 

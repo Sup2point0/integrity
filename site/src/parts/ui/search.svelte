@@ -21,7 +21,7 @@ interface Props {
 let { tags = [] }: Props = $props();
 
 
-let open = $state(false)
+let open = $state(false);
 
 </script>
 
@@ -29,33 +29,36 @@ let open = $state(false)
 <search>
   <div class="layout">
 
-    <div class="search-bar">
-      <input type="search"
-        placeholder="search"
-        bind:value={search.query}
+  <div class="search-bar">
+    <input type="search"
+      placeholder="search"
+      bind:value={search.query}
+    />
+
+    <Clicky button={() => { open = !open; }}>
+      <img id="arrow" alt="/" src="{base}/arrow.svg"
+        style:transform={open ? "rotate(180deg)" : "rotate(0deg)"}
       />
+    </Clicky>
+  </div>
 
-      <Clicky button={() => { open = !open; }}>
-        <img id="arrow" alt="/" src="{base}/arrow.svg"
-          style:transform={open ? "rotate(180deg)" : "rotate(0deg)"}
-        />
-      </Clicky>
-    </div>
-
-    {#if open}
-      <table class="search-filters"
-        transition:fade={{ duration: 200 }}
-      ><tbody>
-        <tr>
-          <th> Topics </th>
-          <td class="flex">
-            {#each tags as tag}
-              <Toggle text={tag.toUpperCase()} />
-            {/each}
-          </td>
-        </tr>
-      </tbody></table>
-    {/if}
+  {#if open}
+    <table class="search-filters"
+      transition:fade={{ duration: 200 }}
+    ><tbody>
+      <tr>
+        <th> Topics </th>
+        <td class="flex">
+          {#each tags as tag}
+            <Toggle text={tag.toUpperCase()}
+              value={search.tags[tag]}
+              toggle={() => { search.tags[tag] = !search.tags[tag]; }}
+            />
+          {/each}
+        </td>
+      </tr>
+    </tbody></table>
+  {/if}
 
   </div>
 </search>

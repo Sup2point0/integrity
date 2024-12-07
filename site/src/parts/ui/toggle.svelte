@@ -8,16 +8,17 @@ A clicky that toggles a variable.
 interface Props {
   text: string;
   value: any;
+  toggle: () => void;
 }
 
-let { text, value }: Props = $props();
+let { text, value, toggle }: Props = $props();
 
 </script>
 
 
 <button class="toggle"
   class:active={value}
-  onclick={() => { value = !value; }}
+  onclick={toggle}
 >
   {text}
 </button>

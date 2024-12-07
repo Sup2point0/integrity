@@ -9,11 +9,26 @@ import QuestionCard from "#parts/ui/card.question.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/ui/search.svelte";
 
+import { onMount } from "svelte";
+
+
+const tags = Site.questions["complete-square"].tags;
 
 let filtered = $derived(filter_questions(
   Site.get_questions("complete-square"),
   search
 ));
+
+
+onMount(() => {
+  let data = {};
+  for (let tag of tags) {
+    console.log("setting tag =", tag)
+    data[tag] = false;
+  }
+  search.tags = data;
+  console.log(search);
+})
 
 </script>
 
@@ -25,7 +40,7 @@ let filtered = $derived(filter_questions(
 
 <Header title="Completing the Square" />
 
-<Search tags={["trig", "horror", "sub", "long", "integral", "parts"]} />
+<Search {tags} />
 
 <div class="content">
   {#each filtered as q}

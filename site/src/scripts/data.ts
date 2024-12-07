@@ -43,7 +43,5 @@ function construct_collection(raw: any): QuestionCollection
     }
   }
 
-  console.log(out)
-
   return out;
 }

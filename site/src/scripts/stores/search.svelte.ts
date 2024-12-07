@@ -5,6 +5,11 @@
 export class SearchData
 {
   query: string = $state("");
+  tags: TagStates = $state({ sup: null });
+}
+
+interface TagStates {
+  [tag: string]: boolean;
 }
 
 export const search = new SearchData();

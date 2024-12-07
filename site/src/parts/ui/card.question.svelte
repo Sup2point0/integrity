@@ -91,7 +91,9 @@ a.question-card {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 80%;
   overflow-x: auto;
+  scrollbar-width: thin;
 }
 
 .info {

@@ -1,4 +1,48 @@
 {
+  "addvent": {
+    "a24c-pc1": {
+      "topic": "addvent",
+      "title": "Day 5",
+      "desc": null,
+      "date": "2024 December 6",
+      "tags": [
+        "numbers"
+      ],
+      "shard": "a24c-pc1",
+      "question": [
+        {
+          "kind": "text",
+          "content": "Last year, it took $8$ days for $200$ elves in the North Atlantic Pinecone Association to prepare $384,000$ presents.This year, the Pinecone Association has an order of only $277,200$ presents. However, $35$ elves have resigned from the company due to complaints over the quality of icewater served at lunch.If the remaining elves continue to work at the same rate this year, how long will it take them to prepare all the presents?"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How many presents do 200 elves prepare in 8 days?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How many presents, then, would 1 elf prepare in 8 days?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "And in a single day?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "7 days"
+        }
+      ]
+    }
+  },
   "complete-square": {
     "q24cu-dq1": {
       "topic": "complete-square",
