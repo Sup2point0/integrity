@@ -5,7 +5,7 @@
 export class SearchData
 {
   query: string = $state("");
-  tags: TagStates = $state({ sup: null });
+  tags: TagStates = $state({});
 }
 
 interface TagStates {

@@ -1,6 +1,6 @@
 <!-- @component Toggle
  
-A clicky that toggles a variable.
+A clicky that binds to a variable and toggles it.
 -->
 
 <script lang="ts">

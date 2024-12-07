@@ -14,9 +14,9 @@ let { shard }: Props = $props();
 </script>
 
 
-<button class="tag"
-  onclick={() => { window.location.href = `${base}/search?tag=${shard}` }}
->
+<button class="tag">
+  <!-- onclick={() => { window.location.href = `${base}/search?tag=${shard}` }}
+> -->
   {shard.toUpperCase()}
 </button>
 
