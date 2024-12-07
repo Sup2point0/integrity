@@ -87,8 +87,10 @@ input[type='search'] {
   appearance: none;
   min-width: max(50%, 12em);
   padding: 0.75em 1.25em;
+
   @include font-ui;
   color: $col-text;
+  font-size: 100%;
   background-color: white;
   border: 1px solid oklch(90% 0 0);
   border-radius: 0.5em;

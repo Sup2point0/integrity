@@ -1,6 +1,8 @@
 <script lang="ts">
 
 import "#styles/essence.scss";
+import "#styles/article.scss";
+import "#styles/a11y.scss";
 
 import Nav from "#parts/core/nav.svelte";
 import Footer from "#parts/core/footer.svelte";

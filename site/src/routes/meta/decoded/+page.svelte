@@ -10,11 +10,13 @@ import Header from "#parts/core/header.svelte";
 <svelte:head>
   <title> decoded · Integrity </title>
   <meta name="description"
-    content="Learnings, challenges and discoveries from developing integrity." />
+    content="Learnings, challenges and discoveries from writing maths questions." />
 </svelte:head>
 
 
-<Header> decoded: Integrity </Header>
+<Header title="decoded: Integrity"
+  desc="Learnings, challenges and discoveries from writing my own maths questions."
+/>
 
 <article>
   <Content />

@@ -14,7 +14,9 @@ import Header from "#parts/core/header.svelte";
 </svelte:head>
 
 
-<Header> Synopsis </Header>
+<Header title="Synopsis"
+  desc="All about Integrity"
+/>
 
 <article>
   <Content />

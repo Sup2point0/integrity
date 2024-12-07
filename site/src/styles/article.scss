@@ -1,5 +1,72 @@
-:global(article) {
+/**
+ * Styles for static article pages
+ */
+
+@use 'mixins/~colours' as *;
+@use 'mixins/~fonts' as *;
+
+
+@counter-style dashes {
+  system: cyclic;
+  symbols: '–';
+  symbols: '⟹';
+  suffix: '   ';
+}
+
+
+article {
   h1 {
     display: none;
+  }
+
+  h2 {
+    margin: 1em 0;
+    padding-bottom: 0.25em;
+    @include font-serif;
+    font-weight: 400;
+    font-size: 200%;
+    border-bottom: 1px solid $col-line;
+  }
+
+  p {
+    font-weight: 250;
+  }
+
+  ul {
+    font-weight: 250;
+    list-style-type: dashes;
+
+    li {
+      margin: 0.5em 0;
+    }
+  }
+
+  a {
+    position: relative;
+    color: $col-prot;
+    text-decoration: none;
+    transition: color 0.12s ease-out;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $col-prot;
+      transform: scaleX(0.95);
+      transform-origin: center;
+      transition: all 0.12s ease-out;
+    }
+
+    &:hover {
+      color: $col-deut;
+
+      &:after {
+        background-color: $col-deut;
+        transform: scaleX(1.02)
+      }
+    }
   }
 }

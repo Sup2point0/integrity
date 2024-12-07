@@ -27,10 +27,3 @@ p {
   color: white !important;
   background-color: $col-prot !important;
 }
-
-@media (prefers-reduced-motion) {
-  * {
-    transition: none !important;
-    animation: none !important;
-  }
-}
