@@ -26,8 +26,8 @@ jobs:
           ruby-version: 3.3
           bundler-cache: true
 
-      - name: 'ruby / squarkdown / install'
-        run: cd ../.stranger-quarkdown && bundle install
+      - name: 'ruby / install'
+        run: cd ../.stranger-quarkdown && bundle install && cd../scripts && bundle install
 
       - name: 'node / setup'
         uses: actions/setup-node@v4
