@@ -35,6 +35,7 @@ a.link {
   border-radius: 0.5em;
 
   @include interact($col-hover, $col-click);
+  @include focus-outline;
 }
 
 </style>

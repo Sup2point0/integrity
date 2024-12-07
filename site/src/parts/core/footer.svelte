@@ -37,7 +37,7 @@ import { base } from "$app/paths";
           src="https://sup2point0.github.io/purple-portal.png" />
       </a>
 
-      <a class="credits" href="https://svelte.dev">
+      <a class="credits" target="_blank" href="https://svelte.dev">
         <p> built with Svelte+Kit </p>
       </a>
     </div>

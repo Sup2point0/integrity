@@ -72,6 +72,7 @@ a.question-card {
     $click: oklch(96% 0 0),
     $t: 0.16,
   );
+  @include focus-outline;
 
   &.block {
     max-width: 20vw;
