@@ -111,6 +111,17 @@ aside.overlay {
     flex-grow: 0;
     color: rgb(black, 10%);
     font-size: 80%;
+    opacity: 0;
+    animation: 1s delayed-fade 1.5s;
+  }
+}
+
+@keyframes delayed-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
