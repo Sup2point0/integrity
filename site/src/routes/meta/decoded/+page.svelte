@@ -21,10 +21,3 @@ import Header from "#parts/core/header.svelte";
 <article>
   <Content />
 </article>
-
-
-<style lang="scss">
-
-@use './src/styles/article' as *;
-
-</style>
