@@ -23,7 +23,6 @@ import Header from "#parts/core/header.svelte";
     <QuestionCard
       title={q.title}
       intern="addvent/question?shard={q.shard}"
-      latex={q.question.content}
       date={q.date}
       tags={q.tags}
     />
