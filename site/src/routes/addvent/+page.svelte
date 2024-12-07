@@ -9,7 +9,9 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
-<Header> Addvent </Header>
+<Header title="Addvent"
+  desc="Christmas-themed questions for 12 days of maths questions!"
+/>
 
 <div class="content">
   {#each Site.get_questions("addvent") as q}

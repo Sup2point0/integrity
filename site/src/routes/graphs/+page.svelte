@@ -7,7 +7,7 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
-<Header> Graph Drawing </Header>
+<Header title="Graph Drawing" />
 
 <div class="content">
   <QuestionCard

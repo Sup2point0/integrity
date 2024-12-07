@@ -9,7 +9,7 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
-<Header> Completing the Square </Header>
+<Header title="Completing the Square" />
 
 <div class="content">
   {#each Site.get_questions("complete-square") as q}

@@ -3,16 +3,18 @@
 <script lang="ts">
 
 interface Props {
-  children?: any;
+  title: string;
+  desc?: string;
 }
 
-let { children }: Props = $props();
+let { title, desc }: Props = $props();
 
 </script>
 
 
 <header>
-  <h1> {@render children?.()} </h1>
+  <h1> {title} </h1>
+  <p> {@html desc}
 </header>
 
 
@@ -29,6 +31,13 @@ header {
 h1 {
   @include font-serif;
   font-size: 250%;
+}
+
+p {
+  margin-top: 1em;
+  @include font-ui;
+  color: $col-text-deut;
+  font-weight: 200;
 }
 
 </style>

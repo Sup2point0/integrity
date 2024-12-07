@@ -12,7 +12,7 @@ import Header from "#parts/core/header.svelte";
 
 
 <div class="content">
-  <Header title="What fun are we having today?"> What fun are we having today? </Header>
+  <Header title="What fun are we having today?" />
 
   <section class="browse">
     <Card title="Integrals"
