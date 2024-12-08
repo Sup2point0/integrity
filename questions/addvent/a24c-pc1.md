@@ -17,7 +17,7 @@ This year, the Pinecone Association has an order of only $277,200$ presents. How
 If the remaining elves continue to work at the same rate this year, how long will it take them to prepare all the presents?
 
 
-## Hint
+## Hints
 
 ### 1
 How many presents do 200 elves prepare in 8 days?

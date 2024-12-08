@@ -14,7 +14,7 @@ tags:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 What if you flip $(x + 3)$?

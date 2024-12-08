@@ -15,7 +15,7 @@ tags:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 There are no hints for this one.

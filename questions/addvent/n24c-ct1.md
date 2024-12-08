@@ -15,7 +15,7 @@ My Christmas tree has $12$ layers. Each layer $n$ has $n$ branches, each of leng
 **What is the total length of all branches on my Christmas tree?**
 
 
-## Hint
+## Hints
 
 ### 1
 Layer 1 has 1 branch of length 1.

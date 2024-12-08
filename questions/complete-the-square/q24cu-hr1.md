@@ -14,7 +14,7 @@ e^2 + 2(x - 2) - \frac{7 \pi}{3} (2 - x)^2
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 If you square a term, it does not matter what its sign is.

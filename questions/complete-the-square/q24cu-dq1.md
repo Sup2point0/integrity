@@ -14,7 +14,7 @@ tags:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Ignore what’s in the brackets for now.

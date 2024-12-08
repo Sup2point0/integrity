@@ -22,7 +22,7 @@ I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread
 - Treat distinct orders of colours as different designs: blue, blue, green is different to blue, green, blue.
 
 
-## Hint
+## Hints
 
 ### 1
 We might want to systematically list out some cases to start with, but it may be better to consider different *kinds* of cases here.

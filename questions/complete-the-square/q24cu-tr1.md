@@ -14,7 +14,7 @@ tags:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 What is $\sin{\frac{\pi}{6}}$?
