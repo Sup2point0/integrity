@@ -46,7 +46,7 @@ onMount(() => {
       title={q.title}
       intern="complete-the-square/question?shard={q.shard}"
       latex={q.question.content}
-      date={q.date}
+      date={search.show.dates ? q.date : undefined}
       tags={search.show.tags ? q.tags : undefined}
     />
   {/each}

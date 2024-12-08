@@ -8,6 +8,7 @@ export class SearchData
   tags: States = $state({});
 
   show: States = $state({
+    dates: true,
     tags: true,
   });
 

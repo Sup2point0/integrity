@@ -38,7 +38,12 @@ let { title, intern, latex, date, tags, style = "block" }: Props = $props();
 
   <div class="info">
     {#if title} <h4> {title} </h4> {/if}
-    {#if date} <p> {date} </p> {/if}
+    
+    {#if date}
+      <p transition:fade={{ duration: 250 }}>
+        {date}
+      </p>
+    {/if}
 
     {#if tags && tags.length > 0}
       <div class="tags"
