@@ -41,6 +41,122 @@
           "content": "7 days"
         }
       ]
+    },
+    "n24c-ct1": {
+      "topic": "addvent",
+      "title": "Day 1",
+      "desc": "A simple classic to get us started.",
+      "date": "2024 December 2",
+      "tags": [
+        "sequences"
+      ],
+      "shard": "n24c-ct1",
+      "question": [
+        {
+          "kind": "text",
+          "content": "My Christmas tree has $12$ layers. Each layer $n$ has $n$ branches, each of length $n$.**What is the total length of all branches on my Christmas tree?**"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Layer 1 has 1 branch of length 1.Layer 2 has 2 branches of length 2."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What is the total length of all branches on layer 3?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What is the total length of all branches on any layer $n$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "650"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "1^1 + 2^2 + 3^3 + \\text{...} + 11^11 + 12^12\\\\ &= 1 + 4 + 9 + \\text{...} + 121 + 144\\\\ &= 650"
+        }
+      ]
+    },
+    "p24c-gg1": {
+      "topic": "addvent",
+      "title": "Day 3",
+      "desc": "This is a really important thing to know that crops up *very* often in life. Sauce: trust.",
+      "date": "2024 December 4",
+      "tags": [
+        "combinatorics"
+      ],
+      "shard": "p24c-gg1",
+      "question": [
+        {
+          "kind": "text",
+          "content": "I am decorating gingerbread men with buttons.I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.**How many different gingerbread men designs can I make?**- Treat distinct orders of colours as different designs: blue, blue, green is different to blue, green, blue."
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "We might want to systematically list out some cases to start with, but it may be better to consider different *kinds* of cases here."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What if all 3 buttons are different colours?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What if 2 of the 3 buttons are the same colour?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "60"
+        }
+      ],
+      "solution": {
+        "_": [
+          {
+            "kind": "text",
+            "content": "We consider 2 cases – either all 3 buttons are different colours, or a colour is repeated (we have 2 of the same colour)."
+          }
+        ],
+        "all different": [
+          {
+            "kind": "text",
+            "content": "We have 4 choices for the first colour, 3 for the second, and 2 for the third. This gives $4 \\cdot 3 \\cdot 2 = 24$ patterns."
+          }
+        ],
+        "repeated": [
+          {
+            "kind": "text",
+            "content": "We have 4 choices for which colour to repeat, leaving 3 choices for the remaining colour. Furthermore, we then have 3 slots to place the remaining button (top, middle or bottom). This gives $4 \\cdot 3 \\cdot 3 = 36$ patterns."
+          }
+        ],
+        "solve": [
+          {
+            "kind": "text",
+            "content": "Adding these, we find in total we can obtain $24 + 36 = 60$ different designs."
+          }
+        ]
+      }
     }
   },
   "complete-square": {

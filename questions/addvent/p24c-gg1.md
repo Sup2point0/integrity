@@ -1,7 +1,7 @@
 ---
 topic: addvent
 title: Day 3
-desc: This is a really important thing to know that crops up *very* often in life. Sauce: trust.
+desc: 'This is a really important thing to know that crops up *very* often in life. Sauce: trust.'
 date: 2024 December 4
 tags:
   - combinatorics
@@ -40,6 +40,7 @@ What if 2 of the 3 buttons are the same colour?
 
 ## Solution
 
+### _
 We consider 2 cases – either all 3 buttons are different colours, or a colour is repeated (we have 2 of the same colour).
 
 ### All Different
