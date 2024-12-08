@@ -23,11 +23,9 @@ let filtered = $derived(filter_questions(
 onMount(() => {
   let data = {};
   for (let tag of tags) {
-    console.log("setting tag =", tag)
     data[tag] = false;
   }
   search.tags = data;
-  console.log(search);
 })
 
 </script>
@@ -49,7 +47,7 @@ onMount(() => {
       intern="complete-the-square/question?shard={q.shard}"
       latex={q.question.content}
       date={q.date}
-      tags={q.tags}
+      tags={search.show.tags ? q.tags : undefined}
     />
   {/each}
 

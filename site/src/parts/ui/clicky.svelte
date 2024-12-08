@@ -11,7 +11,7 @@ interface Props {
   link?: string;
   intern?: string;
   button?: () => void;
-  children: any;
+  children?: any;
 }
 
 let { text, pict, link, intern, button, children }: Props = $props();

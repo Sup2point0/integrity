@@ -5,11 +5,25 @@
 export class SearchData
 {
   query: string = $state("");
-  tags: TagStates = $state({});
+  tags: States = $state({});
+
+  show: States = $state({
+    tags: true,
+  });
+
+  include: States = $state({
+    solved: true,
+    unnamed: true,
+    hints: true,
+  });
+
+  sort: "date" | "name" | "tags" | null = $state(null);
+  reverse: boolean = $state(false);
 }
 
-interface TagStates {
-  [tag: string]: boolean;
+interface States {
+  [key: string]: boolean;
 }
 
+/** Search options for the current page. */
 export const search = new SearchData();

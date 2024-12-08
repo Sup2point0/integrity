@@ -43,16 +43,69 @@ let open = $state(false);
   </div>
 
   {#if open}
+    {@const unchecked_tag = Object.values(search.tags).some(tag => !tag)}
+    {@const unchecked_include = Object.values(search.include).some(state => !state)}
+
     <table class="search-filters"
       transition:fade={{ duration: 200 }}
     ><tbody>
       <tr>
         <th> Topics </th>
+
         <td class="flex">
           {#each tags as tag}
             <Toggle text={tag.toUpperCase()}
               value={search.tags[tag]}
               toggle={() => { search.tags[tag] = !search.tags[tag]; }}
+            />
+          {/each}
+        </td>
+
+        <td>
+          <Toggle text="ALL"
+            value={!unchecked_tag}
+            toggle={() => {
+              search.tags = Object.fromEntries(
+                tags.map(tag => [tag, unchecked_tag])
+              );
+            }}
+          />
+        </td>
+      </tr>
+
+      <tr>
+        <th> Include </th>
+
+        <td class="flex">
+          {#each Object.entries(search.include) as [prop, state]}
+            <Toggle text={prop.toUpperCase()}
+              value={state}
+              toggle={() => { search.include[prop] = !search.include[prop]; }}
+            />
+          {/each}
+        </td>
+        
+        <td>
+          <Toggle text="ALL"
+            value={!unchecked_include}
+            toggle={() => {
+              search.include = Object.fromEntries(
+                Object.entries(search.include).map(
+                  ([prop, state]) => [prop, unchecked_include]
+                )
+              );
+            }}
+          />
+        </td>
+      </tr>
+
+      <tr>
+        <th> Show </th>
+        <td class="flex">
+          {#each Object.entries(search.show) as [prop, state]}
+            <Toggle text={prop.toUpperCase()}
+              value={state}
+              toggle={() => { search.show[prop] = !search.show[prop]; }}
             />
           {/each}
         </td>
@@ -132,7 +185,7 @@ table.search-filters {
 td {
   min-width: 5em;
   padding: 0.5em 2em;
-  
+
   &.flex {
     display: flex;
     flex-direction: row;

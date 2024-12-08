@@ -9,6 +9,7 @@ import type { Latex } from "#scripts/types";
 import Tag from "#parts/ui/tag.svelte";
 import Katex from "#parts/katex.svelte";
 
+import { fade } from "svelte/transition";
 import { base } from "$app/paths";
 
 
@@ -36,18 +37,18 @@ let { title, intern, latex, date, tags, style = "block" }: Props = $props();
   </div>
 
   <div class="info">
-    {#if title}
-      <h4> {title} </h4>
-    {/if}
-    {#if date}
-      <p> {date} </p>
-    {/if}
+    {#if title} <h4> {title} </h4> {/if}
+    {#if date} <p> {date} </p> {/if}
 
-    <div class="tags">
-      {#each tags ?? [] as tag}
-        <Tag shard={tag} />
-      {/each}
-    </div>
+    {#if tags && tags.length > 0}
+      <div class="tags"
+        transition:fade={{ duration: 250 }}
+      >
+        {#each tags as tag}
+          <Tag shard={tag} />
+        {/each}
+      </div>
+    {/if}
   </div>
 </a>
 
