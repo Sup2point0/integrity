@@ -38,9 +38,9 @@ Each layer has $n$ branches of length $n$, so the total length in each layer is 
 
 ```math
 \begin{align}
-1^1 + 2^2 + 3^3 + \text{...} + 11^{11} + 12^{12}
-\\ &= 1 + 4 + 9 + \text{...} + 121 + 144
-\\ &= 650
+  1^1 + 2^2 + 3^3 + \text{...} + 11^{11} + 12^{12}
+  \\ &= 1 + 4 + 9 + \text{...} + 121 + 144
+  \\ &= 650
 \end{align}
 ```
 
@@ -56,7 +56,7 @@ Hence substituting $n = 12$ we obtain
 
 ```math
 \begin{align}
-S_12 &= \frac{1}{6} \cdot 12 \cdot 13 \cdot 25
-  \\ &= 650
+  S_12 &= \frac{1}{6} \cdot 12 \cdot 13 \cdot 25
+    \\ &= 650
 \end{align}
 ```
