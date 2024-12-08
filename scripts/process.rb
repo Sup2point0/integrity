@@ -49,6 +49,16 @@ def process(shard:, file:)
     end
   end
 
+  # save last line
+  if load and not load.empty?
+    if subsection
+      if data[section].nil? then data[section] = {} end
+      data[section][subsection] = extract_groups(load)
+    elsif section
+      data[section] = extract_groups(load)
+    end
+  end
+
   return data
 end
 

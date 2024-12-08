@@ -3,7 +3,6 @@
 import Site from "#scripts/site";
 import type { Question } from "#scripts/types";
 
-import Katex from "#parts/katex.svelte";
 import RenderBlock from "#parts/render-block.svelte";
 
 import Header from "#parts/core/header.svelte";
@@ -55,7 +54,7 @@ onMount(() => {
     </Section>
   {/if}
 
-  {#if Object.keys(question.hints).length > 0}
+  {#if question.hints}
     <Section title="Hints">
       {#each Object.entries(question.hints) as [hint, source]}
         <Section ctx="inner" title={hint}>

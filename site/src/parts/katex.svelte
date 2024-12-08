@@ -12,7 +12,7 @@ interface Props {
   inline?: boolean;
 }
 
-let { text, inline = true }: Props = $props();
+let { text, inline = false }: Props = $props();
 
 
 const opts = {
@@ -26,10 +26,3 @@ let out = $derived(katex.renderToString(text, opts))
 
 
 {@html out}
-
-
-<style lang="scss">
-
-
-
-</style>

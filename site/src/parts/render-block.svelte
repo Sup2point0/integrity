@@ -5,6 +5,8 @@ A block that renders HTML and LaTeX content from a list of `Block`s.
 
 <script lang="ts">
 
+import katex from "katex";
+
 import type { Block } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
@@ -24,7 +26,20 @@ let { source }: Props = $props();
     <Katex text={source.content} />
 
   {:else}
-    <p> {@html source.content} </p>
+    {@const chunks = source.content.split(/(\$[^$]+\$)/).map(
+      chunk => (
+          chunk.startsWith("$")
+        ? katex.renderToString(chunk.slice(1, -1), {
+            displayMode: false,
+            throwOnError: false,
+          })
+        : chunk
+      )
+    )}
+
+    {#each chunks as chunk}
+      {@html chunk}
+    {/each}
 
   {/if}
 {/snippet}

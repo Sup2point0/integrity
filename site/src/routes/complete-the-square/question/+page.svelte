@@ -49,27 +49,31 @@ onMount(() => {
     <Katex text={question.question.content} />
   </section>
 
-  {#if question.notes}
-    <Section title="Notes">
-      <RenderBlock content={question.notes} />
-    </Section>
-  {/if}
-
   {#if question.hints}
     <Section title="Hints">
-      {#each question.hints as hint}
-        <RenderBlock content={hint} />
+      {#each Object.entries(question.hints) as [hint, source]}
+        <Section ctx="inner" title={hint}>
+          <RenderBlock {source} />
+        </Section>
       {/each}
     </Section>
   {/if}
 
-  <Section title="Answer">
-    <RenderBlock content={question.answer} />
-  </Section>
+  {#if question.answer}
+    <Section title="Answer">
+      <RenderBlock source={question.answer} />
+    </Section>
+  {/if}
 
-  <Section title="Solution">
-    <RenderBlock content={question.solution} />
-  </Section>
+  {#if question.solution}
+    <Section title="Solution">
+      {#each Object.entries(question.solution) as [step, source]}
+        <Section ctx="inner" closed={false} title={step}>
+          <RenderBlock {source} />
+        </Section>
+      {/each}
+    </Section>
+  {/if}
 
 {:else}
   <p> Hold tight, loading... </p>
@@ -83,7 +87,7 @@ section {
   text-align: center;
 
   &.question {
-    margin: 3rem 0;
+    margin: 4rem 0;
     font-size: 200%;
   }
 }
