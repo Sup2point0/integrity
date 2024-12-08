@@ -36,7 +36,7 @@ let open = $state(false);
     />
 
     <Clicky button={() => { open = !open; }}>
-      <img id="arrow" alt="/" src="{base}/arrow.svg"
+      <img class="arrow" alt="/" src="{base}/arrow.svg"
         style:transform={open ? "rotate(180deg)" : "rotate(0deg)"}
       />
     </Clicky>
@@ -168,7 +168,7 @@ input[type='search'] {
   }
 }
 
-img#arrow {
+img.arrow {
   max-width: 1em;
   opacity: 50%;
   transition: transform 0.16s ease-out;

@@ -13,10 +13,16 @@ export class Question
   tags: string[];
 
   /** The question line. */
-  question: Block
+  question: Block;
+
+  /** Extra notes for clarification. */
+  notes?: Block;
 
   /** A hint. */
-  hints?: Block[];
+  hints?: { [idx: string]: Block[] };
+
+  /** The short displayed answer. */
+  answer?: Block;
 
   /** The intended solution. */
   solution?: Block[];

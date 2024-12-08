@@ -11,7 +11,7 @@ import Link from "#parts/ui/link.svelte";
 interface Props {
   levels: {
     text: string,
-    intern: string,
+    intern?: string,
   }[];
 }
 

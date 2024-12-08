@@ -28,7 +28,7 @@ onMount(() => {
     error(404, { message: "Question not found!" });
   }
 
-  question = Site.questions["complete-square"].questions[shard!];
+  question = Site.questions["addvent"].questions[shard!];
   if (question == null) {
     error(404, { message: "Question not found!" });
   }
@@ -41,35 +41,45 @@ onMount(() => {
 
 {#if loaded && question}
   <Breadcrumbs levels={[
-    { text: "Completing the Square", intern: "complete-the-square" },
+    { text: "Addvent", intern: "addvent" },
     { text: shard ?? "?" },
   ]} />
 
   <section class="question">
-    <Katex text={question.question.content} />
+    <RenderBlock source={question.question} />
   </section>
 
   {#if question.notes}
     <Section title="Notes">
-      <RenderBlock content={question.notes} />
+      <RenderBlock source={question.notes} />
     </Section>
   {/if}
 
-  {#if question.hints}
+  {#if Object.keys(question.hints).length > 0}
     <Section title="Hints">
-      {#each question.hints as hint}
-        <RenderBlock content={hint} />
+      {#each Object.entries(question.hints) as [hint, source]}
+        <Section ctx="inner" title={hint}>
+          <RenderBlock {source} />
+        </Section>
       {/each}
     </Section>
   {/if}
 
-  <Section title="Answer">
-    <RenderBlock content={question.answer} />
-  </Section>
+  {#if question.answer}
+    <Section title="Answer">
+      <RenderBlock source={question.answer} />
+    </Section>
+  {/if}
 
-  <Section title="Solution">
-    <RenderBlock content={question.solution} />
-  </Section>
+  {#if question.solution}
+    <Section title="Solution">
+      {#each Object.entries(question.solution) as [step, source]}
+        <Section ctx="inner" closed={false} title={step}>
+          <RenderBlock {source} />
+        </Section>
+      {/each}
+    </Section>
+  {/if}
 
 {:else}
   <p> Hold tight, loading... </p>
@@ -84,7 +94,7 @@ section {
 
   &.question {
     margin: 3rem 0;
-    font-size: 200%;
+    font-size: 150%;
   }
 }
 
