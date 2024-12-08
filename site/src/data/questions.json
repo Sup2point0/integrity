@@ -40,7 +40,15 @@
           "kind": "text",
           "content": "7 days"
         }
-      ]
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "text",
+            "content": "$200$ elves prepares $384000$ presents in $8$ days. Therefore each elf in 1 day prepares $384000 / 200 / 8 = 240$ presents. (We can think of this like the *work rate* per elf, $1 \\, \\text{present} / \\text{day} / \\text{elf}$)Since $35$ elves are gone, there are now $200 - 35 = 165$ elves left. Each day they prepare $240 \\cdot 165 = 39600$ presents. Hence it will take them $277200 / 39600 = 7$ days in total to prepare all the presents."
+          }
+        ]
+      }
     },
     "n24c-ct1": {
       "topic": "addvent",
@@ -86,7 +94,17 @@
       "solution": [
         {
           "kind": "latex",
-          "content": "1^1 + 2^2 + 3^3 + \\text{...} + 11^11 + 12^12\\\\ &= 1 + 4 + 9 + \\text{...} + 121 + 144\\\\ &= 650"
+          "content": "\\begin{align}1^1 + 2^2 + 3^3 + \\text{...} + 11^11 + 12^12\\\\ &= 1 + 4 + 9 + \\text{...} + 121 + 144\\\\ &= 650\\end{align}"
+        }
+      ],
+      "alternatives": [
+        {
+          "kind": "latex",
+          "content": "S_n = \\frac{1}{6} n(n + 1)(2n + 1)Hence substituting $n = 12$ we obtain```math"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align}S_12 &= \\frac{1}{6} \\cdot 12 \\cdot 13 \\cdot 25  \\\\ &= 650\\end{align}"
         }
       ]
     },
@@ -156,7 +174,13 @@
             "content": "Adding these, we find in total we can obtain $24 + 36 = 60$ different designs."
           }
         ]
-      }
+      },
+      "alternatives": [
+        {
+          "kind": "text",
+          "content": "We count the permutations of 4 colours in 3 slots, then discount those that have 3 of the same colour.In each of the 3 slots, we have 4 colours to choose from, giving $4^3 = 64$ permutations.4 of these patterns are 3 buttons of the colour, hence we have $64 - 4 = 60$ designs."
+        }
+      ]
     }
   },
   "complete-square": {
@@ -201,6 +225,12 @@
             "kind": "latex",
             "content": "\\begin{align}&= \\left(\\frac{x}{2}-\\frac{x}{3}+\\frac{x}{5}\\right)^{2}-\\left(\\frac{x}{2}+\\frac{x}{3}-\\frac{x}{5}\\right)^{2}\\\\ &= \\left(\\frac{x}{2}-\\frac{x}{3}+\\frac{x}{5}-\\left(\\frac{x}{2}+\\frac{x}{3}-\\frac{x}{5}\\right)\\right)\\left(\\frac{x}{2}-\\frac{x}{3}+\\frac{x}{5}+\\frac{x}{2}+\\frac{x}{3}-\\frac{x}{5}\\right)\\end{align}"
           }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align}&= \\left(-\\frac{2x}{3}+\\frac{2x}{5}\\right)\\left(x\\right)\\\\ &= x\\left(\\frac{6x-10x}{15}\\right)\\\\ &=-\\frac{4}{15}x^{2}\\end{align}"
+          }
         ]
       }
     },
@@ -244,6 +274,12 @@
           {
             "kind": "latex",
             "content": "\\begin{align}&= \\left(x+3\\right)\\left(3-x\\right)-6\\left(x-3\\right)\\\\ &= \\left(3+x\\right)\\left(3-x\\right)-6\\left(x-3\\right)\\\\ &= 9-x^{2}-6x+18\\end{align}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align}&= -\\left(x^{2}+6x-27\\right)\\\\ &= -\\left(\\left(x+3\\right)^{2}-9-27\\right)\\\\ &= -\\left(x+3\\right)^{2}+36\\end{align}"
           }
         ]
       }
@@ -307,6 +343,12 @@
             "kind": "latex",
             "content": "\\begin{align}&= e^{2}+2t-\\frac{7\\pi}{3}t^{2}  \\\\&= -\\frac{7\\pi}{3}\\left(t^{2}-\\frac{6}{7\\pi}t\\right)+e^{2}  \\\\&= -\\frac{7\\pi}{3}\\left(\\left(t-\\frac{3}{7\\pi}\\right)^{2}-\\left(\\frac{3}{7\\pi}\\right)^{2}\\right)+e^{2}  \\\\&= -\\frac{7\\pi}{3}\\left(t-\\frac{3}{7\\pi}\\right)^{2}+\\frac{7\\pi}{3}\\cdot\\frac{3^{2}}{7^{2}\\cdot\\pi^{2}}+e^{2}  \\\\&= -\\frac{7\\pi}{3}\\left(t-\\frac{3}{7\\pi}\\right)^{2}+\\frac{3}{7\\pi}+e^{2}  \\\\\\end{align}"
           }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align}&= -\\frac{7\\pi}{3}\\left(x-\\frac{3+14\\pi}{7\\pi}\\right)^{2}+\\frac{3}{7\\pi}+e^{2}\\end{align}"
+          }
         ]
       }
     },
@@ -351,6 +393,12 @@
           "kind": "latex",
           "content": "\\left(x-\\frac{\\pi}{30}\\right)^{2}-\\frac{361\\pi^{2}}{900}"
         }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align}&= x^{2}+\\left(\\frac{3\\pi}{5}-\\frac{2\\pi}{3}\\right)x+\\left(\\frac{3\\pi}{5}\\right)\\left(-\\frac{2\\pi}{3}\\right)\\\\ &= x^{2}+\\left(\\frac{9\\pi-10\\pi}{15}\\right)x-\\frac{6\\pi^{2}}{15}\\\\ &= x^{2}-\\frac{\\pi}{15}x-\\frac{6\\pi^{2}}{15}\\\\ &= \\left(x-\\frac{\\pi}{30}\\right)^{2}-\\left(\\frac{\\pi}{30}\\right)^{2}-\\frac{6\\pi^{2}}{15}\\\\ &= \\left(x-\\frac{\\pi}{30}\\right)^{2}-\\frac{\\pi^{2}}{900}-\\frac{360\\pi^{2}}{900}\\\\ &= \\left(x-\\frac{\\pi}{30}\\right)^{2}-\\frac{361\\pi^{2}}{900}\\end{align}"
+        }
       ]
     },
     "q24cu-tr1": {
@@ -393,6 +441,12 @@
           {
             "kind": "latex",
             "content": "\\begin{align} A &= 3x-\\frac{6x+1}{6x}\\\\ &= 3x-\\left(1+\\frac{1}{6x}\\right)\\\\ &= 3x-1-\\frac{1}{6x}\\end{align}"
+          }
+        ],
+        "divide": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align}&= \\frac{1}{x}\\left(3x^{2}-x-\\frac{1}{6}\\right)\\\\ &= \\frac{1}{x}\\left(3\\left(x^{2}-\\frac{1}{3}x\\right)-\\frac{1}{6}\\right)\\\\ &= \\frac{1}{x}\\left(3\\left(x-\\frac{1}{6}\\right)^{2}-\\frac{1}{12}-\\frac{1}{6}\\right)\\\\ &= \\frac{3}{x}\\left(x-\\frac{1}{6}\\right)^{2}-\\frac{1}{4x}\\end{align}"
           }
         ]
       }
