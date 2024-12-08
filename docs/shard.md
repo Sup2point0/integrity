@@ -4,6 +4,7 @@ Each question I devise is designated its own unique identifier deemed a *shard*.
 
 ```
 i24f-hr1
+s25cu-dq4
 ```
 
 
@@ -30,10 +31,12 @@ Each shard is generally assigned a single topic.
 
 | value | meaning | notes |
 | :---- | :------ | :---- |
+| `a` | arithmetic | |
+| `e` | exponentials / logarithms | |
 | `f` | graph drawing | |
 | `i` | complex numbers | |
-| `n` | sequences | |
-| `p` | number theory / combinatorics | |
+| `n` | number theory / sequences | |
+| `p` | combinatorics | |
 | `q` | completing the square / quadratic | |
 | `r` | geometry | Needs to be ASCII-safe so can’t use `π` :P |
 | `s` | integration | `i` was taken by complex numbers, unfortunately. |
