@@ -18,7 +18,7 @@ html, body {
 }
 
 
-p {
+p, td {
   @include font-ui;
 
   em {
