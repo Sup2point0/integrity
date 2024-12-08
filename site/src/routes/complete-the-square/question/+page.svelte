@@ -38,10 +38,10 @@ onMount(() => {
 
 
 {#if loaded && question}
-  <Breadcrumbs>
-    <Link text="Completing the Square" intern="complete-the-square" />
-    <Link text={shard!} intern="complete-the-square" />
-  </Breadcrumbs>
+  <Breadcrumbs levels={[
+    { text: "Completing the Square", intern: "complete-the-square" },
+    { text: shard },
+  ]} />
 
   <section class="question">
     <Katex text={question.question.content} />
