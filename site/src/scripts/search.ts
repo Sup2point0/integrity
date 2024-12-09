@@ -9,6 +9,7 @@ export function filter_questions(
 {
   let out: Question[] = [...questions];
 
+  // Filter
   if (Object.values(options.tags).includes(true)) {
     out = out.filter(
       question => Object.keys(options.tags).some(tag =>
@@ -17,6 +18,14 @@ export function filter_questions(
     );
   }
 
+  if (options.include.unnamed === false) {
+    out = out.filter(question => question.title);
+  }
+  if (options.include.hints === false) {
+    out = out.filter(question => !question.hints);
+  }
+
+  // Search
   if (options.query) {
     let query: string = options.query.toLowerCase();
 
@@ -28,6 +37,8 @@ export function filter_questions(
       );
     });
   }
+
+  // Sort
 
   return out;
 }

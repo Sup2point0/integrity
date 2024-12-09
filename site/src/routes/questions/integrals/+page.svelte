@@ -14,6 +14,7 @@ import { onMount } from "svelte";
 
 
 const tags = Site.questions["integrals"].tags;
+const count = Site.get_questions("integrals").length;
 
 let filtered = $derived(filter_questions(
   Site.get_questions("integrals"),
@@ -47,11 +48,15 @@ onMount(() => {
       tags={search.show.tags ? q.tags : undefined}
     />
   {/each}
+</div>
 
-  {#if filtered.length === 0}
+<aside>
+  {#if filtered.length > 0}
+    <p> Showing <span>{filtered.length}</span> questions of {count} </p>
+  {:else}
     <p> Oops, no questions found! </p>
   {/if}
-</div>
+</aside>
 
 
 <style lang="scss">
@@ -64,8 +69,17 @@ onMount(() => {
   gap: 1rem;
 }
 
-p {
-  color: $col-text-deut;
+aside {
+  margin-top: 1.5rem;
+  text-align: center;
+  
+  p {
+    color: $col-text-deut;
+
+    span {
+      color: $col-prot;
+    }
+  }
 }
 
 </style>
