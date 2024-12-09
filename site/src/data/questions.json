@@ -575,11 +575,9 @@
           }
         ]
       }
-    }
-  },
-  "integral": {
+    },
     "s24f-lnt1": {
-      "topic": "integral",
+      "topic": "integrals",
       "title": "lawful evil",
       "desc": null,
       "date": "2024 December 9",

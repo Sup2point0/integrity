@@ -1,5 +1,5 @@
 ---
-topic: integral
+topic: integrals
 title: lawful evil
 desc: 
 date: 2024 December 9
