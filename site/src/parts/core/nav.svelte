@@ -59,7 +59,7 @@ import { base } from "$app/paths";
 
   <section class="right">
     <NavLink text="GitHub" collapse={true}
-      link="https://github.com/Sup2point0/integrity" />
+      extern="https://github.com/Sup2point0/integrity" />
   </section>
 </nav>
 

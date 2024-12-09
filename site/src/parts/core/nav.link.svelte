@@ -13,13 +13,14 @@ interface Props {
   pict?: string;
   link?: string;
   intern?: string;
+  extern?: string;
   collapse?: boolean;
   disabled?: boolean;
   children?: any;
 }
 
 let {
-  text, pict, link, intern,
+  text, pict, link, intern, extern,
   collapse = false, disabled = false,
   children,
 }: Props = $props();
@@ -28,7 +29,9 @@ let {
 
 
 <div class="nav-link" class:collapse class:disabled>
-  <a href={link || `${base}/${intern}`}>
+  <a href={link || extern || `${base}/${intern}`}
+    target={extern ? "_blank" : "_self"}
+  >
     {#if pict}
       <img alt={text ?? "?"} src="{base}/{pict}" />
     {/if}
