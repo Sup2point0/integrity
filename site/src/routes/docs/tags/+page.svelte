@@ -1,5 +1,7 @@
 <script lang="ts">
 
+import RenderBlock from "#parts/render-block.svelte";
+
 import Tag from "#parts/ui/tag.svelte";
 import Header from "#parts/core/header.svelte";
 
@@ -10,8 +12,12 @@ import Header from "#parts/core/header.svelte";
 
 {#snippet tag(shard: string, desc: string)}
   <tr>
-    <th> <Tag {shard} /> </th>
-    <td> {@html desc} </td>
+    <th>
+      <Tag {shard} />
+    </th>
+    <td>
+      <RenderBlock source={{ kind: "text", content: desc }} />
+    </td>
   </tr>
 {/snippet}
 
@@ -43,7 +49,7 @@ import Header from "#parts/core/header.svelte";
       {@render tag("FREE",
         "Left as an exercise to the reader.")}
       {@render tag("PI",
-        "I mean, $\pi$ just shows up everywhere, y’know?")}
+        "I mean, $\\pi$ just shows up everywhere, y’know?")}
       {@render tag("SICK",
         "Why would you do this to me..."
       )}
@@ -59,14 +65,14 @@ table {
   margin: auto;
 }
 
+th, td {
+  border: none;
+}
+
 th {
   padding: 1.5em 2em 1.5em 0;
   font-size: 150%;
   text-align: left;
-}
-
-td {
-  // font-weight: 250;
 }
 
 </style>

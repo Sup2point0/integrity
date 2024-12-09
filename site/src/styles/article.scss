@@ -23,10 +23,21 @@ article {
 
   h2 {
     margin: 1em 0;
-    padding-bottom: 0.25em;
+    padding: 0 0.1em 0.25em;
     @include font-serif;
     font-weight: 400;
     font-size: 200%;
+    border-bottom: 1px solid $col-line;
+  }
+
+  h3 {
+    width: max(70%, min(100%, 20em));
+    // width: minmax(20em, 70%, 100%);
+    margin: 1em 0;
+    padding: 0 0.1em 0.25em;
+    @include font-serif;
+    font-weight: 350;
+    font-size: 150%;
     border-bottom: 1px solid $col-line;
   }
 
@@ -36,13 +47,16 @@ article {
     line-height: 150%;
   }
 
-  ul {
-    font-weight: 250;
-    list-style-type: dashes;
+  strong {
+    font-weight: 500;
+  }
 
-    li {
-      margin: 0.5em 0;
-    }
+  :not(pre) code {
+    padding: 0.25em 0.5em;
+    @include font-code;
+    font-size: 80%;
+    background-color: $col-click;
+    border-radius: 0.4em;
   }
 
   a {
@@ -72,5 +86,39 @@ article {
         transform: scaleX(1.02)
       }
     }
+  }
+
+  ul {
+    font-weight: 250;
+    list-style-type: dashes;
+
+    li {
+      margin: 0.5em 0;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+
+    td, th {
+      padding: 0.25em 0.5em;
+      border: 1px solid $col-line;
+    }
+
+    td {
+    }
+
+    th {
+      font-weight: 400;
+      color: $col-prot;
+    }
+  }
+
+  pre:has(code) {
+    padding: 0.5em 1em;
+    @include font-code;
+    font-size: 100%;
+    background-color: $col-hover;
+    border-radius: 0.75em;
   }
 }

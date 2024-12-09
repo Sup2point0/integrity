@@ -56,10 +56,3 @@ let { source }: Props = $props();
 
   {/if}
 </div>
-
-
-<style lang="scss">
-
-
-
-</style>

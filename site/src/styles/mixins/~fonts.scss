@@ -11,3 +11,8 @@
   font-family: 'Crimson Pro', 'Times New Roman', serif;
   font-weight: 300;
 }
+
+@mixin font-code {
+  font-family: 'Fira Sans Mono', 'Consolas', monospace;
+  font-weight: 400;
+}

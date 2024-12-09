@@ -40,7 +40,7 @@ onMount(() => {
 
 {#if loaded && question}
   <Breadcrumbs levels={[
-    { text: "Addvent", intern: "addvent" },
+    { text: "Addvent", intern: "questions/addvent" },
     { text: shard ?? "?" },
   ]} />
 
