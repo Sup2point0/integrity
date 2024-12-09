@@ -30,7 +30,14 @@ let { text, pict, link, intern, button, children }: Props = $props();
 {/snippet}
 
 
-{#if link}
+{#if button}
+  <button class="clicky"
+    onclick={button}
+  >
+    {@render content()}
+  </button>
+
+{:else}
   <a class="clicky"
     href={link || `${base}/${intern}`}
   >
@@ -38,13 +45,6 @@ let { text, pict, link, intern, button, children }: Props = $props();
       {@render content()}
     </button>
   </a>
-
-{:else}
-  <button class="clicky"
-    onclick={button}
-  >
-    {@render content()}
-  </button>
 
 {/if}
 

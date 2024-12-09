@@ -18,19 +18,19 @@ import Header from "#parts/core/header.svelte";
 
   <section class="browse">
     <Card title="Integrals"
-      intern="integrals"
+      intern="questions/integrals"
       latex={"\\int f(x) \\, dx"}
     />
     <Card title="Graph Drawing"
-      intern="graphs"
+      intern="questions/graph-drawing"
       pict="previews/graph-drawing.png"
     />
     <Card title="Completing the Square"
-      intern="complete-the-square"
+      intern="questions/complete-the-square"
       latex={"a(x - p)^2 + q"}
     />
     <Card title="Addvent"
-      intern="addvent"
+      intern="questions/addvent"
       pict="previews/addvent-text.png"
     />
   </section>

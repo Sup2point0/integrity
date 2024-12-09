@@ -24,10 +24,12 @@ import Link from "#parts/ui/link.svelte";
       <Link text="Special" intern="questions/special" />
     </NavLink>
 
-    <NavLink text="Explore" intern="explore" disabled={true}>
+    <NavLink text="Explore" intern="explore">
       <Link text="All Questions" intern="questions/all" />
-      <Link text="Random" intern="" />
-      <Link text="Workspace" intern="" />
+      <Link text="Random" button={() => {
+        window.location.href = `${base}`;
+      }} />
+      <Link text="Workspace" intern="workspace" />
     </NavLink>
 
     <NavLink text="Docs" intern="docs" collapse={true}>
@@ -74,8 +76,8 @@ nav {
   flex-wrap: nowrap;
   gap: 0.5rem;
   background-color: rgb(white, 60%);
-  border: 1px solid $col-line;
-  box-shadow: 0 2px 2px $col-line;
+  border-bottom: 1px solid $col-line;
+  box-shadow: 0 3px 2px -2px $col-line;
 
   &::before {
     content: '';

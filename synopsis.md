@@ -10,7 +10,7 @@ Currently, most of these were written for maths competitions at school, includin
 
 ## Site
 
-- Built with [Svelte](https://svelte.dev) + [SvelteKit](https://svelte.dev/docs/kit/introduction)
+- Built with [Svelte 5](https://svelte.dev) + [SvelteKit](https://svelte.dev/docs/kit/introduction)
 - [SCSS](https://sass-lang.com) for styling
 - [KaTeX](https://katex.org) for LaTeX
 - [MDSveX](https://mdsvex.pngwn.io) for Markdown

@@ -11,27 +11,44 @@ interface Props {
   text: string;
   link?: string;
   intern?: string;
+  button?: () => void;
 }
 
-let { text, link, intern }: Props = $props();
+let { text, link, intern, button }: Props = $props();
 
 </script>
 
 
-<a class="link"
-  href="{link || `${base}/${intern}`}"
->
-  {text}
-</a>
+{#if button}
+  <button class="link"
+    onclick={button}
+  >
+    {text}
+  </button>
+
+{:else}
+  <a class="link"
+    href="{link || `${base}/${intern}`}"
+  >
+    {text}
+  </a>
+
+{/if}
 
 
 <style lang="scss">
 
-a.link {
+.link {
   padding: 0.5em;
-  color: $col-prot;
+
+  @include font-ui;
   font-weight: 300;
+  font-size: 100%;
+  color: $col-prot;
+  background: none;
   text-decoration: none;
+  text-align: left;
+  border: none;
   border-radius: 0.5em;
 
   @include interact($col-hover, $col-click);
