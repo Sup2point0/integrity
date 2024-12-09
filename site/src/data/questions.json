@@ -181,6 +181,54 @@
           "content": "We count the permutations of 4 colours in 3 slots, then discount those that have 3 of the same colour.In each of the 3 slots, we have 4 colours to choose from, giving $4^3 = 64$ permutations.4 of these patterns are 3 buttons of the colour, hence we have $64 - 4 = 60$ designs."
         }
       ]
+    },
+    "w24c-ss1": {
+      "topic": "addvent",
+      "title": "Day 6",
+      "desc": null,
+      "date": "2024 December 5",
+      "tags": [
+        "sequences"
+      ],
+      "shard": "w24c-ss1",
+      "question": [
+        {
+          "kind": "text",
+          "content": "The 4 squirrels <em>Poppy</em>, <em>Quill</em>, <em>Ronald</em>, <em>Sunset</em> are having a sledging race. - Poppy did not finish first or last. - Quill beat at least 2 squirrels. - Sunset finished before Ronald. - There was at least 1 squirrel between Poppy and Ronald.<strong>Can you determine what order they finished in?</strong>"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Try considering which squirrels can finish in each position."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Where can Poppy go?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Where can Quill go?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "The order is Quill, Poppy, Sunset, Ronald."
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Let’s draw a table to show each position and the squirrels that could place in each of them. We’ll use $P, Q, R, S$ to denote the 4 squirrels.| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | || 3 | | || 4 | | |Poppy did not finish first or last, so must be in 2nd or 3rd place.| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | P || 3 | | P || 4 | | |Quill beat at least 2 squirrels, so must be in 2nd or 1st place.| position | certain | possible || :------- | :------ | :------- || 1 | | Q || 2 | | PQ || 3 | | P || 4 | | |Then we’re given that Sunset finished before Ronald, which is quite broad. It does tell us that Ronald could not have finished 1st, and that Sunset could not have finished last. We’ll note these down and leave the clue for now.| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQRS || 3 | | PRS || 4 | | R |Now we can see that Ronald must have finished last, and we can eliminate $R$ from the other possibilities.| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQS || 3 | | PS || 4 | R | |And since there is at least 1 squirrel between Ronald and Poppy, it follows that Poppy must have finished 3rd.| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | P | || 3 | | S || 4 | R | |Now it’s the home straight and we see that Sunset must have finished 3rd, and Quill in 1st.| position | certain | possible || :------- | :------ | :------- || 1 | Q | || 2 | P | || 3 | S | || 4 | R | |Hence the order is Quill, Poppy, Sunset, Ronald."
+        }
+      ]
     }
   },
   "complete-square": {
@@ -524,6 +572,99 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\left(\\sin\\left(\\frac{\\pi}{2}\\right)+1\\right)^{2}-1  \\\\ &= \\left(1+1\\right)^{2}-1  \\\\ &= 3\\end{align*}"
+          }
+        ]
+      }
+    }
+  },
+  "integral": {
+    "s24f-lnt1": {
+      "topic": "integral",
+      "title": "lawful evil",
+      "desc": null,
+      "date": "2024 December 9",
+      "tags": [
+        "horror",
+        "long"
+      ],
+      "method": [
+        "spot",
+        "sub",
+        "trig sub"
+      ],
+      "has": [
+        "guide"
+      ],
+      "shard": "s24f-lnt1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{1}{\\sqrt{1-x^{-2}}}\\ln\\left(x-1\\right)\\ dx+\\int \\frac{1}{\\sqrt{1-x^{-2}}}\\ln\\left(x+1\\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Those 2 integrals look awfully similar..."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Do $x - 1$ and $x + 1$ look familiar to you?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Starts with f and rhymes with <em>tractorise</em>"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "2\\sqrt{x^{2}-1}\\left(\\ln\\left(\\sqrt{x^{2}-1}\\right)-1\\right)-c"
+        }
+      ],
+      "solution": {
+        "clean": [
+          {
+            "kind": "latex",
+            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x-1\\right)+\\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x+1\\right)\\ dxWe factorise out the fraction:```math"
+          },
+          {
+            "kind": "latex",
+            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\left(\\ln\\left(x-1\\right)+\\ln\\left(x+1\\right)\\right)\\ dxSince we’re adding logs we can now apply a log law:```math"
+          },
+          {
+            "kind": "latex",
+            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(\\left(x-1\\right)\\left(x+1\\right)\\right)\\ dxOh hey, this is difference of 2 squares!```math"
+          },
+          {
+            "kind": "latex",
+            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x^{2}-1\\right)\\ dx"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\tan t &= v  \\\\ \\sec^{2}t\\ dt &= dv  \\\\ =2\\int \\ln v\\ dv\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "=2v\\left(\\ln v-1\\right)Put $t$ back:```math"
+          },
+          {
+            "kind": "latex",
+            "content": "=2\\tan t\\left(\\ln\\left(\\tan t\\right)-1\\right)Put $x$ back:```math"
+          },
+          {
+            "kind": "latex",
+            "content": "=2\\sqrt{x^{2}-1}\\left(\\ln\\left(\\sqrt{x^{2}-1}\\right)-1\\right)-c"
           }
         ]
       }
