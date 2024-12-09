@@ -33,7 +33,7 @@ $3$
 ### Preamble
 Well this just looks horrific, doesn’t it? As usual, we surmise this means there must be some nice trick, secret or simplification we can find.
 
-At a surface glanc, there appear to be many symmetries and perhaps obvious substitutions; these will certainly come in helpful later on.
+At a surface glance, there appear to be many symmetries and perhaps obvious substitutions; these will certainly come in helpful later on.
 
 We might be tempted to expand things out or use various double angle formulae, but these would probably get out of hand pretty quickly.
 
