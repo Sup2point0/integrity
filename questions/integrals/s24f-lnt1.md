@@ -112,7 +112,6 @@ Put $t$ back:
 
 Put $x$ back:
 
-
 ```math
 =2\sqrt{x^{2}-1}\left(\ln\left(\sqrt{x^{2}-1}\right)-1\right)-c
 ```
