@@ -24,7 +24,7 @@ import Link from "#parts/ui/link.svelte";
       <Link text="Special" intern="questions/special" />
     </NavLink>
 
-    <NavLink text="Explore" intern="explore">
+    <NavLink text="Explore" intern="explore" disabled={true}>
       <Link text="All Questions" intern="questions/all" />
       <Link text="Random" intern="" />
       <Link text="Workspace" intern="" />
@@ -35,7 +35,7 @@ import Link from "#parts/ui/link.svelte";
       <Link text="Tags" intern="docs/tags" />
     </NavLink>
 
-    <NavLink text="Guides" intern="guides">
+    <NavLink text="Guides" intern="guides" disabled={true}>
       <Link text="Integrals" intern="" />
       <Link text="Why Draw Graphs?" intern="" />
       <Link text="Why Complete the Square?" intern="" />
@@ -73,7 +73,7 @@ nav {
   align-items: center;
   flex-wrap: nowrap;
   gap: 0.5rem;
-  background-color: rgb(white, 50%);
+  background-color: rgb(white, 60%);
   border: 1px solid $col-line;
   box-shadow: 0 2px 2px $col-line;
 

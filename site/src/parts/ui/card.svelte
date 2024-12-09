@@ -14,7 +14,7 @@ interface Props {
   intern?: string;
   latex?: string;
   pict?: string;
-  style: "block" | "row";
+  style?: "block" | "row";
 }
 
 let { title, intern, latex, pict, style = "block" }: Props = $props();
@@ -87,6 +87,10 @@ a.card {
 
   img {
     max-width: 100%;
+  }
+
+  :global(.katex) {
+    font-size: 150%;
   }
 }
 

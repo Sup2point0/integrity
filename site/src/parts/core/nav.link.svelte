@@ -14,15 +14,20 @@ interface Props {
   link?: string;
   intern?: string;
   collapse?: boolean;
+  disabled?: boolean;
   children?: any;
 }
 
-let { text, pict, link, intern, collapse = false, children }: Props = $props();
+let {
+  text, pict, link, intern,
+  collapse = false, disabled = false,
+  children,
+}: Props = $props();
 
 </script>
 
 
-<div class="nav-link" class:collapse>
+<div class="nav-link" class:collapse class:disabled>
   <a href={link || `${base}/${intern}`}>
     {#if pict}
       <img alt={text ?? "?"} src="{base}/{pict}" />
@@ -54,11 +59,17 @@ a {
   text-decoration: none;
   border-radius: 0.5em;
 
-  @include interact(
-    $hover: $col-hover,
-    $click: $col-click,
-  );
-  @include focus-outline;
+  .nav-link:not(.disabled) & {
+    @include interact(
+      $hover: $col-hover,
+      $click: $col-click,
+    );
+    @include focus-outline;
+  }
+
+  .nav-link.disabled & {
+    opacity: 0.2;
+  }
 
   img {
     max-height: 2em;
@@ -83,11 +94,11 @@ a {
   visibility: hidden;
   opacity: 0;
 
-  background-color: rgb(white, 50%);
+  background-color: rgb(white, 60%);
   border-radius: 0.5em;
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 2px $col-line;
-  transform: translateY(-0.5em);
+  transform: translateY(-0.4em);
   transition:
     visibility 0.12s,
     opacity 0.12s ease-out,
@@ -105,7 +116,7 @@ a {
     backdrop-filter: blur(12px);
   }
   
-  .nav-link:hover &, &:hover {
+  .nav-link:not(.disabled):hover &, &:hover {
     display: flex;
     flex-direction: column;
     visibility: visible;

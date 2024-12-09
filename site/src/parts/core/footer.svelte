@@ -18,10 +18,11 @@ import { base } from "$app/paths";
         src="{base}/integrity-title.png" />
 
         <div class="quicklinks">
-          <Link text="synopsis" intern="meta/synopsis" />
-          <Link text="docs" link="https://github.com/Sup2point0/integrity/tree/main/docs" />
-          <Link text="decoded" intern="meta/decoded" />
-          <Link text="license" intern="meta/license" />
+          <Link text="about" intern="info/synopsis" />
+          <Link text="docs" link="docs" />
+          <Link text="decoded" intern="info/decoded" />
+          <Link text="privacy" intern="info/privacy" />
+          <Link text="license" intern="info/license" />
         </div>
     </div>
   
