@@ -16,9 +16,16 @@ let active = true;
 
 
 onMount(() => {
-  setTimeout(() => {
+  if (sessionStorage.getItem("integrity.here")) {
     active = false;
-  }, 600);
+  }
+  else {
+    sessionStorage.setItem("integrity.here", "hi");
+
+    setTimeout(() => {
+      active = false;
+    }, 600);
+  }
 })
 
 </script>
@@ -93,12 +100,16 @@ aside.overlay {
     color: white;
     font-weight: 200;
     font-size: 500%;
+    animation: 1.5s slide-in-upper cubic-bezier(0.19, 1, 0.22, 1);
+    animation-iteration-count: 1;
   }
 
   p {
     color: rgb(white, 60%);
     font-weight: 200;
     font-size: 150%;
+    animation: 1.5s slide-in-lower cubic-bezier(0.19, 1, 0.22, 1);
+    animation-iteration-count: 1;
   }
 
   small {
@@ -108,6 +119,29 @@ aside.overlay {
     font-size: 80%;
     opacity: 0;
     animation: 1s delayed-fade 1.2s;
+  }
+}
+
+
+@keyframes slide-in-upper {
+  from {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-lower {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
