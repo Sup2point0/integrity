@@ -23,7 +23,7 @@ export function filter_questions(
     out = questions.filter(question => {
       return (
         question.title && question.title.toLowerCase().includes(query) ||
-        question.desc && question.desc.toLowerCase().includes(query) ||
+        // question.desc && question.desc.toLowerCase().includes(query) ||
         question.tags && question.tags.some(tag => tag.toLowerCase().includes(query))
       );
     });
