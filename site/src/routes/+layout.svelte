@@ -18,7 +18,7 @@ let active = true;
 onMount(() => {
   setTimeout(() => {
     active = false;
-  }, 800);
+  }, 600);
 })
 
 </script>
@@ -112,7 +112,7 @@ aside.overlay {
     color: rgb(black, 10%);
     font-size: 80%;
     opacity: 0;
-    animation: 1s delayed-fade 1.5s;
+    animation: 1s delayed-fade 1.2s;
   }
 }
 

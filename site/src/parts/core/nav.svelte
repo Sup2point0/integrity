@@ -3,6 +3,7 @@
 <script lang="ts">
 
 import NavLink from "#parts/core/nav.link.svelte";
+import Link from "#parts/ui/link.svelte";
 
 </script>
 
@@ -14,14 +15,40 @@ import NavLink from "#parts/core/nav.link.svelte";
   </section>
 
   <section class="centre">
-    <NavLink text="Integrals"
-      intern="integrals" />
-    <NavLink text="Graph Drawing"
-      intern="graphs" />
-    <NavLink text="Completing the Square"
-      intern="complete-the-square" />
-    <NavLink text="Addvent" collapse={true}
-      intern="addvent" />
+    <NavLink text="Questions" intern="questions">
+      <Link text="Integrals" intern="questions/integrals" />
+      <Link text="Graph Drawing" intern="questions/graph-drawing" />
+      <Link text="Completing the Square" intern="questions/complete-the-square" />
+      <Link text="Guess the Graph" intern="questions/guess-the-graph" />
+      <Link text="Addvent" intern="questions/addvent" />
+      <Link text="Special" intern="questions/special" />
+    </NavLink>
+
+    <NavLink text="Explore" intern="explore">
+      <Link text="All Questions" intern="questions/all" />
+      <Link text="Random" intern="" />
+      <Link text="Workspace" intern="" />
+    </NavLink>
+
+    <NavLink text="Docs" intern="docs" collapse={true}>
+      <Link text="Shards" intern="docs/shards" />
+      <Link text="Tags" intern="docs/tags" />
+    </NavLink>
+
+    <NavLink text="Guides" intern="guides">
+      <Link text="Integrals" intern="" />
+      <Link text="Why Draw Graphs?" intern="" />
+      <Link text="Why Complete the Square?" intern="" />
+      <Link text="Why Desmos?" intern="" />
+    </NavLink>
+
+    <NavLink text="Info" intern="info" collapse={true}>
+      <Link text="About" intern="info/about" />
+      <Link text="decoded" intern="info/decoded" />
+      <Link text="Privacy" intern="info/privacy" />
+      <Link text="Credits" intern="info/license" />
+      <Link text="License" intern="info/license" />
+    </NavLink>
   </section>
 
   <section class="right">
@@ -36,7 +63,7 @@ import NavLink from "#parts/core/nav.link.svelte";
 nav {
   width: 100%;
   margin-bottom: 1rem;
-  padding: 0.5em 5rem;
+  padding: 0 5rem;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -46,8 +73,20 @@ nav {
   align-items: center;
   flex-wrap: nowrap;
   gap: 0.5rem;
-  background: transparent;
-  backdrop-filter: blur(12px);
+  background-color: rgb(white, 50%);
+  border: 1px solid $col-line;
+  box-shadow: 0 2px 2px $col-line;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(12px);
+    z-index: -1;
+  }
 }
 
 section {
