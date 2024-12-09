@@ -2,8 +2,12 @@
 
 <script lang="ts">
 
+import { pick_random_question } from "#scripts/utils";
+
 import NavLink from "#parts/core/nav.link.svelte";
 import Link from "#parts/ui/link.svelte";
+
+import { base } from "$app/paths";
 
 </script>
 
@@ -27,7 +31,7 @@ import Link from "#parts/ui/link.svelte";
     <NavLink text="Explore" intern="explore">
       <Link text="All Questions" intern="questions/all" />
       <Link text="Random" button={() => {
-        window.location.href = `${base}`;
+        window.location.href = `${base}/question/${pick_random_question()}`;
       }} />
       <Link text="Workspace" intern="workspace" />
     </NavLink>
