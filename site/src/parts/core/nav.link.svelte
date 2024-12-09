@@ -57,8 +57,12 @@ let {
 
 a {
   padding: 0.75em 0.75em;
-  display: block;
-  &:has(img) { padding: 0; }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &:has(img) { padding: 0.5em; }
   text-decoration: none;
   border-radius: 0.5em;
 
@@ -75,13 +79,17 @@ a {
   }
 
   img {
-    max-height: 2em;
+    max-height: 1.5em;
   }
   
   p {
     @include font-ui;
     font-weight: 350;
     color: $col-text;
+  }
+
+  img ~ p {
+    margin-left: 0.5em;
   }
 }
 
