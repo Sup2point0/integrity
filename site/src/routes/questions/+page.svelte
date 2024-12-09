@@ -2,18 +2,25 @@
 
 import Card from "#parts/ui/card.svelte";
 
+import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
+import Meta from "#parts/meta.svelte";
+    import Site from "#src/scripts/site";
 
 </script>
 
 
-<svelte:head>
-  <title> Integrity · Sup#2.0 </title>
-  <meta name="description" content="All my hand-crafted maths questions!" />
-</svelte:head>
+<Meta title="Completing the Square"
+  desc="Rewrite expressions in completed square form as quick as you can"
+/>
 
 
-<Header title="What fun are we having today?" />
+<Breadcrumbs levels={[
+  { text: "Integrity", link: Site.root },
+  { text: "Questions" },
+]} />
+
+<Header title="Questions" />
 
 <div class="content">
   <section class="browse">

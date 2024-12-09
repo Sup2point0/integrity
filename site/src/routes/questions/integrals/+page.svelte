@@ -6,6 +6,7 @@ import { filter_questions } from "#scripts/search";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
+import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/ui/search.svelte";
 import Meta from "#parts/meta.svelte";
@@ -34,8 +35,12 @@ onMount(() => {
 />
 
 
-<Header title="Integrals" />
+<Breadcrumbs levels={[
+  { text: "Questions", intern: "questions" },
+  { text: "Integrals" },
+]} />
 
+<Header title="Integrals" />
 <Search {tags} />
 
 <div class="content">

@@ -4,6 +4,7 @@ import Site from "#scripts/site";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
+import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Meta from "#parts/meta.svelte";
 
@@ -14,6 +15,11 @@ import Meta from "#parts/meta.svelte";
   desc="Christmas-themed questions for 12 days of maths questions!"
 />
 
+
+<Breadcrumbs levels={[
+  { text: "Questions", intern: "questions" },
+  { text: "Addvent" },
+]} />
 
 <Header title="Addvent"
   desc="Christmas-themed questions for 12 days of maths questions!"

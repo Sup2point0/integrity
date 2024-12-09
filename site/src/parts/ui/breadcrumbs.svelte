@@ -12,6 +12,7 @@ interface Props {
   levels: {
     text: string,
     intern?: string,
+    link?: string,
   }[];
 }
 
@@ -21,12 +22,12 @@ let { levels }: Props = $props();
 
 
 <nav class="breadcrumbs">
-  {#each levels.entries() as [i, level]}
+  {#each levels.entries() as [i, { text, intern, link}]}
     {#if i == levels.length -1}
-      <div class="current"> {level.text} </div>
+      <div class="current"> {text} </div>
     
     {:else}
-      <Link text={level.text} intern={level.intern} />
+      <Link {text} {intern} {link} />
       <div class="separator">/</div>
     
     {/if}

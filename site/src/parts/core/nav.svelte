@@ -22,7 +22,7 @@ import { base } from "$app/paths";
     <NavLink text="Questions" intern="questions">
       <Link text="Integrals" intern="questions/integrals" />
       <Link text="Graph Drawing" intern="questions/graph-drawing" />
-      <Link text="Completing the Square" intern="questions/complete-the-square" />
+      <Link text="Completing the Square" intern="questions/complete-square" />
       <Link text="Guess the Graph" intern="questions/guess-the-graph" />
       <Link text="Addvent" intern="questions/addvent" />
       <Link text="Special" intern="questions/special" />

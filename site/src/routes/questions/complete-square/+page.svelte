@@ -23,11 +23,7 @@ let filtered = $derived(filter_questions(
 
 
 onMount(() => {
-  let data = {};
-  for (let tag of tags) {
-    data[tag] = false;
-  }
-  search.tags = data;
+  search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
 })
 
 </script>
@@ -50,7 +46,7 @@ onMount(() => {
   {#each filtered as q}
     <QuestionCard
       title={q.title}
-      intern="question/complete-the-square?shard={q.shard}"
+      intern="question/complete-square?shard={q.shard}"
       latex={q.question.content}
       date={search.show.dates ? q.date : undefined}
       tags={search.show.tags ? q.tags : undefined}
