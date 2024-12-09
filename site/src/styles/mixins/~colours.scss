@@ -1,10 +1,10 @@
 $col-prot: oklch(61.32% 0.106 237.7);
 $col-deut: oklch(70.74% 0.1702 53.41);
 
-$col-text: oklch(1% 0 0);
+$col-text: light-dark(oklch(1% 0 0), oklch(99% 0 0));
 $col-text-deut: oklch(75% 0.015 237.7);
 
-$col-line: oklch(90% 0 0);
+$col-line: light-dark(oklch(90% 0 0), oklch(50% 0 0));
 
-$col-hover: rgb(black, 3%);
-$col-click: rgb(black, 5%);
+$col-hover: light-dark(rgb(black, 3%), rgb(white, 3%));
+$col-click: light-dark(rgb(black, 5%), rgb(white, 5%));

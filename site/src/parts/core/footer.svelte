@@ -52,7 +52,7 @@ import { base } from "$app/paths";
 footer {
   width: 100%;
   padding: 4rem 0 6rem;
-  background-color: oklch(99% 0 0);
+  background-color: light-dark(oklch(99% 0 0), black);
 
   .content {
     width: 80%;

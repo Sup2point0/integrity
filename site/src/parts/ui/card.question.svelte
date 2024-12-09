@@ -72,14 +72,14 @@ a.question-card {
   @include font-ui;
   color: $col-text;
   text-decoration: none;
-  background-color: white;
+  background-color: auto;
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 2px 2px -0.5px $col-line;
 
   @include interact(
-    $hover: oklch(99% 0 0),
-    $click: oklch(96% 0 0),
+    $hover: light-dark(oklch(99% 0 0), oklch(22% 0 0)),
+    $click: light-dark(oklch(96% 0 0), oklch(28% 0 0)),
     $t: 0.16,
   );
   @include focus-outline;

@@ -79,7 +79,7 @@ nav {
   align-items: center;
   flex-wrap: nowrap;
   gap: 0.5rem;
-  background-color: rgb(white, 60%);
+  background-color: light-dark(rgb(white, 60%), rgb(black, 60%));
   border-bottom: 1px solid $col-line;
   box-shadow: 0 3px 2px -2px $col-line;
 

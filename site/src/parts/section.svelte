@@ -73,11 +73,8 @@ section {
   justify-content: stretch;
   align-items: center;
   flex-wrap: nowrap;
-
-  background-color: white;
-  // border: 1px solid $col-line;
+  background-color: auto;
   border-bottom: 1px solid $col-line;
-  // box-shadow: 0 2px 2px -0.5px $col-line;
   @include interact($col-hover, $col-click);
 
   &:hover {
