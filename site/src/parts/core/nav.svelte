@@ -43,7 +43,7 @@ import Link from "#parts/ui/link.svelte";
     </NavLink>
 
     <NavLink text="Info" intern="info" collapse={true}>
-      <Link text="About" intern="info/about" />
+      <Link text="About" intern="info/synopsis" />
       <Link text="decoded" intern="info/decoded" />
       <Link text="Privacy" intern="info/privacy" />
       <Link text="Credits" intern="info/license" />

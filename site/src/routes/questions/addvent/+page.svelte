@@ -22,7 +22,7 @@ import Header from "#parts/core/header.svelte";
   {#each Site.get_questions("addvent") as q}
     <QuestionCard
       title={q.title}
-      intern="addvent/question?shard={q.shard}"
+      intern="question/addvent?shard={q.shard}"
       date={q.date}
       tags={q.tags}
     />

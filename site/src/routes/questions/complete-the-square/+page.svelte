@@ -44,7 +44,7 @@ onMount(() => {
   {#each filtered as q}
     <QuestionCard
       title={q.title}
-      intern="complete-the-square/question?shard={q.shard}"
+      intern="question/complete-the-square?shard={q.shard}"
       latex={q.question.content}
       date={search.show.dates ? q.date : undefined}
       tags={search.show.tags ? q.tags : undefined}
