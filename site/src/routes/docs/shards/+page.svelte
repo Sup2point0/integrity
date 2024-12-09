@@ -3,15 +3,14 @@
 import Content from "../../../../../docs/shard.md";
 
 import Header from "#parts/core/header.svelte";
+import Meta from "#parts/meta.svelte";
 
 </script>
 
 
-<svelte:head>
-  <title> Shards · Integrity </title>
-  <meta name="description"
-    content="The question codes used throughout Integrity." />
-</svelte:head>
+<Meta title="Shards · Docs"
+  desc="Explaining the question identifier codes used throughout Integrity"
+/>
 
 
 <Header title="Shards"

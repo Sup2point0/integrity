@@ -24,11 +24,6 @@ onMount(() => {
 </script>
 
 
-<svelte:head>
-  <title> Integrity · Sup#2.0 </title>
-</svelte:head>
-
-
 <Nav />
 
 <div class="layout">

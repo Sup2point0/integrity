@@ -3,13 +3,14 @@
 import QuestionCard from "#parts/ui/card.question.svelte";
 
 import Header from "#parts/core/header.svelte";
+import Meta from "#parts/meta.svelte";
 
 </script>
 
 
-<svelte:head>
-  <title> Graph Drawing · Integrity </title>
-</svelte:head>
+<Meta title="Graph Drawing"
+  desc="Questions for practising graph drawing"
+/>
 
 
 <Header title="Graph Drawing" />

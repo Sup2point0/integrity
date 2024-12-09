@@ -3,19 +3,18 @@
 import Content from "../../../../../edu.md";
 
 import Header from "#parts/core/header.svelte";
+import Meta from "#parts/meta.svelte";
 
 </script>
 
 
-<svelte:head>
-  <title> decoded · Integrity </title>
-  <meta name="description"
-    content="Learnings, challenges and discoveries from writing maths questions." />
-</svelte:head>
+<Meta title="decoded"
+  desc="Learnings, challenges and discoveries from writing maths questions"
+/>
 
 
 <Header title="decoded: Integrity"
-  desc="Learnings, challenges and discoveries from writing my own maths questions."
+  desc="Learnings, challenges and discoveries from writing my own maths questions"
 />
 
 <article>

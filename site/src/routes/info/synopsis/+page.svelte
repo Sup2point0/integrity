@@ -3,15 +3,14 @@
 import Content from "../../../../../synopsis.md";
 
 import Header from "#parts/core/header.svelte";
+import Meta from "#parts/meta.svelte";
 
 </script>
 
 
-<svelte:head>
-  <title> Synopsis · Integrity </title>
-  <meta name="description"
-    content="Learnings, challenges and discoveries from developing Integrity." />
-</svelte:head>
+<Meta title="Synopsis"
+  desc="Learnings, challenges and discoveries from developing Integrity"
+/>
 
 
 <Header title="Synopsis"

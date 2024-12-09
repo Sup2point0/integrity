@@ -5,13 +5,14 @@ import Site from "#scripts/site";
 import QuestionCard from "#parts/ui/card.question.svelte";
 
 import Header from "#parts/core/header.svelte";
+import Meta from "#parts/meta.svelte";
 
 </script>
 
 
-<svelte:head>
-  <title> Addvent · Integrity </title>
-</svelte:head>
+<Meta title="Addvent"
+  desc="Christmas-themed questions for 12 days of maths questions!"
+/>
 
 
 <Header title="Addvent"

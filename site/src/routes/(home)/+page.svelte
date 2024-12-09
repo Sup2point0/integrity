@@ -1,14 +1,16 @@
 <script lang="ts">
 
-import Site from "#scripts/site";
-
-import Clicky from "#parts/ui/clicky.svelte";
 import Card from "#parts/ui/card.svelte";
-import Link from "#parts/ui/link.svelte";
 
 import Header from "#parts/core/header.svelte";
 
 </script>
+
+
+<svelte:head>
+  <title> Integrity · Sup#2.0 </title>
+  <meta name="description" content="All my hand-crafted maths questions!" />
+</svelte:head>
 
 
 <div class="content">

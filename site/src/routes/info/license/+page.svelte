@@ -3,15 +3,14 @@
 import Content from "./content.md";
 
 import Header from "#parts/core/header.svelte";
+import Meta from "#parts/meta.svelte";
 
 </script>
 
 
-<svelte:head>
-  <title> License · Integrity </title>
-  <meta name="description"
-    content="Regarding usage of content from Integrity" />
-</svelte:head>
+<Meta title="License"
+  desc="Usage of content from Integrity"
+/>
 
 
 <Header title="License"

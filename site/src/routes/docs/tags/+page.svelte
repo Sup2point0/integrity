@@ -4,9 +4,14 @@ import RenderBlock from "#parts/render-block.svelte";
 
 import Tag from "#parts/ui/tag.svelte";
 import Header from "#parts/core/header.svelte";
+import Meta from "#parts/meta.svelte";
 
 </script>
 
+
+<Meta title="Tags · Docs"
+  desc="Explaining the tags used in questions throughout Integrity"
+/>
 
 <Header title="Tags" />
 

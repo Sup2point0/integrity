@@ -8,6 +8,7 @@ import QuestionCard from "#parts/ui/card.question.svelte";
 
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/ui/search.svelte";
+import Meta from "#parts/meta.svelte";
 
 import { onMount } from "svelte";
 
@@ -31,9 +32,9 @@ onMount(() => {
 </script>
 
 
-<svelte:head>
-  <title> Completing the Square · Integrity </title>
-</svelte:head>
+<Meta title="Completing the Square"
+  desc="Rewrite expressions in completed square form as quick as you can"
+/>
 
 
 <Header title="Completing the Square" />

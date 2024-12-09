@@ -8,6 +8,7 @@ import QuestionCard from "#parts/ui/card.question.svelte";
 
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/ui/search.svelte";
+import Meta from "#parts/meta.svelte";
 
 import { onMount } from "svelte";
 
@@ -27,9 +28,9 @@ onMount(() => {
 </script>
 
 
-<svelte:head>
-  <title> Integrals · Integrity </title>
-</svelte:head>
+<Meta title="Integrals"
+  desc="Questions for integration"
+/>
 
 
 <Header title="Integrals" />
