@@ -93,14 +93,26 @@
       ],
       "solution": [
         {
+          "kind": "text",
+          "content": "Each layer has $n$ branches of length $n$, so the total length in each layer is $n^2$. Hence the total across all 12 layers is"
+        },
+        {
           "kind": "latex",
           "content": "\\begin{align*}  1^1 + 2^2 + 3^3 + \\text{...} + 11^{11} + 12^{12}  \\\\ &= 1 + 4 + 9 + \\text{...} + 121 + 144  \\\\ &= 650\\end{align*}"
         }
       ],
       "alternatives": [
         {
+          "kind": "text",
+          "content": "We may also recognise this as the sum of $n$ square numbers, which is given by the formula"
+        },
+        {
           "kind": "latex",
           "content": "S_n = \\frac{1}{6} n(n + 1)(2n + 1)"
+        },
+        {
+          "kind": "text",
+          "content": "Hence substituting $n = 12$ we obtain"
         },
         {
           "kind": "latex",
@@ -120,7 +132,7 @@
       "question": [
         {
           "kind": "text",
-          "content": "I am decorating gingerbread men with buttons.<br><br>I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.<br><br>**How many different gingerbread men designs can I make?**<br><br><br><br><br><br>- Treat distinct orders of colours as different designs: blue, blue, green is different to blue, green, blue."
+          "content": "I am decorating gingerbread men with buttons.<br><br>I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.<br><br>**How many different gingerbread men designs can I make?**<br><br><br><br><br><br>I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.<br><br>**How many different gingerbread men designs can I make?**<br><br><br><br><br><br>- Treat distinct orders of colours as different designs: blue, blue, green is different to blue, green, blue."
         }
       ],
       "hints": {
@@ -451,6 +463,10 @@
         ],
         "2": [
           {
+            "kind": "text",
+            "content": "Rewrite the expression:"
+          },
+          {
             "kind": "latex",
             "content": "e^2 + 2(x - 2) - \\frac{7 \\pi}{3} (x - 2)^2"
           }
@@ -623,8 +639,16 @@
       "solution": {
         "preamble": [
           {
+            "kind": "text",
+            "content": "Well this just looks horrific, doesn’t it? As usual, we surmise this means there must be some nice trick, secret or simplification we can find.<br><br>At a surface glance, there appear to be many symmetries and perhaps obvious substitutions; these will certainly come in helpful later on.<br><br>We might be tempted to expand things out or use various double angle formulae, but these would probably get out of hand pretty quickly.<br><br>Let’s start by cleaning up the terms a bit, so that the question is a little easier to work with. We can pull out a constant coefficient from the first integral:"
+          },
+          {
             "kind": "latex",
             "content": "\\left[\\frac{1}{2}\\left(1-\\cos\\left(\\frac{\\pi}{2}\\right)\\right)\\right]^{2}\\cdot\\left[\\int_{\\pi-1}^{2\\pi-1}\\sin\\left(\\frac{x+1}{2}\\right)\\ dx\\right]^{2}-\\frac{1}{2}\\left[\\int_{\\pi-1}^{-\\pi-1}\\cos\\left(\\frac{x+1}{2}\\right)\\ dx\\right]"
+          },
+          {
+            "kind": "text",
+            "content": "Now expanding it out, we find we can evaluate that coefficient quite easily:"
           },
           {
             "kind": "latex",
@@ -633,8 +657,16 @@
         ],
         "substitute": [
           {
+            "kind": "text",
+            "content": "There really isn’t anything else to do here, so let’s go ahead and make the substitution screaming at us."
+          },
+          {
             "kind": "latex",
             "content": "\\begin{align*}  t &= \\frac{x+1}{2}  \\\\ dt &= \\frac{1}{2}dx\\ \\to\\ dx=2\\ dt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "We’ll need to adjust our limits, and it turns out this actually makes the question quite a lot nicer!"
           },
           {
             "kind": "latex",
@@ -643,16 +675,32 @@
         ],
         "reshape": [
           {
+            "kind": "text",
+            "content": "At this point both integrals are almost quotable, but as maths-loving adventurers let’s have some fun.<br><br>Those limits on $\\int cos t \\, dt$ look a little wack, so we’ll flip them and change the sign on the outside."
+          },
+          {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\left(\\int_{\\pi/2}^{\\pi}\\sin t\\ dt\\right)^{2}+\\int_{-\\pi/2}^{\\pi/2}\\cos t\\ dt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "And since $cos t$ is an even function, we can halve its integral like so:"
           },
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\left(\\int_{\\pi/2}^{\\pi}\\sin t\\ dt\\right)^{2}+2\\int_{0}^{\\pi/2}\\cos t\\ dt\\end{align*}"
           },
           {
+            "kind": "text",
+            "content": "Now wait, $sin t$ is just a translation of $cos t$ by $\\pi/2$ in the positive x direction. So we can make a substitution (left as an exercise to the reader) and rewrite its integral like so:"
+          },
+          {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\left(\\int_{0}^{\\pi/2}\\cos t\\ dt\\right)^{2}+2\\int_{0}^{\\pi/2}\\cos t\\ dt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Woah, what’s this? Disguised quadratic?!<br><br>Both of our terms are the same integral, so if we let that integral be $T$, then we have"
           },
           {
             "kind": "latex",
@@ -660,10 +708,14 @@
           },
           {
             "kind": "text",
-            "content": "\\begin{align*}  &= T^{2}+2T  \\\\ &= \\left(T+1\\right)^{2}-1\\end{align*}(This was originally intended to be a completing the square question, lmao.)"
+            "content": "(This was originally intended to be a completing the square question, lmao.)"
           }
         ],
         "solve": [
+          {
+            "kind": "text",
+            "content": "Anyway, we can evaluate our integral now. Well, we could have a long time ago, and doing this hasn’t even made it that much easier, but hey – it’s about the journey ^v^"
+          },
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\left(\\sin\\left(\\frac{\\pi}{2}\\right)+1\\right)^{2}-1  \\\\ &= \\left(1+1\\right)^{2}-1  \\\\ &= 3\\end{align*}"
@@ -724,16 +776,32 @@
       "solution": {
         "clean": [
           {
+            "kind": "text",
+            "content": "These 2 integrals are really similar, so let’s merge them:"
+          },
+          {
             "kind": "latex",
             "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x-1\\right)+\\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x+1\\right)\\ dx"
+          },
+          {
+            "kind": "text",
+            "content": "We factorise out the fraction:"
           },
           {
             "kind": "latex",
             "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\left(\\ln\\left(x-1\\right)+\\ln\\left(x+1\\right)\\right)\\ dx"
           },
           {
+            "kind": "text",
+            "content": "Since we’re adding logs we can now apply a log law:"
+          },
+          {
             "kind": "latex",
             "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(\\left(x-1\\right)\\left(x+1\\right)\\right)\\ dx"
+          },
+          {
+            "kind": "text",
+            "content": "Oh hey, this is difference of 2 squares!"
           },
           {
             "kind": "latex",
@@ -748,12 +816,24 @@
         ],
         "solve": [
           {
+            "kind": "text",
+            "content": "Integral of $\\ln{v}$ is quotable, see [Antiderivatives/Logarithms]"
+          },
+          {
             "kind": "latex",
             "content": "=2v\\left(\\ln v-1\\right)"
           },
           {
+            "kind": "text",
+            "content": "Put $t$ back:"
+          },
+          {
             "kind": "latex",
             "content": "=2\\tan t\\left(\\ln\\left(\\tan t\\right)-1\\right)"
+          },
+          {
+            "kind": "text",
+            "content": "Put $x$ back:"
           },
           {
             "kind": "latex",

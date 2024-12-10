@@ -29,6 +29,7 @@ def process(shard:, file:)
     else
       # if in a section, add to load
       if ( (section and not line.strip.empty?) ||
+      # if ( ((section or not section.empty?) and not line.strip.empty?) ||
         (section and not load.empty?)
       )
         load.push(line.strip.empty? ? "\n" : line)
@@ -71,21 +72,21 @@ def extract_blocks(lines)
   ctx = nil
 
   lines.each do |line|
-    if ctx == "latex"
-      if line.end_with?("```")
-        out.push({
-          "kind" => "latex",
-          "content" => clean_breaks(load),
-        })
-        ctx = nil
-        next
-      else
-        load.concat(line)
-      end
+    if ctx == "latex" and line.end_with?("```")
+      out.push({
+        "kind" => "latex",
+        "content" => clean_breaks(load),
+      })
+      ctx = nil
+      next
+    elsif ctx == "text" and line.start_with?("```")
+      out.push({
+        "kind" => "text",
+        "content" => clean_breaks(load),
+      })
+      ctx = nil
     else
-      # if not line.strip.empty?
-        load.concat(line)
-      # end
+      load.concat(line)
     end
 
     if line.start_with?("```math")
@@ -93,6 +94,7 @@ def extract_blocks(lines)
       load = ""
     elsif ctx.nil? and not line.strip.empty?
       ctx = "text"
+      load = line
     end
   end
 
