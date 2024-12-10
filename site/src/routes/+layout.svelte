@@ -16,11 +16,11 @@ let active = true;
 
 
 onMount(() => {
-  if (sessionStorage.getItem("integrity.here")) {
+  if (sessionStorage?.getItem("integrity.here")) {
     active = false;
   }
   else {
-    sessionStorage.setItem("integrity.here", "hi");
+    sessionStorage?.setItem("integrity.here", "hi");
 
     setTimeout(() => {
       active = false;
@@ -53,7 +53,7 @@ onMount(() => {
       <p> by Sup#2.0 </p>
     </div>
 
-    <small> If you’re still reading this, JavaScript might be broken. </small>
+    <small> If you’re seeing this, JavaScript might be broken. </small>
   </aside>
 {/if}
 
@@ -85,8 +85,8 @@ aside.overlay {
   align-items: center;
   background-color: $col-prot;
   /* fallback if JavaScript fails to avoid soft-blocking site */
-  animation: 0.5s easeInQuad reverse delayed-fade;
-  animation-delay: 2.5s;
+  animation: 0.5s cubic-bezier(0.11, 0, 0.5, 0) reverse forwards delayed-fade;
+  animation-delay: 4s;
   
   .content {
     flex-grow: 1;
@@ -116,13 +116,13 @@ aside.overlay {
   }
 
   small {
-    padding: 1em;
+    padding: 3em;
     flex-grow: 0;
-    color: rgb(black, 10%);
-    font-size: 80%;
+    color: rgb(black, 25%);
+    font-size: 90%;
     opacity: 0;
-    animation: 1s delayed-fade;
-    animation-delay: 1.2s;
+    animation: 1s delayed-fade forwards;
+    animation-delay: 1s;
   }
 }
 
