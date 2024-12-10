@@ -8,6 +8,10 @@ import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Meta from "#parts/meta.svelte";
 
+
+const questions = Site.get_questions("addvent");
+const count = questions.length;
+
 </script>
 
 
@@ -26,7 +30,7 @@ import Meta from "#parts/meta.svelte";
 />
 
 <div class="content">
-  {#each Site.get_questions("addvent") as q}
+  {#each questions as q}
     <QuestionCard
       title={q.title}
       intern="question/addvent?shard={q.shard}"
@@ -35,6 +39,10 @@ import Meta from "#parts/meta.svelte";
     />
   {/each}
 </div>
+
+<aside>
+  <p> Showing <span>{count}</span> questions of {count} </p>
+</aside>
 
 
 <style lang="scss">
@@ -45,6 +53,19 @@ import Meta from "#parts/meta.svelte";
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+aside {
+  margin-top: 2.5rem;
+  text-align: center;
+  
+  p {
+    color: $col-text-deut;
+
+    span {
+      color: $col-prot;
+    }
+  }
 }
 
 </style>

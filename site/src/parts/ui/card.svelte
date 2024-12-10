@@ -27,7 +27,7 @@ let { title, intern, latex, pict, style = "block" }: Props = $props();
 >
   <div class="preview">
     {#if pict}
-      <img src="{base}/{pict}" />
+      <img alt={title} src="{base}/{pict}" />
     {:else if latex}
       <Katex text={latex} inline={false} />
     {:else}
