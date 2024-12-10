@@ -9,24 +9,18 @@ import Footer from "#parts/core/footer.svelte";
 
 import { fade } from "svelte/transition";
 import { quadIn } from "svelte/easing";
-import { onMount } from "svelte";
 
 
-let active = true;
-
+let active = $state(true);
 
 $effect(() => {
   if (typeof(sessionStorage) === "undefined") return;
 
   if (sessionStorage.getItem("integrity.here")) {
     active = false;
-  }
-  else {
+  } else {
     sessionStorage.setItem("integrity.here", "hi");
-
-    setTimeout(() => {
-      active = false;
-    }, 600);
+    setTimeout(() => { active = false; }, 600);
   }
 });
 
@@ -47,7 +41,7 @@ $effect(() => {
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
   <aside class="overlay"
-    on:click={() => { active = false; }}
+    onclick={() => { active = false; }}
     transition:fade={{ duration: 500, easing: quadIn }}
   >
     <div class="content">
@@ -154,7 +148,11 @@ aside.overlay {
 
 @keyframes delayed-fade {
   0% {
+    visibility: hidden;
     opacity: 0;
+  }
+  0.1% {
+    visibility: visible;
   }
   100% {
     opacity: 1;
