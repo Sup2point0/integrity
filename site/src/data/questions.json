@@ -12,7 +12,7 @@
       "question": [
         {
           "kind": "text",
-          "content": "Last year, it took $8$ days for $200$ elves in the North Atlantic Pinecone Association to prepare $384,000$ presents.This year, the Pinecone Association has an order of only $277,200$ presents. However, $35$ elves have resigned from the company due to complaints over the quality of icewater served at lunch.If the remaining elves continue to work at the same rate this year, how long will it take them to prepare all the presents?"
+          "content": "Last year, it took $8$ days for $200$ elves in the North Atlantic Pinecone Association to prepare $384,000$ presents.<br><br>This year, the Pinecone Association has an order of only $277,200$ presents. However, $35$ elves have resigned from the company due to complaints over the quality of icewater served at lunch.<br><br>If the remaining elves continue to work at the same rate this year, how long will it take them to prepare all the presents?"
         }
       ],
       "hints": {
@@ -45,7 +45,7 @@
         "solve": [
           {
             "kind": "text",
-            "content": "$200$ elves prepares $384000$ presents in $8$ days. Therefore each elf in 1 day prepares $384000 / 200 / 8 = 240$ presents. (We can think of this like the *work rate* per elf, $1 \\, \\text{present} / \\text{day} / \\text{elf}$)Since $35$ elves are gone, there are now $200 - 35 = 165$ elves left. Each day they prepare $240 \\cdot 165 = 39600$ presents. Hence it will take them $277200 / 39600 = 7$ days in total to prepare all the presents."
+            "content": "$200$ elves prepares $384000$ presents in $8$ days. Therefore each elf in 1 day prepares $384000 / 200 / 8 = 240$ presents. (We can think of this like the *work rate* per elf, $1 \\, \\text{present} / \\text{day} / \\text{elf}$)<br><br>Since $35$ elves are gone, there are now $200 - 35 = 165$ elves left. Each day they prepare $240 \\cdot 165 = 39600$ presents. Hence it will take them $277200 / 39600 = 7$ days in total to prepare all the presents."
           }
         ]
       }
@@ -62,7 +62,7 @@
       "question": [
         {
           "kind": "text",
-          "content": "My Christmas tree has $12$ layers. Each layer $n$ has $n$ branches, each of length $n$.**What is the total length of all branches on my Christmas tree?**"
+          "content": "My Christmas tree has $12$ layers. Each layer $n$ has $n$ branches, each of length $n$.<br><br>**What is the total length of all branches on my Christmas tree?**"
         }
       ],
       "hints": {
@@ -100,7 +100,7 @@
       "alternatives": [
         {
           "kind": "latex",
-          "content": "S_n = \\frac{1}{6} n(n + 1)(2n + 1)Hence substituting $n = 12$ we obtain```math"
+          "content": "S_n = \\frac{1}{6} n(n + 1)(2n + 1)"
         },
         {
           "kind": "latex",
@@ -120,7 +120,7 @@
       "question": [
         {
           "kind": "text",
-          "content": "I am decorating gingerbread men with buttons.I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.**How many different gingerbread men designs can I make?**- Treat distinct orders of colours as different designs: blue, blue, green is different to blue, green, blue."
+          "content": "I am decorating gingerbread men with buttons.<br><br>I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.<br><br>**How many different gingerbread men designs can I make?**<br><br><br><br><br><br>- Treat distinct orders of colours as different designs: blue, blue, green is different to blue, green, blue."
         }
       ],
       "hints": {
@@ -178,7 +178,7 @@
       "alternatives": [
         {
           "kind": "text",
-          "content": "We count the permutations of 4 colours in 3 slots, then discount those that have 3 of the same colour.In each of the 3 slots, we have 4 colours to choose from, giving $4^3 = 64$ permutations.4 of these patterns are 3 buttons of the colour, hence we have $64 - 4 = 60$ designs."
+          "content": "We count the permutations of 4 colours in 3 slots, then discount those that have 3 of the same colour.<br><br>In each of the 3 slots, we have 4 colours to choose from, giving $4^3 = 64$ permutations.<br><br>4 of these patterns are 3 buttons of the colour, hence we have $64 - 4 = 60$ designs."
         }
       ]
     },
@@ -194,7 +194,7 @@
       "question": [
         {
           "kind": "text",
-          "content": "The 4 squirrels <em>Poppy</em>, <em>Quill</em>, <em>Ronald</em>, <em>Sunset</em> are having a sledging race. - Poppy did not finish first or last. - Quill beat at least 2 squirrels. - Sunset finished before Ronald. - There was at least 1 squirrel between Poppy and Ronald.<strong>Can you determine what order they finished in?</strong>"
+          "content": "The 4 squirrels <em>Poppy</em>, <em>Quill</em>, <em>Ronald</em>, <em>Sunset</em> are having a sledging race.<br><br> - Poppy did not finish first or last. - Quill beat at least 2 squirrels. - Sunset finished before Ronald. - There was at least 1 squirrel between Poppy and Ronald.<br><br><strong>Can you determine what order they finished in?</strong>"
         }
       ],
       "hint": {
@@ -226,7 +226,7 @@
       "solution": [
         {
           "kind": "text",
-          "content": "Let’s draw a table to show each position and the squirrels that could place in each of them. We’ll use $P, Q, R, S$ to denote the 4 squirrels.| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | || 3 | | || 4 | | |Poppy did not finish first or last, so must be in 2nd or 3rd place.| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | P || 3 | | P || 4 | | |Quill beat at least 2 squirrels, so must be in 2nd or 1st place.| position | certain | possible || :------- | :------ | :------- || 1 | | Q || 2 | | PQ || 3 | | P || 4 | | |Then we’re given that Sunset finished before Ronald, which is quite broad. It does tell us that Ronald could not have finished 1st, and that Sunset could not have finished last. We’ll note these down and leave the clue for now.| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQRS || 3 | | PRS || 4 | | R |Now we can see that Ronald must have finished last, and we can eliminate $R$ from the other possibilities.| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQS || 3 | | PS || 4 | R | |And since there is at least 1 squirrel between Ronald and Poppy, it follows that Poppy must have finished 3rd.| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | P | || 3 | | S || 4 | R | |Now it’s the home straight and we see that Sunset must have finished 3rd, and Quill in 1st.| position | certain | possible || :------- | :------ | :------- || 1 | Q | || 2 | P | || 3 | S | || 4 | R | |Hence the order is Quill, Poppy, Sunset, Ronald."
+          "content": "Let’s draw a table to show each position and the squirrels that could place in each of them. We’ll use $P, Q, R, S$ to denote the 4 squirrels.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | || 3 | | || 4 | | |<br><br>Poppy did not finish first or last, so must be in 2nd or 3rd place.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | P || 3 | | P || 4 | | |<br><br>Quill beat at least 2 squirrels, so must be in 2nd or 1st place.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | Q || 2 | | PQ || 3 | | P || 4 | | |<br><br>Then we’re given that Sunset finished before Ronald, which is quite broad. It does tell us that Ronald could not have finished 1st, and that Sunset could not have finished last. We’ll note these down and leave the clue for now.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQRS || 3 | | PRS || 4 | | R |<br><br>Now we can see that Ronald must have finished last, and we can eliminate $R$ from the other possibilities.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQS || 3 | | PS || 4 | R | |<br><br>And since there is at least 1 squirrel between Ronald and Poppy, it follows that Poppy must have finished 3rd.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | P | || 3 | | S || 4 | R | |<br><br>Now it’s the home straight and we see that Sunset must have finished 3rd, and Quill in 1st.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | Q | || 2 | P | || 3 | S | || 4 | R | |<br><br>Hence the order is Quill, Poppy, Sunset, Ronald."
         }
       ]
     }
@@ -529,7 +529,7 @@
         "preamble": [
           {
             "kind": "latex",
-            "content": "\\left[\\frac{1}{2}\\left(1-\\cos\\left(\\frac{\\pi}{2}\\right)\\right)\\right]^{2}\\cdot\\left[\\int_{\\pi-1}^{2\\pi-1}\\sin\\left(\\frac{x+1}{2}\\right)\\ dx\\right]^{2}-\\frac{1}{2}\\left[\\int_{\\pi-1}^{-\\pi-1}\\cos\\left(\\frac{x+1}{2}\\right)\\ dx\\right]Now expanding it out, we find we can evaluate that coefficient quite easily:```math"
+            "content": "\\left[\\frac{1}{2}\\left(1-\\cos\\left(\\frac{\\pi}{2}\\right)\\right)\\right]^{2}\\cdot\\left[\\int_{\\pi-1}^{2\\pi-1}\\sin\\left(\\frac{x+1}{2}\\right)\\ dx\\right]^{2}-\\frac{1}{2}\\left[\\int_{\\pi-1}^{-\\pi-1}\\cos\\left(\\frac{x+1}{2}\\right)\\ dx\\right]"
           },
           {
             "kind": "latex",
@@ -539,7 +539,7 @@
         "substitute": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  t &= \\frac{x+1}{2}  \\\\ dt &= \\frac{1}{2}dx\\ \\to\\ dx=2\\ dt\\end{align*}We’ll need to adjust our limits, and it turns out this actually makes the question quite a lot nicer!```math"
+            "content": "\\begin{align*}  t &= \\frac{x+1}{2}  \\\\ dt &= \\frac{1}{2}dx\\ \\to\\ dx=2\\ dt\\end{align*}"
           },
           {
             "kind": "latex",
@@ -549,19 +549,19 @@
         "reshape": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\left(\\int_{\\pi/2}^{\\pi}\\sin t\\ dt\\right)^{2}+\\int_{-\\pi/2}^{\\pi/2}\\cos t\\ dt\\end{align*}And since $cos t$ is an even function, we can halve its integral like so:```math"
+            "content": "\\begin{align*}  &= \\left(\\int_{\\pi/2}^{\\pi}\\sin t\\ dt\\right)^{2}+\\int_{-\\pi/2}^{\\pi/2}\\cos t\\ dt\\end{align*}"
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\left(\\int_{\\pi/2}^{\\pi}\\sin t\\ dt\\right)^{2}+2\\int_{0}^{\\pi/2}\\cos t\\ dt\\end{align*}Now wait, $sin t$ is just a translation of $cos t$ by $\\pi/2$ in the positive x direction. So we can make a substitution (left as an exercise to the reader) and rewrite its integral like so:```math"
+            "content": "\\begin{align*}  &= \\left(\\int_{\\pi/2}^{\\pi}\\sin t\\ dt\\right)^{2}+2\\int_{0}^{\\pi/2}\\cos t\\ dt\\end{align*}"
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\left(\\int_{0}^{\\pi/2}\\cos t\\ dt\\right)^{2}+2\\int_{0}^{\\pi/2}\\cos t\\ dt\\end{align*}Woah, what’s this? Disguised quadratic?!Both of our terms are the same integral, so if we let that integral be $T$, then we have```math"
+            "content": "\\begin{align*}  &= \\left(\\int_{0}^{\\pi/2}\\cos t\\ dt\\right)^{2}+2\\int_{0}^{\\pi/2}\\cos t\\ dt\\end{align*}"
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= T^{2}+2T  \\\\ &= \\left(T+1\\right)^{2}-1\\end{align*}(This was originally intended to be a completing the square question, lmao.)"
+            "content": "\\begin{align*}  &= T^{2}+2T  \\\\ &= \\left(T+1\\right)^{2}-1\\end{align*}"
           },
           {
             "kind": "text",
@@ -630,15 +630,15 @@
         "clean": [
           {
             "kind": "latex",
-            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x-1\\right)+\\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x+1\\right)\\ dxWe factorise out the fraction:```math"
+            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x-1\\right)+\\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x+1\\right)\\ dx"
           },
           {
             "kind": "latex",
-            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\left(\\ln\\left(x-1\\right)+\\ln\\left(x+1\\right)\\right)\\ dxSince we’re adding logs we can now apply a log law:```math"
+            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\left(\\ln\\left(x-1\\right)+\\ln\\left(x+1\\right)\\right)\\ dx"
           },
           {
             "kind": "latex",
-            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(\\left(x-1\\right)\\left(x+1\\right)\\right)\\ dxOh hey, this is difference of 2 squares!```math"
+            "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(\\left(x-1\\right)\\left(x+1\\right)\\right)\\ dx"
           },
           {
             "kind": "latex",
@@ -654,11 +654,11 @@
         "solve": [
           {
             "kind": "latex",
-            "content": "=2v\\left(\\ln v-1\\right)Put $t$ back:```math"
+            "content": "=2v\\left(\\ln v-1\\right)"
           },
           {
             "kind": "latex",
-            "content": "=2\\tan t\\left(\\ln\\left(\\tan t\\right)-1\\right)Put $x$ back:```math"
+            "content": "=2\\tan t\\left(\\ln\\left(\\tan t\\right)-1\\right)"
           },
           {
             "kind": "latex",

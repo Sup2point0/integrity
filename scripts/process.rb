@@ -20,16 +20,18 @@ def process(shard:, file:)
       if load and not load.empty?
         if subsection
           if data[section].nil? then data[section] = {} end
-          data[section][subsection] = extract_groups(load)
+          data[section][subsection] = extract_blocks(load)
         elsif section
-          data[section] = extract_groups(load)
+          data[section] = extract_blocks(load)
         end
       end
 
     else
       # if in a section, add to load
-      if section and not line.strip.empty?
-        load.push(line)
+      if ( (section and not line.strip.empty?) ||
+        (section and not load.empty?)
+      )
+        load.push(line.strip.empty? ? "\n" : line)
       end
     end
 
@@ -53,9 +55,9 @@ def process(shard:, file:)
   if load and not load.empty?
     if subsection
       if data[section].nil? then data[section] = {} end
-      data[section][subsection] = extract_groups(load)
+      data[section][subsection] = extract_blocks(load)
     elsif section
-      data[section] = extract_groups(load)
+      data[section] = extract_blocks(load)
     end
   end
 
@@ -63,7 +65,7 @@ def process(shard:, file:)
 end
 
 
-def extract_groups(lines)
+def extract_blocks(lines)
   out = []
   load = ""
   ctx = nil
@@ -73,7 +75,7 @@ def extract_groups(lines)
       if line.end_with?("```")
         out.push({
           "kind" => "latex",
-          "content" => load,
+          "content" => clean_breaks(load),
         })
         ctx = nil
         next
@@ -81,9 +83,9 @@ def extract_groups(lines)
         load.concat(line)
       end
     else
-      if not line.strip.empty?
+      # if not line.strip.empty?
         load.concat(line)
-      end
+      # end
     end
 
     if line.start_with?("```math")
@@ -97,9 +99,14 @@ def extract_groups(lines)
   if not ctx.nil?
     out.push({
       "kind" => "text",
-      "content" => load,
+      "content" => clean_breaks(load),
     })
   end
 
   return out
+end
+
+
+def clean_breaks(text)
+  return text.strip.gsub("\n", "<br><br>")
 end
