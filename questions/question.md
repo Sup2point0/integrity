@@ -35,8 +35,8 @@ method:
 
 ### Solve
 ```math
-\begin{align}
+\begin{align*}
   &= 
   \\ &= 
-\end{align}
+\end{align*}
 ```

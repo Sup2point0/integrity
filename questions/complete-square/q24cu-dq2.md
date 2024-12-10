@@ -33,18 +33,18 @@ Does $(3 + x)(3 - x)$ look familiar?
 
 ### Difference of 2 Squares
 ```math
-\begin{align}
+\begin{align*}
   &= \left(x+3\right)\left(3-x\right)-6\left(x-3\right)
   \\ &= \left(3+x\right)\left(3-x\right)-6\left(x-3\right)
   \\ &= 9-x^{2}-6x+18
-\end{align}
+\end{align*}
 ```
 
 ### Solve
 ```math
-\begin{align}
+\begin{align*}
   &= -\left(x^{2}+6x-27\right)
   \\ &= -\left(\left(x+3\right)^{2}-9-27\right)
   \\ &= -\left(x+3\right)^{2}+36
-\end{align}
+\end{align*}
 ```
