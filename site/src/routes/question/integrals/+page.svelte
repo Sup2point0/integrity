@@ -14,9 +14,6 @@ let { data } = $props();
 
 const question: Question = data.question;
 
-
-let loaded = true;
-
 </script>
 
 
