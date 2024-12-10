@@ -86,7 +86,7 @@ aside.overlay {
   background-color: $col-prot;
   /* fallback if JavaScript fails to avoid soft-blocking site */
   animation: 0.5s easeInQuad reverse delayed-fade;
-  animation-delay: 2.5s
+  animation-delay: 2.5s;
   
   .content {
     flex-grow: 1;
@@ -122,7 +122,7 @@ aside.overlay {
     font-size: 80%;
     opacity: 0;
     animation: 1s delayed-fade;
-    animation-delay: 1.2s
+    animation-delay: 1.2s;
   }
 }
 
