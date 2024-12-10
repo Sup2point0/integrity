@@ -73,6 +73,7 @@ a.question-card {
   color: $col-text;
   text-decoration: none;
   background-color: auto;
+  border: 1px solid #dedede;  // fallback
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 2px 2px -0.5px $col-line;
@@ -109,6 +110,7 @@ a.question-card {
 .info {
   padding: 1em 0.4em 0.4em;
   text-align: left;
+  border-top: 1px solid #dedede;  // fallback
   border-top: 1px solid $col-line;
 
   h4 {
