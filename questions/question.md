@@ -5,6 +5,8 @@ desc:
 date: 
 tags:
   - 
+method:
+  - 
 ---
 
 
@@ -20,6 +22,8 @@ tags:
 
 ### 2
 
+### 3
+
 
 ## Answer
 ```math
@@ -32,6 +36,7 @@ tags:
 ### Solve
 ```math
 \begin{align}
-&= 
+  &= 
+  \\ &= 
 \end{align}
 ```
