@@ -16,11 +16,13 @@ let active = true;
 
 
 onMount(() => {
-  if (sessionStorage?.getItem("integrity.here")) {
+  if (!sessionStorage) return;
+
+  if (sessionStorage.getItem("integrity.here")) {
     active = false;
   }
   else {
-    sessionStorage?.setItem("integrity.here", "hi");
+    sessionStorage.setItem("integrity.here", "hi");
 
     setTimeout(() => {
       active = false;
