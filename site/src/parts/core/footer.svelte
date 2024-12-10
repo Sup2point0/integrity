@@ -95,6 +95,7 @@ img#purple-portal {
 }
 
 p#sup2point0 {
+  color: #3c8dbc;  // fallback
   color: $col-prot;
   font-size: 200%;
 }

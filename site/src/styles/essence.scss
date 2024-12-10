@@ -34,5 +34,6 @@ p, td {
 
 ::selection {
   color: white !important;
+  background-color: #3c8dbc !important;  // fallback
   background-color: $col-prot !important;
 }

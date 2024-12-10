@@ -83,10 +83,11 @@ aside.overlay {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #3c8dbc;  // fallback
   background-color: $col-prot;
-  /* fallback if JavaScript fails to avoid soft-blocking site */
+  // fallback if JavaScript fails to avoid soft-blocking site
   animation: 0.5s cubic-bezier(0.11, 0, 0.5, 0) reverse forwards delayed-fade;
-  animation-delay: 4s;
+  animation-delay: 3.6s;
   
   .content {
     flex-grow: 1;
@@ -122,7 +123,7 @@ aside.overlay {
     font-size: 90%;
     opacity: 0;
     animation: 1s delayed-fade forwards;
-    animation-delay: 1s;
+    animation-delay: 1.2s;
   }
 }
 

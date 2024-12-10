@@ -44,6 +44,7 @@ let { text, link, intern, button }: Props = $props();
   @include font-ui;
   font-weight: 300;
   font-size: 100%;
+  color: #3c8dbc;  // fallback
   color: $col-prot;
   background: none;
   text-decoration: none;

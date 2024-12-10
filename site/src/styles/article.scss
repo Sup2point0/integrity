@@ -61,6 +61,7 @@ article {
 
   a {
     position: relative;
+    color: #3c8dbc;  // fallback
     color: $col-prot;
     text-decoration: none;
     transition: color 0.12s ease-out;
@@ -72,6 +73,7 @@ article {
       left: 0;
       width: 100%;
       height: 1px;
+      background-color: #3c8dbc;  // fallback
       background-color: $col-prot;
       transform: scaleX(0.95);
       transform-origin: center;
@@ -79,9 +81,11 @@ article {
     }
 
     &:hover {
+      color: #f07d1c;  // fallback
       color: $col-deut;
 
       &:after {
+        background-color: #f07d1c;  // fallback
         background-color: $col-deut;
         transform: scaleX(1.02)
       }

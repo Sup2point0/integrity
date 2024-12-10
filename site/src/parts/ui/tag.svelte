@@ -29,6 +29,7 @@ button.tag {
   @include font-ui;
   color: white;
   font-size: 90%;
+  background-color: #3c8dbc;  // fallback
   background-color: $col-prot;
   border: none;
   border-radius: 0.5em;

@@ -41,8 +41,8 @@ let { text, value, toggle }: Props = $props();
   );
 
   &.active {
-    // background-color: color-mix(in oklch, $col-prot, transparent 95%);
     color: white;
+    background-color: #3c8dbc;  // fallback
     background-color: $col-prot;
     box-shadow: none;
     
