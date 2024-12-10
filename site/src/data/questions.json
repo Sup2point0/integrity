@@ -132,7 +132,13 @@
       "question": [
         {
           "kind": "text",
-          "content": "I am decorating gingerbread men with buttons.<br><br>I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.<br><br>**How many different gingerbread men designs can I make?**<br><br><br><br><br><br>I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.<br><br>**How many different gingerbread men designs can I make?**<br><br><br><br><br><br>- Treat distinct orders of colours as different designs: blue, blue, green is different to blue, green, blue."
+          "content": "I am decorating gingerbread men with buttons.<br><br>I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.<br><br>**How many different gingerbread men designs can I make?**"
+        }
+      ],
+      "notes": [
+        {
+          "kind": "text",
+          "content": "- Treat distinct orders of colours as different designs: blue, blue, green is different to blue, green, blue."
         }
       ],
       "hints": {

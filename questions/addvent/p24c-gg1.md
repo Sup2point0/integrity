@@ -17,7 +17,7 @@ I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread
 **How many different gingerbread men designs can I make?**
 
 
-## Notes
+## Notes
 
 - Treat distinct orders of colours as different designs: blue, blue, green is different to blue, green, blue.
 

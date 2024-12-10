@@ -110,5 +110,5 @@ end
 
 
 def clean_breaks(text)
-  return text.strip.gsub("\n", "<br><br>")
+  return text.strip.gsub(/[\n]+/, "<br><br>")
 end
