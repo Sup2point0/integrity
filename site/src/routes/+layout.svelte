@@ -9,11 +9,12 @@ import Footer from "#parts/core/footer.svelte";
 
 import { fade } from "svelte/transition";
 import { quadIn } from "svelte/easing";
+import { onMount } from "svelte";
 
 
 let active = $state(true);
 
-$effect(() => {
+onMount(() => {
   if (typeof(sessionStorage) === "undefined") return;
 
   if (sessionStorage.getItem("integrity.here")) {
