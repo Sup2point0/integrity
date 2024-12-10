@@ -84,6 +84,9 @@ aside.overlay {
   justify-content: center;
   align-items: center;
   background-color: $col-prot;
+  /* fallback if JavaScript fails to avoid soft-blocking site */
+  animation: 0.5s easeInQuad reverse delayed-fade;
+  animation-delay: 2.5s;
   
   .content {
     flex-grow: 1;
@@ -100,7 +103,7 @@ aside.overlay {
     color: white;
     font-weight: 200;
     font-size: 500%;
-    animation: 1.5s slide-in-upper cubic-bezier(0.19, 1, 0.22, 1);
+    animation: 1.5s cubic-bezier(0.19, 1, 0.22, 1) slide-in-upper;
     animation-iteration-count: 1;
   }
 
@@ -108,7 +111,7 @@ aside.overlay {
     color: rgb(white, 60%);
     font-weight: 200;
     font-size: 150%;
-    animation: 1.5s slide-in-lower cubic-bezier(0.19, 1, 0.22, 1);
+    animation: 1.5s cubic-bezier(0.19, 1, 0.22, 1) slide-in-lower;
     animation-iteration-count: 1;
   }
 
@@ -118,7 +121,8 @@ aside.overlay {
     color: rgb(black, 10%);
     font-size: 80%;
     opacity: 0;
-    animation: 1s delayed-fade 1.2s;
+    animation: 1s delayed-fade;
+    animation-delay: 1.2s;
   }
 }
 
