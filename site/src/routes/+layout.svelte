@@ -15,8 +15,8 @@ import { onMount } from "svelte";
 let active = true;
 
 
-onMount(() => {
-  if (!sessionStorage) return;
+$effect(() => {
+  if (typeof(sessionStorage) === "undefined") return;
 
   if (sessionStorage.getItem("integrity.here")) {
     active = false;
@@ -28,7 +28,7 @@ onMount(() => {
       active = false;
     }, 600);
   }
-})
+});
 
 </script>
 
