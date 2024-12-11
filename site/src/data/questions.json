@@ -62,7 +62,7 @@
       "question": [
         {
           "kind": "text",
-          "content": "My Christmas tree has $12$ layers. Each layer $n$ has $n$ branches, each of length $n$.<br><br>**What is the total length of all branches on my Christmas tree?**"
+          "content": "My Christmas tree has $12$ layers. Each layer $n$ has $n$ branches, each of length $n$.<br><br><strong>What is the total length of all branches on my Christmas tree?</strong>"
         }
       ],
       "hints": {
@@ -132,7 +132,7 @@
       "question": [
         {
           "kind": "text",
-          "content": "I am decorating gingerbread men with buttons.<br><br>I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.<br><br>**How many different gingerbread men designs can I make?**"
+          "content": "I am decorating gingerbread men with buttons.<br><br>I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.<br><br><strong>How many different gingerbread men designs can I make?</strong>"
         }
       ],
       "notes": [
@@ -250,101 +250,6 @@
     }
   },
   "complete-square": {
-    "a24cu-fr1": {
-      "topic": "complete-square",
-      "title": "sign",
-      "desc": null,
-      "date": "2024 November",
-      "tags": [
-        "frac"
-      ],
-      "method": [
-        "work"
-      ],
-      "shard": "a24cu-fr1",
-      "question": [
-        {
-          "kind": "latex",
-          "content": "\\frac{7}{16}-\\frac{7}{6}x-\\frac{7}{9}x^{2}"
-        }
-      ],
-      "hint": {
-        "1": [
-          {
-            "kind": "text",
-            "content": "Those $-$ signs look annoying."
-          }
-        ],
-        "2": [
-          {
-            "kind": "text",
-            "content": "Those $7$ coefficients look annoying."
-          }
-        ]
-      },
-      "answer": [
-        {
-          "kind": "latex",
-          "content": "-\\frac{7}{9}\\left(x+\\frac{3}{4}\\right)^{2}+\\frac{7}{8}"
-        }
-      ],
-      "solution": {
-        "solve": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  &= -\\frac{7}{9}\\left(x+\\frac{3}{4}\\right)^{2}+\\frac{7}{8}  \\\\ &= -\\left(\\frac{7}{9}x^{2}+\\frac{7}{6}x-\\frac{7}{16}\\right)  \\\\ &= -\\frac{7}{9}\\left(x^{2}+\\frac{3}{2}x\\right)+\\frac{7}{16}  \\\\ &= -\\frac{7}{9}\\left(\\left(x+\\frac{3}{4}\\right)^{2}-\\left(\\frac{3}{4}\\right)^{2}\\right)+\\frac{7}{16}  \\\\ &= -\\frac{7}{9}\\left(x+\\frac{3}{4}\\right)^{2}+\\frac{7}{16}+\\frac{7}{16}  \\\\ &= -\\frac{7}{9}\\left(x+\\frac{3}{4}\\right)^{2}+\\frac{7}{8}\\end{align*}"
-          }
-        ]
-      }
-    },
-    "a24cu-hr2": {
-      "topic": "complete-square",
-      "title": "class",
-      "desc": null,
-      "date": "2024 November",
-      "tags": [
-        "horror",
-        "pi",
-        "e",
-        "trig"
-      ],
-      "method": [
-        "work"
-      ],
-      "shard": "a24cu-hr2",
-      "question": [
-        {
-          "kind": "latex",
-          "content": "\\frac{x^{2}\\left(e^{2}-1\\right)}{2\\pi}-\\left(1-e^{2}\\right)x-\\sin{30\\degree}"
-        }
-      ],
-      "hint": {
-        "1": [
-          {
-            "kind": "text",
-            "content": "What’s $\\sin{30 \\degree}$"
-          }
-        ],
-        "2": [
-          {
-            "kind": "text",
-            "content": "$e^2 - 1$ and $1 - e^2$ look a little sus..."
-          }
-        ]
-      },
-      "answer": [
-        {
-          "kind": "latex",
-          "content": "\\frac{e^{2}-1}{2\\pi}\\left(x+\\pi\\right)^{2}-\\frac{1+\\pi\\left(e^{2}-1\\right)}{2}"
-        }
-      ],
-      "solution": [
-        {
-          "kind": "latex",
-          "content": "\\begin{align*}  &= \\frac{x^{2}\\left(e^{2}-1\\right)}{2\\pi}-\\left(1-e^{2}\\right)x-\\sin{30\\degree}  \\\\ &= x^{2}\\left(\\frac{e^{2}-1}{2\\pi}\\right)+x\\left(e^{2}-1\\right)-\\frac{1}{2}  \\\\ &= \\frac{e^{2}-1}{2\\pi}\\left(x^{2}+2\\pi x\\right)-\\frac{1}{2}  \\\\ &= \\frac{e^{2}-1}{2\\pi}\\left(\\left(x+\\pi\\right)^{2}-\\pi^{2}\\right)-\\frac{1}{2}  \\\\ &= \\frac{e^{2}-1}{2\\pi}\\left(x+\\pi\\right)^{2}-\\frac{\\pi\\left(e^{2}-1\\right)}{2}-\\frac{1}{2}  \\\\ &= \\frac{e^{2}-1}{2\\pi}\\left(x+\\pi\\right)^{2}-\\frac{1+\\pi\\left(e^{2}-1\\right)}{2}\\end{align*}"
-        }
-      ]
-    },
     "q24cu-dq1": {
       "topic": "complete-square",
       "title": "yes",
@@ -445,6 +350,53 @@
         ]
       }
     },
+    "q24cu-fr1": {
+      "topic": "complete-square",
+      "title": "sign",
+      "desc": null,
+      "date": "2024 November",
+      "tags": [
+        "frac"
+      ],
+      "method": [
+        "work"
+      ],
+      "shard": "q24cu-fr1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\frac{7}{16}-\\frac{7}{6}x-\\frac{7}{9}x^{2}"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Those $-$ signs look annoying."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Those $7$ coefficients look annoying."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{7}{9}\\left(x+\\frac{3}{4}\\right)^{2}+\\frac{7}{8}"
+        }
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\frac{7}{9}\\left(x+\\frac{3}{4}\\right)^{2}+\\frac{7}{8}  \\\\ &= -\\left(\\frac{7}{9}x^{2}+\\frac{7}{6}x-\\frac{7}{16}\\right)  \\\\ &= -\\frac{7}{9}\\left(x^{2}+\\frac{3}{2}x\\right)+\\frac{7}{16}  \\\\ &= -\\frac{7}{9}\\left(\\left(x+\\frac{3}{4}\\right)^{2}-\\left(\\frac{3}{4}\\right)^{2}\\right)+\\frac{7}{16}  \\\\ &= -\\frac{7}{9}\\left(x+\\frac{3}{4}\\right)^{2}+\\frac{7}{16}+\\frac{7}{16}  \\\\ &= -\\frac{7}{9}\\left(x+\\frac{3}{4}\\right)^{2}+\\frac{7}{8}\\end{align*}"
+          }
+        ]
+      }
+    },
     "q24cu-hr1": {
       "topic": "complete-square",
       "title": "no",
@@ -516,6 +468,53 @@
           }
         ]
       }
+    },
+    "q24cu-hr2": {
+      "topic": "complete-square",
+      "title": "class",
+      "desc": null,
+      "date": "2024 November",
+      "tags": [
+        "horror",
+        "pi",
+        "trig"
+      ],
+      "method": [
+        "work"
+      ],
+      "shard": "q24cu-hr2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x^{2}\\left(e^{2}-1\\right)}{2\\pi}-\\left(1-e^{2}\\right)x-\\sin{30\\degree}"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What’s $\\sin{30 \\degree}$"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "$e^2 - 1$ and $1 - e^2$ look a little sus..."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{e^{2}-1}{2\\pi}\\left(x+\\pi\\right)^{2}-\\frac{1+\\pi\\left(e^{2}-1\\right)}{2}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &= \\frac{x^{2}\\left(e^{2}-1\\right)}{2\\pi}-\\left(1-e^{2}\\right)x-\\sin{30\\degree}  \\\\ &= x^{2}\\left(\\frac{e^{2}-1}{2\\pi}\\right)+x\\left(e^{2}-1\\right)-\\frac{1}{2}  \\\\ &= \\frac{e^{2}-1}{2\\pi}\\left(x^{2}+2\\pi x\\right)-\\frac{1}{2}  \\\\ &= \\frac{e^{2}-1}{2\\pi}\\left(\\left(x+\\pi\\right)^{2}-\\pi^{2}\\right)-\\frac{1}{2}  \\\\ &= \\frac{e^{2}-1}{2\\pi}\\left(x+\\pi\\right)^{2}-\\frac{\\pi\\left(e^{2}-1\\right)}{2}-\\frac{1}{2}  \\\\ &= \\frac{e^{2}-1}{2\\pi}\\left(x+\\pi\\right)^{2}-\\frac{1+\\pi\\left(e^{2}-1\\right)}{2}\\end{align*}"
+        }
+      ]
     },
     "q24cu-pi1": {
       "topic": "complete-square",

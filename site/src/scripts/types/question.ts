@@ -6,11 +6,12 @@ import type { Latex, Block } from "./root";
 export class Question
 {
   shard: string;
+  topic: string;
 
   title?: string;
   desc?: string;
   date?: Date;
-  tags: string[];
+  tags: string[] = [];
 
   /** The question line. */
   question: Block;
