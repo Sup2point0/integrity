@@ -169,6 +169,7 @@ aside.overlay {
   }
   to {
     display: none;
+    visibility: hidden;
     opacity: 0;
   }
 }
