@@ -10,17 +10,17 @@ import Meta from "#parts/meta.svelte";
 </script>
 
 
-<Meta title="Completing the Square"
-  desc="Rewrite expressions in completed square form as quick as you can"
+<Meta title="Topics"
+  desc="Practice questions on various topics in mathematics"
 />
 
 
 <Breadcrumbs levels={[
   { text: "Integrity", link: Site.root },
-  { text: "Questions" },
+  { text: "Topics" },
 ]} />
 
-<Header title="Questions" />
+<Header title="Topics" />
 
 <div class="content">
   <section class="browse">
@@ -35,6 +35,10 @@ import Meta from "#parts/meta.svelte";
     <Card title="Completing the Square"
       intern="questions/complete-square"
       latex={"a(x - p)^2 + q"}
+    />
+    <Card title="Guess the Graph"
+      intern="questions/guess-graph"
+      pict="previews/graph-drawing.png"
     />
     <Card title="Addvent"
       intern="questions/addvent"

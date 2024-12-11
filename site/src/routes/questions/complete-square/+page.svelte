@@ -43,7 +43,7 @@ onMount(() => {
 <Header title="Completing the Square" />
 <Search {tags} />
 
-<div class="content">
+<div class="content {search.view}">
   {#each filtered as q}
     <QuestionCard
       title={q.title}
@@ -51,6 +51,7 @@ onMount(() => {
       latex={q.question.content}
       date={search.show.dates ? q.date : undefined}
       tags={search.show.tags ? q.tags : undefined}
+      style={search.view === "grid" ? "block" : "row"}
     />
   {/each}
 
@@ -72,10 +73,18 @@ onMount(() => {
 
 .content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
+
+  &.grid {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &.list {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 aside {

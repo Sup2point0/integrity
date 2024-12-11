@@ -18,6 +18,7 @@ export class SearchData
     hints: true,
   });
 
+  view: "grid" | "list" = $state("list");
   sort: "date" | "name" | "tags" | null = $state(null);
   reverse: boolean = $state(false);
 }

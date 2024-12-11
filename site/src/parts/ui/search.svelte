@@ -9,6 +9,7 @@ import { search } from "#scripts/stores";
 
 import Clicky from "#parts/ui/clicky.svelte";
 import Toggle from "#parts/ui/toggle.svelte";
+import Select from "#parts/ui/select.svelte";
 
 import { fade } from "svelte/transition";
 import { base } from "$app/paths";
@@ -108,6 +109,15 @@ let open = $state(false);
               toggle={() => { search.show[prop] = !search.show[prop]; }}
             />
           {/each}
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <Select bind:value={search.view}
+            options={{"GRID": "grid", "LIST": "list"}}
+          />
         </td>
       </tr>
     </tbody></table>

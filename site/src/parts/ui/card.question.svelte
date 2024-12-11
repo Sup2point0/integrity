@@ -65,9 +65,18 @@ a.question-card {
   padding: 0.75em;
   flex: 1 0 auto;
   display: flex;
-  flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
+
+  &.block {
+    max-width: 20vw;
+    flex-direction: column;
+  }
+  &.row {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: end;
+  }
 
   @include font-ui;
   color: $col-text;
@@ -84,13 +93,6 @@ a.question-card {
     $t: 0.16,
   );
   @include focus-outline;
-
-  &.block {
-    max-width: 20vw;
-  }
-  &.row {
-    width: 100%;
-  }
 }
 
 .question {
@@ -103,6 +105,9 @@ a.question-card {
   align-items: center;
   text-align: center;
   font-size: 80%;
+  a.question-card.row & {
+    font-size: 100%;
+  }
   overflow-x: auto;
   scrollbar-width: thin;
 }
@@ -110,9 +115,21 @@ a.question-card {
 .info {
   padding: 1em 0.4em 0.4em;
   text-align: left;
-  border-top: 1px solid #dedede;  // fallback
-  border-top: 1px solid $col-line;
 
+  a.question-card.block & {
+    border-top: 1px solid #dedede;  // fallback
+    border-top: 1px solid $col-line;
+  }
+
+  a.question-card.row & {
+    min-width: 50%;
+    flex-grow: 0;
+    border-right: 1px solid #dedede;  // fallback
+    border-right: 1px solid $col-line;
+  }
+}
+
+.info {
   h4 {
     margin-bottom: 0.2em;
     font-size: 125%;

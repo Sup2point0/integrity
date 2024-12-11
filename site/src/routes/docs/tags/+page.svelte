@@ -48,7 +48,7 @@ import Meta from "#parts/meta.svelte";
       {@render tag("FUN",
         "Sometimes, maths is just so fun.")}
       {@render tag("TOUGH",
-        "These ones are exceptionally tough with a potentially really non-obvious solution, especially if you haven’t seen the style of question.")}
+        "These ones are exceptionally tough with a potentially really non-obvious solution, especially if you haven’t seen this style of question before.")}
       {@render tag("ELITE",
         "May require advanced knowledge.")}
       {@render tag("TROLL",
