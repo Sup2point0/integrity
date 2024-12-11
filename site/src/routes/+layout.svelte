@@ -12,10 +12,7 @@ import { quadIn } from "svelte/easing";
 import { onMount } from "svelte";
 
 
-let { children } = $props();
-
-
-let active = $state(true);
+let active = true;
 
 onMount(() => {
   if (typeof(sessionStorage) === "undefined") return;
@@ -35,11 +32,9 @@ onMount(() => {
 
 <div class="layout">
   <main>
-    {#if children}
-      {@render children()}
-    {:else}
+    <slot>
       <p> Uh, something went wrong! </p>
-    {/if}
+    </slot>
   </main>
 </div>
 
