@@ -50,7 +50,7 @@ const question: Question = data.question;
 {#if question.solution}
   <Section title="Solution">
     {#each Object.entries(question.solution) as [step, source]}
-      <Section ctx="inner" closed={false} title={step}>
+      <Section ctx="inner" closed={false} title={step.toUpperCase()}>
         <RenderBlock {source} />
       </Section>
     {/each}

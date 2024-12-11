@@ -12,18 +12,21 @@ import { quadIn } from "svelte/easing";
 import { onMount } from "svelte";
 
 
+let { children } = $props();
+
+
 let active = $state(true);
 
-// onMount(() => {
-//   if (typeof(sessionStorage) === "undefined") return;
+onMount(() => {
+  if (typeof(sessionStorage) === "undefined") return;
 
-//   if (sessionStorage.getItem("integrity.here")) {
-//     active = false;
-//   } else {
-//     sessionStorage.setItem("integrity.here", "hi");
-//     setTimeout(() => { active = false; }, 600);
-//   }
-// });
+  if (sessionStorage.getItem("integrity.here")) {
+    active = false;
+  } else {
+    sessionStorage.setItem("integrity.here", "hi");
+    setTimeout(() => { active = false; }, 600);
+  }
+});
 
 </script>
 
@@ -32,17 +35,21 @@ let active = $state(true);
 
 <div class="layout">
   <main>
-    <slot />
+    {#if children}
+      {@render children()}
+    {:else}
+      <p> Uh, something went wrong! </p>
+    {/if}
   </main>
 </div>
 
 <Footer />
 
 {#if active}
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+  <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
   <aside class="overlay"
     onclick={() => { active = false; }}
+    onkeydown={e => { if (["Space", "Escape"].includes(e.key)) active = false; }}
     transition:fade={{ duration: 500, easing: quadIn }}
   >
     <div class="content">
@@ -83,7 +90,7 @@ aside.overlay {
   background-color: #3c8dbc;  // fallback
   background-color: $col-prot;
   // fallback if JavaScript fails to avoid soft-blocking site
-  animation: 0.5s cubic-bezier(0.11, 0, 0.5, 0) reverse forwards delayed-fade;
+  animation: 0.5s cubic-bezier(0.11, 0, 0.5, 0) forwards fade-delete;
   animation-delay: 3.6s;
   
   .content {
@@ -149,14 +156,20 @@ aside.overlay {
 
 @keyframes delayed-fade {
   0% {
-    visibility: hidden;
     opacity: 0;
-  }
-  0.1% {
-    visibility: visible;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fade-delete {
+  from {
+    opacity: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
   }
 }
 
