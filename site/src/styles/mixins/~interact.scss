@@ -1,7 +1,7 @@
 @use './src/styles/mixins/~colours' as *;
 
 
-@mixin interact($hover, $click, $t: 0.1) {
+@mixin interact($hover: none, $click: none, $t: 0.1) {
   transition: background-color #{$t}s ease-out;
   
   &:hover {

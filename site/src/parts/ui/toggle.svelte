@@ -29,6 +29,7 @@ let { text, value, toggle }: Props = $props();
 .toggle {
   padding: 0.4em 0.8em;
   @include font-ui;
+  font-size: 90%;
   color: $col-text;
   background-color: white;
   border: 1px solid $col-line;

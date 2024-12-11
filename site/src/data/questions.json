@@ -50,6 +50,54 @@
         ]
       }
     },
+    "a24c-ps1": {
+      "topic": "addvent",
+      "title": "Day 7",
+      "desc": null,
+      "date": "2024 December 11",
+      "tags": [
+        "calc"
+      ],
+      "shard": "a24c-ps1",
+      "question": [
+        {
+          "kind": "text",
+          "content": "I received a Christmas present in the shape of a $15 \\text{cm} \\times 19 \\text{cm} \\times 25 \\text{cm}$ box.<br><br>There is a ribbon of width $3 \\text{cm}$ covering every face of the box in a “+” shape.<br><br><strong>What proportion of the total surface area is not covered by ribbon?</strong>"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What’s the total surface area?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Assume the “+” is centred on each face."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Try drawing a diagram of 1 face."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$1616/2270$ or $808/1135$ or $71.19 \\%$"
+        }
+      ],
+      "alternates": [
+        {
+          "kind": "text",
+          "content": "It doesn’t actually matter where the “+” on each face is centred."
+        }
+      ]
+    },
     "n24c-ct1": {
       "topic": "addvent",
       "title": "Day 1",
@@ -617,6 +665,56 @@
     }
   },
   "integrals": {
+    "s24f-ch1": {
+      "topic": "integrals",
+      "title": "chummy",
+      "desc": null,
+      "date": "2024 December 10",
+      "tags": [
+        "work",
+        "poly",
+        "sqrt"
+      ],
+      "shard": "s24f-ch1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int x\\sqrt{x-8x^{-2}-6+12x^{-1}}\\ dx"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Fractions are horrible, so let’s multiply through to make it a polynomial."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Try reordering the terms."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "We appear to have a sequence of descending powers of x..."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{2}{5}\\left(x-2\\right)^{\\frac{5}{2}}-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &= \\int x\\sqrt{x-8x^{-2}-6+12x^{-1}}\\ dx  \\\\ &= \\int x\\sqrt{x-\\frac{8}{x^{2}}-6+\\frac{12}{x}}\\ dx  \\\\ &= \\int \\sqrt{x^{3}-8-6x^{2}+12x}\\ dx  \\\\ &= \\int \\sqrt{x^{3}-6x^{2}+12x-8}\\ dx  \\\\ &= \\int \\sqrt{\\left(x-2\\right)^{3}}\\ dx  \\\\ &= \\int \\left(x-2\\right)^{\\frac{3}{2}}\\ dx  \\\\ &= \\frac{2}{5}\\left(x-2\\right)^{\\frac{5}{2}}-c\\end{align*}"
+        }
+      ]
+    },
     "s24f-cs1": {
       "topic": "integrals",
       "title": null,
