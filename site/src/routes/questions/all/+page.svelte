@@ -3,6 +3,7 @@
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 import { filter_questions } from "#scripts/search";
+import type { Question } from "#scripts/types";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
@@ -14,14 +15,9 @@ import Meta from "#parts/meta.svelte";
 import { onMount } from "svelte";
 
 
-const data = Object.values(Site.questions);
-const questions: Question[] = [].concat.apply(
-  ...data.map(topic => Object.values(topic.questions))
-);
+const questions: Question[] = Site.get_all_questions();
 const count = questions.length;
-const tags: string[] = [].concat.apply(
-  ...data.map(topic => topic.tags)
-);
+const tags: string[] = Site.get_all_tags();
 
 let filtered = $derived(filter_questions(questions, search));
 

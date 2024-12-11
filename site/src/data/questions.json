@@ -745,6 +745,9 @@
       "has": [
         "guide"
       ],
+      "flags": [
+        "feat"
+      ],
       "shard": "s24f-lnt1",
       "question": [
         {

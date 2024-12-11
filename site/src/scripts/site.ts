@@ -9,6 +9,9 @@ interface SiteData {
   questions: QuestionsData;
 
   get_questions: (topic: string) => Question[];
+  get_all_questions: () => Question[];
+  get_all_tags: () => string[];
+  get_featured: () => Question[];
 }
 
 const Site: SiteData = {
@@ -18,7 +21,19 @@ const Site: SiteData = {
 
   get_questions: (topic) => {
     return Object.values(Site.questions[topic]?.questions ?? {});
-  }
+  },
+
+  get_all_questions: () => {
+    return Object.values(Site.questions).flatMap(topic => Object.values(topic.questions))
+  },
+
+  get_all_tags: () => {
+    return Object.values(Site.questions).flatMap(topic => topic.tags)
+  },
+
+  get_featured: () => {
+    return Site.get_all_questions().filter(q => q.flags?.includes("feat"))
+  },
 };
 
 export default Site;

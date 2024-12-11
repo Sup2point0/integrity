@@ -12,6 +12,8 @@ export class Question
   desc?: string;
   date?: Date;
   tags: string[] = [];
+  methods: string[] = [];
+  other: string[] = [];
 
   /** The question line. */
   question: Block;

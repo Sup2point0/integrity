@@ -1,8 +1,14 @@
 <script lang="ts">
 
+import Site from "#scripts/site";
+
 import Card from "#parts/ui/card.svelte";
+import QuestionCard from "#parts/ui/card.question.svelte";
 
 import Header from "#parts/core/header.svelte";
+
+
+const featured = Site.get_featured();
 
 </script>
 
@@ -13,10 +19,10 @@ import Header from "#parts/core/header.svelte";
 </svelte:head>
 
 
-<Header title="What fun are we having today?" />
-
 <div class="content">
   <section class="browse">
+    <Header title="What fun are we having today?" />
+
     <Card title="Integrals"
       intern="questions/integrals"
       latex={"\\int f(x) \\, dx"}
@@ -34,6 +40,20 @@ import Header from "#parts/core/header.svelte";
       pict="previews/addvent-text.png"
     />
   </section>
+
+  <section class="featured">
+    <Header title="Featured" />
+    
+    <div class="questions">
+      {#each featured as q}
+        <QuestionCard
+          title={q.title}
+          intern="question/{q.topic}?shard={q.shard}"
+          date={q.date}
+        />
+      {/each}
+    </div>
+  </section>
 </div>
 
 
@@ -43,8 +63,19 @@ import Header from "#parts/core/header.svelte";
   text-align: center;
 }
 
-section.browse {
-  margin: 1rem;
+section {
+  margin: 0 0 4rem;
+  
+  &.browse {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.featured .questions {
   display: flex;
   flex-direction: row;
   justify-content: center;
