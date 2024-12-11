@@ -12,7 +12,7 @@ tags:
 
 My Christmas tree has $12$ layers. Each layer $n$ has $n$ branches, each of length $n$.
 
-**What is the total length of all branches on my Christmas tree?**
+<strong>What is the total length of all branches on my Christmas tree?</strong>
 
 
 ## Hints
