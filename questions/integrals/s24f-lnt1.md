@@ -12,6 +12,8 @@ method:
   - trig sub
 has:
   - guide
+flags:
+  - feat
 ---
 
 

@@ -14,7 +14,7 @@ I am decorating gingerbread men with buttons.
 
 I have $2$ blue, $2$ green, $2$ yellow, and $2$ purple buttons. Each gingerbread man needs $3$ buttons arranged vertically.
 
-**How many different gingerbread men designs can I make?**
+<strong>How many different gingerbread men designs can I make?</strong>
 
 
 ## Notes
