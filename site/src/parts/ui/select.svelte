@@ -10,7 +10,7 @@ import { base } from "$app/paths";
 
 interface Props {
   options: string[] | {
-    [key: string]: string;
+    [key: string]: any;
   };
   value: any;
 }
@@ -100,7 +100,7 @@ ul.dropdown {
   background-color: light-dark(white, black);
   border: 1px solid $col-line;
   border-radius: 0.5em;
-  box-shadow: 0 1.5px 2px -0.5px $col-line;
+  box-shadow: 0 2px 3px -0.5px $col-line;
   list-style: none;
   transform: translateY(-0.3em);
   transition:

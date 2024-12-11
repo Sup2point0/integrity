@@ -7,19 +7,29 @@ export class SearchData
   query: string = $state("");
   tags: States = $state({});
 
+  include: States = $state({
+    solved: false,
+    flagged: false,
+    starred: false,
+    unnamed: false,
+    "has hints": false,
+  });
+  exclude: States = $state({
+    solved: false,
+    flagged: false,
+    starred: false,
+    unnamed: false,
+    "has hints": false,
+  })
+
   show: States = $state({
+    question: true,
     dates: true,
     tags: true,
   });
 
-  include: States = $state({
-    solved: true,
-    unnamed: true,
-    hints: true,
-  });
-
   view: "grid" | "list" = $state("list");
-  sort: "date" | "name" | "tags" | null = $state(null);
+  sort: "date" | "name" | null = $state(null);
   reverse: boolean = $state(false);
 }
 

@@ -46,6 +46,7 @@ let open = $state(false);
   {#if open}
     {@const unchecked_tag = Object.values(search.tags).some(tag => !tag)}
     {@const unchecked_include = Object.values(search.include).some(state => !state)}
+    {@const unchecked_exclude = Object.values(search.exclude).some(state => !state)}
 
     <table class="search-filters"
       transition:fade={{ duration: 200 }}
@@ -75,7 +76,7 @@ let open = $state(false);
       </tr>
 
       <tr>
-        <th> Include </th>
+        <th> Only Include </th>
 
         <td class="flex">
           {#each Object.entries(search.include) as [prop, state]}
@@ -101,6 +102,32 @@ let open = $state(false);
       </tr>
 
       <tr>
+        <th> Exclude </th>
+
+        <td class="flex">
+          {#each Object.entries(search.exclude) as [prop, state]}
+            <Toggle text={prop.toUpperCase()}
+              value={state}
+              toggle={() => { search.exclude[prop] = !search.exclude[prop]; }}
+            />
+          {/each}
+        </td>
+        
+        <td>
+          <Toggle text="ALL"
+            value={!unchecked_exclude}
+            toggle={() => {
+              search.exclude = Object.fromEntries(
+                Object.entries(search.include).map(
+                  ([prop, state]) => [prop, unchecked_exclude]
+                )
+              );
+            }}
+          />
+        </td>
+      </tr>
+
+      <tr>
         <th> Show </th>
         <td class="flex">
           {#each Object.entries(search.show) as [prop, state]}
@@ -113,10 +140,23 @@ let open = $state(false);
       </tr>
 
       <tr>
-        <td></td>
+        <th> View </th>
         <td>
           <Select bind:value={search.view}
             options={{"GRID": "grid", "LIST": "list"}}
+          />
+        </td>
+      </tr>
+
+      <tr>
+        <th> Sort </th>
+        <td>
+          <Select bind:value={search.sort}
+            options={{
+              "RELEVANCE": null,
+              "DATE": "date",
+              "NAME": "name",
+            }}
           />
         </td>
       </tr>
@@ -192,6 +232,13 @@ table.search-filters {
   text-align: left;
 }
 
+th {
+  min-width: 5em;
+  padding: 0.5em 2em;
+  font-weight: 400;
+  border-right: 1px solid $col-line;
+}
+
 td {
   min-width: 5em;
   padding: 0.5em 2em;
@@ -203,13 +250,6 @@ td {
     flex-wrap: wrap;
     column-gap: 0.25em;
   }
-}
-
-th {
-  min-width: 5em;
-  padding: 0.5em;
-  font-weight: 400;
-  border-right: 1px solid $col-line;
 }
 
 </style>
