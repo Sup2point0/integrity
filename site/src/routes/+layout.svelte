@@ -57,7 +57,7 @@ onMount(() => {
       <p> by Sup#2.0 </p>
     </div>
 
-    <small> If you’re seeing this, JavaScript might be broken. </small>
+    <small> If you’re reading this, JavaScript has probably broken. </small>
   </aside>
 {/if}
 
