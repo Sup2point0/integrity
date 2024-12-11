@@ -6,7 +6,6 @@ date: 2024 November
 tags:
   - horror
   - pi
-  - e
   - trig
 method:
   - work
