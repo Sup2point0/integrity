@@ -29,6 +29,10 @@ import Header from "#parts/core/header.svelte";
       intern="questions/complete-square"
       latex={"a(x - p)^2 + q"}
     />
+    <Card title="Guess the Graph"
+      intern="questions/guess-graph"
+      pict="previews/graph-drawing.png"
+    />
     <Card title="Addvent"
       intern="questions/addvent"
       pict="previews/addvent-text.png"
