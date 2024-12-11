@@ -14,16 +14,16 @@ import { onMount } from "svelte";
 
 let active = $state(true);
 
-onMount(() => {
-  if (typeof(sessionStorage) === "undefined") return;
+// onMount(() => {
+//   if (typeof(sessionStorage) === "undefined") return;
 
-  if (sessionStorage.getItem("integrity.here")) {
-    active = false;
-  } else {
-    sessionStorage.setItem("integrity.here", "hi");
-    setTimeout(() => { active = false; }, 600);
-  }
-});
+//   if (sessionStorage.getItem("integrity.here")) {
+//     active = false;
+//   } else {
+//     sessionStorage.setItem("integrity.here", "hi");
+//     setTimeout(() => { active = false; }, 600);
+//   }
+// });
 
 </script>
 
