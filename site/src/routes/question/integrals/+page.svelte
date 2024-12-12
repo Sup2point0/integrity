@@ -25,13 +25,13 @@ let question: Question | null = $derived(page_data.question);
   <Katex text={question?.question.content} />
 
   {#if question?.desc}
-    <p> {question?.desc} </p>
+    <p> {question.desc} </p>
   {/if}
 </section>
 
 {#if question?.hints}
   <Section title="Hints">
-    {#each Object.entries(question?.hints) as [hint, source]}
+    {#each Object.entries(question.hints) as [hint, source]}
       <Section ctx="inner" title={hint}>
         <RenderBlock {source} />
       </Section>
@@ -41,13 +41,13 @@ let question: Question | null = $derived(page_data.question);
 
 {#if question?.answer}
   <Section title="Answer">
-    <RenderBlock source={question?.answer} />
+    <RenderBlock source={question.answer} />
   </Section>
 {/if}
 
 {#if question?.solution}
   <Section title="Solution">
-    {#each Object.entries(question?.solution) as [step, source]}
+    {#each Object.entries(question.solution) as [step, source]}
       <Section ctx="inner" closed={false} title={step.toUpperCase()}>
         <RenderBlock {source} />
       </Section>

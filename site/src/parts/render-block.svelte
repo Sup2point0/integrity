@@ -13,7 +13,7 @@ import Katex from "#parts/katex.svelte";
 
 
 interface Props {
-  source: Block | Block[];
+  source: Block | Block[] | undefined;
 }
 
 let { source }: Props = $props();
@@ -51,8 +51,10 @@ let { source }: Props = $props();
 
     {/each}
 
-  {:else}
+  {:else if source}
     {@render block(source)}
+
+  {:else}
 
   {/if}
 </div>

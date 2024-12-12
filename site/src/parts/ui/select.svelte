@@ -120,7 +120,7 @@ ul.dropdown {
 li {
   min-width: 4em;
   margin: 0.2em 0;
-  padding: 0.5em;
+  padding: 0.4em 0.6em;
   @include font-ui;
   font-size: 90%;
   border-radius: 0.5em;

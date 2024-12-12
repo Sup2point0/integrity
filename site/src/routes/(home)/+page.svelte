@@ -64,9 +64,11 @@ const featured = Site.get_featured();
   <section>
     <Header title="" />
 
-    <img alt="XKCD 2117: Differentiation and Integration"
-      src="https://imgs.xkcd.com/comics/differentiation_and_integration.png"
-    />
+    <a href="https://xkcd.com/2117">
+      <img alt="XKCD 2117: Differentiation and Integration"
+        src="https://imgs.xkcd.com/comics/differentiation_and_integration.png"
+      />
+    </a>
   </section>
 </div>
 
