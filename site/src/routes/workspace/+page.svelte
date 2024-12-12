@@ -1,6 +1,12 @@
 <script lang="ts">
 
 import Site from "#scripts/site";
+import { userdata } from "#scripts/stores";
+
+import { set_preset } from "./scripts";
+
+import Clicky from "#src/parts/ui/clicky.svelte";
+import Select from "#parts/ui/select.svelte";
 
 import Meta from "#parts/meta.svelte";
 import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
@@ -9,17 +15,17 @@ import Header from "#parts/core/header.svelte";
 import { onMount } from "svelte";
 
 
-let calc: object | null = null;
+let desmos: object | false | null = null;
 
 function try_load_desmos(i: number = 0)
 {
   if (i > 3) {
-    calc = false;  // fail after too many tries
+    desmos = false;  // fail after too many tries
     return;
   };
 
   try {
-    calc = Desmos.GraphingCalculator(
+    desmos = Desmos.GraphingCalculator(
       document.getElementById("desmos-window")
     );
   } catch {
@@ -49,8 +55,25 @@ onMount(try_load_desmos);
 
 <Header title="Workspace" />
 
+<nav class="calc-controls">
+  <div>
+    <small> PRESET </small>
+    <Select value={userdata["desmos-preset"]} options={{
+      "Default": null,
+      "Integral": "int",
+      "Completing the Square": "c-square"
+    }} />
+  </div>
+
+  <div>
+    <Clicky text="RESET"
+      button={() => {}}
+    />
+  </div>
+</nav>
+
 <div id="desmos-window">
-  {#if calc === false}
+  {#if desmos === false}
     <p> Oops, failed to load Desmos calculator! </p>
   {/if}
 </div>
@@ -58,9 +81,30 @@ onMount(try_load_desmos);
 
 <style lang="scss">
 
+nav.calc-controls {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+
+  small {
+    padding: 0 0.5em;
+    @include font-ui;
+  }
+}
+
 #desmos-window {
   width: 100%;
   height: 80vh;
+  background-color: $col-hover;
+
+  p {
+    padding-top: 10vh;
+    color: $col-text-deut;
+    text-align: center;
+  }
 }
 
 </style>
