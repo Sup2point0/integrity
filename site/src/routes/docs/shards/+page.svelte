@@ -1,9 +1,12 @@
 <script>
 
+import Site from "#src/scripts/site";
+
 import Content from "../../../../../docs/shard.md";
 
-import Header from "#parts/core/header.svelte";
 import Meta from "#parts/meta.svelte";
+import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
+import Header from "#parts/core/header.svelte";
 
 </script>
 
@@ -12,6 +15,12 @@ import Meta from "#parts/meta.svelte";
   desc="Explaining the question identifier codes used throughout Integrity"
 />
 
+
+<Breadcrumbs levels={[
+  { text: "Integrity", link: Site.root },
+  { text: "Docs", intern: "docs" },
+  { text: "Shards" },
+]} />
 
 <Header title="Shards"
   desc="Question Codes"

@@ -1,10 +1,13 @@
 <script lang="ts">
 
-import RenderBlock from "#parts/render-block.svelte";
+import Site from "#src/scripts/site";
 
+import RenderBlock from "#parts/render-block.svelte";
 import Tag from "#parts/ui/tag.svelte";
-import Header from "#parts/core/header.svelte";
+
 import Meta from "#parts/meta.svelte";
+import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
+import Header from "#parts/core/header.svelte";
 
 </script>
 
@@ -13,7 +16,15 @@ import Meta from "#parts/meta.svelte";
   desc="Explaining the tags used in questions throughout Integrity"
 />
 
+
+<Breadcrumbs levels={[
+  { text: "Integrity", link: Site.root },
+  { text: "Docs", intern: "docs" },
+  { text: "Tags" },
+]} />
+
 <Header title="Tags" />
+
 
 {#snippet tag(shard: string, desc: string)}
   <tr>
