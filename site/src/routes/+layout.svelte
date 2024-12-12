@@ -58,7 +58,7 @@ onMount(() => {
       <p> by Sup#2.0 </p>
     </div>
 
-    <small style:animation-delay="1.25s"> If you’re reading this, JavaScript has probably broken. </small>
+    <small style:animation-delay="1.5s"> If you’re reading this, JavaScript has probably broken. </small>
     <small style:animation-delay="2.5s"> Some parts of the site may not function. </small>
   </aside>
 {/if}

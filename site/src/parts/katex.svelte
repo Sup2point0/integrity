@@ -8,7 +8,7 @@ import katex from "katex";
 
 
 interface Props {
-  text: string;
+  text?: string;
   inline?: boolean;
 }
 
@@ -20,7 +20,7 @@ const opts = {
   throwOnError: false,
 }
 
-let out = $derived(katex.renderToString(text, opts))
+let out = $derived(text && katex.renderToString(text, opts))
 
 </script>
 
