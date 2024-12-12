@@ -24,7 +24,7 @@ onMount(() => {
     active = false;
   } else {
     sessionStorage.setItem("integrity.here", "pi");
-    // setTimeout(() => { active = false; }, 600);
+    setTimeout(() => { active = false; }, 600);
   }
 });
 
