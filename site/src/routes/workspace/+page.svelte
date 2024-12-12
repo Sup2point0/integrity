@@ -1,5 +1,11 @@
 <script lang="ts">
 
+import Site from "#scripts/site";
+
+import Meta from "#parts/meta.svelte";
+import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
+import Header from "#parts/core/header.svelte";
+
 import { onMount } from "svelte";
 
 
@@ -16,6 +22,25 @@ onMount(() => {
 </script>
 
 
+<svelte:head>
+  
+</svelte:head>
+
+
+<Meta title="Workspace"
+  desc="Workspace for solving questions in Integrity"
+>
+  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</Meta>
+
+
+<Breadcrumbs levels={[
+  { text: "Integrity", link: Site.root },
+  { text: "Workspace" },
+]} />
+
+<Header title="Workspace" />
+
 <div id="desmos-window"></div>
 
 
@@ -23,7 +48,7 @@ onMount(() => {
 
 #desmos-window {
   width: 100%;
-  max-height: 80vh;
+  height: 80vh;
 }
 
 </style>
