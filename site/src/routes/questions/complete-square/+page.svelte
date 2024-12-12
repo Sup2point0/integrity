@@ -2,7 +2,6 @@
 
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
-import { filter_questions } from "#scripts/search";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
@@ -18,7 +17,7 @@ const tags = Site.questions["complete-square"].tags;
 const count = Site.get_questions("complete-square").length;
 
 let filtered = $derived(
-  filter_questions(Site.get_questions("complete-square"), search)
+  search.filter_questions(Site.get_questions("complete-square"))
 );
 
 

@@ -2,7 +2,6 @@
 
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
-import { filter_questions } from "#scripts/search";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
@@ -19,10 +18,9 @@ const questions = Object.values(data);
 const tags = data.tags;
 const count = questions.length;
 
-let filtered = $derived(filter_questions(
-  Object.values(questions),
-  search
-));
+let filtered = $derived(
+  search.filter_questions(Object.values(questions))
+);
 
 
 onMount(() => {

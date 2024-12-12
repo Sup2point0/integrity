@@ -1,6 +1,13 @@
 /**
- * Exposes the `search` object and associated `SearchData` class for storing search options. This does not persist between pages.
+ * Exposes the `search` object and associated `SearchData` class for storing search this. This does not persist between pages.
  */
+
+import type { Question } from "#scripts/types";
+
+
+interface States {
+  [key: string]: boolean;
+}
 
 export class SearchData
 {
@@ -31,10 +38,66 @@ export class SearchData
   view: "grid" | "list" = $state("grid");
   sort: "date" | "name" | null = $state(null);
   reverse: boolean = $state(false);
-}
 
-interface States {
-  [key: string]: boolean;
+  filter_questions(
+    questions: Question[],
+  ): Question[]
+  {
+    let out: Question[] = [...questions];
+  
+    // Filter
+    if (Object.values(this.tags).includes(true)) {
+      out = out.filter(
+        question => Object.keys(this.tags).some(tag =>
+          this.tags[tag] && question.tags.includes(tag)
+        )
+      );
+    }
+  
+    if (this.include.unnamed) {
+      out = out.filter(question => !question.title);
+    } else if (this.exclude.unnamed) {
+      out = out.filter(question => question.title);
+    }
+  
+    if (this.include.hints) {
+      out = out.filter(question => question.hints?.length > 0);
+    } else if (this.exclude.hints) {
+      out = out.filter(question => !(question.hints?.length > 0));
+    }
+  
+    // Search
+    if (this.query) {
+      let query: string = this.query.toLowerCase();
+  
+      out = questions.filter(question => {
+        return (
+          question.title && question.title.toLowerCase().includes(query) ||
+          // question.desc && question.desc.toLowerCase().includes(query) ||
+          question.tags && question.tags.some(tag => tag.toLowerCase().includes(query))
+        );
+      });
+    }
+  
+    // Sort
+    if (this.sort) {
+      switch (this.sort) {
+        case "name":
+          out.sort((prot, deut) => (prot.title && deut.title) ? prot.title.localeCompare(deut.title) : -1);
+          break;
+        
+        case "date":
+          out.sort((prot, deut) => prot.date - deut.date);
+          break;
+      }
+    }
+  
+    if (this.reverse) {
+      out.reverse();
+    }
+  
+    return out;
+  }  
 }
 
 /** Search options for the current page. */
