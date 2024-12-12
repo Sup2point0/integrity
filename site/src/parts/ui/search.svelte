@@ -76,13 +76,18 @@ let open = $state(false);
       </tr>
 
       <tr>
-        <th> Only Include </th>
+        <th> Include Only </th>
 
         <td class="flex">
           {#each Object.entries(search.include) as [prop, state]}
             <Toggle text={prop.toUpperCase()}
               value={state}
-              toggle={() => { search.include[prop] = !search.include[prop]; }}
+              toggle={() => {
+                search.include[prop] = !search.include[prop];
+                if (search.include[prop]) {
+                  search.exclude[prop] = false;
+                }
+              }}
             />
           {/each}
         </td>
@@ -96,6 +101,13 @@ let open = $state(false);
                   ([prop, state]) => [prop, unchecked_include]
                 )
               );
+              if (!unchecked_include) {
+                search.exclude = Object.fromEntries(
+                  Object.entries(search.exclude).map(
+                    ([prop, state]) => [prop, false]
+                  )
+                );
+              }
             }}
           />
         </td>
@@ -108,7 +120,12 @@ let open = $state(false);
           {#each Object.entries(search.exclude) as [prop, state]}
             <Toggle text={prop.toUpperCase()}
               value={state}
-              toggle={() => { search.exclude[prop] = !search.exclude[prop]; }}
+              toggle={() => {
+                search.exclude[prop] = !search.exclude[prop];
+                if (search.exclude[prop]) {
+                  search.include[prop] = false;
+                }
+              }}
             />
           {/each}
         </td>
@@ -122,6 +139,13 @@ let open = $state(false);
                   ([prop, state]) => [prop, unchecked_exclude]
                 )
               );
+              if (!unchecked_exclude) {
+                search.include = Object.fromEntries(
+                  Object.entries(search.include).map(
+                    ([prop, state]) => [prop, false]
+                  )
+                );
+              }
             }}
           />
         </td>

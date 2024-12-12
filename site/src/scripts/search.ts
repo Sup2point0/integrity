@@ -18,11 +18,16 @@ export function filter_questions(
     );
   }
 
-  if (options.include.unnamed === false) {
+  if (options.include.unnamed) {
+    out = out.filter(question => !question.title);
+  } else if (options.exclude.unnamed) {
     out = out.filter(question => question.title);
   }
-  if (options.include.hints === false) {
-    out = out.filter(question => !question.hints);
+
+  if (options.include.hints) {
+    out = out.filter(question => question.hints?.length > 0);
+  } else if (options.exclude.hints) {
+    out = out.filter(question => !(question.hints?.length > 0));
   }
 
   // Search
