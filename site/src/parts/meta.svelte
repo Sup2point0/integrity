@@ -8,9 +8,10 @@ Abstraction for configuring page meta tags in `<head>`.
 interface Props {
   title?: string;
   desc?: string;
+  children?: any;
 }
 
-let { title, desc }: Props = $props();
+let { title, desc, children }: Props = $props();
 
 </script>
 
@@ -18,4 +19,6 @@ let { title, desc }: Props = $props();
 <svelte:head>
   <title> {title} · Integrity </title>
   <meta name="description" content="{desc}" />
+
+  {@render children?.()}
 </svelte:head>
