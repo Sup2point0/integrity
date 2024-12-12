@@ -122,8 +122,8 @@ a.question-card {
   }
 
   a.question-card.row & {
-    min-width: 50%;
-    flex-grow: 0;
+    min-width: 40%;
+    flex: 0 1 auto;
     border-right: 1px solid #dedede;  // fallback
     border-right: 1px solid $col-line;
   }

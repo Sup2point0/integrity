@@ -42,7 +42,7 @@ onMount(() => {
 <Header title="Integrals" />
 <Search {tags} />
 
-<div class="content">
+<div class="content {search.view}">
   {#each filtered as q}
     <QuestionCard
       title={q.title}
