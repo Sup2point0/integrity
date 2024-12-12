@@ -44,6 +44,21 @@ export function filter_questions(
   }
 
   // Sort
+  if (options.sort) {
+    switch (options.sort) {
+      case "name":
+        out.sort((prot, deut) => (prot.title && deut.title) ? prot.title.localeCompare(deut.title) : -1);
+        break;
+      
+      case "date":
+        out.sort((prot, deut) => prot.date - deut.date);
+        break;
+    }
+  }
+
+  if (!options.reverse) {
+    out.reverse();
+  }
 
   return out;
 }

@@ -183,6 +183,12 @@ let open = $state(false);
             }}
           />
         </td>
+        <td>
+          <Toggle text="REVERSE"
+            value={search.reverse}
+            toggle={() => { search.reverse = !search.reverse; }}
+          />
+        </td>
       </tr>
     </tbody></table>
   {/if}

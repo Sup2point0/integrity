@@ -45,6 +45,7 @@ let { text, value, toggle }: Props = $props();
     color: white;
     background-color: #3c8dbc;  // fallback
     background-color: $col-prot;
+    border: 1px solid $col-prot;
     box-shadow: none;
     
     @include interact(
