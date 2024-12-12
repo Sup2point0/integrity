@@ -52,11 +52,21 @@ const featured = Site.get_featured();
       {#each featured as q}
         <QuestionCard
           title={q.title}
+          latex={q.question.kind === "latex" ? q.question.content : ""}
           intern="question/{q.topic}?shard={q.shard}"
           date={q.date}
+          style="row"
         />
       {/each}
     </div>
+  </section>
+
+  <section>
+    <Header title="" />
+
+    <img alt="XKCD 2117: Differentiation and Integration"
+      src="https://imgs.xkcd.com/comics/differentiation_and_integration.png"
+    />
   </section>
 </div>
 

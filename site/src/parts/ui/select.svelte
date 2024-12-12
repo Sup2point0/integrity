@@ -52,17 +52,13 @@ let selected_option = $derived(
   />
 </button>
 
-<!-- {#if open} -->
-  <ul class="dropdown" class:shown={open}>
-    <!-- transition:fly={{ y: "-1em", duration: 200, easing: expoOut }}
-  > -->
-    {#each (
-      Array.isArray(options) ? options.map(opt => [opt, opt]) : Object.entries(options)
-    ) as [option, value]}
-      {@render select_option(option, value)}
-    {/each}
-  </ul>
-<!-- {/if} -->
+<ul class="dropdown" class:shown={open}>
+  {#each (
+    Array.isArray(options) ? options.map(opt => [opt, opt]) : Object.entries(options)
+  ) as [option, value]}
+    {@render select_option(option, value)}
+  {/each}
+</ul>
 
 
 <style lang="scss">
@@ -91,9 +87,11 @@ button.select {
 }
 
 ul.dropdown {
+  margin-top: 1px;
   padding: 0.25em 0.5em;
   display: block;
   position: absolute;
+  z-index: 20;
   visibility: hidden;
   opacity: 0;
 

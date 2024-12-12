@@ -12,7 +12,10 @@ import { quadIn } from "svelte/easing";
 import { onMount } from "svelte";
 
 
-let active = true;
+let { children } = $props();
+
+
+let active = $state(true);
 
 onMount(() => {
   if (typeof(sessionStorage) === "undefined") return;
@@ -20,8 +23,8 @@ onMount(() => {
   if (sessionStorage.getItem("integrity.here")) {
     active = false;
   } else {
-    sessionStorage.setItem("integrity.here", "hi");
-    setTimeout(() => { active = false; }, 600);
+    sessionStorage.setItem("integrity.here", "pi");
+    // setTimeout(() => { active = false; }, 600);
   }
 });
 
@@ -32,9 +35,11 @@ onMount(() => {
 
 <div class="layout">
   <main>
-    <slot>
+    {#if children}
+      {@render children()}
+    {:else}
       <p> Uh, something went wrong! </p>
-    </slot>
+    {/if}
   </main>
 </div>
 
@@ -46,13 +51,15 @@ onMount(() => {
     onclick={() => { active = false; }}
     onkeydown={e => { if (["Space", "Escape"].includes(e.key)) active = false; }}
     transition:fade={{ duration: 500, easing: quadIn }}
+    style:animation-delay="5s"
   >
     <div class="content">
       <h1> integrity </h1>
       <p> by Sup#2.0 </p>
     </div>
 
-    <small> If you’re reading this, JavaScript has probably broken. </small>
+    <small style:animation-delay="1.25s"> If you’re reading this, JavaScript has probably broken. </small>
+    <small style:animation-delay="2.5s"> Some parts of the site may not function. </small>
   </aside>
 {/if}
 
@@ -72,6 +79,7 @@ main {
 }
 
 aside.overlay {
+  padding: 1.5rem;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -86,7 +94,6 @@ aside.overlay {
   background-color: $col-prot;
   // fallback if JavaScript fails to avoid soft-blocking site
   animation: 0.5s cubic-bezier(0.11, 0, 0.5, 0) forwards fade-delete;
-  animation-delay: 3.6s;
   
   .content {
     flex-grow: 1;
@@ -116,13 +123,12 @@ aside.overlay {
   }
 
   small {
-    padding: 3em;
+    padding-bottom: 2em;
     flex-grow: 0;
     color: rgb(black, 25%);
     font-size: 90%;
     opacity: 0;
     animation: 1s delayed-fade forwards;
-    animation-delay: 1.2s;
   }
 }
 

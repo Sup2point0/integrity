@@ -53,7 +53,6 @@ import { base } from "$app/paths";
       <Link text="About" intern="info/synopsis" />
       <Link text="decoded" intern="info/decoded" />
       <Link text="Privacy" intern="info/privacy" />
-      <Link text="Credits" intern="info/license" />
       <Link text="License" intern="info/license" />
     </NavLink>
   </section>

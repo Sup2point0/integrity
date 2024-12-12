@@ -28,7 +28,7 @@ export class SearchData
     tags: true,
   });
 
-  view: "grid" | "list" = $state("list");
+  view: "grid" | "list" = $state("grid");
   sort: "date" | "name" | null = $state(null);
   reverse: boolean = $state(false);
 }
