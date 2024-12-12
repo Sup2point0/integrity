@@ -17,10 +17,9 @@ import { onMount } from "svelte";
 const tags = Site.questions["complete-square"].tags;
 const count = Site.get_questions("complete-square").length;
 
-let filtered = $derived(filter_questions(
-  Site.get_questions("complete-square"),
-  search
-));
+let filtered = $derived(
+  filter_questions(Site.get_questions("complete-square"), search)
+);
 
 
 onMount(() => {
@@ -54,10 +53,6 @@ onMount(() => {
       style={search.view === "grid" ? "block" : "row"}
     />
   {/each}
-
-  {#if filtered.length === 0}
-    <p> Oops, no questions found! </p>
-  {/if}
 </div>
 
 <aside>

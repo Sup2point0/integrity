@@ -17,10 +17,9 @@ import { onMount } from "svelte";
 const tags = Site.questions["integrals"].tags;
 const count = Site.get_questions("integrals").length;
 
-let filtered = $derived(filter_questions(
-  Site.get_questions("integrals"),
-  search
-));
+let filtered = $derived(
+  filter_questions(Site.get_questions("integrals"), search)
+);
 
 
 onMount(() => {
@@ -51,6 +50,7 @@ onMount(() => {
       latex={q.question.content}
       date={search.show.dates ? q.date : undefined}
       tags={search.show.tags ? q.tags : undefined}
+      style={search.view === "grid" ? "block" : "row"}
     />
   {/each}
 </div>
@@ -68,10 +68,18 @@ onMount(() => {
 
 .content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
+
+  &.grid {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &.list {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 aside {
