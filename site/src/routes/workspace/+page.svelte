@@ -9,22 +9,30 @@ import Header from "#parts/core/header.svelte";
 import { onMount } from "svelte";
 
 
-let calc = null;
+let calc: object | null = null;
 
-onMount(() => {
-  if (typeof Desmos !== "undefined") {
+function try_load_desmos(i: number = 0)
+{
+  if (i > 3) {
+    calc = false;  // fail after too many tries
+    return;
+  };
+
+  try {
     calc = Desmos.GraphingCalculator(
       document.getElementById("desmos-window")
     );
+  } catch {
+    setTimeout(
+      () => try_load_desmos(++i),
+      100 + i*i * 100
+    );
   }
-});
+}
+
+onMount(try_load_desmos);
 
 </script>
-
-
-<svelte:head>
-  
-</svelte:head>
 
 
 <Meta title="Workspace"
@@ -41,7 +49,11 @@ onMount(() => {
 
 <Header title="Workspace" />
 
-<div id="desmos-window"></div>
+<div id="desmos-window">
+  {#if calc === false}
+    <p> Oops, failed to load Desmos calculator! </p>
+  {/if}
+</div>
 
 
 <style lang="scss">

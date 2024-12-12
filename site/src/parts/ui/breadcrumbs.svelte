@@ -23,7 +23,7 @@ let { levels }: Props = $props();
 
 <nav class="breadcrumbs">
   {#each levels.entries() as [i, { text, intern, link}]}
-    {#if i == levels.length -1}
+    {#if i === levels.length -1}
       <div class="current"> {text} </div>
     
     {:else}
