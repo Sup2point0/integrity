@@ -8,13 +8,13 @@ import Meta from "#parts/meta.svelte";
 </script>
 
 
-<Meta title="License"
-  desc="Usage of content from Integrity"
+<Meta title="Privacy"
+  desc=""
 />
 
 
-<Header title="License"
-  desc="Usage of content from Integrity"
+<Header title="Privacy"
+  desc=""
 />
 
 <article>

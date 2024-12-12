@@ -6,10 +6,17 @@
 @use 'mixins/~fonts' as *;
 
 
-@counter-style dashes {
+@counter-style double-arrows {
   system: cyclic;
   symbols: '–';
   symbols: '⟹';
+  suffix: '   ';
+}
+
+@counter-style single-arrows {
+  system: cyclic;
+  symbols: '–';
+  symbols: '→';
   suffix: '   ';
 }
 
@@ -94,10 +101,15 @@ article {
 
   ul {
     font-weight: 250;
-    list-style-type: dashes;
+    list-style-type: double-arrows;
 
     li {
       margin: 0.5em 0;
+
+      ul {
+        margin-left: 2em;
+        list-style-type: single-arrows;
+      }
     }
   }
 

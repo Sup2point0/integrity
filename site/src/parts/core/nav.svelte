@@ -51,6 +51,7 @@ import { base } from "$app/paths";
 
     <NavLink text="Info" intern="info" collapse={true}>
       <Link text="About" intern="info/synopsis" />
+      <Link text="FAQ" intern="info/faq" />
       <Link text="decoded" intern="info/decoded" />
       <Link text="Privacy" intern="info/privacy" />
       <Link text="License" intern="info/license" />

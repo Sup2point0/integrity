@@ -1,0 +1,1 @@
+Integrity doesn’t use any analytics or collect any data. Your history, like which questions you’ve marked as solved, are stored in your browser’s `localStorage` and `sessionStorage`. You can view and delete these any time through Developer Tools.

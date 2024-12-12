@@ -7,7 +7,7 @@ import scss_config from "./scss-config.js";
 
 
 const config = {
-  extensions: [".svelte", ".md"],
+  extensions: [".svelte", ".svx", ".md"],
   
   kit: {
     adapter: adapter({
@@ -33,7 +33,7 @@ const config = {
 
   preprocess: [
     mdsvex({
-      extensions: [".md"],
+      extensions: [".svx", ".md"],
     }),
     sveltePreprocess({
       scss: scss_config,
