@@ -20,7 +20,7 @@ import { base } from "$app/paths";
         <div class="quicklinks">
           <Link text="About" intern="info/synopsis" />
           <Link text="Explore" intern="info/explore" />
-          <Link text="Docs" link="docs" />
+          <Link text="Docs" intern="docs" />
           <Link text="Privacy" intern="info/privacy" />
           <Link text="License" intern="info/license" />
         </div>
@@ -35,7 +35,8 @@ import { base } from "$app/paths";
   
         <img id="purple-portal"
           alt="Sup#2.0"
-          src="https://sup2point0.github.io/purple-portal.png" />
+          src="https://sup2point0.github.io/purple-portal.png"
+        />
       </a>
 
       <a class="credits" target="_blank" href="https://github.com/Sup2point0/integrity">
