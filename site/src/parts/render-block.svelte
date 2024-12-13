@@ -55,6 +55,17 @@ let { source }: Props = $props();
     {@render block(source)}
 
   {:else}
+    <p> ... </p>
 
   {/if}
 </div>
+
+
+
+<style lang="scss">
+
+:global(.content strong) {
+  font-weight: 400;
+}
+
+</style>

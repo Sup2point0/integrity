@@ -20,7 +20,7 @@ const tags: string[] = Site.get_all_tags();
 
 let filtered = $derived(
   search.filter_questions(questions)
-);
+d);
 
 
 onMount(() => {
@@ -47,6 +47,7 @@ onMount(() => {
   {#each filtered as q}
     <QuestionCard
       title={q.title}
+      latex={q.question.kind === "latex" ? q.question.content : ""}
       intern="question/{q.topic}?shard={q.shard}"
       date={search.show.dates ? q.date : undefined}
       tags={search.show.tags ? q.tags : undefined}

@@ -10,22 +10,23 @@ import Meta from "#parts/meta.svelte";
 </script>
 
 
-<Meta title="Docs"
-  desc="Documentation about Integrity features"
-/>
+<Meta title="Info" />
 
 
 <Breadcrumbs levels={[
   { text: "Integrity", link: Site.root },
-  { text: "Docs" },
+  { text: "Info" },
 ]} />
 
-<Header title="Docs" />
+<Header title="Info" />
 
 
 <div class="content">
-  <Card title="Shards" intern="docs/shards" />
-  <Card title="Tags" intern="docs/tags" />
+  <Card title="Synopsis" intern="info/synopsis" />
+  <Card title="FAQ" intern="info/faq" />
+  <Card title="decoded" intern="info/decoded" />
+  <Card title="Privacy" intern="info/privacy" />
+  <Card title="License" intern="info/license" />
 </div>
 
 
