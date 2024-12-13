@@ -15,7 +15,7 @@ s25cu-dq4
 
 The shard is a case-insensitive alphanumeric string, with a single hyphen and no whitespace. It comprises several identifying fields:
 
-![shard fields](../.assets/docs/shard.png)
+![shard fields](../assets/shard-fields.png)
 
 | field | notes | instance |
 | :---- | :---- | :------- |
