@@ -13,9 +13,7 @@ let { children } = $props();
 
 
 onMount(() => {
-  console.log("mounting")
   let url = $page.url;
-  console.log(url)
 
   let topic: string | undefined = url.pathname.split("/").at(-1);
   if (topic == null) {

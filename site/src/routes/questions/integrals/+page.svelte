@@ -46,7 +46,7 @@ onMount(() => {
     <QuestionCard
       title={q.title}
       intern="question/integrals?shard={q.shard}"
-      latex={q.question.content}
+      latex={search.show.question ? q.question.content : undefined}
       date={search.show.dates ? q.date : undefined}
       tags={search.show.tags ? q.tags : undefined}
       style={search.view === "grid" ? "block" : "row"}
