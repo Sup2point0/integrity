@@ -17,14 +17,14 @@ import Meta from "#parts/meta.svelte";
   desc="Fervently Anticipated Questions"
 />
 
-<article>
+<article id="faq">
   <Content />
 </article>
 
 
 <style lang="scss">
 
-:global(article h3) {
+article#faq :global(h3) {
   margin-top: 1.5em;
   color: $col-deut;
 }
