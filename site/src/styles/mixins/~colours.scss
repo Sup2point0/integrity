@@ -13,6 +13,10 @@ $col-text-deut: light-dark(
 $col-line: light-dark(
   oklch(90% 0 0),
   oklch(40% 0 0));
+$col-nav: light-dark(
+  rgb(white, 60%),
+  rgb(black, 60%),
+);
 
 $col-hover: light-dark(
   rgb(black, 3%),

@@ -6,6 +6,7 @@ import { pick_random_question } from "#scripts/utils";
 
 import NavLink from "#parts/core/nav.link.svelte";
 import Link from "#parts/ui/link.svelte";
+import GithubIcon from "#parts/github-icon.svelte";
 
 import { base } from "$app/paths";
 
@@ -59,8 +60,11 @@ import { base } from "$app/paths";
   </section>
 
   <section class="right">
-    <NavLink pict="github-icon.svg" text="GitHub" collapse={true}
-      extern="https://github.com/Sup2point0/integrity" />
+    <NavLink text="GitHub" collapse={true}
+      extern="https://github.com/Sup2point0/integrity"
+    >
+      {#snippet svg()} <GithubIcon /> {/snippet}
+    </NavLink>
   </section>
 </nav>
 
@@ -80,7 +84,7 @@ nav {
   align-items: center;
   flex-wrap: nowrap;
   gap: 0.5rem;
-  background-color: light-dark(rgb(white, 60%), rgb(black, 60%));
+  background-color: $col-nav;
   border-bottom: 1px solid $col-line;
   box-shadow: 0 3px 2px -2px $col-line;
 

@@ -11,16 +11,17 @@ import { base } from "$app/paths";
 interface Props {
   text?: string;
   pict?: string;
+    svg?: any;
   link?: string;
-  intern?: string;
-  extern?: string;
+    intern?: string;
+    extern?: string;
   collapse?: boolean;
   disabled?: boolean;
   children?: any;
 }
 
 let {
-  text, pict, link, intern, extern,
+  text, pict, svg, link, intern, extern,
   collapse = false, disabled = false,
   children,
 }: Props = $props();
@@ -34,6 +35,10 @@ let {
   >
     {#if pict}
       <img alt={text ?? "?"} src="{base}/{pict}" />
+    {/if}
+
+    {#if svg}
+      {@render svg()}
     {/if}
 
     {#if text}
@@ -78,7 +83,7 @@ a {
     opacity: 0.2;
   }
 
-  img {
+  img, :global(svg) {
     max-height: 1.5em;
   }
   
@@ -88,7 +93,7 @@ a {
     color: $col-text;
   }
 
-  img ~ p {
+  img ~ p, :global(svg ~ p) {
     margin-left: 0.5em;
   }
 }
@@ -105,7 +110,7 @@ a {
   visibility: hidden;
   opacity: 0;
 
-  background-color: rgb(white, 60%);
+  background-color: $col-nav;
   border-radius: 0.5em;
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 2px $col-line;
@@ -150,6 +155,11 @@ a {
   .nav-link:has(img) p {
     display: none;
   }
+}
+
+
+img {
+  color: red;
 }
 
 </style>
