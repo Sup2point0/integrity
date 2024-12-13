@@ -33,12 +33,12 @@ let {
   <a href={link || extern || `${base}/${intern}`}
     target={extern ? "_blank" : "_self"}
   >
-    {#if pict}
-      <img alt={text ?? "?"} src="{base}/{pict}" />
-    {/if}
-
     {#if svg}
-      {@render svg()}
+      <div class="svg">
+        {@render svg()}
+      </div>
+    {:else if pict}
+      <img alt={text ?? "?"} src="{base}/{pict}" />
     {/if}
 
     {#if text}
@@ -83,8 +83,8 @@ a {
     opacity: 0.2;
   }
 
-  img, :global(svg) {
-    max-height: 1.5em;
+  img, .svg {
+    max-height: 1.25em;
   }
   
   p {
@@ -93,7 +93,7 @@ a {
     color: $col-text;
   }
 
-  img ~ p, :global(svg ~ p) {
+  img ~ p, .svg ~ p {
     margin-left: 0.5em;
   }
 }
@@ -146,20 +146,15 @@ a {
 
 
 @media (max-width: 50rem) {
-  .nav-link.collapse {
+  .nav-link:has(img, .svg) p {
     display: none;
   }
 }
 
 @media (max-width: 40rem) {
-  .nav-link:has(img) p {
+  .nav-link.collapse {
     display: none;
   }
-}
-
-
-img {
-  color: red;
 }
 
 </style>

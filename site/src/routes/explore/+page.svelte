@@ -46,6 +46,14 @@ import { base } from "$app/paths";
     </div>
   </section>
 
+  <section class="tools">
+    <h2> Tools </h2>
+    <div class="links">
+      <Link text="Speedrun" intern="speedrun" />
+      <Link text="Workspace" intern="workspace" />
+    </div>
+  </section>
+
   <section class="docs">
     <h2> Docs </h2>
     <div class="links">
@@ -87,18 +95,22 @@ import { base } from "$app/paths";
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 0;
+
+  @media (max-width: 40rem) {
+    justify-content: start;
+  }
 }
 
 section {
-  min-width: 20vw;
-  padding: 0 2em;
+  min-width: 12vw;
+  padding: 0 1em;
   display: flex;
   flex-direction: column;
   align-items: collapse;
 
   .links {
     width: max-content;
-    padding: 0 4em 1em 0;
+    padding: 0 2em 1em 0;
   }
 }
 

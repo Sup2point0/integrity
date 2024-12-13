@@ -12,6 +12,8 @@
 
 svg {
   width: inherit;
+  max-width: 100%;
+  max-height: inherit;
 }
 
 </style>
