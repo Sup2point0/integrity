@@ -92,7 +92,10 @@ aside.overlay {
   justify-content: center;
   align-items: center;
   background-color: #3c8dbc;  // fallback
-  background-color: $col-prot;
+  background-color: light-dark(
+    $col-prot,
+    color-mix(in oklch, $col-prot, black 25%)
+  );
   // fallback if JavaScript fails to avoid soft-blocking site
   animation: 0.5s cubic-bezier(0.11, 0, 0.5, 0) forwards fade-delete;
   

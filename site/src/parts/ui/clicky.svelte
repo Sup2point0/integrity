@@ -54,14 +54,14 @@ let { text, pict, link, intern, button, children }: Props = $props();
 .clicky {
   padding: 0.4em 0.8em;
   @include font-ui;
-  background-color: white;
+  background-color: light-dark(white, black);
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 1.5px 2px -0.5px $col-line;
 
   @include interact(
-    $hover: oklch(98% 0 0),
-    $click: oklch(95% 0 0),
+    $hover: $col-clicky-hover,
+    $click: $col-clicky-click,
     $t: 0.12,
   );
 }

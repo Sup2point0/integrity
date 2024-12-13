@@ -245,14 +245,14 @@ input[type='search'] {
   @include font-ui;
   color: $col-text;
   font-size: 100%;
-  background-color: white;
+  background-color: light-dark(white, black);
   border: 1px solid oklch(90% 0 0);
   border-radius: 0.5em;
   box-shadow: 0 1.5px 2px -0.5px $col-line;
   
   @include interact(
-    $hover: oklch(99% 0 0),
-    $click: oklch(96% 0 0),
+    $hover: $col-card-hover,
+    $click: $col-card-click,
   );
 
   &:hover {
