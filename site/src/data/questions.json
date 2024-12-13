@@ -665,6 +665,79 @@
     }
   },
   "integrals": {
+    "24f-fc1": {
+      "topic": "integrals",
+      "title": "counting",
+      "desc": null,
+      "date": "2024 December",
+      "tags": [
+        "poly",
+        "frac"
+      ],
+      "method": [
+        "work",
+        "partials"
+      ],
+      "shard": "24f-fc1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }\\frac{x^{3}}{x^{4}-6x^{2}+5}dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "solution": {
+        "factorise": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }\\frac{x^{3}}{x^{4}-6x^{2}+5}dx  \\\\ &= \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{x^{2}\\cdot2x}{\\left(x^{2}-1\\right)\\left(x^{2}-5\\right)}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{2} &= t  \\\\ 2x\\ dx &= dt\\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{t}{\\left(t-1\\right)\\left(t-5\\right)}\\ dt\\end{align*}"
+          }
+        ],
+        "partial fractions": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{t}{\\left(t-1\\right)\\left(t-5\\right)} &= \\frac{p}{t-1}+\\frac{q}{t-5}  \\\\ t &= p\\left(t-5\\right)+q\\left(t-1\\right)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Put $t = 1$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1 &= p\\left(1-5\\right)+0  \\\\ p &= -\\frac{1}{4}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Put $t = 5$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  5 &= 0+q\\left(5-1\\right)  \\\\ q &= \\frac{5}{4}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2}\\int_{\\ }^{\\ }-\\frac{1}{4\\left(t-1\\right)}+\\frac{5}{4\\left(t-5\\right)}\\ dt  \\\\ &= \\frac{5}{8}\\int_{\\ }^{\\ }\\frac{1}{t-5}\\ dt-\\frac{1}{8}\\int_{\\ }^{\\ }\\frac{1}{t-1}\\ dt  \\\\ &= \\frac{5}{8}\\ln\\left(t-5\\right)-\\frac{1}{8}\\ln\\left(t-1\\right)  \\\\ &= \\frac{5}{8}\\ln\\left(x^{2}-5\\right)-\\frac{1}{8}\\ln\\left(x^{2}-1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s24f-ch1": {
       "topic": "integrals",
       "title": "chummy",
