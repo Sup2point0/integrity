@@ -8,7 +8,7 @@ export class UserData
   solved: string[] = [];
 
   /** shards of flagged questions. */
-  flagged: string[] = [];
+  flagged: Set<string> = new Set();
 
   /** Shards of starred questions. */
   starred: string[] = [];
