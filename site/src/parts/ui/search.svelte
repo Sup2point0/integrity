@@ -47,6 +47,7 @@ let open = $state(false);
     {@const unchecked_tag = Object.values(search.tags).some(tag => !tag)}
     {@const unchecked_include = Object.values(search.include).some(state => !state)}
     {@const unchecked_exclude = Object.values(search.exclude).some(state => !state)}
+    {@const unchecked_show = Object.values(search.show).some(state => !state)}
 
     <table class="search-filters"
       transition:fade={{ duration: 200 }}
@@ -153,6 +154,7 @@ let open = $state(false);
 
       <tr>
         <th> Show </th>
+
         <td class="flex">
           {#each Object.entries(search.show) as [prop, state]}
             <Toggle text={prop.toUpperCase()}
@@ -160,6 +162,19 @@ let open = $state(false);
               toggle={() => { search.show[prop] = !search.show[prop]; }}
             />
           {/each}
+        </td>
+        
+        <td>
+          <Toggle text="ALL"
+            value={!unchecked_show}
+            toggle={() => {
+              search.show = Object.fromEntries(
+                Object.entries(search.show).map(
+                  ([prop, state]) => [prop, unchecked_show]
+                )
+              );
+            }}
+          />
         </td>
       </tr>
 
@@ -263,7 +278,8 @@ table.search-filters {
 }
 
 th {
-  min-width: 5em;
+  width: max-content;
+  min-width: 10em;
   padding: 0.5em 2em;
   font-weight: 400;
   border-right: 1px solid $col-line;
@@ -271,14 +287,15 @@ th {
 
 td {
   min-width: 5em;
-  padding: 0.5em 2em;
+  padding: 0.75em 2em;
 
   &.flex {
     display: flex;
     flex-direction: row;
     justify-content: start;
     flex-wrap: wrap;
-    column-gap: 0.25em;
+    gap: 0.25em;
+    flex: 1 1 auto;
   }
 }
 
