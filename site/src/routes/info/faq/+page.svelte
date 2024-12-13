@@ -25,9 +25,7 @@ import Meta from "#parts/meta.svelte";
 <style lang="scss">
 
 :global(article h3) {
-  width: 100%;
   margin-top: 1.5em;
-  @include font-serif;
   color: $col-deut;
 }
 

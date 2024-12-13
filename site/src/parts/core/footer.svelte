@@ -63,11 +63,20 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 }
 
 .left { text-align: left; }
 .right { text-align: right; }
+
+.quicklinks {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+}
+
 
 a.credits {
   padding: 1em;
@@ -86,6 +95,10 @@ a.credits {
 img#integrity-title {
   max-width: 15vw;
   margin-bottom: 1rem;
+
+  @media (max-width: 40rem) {
+    max-width: 50vw;
+  }
 }
 
 img#purple-portal {

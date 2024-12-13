@@ -20,7 +20,7 @@ const tags: string[] = Site.get_all_tags();
 
 let filtered = $derived(
   search.filter_questions(questions)
-d);
+);
 
 
 onMount(() => {

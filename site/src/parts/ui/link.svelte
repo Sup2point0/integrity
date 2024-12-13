@@ -40,6 +40,7 @@ let { text, link, intern, button }: Props = $props();
 
 .link {
   padding: 0.5em;
+  display: block;
 
   @include font-ui;
   font-weight: 300;

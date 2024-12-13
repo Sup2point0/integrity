@@ -1,8 +1,9 @@
 <script lang="ts">
 
+import Site from "#src/scripts/site";
+
 import Card from "#parts/ui/card.svelte";
 
-import Site from "#src/scripts/site";
 import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Meta from "#parts/meta.svelte";
