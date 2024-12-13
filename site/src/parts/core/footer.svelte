@@ -18,18 +18,18 @@ import { base } from "$app/paths";
         src="{base}/integrity-title.png" />
 
         <div class="quicklinks">
-          <Link text="about" intern="info/synopsis" />
-          <Link text="docs" link="docs" />
-          <Link text="decoded" intern="info/decoded" />
-          <Link text="privacy" intern="info/privacy" />
-          <Link text="license" intern="info/license" />
+          <Link text="About" intern="info/synopsis" />
+          <Link text="Explore" intern="info/explore" />
+          <Link text="Docs" link="docs" />
+          <Link text="Privacy" intern="info/privacy" />
+          <Link text="License" intern="info/license" />
         </div>
     </div>
   
     <div class="right">
       <a class="credits" href="https://github.com/Sup2point0">
         <div>
-          <p> made with love by </p>
+          <p> Made with love by </p>
           <p id="sup2point0"> Sup#2.0 </p>
         </div>
   
@@ -38,12 +38,16 @@ import { base } from "$app/paths";
           src="https://sup2point0.github.io/purple-portal.png" />
       </a>
 
-      <a class="credits" target="_blank" href="https://svelte.dev">
-        <p> built with Svelte+Kit </p>
+      <a class="credits" target="_blank" href="https://github.com/Sup2point0/integrity">
+        <p> View on GitHub </p>
       </a>
     </div>
 
   </div>
+
+  <small>
+    built with Svelte 5 + SvelteKit &ensp; · &ensp; hosted on GitHub Pages
+  </small>
 </footer>
 
 
@@ -51,7 +55,7 @@ import { base } from "$app/paths";
 
 footer {
   width: 100%;
-  padding: 4rem 0 6rem;
+  padding: 4rem 0 2rem;
   background-color: light-dark(oklch(99% 0 0), black);
 
   .content {
@@ -68,27 +72,58 @@ footer {
   }
 }
 
-.left { text-align: left; }
-.right { text-align: right; }
-
 .quicklinks {
   display: flex;
   flex-direction: row;
   gap: 0.25em;
 }
 
+small {
+  margin-top: 4rem;
+  display: block;
+  @include font-ui;
+  font-size: 75%;
+  color: $col-text-deut;
+  text-align: center;
+}
+
+
+.left {
+  text-align: left;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: right;
+}
+.centre {
+  text-align: center;
+}
+
 
 a.credits {
+  width: max-content;
   padding: 1em;
   display: flex;
   flex-direction: row;
   column-gap: 1rem;
   color: $col-text;
+  text-align: right;
   text-decoration: none;
   border-radius: 1em;
 
   @include interact($col-hover, $col-click);
   @include focus-outline;
+
+  p {
+    width: 100%;
+    display: block;
+  }
+
+  &:hover img#purple-portal {
+    transform: rotate(80deg);
+  }
 }
 
 
@@ -111,10 +146,6 @@ p#sup2point0 {
   color: #3c8dbc;  // fallback
   color: $col-prot;
   font-size: 200%;
-}
-
-a.credits:hover img#purple-portal {
-  transform: rotate(80deg);
 }
 
 </style>
