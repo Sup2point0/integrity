@@ -17,7 +17,7 @@ method:
 
 ## Question
 ```math
-\int_{\ }^{\ }\sqrt{1+\sqrt{1+e^{x}}}\ dx
+\int \sqrt{1+\sqrt{1+e^{x}}}\ dx
 ```
 
 
@@ -52,8 +52,8 @@ Start with $1 + e^x = t$.
 ### Solve
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }\sqrt{1+\sqrt{t}}\cdot\frac{1}{t-1}\ dt
-  \\ &= \int_{\ }^{\ }\frac{\sqrt{1+\sqrt{t}}}{t-1}\ dt
+  &= \int \sqrt{1+\sqrt{t}}\cdot\frac{1}{t-1}\ dt
+  \\ &= \int \frac{\sqrt{1+\sqrt{t}}}{t-1}\ dt
 \end{align*}
 ```
 
@@ -69,9 +69,9 @@ Start with $1 + e^x = t$.
 ### Solve
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }\frac{\sqrt{v}}{\left(v-1\right)^{2}-1}\cdot2\left(v-1\right)\ dv
-  \\ &= 2\int_{\ }^{\ }\frac{\sqrt{v}\left(v-1\right)}{v\left(v-2\right)}\ dv
-  \\ &= 2\int_{\ }^{\ }\frac{v-1}{\sqrt{v}\left(v-2\right)}\ dv
+  &= \int \frac{\sqrt{v}}{\left(v-1\right)^{2}-1}\cdot2\left(v-1\right)\ dv
+  \\ &= 2\int \frac{\sqrt{v}\left(v-1\right)}{v\left(v-2\right)}\ dv
+  \\ &= 2\int \frac{v-1}{\sqrt{v}\left(v-2\right)}\ dv
 \end{align*}
 ```
 
@@ -87,10 +87,10 @@ Start with $1 + e^x = t$.
 ### Solve
 ```math
 \begin{align*}
-  &= 2\int_{\ }^{\ }\frac{r^{2}-1}{r\left(r^{2}-2\right)}\cdot2r\ dr
-  \\ &= 4\int_{\ }^{\ }\frac{r^{2}-1}{r^{2}-2}\ dr
-  \\ &= 4\int_{\ }^{\ }\frac{r^{2}-2}{r^{2}-2}+\frac{1}{r^{2}-2}\ dr
-  \\ &= 4r+4\int_{\ }^{\ }\frac{p}{r-\sqrt{2}}+\frac{q}{r+\sqrt{2}}\ dr
+  &= 2\int \frac{r^{2}-1}{r\left(r^{2}-2\right)}\cdot2r\ dr
+  \\ &= 4\int \frac{r^{2}-1}{r^{2}-2}\ dr
+  \\ &= 4\int \frac{r^{2}-2}{r^{2}-2}+\frac{1}{r^{2}-2}\ dr
+  \\ &= 4r+4\int \frac{p}{r-\sqrt{2}}+\frac{q}{r+\sqrt{2}}\ dr
 \end{align*}
 ```
 
@@ -124,7 +124,7 @@ Put $r = -\sqrt{2}$:
 ### Solve
 ```math
 \begin{align*}
-  &= 4r+4\int_{\ }^{\ }\frac{\sqrt{2}}{4\left(r-\sqrt{2}\right)}-\frac{\sqrt{2}}{4\left(r+\sqrt{2}\right)}\ dr
+  &= 4r+4\int \frac{\sqrt{2}}{4\left(r-\sqrt{2}\right)}-\frac{\sqrt{2}}{4\left(r+\sqrt{2}\right)}\ dr
   \\ &= 4r+\sqrt{2}\ln\left(r-\sqrt{2}\right)-\sqrt{2}\ln\left(r+\sqrt{2}\right)
   \\ &= 4r+\sqrt{2}\ln\left(\frac{r-\sqrt{2}}{r+\sqrt{2}}\right)
   \\ &= 4\sqrt{v}+\sqrt{2}\ln\left(\frac{\sqrt{v}-\sqrt{2}}{\sqrt{v}+\sqrt{2}}\right)
