@@ -31,6 +31,10 @@ let selected_option = $derived(
 {#snippet select_option(text: string, val: string)}
   <li class="option" class:active={value === val}
     onclick={() => { value = val; }}
+    onkeydown={e => {
+      if (e.key === "Enter" || e.key === " ") { value = val; }
+    }}
+    tabindex={0}
   >
     {text}
   </li>
@@ -107,7 +111,11 @@ ul.dropdown {
     opacity 0.12s ease-out,
     transform 0.24s cubic-bezier(0.19, 1, 0.22, 1);  // ease-in exp
 
-  &.shown, button.select:hover ~ &, &:hover {
+  &.shown,
+  button.select:is(:hover, :focus) ~ &,
+  &:hover,
+  &:has(li:focus)
+  {
     visibility: visible;
     opacity: 1;
     transform: none;
