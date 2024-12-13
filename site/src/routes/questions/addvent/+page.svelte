@@ -30,13 +30,8 @@ const count = questions.length;
 />
 
 <div class="content">
-  {#each questions as q}
-    <QuestionCard
-      title={q.title}
-      intern="question/addvent?shard={q.shard}"
-      date={q.date}
-      tags={q.tags}
-    />
+  {#each questions as question}
+    <QuestionCard {question} />
   {/each}
 </div>
 

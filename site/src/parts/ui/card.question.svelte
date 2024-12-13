@@ -4,31 +4,31 @@ A card for selecting a question. -->
 
 <script lang="ts">
 
-import type { Latex } from "#scripts/types";
+import { userdata, search } from "#scripts/stores";
+import type { Latex, Question } from "#scripts/types";
 
 import Tag from "#parts/ui/tag.svelte";
 import Katex from "#parts/katex.svelte";
+import Checkbox from "#parts/ui/checkbox.svelte";
+import FlagIcon from "#parts/svg/flag.svelte";
 
 import { fade } from "svelte/transition";
 import { base } from "$app/paths";
 
 
 interface Props {
-  title?: string;
-  intern?: string;
+  question: Question;
   latex?: Latex;
-  date?: Date;
-  tags?: string[];
   style?: "block" | "row";
 }
 
-let { title, intern, latex, date, tags, style = "block" }: Props = $props();
+let { question, latex, style = "block" }: Props = $props();
 
 </script>
 
 
 <a class="question-card {style}"
-  href="{base}/{intern}"
+  href="{base}/question/{question.topic}?shard={question.shard}"
 >
   <div class="question">
     {#if latex}
@@ -37,19 +37,38 @@ let { title, intern, latex, date, tags, style = "block" }: Props = $props();
   </div>
 
   <div class="info">
-    {#if title} <h4> {title} </h4> {/if}
-    
-    {#if date}
-      <p transition:fade={{ duration: 250 }}>
-        {date}
-      </p>
-    {/if}
+    <div class="row">
+      <div class="text">
+        {#if question.title} <h4> {question.title} </h4> {/if}
+        
+        {#if search.show.dates && question.date}
+          <p transition:fade={{ duration: 250 }}>
+            {question.date}
+          </p>
+        {/if}
+      </div>
 
-    {#if tags && tags.length > 0}
+      <div class="buttons">
+        <Checkbox
+          col="#00761c"
+          value={() => userdata.flagged.has(question.shard)}
+          enable={() => {
+            try { userdata.flagged.add(question.shard); }
+            catch { return false; } return true; }}
+          disable={() => {
+            try { userdata.flagged.delete(question.shard); }
+            catch { return false; } return true; }}
+        >
+          <FlagIcon />
+        </Checkbox>
+      </div>
+    </div>
+
+    {#if search.show.tags && question.tags && question.tags.length > 0}
       <div class="tags"
         transition:fade={{ duration: 250 }}
       >
-        {#each tags as tag}
+        {#each question.tags as tag}
           <Tag shard={tag} />
         {/each}
       </div>
@@ -105,9 +124,7 @@ a.question-card {
   align-items: center;
   text-align: center;
   font-size: 80%;
-  a.question-card.row & {
-    font-size: 100%;
-  }
+  a.question-card.row & { font-size: 100%; }
   overflow-x: auto;
   scrollbar-width: thin;
 }
@@ -129,7 +146,13 @@ a.question-card {
   }
 }
 
-.info {
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text {
   h4 {
     margin-bottom: 0.2em;
     font-size: 125%;

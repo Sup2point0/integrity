@@ -42,13 +42,9 @@ onMount(() => {
 <Search {tags} />
 
 <div class="content {search.view}">
-  {#each filtered as q}
-    <QuestionCard
-      title={q.title}
-      intern="question/integrals?shard={q.shard}"
-      latex={search.show.question ? q.question.content : undefined}
-      date={search.show.dates ? q.date : undefined}
-      tags={search.show.tags ? q.tags : undefined}
+  {#each filtered as question}
+    <QuestionCard {question}
+      latex={search.show.question ? question.question.content : undefined}
       style={search.view === "grid" ? "block" : "row"}
     />
   {/each}

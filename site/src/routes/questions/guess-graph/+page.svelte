@@ -44,14 +44,8 @@ onMount(() => {
 <Search {tags} />
 
 <div class="content">
-  {#each filtered as q}
-    <!-- TODO preview image -->
-    <QuestionCard
-      title={q.title}
-      intern="question/guess-graph?shard={q.shard}"
-      date={search.show.dates ? q.date : undefined}
-      tags={search.show.tags ? q.tags : undefined}
-    />
+  {#each filtered as question}
+    <QuestionCard {question} />
   {/each}
 </div>
 

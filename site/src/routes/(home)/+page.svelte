@@ -49,12 +49,9 @@ const featured = Site.get_featured();
     <Header title="Featured" />
     
     <div class="questions">
-      {#each featured as q}
-        <QuestionCard
-          title={q.title}
-          latex={q.question.kind === "latex" ? q.question.content : ""}
-          intern="question/{q.topic}?shard={q.shard}"
-          date={q.date}
+      {#each featured as question}
+        <QuestionCard {question}
+          latex={question.question.kind === "latex" ? question.question.content : ""}
           style="row"
         />
       {/each}
