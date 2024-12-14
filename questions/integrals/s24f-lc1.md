@@ -1,8 +1,8 @@
 ---
 topic: integrals
-title: 
+title: blink
 desc: 
-date: 2024 December
+date: 2024 December 9
 tags:
   - horror
   - trig

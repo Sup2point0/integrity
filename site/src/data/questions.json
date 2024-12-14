@@ -248,6 +248,39 @@
         }
       ]
     },
+    "p24c-st1": {
+      "topic": "addvent",
+      "title": "Day 9",
+      "desc": null,
+      "date": "2024 December 13",
+      "tags": [
+        "probability"
+      ],
+      "method": [
+        "trap"
+      ],
+      "shard": "p24c-st1",
+      "question": [
+        {
+          "kind": "text",
+          "content": "An 8 ft tall inflatable Santa has spontaneously appeared at school, attracting the admiration of students and teachers alike!<br><br>Every time someone walks past it, there is a 0.01% chance they trip over Santa’s enormous feet and fall into his puffy embrace.<br><br>Suppose 3 people walk past Santa every minute of a 9-hour schoolday.<br><br><strong>What is the probability at least 1 person is tripped up in the week?</strong>"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "55.5159951\\%"
+        }
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+          }
+        ]
+      }
+    },
     "w24c-ss1": {
       "topic": "addvent",
       "title": "Day 6",

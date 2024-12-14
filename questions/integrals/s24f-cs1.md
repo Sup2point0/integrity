@@ -2,7 +2,7 @@
 topic: integrals
 title: 
 desc: 
-date: 2024 December 08
+date: 2024 December 8
 tags:
   - horror
   - spot

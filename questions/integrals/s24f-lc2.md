@@ -2,7 +2,7 @@
 topic: integrals
 title: quotable
 desc: 
-date: 2024 December
+date: 2024 December 10
 tags:
   - poly
   - ln
