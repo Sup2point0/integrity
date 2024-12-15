@@ -4,7 +4,7 @@ title: déjà vu
 desc: Oh nope, there is no respite here.
 date: 2024 December 13
 tags:
-  - horror
+  - dread
   - sqrt
   - frac
   - pi
