@@ -77,8 +77,8 @@ button.select {
   box-shadow: 0 1.5px 2px -0.5px $col-line;
 
   @include interact(
-    $hover: oklch(98% 0 0),
-    $click: oklch(95% 0 0),
+    $hover: $col-clicky-hover,
+    $click: $col-clicky-click,
     $t: 0.12,
   );
   @include focus-outline;
