@@ -48,11 +48,19 @@ let question: Question | null = $derived(page_data.question);
 
 {#if question?.solution}
   <Section title="Solution">
-    {#each Object.entries(question.solution) as [step, source]}
-      <Section ctx="inner" closed={false} title={step}>
-        <RenderBlock {source} />
-      </Section>
-    {/each}
+    {#if Array.isArray(question.solution)}
+      {#each question.solution as block}
+        <RenderBlock source={block} />
+      {/each}
+    
+    {:else}
+      {#each Object.entries(question.solution) as [step, source]}
+        <Section ctx="inner" closed={false} title={step}>
+          <RenderBlock {source} />
+        </Section>
+      {/each}
+    
+    {/if}
   </Section>
 {/if}
 
