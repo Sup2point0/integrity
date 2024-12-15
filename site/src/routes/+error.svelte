@@ -7,6 +7,7 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
-<Header> {$page.status ?? "Internal Error"} </Header>
-
-<p> {$page.error.message} </p>
+<Header
+  title={$page.status ? `Error ${$page.status}` : "Internal Error"}
+  desc={$page.error?.message ?? "Something went wrong!"}
+/>
