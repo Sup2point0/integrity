@@ -743,79 +743,6 @@
     }
   },
   "integrals": {
-    "24f-fc1": {
-      "topic": "integrals",
-      "title": "counting",
-      "desc": null,
-      "date": "2024 December",
-      "tags": [
-        "poly",
-        "frac"
-      ],
-      "method": [
-        "work",
-        "partials"
-      ],
-      "shard": "24f-fc1",
-      "question": [
-        {
-          "kind": "latex",
-          "content": "\\int_{\\ }^{\\ }\\frac{x^{3}}{x^{4}-6x^{2}+5}dx"
-        }
-      ],
-      "answer": [
-        {
-          "kind": "latex",
-          "content": ""
-        }
-      ],
-      "solution": {
-        "factorise": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }\\frac{x^{3}}{x^{4}-6x^{2}+5}dx  \\\\ &= \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{x^{2}\\cdot2x}{\\left(x^{2}-1\\right)\\left(x^{2}-5\\right)}\\ dx\\end{align*}"
-          }
-        ],
-        "substitute": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  x^{2} &= t  \\\\ 2x\\ dx &= dt\\end{align*}"
-          },
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  &= \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{t}{\\left(t-1\\right)\\left(t-5\\right)}\\ dt\\end{align*}"
-          }
-        ],
-        "partial fractions": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  \\frac{t}{\\left(t-1\\right)\\left(t-5\\right)} &= \\frac{p}{t-1}+\\frac{q}{t-5}  \\\\ t &= p\\left(t-5\\right)+q\\left(t-1\\right)\\end{align*}"
-          },
-          {
-            "kind": "text",
-            "content": "Put $t = 1$:"
-          },
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  1 &= p\\left(1-5\\right)+0  \\\\ p &= -\\frac{1}{4}\\end{align*}"
-          },
-          {
-            "kind": "text",
-            "content": "Put $t = 5$:"
-          },
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  5 &= 0+q\\left(5-1\\right)  \\\\ q &= \\frac{5}{4}\\end{align*}"
-          }
-        ],
-        "solve": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  &= \\frac{1}{2}\\int_{\\ }^{\\ }-\\frac{1}{4\\left(t-1\\right)}+\\frac{5}{4\\left(t-5\\right)}\\ dt  \\\\ &= \\frac{5}{8}\\int_{\\ }^{\\ }\\frac{1}{t-5}\\ dt-\\frac{1}{8}\\int_{\\ }^{\\ }\\frac{1}{t-1}\\ dt  \\\\ &= \\frac{5}{8}\\ln\\left(t-5\\right)-\\frac{1}{8}\\ln\\left(t-1\\right)  \\\\ &= \\frac{5}{8}\\ln\\left(x^{2}-5\\right)-\\frac{1}{8}\\ln\\left(x^{2}-1\\right)-c\\end{align*}"
-          }
-        ]
-      }
-    },
     "s24f-ch1": {
       "topic": "integrals",
       "title": "chummy",
@@ -973,6 +900,184 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\left(\\sin\\left(\\frac{\\pi}{2}\\right)+1\\right)^{2}-1  \\\\ &= \\left(1+1\\right)^{2}-1  \\\\ &= 3\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s24f-fc1": {
+      "topic": "integrals",
+      "title": "counting",
+      "desc": null,
+      "date": "2024 December",
+      "tags": [
+        "poly",
+        "frac"
+      ],
+      "method": [
+        "work",
+        "partials"
+      ],
+      "shard": "s24f-fc1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }\\frac{x^{3}}{x^{4}-6x^{2}+5}dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "solution": {
+        "factorise": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }\\frac{x^{3}}{x^{4}-6x^{2}+5}dx  \\\\ &= \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{x^{2}\\cdot2x}{\\left(x^{2}-1\\right)\\left(x^{2}-5\\right)}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{2} &= t  \\\\ 2x\\ dx &= dt\\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{t}{\\left(t-1\\right)\\left(t-5\\right)}\\ dt\\end{align*}"
+          }
+        ],
+        "partial fractions": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{t}{\\left(t-1\\right)\\left(t-5\\right)} &= \\frac{p}{t-1}+\\frac{q}{t-5}  \\\\ t &= p\\left(t-5\\right)+q\\left(t-1\\right)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Put $t = 1$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1 &= p\\left(1-5\\right)+0  \\\\ p &= -\\frac{1}{4}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Put $t = 5$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  5 &= 0+q\\left(5-1\\right)  \\\\ q &= \\frac{5}{4}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2}\\int_{\\ }^{\\ }-\\frac{1}{4\\left(t-1\\right)}+\\frac{5}{4\\left(t-5\\right)}\\ dt  \\\\ &= \\frac{5}{8}\\int_{\\ }^{\\ }\\frac{1}{t-5}\\ dt-\\frac{1}{8}\\int_{\\ }^{\\ }\\frac{1}{t-1}\\ dt  \\\\ &= \\frac{5}{8}\\ln\\left(t-5\\right)-\\frac{1}{8}\\ln\\left(t-1\\right)  \\\\ &= \\frac{5}{8}\\ln\\left(x^{2}-5\\right)-\\frac{1}{8}\\ln\\left(x^{2}-1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s24f-hr1": {
+      "topic": "integrals",
+      "title": "workable",
+      "desc": "Warning: this is long.",
+      "date": "2024 December 13",
+      "tags": [
+        "poly",
+        "frac",
+        "dread"
+      ],
+      "method": [
+        "work",
+        "split",
+        "partials"
+      ],
+      "shard": "s24f-hr1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\left(1-2x^{-1}-3x^{-2}\\right)^{-2}\\ dx"
+        }
+      ],
+      "hint": [
+        {
+          "kind": "text",
+          "content": "You’re on your own here."
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "x+\\frac{135}{32}\\ln\\left(x-3\\right)-\\frac{81}{16\\left(x-3\\right)}-\\frac{7}{32}\\ln\\left(x+1\\right)-\\frac{1}{16\\left(x+1\\right)}-c"
+        }
+      ],
+      "solution": {
+        "clean": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\left(1-2x^{-1}-3x^{-2}\\right)^{-2}\\ dx  \\\\ &= \\int \\left(1-\\frac{2}{x}-\\frac{3}{x^{2}}\\right)^{-2}\\ dx  \\\\ &= \\int \\left(\\frac{x^{2}-2x-3}{x^{2}}\\right)^{-2}\\ dx  \\\\ &= \\int \\left(\\frac{x^{2}}{\\left(x-3\\right)\\left(x+1\\right)}\\right)^{2}\\ dx  \\\\ &= \\int \\frac{x^{4}}{\\left(x-3\\right)^{2}\\left(x+1\\right)^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "polynomial division": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\left(x-3\\right)^{2}\\left(x+1\\right)^{2}  \\\\ =&\\ \\left(x^{2}-6x+9\\right)\\left(x^{2}+2x+1\\right)  \\\\ =&\\ x^{4}+2x^{3}+x^{2}-6x^{3}-12x^{2}-6x+9x^{2}+18x+9  \\\\ =&\\ x^{4}-4x^{3}-2x^{2}+12x+9\\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\Rightarrow \\int \\frac{\\left(x-3\\right)^{2}\\left(x+1\\right)^{2}-\\left(-4x^{3}-2x^{2}+12x+9\\right)}{\\left(x-3\\right)^{2}\\left(x+1\\right)^{2}}\\ dx  \\\\ &= \\int 1+\\frac{4x^{3}+2x^{2}-12x-9}{\\left(x-3\\right)^{2}\\left(x+1\\right)^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "partial fractions": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{4x^{3}+2x^{2}-12x-9}{\\left(x-3\\right)^{2}\\left(x+1\\right)^{2}} &= \\frac{p}{x-3}+\\frac{q}{\\left(x-3\\right)^{2}}+\\frac{r}{x+1}+\\frac{s}{\\left(x+1\\right)^{2}}  \\\\ 4x^{3}+2x^{2}-12x-9 &= p\\left(x-3\\right)\\left(x+1\\right)^{2}+q\\left(x+1\\right)^{2}+r\\left(x-3\\right)^{2}\\left(x+1\\right)+s\\left(x-3\\right)^{2}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $x = 3$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  4\\cdot3^{3}+2\\cdot3^{2}-12\\cdot3-9 &= 0+q\\left(3+1\\right)^{2}+0+0  \\\\ 16q &= 81  \\\\ q &= \\frac{81}{16}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $x = -1$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  -4+2+12-9 &= 0+0+0+s\\left(-1-3\\right)^{2}  \\\\ 16s &= 1  \\\\ s &= \\frac{1}{16}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Equate coefficients of $x^3$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  4 &= p+r  \\\\ r &= 4-p\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Equate coefficients of $x^0$ (constant):"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  -9 &= -3p+q+9r+9s  \\\\ 3p-9\\left(4-p\\right) &= 9+\\frac{81}{16}+9\\cdot\\frac{1}{16}  \\\\ 12p &= 9+\\frac{81}{16}+\\frac{9}{16}+36  \\\\ p &= \\frac{135}{32}\\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\Rightarrow r &= 4-\\frac{135}{32}  \\\\  &= -\\frac{7}{32}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "So we have $p=\\frac{135}{32}, q=\\frac{81}{16}, r=-\\frac{7}{32}, s=\\frac{1}{16}$"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int dx+\\int \\frac{p}{x-3}+\\frac{q}{\\left(x-3\\right)^{2}}+\\frac{r}{x+1}+\\frac{s}{\\left(x+1\\right)^{2}}\\ dx  \\\\ &= x+\\int \\frac{135}{32\\left(x-3\\right)}+\\frac{81}{16\\left(x-3\\right)^{2}}-\\frac{7}{32\\left(x+1\\right)}+\\frac{1}{16\\left(x+1\\right)^{2}}\\ dx  \\\\ &= x+\\frac{135}{32}\\ln\\left(x-3\\right)-\\frac{81}{16\\left(x-3\\right)}-\\frac{7}{32}\\ln\\left(x+1\\right)-\\frac{1}{16\\left(x+1\\right)}-c\\end{align*}"
           }
         ]
       }
@@ -1445,7 +1550,7 @@
       "desc": "Oh nope, there is no respite here.",
       "date": "2024 December 13",
       "tags": [
-        "horror",
+        "dread",
         "sqrt",
         "frac",
         "pi"
