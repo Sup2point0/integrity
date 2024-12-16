@@ -14,13 +14,13 @@ Currently, most of these were written for maths competitions at school, includin
 - [SCSS](https://sass-lang.com) for styling
 - [KaTeX](https://katex.org) for LaTeX
 - [MDSveX](https://mdsvex.pngwn.io) for Markdown
-- My own [Stranger Quarkdown](https://github.com/Sup2point0/stranger-quarkdown) for automating content deployment
+- My [Stranger Quarkdown](https://github.com/Sup2point0/stranger-quarkdown) engine for automating content deployment
 
 ### Fonts
-Fonts provided by [Google Fonts](https://fonts.google.com).
+Fonts from [Google Fonts](https://fonts.google.com).
 
-- [Geologica](https://fonts.google.com/specimen/Geologica)
-- [Crimson Pro](https://fonts.google.com/specimen/Crimson+Pro)
+- [Geologica](https://fonts.google.com/specimen/Geologica) (sans serif)
+- [Crimson Pro](https://fonts.google.com/specimen/Crimson+Pro) (serif)
 
 
 <br>
