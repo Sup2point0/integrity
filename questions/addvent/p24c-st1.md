@@ -67,4 +67,3 @@ Putting this into our original equation then gives
 ```
 
 Hence the probability at least 1 person gets tripped up is $55.5 \%$. Pretty even split, eh?
-

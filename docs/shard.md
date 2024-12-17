@@ -31,12 +31,12 @@ Each shard is generally assigned a single topic.
 
 | value | meaning | notes |
 | :---- | :------ | :---- |
-| `a` | arithmetic | |
+| `a` | arithmetic / algebra | |
 | `e` | exponentials / logarithms | |
 | `f` | graph drawing | |
 | `i` | complex numbers | |
 | `n` | number theory / sequences | |
-| `p` | combinatorics | |
+| `p` | combinatorics / probability | |
 | `q` | completing the square / quadratic | |
 | `r` | geometry | Needs to be ASCII-safe so can’t use `π` :P |
 | `s` | integration | `i` was taken by complex numbers, unfortunately. |
