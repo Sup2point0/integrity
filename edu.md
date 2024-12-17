@@ -1,4 +1,4 @@
-# *decoded* – integrity
+# *decoded*: integrity
 
 > [!Note]
 > This is part of my [*decoded*](https://github.com/Sup2point0/Assort/blob/origin/~dev/decoded.md) series, a collection of lessons learnt from each major project I’ve undertaken.
@@ -13,6 +13,7 @@
   - *Writing* questions on a topic *REALLY* makes you better at it.
 - You genuinely develop quite an insane intuition for topics when you immerse yourself in them for a prolonged period.
 - Development is a blast when you have the right tooling all available in advance.
+- Nice UIs aren’t *that* difficult to build if you prototype and think through things properly.
 
 
 <br>
