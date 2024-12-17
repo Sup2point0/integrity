@@ -62,12 +62,10 @@ let {
 
 a {
   padding: 0.75em 0.75em;
+  &:has(img) { padding: 0.5em; }
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  &:has(img) { padding: 0.5em; }
   text-decoration: none;
   border-radius: 0.5em;
 
@@ -132,9 +130,8 @@ a {
     backdrop-filter: blur(12px);
   }
   
-  .nav-link:not(.disabled):hover &, &:hover {
-    display: flex;
-    flex-direction: column;
+  .nav-link:not(.disabled):hover &,
+  &:hover {
     visibility: visible;
     opacity: 1;
     transform: none;

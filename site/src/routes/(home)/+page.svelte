@@ -37,7 +37,7 @@ const featured = Site.get_featured();
     />
     <Card title="Guess the Graph"
       intern="questions/guess-graph"
-      pict="previews/graph-drawing.png"
+      pict="previews/guess-graph.png"
     />
     <Card title="Addvent"
       intern="questions/addvent"

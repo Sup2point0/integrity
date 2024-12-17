@@ -47,7 +47,7 @@ import { base } from "$app/paths";
   </div>
 
   <small>
-    built with Svelte 5 + SvelteKit &ensp; · &ensp; hosted on GitHub Pages
+    built with <a target="_blank" href="https://svelte.dev/">Svelte 5</a> + <a target="_blank" href="https://svelte.dev/docs/kit/introduction">SvelteKit</a> &ensp; · &ensp; hosted on <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
   </small>
 </footer>
 
