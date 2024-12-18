@@ -66,9 +66,9 @@ onMount(() => {
   gap: 1rem;
 
   &.grid {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(16rem, 30%));
     justify-content: center;
-    flex-wrap: wrap;
   }
 
   &.list {
