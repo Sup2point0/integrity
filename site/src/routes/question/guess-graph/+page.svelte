@@ -4,11 +4,11 @@ import Site from "#scripts/site";
 import type { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
-import RenderBlock from "#parts/render-block.svelte";
+import RenderBlock from "#parts/page/render-block.svelte";
 
 import Header from "#parts/core/header.svelte";
-import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
-import Section from "#parts/section.svelte";
+import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
+import Section from "#parts/page/section.svelte";
 
 import { page } from "$app/stores";
 import { onMount } from "svelte";

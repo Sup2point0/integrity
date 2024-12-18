@@ -2,9 +2,9 @@
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
-import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
+import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
-import Meta from "#parts/meta.svelte";
+import Meta from "#parts/page/meta.svelte";
 
 </script>
 

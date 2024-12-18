@@ -6,10 +6,10 @@ import type { Question } from "#scripts/types";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
-import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
+import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
-import Search from "#parts/ui/search.svelte";
-import Meta from "#parts/meta.svelte";
+import Search from "#parts/page/search.svelte";
+import Meta from "#parts/page/meta.svelte";
 
 import { onMount } from "svelte";
 

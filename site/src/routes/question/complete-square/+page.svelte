@@ -4,10 +4,10 @@ import { page_data } from "../page-data.svelte.ts";
 import type { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
-import RenderBlock from "#parts/render-block.svelte";
+import RenderBlock from "#parts/page/render-block.svelte";
 
-import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
-import Section from "#parts/section.svelte";
+import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
+import Section from "#parts/page/section.svelte";
 
 let question: Question | null = $derived(page_data.question);
 

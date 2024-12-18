@@ -5,11 +5,11 @@ import { userdata } from "#scripts/stores";
 
 import { set_preset } from "./scripts";
 
-import Clicky from "#src/parts/ui/clicky.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
 import Select from "#parts/ui/select.svelte";
 
-import Meta from "#parts/meta.svelte";
-import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
+import Meta from "#parts/page/meta.svelte";
+import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 
 import { onMount } from "svelte";

@@ -98,6 +98,59 @@
         }
       ]
     },
+    "a24c-sm1": {
+      "topic": "addvent",
+      "title": "Day 10",
+      "desc": null,
+      "date": "2024 December 16",
+      "tags": [
+        "algebra"
+      ],
+      "method": [
+        "trap"
+      ],
+      "shard": "a24c-sm1",
+      "question": [
+        {
+          "kind": "text",
+          "content": "I am building a giant snowman. My design consists of 3 large spherical snowballs, with radii $12\\ \\text{m}$, $18\\ \\text{m}$, and $x\\ \\text{m}$.<br><br>I first place the largest snowball on the ground. I then stack the next largest snowball on top of it, but this knocks $1/6$ of the total volume of the 2 snowballs onto the ground!<br><br>Finally, I stack the smallest snowball on top of the 2 snowballs, which knocks yet another $1/6$ of the total volume of the 3 snowballs off.<br><br>If my snowman is now left with a volume of $10445\\pi\\ \\text{m}^3$ of snow, what is the largest value $x$ could have been?"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Set up an equation involving $x$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Does the value of $x$ affect what equation you would construct?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What happens if $x < 12 < 18$? Or $12 < 18 < x$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$x = 15$"
+        }
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+          }
+        ]
+      }
+    },
     "n24c-ct1": {
       "topic": "addvent",
       "title": "Day 1",

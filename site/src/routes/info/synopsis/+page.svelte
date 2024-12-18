@@ -3,7 +3,7 @@
 import Content from "../../../../../synopsis.md";
 
 import Header from "#parts/core/header.svelte";
-import Meta from "#parts/meta.svelte";
+import Meta from "#parts/page/meta.svelte";
 
 </script>
 

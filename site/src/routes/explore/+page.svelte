@@ -5,9 +5,9 @@ import { pick_random_question } from "#scripts/utils";
 
 import Link from "#parts/ui/link.svelte";
 
-import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
+import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
-import Meta from "#parts/meta.svelte";
+import Meta from "#parts/page/meta.svelte";
 
 import { base } from "$app/paths";
 

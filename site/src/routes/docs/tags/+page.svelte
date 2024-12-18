@@ -2,11 +2,11 @@
 
 import Site from "#src/scripts/site";
 
-import RenderBlock from "#parts/render-block.svelte";
+import RenderBlock from "#parts/page/render-block.svelte";
 import Tag from "#parts/ui/tag.svelte";
 
-import Meta from "#parts/meta.svelte";
-import Breadcrumbs from "#parts/ui/breadcrumbs.svelte";
+import Meta from "#parts/page/meta.svelte";
+import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 
 </script>
