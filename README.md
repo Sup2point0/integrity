@@ -53,7 +53,13 @@ MIT. Please use and distribute these questions however you like – maths is for
 <br>
 
 
+<div align="center">
+
 [![XKCD 2117: Differentiation and Integration](https://imgs.xkcd.com/comics/differentiation_and_integration.png)](https://xkcd.com/2117)
+
+[XKCD 2117](https://xkcd.com/2117)
+
+</div>
 
 
 <br>
