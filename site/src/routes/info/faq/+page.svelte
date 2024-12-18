@@ -14,7 +14,7 @@ import Meta from "#parts/page/meta.svelte";
 
 
 <Header title="FAQ"
-  desc="Fervently Anticipated Questions"
+  capt="Fervently Anticipated Questions"
 />
 
 <article id="faq">

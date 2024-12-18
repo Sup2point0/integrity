@@ -23,7 +23,7 @@ import Header from "#parts/core/header.svelte";
 ]} />
 
 <Header title="Shards"
-  desc="Question Codes"
+  capt="Question Codes"
 />
 
 <article>

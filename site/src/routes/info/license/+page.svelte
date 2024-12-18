@@ -14,7 +14,7 @@ import Meta from "#parts/page/meta.svelte";
 
 
 <Header title="License"
-  desc="Usage of content from Integrity"
+  capt="Usage of content from Integrity"
 />
 
 <article>

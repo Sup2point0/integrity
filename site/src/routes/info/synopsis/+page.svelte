@@ -14,7 +14,7 @@ import Meta from "#parts/page/meta.svelte";
 
 
 <Header title="Synopsis"
-  desc="All about Integrity"
+  capt="All about Integrity"
 />
 
 <article>

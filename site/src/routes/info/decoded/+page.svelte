@@ -14,7 +14,7 @@ import Meta from "#parts/page/meta.svelte";
 
 
 <Header title="decoded: Integrity"
-  desc="Learnings, challenges and discoveries from writing my own maths questions"
+  capt="Learnings, challenges and discoveries from writing my own maths questions"
 />
 
 <article>

@@ -25,7 +25,7 @@ import { base } from "$app/paths";
 ]} />
 
 <Header title="Explore"
-  desc="Integrity"
+  capt="Integrity"
 />
 
 

@@ -4,17 +4,17 @@
 
 interface Props {
   title: string;
-  desc?: string;
+  capt?: string;
 }
 
-let { title, desc }: Props = $props();
+let { title, capt }: Props = $props();
 
 </script>
 
 
 <header>
   <h1> {title} </h1>
-  <p> {@html desc}
+  <p> {@html capt}
 </header>
 
 
