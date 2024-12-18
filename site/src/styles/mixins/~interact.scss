@@ -19,7 +19,7 @@
 
 
 @mixin focus-outline {
-  &:focus:not(:active) {
+  &:focus-visible:not(:active) {
     outline: 1px solid #3c8dbc;  // fallback
     outline: 1px solid $col-prot;
   }
