@@ -50,7 +50,10 @@ let { question, latex, style = "block" }: Props = $props();
 
       <div class="buttons">
         <Checkbox
-          col="#00761c"
+          cols={{
+            "off": "#dededede",
+            "on": "#00761c",
+          }}
           value={() => userdata.flagged.has(question.shard)}
           enable={() => {
             try { userdata.flagged.add(question.shard); }

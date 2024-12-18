@@ -6,7 +6,7 @@ import { pick_random_question } from "#scripts/utils";
 
 import NavLink from "#parts/core/nav.link.svelte";
 import Link from "#parts/ui/link.svelte";
-import GithubIcon from "#src/parts/svg/github-icon.svelte";
+import GithubIcon from "#parts/svg/github-icon.svelte";
 
 import { base } from "$app/paths";
 

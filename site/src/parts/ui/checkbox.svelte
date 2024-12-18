@@ -9,14 +9,17 @@ import { onMount } from "svelte";
 
 
 interface Props {
-  col: string;
+  cols: {
+    off: string;
+    on: string;
+  };
   value: () => boolean;
   enable: () => boolean;
   disable: () => boolean;
   children: any;
 }
 
-let { col, value, enable, disable, children }: Props = $props();
+let { cols, value, enable, disable, children }: Props = $props();
 
 
 let active = $state(false);
@@ -29,7 +32,8 @@ onMount(() => {
 
 
 <button class="checkbox" class:active
-  style:--col={col}
+  style:--col-off={cols.off}
+  style:--col-on={cols.on}
   onclick={e => {
     e.preventDefault();
     if (value()) {
@@ -54,6 +58,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: var(--col-off, $col-clicky-click);
   background: none;
   border: none;
   border-radius: 50%;
@@ -62,10 +67,11 @@ button {
     $col-clicky-click,
     $col-card-click,
   );
+  @include focus-outline;
 }
 
 button.active {
-  color: var(--col, $col-deut)
+  color: var(--col-on, $col-deut)
 }
 
 .content {
