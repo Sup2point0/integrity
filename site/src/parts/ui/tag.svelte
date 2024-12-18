@@ -38,6 +38,7 @@ button.tag {
     $hover: color-mix(in oklch, $col-prot, black 8%),
     $click: color-mix(in oklch, $col-prot, black 16%),
   );
+  @include focus-outline;
 }
 
 </style>

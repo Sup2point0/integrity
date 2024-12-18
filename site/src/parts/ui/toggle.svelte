@@ -52,6 +52,7 @@ let { text, value, toggle }: Props = $props();
       $hover: color-mix(in oklch, $col-prot, black 8%),
       $click: color-mix(in oklch, $col-prot, black 16%),
     );
+    @include focus-outline;
   }
   
   transition: all 0.12s ease-out;

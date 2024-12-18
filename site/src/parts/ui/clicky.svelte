@@ -64,6 +64,7 @@ let { text, pict, link, intern, button, children }: Props = $props();
     $click: $col-clicky-click,
     $t: 0.12,
   );
+  @include focus-outline;
 }
 
 img {

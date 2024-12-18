@@ -132,7 +132,9 @@ li {
   @include font-ui;
   font-size: 90%;
   border-radius: 0.5em;
+  
   @include interact();
+  @include focus-outline;
 
   &.active {
     color: white;
