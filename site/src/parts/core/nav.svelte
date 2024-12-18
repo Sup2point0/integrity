@@ -43,11 +43,11 @@ import { base } from "$app/paths";
       <Link text="Tags" intern="docs/tags" />
     </NavLink>
 
-    <NavLink text="Guides" intern="guides" disabled={true}>
-      <Link text="Integrals" intern="" />
-      <Link text="Why Draw Graphs?" intern="" />
-      <Link text="Why Complete the Square?" intern="" />
-      <Link text="Why Desmos?" intern="" />
+    <NavLink text="Guides" intern="guides">
+      <Link text="Integrals" intern="guides/integrals" />
+      <Link text="Graph Drawing" intern="graph-drawing" />
+      <Link text="Completing the Square" intern="guides/complete-square" />
+      <Link text="Desmos" intern="guides/desmos" />
     </NavLink>
 
     <NavLink text="Info" intern="info" collapse={true}>

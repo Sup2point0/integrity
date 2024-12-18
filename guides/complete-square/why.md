@@ -2,6 +2,7 @@
 <!-- #SQUARK live!
 | dest = guides/complete-square/why
 | index = Guides / Completing the Square
+| clean = angles
 -->
 
 If you’ve never heard of *completing the square*, it’s a way to rewrite a quadratic of the form
@@ -52,7 +53,7 @@ How do we prove this? Well, if we complete the square on any quadratic, we obtai
 ```math
 \begin{alignat*}{2}
   &\quad y = x^2
-  \\ \rightarroe &\quad y = (x - p)^2
+  \\ \rightarrow &\quad y = (x - p)^2
     &\qquad& (\text{translate horizontally by } p)
   \\ \rightarrow &\quad y = a(x - p)^2
     &\qquad& (\text{scale vertically by } a)
@@ -61,7 +62,7 @@ How do we prove this? Well, if we complete the square on any quadratic, we obtai
 \end{alignat*}
 ```
 
-This is pretty remarkable. It means we can take $y = x^2$, and turn it into *any* quadratic through only translations and scaling. (To obtain negative quadratics, we just let $a < 0$.)
+This is pretty remarkable. It means we can take $y = x^2$, and turn it into *any* quadratic through only translations and scaling. (To obtain negative quadratics, we just let $a < 0$)
 
 This is a property only quadratic and linear polynomials have. For higher degree polynomials, the different coefficients of $x$ can lead to all sorts of wacky shapes.
 
@@ -85,7 +86,7 @@ Which is just a quadratic centred at $(0, 0)$.
 
 It follows pretty intuitively that if we now change $p$ or $q$, then we’re shifting the graph from that origin by $p$ or $q$ – meaning its centre is now at $(p, q)$.
 
-![y = (x - p)^2 + q
+![y = (x - p)^2 + q](~)
 
 The absolute value of $a$ doesn’t matter so much here, since it’s just a stretch on the curve’s shape. We only really care about its sign – if it’s negative, our positive quadratic is flipped to a negative one (famously known as a sad parabola).
 
