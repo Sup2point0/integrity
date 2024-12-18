@@ -1,12 +1,22 @@
 {
-  // "$schema": "https://sup2point0.github.io/stranger-quarkdown/squarkup-schema.json",
+  "$schema": "../.stranger-quarkdown/squarkdown/resources/squarkup-schema.json",
 
   "repo": "integrity",
   "site": "site",
 
+  "sources": [
+    "docs/",
+    "guides/"
+  ],
+  "site-data": "src/data/site.json",
+  "dest": "src/routes/",
+
   "if-no-dir": ["warn", "create"],
   "on-error": "kill",
 
+  "bases": "src/parts/base/",
+  "page.svelte": "page.svelte",
+  "page.js": "page.js",
   "assets": "assets",
   "site-assets": "assets/site",
   "fonts": [

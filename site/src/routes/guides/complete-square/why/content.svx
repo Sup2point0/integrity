@@ -1,4 +1,29 @@
-# Why Complete the Square?
+---
+path: guides/complete-square/why.md
+last_deploy: 2024-12-18 20:36:13.585325500 +00:00
+flags:
+- live
+title: Why Complete the Square?
+head: Why Complete the Square?
+capt:
+desc:
+index: &1
+- guides
+- completing the square
+shard: *1
+date_display:
+---
+
+<script>
+
+import { base } from "$app/paths";
+
+</script>
+
+<svelte:head>
+  <title> Why Complete the Square? · integrity </title>
+</svelte:head>
+
 <!-- #SQUARK live!
 | dest = guides/complete-square/why
 | index = Guides / Completing the Square

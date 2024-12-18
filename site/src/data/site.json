@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "exported": "2024-12-18",
+    "file_count": 3,
+    "page_count": 1
+  },
+  "index": {
+    "guides": {
+      "route": null,
+      "pages": [
+        "guides/complete-square/why.md"
+      ]
+    },
+    "completing the square": {
+      "route": null,
+      "pages": [
+        "guides/complete-square/why.md"
+      ]
+    }
+  },
+  "shard": {
+    "guides": [
+      "guides/complete-square/why.md"
+    ],
+    "completing the square": [
+      "guides/complete-square/why.md"
+    ]
+  },
+  "pages": {
+    "guides/complete-square/why.md": {
+      "path": "guides/complete-square/why.md",
+      "last_deploy": "2024-12-18 20:36:13 +0000",
+      "slocs": 128,
+      "chars": 5642,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/complete-square/why",
+      "title": "Why Complete the Square?",
+      "head": "Why Complete the Square?",
+      "capt": null,
+      "desc": null,
+      "index": [
+        "guides",
+        "completing the square"
+      ],
+      "shard": [
+        "guides",
+        "completing the square"
+      ],
+      "date": null,
+      "date_display": null
+    }
+  }
+}
