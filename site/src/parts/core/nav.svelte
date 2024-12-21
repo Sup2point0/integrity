@@ -86,7 +86,7 @@ nav {
   gap: 0.5rem;
   background-color: $col-nav;
   border-bottom: 1px solid $col-line;
-  box-shadow: 0 3px 2px -2px $col-line;
+  box-shadow: 0 2px 2px -1px $col-line;
 
   &::before {
     content: '';

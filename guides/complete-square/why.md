@@ -32,7 +32,7 @@ When we have a quadratic in completed square form $a(x - p)^2 + q$, we can easil
 Let’s consider $a > 0$, so we’d like to find the minimum of a positive quadratic.
 
 ```math
-\min\left( a(x - p)^2 + q \right)
+\min( a(x - p)^2 + q )
 ```
 
 Any real number squared is non-negative, so we know $a(x - p)^2$ can only increase the value of the expression. Therefore to minimise its value, we want $a(x - p)^2$ to be 0. When does this happen? Well, when $x = p$.
@@ -97,15 +97,11 @@ Why would we ever want to draw graphs, you ask? See [Why Draw Graphs?](~).
 
 If we follow the process of completing the square on a generic quadratic $ax^2 + bx + c$, it’s pretty intuitive why the $a$ in $a(x - p)^2 + q$ is the same as the original. What are the other terms then?
 
-```math
-
-```
+`...`
 
 Well well, don’t these look familiar. Oh yes, completing the square is how the infamous [quadratic formula](~) is derived:
 
-```math
-
-```
+`...`
 
 Next time you use your calculator to solve a quadratic equation, remember it is completing the square that made it possible.
 
@@ -113,9 +109,7 @@ From the quadratic formula we know the discriminant $b^2 - 4ac$ tells us the num
 
 With the context of completing the square we know have a very graphic way to interpret this. $b^2 - 4ac$ is how much we shift our quadratic down (or up) by:
 
-```math
-
-```
+`.`
 
 And if we draw a quadratic lying on the x axis, we can intuitively tell that shifting it down ($b^2 - 4ac > 0$) means we’d have 2 solutions, while shifting it up would leave us no intersections with the x axis.
 
