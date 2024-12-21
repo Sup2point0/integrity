@@ -2,8 +2,11 @@ import adapter from "@sveltejs/adapter-static";
 import { sveltePreprocess } from "svelte-preprocess";
 
 import { mdsvex } from "mdsvex";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 import scss_config from "./scss-config.js";
+import { correct_hast_tree, render_katex_blocks } from "./latex-config.js";
 
 
 const config = {
@@ -35,8 +38,17 @@ const config = {
   preprocess: [
     mdsvex({
       extensions: [".svx", ".md"],
+      remarkPlugins: [
+        remarkMath,
+        render_katex_blocks
+      ],
+      rehypePlugins: [
+        correct_hast_tree,
+        rehypeKatex,
+      ],
     }),
     sveltePreprocess({
+      extensions: [".svelte"],
       scss: scss_config,
     }),
   ],
