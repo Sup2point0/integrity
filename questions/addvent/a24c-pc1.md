@@ -5,6 +5,8 @@ desc:
 date: 2024 December 6
 tags:
   - numbers
+method:
+  - calc
 ---
 
 
