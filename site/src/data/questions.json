@@ -8,6 +8,9 @@
       "tags": [
         "numbers"
       ],
+      "method": [
+        "calc"
+      ],
       "shard": "a24c-pc1",
       "question": [
         {
