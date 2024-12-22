@@ -1052,7 +1052,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int_{\\ }^{\\ }\\frac{x^{3}}{x^{4}-6x^{2}+5}dx"
+          "content": "\\int \\frac{x^{3}}{x^{4}-6x^{2}+5}dx"
         }
       ],
       "answer": [
@@ -1065,7 +1065,7 @@
         "factorise": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }\\frac{x^{3}}{x^{4}-6x^{2}+5}dx  \\\\ &= \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{x^{2}\\cdot2x}{\\left(x^{2}-1\\right)\\left(x^{2}-5\\right)}\\ dx\\end{align*}"
+            "content": "\\begin{align*}  &= \\int \\frac{x^{3}}{x^{4}-6x^{2}+5}dx  \\\\ &= \\frac{1}{2}\\int \\frac{x^{2}\\cdot2x}{\\left(x^{2}-1\\right)\\left(x^{2}-5\\right)}\\ dx\\end{align*}"
           }
         ],
         "substitute": [
@@ -1075,7 +1075,7 @@
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{t}{\\left(t-1\\right)\\left(t-5\\right)}\\ dt\\end{align*}"
+            "content": "\\begin{align*}  &= \\frac{1}{2}\\int \\frac{t}{\\left(t-1\\right)\\left(t-5\\right)}\\ dt\\end{align*}"
           }
         ],
         "partial fractions": [
@@ -1103,7 +1103,7 @@
         "solve": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\frac{1}{2}\\int_{\\ }^{\\ }-\\frac{1}{4\\left(t-1\\right)}+\\frac{5}{4\\left(t-5\\right)}\\ dt  \\\\ &= \\frac{5}{8}\\int_{\\ }^{\\ }\\frac{1}{t-5}\\ dt-\\frac{1}{8}\\int_{\\ }^{\\ }\\frac{1}{t-1}\\ dt  \\\\ &= \\frac{5}{8}\\ln\\left(t-5\\right)-\\frac{1}{8}\\ln\\left(t-1\\right)  \\\\ &= \\frac{5}{8}\\ln\\left(x^{2}-5\\right)-\\frac{1}{8}\\ln\\left(x^{2}-1\\right)-c\\end{align*}"
+            "content": "\\begin{align*}  &= \\frac{1}{2}\\int -\\frac{1}{4\\left(t-1\\right)}+\\frac{5}{4\\left(t-5\\right)}\\ dt  \\\\ &= \\frac{5}{8}\\int \\frac{1}{t-5}\\ dt-\\frac{1}{8}\\int \\frac{1}{t-1}\\ dt  \\\\ &= \\frac{5}{8}\\ln\\left(t-5\\right)-\\frac{1}{8}\\ln\\left(t-1\\right)  \\\\ &= \\frac{5}{8}\\ln\\left(x^{2}-5\\right)-\\frac{1}{8}\\ln\\left(x^{2}-1\\right)-c\\end{align*}"
           }
         ]
       }
@@ -1766,6 +1766,50 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= -\\frac{1}{4\\pi}x^{2}+\\frac{e^{2}}{\\pi}\\left(\\frac{x-2e}{2e}\\cdot\\frac{\\sqrt{\\left(x-2e\\right)^{2}-4e^{2}}}{2e}-\\ln\\left(\\frac{x-2e}{2e}+\\frac{\\sqrt{\\left(x-2e\\right)^{2}-4e^{2}}}{2e}\\right)\\right)  \\\\ &= -\\frac{1}{4\\pi}x^{2}+\\frac{e^{2}}{\\pi}\\left(\\frac{\\left(x-2e\\right)\\sqrt{x^{2}-4ex}}{4e^{2}}-\\ln\\left(\\frac{x-2e+\\sqrt{x^{2}-4ex}}{2e}\\right)\\right)  \\\\ &= -\\frac{1}{4\\pi}x^{2}+\\frac{\\left(x-2e\\right)\\sqrt{x^{2}-4ex}}{4\\pi}-\\frac{e^{2}}{\\pi}\\ln\\left(\\frac{x-2e+\\sqrt{x^{2}-4ex}}{2e}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s24f-xp1": {
+      "topic": "integrals",
+      "title": "expletive",
+      "desc": null,
+      "date": "2024 December 17",
+      "tags": [
+        "exp",
+        "frac"
+      ],
+      "method": [
+        "exp sub"
+      ],
+      "shard": "s24f-xp1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }\\frac{e^{3x}-e^{-x}}{e^{x}+e^{-x}}dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{2}e^{2x}-x-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\int_{\\ }^{\\ }\\frac{e^{3x}-e^{-x}}{e^{x}+e^{-x}}dx"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  e^{x} &= t  \\\\ e^{x}\\ dx &= dt\\  \\\\ \\ dx &= \\frac{1}{t}\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }\\frac{t^{3}-\\frac{1}{t}}{t+\\frac{1}{t}}\\cdot\\frac{1}{t}\\ dt  \\\\ &= \\int_{\\ }^{\\ }\\frac{t^{4}-1}{t^{2}+1}\\cdot\\frac{1}{t}\\ dt  \\\\ &= \\int_{\\ }^{\\ }\\frac{\\left(t^{2}-1\\right)\\left(t^{2}+1\\right)}{t\\left(t^{2}+1\\right)}\\ dt  \\\\ &= \\int_{\\ }^{\\ }\\frac{t^{2}-1}{t}\\ dt  \\\\ &= \\int_{\\ }^{\\ }t-\\frac{1}{t}\\ dt  \\\\ &= \\frac{1}{2}t^{2}-\\ln t  \\\\ &= \\frac{1}{2}e^{2x}-x-c\\end{align*}"
           }
         ]
       }
