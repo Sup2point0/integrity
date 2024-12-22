@@ -2,21 +2,20 @@
 
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
-import type { Question } from "#scripts/types";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
+import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/page/search.svelte";
-import Meta from "#parts/page/meta.svelte";
 
 import { onMount } from "svelte";
 
 
-const questions: Question[] = Site.get_all_questions();
+const questions = Site.get_all_questions();
 const count = questions.length;
-const tags: string[] = Site.get_all_tags();
+const tags = Site.get_all_tags();
 
 let filtered = $derived(
   search.filter_questions(questions)
@@ -43,10 +42,11 @@ onMount(() => {
 <Header title="All Questions" />
 <Search {tags} />
 
-<div class="content">
+<div class="content {search.view}">
   {#each filtered as question}
     <QuestionCard {question}
       latex={question.question.kind === "latex" ? question.question.content : undefined}
+      style={search.view === "grid" ? "block" : "row"}
     />
   {/each}
 </div>
@@ -64,10 +64,18 @@ onMount(() => {
 
 .content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
+
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(16rem, 30%));
+    justify-content: center;
+  }
+
+  &.list {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 aside {
