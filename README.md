@@ -2,18 +2,18 @@
 
 <div align="center">
 
-<a href="https://sup2point0.github.io/integrity">
+<a title="site" href="https://sup2point0.github.io/integrity">
   <img height="36px" alt="site" src="assets/links/site.png"></a>
-<a href="synopsis.md">
+<a title="synopsis" href="synopsis.md">
   <img height="36px" alt="synopsis" src="assets/links/synopsis.png"></a>
-<a href="faq.md">
-  <img height="36px" alt="site" src="assets/links/faq.png"></a>
-<a href="docs/">
-  <img height="36px" alt="site" src="assets/links/docs.png"></a>
-<a href="edu.md">
+<a title="FAQ" href="faq.md">
+  <img height="36px" alt="faq" src="assets/links/faq.png"></a>
+<a title="docs" href="docs/">
+  <img height="36px" alt="docs" src="assets/links/docs.png"></a>
+<a title="decoded" href="edu.md">
   <img height="36px" alt="decoded" src="assets/links/decoded.png"></a>
-<a href="https://sup2point0.github.io/integrity/info/license">
-  <img height="36px" alt="site" src="assets/links/license.png"></a>
+<a title="license" href="https://sup2point0.github.io/integrity/info/license">
+  <img height="36px" alt="license" src="assets/links/license.png"></a>
 
 </div>
 
@@ -25,13 +25,24 @@
 
 - Dozens of hand-crafted maths questions
 - Question browser with hints and solutions
+- Hand-crafted guides on mathematical topics
 - Processing engine to extract questions from Markdown files
 
 ### Topics
 - [Integration](https://sup2point0.github.io/integrity/integrals)
-- [Completing the square](https://sup2point0.github.io/complete-square)
-- [Graph drawing](https://sup2point0.github.io/graphs)
+- [Graph Drawing](https://sup2point0.github.io/graph-drawing)
+- [Completing the Square](https://sup2point0.github.io/complete-square)
+- [Guess the Graph](https://sup2point0.github.io/guess-graph)
 - [Addvent](https://sup2point0.github.io/addvent) (Christmas-themed questions)
+- [Desmos](https://www.desmos.com/)
+
+
+<br>
+
+
+## Preview
+
+![Integral questions](assets/previews/integrity-preview.png)
 
 
 <br>
@@ -39,10 +50,10 @@
 
 ## Credits
 
-All questions in *Integrity* were hand-written by myself. Of course, maths is maths, so there is every possibility you may find a particular problem elsewhere too.
+All questions in *Integrity* were created by myself. Of course, maths is maths, so there is every possibility you may find a particular problem elsewhere too!
 
 ### AI
-No AI was used for any of these!
+No AI was used for any of these.
 
 (I should hope I am not that bad a mathematician...)
 
