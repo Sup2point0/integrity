@@ -11,9 +11,11 @@ export class Question
   title?: string;
   desc?: string;
   date?: Date;
+  date_display?: string;
+
   tags: string[] = [];
   methods: string[] = [];
-  other: string[] = [];
+  flags: string[] = [];
 
   /** The question line. */
   question: Block;
@@ -37,6 +39,8 @@ export class Question
   {
     Object.assign(this, data);
     this.question = data.question[0];
+    this.date_display = data.date;
+    this.date = new Date(data.date);
     // this.title = data.title;
     // this.desc = data.desc;
     // this.date = data.date && new Date(data.date);

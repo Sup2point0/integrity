@@ -87,7 +87,7 @@ export class SearchData
           break;
         
         case "date":
-          out.sort((prot, deut) => prot.date - deut.date);
+          out.sort((prot, deut) => (prot.date && deut.date) ? deut.date - prot.date : -1);
           break;
       }
     }

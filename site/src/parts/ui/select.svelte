@@ -95,7 +95,7 @@ ul.dropdown {
   padding: 0.25em 0.5em;
   display: block;
   position: absolute;
-  z-index: 20;
+  z-index: 15;
   visibility: hidden;
   opacity: 0;
 

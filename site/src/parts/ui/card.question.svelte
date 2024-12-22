@@ -43,7 +43,7 @@ let { question, latex, style = "block" }: Props = $props();
         
         {#if search.show.dates && question.date}
           <p transition:fade={{ duration: 250 }}>
-            {question.date}
+            {question.date_display}
           </p>
         {/if}
       </div>
