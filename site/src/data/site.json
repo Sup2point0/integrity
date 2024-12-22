@@ -1,8 +1,8 @@
 {
   "meta": {
     "exported": "2024-12-22",
-    "file_count": 3,
-    "page_count": 1
+    "file_count": 4,
+    "page_count": 2
   },
   "index": {
     "guides": {
@@ -49,6 +49,25 @@
         "guides",
         "completing the square"
       ],
+      "date": null,
+      "date_display": null
+    },
+    "guides/sign.md": {
+      "path": "guides/sign.md",
+      "last_deploy": "2024-12-22 09:12:24 +0000",
+      "slocs": 43,
+      "chars": 3471,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/sign",
+      "title": "S-I+G-N Errors",
+      "head": "S-I+G-N Errors",
+      "capt": "The “semicolon missing” of Mathematics",
+      "desc": "The “semicolon missing” of Mathematics",
+      "index": [],
+      "shard": [],
       "date": null,
       "date_display": null
     }

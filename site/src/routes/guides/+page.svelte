@@ -26,15 +26,21 @@ import Header from "#parts/core/header.svelte";
 
 <Line />
 
-<div class="content">
+<section>
+  <h2> Featured </h2>
+  <Card title="S-I+G-N Errors" intern="guides/sign" />
+</section>
+
+<section>
+  <h2> Topics </h2>
   <Card title="Integrals" intern="guides/integrals" />
   <Card title="Completing the Square" intern="guides/complete-square" />
-</div>
+</section>
 
 
 <style lang="scss">
 
-.content {
+section {
   margin: 1rem;
   display: flex;
   flex-direction: row;
