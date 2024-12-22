@@ -82,7 +82,7 @@ article {
       height: 1px;
       background-color: #3c8dbc;  // fallback
       background-color: $col-prot;
-      // transform: scaleX(1);
+      transform: scaleX(1);
       transform-origin: center;
       transition: all 0.12s ease-out;
     }
@@ -96,7 +96,7 @@ article {
         left: 0;
         background-color: #f07d1c;  // fallback
         background-color: $col-deut;
-        // transform: scaleX(1.02)
+        transform: scaleX(1.02)
       }
     }
   }
