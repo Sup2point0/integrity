@@ -15,8 +15,8 @@
   "on-error": "kill",
 
   "bases": "src/parts/base/",
-  "page.svelte": "page.svelte",
-  "page.js": "page.js",
+  // "page.svelte": "page.svelte",
+  // "page.js": "page.js",
   "assets": "assets",
   "site-assets": "assets/site",
   "fonts": [

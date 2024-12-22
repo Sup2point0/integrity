@@ -19,9 +19,9 @@ a(x - p)^2 + q
 where $a, b, c, p, q$ are any real numbers with $a \neq 0$ (since then the expression would not be a quadratic).
 
 > [!Note]
-> For a walkthrough on how to actually carry out completing the square, see [How Do We Complete the Square?](~)
+> For a walkthrough on how to actually carry out completing the square, see [How Do We Complete the Square?](how.md)
 
-Now this could seem like an entirely arbitrary thing to do, but it’s actually a really useful technique (as anyone who has trained for the [TMUA](https://en.m.wikipedia.org/wiki/Test_of_Mathematics_for_University_Admission) would be more than familiar with). Completing the square reveals a lot of useful information about the quadratic that the expanded form doesn’t.
+Now this could seem like an entirely arbitrary thing to do, but it’s actually a really useful technique (as anyone who has trained for the [TMUA<sup>↗</sup>](https://en.wikipedia.org/wiki/Test_of_Mathematics_for_University_Admission) would be more than familiar with). Completing the square reveals a lot of useful information about the quadratic that the expanded form doesn’t.
 
 
 ## Extrema
@@ -89,7 +89,7 @@ It follows pretty intuitively that if we now change $p$ or $q$, then we’re shi
 
 The absolute value of $a$ doesn’t matter so much here, since it’s just a stretch on the curve’s shape. We only really care about its sign – if it’s negative, our positive quadratic is flipped to a negative one (famously known as a sad parabola).
 
-Why would we ever want to draw graphs, you ask? See [Why Draw Graphs?](~).
+Why would we ever want to draw graphs, you ask? See [Why Draw Graphs?](../graph-drawing/why.md).
 
 
 ## Deriving the Quadratic Formula
@@ -98,7 +98,7 @@ If we follow the process of completing the square on a generic quadratic $ax^2 +
 
 `...`
 
-Well well, don’t these look familiar. Oh yes, completing the square is how the infamous [quadratic formula](~) is derived:
+Well well, don’t these look familiar. Oh yes, completing the square is how the infamous [quadratic formula<sup>↗</sup>](https://wikipedia.org/wiki/Quadratic_formula) is derived:
 
 `...`
 
@@ -119,4 +119,4 @@ Perhaps completing the square is nought but an algebraic trick to be memorised f
 
 Completing the square is an exercise in algebraic accuracy – a really good one, at that. Simple but devastating, quick to check with a graph plot, and actually useful
 
-The strategy of completing the square is by no means confined to quadratic equations; in fact, it can often come in helpful with gleaning information about higher order polynomials. It is a vital weapon for enabling many substitutions in [integration](~). And of course, there is its alternative universe alter ego [completing the rectangle](~) (also known as *Simon’s Favourite Factorising Trick*) often used in solving diophantine equations.
+The strategy of completing the square is by no means confined to quadratic equations; in fact, it can often come in helpful with gleaning information about higher order polynomials. It is a vital weapon for enabling many substitutions in [integration](../integration/strats/complete-square.md). And of course, there is its alternative universe alter ego [completing the rectangle<sup>↗</sup>](https://brilliant.org/wiki/diophantine-equations-solve-by-factoring/) (also known as *Simon’s Favourite Factorising Trick*) often used in solving diophantine equations.
