@@ -2,7 +2,7 @@
   "meta": {
     "exported": "2024-12-22",
     "file_count": 4,
-    "page_count": 2
+    "page_count": 3
   },
   "index": {
     "guides": {
@@ -27,6 +27,25 @@
     ]
   },
   "pages": {
+    "docs/shard.md": {
+      "path": "docs/shard.md",
+      "last_deploy": "2024-12-22 14:21:58 +0000",
+      "slocs": 62,
+      "chars": 1733,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "docs/shards",
+      "title": "Shards",
+      "head": "Shards",
+      "capt": "Question Identifier Codes",
+      "desc": "Explaining the question identifier codes used throughout Integrity",
+      "index": [],
+      "shard": [],
+      "date": null,
+      "date_display": null
+    },
     "guides/complete-square/why.md": {
       "path": "guides/complete-square/why.md",
       "last_deploy": "2024-12-22 09:08:26 +0000",

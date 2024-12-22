@@ -1,11 +1,27 @@
-# Question Shards
-<!-- #SQUARK live!
-| dest = docs/shards
-| title = Shards
-| desc = Explaining the question identifier codes used throughout Integrity
-| head = Shards
-| capt = Question Identifier Codes
--->
+---
+path: docs/shard.md
+last_deploy: 2024-12-22 14:21:58.878174000 +00:00
+flags:
+- live
+title: Shards
+head: Shards
+capt: Question Identifier Codes
+desc: Explaining the question identifier codes used throughout Integrity
+index: &1 []
+shard: *1
+date_display:
+---
+
+<script>
+
+import { base } from "$app/paths";
+
+</script>
+
+<svelte:head>
+  <title> Shards · integrity </title>
+</svelte:head>
+
 
 Each question I devise is designated its own unique identifier deemed a *shard*. They look like this:
 
@@ -22,7 +38,7 @@ s25cu-dq4
 
 The shard is a case-insensitive alphanumeric string, with a single hyphen and no whitespace. It comprises several identifying fields:
 
-![shard fields](../assets/docs/shard-fields.png)
+![shard fields]({base}/docs/shard-fields.png)
 
 | field | notes | instance |
 | :---- | :---- | :------- |

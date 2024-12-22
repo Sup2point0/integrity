@@ -1,8 +1,7 @@
 <script>
 
-import Site from "#src/scripts/site";
-
-import Content from "../../../../../docs/shard.md";
+import Content from "./content.svx";
+import { metadata as page } from "./content.svx";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -17,14 +16,11 @@ import Header from "#parts/core/header.svelte";
 
 
 <Breadcrumbs levels={[
-  { text: "Integrity", link: Site.root },
   { text: "Docs", intern: "docs" },
   { text: "Shards" },
 ]} />
 
-<Header title="Shards"
-  capt="Question Codes"
-/>
+<Header title={page.title} capt={page.capt} />
 
 <article>
   <Content />
