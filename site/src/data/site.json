@@ -11,7 +11,7 @@
         "guides/complete-square/why.md"
       ]
     },
-    "completing the square": {
+    "complete-square": {
       "route": null,
       "pages": [
         "guides/complete-square/why.md"
@@ -22,7 +22,7 @@
     "guides": [
       "guides/complete-square/why.md"
     ],
-    "completing the square": [
+    "complete-square": [
       "guides/complete-square/why.md"
     ]
   },
@@ -48,9 +48,9 @@
     },
     "guides/complete-square/why.md": {
       "path": "guides/complete-square/why.md",
-      "last_deploy": "2024-12-22 09:08:26 +0000",
+      "last_deploy": "2024-12-22 15:00:14 +0000",
       "slocs": 122,
-      "chars": 5821,
+      "chars": 5815,
       "isIndex": false,
       "flags": [
         "live"
@@ -62,11 +62,11 @@
       "desc": null,
       "index": [
         "guides",
-        "completing the square"
+        "complete-square"
       ],
       "shard": [
         "guides",
-        "completing the square"
+        "complete-square"
       ],
       "date": null,
       "date_display": null

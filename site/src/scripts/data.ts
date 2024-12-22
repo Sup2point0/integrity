@@ -6,11 +6,14 @@ import { Question } from "#scripts/types";
 import type { QuestionsData, QuestionCollection } from "#scripts/types";
 
 
-const raw_data = (await import("../data/questions.json")).default;
-export const data = process_data(raw_data);
+const questions_data = (await import("../data/questions.json")).default;
+export const questions = process_questions(questions_data);
+
+const pages_data = (await import("../data/site.json")).default;
+export const guides = find_guides(pages_data.pages);
 
 
-function process_data(raw: any)
+function process_questions(raw: any)
 {
   let out: QuestionsData = {};
   let collection: QuestionCollection;
@@ -38,10 +41,30 @@ function construct_collection(raw: any): QuestionCollection
     out.questions[shard] = question;
     
     for (let tag of question.tags) {
-      if (out.tags.includes(tag)) continue;
-      out.tags.push(tag);
+      if (!out.tags.includes(tag)) {
+        out.tags.push(tag);
+      }
     }
   }
 
+  return out;
+}
+
+
+function find_guides(raw: any)
+{
+  let out = {};
+
+  for (let page of Object.values(raw)) {
+    if (page.index.includes("guides")) {
+      let topic = page.index[1];
+
+      if (out[topic] == null) {
+        out[topic] = [];
+      }
+      out[topic].push(page);
+    }
+  }
+  
   return out;
 }

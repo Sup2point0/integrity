@@ -70,7 +70,6 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  text-align: center;
 }
 
 </style>

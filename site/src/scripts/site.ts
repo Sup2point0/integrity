@@ -1,4 +1,4 @@
-import { data } from "./data";
+import { questions, guides } from "./data";
 import type { Question, QuestionsData } from "#scripts/types";
 
 
@@ -12,12 +12,16 @@ interface SiteData {
   get_all_questions: () => Question[];
   get_all_tags: () => string[];
   get_featured: () => Question[];
+
+  guides: {
+    [topic: string]: Question[];
+  }
 }
 
 const Site: SiteData = {
   root: "https://sup2point0.github.io/integrity/",
 
-  questions: data,
+  questions: questions,
 
   get_questions: (topic) => {
     return Object.values(Site.questions[topic]?.questions ?? {});
@@ -34,6 +38,8 @@ const Site: SiteData = {
   get_featured: () => {
     return Site.get_all_questions().filter(q => q.flags?.includes("feat"))
   },
+
+  guides: guides,
 };
 
 export default Site;
