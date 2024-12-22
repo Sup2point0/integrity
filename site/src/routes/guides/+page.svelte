@@ -72,4 +72,13 @@ section {
   gap: 1rem;
 }
 
+
+h2 {
+  margin: 1em 0;
+  padding: 0 0.1em 0.25em;
+  @include font-serif;
+  font-weight: 400;
+  font-size: 200%;
+}
+
 </style>
