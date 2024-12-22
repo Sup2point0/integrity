@@ -5,10 +5,10 @@ import { search } from "#scripts/stores";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
+import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/page/search.svelte";
-import Meta from "#parts/page/meta.svelte";
 
 import { onMount } from "svelte";
 
@@ -66,9 +66,9 @@ onMount(() => {
   gap: 1rem;
 
   &.grid {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(16rem, 30%));
     justify-content: center;
-    flex-wrap: wrap;
   }
 
   &.list {

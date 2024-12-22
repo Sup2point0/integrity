@@ -4,9 +4,9 @@ import Site from "#scripts/site";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
+import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
-import Meta from "#parts/page/meta.svelte";
 
 
 const questions = Site.get_questions("addvent");
@@ -43,10 +43,9 @@ const count = questions.length;
 <style lang="scss">
 
 .content {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, max(16rem, 30%));
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
