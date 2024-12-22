@@ -1,7 +1,7 @@
 # Why Complete the Square?
 <!-- #SQUARK live!
 | dest = guides/complete-square/why
-| index = Guides / Completing the Square
+| index = guides / complete-square
 -->
 
 If you’ve never heard of *completing the square*, it’s a way to rewrite a quadratic of the form

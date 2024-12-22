@@ -1,6 +1,6 @@
 ---
 path: guides/complete-square/why.md
-last_deploy: 2024-12-22 09:08:26.476827000 +00:00
+last_deploy: 2024-12-22 15:00:14.438631500 +00:00
 flags:
 - live
 title: Why Complete the Square?
@@ -9,7 +9,7 @@ capt:
 desc:
 index: &1
 - guides
-- completing the square
+- complete-square
 shard: *1
 date_display:
 ---

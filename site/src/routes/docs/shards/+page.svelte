@@ -10,9 +10,7 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
-<Meta title="Shards · Docs"
-  desc="Explaining the question identifier codes used throughout Integrity"
-/>
+<Meta title={page.title} desc={page.desc} />
 
 
 <Breadcrumbs levels={[
@@ -20,7 +18,7 @@ import Header from "#parts/core/header.svelte";
   { text: "Shards" },
 ]} />
 
-<Header title={page.title} capt={page.capt} />
+<Header title={page.head} capt={page.capt} />
 
 <article>
   <Content />

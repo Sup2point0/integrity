@@ -44,8 +44,9 @@ import { base } from "$app/paths";
     </NavLink>
 
     <NavLink text="Guides" intern="guides">
+      <Link text="S-I+G-N Errors" intern="guides/sign" />
       <Link text="Integrals" intern="guides/integrals" />
-      <Link text="Graph Drawing" intern="graph-drawing" />
+      <!-- <Link text="Graph Drawing" intern="graph-drawing" /> -->
       <Link text="Completing the Square" intern="guides/complete-square" />
       <Link text="Desmos" intern="guides/desmos" />
     </NavLink>
