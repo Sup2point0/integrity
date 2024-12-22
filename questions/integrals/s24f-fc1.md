@@ -14,7 +14,7 @@ method:
 
 ## Question
 ```math
-\int_{\ }^{\ }\frac{x^{3}}{x^{4}-6x^{2}+5}dx
+\int \frac{x^{3}}{x^{4}-6x^{2}+5}dx
 ```
 
 
@@ -38,8 +38,8 @@ method:
 ### Factorise
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }\frac{x^{3}}{x^{4}-6x^{2}+5}dx
-  \\ &= \frac{1}{2}\int_{\ }^{\ }\frac{x^{2}\cdot2x}{\left(x^{2}-1\right)\left(x^{2}-5\right)}\ dx
+  &= \int \frac{x^{3}}{x^{4}-6x^{2}+5}dx
+  \\ &= \frac{1}{2}\int \frac{x^{2}\cdot2x}{\left(x^{2}-1\right)\left(x^{2}-5\right)}\ dx
 \end{align*}
 ```
 
@@ -53,7 +53,7 @@ method:
 
 ```math
 \begin{align*}
-  &= \frac{1}{2}\int_{\ }^{\ }\frac{t}{\left(t-1\right)\left(t-5\right)}\ dt
+  &= \frac{1}{2}\int \frac{t}{\left(t-1\right)\left(t-5\right)}\ dt
 \end{align*}
 ```
 
@@ -86,8 +86,8 @@ Put $t = 5$:
 ### Solve
 ```math
 \begin{align*}
-  &= \frac{1}{2}\int_{\ }^{\ }-\frac{1}{4\left(t-1\right)}+\frac{5}{4\left(t-5\right)}\ dt
-  \\ &= \frac{5}{8}\int_{\ }^{\ }\frac{1}{t-5}\ dt-\frac{1}{8}\int_{\ }^{\ }\frac{1}{t-1}\ dt
+  &= \frac{1}{2}\int -\frac{1}{4\left(t-1\right)}+\frac{5}{4\left(t-5\right)}\ dt
+  \\ &= \frac{5}{8}\int \frac{1}{t-5}\ dt-\frac{1}{8}\int \frac{1}{t-1}\ dt
   \\ &= \frac{5}{8}\ln\left(t-5\right)-\frac{1}{8}\ln\left(t-1\right)
   \\ &= \frac{5}{8}\ln\left(x^{2}-5\right)-\frac{1}{8}\ln\left(x^{2}-1\right)-c
 \end{align*}
