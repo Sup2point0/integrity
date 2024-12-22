@@ -2,7 +2,6 @@
 <!-- #SQUARK live!
 | dest = guides/complete-square/why
 | index = Guides / Completing the Square
-| clean = angles
 -->
 
 If you’ve never heard of *completing the square*, it’s a way to rewrite a quadratic of the form
@@ -27,7 +26,7 @@ Now this could seem like an entirely arbitrary thing to do, but it’s actually 
 
 ## Extrema
 
-When we have a quadratic in completed square form $a(x - p)^2 + q$, we can easily reduce its minimum (for a positive quadratic) or maximum (for a negative quadratic) value.
+When we have a quadratic in completed square form $a(x - p)^2 + q$, we can easily deduce its minimum (for a positive quadratic) or maximum (for a negative quadratic) value.
 
 Let’s consider $a > 0$, so we’d like to find the minimum of a positive quadratic.
 

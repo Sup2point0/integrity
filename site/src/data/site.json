@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2024-12-21",
+    "exported": "2024-12-22",
     "file_count": 3,
     "page_count": 1
   },
@@ -29,9 +29,9 @@
   "pages": {
     "guides/complete-square/why.md": {
       "path": "guides/complete-square/why.md",
-      "last_deploy": "2024-12-21 21:13:29 +0000",
-      "slocs": 123,
-      "chars": 5628,
+      "last_deploy": "2024-12-22 08:57:34 +0000",
+      "slocs": 122,
+      "chars": 5611,
       "isIndex": false,
       "flags": [
         "live"

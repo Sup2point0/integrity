@@ -21,6 +21,7 @@
     "katex": "^0.16.11",
     "mdsvex": "^0.12.3",
     "rehype-katex": "^7.0.1",
+    "rehype-katex-svelte": "^1.2.0",
     "remark-math": "^3.0.0",
     "sass": "^1.77.6",
     "svelte": "^5.0.0",

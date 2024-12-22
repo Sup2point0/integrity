@@ -1,6 +1,6 @@
 ---
 path: guides/complete-square/why.md
-last_deploy: 2024-12-21 21:13:29.443324000 +00:00
+last_deploy: 2024-12-22 08:57:34.670482200 +00:00
 flags:
 - live
 title: Why Complete the Square?
@@ -39,17 +39,17 @@ a(x - p)^2 + q
 
 where $a, b, c, p, q$ are any real numbers with $a \neq 0$ (since then the expression would not be a quadratic).
 
-&amp;gt; [!Note]
-&amp;gt; For a walkthrough on how to actually carry out completing the square, see [How Do We Complete the Square?](~)
+> [!Note]
+> For a walkthrough on how to actually carry out completing the square, see [How Do We Complete the Square?](~)
 
 Now this could seem like an entirely arbitrary thing to do, but it’s actually a really useful technique (as anyone who has trained for the [TMUA](https://en.m.wikipedia.org/wiki/Test_of_Mathematics_for_University_Admission) would be more than familiar with). Completing the square reveals a lot of useful information about the quadratic that the expanded form doesn’t.
 
 
 ## Extrema
 
-When we have a quadratic in completed square form $a(x - p)^2 + q$, we can easily reduce its minimum (for a positive quadratic) or maximum (for a negative quadratic) value.
+When we have a quadratic in completed square form $a(x - p)^2 + q$, we can easily deduce its minimum (for a positive quadratic) or maximum (for a negative quadratic) value.
 
-Let’s consider $a &amp;gt; 0$, so we’d like to find the minimum of a positive quadratic.
+Let’s consider $a > 0$, so we’d like to find the minimum of a positive quadratic.
 
 ```math
 \min( a(x - p)^2 + q )
@@ -82,7 +82,7 @@ How do we prove this? Well, if we complete the square on any quadratic, we obtai
 \end{alignat*}
 ```
 
-This is pretty remarkable. It means we can take $y = x^2$, and turn it into *any* quadratic through only translations and scaling. (To obtain negative quadratics, we just let $a &amp;lt; 0$)
+This is pretty remarkable. It means we can take $y = x^2$, and turn it into *any* quadratic through only translations and scaling. (To obtain negative quadratics, we just let $a < 0$)
 
 This is a property only quadratic and linear polynomials have. For higher degree polynomials, the different coefficients of $x$ can lead to all sorts of wacky shapes.
 
@@ -131,7 +131,7 @@ With the context of completing the square we know have a very graphic way to int
 
 `.`
 
-And if we draw a quadratic lying on the x axis, we can intuitively tell that shifting it down ($b^2 - 4ac &amp;gt; 0$) means we’d have 2 solutions, while shifting it up would leave us no intersections with the x axis.
+And if we draw a quadratic lying on the x axis, we can intuitively tell that shifting it down ($b^2 - 4ac > 0$) means we’d have 2 solutions, while shifting it up would leave us no intersections with the x axis.
 
 
 ## Closing Remarks
