@@ -11,13 +11,14 @@ import { base } from "$app/paths";
 
 interface Props {
   title: string;
+  capt?: string;
   intern?: string;
   latex?: string;
   pict?: string;
   style?: "block" | "row";
 }
 
-let { title, intern, latex, pict, style = "block" }: Props = $props();
+let { title, capt, intern, latex, pict, style = "block" }: Props = $props();
 
 </script>
 
@@ -36,6 +37,10 @@ let { title, intern, latex, pict, style = "block" }: Props = $props();
 
   <div class="info">
     <h4> {title} </h4>
+    
+    {#if capt}
+      <p> {capt} </p>
+    {/if}
   </div>
 </a>
 
@@ -48,7 +53,6 @@ a.card {
   padding: 0.75em;
   flex: 1 0 auto;
   display: flex;
-  flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
   
@@ -69,9 +73,12 @@ a.card {
 
   &.block {
     max-width: 20vw;
+    flex-direction: column;
   }
   &.row {
     width: 100%;
+    flex-direction: row-reverse;
+    justify-content: end;
   }
 }
 
@@ -96,12 +103,25 @@ a.card {
 
 .info {
   padding: 1em 0.4em 0.4em;
-  text-align: center;
-  border-top: 1px solid $col-line;
+
+  .card.block & {
+    text-align: center;
+    border-top: 1px solid $col-line;
+  }
+  .card.row & {
+    text-align: left;
+  }
 
   h4 {
     font-size: 150%;
     font-weight: 350;
+  }
+
+  .card.row & h4 {
+    width: 80%;
+    padding: 0 0 0.5em;
+    margin: 0 0 0.5em;
+    border-bottom: 1px solid $col-line;
   }
 }
 
