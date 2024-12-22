@@ -54,6 +54,9 @@ import { base } from "$app/paths";
 
 <style lang="scss">
 
+@use 'src/styles/links' as *;
+
+
 footer {
   width: 100%;
   padding: 4rem 0 2rem;
@@ -86,6 +89,10 @@ small {
   font-size: 75%;
   color: $col-text-deut;
   text-align: center;
+
+  a {
+    @include underline-link;
+  }
 }
 
 

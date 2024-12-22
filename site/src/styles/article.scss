@@ -4,6 +4,7 @@
 
 @use 'mixins/~colours' as *;
 @use 'mixins/~fonts' as *;
+@use 'links' as *;
 
 
 @counter-style double-arrows {
@@ -67,38 +68,7 @@ article {
   }
 
   a {
-    position: relative;
-    color: #3c8dbc;  // fallback
-    color: $col-prot;
-    text-decoration: none;
-    transition: color 0.12s ease-out;
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0.2em;
-      width: calc(100% - 0.4em);
-      height: 1px;
-      background-color: #3c8dbc;  // fallback
-      background-color: $col-prot;
-      transform: scaleX(1);
-      transform-origin: center;
-      transition: all 0.12s ease-out;
-    }
-
-    &:hover {
-      color: #f07d1c;  // fallback
-      color: $col-deut;
-
-      &:after {
-        width: 100%;
-        left: 0;
-        background-color: #f07d1c;  // fallback
-        background-color: $col-deut;
-        transform: scaleX(1.02)
-      }
-    }
+    @include underline-link;
   }
 
   ul {
