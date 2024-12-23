@@ -13,7 +13,7 @@ method:
 
 ## Question
 ```math
-\int_{\ }^{\ }\frac{e^{3x}-e^{-x}}{e^{x}+e^{-x}}dx
+\int \frac{e^{3x}-e^{-x}}{e^{x}+e^{-x}}dx
 ```
 
 
@@ -27,7 +27,7 @@ method:
 
 ### Substitute
 ```math
-\int_{\ }^{\ }\frac{e^{3x}-e^{-x}}{e^{x}+e^{-x}}dx
+\int \frac{e^{3x}-e^{-x}}{e^{x}+e^{-x}}dx
 ```
 
 ```math
@@ -42,11 +42,11 @@ method:
 ### Solve
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }\frac{t^{3}-\frac{1}{t}}{t+\frac{1}{t}}\cdot\frac{1}{t}\ dt
-  \\ &= \int_{\ }^{\ }\frac{t^{4}-1}{t^{2}+1}\cdot\frac{1}{t}\ dt
-  \\ &= \int_{\ }^{\ }\frac{\left(t^{2}-1\right)\left(t^{2}+1\right)}{t\left(t^{2}+1\right)}\ dt
-  \\ &= \int_{\ }^{\ }\frac{t^{2}-1}{t}\ dt
-  \\ &= \int_{\ }^{\ }t-\frac{1}{t}\ dt
+  &= \int \frac{t^{3}-\frac{1}{t}}{t+\frac{1}{t}}\cdot\frac{1}{t}\ dt
+  \\ &= \int \frac{t^{4}-1}{t^{2}+1}\cdot\frac{1}{t}\ dt
+  \\ &= \int \frac{\left(t^{2}-1\right)\left(t^{2}+1\right)}{t\left(t^{2}+1\right)}\ dt
+  \\ &= \int \frac{t^{2}-1}{t}\ dt
+  \\ &= \int t-\frac{1}{t}\ dt
   \\ &= \frac{1}{2}t^{2}-\ln t
   \\ &= \frac{1}{2}e^{2x}-x-c
 \end{align*}
