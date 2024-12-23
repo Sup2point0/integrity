@@ -20,8 +20,7 @@ let {
 
 <div class="line"
   style:width
-  style:margin-top={margin}
-  style:margin-bottom={margin}
+  style:margin
 >
 </div>
 

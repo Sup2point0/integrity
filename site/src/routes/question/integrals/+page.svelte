@@ -4,7 +4,9 @@ import { page_data } from "../page-data.svelte.ts";
 import type { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
+import Tag from "#parts/ui/tag.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
+import Line from "#parts/page/line.svelte";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Section from "#parts/page/section.svelte";
@@ -24,8 +26,22 @@ let question: Question | null = $derived(page_data.question);
 <section class="question">
   <Katex text={question?.question.content} />
 
-  {#if question?.desc}
-    <p> {question.desc} </p>
+  {#if question?.desc || question?.tags}
+    <div class="info">
+      {#if question?.desc}
+      <p> {question.desc} </p>
+      {/if}
+
+      <Line width="80%" margin="1rem auto" />
+
+      {#if question?.tags}
+        <div class="tags">
+          {#each question.tags as tag}
+            <Tag shard={tag} />
+          {/each}
+        </div>
+      {/if}
+    </div>
   {/if}
 </section>
 
@@ -58,12 +74,23 @@ let question: Question | null = $derived(page_data.question);
 
 <style lang="scss">
 
-section {
+section.question {
+  margin: 4rem 0;
+  font-size: 150%;
   text-align: center;
 
-  &.question {
-    margin: 4rem 0;
-    font-size: 150%;
+  .info {
+    margin: 3rem 0;
+
+    .tags {
+      margin: 2rem 0 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      column-gap: 0.25em;
+      row-gap: 0.2em;
+      font-size: 80%;
+    }
   }
 }
 

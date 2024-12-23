@@ -2,6 +2,8 @@
 
 <script lang="ts">
 
+import { search } from "#scripts/stores";
+
 import { base } from "$app/paths";
 
 
@@ -14,9 +16,9 @@ let { shard }: Props = $props();
 </script>
 
 
-<button class="tag">
-  <!-- onclick={() => { window.location.href = `${base}/search?tag=${shard}` }}
-> -->
+<button class="tag" onclick={() => {
+  window.location.href = `${base}/questions/all?tags=${shard}`;
+}}>
   {shard.toUpperCase()}
 </button>
 

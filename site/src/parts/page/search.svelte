@@ -12,7 +12,9 @@ import Toggle from "#parts/ui/toggle.svelte";
 import Select from "#parts/ui/select.svelte";
 
 import { fade } from "svelte/transition";
+import { page } from "$app/stores";
 import { base } from "$app/paths";
+import { onMount } from "svelte";
 
 
 interface Props {
@@ -23,6 +25,24 @@ let { tags = [] }: Props = $props();
 
 
 let open = $state(false);
+
+onMount(() => {
+  /** FIXME search params
+  if ($page.url.searchParams?.size) {
+    open = true;
+    console.log($page.url.searchParams.get("tags"));
+
+    if ($page.url.searchParams.has("tags")) {
+      search.tags = Object.fromEntries(
+        tags.map(tag => [tag, false])
+      );
+      for (let tag of $page.url.searchParams.getAll("tags")) {
+        search.tags[tag] = true;
+        search.tags = search.tags;
+      }
+    }
+  } */
+});
 
 </script>
 
