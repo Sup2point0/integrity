@@ -38,12 +38,8 @@ let { text, pict, link, intern, button, children }: Props = $props();
   </button>
 
 {:else}
-  <a class="clicky"
-    href={link || `${base}/${intern}`}
-  >
-    <button>
-      {@render content()}
-    </button>
+  <a class="clicky" href={link || `${base}/${intern}`}>
+    {@render content()}
   </a>
 
 {/if}
@@ -52,8 +48,12 @@ let { text, pict, link, intern, button, children }: Props = $props();
 <style lang="scss">
 
 .clicky {
+  width: max-content;
   padding: 0.4em 0.8em;
+  display: block;
   @include font-ui;
+  color: $col-text;
+  text-decoration: none;
   background-color: light-dark(white, black);
   border: 1px solid $col-line;
   border-radius: 0.5em;

@@ -12,7 +12,7 @@ interface Props {
 
 let {
   width = "100%",
-  margin = "4rem",
+  margin = "4rem 0",
 }: Props = $props();
 
 </script>

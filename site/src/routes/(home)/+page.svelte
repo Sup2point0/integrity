@@ -5,6 +5,8 @@ import Site from "#scripts/site";
 import Card from "#parts/ui/card.svelte";
 import QuestionCard from "#parts/ui/card.question.svelte";
 import Link from "#parts/ui/link.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
+import Line from "#parts/page/line.svelte";
 
 import Header from "#parts/core/header.svelte";
 
@@ -23,26 +25,32 @@ const featured = Site.get_featured();
 <section class="browse">
   <Header title="What fun are we having today?" />
 
-  <Card title="Integrals"
-    intern="questions/integrals"
-    latex={"\\int f(x) \\, dx"}
-  />
-  <Card title="Graph Drawing"
-    intern="questions/graph-drawing"
-    pict="previews/graph-drawing.png"
-  />
-  <Card title="Completing the Square"
-    intern="questions/complete-square"
-    latex={"a(x - p)^2 + q"}
-  />
-  <Card title="Guess the Graph"
-    intern="questions/guess-graph"
-    pict="previews/guess-graph.png"
-  />
-  <Card title="Addvent"
-    intern="questions/addvent"
-    pict="previews/addvent-text.png"
-  />
+  <div class="topics">
+    <Card title="Integrals"
+      intern="questions/integrals"
+      latex={"\\int f(x) \\, dx"}
+    />
+    <Card title="Graph Drawing"
+      intern="questions/graph-drawing"
+      pict="previews/graph-drawing.png"
+    />
+    <Card title="Completing the Square"
+      intern="questions/complete-square"
+      latex={"a(x - p)^2 + q"}
+    />
+    <!-- <Card title="Guess the Graph"
+      intern="questions/guess-graph"
+      pict="previews/guess-graph.png"
+    />
+    <Card title="Addvent"
+      intern="questions/addvent"
+      pict="previews/addvent-text.png"
+    /> -->
+  </div>
+
+  <div class="centre">
+    <Clicky text="View More" intern="questions" />
+  </div>
 </section>
 
 <section class="featured">
@@ -56,18 +64,22 @@ const featured = Site.get_featured();
       />
     {/each}
   </div>
+  
+  <div class="centre">
+    <Clicky text="View All" intern="questions/all" />
+  </div>
 </section>
 
-<section>
-  <Header title="" />
+<Line />
 
+<section>
   <a href="https://xkcd.com/2117">
     <img alt="XKCD 2117: Differentiation and Integration"
       src="https://imgs.xkcd.com/comics/differentiation_and_integration.png"
     />
   </a>
 
-  <div style:margin="2rem auto" style:width="max-content">
+  <div class="centre">
     <Link text="XKCD, 2117" link="https://xkcd.com/2117" />
   </div>
 </section>
@@ -78,14 +90,14 @@ const featured = Site.get_featured();
 section {
   margin: 0 0 4rem;
   text-align: center;
-  
-  &.browse {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+}
+
+.browse .topics {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .featured .questions {
@@ -94,6 +106,12 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+
+.centre {
+  width: max-content;
+  margin: 2rem auto 0;
 }
 
 </style>
