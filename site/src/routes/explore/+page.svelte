@@ -24,13 +24,11 @@ import { base } from "$app/paths";
   { text: "Explore" },
 ]} />
 
-<Header title="Explore"
-  capt="Integrity"
-/>
 
+<Header title="Explore" capt="Integrity" />
 
 <div class="content">
-  <section class="questions">
+  <section>
     <h2> Questions </h2>
     <div class="links">
       <Link text="All" intern="questions/all" />
@@ -46,7 +44,7 @@ import { base } from "$app/paths";
     </div>
   </section>
 
-  <section class="tools">
+  <section>
     <h2> Tools </h2>
     <div class="links">
       <Link text="Speedrun" intern="speedrun" />
@@ -54,7 +52,7 @@ import { base } from "$app/paths";
     </div>
   </section>
 
-  <section class="docs">
+  <section>
     <h2> Docs </h2>
     <div class="links">
       <Link text="Shards" intern="docs/shards" />
@@ -62,7 +60,7 @@ import { base } from "$app/paths";
     </div>
   </section>
 
-  <section class="info">
+  <section>
     <h2> Info </h2>
     <div class="links">
       <Link text="About" intern="info/synopsis" />
@@ -73,13 +71,32 @@ import { base } from "$app/paths";
     </div>
   </section>
 
-  <section class="guides">
+  <section>
     <h2> Guides </h2>
     <div class="links">
-      <Link text="Integrals" intern="" />
+      <Link text="S-I+G-N Errors" intern="guides/sign" />
       <Link text="Why Draw Graphs?" intern="" />
-      <Link text="Why Complete the Square?" intern="" />
-      <Link text="Why Desmos?" intern="" />
+    </div>
+  </section>
+
+  <section>
+    <h2> Integrals </h2>
+    <div class="links">
+      <Link text="Why Integrate?" intern="guides/integration/why" />
+    </div>
+  </section>
+
+  <section>
+    <h2> Completing the Square </h2>
+    <div class="links">
+      <Link text="Why Complete the Square?" intern="guides/complete-square/why" />
+    </div>
+  </section>
+
+  <section>
+    <h2> Desmos </h2>
+    <div class="links">
+      <Link text="Why Desmos?" intern="guides/desmos/why" />
     </div>
   </section>
 </div>
