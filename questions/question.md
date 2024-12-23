@@ -36,6 +36,13 @@ method:
 ### Solve
 ```math
 \begin{align*}
+  &\ 
+  \\ =&\ 
+\end{align*}
+```
+
+```math
+\begin{align*}
   &= 
   \\ &= 
 \end{align*}
