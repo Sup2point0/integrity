@@ -73,9 +73,9 @@
     },
     "guides/sign.md": {
       "path": "guides/sign.md",
-      "last_deploy": "2024-12-22 09:12:24 +0000",
-      "slocs": 43,
-      "chars": 3471,
+      "last_deploy": "2024-12-24 21:10:14 +0000",
+      "slocs": 79,
+      "chars": 4146,
       "isIndex": false,
       "flags": [
         "live"
