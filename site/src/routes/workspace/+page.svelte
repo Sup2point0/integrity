@@ -3,8 +3,6 @@
 import Site from "#scripts/site";
 import { userdata } from "#scripts/stores";
 
-import { set_preset } from "./scripts";
-
 import Clicky from "#parts/ui/clicky.svelte";
 import Select from "#parts/ui/select.svelte";
 
@@ -15,7 +13,7 @@ import Header from "#parts/core/header.svelte";
 import { onMount } from "svelte";
 
 
-let desmos: object | false | null = null;
+let desmos: any | false | null = null;
 
 function try_load_desmos(i: number = 0)
 {
@@ -37,6 +35,27 @@ function try_load_desmos(i: number = 0)
 }
 
 onMount(try_load_desmos);
+
+
+// function load_preset() {
+//   switch (userdata["desmos-preset"]) {
+//     case "int":
+//       desmos.setBlank();
+//       desmos.setExpression({ id: "int", latex: "f(x) = x^2" });
+//       desmos.setExpression({ id: "int", latex: "\\int f(x) dx" });
+//       break;
+
+//     case "c-square":
+//       desmos.setBlank();
+//       desmos.setExpression({ id: "c-square", latex: "f(x) = x^2 + 4x + 4" });
+//       desmos.setExpression({ id: "c-square", latex: "f(x) = (x + 2)^2" });
+//       break;
+
+//     default:
+//       desmos.setBlank();
+//       break;
+//   }
+// }
 
 </script>
 
@@ -67,16 +86,29 @@ onMount(try_load_desmos);
 
   <div>
     <Clicky text="RESET"
-      button={() => {}}
+      button={() => {
+        if (desmos) {
+          desmos.setBlank();
+        } else {
+          alert("Oops, desmos calculator hasn’t loaded!")
+        }
+      }}
     />
   </div>
 </nav>
 
 <div id="desmos-window">
-  {#if desmos === false}
+  {#if desmos === null}
+    <p> Loading Desmos calculator... </p>
+  {:else if desmos === false}
     <p> Oops, failed to load Desmos calculator! </p>
+    <p> Please try checking your internet connection and reloading the page. </p>
   {/if}
 </div>
+
+<p class="caption">
+  Created with the Desmos API, used with permission from Desmos Studio PBC.
+</p>
 
 
 <style lang="scss">
@@ -105,6 +137,15 @@ nav.calc-controls {
     color: $col-text-deut;
     text-align: center;
   }
+}
+
+p.caption {
+  padding-top: 1em;
+  @include font-ui;
+  font-weight: 200;
+  color: $col-text-deut;
+  font-size: 90%;
+  text-align: center;
 }
 
 </style>
