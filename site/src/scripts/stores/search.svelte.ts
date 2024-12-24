@@ -36,7 +36,7 @@ export class SearchData
   });
 
   view: "grid" | "list" = $state("grid");
-  sort: "date" | "name" | null = $state(null);
+  sort: "date" | "name" | "rel" | null = $state(null);
   reverse: boolean = $state(false);
 
   filter_questions(
@@ -82,13 +82,23 @@ export class SearchData
     // Sort
     if (this.sort) {
       switch (this.sort) {
+        case "rel":
+          this.sort_rel(out);
+          break;
+        
         case "name":
           out.sort((prot, deut) => (prot.title && deut.title) ? prot.title.localeCompare(deut.title) : -1);
           break;
         
         case "date":
-          out.sort((prot, deut) => (prot.date && deut.date) ? deut.date - prot.date : -1);
+          this.sort_date(out);
           break;
+      }
+    } else {
+      if (this.query) {
+        this.sort_rel(out);
+      } else {
+        this.sort_date(out);
       }
     }
   
@@ -97,7 +107,15 @@ export class SearchData
     }
   
     return out;
-  }  
+  }
+
+  sort_rel(source: Question[]) {
+    return source;  // TODO
+  }
+
+  sort_date(source: Question[]) {
+    return source.sort((prot, deut) => (prot.date && deut.date) ? deut.date - prot.date : -1);
+  }
 }
 
 /** Search options for the current page. */
