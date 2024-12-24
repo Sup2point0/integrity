@@ -1,6 +1,6 @@
 ---
 topic: integrals
-title: 
+title: bleugh
 desc: 
 date: 2024 December 8
 tags:

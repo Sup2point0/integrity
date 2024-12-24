@@ -1831,6 +1831,119 @@
         ]
       }
     },
+    "s24f-tm1": {
+      "topic": "integrals",
+      "title": "polymorphism",
+      "desc": null,
+      "date": "2024 December 23",
+      "tags": [
+        "trig",
+        "horror"
+      ],
+      "method": [
+        "factorise"
+      ],
+      "shard": "s24f-tm1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\sin\\left(x\\right)^{2}\\cos\\left(x+e\\right)^{2}-\\sin\\left(x+e\\right)^{2}\\cos\\left(x\\right)^{2}\\ dx"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "There’s a lot of squaring going on here."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What if you group the terms that are being squared?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "We have $P^2 - Q^2$. What can we do with that?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{1}{2}\\sin\\left(-e\\right)\\cos\\left(2x+e\\right)-c"
+        }
+      ],
+      "solution": {
+        "difference of 2 squares": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\sin\\left(x\\right)^{2}\\cos\\left(x+e\\right)^{2}-\\sin\\left(x+e\\right)^{2}\\cos\\left(x\\right)^{2}\\ dx  \\\\ =&\\ \\int \\left(\\sin\\left(x\\right)\\cos\\left(x+e\\right)-\\cos\\left(x\\right)\\sin\\left(x+e\\right)\\right)\\cdot\\left(\\sin\\left(x\\right)\\cos\\left(x+e\\right)+\\cos\\left(x\\right)\\sin\\left(x+e\\right)\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "compound angle identities": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\sin\\left(x-\\left(x+e\\right)\\right)\\cdot\\sin\\left(x+\\left(x+e\\right)\\right)\\ dx  \\\\ &= \\int \\sin\\left(-e\\right)\\sin\\left(2x+e\\right)\\ dx  \\\\ &= -\\sin\\left(e\\right)\\int \\sin\\left(2x+e\\right)\\ dx  \\\\ &= -\\frac{1}{2}\\sin\\left(-e\\right)\\cos\\left(2x+e\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s24f-tm2": {
+      "topic": "integrals",
+      "title": "isomorphism",
+      "desc": null,
+      "date": "2024 December 24",
+      "tags": [
+        "trig"
+      ],
+      "method": [
+        "spot"
+      ],
+      "shard": "s24f-tm2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\sin\\left(2x\\right)\\cos\\left(x-\\pi\\right)\\ dx"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "We want our trigonometric functions in terms of the same input expression."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "In other words, $\\sin{x}$ and $\\cos{x}$."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What does adding an integer multiple of $\\pi$ to the input of $\\cos$ do?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{2}{3}\\cos\\left(x\\right)^{3}-c"
+        }
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\sin\\left(2x\\right)\\cos\\left(x-\\pi\\right)\\ dx  \\\\ =&\\ \\int 2\\sin\\left(x\\right)\\cos\\left(x\\right)\\cdot-\\cos\\left(x\\right)\\ dx  \\\\ =&\\ 2\\int -\\sin\\left(x\\right)\\cos\\left(x\\right)^{2}\\ dx  \\\\ =&\\ \\frac{2}{3}\\cos\\left(x\\right)^{3}-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s24f-xp1": {
       "topic": "integrals",
       "title": "expletive",
