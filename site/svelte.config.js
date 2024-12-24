@@ -3,7 +3,6 @@ import { sveltePreprocess } from "svelte-preprocess";
 
 import { mdsvex } from "mdsvex";
 import remarkMath from "remark-math";
-// import rehypeKatex from "rehype-katex";
 import rehypeKatex from "rehype-katex-svelte";
 
 import scss_config from "./scss-config.js";

@@ -19,8 +19,9 @@ import { base } from "$app/paths";
 
         <div class="quicklinks">
           <Link text="About" intern="info/synopsis" />
-          <Link text="Explore" intern="info/explore" />
+          <Link text="Explore" intern="explore" />
           <Link text="Docs" intern="docs" />
+          <Link text="Guides" intern="guides" />
           <Link text="Privacy" intern="info/privacy" />
           <Link text="License" intern="info/license" />
         </div>

@@ -99,6 +99,13 @@ import { base } from "$app/paths";
       <Link text="Why Desmos?" intern="guides/desmos/why" />
     </div>
   </section>
+
+  <section>
+    <h2> Miscellaneous </h2>
+    <div class="links">
+      <Link text="What’s This?" intern="integrity/integrity" />
+    </div>
+  </section>
 </div>
 
 

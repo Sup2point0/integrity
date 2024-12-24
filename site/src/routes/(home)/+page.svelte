@@ -7,6 +7,7 @@ import QuestionCard from "#parts/ui/card.question.svelte";
 import Link from "#parts/ui/link.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
 import Line from "#parts/page/line.svelte";
+import Katex from "#parts/katex.svelte";
 
 import Header from "#parts/core/header.svelte";
 
@@ -83,6 +84,8 @@ const featured = Site.get_featured();
     <Link text="XKCD, 2117" link="https://xkcd.com/2117" />
   </div>
 </section>
+
+<Line />
 
 
 <style lang="scss">
