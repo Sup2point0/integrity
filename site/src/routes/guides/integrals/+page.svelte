@@ -11,19 +11,19 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
-<Meta title="Completing the Square" />
+<Meta title="Integration · Guides" />
 
 
 <Breadcrumbs levels={[
   { text: "Guides", intern: "guides" },
-  { text: "Completing the Square" }
+  { text: "Integration" }
 ]} />
 
-<Header title="Completing the Square" />
+<Header title="Integration" />
 
 
 <div class="browse">
-  {#each Site.guides["complete-square"] as page}
+  {#each Site.guides["integrals"] as page}
     <Card title={page.head}
       capt={page.desc}
       intern={page.dest}

@@ -14,7 +14,7 @@ interface SiteData {
   get_featured: () => Question[];
 
   guides: {
-    [topic: string]: Question[];
+    [topic: string]: object[];
   }
 }
 

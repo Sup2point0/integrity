@@ -1,14 +1,15 @@
 {
   "meta": {
-    "exported": "2024-12-24",
-    "file_count": 4,
-    "page_count": 3
+    "exported": "2024-12-25",
+    "file_count": 5,
+    "page_count": 4
   },
   "index": {
     "guides": {
       "route": null,
       "pages": [
-        "guides/complete-square/why.md"
+        "guides/complete-square/why.md",
+        "guides/integrals/why.md"
       ]
     },
     "complete-square": {
@@ -16,14 +17,24 @@
       "pages": [
         "guides/complete-square/why.md"
       ]
+    },
+    "integrals": {
+      "route": null,
+      "pages": [
+        "guides/integrals/why.md"
+      ]
     }
   },
   "shard": {
     "guides": [
-      "guides/complete-square/why.md"
+      "guides/complete-square/why.md",
+      "guides/integrals/why.md"
     ],
     "complete-square": [
       "guides/complete-square/why.md"
+    ],
+    "integrals": [
+      "guides/integrals/why.md"
     ]
   },
   "pages": {
@@ -67,6 +78,31 @@
       "shard": [
         "guides",
         "complete-square"
+      ],
+      "date": null,
+      "date_display": null
+    },
+    "guides/integrals/why.md": {
+      "path": "guides/integrals/why.md",
+      "last_deploy": "2024-12-25 09:19:21 +0000",
+      "slocs": 31,
+      "chars": 3686,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/integrals/why",
+      "title": "Why Integrate?",
+      "head": "Why Integrate?",
+      "capt": null,
+      "desc": null,
+      "index": [
+        "guides",
+        "integrals"
+      ],
+      "shard": [
+        "guides",
+        "integrals"
       ],
       "date": null,
       "date_display": null
