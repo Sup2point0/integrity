@@ -61,9 +61,9 @@ export class SearchData
     }
   
     if (this.include.hints) {
-      out = out.filter(question => question.hints?.length > 0);
+      out = out.filter(question => question.hints?.length);
     } else if (this.exclude.hints) {
-      out = out.filter(question => !(question.hints?.length > 0));
+      out = out.filter(question => !(question.hints?.length));
     }
   
     // Search
@@ -94,7 +94,8 @@ export class SearchData
           this.sort_date(out);
           break;
       }
-    } else {
+    }
+    else {
       if (this.query) {
         this.sort_rel(out);
       } else {

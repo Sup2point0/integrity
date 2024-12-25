@@ -1,6 +1,6 @@
 ---
 path: guides/integrals/why.md
-last_deploy: 2024-12-25 09:23:21.099304400 +00:00
+last_deploy: 2024-12-25 13:41:03.223510400 +00:00
 flags:
 - live
 title: Why Integrate?
@@ -35,11 +35,9 @@ Integration is the pinnacle of mathematical problem solving. If you are a fan of
 
 If differentiation is but a water molecule, then integration is the seven oceans, with tides that shape the shore of your understanding, and more chaos to float your boat than you could ever imagine. The uncertainty of the blue waters staring back at you may cast terror into your heart, but with nought but a few days at sea, it will soon start to feel like home.
 
-As my friend [iTechnical]() famously alluded to, it’s rather hilarious how integrals are a kind of mathematical problem where almost all of the questions one could possibly construct are unsolvable. Of course, in the uncountably infinite number of potential problems, this still leaves more than enough to satiate our mathematical thirst – but the imposing enormity of the expanse that is integration is quite humbling to appreciate; no doubt, it is not dissimilar from realising one’s insignificance within the universe.
+As my friend [iTechnical](https://github.com/itechnicals) famously alluded to, it’s rather hilarious how integrals are a kind of mathematical problem where almost all of the questions one could possibly construct are unsolvable. Of course, in the uncountably infinite number of potential problems, this still leaves more than enough to satiate our mathematical thirst – but the imposing enormity of the expanse that is integration is quite humbling to appreciate; no doubt, it is not dissimilar from realising one’s insignificance within the universe.
 
-Integration trains you in so much more than simply memorising antiderivatives. It trains you to be swift but accurate in your algebra. You familiarise identities. You learn to spot how you can manipulate expressions. With enough time, integration becomes second nature – and that is when the really juicy stuff comes.
-
-One can integrate without understanding, or understanding without integrating, but comparing the two is like comparing a . Theory can only take you so far.
+Integration trains you in so much more than simply memorising antiderivatives. It trains you to be swift but accurate in your algebra. With enough time, integration becomes second nature – and that is when the really juicy stuff comes.
 
 And of course, integration is by no means restricted to pure maths. It’s behind probability in statistics, polarisation and fields in physics, and spectra analysis in chemistry.
 
