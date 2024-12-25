@@ -1,6 +1,6 @@
 ---
 path: guides/integrals/why.md
-last_deploy: 2024-12-25 09:19:21.062569800 +00:00
+last_deploy: 2024-12-25 09:23:21.099304400 +00:00
 flags:
 - live
 title: Why Integrate?
@@ -49,4 +49,4 @@ To integrate is to take up arms, embrace challenge, stake one’s soul and take 
 
 Have you even *math-d* until you’ve integrated?
 
-- c
+\- c

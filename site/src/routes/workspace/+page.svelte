@@ -1,5 +1,7 @@
 <script lang="ts">
 
+import { presets } from "./presets";
+
 import Site from "#scripts/site";
 import { userdata } from "#scripts/stores";
 
@@ -14,6 +16,10 @@ import { onMount } from "svelte";
 
 
 let desmos: any | false | null = null;
+let last_reset: number = Date.now();
+
+
+onMount(try_load_desmos);
 
 function try_load_desmos(i: number = 0)
 {
@@ -34,28 +40,21 @@ function try_load_desmos(i: number = 0)
   }
 }
 
-onMount(try_load_desmos);
+function load_preset(preset: string | null = null) {
+  if (preset == null) return;
 
+  let data = presets[preset];
+  if (!data) {
+    alert("Oops, failed to apply preset!");
+    return;
+  }
 
-// function load_preset() {
-//   switch (userdata["desmos-preset"]) {
-//     case "int":
-//       desmos.setBlank();
-//       desmos.setExpression({ id: "int", latex: "f(x) = x^2" });
-//       desmos.setExpression({ id: "int", latex: "\\int f(x) dx" });
-//       break;
+  for (let expr of data) {
+    desmos.setExpression(expr);
+  }
 
-//     case "c-square":
-//       desmos.setBlank();
-//       desmos.setExpression({ id: "c-square", latex: "f(x) = x^2 + 4x + 4" });
-//       desmos.setExpression({ id: "c-square", latex: "f(x) = (x + 2)^2" });
-//       break;
-
-//     default:
-//       desmos.setBlank();
-//       break;
-//   }
-// }
+  desmos.setDefaultState(desmos.getState());
+}
 
 </script>
 
@@ -77,7 +76,7 @@ onMount(try_load_desmos);
 <nav class="calc-controls">
   <div>
     <small> PRESET </small>
-    <Select value={userdata["desmos-preset"]} options={{
+    <Select bind:value={userdata["desmos-preset"]} options={{
       "Default": null,
       "Integral": "int",
       "Completing the Square": "c-square"
@@ -87,11 +86,21 @@ onMount(try_load_desmos);
   <div>
     <Clicky text="RESET"
       button={() => {
-        if (desmos) {
-          desmos.setBlank();
-        } else {
-          alert("Oops, desmos calculator hasn’t loaded!")
+        if (!desmos) {
+          alert("Oops, desmos calculator hasn’t loaded!");
+          return;
         }
+
+        // Allow resets in quick succession
+        if (Date.now() - last_reset > 10000) {
+          if (!window.confirm("Any work will be cleared.")) {
+            return;
+          }
+        }
+
+        desmos.setBlank();
+        load_preset(userdata["desmos-preset"]);
+        last_reset = Date.now();
       }}
     />
   </div>
@@ -107,7 +116,7 @@ onMount(try_load_desmos);
 </div>
 
 <p class="caption">
-  Created with the Desmos API, used with permission from Desmos Studio PBC.
+  Created with the Desmos API, used with permission kindly provided by Desmos Studio PBC!
 </p>
 
 
