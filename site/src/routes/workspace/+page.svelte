@@ -6,7 +6,7 @@ import Site from "#scripts/site";
 import { userdata } from "#scripts/stores";
 
 import Clicky from "#parts/ui/clicky.svelte";
-import Select from "#parts/ui/select.svelte";
+import Select from "#parts/ui/select-dropdown.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -81,6 +81,9 @@ function load_preset(preset: string | null = null) {
       "Integral": "int",
       "Completing the Square": "c-square"
     }} />
+  </div>
+
+  <div>
   </div>
 
   <div>

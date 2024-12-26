@@ -9,7 +9,7 @@ import { search } from "#scripts/stores";
 
 import Clicky from "#parts/ui/clicky.svelte";
 import Toggle from "#parts/ui/toggle.svelte";
-import Select from "#parts/ui/select.svelte";
+import Select from "#parts/ui/select-dropdown.svelte";
 
 import { fade } from "svelte/transition";
 import { page } from "$app/stores";

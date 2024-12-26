@@ -92,7 +92,7 @@ button.select {
 
 ul.dropdown {
   margin-top: 1px;
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0.5em 0.4em;
   display: block;
   position: absolute;
   z-index: 15;
