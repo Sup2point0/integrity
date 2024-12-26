@@ -15,7 +15,7 @@ import Header from "#parts/core/header.svelte";
 
 <Breadcrumbs levels={[
   { text: "Guides", intern: "guides" },
-  { text: "Integration", intern: "integrals" },
+  { text: "Integration", intern: "guides/integrals" },
   { text: "Why Integrate?" },
 ]} />
 
