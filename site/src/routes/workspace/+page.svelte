@@ -105,26 +105,28 @@ function load_question(shard: string | null = null) {
 <Header title="Workspace" />
 
 <nav class="calc-controls">
-  <div>
+  <section id="preset">
     <small> PRESET </small>
     <Select bind:value={userdata["desmos-preset"]} options={{
       "Default": null,
       "Integral": "integrals",
       "Completing the Square": "complete-square"
     }} />
-  </div>
+  </section>
 
-  <div>
-    <SelectSearch text="load question"
-      bind:value={selected_question}
-      options={questions.map(q => q.shard)}
-      onselect={value => {
-        if (check_desmos()) load_question(value);
-      }}
-    />
-  </div>
+  <section id="search">
+    <div class="container">
+      <SelectSearch text="load question"
+        bind:value={selected_question}
+        options={questions.map(q => q.shard)}
+        onselect={value => {
+          if (check_desmos()) load_question(value);
+        }}
+      />
+    </div>
+  </section>
 
-  <div>
+  <section id="reset">
     <Clicky text="RESET"
       button={() => {
         if (!check_desmos()) return;
@@ -141,7 +143,7 @@ function load_question(shard: string | null = null) {
         last_reset = Date.now();
       }}
     />
-  </div>
+  </section>
 </nav>
 
 <div id="desmos-window">
@@ -152,6 +154,16 @@ function load_question(shard: string | null = null) {
     <p> Please try checking your internet connection and reloading the page. </p>
   {/if}
 </div>
+
+<nav class="calc-controls">
+  <section id="left">
+    <Clicky text="View Question" />
+  </section>
+
+  <section id="right">
+    <Clicky text="Open in Desmos" />
+  </section>
+</nav>
 
 <p class="caption">
   Created with the Desmos API, used with permission kindly provided by Desmos Studio PBC!
@@ -164,13 +176,32 @@ nav.calc-controls {
   margin: 1rem 0;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: no-wrap;
+  flex-flow: row wrap;
+  align-items: stretch;
 
-  small {
-    padding: 0 0.5em;
-    @include font-ui;
+  > section {
+    min-width: max-content;
+    flex: 1 0;
+    display: flex;
+    align-items: stretch;
+
+    &#preset {
+      align-items: center;
+    }
+    &#search {
+      justify-content: center;
+      .container {
+        width: max-content;
+        position: relative;
+      }
+    }
+    &#reset {
+      justify-content: end;
+    }
+
+    &#right {
+      justify-content: end;
+    }
   }
 }
 
@@ -186,8 +217,14 @@ nav.calc-controls {
   }
 }
 
+
+small {
+  padding: 0 0.5em;
+  @include font-ui;
+}
+
 p.caption {
-  padding-top: 1em;
+  padding-top: 2em;
   @include font-ui;
   font-weight: 200;
   color: $col-text-deut;

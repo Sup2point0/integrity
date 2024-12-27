@@ -30,53 +30,63 @@ let open = $state(false);
 </script>
 
 
-<search>
-  <button class="select" class:open
-    onkeydown={e => {
-      if (e.key === "Enter" || e.key === " ") { open = !open; }
-    }}
-    onfocus={() => { open = true; }}
-    onfocusout={() => { open = false; }}
-    onmouseenter={() => { open = true; }}
-    onmouseleave={() => { open = false; }}
-  >
-    <input type="search"
-      bind:value
-      placeholder={text ?? "load question"}
+<div class="container">
+
+  <search>
+    <button class="select" class:open
       onkeydown={e => {
-        if (e.key === "Enter") onselect(value);
+        if (e.key === "Enter" || e.key === " ") { open = !open; }
       }}
-    />
+      onfocus={() => { open = true; }}
+      onfocusout={() => { open = false; }}
+      onmouseenter={() => { open = true; }}
+      onmouseleave={() => { open = false; }}
+    >
+      <input type="search"
+        bind:value
+        placeholder={text ?? "load question"}
+        onkeydown={e => {
+          if (e.key === "Enter") onselect(value);
+        }}
+      />
 
-    <img class="arrow" alt="/" src="{base}/arrow.svg" />
-  </button>
+      <img class="arrow" alt="/" src="{base}/arrow.svg" />
+    </button>
 
-  <Clicky button={() => onselect(value)}>
-    Go
-  </Clicky>
-</search>
+    <Clicky button={() => onselect(value)}>
+      Go
+    </Clicky>
+  </search>
 
 
-{#snippet select_option(val: string)}
-  <li class="option" class:active={value === val}
-    onclick={() => { value = val; }}
-    onkeydown={e => {
-      if (e.key === "Enter" || e.key === " ") { value = val; }
-    }}
-    tabindex={0}
-  >
-    {val}
-  </li>
-{/snippet}
+  {#snippet select_option(val: string)}
+    <li class="option" class:active={value === val}
+      onclick={() => { value = val; }}
+      onkeydown={e => {
+        if (e.key === "Enter" || e.key === " ") { value = val; }
+      }}
+      tabindex={0}
+    >
+      {val}
+    </li>
+  {/snippet}
 
-<ul class="dropdown" class:open>
-  {#each options.slice(0, 10) as option}
-    {@render select_option(option)}
-  {/each}
-</ul>
+  <ul class="dropdown" class:open>
+    {#each options.slice(0, 10) as option}
+      {@render select_option(option)}
+    {/each}
+  </ul>
+
+</div>
 
 
 <style lang="scss">
+
+.container {
+  width: 100%;
+  display: block;
+  position: relative;
+}
 
 search {
   display: flex;

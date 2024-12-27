@@ -28,48 +28,58 @@ let selected_option = $derived(
 </script>
 
 
-<button class="select"
-  onkeydown={e => {
-    if (e.key === "Enter" || e.key === " ") { open = !open; }
-  }}
-  onfocus={() => { open = true; }}
-  onfocusout={() => { open = false; }}
-  onmouseenter={() => { open = true; }}
-  onmouseleave={() => { open = false; }}
->
-  {selected_option}
-
-  <img class="arrow" alt="/" src="{base}/arrow.svg"
-    style:transform={open ? "rotate(180deg)" : "rotate(0deg)"}
-  />
-</button>
-
-
-<ul class="dropdown" class:shown={open}>
-  {#each (
-    Array.isArray(options) ? options.map(opt => [opt, opt]) : Object.entries(options)
-  ) as [option, value]}
-    {@render select_option(option, value)}
-  {/each}
-</ul>
-
-{#snippet select_option(text: string, val: string)}
-  <li class="option" class:active={value === val}
-    onclick={() => { value = val; }}
+<div class="container">
+  <button class="select"
     onkeydown={e => {
-      if (e.key === "Enter" || e.key === " ") { value = val; }
+      if (e.key === "Enter" || e.key === " ") { open = !open; }
     }}
-    tabindex={0}
+    onfocus={() => { open = true; }}
+    onfocusout={() => { open = false; }}
+    onmouseenter={() => { open = true; }}
+    onmouseleave={() => { open = false; }}
   >
-    {text}
-  </li>
-{/snippet}
+    {selected_option}
+
+    <img class="arrow" alt="/" src="{base}/arrow.svg"
+      style:transform={open ? "rotate(180deg)" : "rotate(0deg)"}
+    />
+  </button>
+
+
+  <ul class="dropdown" class:shown={open}>
+    {#each (
+      Array.isArray(options) ? options.map(opt => [opt, opt]) : Object.entries(options)
+    ) as [option, value]}
+      {@render select_option(option, value)}
+    {/each}
+  </ul>
+
+  {#snippet select_option(text: string, val: string)}
+    <li class="option" class:active={value === val}
+      onclick={() => { value = val; }}
+      onkeydown={e => {
+        if (e.key === "Enter" || e.key === " ") { value = val; }
+      }}
+      tabindex={0}
+    >
+      {text}
+    </li>
+  {/snippet}
+</div>
 
 
 <style lang="scss">
 
+.container {
+  width: max-content;
+  display: block;
+  position: relative;
+}
+
 button.select {
   padding: 0.5em 0.8em;
+  position: relative;
+
   @include font-ui;
   font-size: 90%;
   background-color: light-dark(white, black);
@@ -93,6 +103,7 @@ button.select {
 
 
 ul.dropdown {
+  width: max-content;
   padding: 0.25em 0.5em 0.4em;
   margin-top: 1px;
   display: block;
@@ -128,6 +139,7 @@ ul.dropdown {
 }
 
 li {
+  width: 100%;
   min-width: 4em;
   margin: 0.2em 0;
   padding: 0.4em 0.6em;
