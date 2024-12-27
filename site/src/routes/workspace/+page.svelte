@@ -1,12 +1,13 @@
 <script lang="ts">
 
-import { presets } from "./presets";
+import { presets, preset_question } from "./presets";
 
 import Site from "#scripts/site";
 import { userdata } from "#scripts/stores";
 
 import Clicky from "#parts/ui/clicky.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
+import SelectSearch from "#parts/ui/select-search.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -15,7 +16,15 @@ import Header from "#parts/core/header.svelte";
 import { onMount } from "svelte";
 
 
+const questions = Site.get_list_of_all_questions();
+const questions_map = Site.get_map_of_all_questions();
+
+
 let desmos: any | false | null = null;
+
+/** The shard of the currently selected question. */
+let selected_question: string | null = null;
+/** The epoch timestamp of the last moment the calculator was reset. */
 let last_reset: number = Date.now();
 
 
@@ -40,6 +49,14 @@ function try_load_desmos(i: number = 0)
   }
 }
 
+function check_desmos(): boolean {
+  if (!desmos) {
+    alert("Oops, desmos calculator hasn’t loaded!");
+    return false;
+  }
+  return true;
+}
+
 function load_preset(preset: string | null = null) {
   if (preset == null) return;
 
@@ -49,11 +66,25 @@ function load_preset(preset: string | null = null) {
     return;
   }
 
-  for (let expr of data) {
-    desmos.setExpression(expr);
+  desmos.setExpressions(data);
+  desmos.setDefaultState(desmos.getState());
+}
+
+function load_question(shard: string | null = null) {
+  if (!shard) {
+    alert("Woah, no question shard provided!");
+    return;
   }
 
-  desmos.setDefaultState(desmos.getState());
+  let question = questions_map[shard];
+  if (!question) {
+    alert("Hmm, question shard appears to be invalid!");
+    return;
+  }
+
+  desmos.setBlank();
+  load_preset(question.topic);
+  preset_question(desmos, question);
 }
 
 </script>
@@ -78,21 +109,25 @@ function load_preset(preset: string | null = null) {
     <small> PRESET </small>
     <Select bind:value={userdata["desmos-preset"]} options={{
       "Default": null,
-      "Integral": "int",
-      "Completing the Square": "c-square"
+      "Integral": "integrals",
+      "Completing the Square": "complete-square"
     }} />
   </div>
 
   <div>
+    <SelectSearch text="load question"
+      bind:value={selected_question}
+      options={questions.map(q => q.shard)}
+      onselect={value => {
+        if (check_desmos()) load_question(value);
+      }}
+    />
   </div>
 
   <div>
     <Clicky text="RESET"
       button={() => {
-        if (!desmos) {
-          alert("Oops, desmos calculator hasn’t loaded!");
-          return;
-        }
+        if (!check_desmos()) return;
 
         // Allow resets in quick succession
         if (Date.now() - last_reset > 10000) {

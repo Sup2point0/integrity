@@ -9,7 +9,7 @@ import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 
 
-const questions = Site.get_questions("addvent");
+const questions = Site.get_questions_of_topic("addvent");
 const count = questions.length;
 
 </script>

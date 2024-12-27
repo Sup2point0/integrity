@@ -14,10 +14,10 @@ import { onMount } from "svelte";
 
 
 const tags = Site.questions["integrals"].tags;
-const count = Site.get_questions("integrals").length;
+const count = Site.get_questions_of_topic("integrals").length;
 
 let filtered = $derived(
-  search.filter_questions(Site.get_questions("integrals"))
+  search.filter_questions(Site.get_questions_of_topic("integrals"))
 );
 
 

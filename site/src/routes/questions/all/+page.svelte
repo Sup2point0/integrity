@@ -13,7 +13,7 @@ import Search from "#parts/page/search.svelte";
 import { onMount } from "svelte";
 
 
-const questions = Site.get_all_questions();
+const questions = Site.get_list_of_all_questions();
 const count = questions.length;
 const tags = Site.get_all_tags();
 

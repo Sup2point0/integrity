@@ -8,8 +8,9 @@ interface SiteData {
 
   questions: QuestionsData;
 
-  get_questions: (topic: string) => Question[];
-  get_all_questions: () => Question[];
+  get_questions_of_topic: (topic: string) => Question[];
+  get_list_of_all_questions: () => Question[];
+  get_map_of_all_questions: () => Record<string, Question>;
   get_all_tags: () => string[];
   get_featured: () => Question[];
 
@@ -23,20 +24,26 @@ const Site: SiteData = {
 
   questions: questions,
 
-  get_questions: (topic) => {
+  get_questions_of_topic: (topic) => {
     return Object.values(Site.questions[topic]?.questions ?? {});
   },
 
-  get_all_questions: () => {
-    return Object.values(Site.questions).flatMap(topic => Object.values(topic.questions))
+  get_list_of_all_questions: () => {
+    return Object.values(Site.questions).flatMap(topic => Object.values(topic.questions));
+  },
+
+  get_map_of_all_questions: () => {
+    return Object.fromEntries(
+      Object.values(Site.questions).flatMap(topic => Object.entries(topic.questions))
+    );
   },
 
   get_all_tags: () => {
-    return Object.values(Site.questions).flatMap(topic => topic.tags)
+    return Object.values(Site.questions).flatMap(topic => topic.tags);
   },
 
   get_featured: () => {
-    return Site.get_all_questions().filter(q => q.flags?.includes("feat"))
+    return Site.get_list_of_all_questions().filter(q => q.flags?.includes("feat"));
   },
 
   guides: guides,

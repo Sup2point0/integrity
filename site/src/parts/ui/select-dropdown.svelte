@@ -9,13 +9,13 @@ import { base } from "$app/paths";
 
 
 interface Props {
+  value: any;
   options: string[] | {
     [key: string]: any;
   };
-  value: any;
 }
 
-let { options, value = $bindable() }: Props = $props();
+let { value = $bindable(), options }: Props = $props();
 
 
 let open = $state(false);
@@ -27,18 +27,6 @@ let selected_option = $derived(
 
 </script>
 
-
-{#snippet select_option(text: string, val: string)}
-  <li class="option" class:active={value === val}
-    onclick={() => { value = val; }}
-    onkeydown={e => {
-      if (e.key === "Enter" || e.key === " ") { value = val; }
-    }}
-    tabindex={0}
-  >
-    {text}
-  </li>
-{/snippet}
 
 <button class="select"
   onkeydown={e => {
@@ -56,6 +44,7 @@ let selected_option = $derived(
   />
 </button>
 
+
 <ul class="dropdown" class:shown={open}>
   {#each (
     Array.isArray(options) ? options.map(opt => [opt, opt]) : Object.entries(options)
@@ -63,6 +52,18 @@ let selected_option = $derived(
     {@render select_option(option, value)}
   {/each}
 </ul>
+
+{#snippet select_option(text: string, val: string)}
+  <li class="option" class:active={value === val}
+    onclick={() => { value = val; }}
+    onkeydown={e => {
+      if (e.key === "Enter" || e.key === " ") { value = val; }
+    }}
+    tabindex={0}
+  >
+    {text}
+  </li>
+{/snippet}
 
 
 <style lang="scss">
@@ -90,9 +91,10 @@ button.select {
   }
 }
 
+
 ul.dropdown {
-  margin-top: 1px;
   padding: 0.25em 0.5em 0.4em;
+  margin-top: 1px;
   display: block;
   position: absolute;
   z-index: 15;

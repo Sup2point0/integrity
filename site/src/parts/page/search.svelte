@@ -48,8 +48,6 @@ onMount(() => {
 
 
 <search>
-  <div class="layout">
-
   <div class="search-bar">
     <input type="search"
       placeholder="search"
@@ -227,8 +225,6 @@ onMount(() => {
       </tr>
     </tbody></table>
   {/if}
-
-  </div>
 </search>
 
 
@@ -236,11 +232,8 @@ onMount(() => {
 
 search {
   max-width: 80vw;
-  margin: 2rem 0;
   padding: 0.5rem;
-}
-
-.layout {
+  margin: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;

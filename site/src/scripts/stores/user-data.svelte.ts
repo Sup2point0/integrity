@@ -17,7 +17,7 @@ export class UserData
   "search-view": "grid" | "list" = "grid";
 
   /** Preset of the Workspace Desmos window. */
-  "desmos-preset": "int" | "c-square" | null = $state("int");
+  "desmos-preset": "integrals" | "complete-square" | null = $state("integrals");
 }
 
 /** User data and preferences. */
