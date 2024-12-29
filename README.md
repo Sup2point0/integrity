@@ -29,11 +29,11 @@
 - Processing engine to extract questions from Markdown files
 
 ### Topics
-- [Integration](https://sup2point0.github.io/integrity/integrals)
-- [Graph Drawing](https://sup2point0.github.io/graph-drawing)
-- [Completing the Square](https://sup2point0.github.io/complete-square)
-- [Guess the Graph](https://sup2point0.github.io/guess-graph)
-- [Addvent](https://sup2point0.github.io/addvent) (Christmas-themed questions)
+- [Integration](https://sup2point0.github.io/integrity/questions/integrals)
+- [Graph Drawing](https://sup2point0.github.io/integrity/questions/graph-drawing)
+- [Completing the Square](https://sup2point0.github.io/integrity/questions/complete-square)
+- [Guess the Graph](https://sup2point0.github.io/integrity/questions/guess-graph)
+- [Addvent](https://sup2point0.github.io/questions/addvent) (Christmas-themed questions)
 - [Desmos](https://www.desmos.com/)
 
 
@@ -42,7 +42,11 @@
 
 ## Preview
 
-![Integral questions](assets/previews/integrity-preview.png)
+<table>
+  <tr><td>
+    <img alt="Integral questions" src="assets/previews/integrity-preview.png">
+  </td></tr>
+</table>
 
 
 <br>
@@ -62,6 +66,9 @@ MIT. Please use and distribute these questions however you like – maths is for
 
 
 <br>
+
+
+---
 
 
 <div align="center">
