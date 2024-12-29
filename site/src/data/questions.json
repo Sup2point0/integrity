@@ -880,9 +880,11 @@
       "desc": null,
       "date": "2024 December 10",
       "tags": [
-        "work",
         "poly",
         "sqrt"
+      ],
+      "method": [
+        "work"
       ],
       "shard": "s24f-ch1",
       "question": [
@@ -1444,6 +1446,88 @@
         ]
       }
     },
+    "s24f-lg1": {
+      "topic": "integrals",
+      "title": "polytypical",
+      "desc": null,
+      "date": "2024 December 24",
+      "tags": [
+        "poly",
+        "frac"
+      ],
+      "method": [
+        "work",
+        "poly div",
+        "arctan"
+      ],
+      "shard": "s24f-lg1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{x+x^{2}-x^{3}}{x-x^{2}+x^{3}}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{4\\sqrt{3}}{3}\\tan^{-1}\\left(\\frac{2\\sqrt{3}}{3}x-\\frac{\\sqrt{3}}{3}\\right)-x-c"
+        }
+      ],
+      "solution": {
+        "polynomial division": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x+x^{2}-x^{3}}{x-x^{2}+x^{3}}\\ dx  \\\\ =&\\ -\\int \\frac{-x-x^{2}+x^{3}}{x-x^{2}+x^{3}}\\ dx  \\\\ =&\\ -\\int \\frac{x-x^{2}+x^{3}}{x-x^{2}+x^{3}}-\\frac{2x}{x-x^{2}+x^{3}}\\ dx  \\\\ =&\\ -\\int 1-\\frac{2}{1-x+x^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -x+\\int \\frac{2}{x^{2}-x+1}\\ dx  \\\\ &= -x+2\\int \\frac{1}{\\left(x-\\frac{1}{2}\\right)^{2}+\\frac{3}{4}}\\ dx  \\\\ &= -x+2\\cdot\\sqrt{\\frac{4}{3}}\\tan^{-1}\\left(\\sqrt{\\frac{4}{3}}\\left(x-\\frac{1}{2}\\right)\\right)  \\\\ &= \\frac{4\\sqrt{3}}{3}\\tan^{-1}\\left(\\frac{2\\sqrt{3}}{3}x-\\frac{\\sqrt{3}}{3}\\right)-x-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s24f-lm1": {
+      "topic": "integrals",
+      "title": "pathological",
+      "desc": null,
+      "date": "2024 December 10",
+      "tags": [
+        "frac",
+        "trig",
+        "ln",
+        "horror"
+      ],
+      "method": [
+        "spot"
+      ],
+      "shard": "s24f-lm1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }\\frac{\\ln\\left|\\sec x\\right|-\\ln\\left|\\csc x\\right|}{\\csc x\\cos^{3}x}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\   \\\\ =&\\ \\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+          }
+        ]
+      }
+    },
     "s24f-lnt1": {
       "topic": "integrals",
       "title": "lawful evil",
@@ -1984,6 +2068,75 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{t^{3}-\\frac{1}{t}}{t+\\frac{1}{t}}\\cdot\\frac{1}{t}\\ dt  \\\\ &= \\int \\frac{t^{4}-1}{t^{2}+1}\\cdot\\frac{1}{t}\\ dt  \\\\ &= \\int \\frac{\\left(t^{2}-1\\right)\\left(t^{2}+1\\right)}{t\\left(t^{2}+1\\right)}\\ dt  \\\\ &= \\int \\frac{t^{2}-1}{t}\\ dt  \\\\ &= \\int t-\\frac{1}{t}\\ dt  \\\\ &= \\frac{1}{2}t^{2}-\\ln t  \\\\ &= \\frac{1}{2}e^{2x}-x-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s24f-xp2": {
+      "topic": "integrals",
+      "title": "flyby",
+      "desc": null,
+      "date": "2024 December 24",
+      "tags": [
+        "exp",
+        "poly"
+      ],
+      "method": [
+        "spot",
+        "work",
+        "sub",
+        "parts"
+      ],
+      "shard": "s24f-xp2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }\\frac{1+x^{2}}{x^{5}}e^{\\left(1+\\frac{1}{x^{2}}\\right)}\\ dx"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Expanding the exponent probably won’t help here."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "The thing on the outside looks quite similar to the thing inside the exponent, doesn’t it?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Substitute!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{1}{2x^{2}}e^{\\left(1+\\frac{1}{x^{2}}\\right)}-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1+\\frac{1}{x^{2}} &= t  \\\\ -\\frac{2}{x^{3}}\\ dx &= dt  \\\\ dx &= -\\frac{x^{3}}{2}\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{1+x^{2}}{x^{5}}e^{\\left(1+\\frac{1}{x^{2}}\\right)}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{1+x^{2}}{x^{5}}e^{t}\\cdot-\\frac{x^{3}}{2}\\ dt  \\\\ =&\\ -\\frac{1}{2}\\int_{\\ }^{\\ }e^{t}\\cdot\\frac{1+x^{2}}{x^{5}}\\cdot x^{3}\\ dt  \\\\ =&\\ -\\frac{1}{2}\\int_{\\ }^{\\ }e^{t}\\cdot\\frac{1+x^{2}}{x^{2}}\\ dt  \\\\ =&\\ -\\frac{1}{2}\\int_{\\ }^{\\ }e^{t}\\left(\\frac{1}{x^{2}}+\\frac{x^{2}}{x^{2}}\\right)\\ dt  \\\\ =&\\ -\\frac{1}{2}\\int_{\\ }^{\\ }e^{t}\\left(1+\\frac{1}{x^{2}}\\right)\\ dt  \\\\ =&\\ =-\\frac{1}{2}\\int_{\\ }^{\\ }te^{t}\\ dt\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\frac{1}{2}\\left(te^{t}-\\int_{\\ }^{\\ }e^{t}\\ dt\\right)  \\\\ &= -\\frac{1}{2}\\left(te^{t}-e^{t}\\right)  \\\\ &= \\frac{1}{2}e^{t}\\left(1-t\\right)  \\\\ &= \\frac{1}{2}e^{\\left(1+\\frac{1}{x^{2}}\\right)}\\left(1-\\left(1+\\frac{1}{x^{2}}\\right)\\right)  \\\\ &= \\frac{1}{2}e^{\\left(1+\\frac{1}{x^{2}}\\right)}\\left(-\\frac{1}{x^{2}}\\right)  \\\\ &= -\\frac{1}{2x^{2}}e^{\\left(1+\\frac{1}{x^{2}}\\right)}-c\\end{align*}"
           }
         ]
       }

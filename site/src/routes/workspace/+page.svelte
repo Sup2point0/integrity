@@ -4,6 +4,7 @@ import { presets, preset_question } from "./presets";
 
 import Site from "#scripts/site";
 import { userdata } from "#scripts/stores";
+import type { Question } from "#scripts/types";
 
 import Clicky from "#parts/ui/clicky.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
@@ -14,18 +15,18 @@ import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 
 import { onMount } from "svelte";
+import { base } from "$app/paths";
 
 
 const questions = Site.get_list_of_all_questions();
 const questions_map = Site.get_map_of_all_questions();
 
+/** The current input of the question selector, is a question shard. */
+let selected_question: string | null = null;
 
 let desmos: any | false | null = null;
-
-/** The shard of the currently selected question. */
-let selected_question: string | null = null;
-/** The epoch timestamp of the last moment the calculator was reset. */
 let last_reset: number = Date.now();
+
 
 
 onMount(try_load_desmos);
@@ -49,7 +50,8 @@ function try_load_desmos(i: number = 0)
   }
 }
 
-function check_desmos(): boolean {
+function check_desmos(): boolean
+{
   if (!desmos) {
     alert("Oops, desmos calculator hasn’t loaded!");
     return false;
@@ -57,7 +59,8 @@ function check_desmos(): boolean {
   return true;
 }
 
-function load_preset(preset: string | null = null) {
+function apply_preset(preset: string | null = null)
+{
   if (preset == null) return;
 
   let data = presets[preset];
@@ -70,7 +73,8 @@ function load_preset(preset: string | null = null) {
   desmos.setDefaultState(desmos.getState());
 }
 
-function load_question(shard: string | null = null) {
+function try_load_question(shard: string | null): Question | undefined
+{
   if (!shard) {
     alert("Woah, no question shard provided!");
     return;
@@ -82,8 +86,15 @@ function load_question(shard: string | null = null) {
     return;
   }
 
+  return question;
+}
+
+function apply_question(shard: string | null) {
+  let question = try_load_question(shard);
+  if (!question) return;
+
   desmos.setBlank();
-  load_preset(question.topic);
+  apply_preset(question.topic);
   preset_question(desmos, question);
 }
 
@@ -93,7 +104,7 @@ function load_question(shard: string | null = null) {
 <Meta title="Workspace"
   desc="Workspace for solving questions in Integrity"
 >
-  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <script defer src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </Meta>
 
 
@@ -104,7 +115,7 @@ function load_question(shard: string | null = null) {
 
 <Header title="Workspace" />
 
-<nav class="calc-controls">
+<nav>
   <section id="preset">
     <small> PRESET </small>
     <Select bind:value={userdata["desmos-preset"]} options={{
@@ -120,7 +131,7 @@ function load_question(shard: string | null = null) {
         bind:value={selected_question}
         options={questions.map(q => q.shard)}
         onselect={value => {
-          if (check_desmos()) load_question(value);
+          if (check_desmos()) apply_question(value);
         }}
       />
     </div>
@@ -139,7 +150,7 @@ function load_question(shard: string | null = null) {
         }
 
         desmos.setBlank();
-        load_preset(userdata["desmos-preset"]);
+        apply_preset(userdata["desmos-preset"]);
         last_reset = Date.now();
       }}
     />
@@ -155,14 +166,20 @@ function load_question(shard: string | null = null) {
   {/if}
 </div>
 
-<nav class="calc-controls">
+<nav>
   <section id="left">
-    <Clicky text="View Question" />
+    <Clicky text="View Question" button={() => {
+      let question = try_load_question(selected_question);
+
+      if (question) {
+        window.open(`${base}/question/${question.topic}?shard=${question.shard}`, "_blank");
+      }
+    }} />
   </section>
 
-  <section id="right">
-    <Clicky text="Open in Desmos" />
-  </section>
+  <!-- <section id="right">
+    <Clicky text="Open in Desmos" link="https://desmos.com/calculator" />
+  </section> -->
 </nav>
 
 <p class="caption">
@@ -172,7 +189,7 @@ function load_question(shard: string | null = null) {
 
 <style lang="scss">
 
-nav.calc-controls {
+nav {
   margin: 1rem 0;
   width: 100%;
   display: flex;

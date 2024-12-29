@@ -21,7 +21,7 @@ export const presets: Record<string, object[]> =
 {
   "integrals": [
     { id: "integrals-title-1", type: "text",
-      text: "Integrity Integral Checker\nv1.0"
+      text: "Integrity Integral Checker"
     },
     { id: "integrals-text-filler-1",
       latex: " "
@@ -54,7 +54,7 @@ export const presets: Record<string, object[]> =
   ],
   "complete-square": [
     { id: "complete-square-title-1", type: "text",
-      text: "Integrity Completing the Square Checker\nv1.0",
+      text: "Integrity Completing the Square Checker",
     },
     { id: "complete-square-text-filler-1",
       latex: " "
