@@ -6,6 +6,7 @@ A bar of slash-separated `<Link>`s for navigation.
 <script lang="ts">
 
 import Link from "#parts/ui/link.svelte";
+import CopyClicky from "#parts/page/copy-clicky.svelte";
 
 
 interface Props {
@@ -14,9 +15,10 @@ interface Props {
     intern?: string,
     link?: string,
   }[];
+  copy?: boolean;
 }
 
-let { levels }: Props = $props();
+let { levels, copy }: Props = $props();
 
 </script>
 
@@ -32,12 +34,19 @@ let { levels }: Props = $props();
     
     {/if}
   {/each}
+
+  {#if copy}
+    <div style:margin-left="0.25em">
+      <CopyClicky value={levels.at(-1)?.text} />
+    </div>
+  {/if}
 </nav>
 
 
 <style lang="scss">
 
 nav.breadcrumbs {
+  width: max-content;
   padding: 0.5em 0;
   display: flex;
   flex-direction: row;
