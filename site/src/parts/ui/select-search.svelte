@@ -5,6 +5,8 @@ A select input with a dropdown and search bar.
 
 <script lang="ts">
 
+import * as fuzz from "fuzzball";
+
 import Clicky from "#parts/ui/clicky.svelte";
 
 import { base } from "$app/paths";
@@ -26,6 +28,19 @@ let {
 
 
 let open = $state(false);
+let autofill = $derived.by(filter_suggestions)
+
+function filter_suggestions(): string[]
+{
+  if (!value || !value.length) return options.slice(0, 12);
+  
+  return (
+    fuzz.extract(value, options, {
+      limit: Math.max(13 - value.length, 3),
+    })
+    .map(each => each[0])
+);
+}
 
 </script>
 
@@ -72,7 +87,7 @@ let open = $state(false);
   {/snippet}
 
   <ul class="dropdown" class:open>
-    {#each options.slice(0, 10) as option}
+    {#each autofill as option}
       {@render select_option(option)}
     {/each}
   </ul>
