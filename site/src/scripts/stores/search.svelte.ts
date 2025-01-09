@@ -72,6 +72,7 @@ export class SearchData
   
       out = questions.filter(question => {
         return (
+          question.shard.includes(query) ||
           question.title && question.title.toLowerCase().includes(query) ||
           // question.desc && question.desc.toLowerCase().includes(query) ||
           question.tags && question.tags.some(tag => tag.toLowerCase().includes(query))

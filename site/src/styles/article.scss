@@ -136,6 +136,7 @@ article {
       padding: 0.25em 1em;
 
       a {
+        padding-left: 0.4em;
         @include link;
       }
     }
