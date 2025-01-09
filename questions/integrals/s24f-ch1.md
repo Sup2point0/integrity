@@ -4,9 +4,10 @@ title: chummy
 desc: 
 date: 2024 December 10
 tags:
-  - work
   - poly
   - sqrt
+method:
+  - work
 ---
 
 
