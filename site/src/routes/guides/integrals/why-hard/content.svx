@@ -1,6 +1,6 @@
 ---
 path: guides/integrals/why-hard.md
-last_deploy: 2025-01-09 17:16:13.732245500 +00:00
+last_deploy: 2025-01-09 17:20:26.886368000 +00:00
 flags:
 - live
 title: Why Is Integration Difficult?
@@ -50,9 +50,11 @@ If we plug a value into $e^x$, we can retrieve it with the inverse of exponentat
 But when we square a number, suddenly things aren’t so black-and-white. We might be inclined to say the “inverse” of squaring is the square root; however, when we have negative numbers that falls apart:
 
 ```math
-\left(-2\right)^2 = 4
-\sqrt{4} = 2
-2 \neq -2 ???
+\begin{align*}
+& \left(-2\right)^2 = 4
+\\ & \sqrt{4} = 2
+\\ & 2 \neq -2 \qquad ???
+\end{align*}
 ```
 
 If they are inverses we would need $\sqrt{x^2}$ to give $x$. But as we know, $\sqrt{}$ only gives the positive root – which means $\sqrt{x^2} = |x|$ instead.

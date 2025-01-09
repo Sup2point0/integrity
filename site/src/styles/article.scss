@@ -67,8 +67,12 @@ article {
     border-radius: 0.4em;
   }
 
-  a {
+  :not(sup, .footnotes ol li) > a {
     @include underline-link;
+  }
+
+  sup a {
+    @include link;
   }
 
   ul {
@@ -108,5 +112,32 @@ article {
     font-size: 100%;
     background-color: $col-hover;
     border-radius: 0.75em;
+  }
+}
+
+article {
+  .footnotes {
+    padding-top: 3rem;
+    @include font-ui;
+    font-weight: 250;
+    font-size: 80%;
+    color: $col-text-deut;
+
+    hr {
+      display: none;
+    }
+
+    ol {
+      padding-top: 1em;
+      border-top: 1px solid $col-line;
+    }
+
+    li {
+      padding: 0.25em 1em;
+
+      a {
+        @include link;
+      }
+    }
   }
 }

@@ -1,12 +1,21 @@
 @use 'mixins/~colours' as *;
 
 
-@mixin underline-link {
-  position: relative;
+@mixin link {
   color: #3c8dbc;  // fallback
   color: $col-prot;
   text-decoration: none;
   transition: color 0.12s ease-out;
+
+  &:hover, &:focus {
+    color: #f07d1c;  // fallback
+    color: $col-deut;
+  }
+}
+
+@mixin underline-link {
+  position: relative;
+  @include link;
 
   &:after {
     content: '';
@@ -22,10 +31,7 @@
     transition: all 0.12s ease-out;
   }
 
-  &:hover {
-    color: #f07d1c;  // fallback
-    color: $col-deut;
-
+  &:hover, &:focus {
     &:after {
       width: 100%;
       left: 0;
