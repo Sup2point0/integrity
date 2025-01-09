@@ -2,6 +2,8 @@ import adapter from "@sveltejs/adapter-static";
 import { sveltePreprocess } from "svelte-preprocess";
 
 import { mdsvex } from "mdsvex";
+import remarkFootnotes from "remark-footnotes";
+import remarkIndexFootnotes from "remark-numbered-footnote-labels";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex-svelte";
 
@@ -39,6 +41,8 @@ const config = {
     mdsvex({
       extensions: [".svx", ".md"],
       remarkPlugins: [
+        remarkFootnotes,
+        remarkIndexFootnotes,
         remarkMath,
         render_katex_blocks
       ],

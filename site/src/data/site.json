@@ -1,14 +1,15 @@
 {
   "meta": {
-    "exported": "2024-12-29",
-    "file_count": 5,
-    "page_count": 4
+    "exported": "2025-01-09",
+    "file_count": 6,
+    "page_count": 5
   },
   "index": {
     "guides": {
       "route": null,
       "pages": [
         "guides/complete-square/why.md",
+        "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
     },
@@ -21,6 +22,7 @@
     "integrals": {
       "route": null,
       "pages": [
+        "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
     }
@@ -28,12 +30,14 @@
   "shard": {
     "guides": [
       "guides/complete-square/why.md",
+      "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ],
     "complete-square": [
       "guides/complete-square/why.md"
     ],
     "integrals": [
+      "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ]
   },
@@ -78,6 +82,31 @@
       "shard": [
         "guides",
         "complete-square"
+      ],
+      "date": null,
+      "date_display": null
+    },
+    "guides/integrals/why-hard.md": {
+      "path": "guides/integrals/why-hard.md",
+      "last_deploy": "2025-01-09 17:20:26 +0000",
+      "slocs": 97,
+      "chars": 5174,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/integrals/why-hard",
+      "title": "Why Is Integration Difficult?",
+      "head": "Why Is Integration Difficult?",
+      "capt": null,
+      "desc": null,
+      "index": [
+        "guides",
+        "integrals"
+      ],
+      "shard": [
+        "guides",
+        "integrals"
       ],
       "date": null,
       "date_display": null
