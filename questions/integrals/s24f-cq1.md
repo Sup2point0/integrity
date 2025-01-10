@@ -1,7 +1,7 @@
 ---
 topic: integrals
 title: divide and conquer
-desc: 
+desc: A nice exercise in algebra ;)
 date: 2024 December 27
 tags:
   - exp
