@@ -990,7 +990,7 @@
     "s24f-cq1": {
       "topic": "integrals",
       "title": "divide and conquer",
-      "desc": null,
+      "desc": "A nice exercise in algebra ;)",
       "date": "2024 December 27",
       "tags": [
         "exp"
@@ -1708,11 +1708,10 @@
       "date": "2024 December 28",
       "tags": [
         "ln",
-        "sqrt"
-      ],
-      "method": [
+        "sqrt",
         "fun"
       ],
+      "method": null,
       "shard": "s24f-lx1",
       "question": [
         {
@@ -2020,79 +2019,6 @@
         ]
       }
     },
-    "s24f-rj1": {
-      "topic": "integrals",
-      "title": "rejoice",
-      "desc": "IT’s FINALLY OVER",
-      "date": "2025 January 7",
-      "tags": [
-        "trig",
-        "fun"
-      ],
-      "method": [
-        "spot",
-        "sub"
-      ],
-      "shard": "s24f-rj1",
-      "question": [
-        {
-          "kind": "latex",
-          "content": "\\int \\frac{\\sin\\left(e^{x}+\\frac{\\pi}{2}\\right)}{\\sin\\left(e^{x}-\\frac{\\pi}{2}\\right)}\\ dx"
-        }
-      ],
-      "hint": [
-        {
-          "kind": "text",
-          "content": "What if it wasn’t $e^x$, but just $x$?"
-        }
-      ],
-      "answer": [
-        {
-          "kind": "latex",
-          "content": "-x-c"
-        }
-      ],
-      "solution": {
-        "substitute": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  e^{x}+\\frac{\\pi}{2} &= t\\quad \\to\\quad e^{x}=t-\\frac{\\pi}{2}  \\\\ e^{x}\\ dx &= dt\\quad \\to\\quad dx=\\frac{1}{t-\\frac{\\pi}{2}}\\ dt\\end{align*}"
-          }
-        ],
-        "solve": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int \\frac{\\sin\\left(e^{x}+\\frac{\\pi}{2}\\right)}{\\sin\\left(e^{x}-\\frac{\\pi}{2}\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\sin t}{\\sin\\left(t-\\pi\\right)}\\cdot\\frac{1}{t-\\frac{\\pi}{2}}\\ dt  \\\\ =&\\ \\int \\frac{\\sin t}{-\\sin t}\\cdot\\frac{1}{t-\\frac{\\pi}{2}}\\ dt  \\\\ =&\\ -\\int \\frac{1}{t-\\frac{\\pi}{2}}\\ dx  \\\\ =&\\ -\\ln\\left|t-\\frac{\\pi}{2}\\right|  \\\\ =&\\ -\\ln\\left|e^{x}+\\frac{\\pi}{2}-\\frac{\\pi}{2}\\right|  \\\\ =&\\ -\\ln\\left|e^{x}\\right|  \\\\ =&\\ -x-c\\end{align*}"
-          }
-        ]
-      },
-      "alternates": [
-        {
-          "kind": "text",
-          "content": "We don’t actually have to do the $e^x$ substitution to show the integrand is $-1$."
-        },
-        {
-          "kind": "latex",
-          "content": "\\frac{\\sin\\left(e^{x}+\\frac{\\pi}{2}\\right)}{\\sin\\left(e^{x}-\\frac{\\pi}{2}\\right)}\\ dx"
-        },
-        {
-          "kind": "text",
-          "content": "Since $\\sin$ is periodic we can add the same ‘offset’ to both inputs:"
-        },
-        {
-          "kind": "latex",
-          "content": "\\begin{align*}  &= \\frac{\\sin\\left(e^{x}+\\frac{\\pi}{2}+\\frac{\\pi}{2}\\right)}{\\sin\\left(e^{x}+\\frac{\\pi}{2}-\\frac{\\pi}{2}\\right)}  \\\\ &= \\frac{\\sin\\left(e^{x}+\\pi\\right)}{\\sin\\left(e^{x}\\right)}  \\\\ &= \\frac{-\\sin\\left(e^{x}\\right)}{\\sin\\left(e^{x}\\right)}  \\\\ &= -1\\end{align*}"
-        },
-        {
-          "kind": "text",
-          "content": "And so we’re left with"
-        },
-        {
-          "kind": "latex",
-          "content": "\\begin{align*}  &\\ \\int -1\\ dx  \\\\ =&\\ -x-c\\end{align*}"
-        }
-      ]
-    },
     "s24f-tm1": {
       "topic": "integrals",
       "title": "polymorphism",
@@ -2318,6 +2244,384 @@
           }
         ]
       }
+    },
+    "s25f-bw1": {
+      "topic": "integrals",
+      "title": "ammunition",
+      "desc": null,
+      "date": "2025 January 4",
+      "tags": [
+        "trig",
+        "exp",
+        "fun"
+      ],
+      "method": [
+        "spot",
+        "sub"
+      ],
+      "shard": "s25f-bw1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }\\frac{e^{\\left(1+\\sqrt{\\tan x}\\right)}}{\\cos^{2}x\\sqrt{\\tan x}}\\ dx"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Dividing by $\\cos^2{x}$ should look familiar..."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "There’s a lot of substitutions we could do here."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "It doesn’t matter how large of a substitution you make, just try stuff and keep reducing!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "2e^{\\left(1+\\sqrt{\\tan x}\\right)}-c"
+        }
+      ],
+      "solution": {
+        "clean": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{e^{\\left(1+\\sqrt{\\tan x}\\right)}}{\\cos^{2}x\\sqrt{\\tan x}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }e^{\\left(1+\\sqrt{\\tan x}\\right)}\\cdot\\frac{1}{\\sqrt{\\tan x}}\\cdot\\sec^{2}x\\ dx\\end{align*}"
+          }
+        ],
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\tan{x} &= t  \\\\ \\sec^2{x}\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }e^{\\left(1+\\sqrt{t}\\right)}\\cdot\\frac{1}{\\sqrt{t}}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{t} &= v  \\\\ t &= v^2  \\\\ dt &= 2v\\ dv\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }e^{\\left(1+v\\right)}\\cdot\\frac{1}{v}\\cdot2v\\ dv  \\\\ &= 2\\int_{\\ }^{\\ }e^{\\left(1+v\\right)}\\ dv  \\\\ &= 2e^{\\left(1+v\\right)}  \\\\ &= 2e^{\\left(1+\\sqrt{t}\\right)}  \\\\ &= 2e^{\\left(1+\\sqrt{\\tan x}\\right)}-c\\end{align*}"
+          }
+        ]
+      },
+      "alternates": [
+        {
+          "kind": "text",
+          "content": "Especially eager-eyed integrators may spot the substitution in one step:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  1 + \\sqrt{\\tan{x}} &= t  \\\\ \\frac{\\sec^2{x}}{2\\sqrt{\\tan{x}}}\\ dx &= dt\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "This cancels everything out immediately:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{e^{\\left(1+\\sqrt{\\tan x}\\right)}}{\\cos^{2}x\\sqrt{\\tan x}}\\ dx  \\\\ =&\\ 2\\int_{\\ }^{\\ }e^{t}\\ dt  \\\\ =&\\ 2e^{t}  \\\\ =&\\ 2e^{\\left(1+\\sqrt{\\tan x}\\right)}-c\\end{align*}"
+        }
+      ]
+    },
+    "s25f-fg1": {
+      "topic": "integrals",
+      "title": "frigate",
+      "desc": null,
+      "date": "2025 January 7",
+      "tags": [
+        "trig",
+        "ln"
+      ],
+      "method": [
+        "parts"
+      ],
+      "shard": "s25f-fg1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }\\left(\\sin x\\right)\\ln\\left(\\sin^{2}x\\right)\\ dx"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "The $\\sin{x}$ squared is a bit icky."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How else could we write $\\sin^2{x}$?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Log laws are always great!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\   \\\\ =&\\ \\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-nx1": {
+      "topic": "integrals",
+      "title": "neurotic",
+      "desc": "This might be my favourite integral I’ve created (yet).",
+      "date": "2025 January 9",
+      "tags": [
+        "horror",
+        "trig",
+        "ln",
+        "frac"
+      ],
+      "method": [
+        "spot",
+        "sub"
+      ],
+      "shard": "s25f-nx1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    {e \\sec^2{x}\\sin{x}}    {\\cos{x} - 2\\sec{x}}  \\ln \\left(    \\frac      {\\sec^4{x} + \\tan^4{x} + 2\\sec^2{x}\\tan^2{x}}      {\\text{sech}^2\\,{x} + \\text{tanh}^2\\,{x}}  \\right)\\ dx"
+        }
+      ],
+      "hint": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Even if you’ve never encountered hyperbolics ($\\text{sech}$, $\\text{tanh}$), you can use the hyperbolic identity $\\cosh^2{x} - \\sinh^2{x} = 1$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Does the form of the numerator in the $\\ln$ look familiar?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "There’s a lot of factorisation here!"
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "We probably want all the trigonometric functions in the same form – either $\\sin$ and $\\cos$ primitives, or $\\sec$ and $\\tan$ evolutions."
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "Since we have a nicely factorised expression in $\\sec$ and $\\tan$ inside the $\\ln$, we’d probably want to do the same for the outside coefficient."
+          }
+        ],
+        "6": [
+          {
+            "kind": "text",
+            "content": "Try multiplying through by something!"
+          }
+        ],
+        "7": [
+          {
+            "kind": "text",
+            "content": "How could you get rid of $\\cos{x}$ in the denominator?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{e}{4} \\ln\\left(  \\sec^2{x} + \\tan^2{x}\\right)^2 - c"
+        }
+      ],
+      "solution": {
+        "cleanup": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{e \\sec^2{x}\\sin{x}}{\\cos{x} - 2\\sec{x}}\\ln \\left(\\frac{\\sec^4{x} + \\tan^4{x} + 2\\sec^2{x}\\tan^2{x}}{\\text{sech}^2\\,{x} + \\text{tanh}^2\\,{x}}\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{e\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\frac{\\left(\\sec^{2}x\\right)^{2}+\\left(\\tan^{2}x\\right)^{2}+2\\sec\\left(x\\right)^{2}\\tan\\left(x\\right)^{2}}{1}\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{e\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\left(\\sec^{2}x+\\tan^{2}x\\right)^{2}\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{e\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\cdot2\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ =&\\ 2e\\int_{\\ }^{\\ }\\frac{\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "reform": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 2e\\int_{\\ }^{\\ }\\frac{\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\cdot\\frac{\\sec x}{\\sec x}\\ dx  \\\\ &= 2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{1-2\\sec^{2}x}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{2\\sec^{2}-1}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{\\sec^{2}x+\\sec^{2}-1}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{\\tan^{2}x+1+\\sec^{2}-1}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{\\tan^{2}x+\\sec^{2}}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-rj1": {
+      "topic": "integrals",
+      "title": "rejoice",
+      "desc": "IT’s FINALLY OVER",
+      "date": "2025 January 7",
+      "tags": [
+        "trig",
+        "fun"
+      ],
+      "method": [
+        "spot",
+        "sub"
+      ],
+      "shard": "s25f-rj1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\sin\\left(e^{x}+\\frac{\\pi}{2}\\right)}{\\sin\\left(e^{x}-\\frac{\\pi}{2}\\right)}\\ dx"
+        }
+      ],
+      "hint": [
+        {
+          "kind": "text",
+          "content": "What if it wasn’t $e^x$, but just $x$?"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-x-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  e^{x}+\\frac{\\pi}{2} &= t\\quad \\to\\quad e^{x}=t-\\frac{\\pi}{2}  \\\\ e^{x}\\ dx &= dt\\quad \\to\\quad dx=\\frac{1}{t-\\frac{\\pi}{2}}\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\sin\\left(e^{x}+\\frac{\\pi}{2}\\right)}{\\sin\\left(e^{x}-\\frac{\\pi}{2}\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\sin t}{\\sin\\left(t-\\pi\\right)}\\cdot\\frac{1}{t-\\frac{\\pi}{2}}\\ dt  \\\\ =&\\ \\int \\frac{\\sin t}{-\\sin t}\\cdot\\frac{1}{t-\\frac{\\pi}{2}}\\ dt  \\\\ =&\\ -\\int \\frac{1}{t-\\frac{\\pi}{2}}\\ dx  \\\\ =&\\ -\\ln\\left|t-\\frac{\\pi}{2}\\right|  \\\\ =&\\ -\\ln\\left|e^{x}+\\frac{\\pi}{2}-\\frac{\\pi}{2}\\right|  \\\\ =&\\ -\\ln\\left|e^{x}\\right|  \\\\ =&\\ -x-c\\end{align*}"
+          }
+        ]
+      },
+      "alternates": [
+        {
+          "kind": "text",
+          "content": "We don’t actually have to do the $e^x$ substitution to show the integrand is $-1$."
+        },
+        {
+          "kind": "latex",
+          "content": "\\frac{\\sin\\left(e^{x}+\\frac{\\pi}{2}\\right)}{\\sin\\left(e^{x}-\\frac{\\pi}{2}\\right)}\\ dx"
+        },
+        {
+          "kind": "text",
+          "content": "Since $\\sin$ is periodic we can add the same ‘offset’ to both inputs:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &= \\frac{\\sin\\left(e^{x}+\\frac{\\pi}{2}+\\frac{\\pi}{2}\\right)}{\\sin\\left(e^{x}+\\frac{\\pi}{2}-\\frac{\\pi}{2}\\right)}  \\\\ &= \\frac{\\sin\\left(e^{x}+\\pi\\right)}{\\sin\\left(e^{x}\\right)}  \\\\ &= \\frac{-\\sin\\left(e^{x}\\right)}{\\sin\\left(e^{x}\\right)}  \\\\ &= -1\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "And so we’re left with"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int -1\\ dx  \\\\ =&\\ -x-c\\end{align*}"
+        }
+      ]
+    },
+    "s25f-sd1": {
+      "topic": "integrals",
+      "title": "slice and dice",
+      "desc": null,
+      "date": "2025 January 9",
+      "tags": [
+        "poly",
+        "frac"
+      ],
+      "method": [
+        "poly div"
+      ],
+      "shard": "s25f-sd1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }\\frac{x^{7}}{x^{2}+1}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{6}x^{6}-\\frac{1}{4}x^{4}+\\frac{1}{2}x^{2}-\\frac{1}{2}\\ln\\left(x^{2}+1\\right)"
+        }
+      ],
+      "solution": {
+        "polynomial division": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{x^{7}}{x^{2}+1}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }x^{5}-x^{3}+x-\\frac{x}{x^{2}+1}\\ dx\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{6}x^{6}-\\frac{1}{4}x^{4}+\\frac{1}{2}x^{2}-\\frac{1}{2}\\int_{\\ }^{\\ }\\frac{2x}{x^{2}+1}\\ dx  \\\\ &= \\frac{1}{6}x^{6}-\\frac{1}{4}x^{4}+\\frac{1}{2}x^{2}-\\frac{1}{2}\\ln\\left(x^{2}+1\\right)\\end{align*}"
+          }
+        ]
+      },
+      "alternate": [
+        {
+          "kind": "text",
+          "content": "We could also make a trigonometric substitution!"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  x &= \\tan{t}  \\\\ dx &= \\sec^2{t}\\ dt\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "Then recursively expand through the identity $\\tan^2{t} + 1 = \\sec^2{t}$..."
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{x^{7}}{x^{2}+1}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{\\left(\\tan t\\right)^{7}}{\\sec^{2}t}\\cdot\\sec^{2}t\\ dt  \\\\ =&\\ \\int_{\\ }^{\\ }\\left(\\tan t\\right)^{7}\\ dt  \\\\ =&\\ \\int_{\\ }^{\\ }\\left(\\tan t\\right)^{5}\\left(\\sec^{2}t-1\\right)\\ dt  \\\\ =&\\ \\int_{\\ }^{\\ }\\left(\\tan t\\right)^{5}\\sec^{2}t\\ dt-\\int_{\\ }^{\\ }\\left(\\tan t\\right)^{5}\\ dt  \\\\ =&\\ \\frac{1}{6}\\left(\\tan t\\right)^{6}-\\int_{\\ }^{\\ }\\left(\\tan t\\right)^{3}\\left(\\sec^{2}t-1\\right)\\ dt  \\\\ =&\\ \\frac{1}{6}\\left(\\tan t\\right)^{6}-\\int_{\\ }^{\\ }\\left(\\tan t\\right)^{3}\\sec^{2}t\\ dt+\\int_{\\ }^{\\ }\\left(\\tan t\\right)^{3}\\ dt  \\\\ =&\\ \\frac{1}{6}\\left(\\tan t\\right)^{6}-\\frac{1}{4}\\left(\\tan t\\right)^{4}+\\int_{\\ }^{\\ }\\left(\\tan t\\right)\\left(\\sec^{2}t-1\\right)\\ dt  \\\\ =&\\ \\frac{1}{6}\\left(\\tan t\\right)^{6}-\\frac{1}{4}\\left(\\tan t\\right)^{4}+\\int_{\\ }^{\\ }\\left(\\tan t\\right)\\sec^{2}t-\\int_{\\ }^{\\ }\\tan t\\ dt  \\\\ =&\\ \\frac{1}{6}\\left(\\tan t\\right)^{6}-\\frac{1}{4}\\left(\\tan t\\right)^{4}+\\frac{1}{2}\\left(\\tan t\\right)^{2}+\\ln\\left(\\cos t\\right)  \\\\ =&\\ \\frac{1}{6}x^{6}-\\frac{1}{4}x^{4}+\\frac{1}{2}x^{2}+\\ln\\left(\\frac{1}{\\sqrt{x^{2}+1}}\\right)  \\\\ =&\\ \\frac{1}{6}x^{6}-\\frac{1}{4}x^{4}+\\frac{1}{2}x^{2}-\\frac{1}{2}\\ln\\left(x^{2}+1\\right)-c\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "...maybe not quicker, but perhaps more fun!"
+        }
+      ]
     }
   }
 }

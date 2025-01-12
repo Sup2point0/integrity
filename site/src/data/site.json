@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-01-09",
+    "exported": "2025-01-12",
     "file_count": 6,
     "page_count": 5
   },
@@ -88,9 +88,9 @@
     },
     "guides/integrals/why-hard.md": {
       "path": "guides/integrals/why-hard.md",
-      "last_deploy": "2025-01-09 17:20:26 +0000",
-      "slocs": 97,
-      "chars": 5174,
+      "last_deploy": "2025-01-12 09:28:03 +0000",
+      "slocs": 95,
+      "chars": 5072,
       "isIndex": false,
       "flags": [
         "live"
