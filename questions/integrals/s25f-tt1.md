@@ -13,7 +13,7 @@ method:
 
 ## Question
 ```math
-\int_{\ }^{\ }\tan\left(x\right)\sec\left(x\right)\tan\left(\sec x\right)\ dx
+\int \tan\left(x\right)\sec\left(x\right)\tan\left(\sec x\right)\ dx
 ```
 
 
@@ -28,7 +28,7 @@ method:
 ### Solve
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }\left(\sec x\tan x\right)\tan\left(\sec x\right)\ dx
+  &= \int \left(\sec x\tan x\right)\tan\left(\sec x\right)\ dx
   \\ &= 
 \end{align*}
 ```
@@ -44,7 +44,7 @@ method:
 ### Solve
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }\tan t\ dt
+  &= \int \tan t\ dt
   \\ &= -\ln\left(\cos t\right)
   \\ &= -\ln\left(\cos\left(\sec x\right)\right)-c
 \end{align*}

@@ -15,7 +15,7 @@ method:
 
 ## Question
 ```math
-\int_{\ }^{\ }\frac{e^{\left(1+\sqrt{\tan x}\right)}}{\cos^{2}x\sqrt{\tan x}}\ dx
+\int \frac{e^{\left(1+\sqrt{\tan x}\right)}}{\cos^{2}x\sqrt{\tan x}}\ dx
 ```
 
 
@@ -42,8 +42,8 @@ It doesn’t matter how large of a substitution you make, just try stuff and kee
 ### Clean
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\frac{e^{\left(1+\sqrt{\tan x}\right)}}{\cos^{2}x\sqrt{\tan x}}\ dx
-  \\ =&\ \int_{\ }^{\ }e^{\left(1+\sqrt{\tan x}\right)}\cdot\frac{1}{\sqrt{\tan x}}\cdot\sec^{2}x\ dx
+  &\ \int \frac{e^{\left(1+\sqrt{\tan x}\right)}}{\cos^{2}x\sqrt{\tan x}}\ dx
+  \\ =&\ \int e^{\left(1+\sqrt{\tan x}\right)}\cdot\frac{1}{\sqrt{\tan x}}\cdot\sec^{2}x\ dx
 \end{align*}
 ```
 
@@ -58,7 +58,7 @@ It doesn’t matter how large of a substitution you make, just try stuff and kee
 ### Solve (1)
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }e^{\left(1+\sqrt{t}\right)}\cdot\frac{1}{\sqrt{t}}\ dt
+  &= \int e^{\left(1+\sqrt{t}\right)}\cdot\frac{1}{\sqrt{t}}\ dt
 \end{align*}
 ```
 
@@ -74,8 +74,8 @@ It doesn’t matter how large of a substitution you make, just try stuff and kee
 ### Solve (2)
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }e^{\left(1+v\right)}\cdot\frac{1}{v}\cdot2v\ dv
-  \\ &= 2\int_{\ }^{\ }e^{\left(1+v\right)}\ dv
+  &= \int e^{\left(1+v\right)}\cdot\frac{1}{v}\cdot2v\ dv
+  \\ &= 2\int e^{\left(1+v\right)}\ dv
   \\ &= 2e^{\left(1+v\right)}
   \\ &= 2e^{\left(1+\sqrt{t}\right)}
   \\ &= 2e^{\left(1+\sqrt{\tan x}\right)}-c
@@ -98,8 +98,8 @@ This cancels everything out immediately:
 
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\frac{e^{\left(1+\sqrt{\tan x}\right)}}{\cos^{2}x\sqrt{\tan x}}\ dx
-  \\ =&\ 2\int_{\ }^{\ }e^{t}\ dt
+  &\ \int \frac{e^{\left(1+\sqrt{\tan x}\right)}}{\cos^{2}x\sqrt{\tan x}}\ dx
+  \\ =&\ 2\int e^{t}\ dt
   \\ =&\ 2e^{t}
   \\ =&\ 2e^{\left(1+\sqrt{\tan x}\right)}-c
 \end{align*}

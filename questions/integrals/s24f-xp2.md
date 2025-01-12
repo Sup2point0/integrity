@@ -16,7 +16,7 @@ method:
 
 ## Question
 ```math
-\int_{\ }^{\ }\frac{1+x^{2}}{x^{5}}e^{\left(1+\frac{1}{x^{2}}\right)}\ dx
+\int \frac{1+x^{2}}{x^{5}}e^{\left(1+\frac{1}{x^{2}}\right)}\ dx
 ```
 
 
@@ -52,20 +52,20 @@ Substitute!
 ### Solve
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\frac{1+x^{2}}{x^{5}}e^{\left(1+\frac{1}{x^{2}}\right)}\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{1+x^{2}}{x^{5}}e^{t}\cdot-\frac{x^{3}}{2}\ dt
-  \\ =&\ -\frac{1}{2}\int_{\ }^{\ }e^{t}\cdot\frac{1+x^{2}}{x^{5}}\cdot x^{3}\ dt
-  \\ =&\ -\frac{1}{2}\int_{\ }^{\ }e^{t}\cdot\frac{1+x^{2}}{x^{2}}\ dt
-  \\ =&\ -\frac{1}{2}\int_{\ }^{\ }e^{t}\left(\frac{1}{x^{2}}+\frac{x^{2}}{x^{2}}\right)\ dt
-  \\ =&\ -\frac{1}{2}\int_{\ }^{\ }e^{t}\left(1+\frac{1}{x^{2}}\right)\ dt
-  \\ =&\ =-\frac{1}{2}\int_{\ }^{\ }te^{t}\ dt
+  &\ \int \frac{1+x^{2}}{x^{5}}e^{\left(1+\frac{1}{x^{2}}\right)}\ dx
+  \\ =&\ \int \frac{1+x^{2}}{x^{5}}e^{t}\cdot-\frac{x^{3}}{2}\ dt
+  \\ =&\ -\frac{1}{2}\int e^{t}\cdot\frac{1+x^{2}}{x^{5}}\cdot x^{3}\ dt
+  \\ =&\ -\frac{1}{2}\int e^{t}\cdot\frac{1+x^{2}}{x^{2}}\ dt
+  \\ =&\ -\frac{1}{2}\int e^{t}\left(\frac{1}{x^{2}}+\frac{x^{2}}{x^{2}}\right)\ dt
+  \\ =&\ -\frac{1}{2}\int e^{t}\left(1+\frac{1}{x^{2}}\right)\ dt
+  \\ =&\ =-\frac{1}{2}\int te^{t}\ dt
 \end{align*}
 ```
 
 ### Parts
 ```math
 \begin{align*}
-  &= -\frac{1}{2}\left(te^{t}-\int_{\ }^{\ }e^{t}\ dt\right)
+  &= -\frac{1}{2}\left(te^{t}-\int e^{t}\ dt\right)
   \\ &= -\frac{1}{2}\left(te^{t}-e^{t}\right)
   \\ &= \frac{1}{2}e^{t}\left(1-t\right)
   \\ &= \frac{1}{2}e^{\left(1+\frac{1}{x^{2}}\right)}\left(1-\left(1+\frac{1}{x^{2}}\right)\right)

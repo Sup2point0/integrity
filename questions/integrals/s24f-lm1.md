@@ -15,7 +15,7 @@ method:
 
 ## Question
 ```math
-\int_{\ }^{\ }\frac{\ln\left|\sec x\right|-\ln\left|\csc x\right|}{\csc x\cos^{3}x}\ dx
+\int \frac{\ln\left|\sec x\right|-\ln\left|\csc x\right|}{\csc x\cos^{3}x}\ dx
 ```
 
 
