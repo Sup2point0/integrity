@@ -53,6 +53,8 @@ onMount(() => {
 <aside>
   {#if filtered.length > 0}
     <p> Showing <span>{filtered.length}</span> questions of {count} </p>
+
+    <p> <br> (100+ integrals from school Integration Bee will be added after Pi Day!) </p>
   {:else}
     <p> Oops, no questions found! </p>
   {/if}

@@ -2359,7 +2359,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int_{\\ }^{\\ }\\left(\\sin x\\right)\\ln\\left(\\sin^{2}x\\right)\\ dx"
+          "content": "\\int \\left(\\sin x\\right)\\ln\\left(\\sin^{2}x\\right)\\ dx"
         }
       ],
       "hint": {
@@ -2385,18 +2385,46 @@
       "answer": [
         {
           "kind": "latex",
-          "content": ""
+          "content": "\\left(1-\\cos x\\right)\\left(\\ln\\left(1-\\cos x\\right)-1\\right)-\\left(1+\\cos x\\right)\\left(\\ln\\left(1+\\cos x\\right)-1\\right)-c"
         }
       ],
       "solution": {
+        "reform": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(\\sin x\\right)\\ln\\left(\\sin^{2}x\\right)\\ dx  \\\\ =&\\ \\int \\left(\\sin x\\right)\\ln\\left(1-\\cos^{2}x\\right)\\ dx  \\\\ =&\\ -\\int \\left(-\\sin x\\right)\\left(\\ln\\left(1-\\cos^{2}x\\right)\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\cos x &= t  \\\\ -\\sin x\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "log laws": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ -\\int \\left(-\\sin x\\right)\\left(\\ln\\left(1-\\cos^{2}x\\right)\\right)\\ dx  \\\\ =&\\ -\\int \\ln\\left(1-t^{2}\\right)\\ dt  \\\\ =&\\ -\\int \\ln\\left(\\left(1-t\\right)\\left(1+t\\right)\\right)\\ dt  \\\\ =&\\ -\\int \\ln\\left(1-t\\right)+\\ln\\left(1+t\\right)\\ dt\\end{align*}"
+          }
+        ],
         "solve": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\   \\\\ =&\\ \\end{align*}"
-          },
+            "content": "\\begin{align*}  &= -\\int \\ln\\left(1-t\\right)\\ dt-\\int \\ln\\left(1+t\\right)\\ dt  \\\\ &= \\left(1-t\\right)\\left(\\ln\\left(1-t\\right)-1\\right)-\\left(1+t\\right)\\left(\\ln\\left(1+t\\right)-1\\right)  \\\\ &= \\left(1-\\cos x\\right)\\left(\\ln\\left(1-\\cos x\\right)-1\\right)-\\left(1+\\cos x\\right)\\left(\\ln\\left(1+\\cos x\\right)-1\\right)-c\\end{align*}"
+          }
+        ]
+      },
+      "alternates": {
+        "reform": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\left(\\sin x\\right)\\ln\\left(\\sin^{2}x\\right)\\ dx  \\\\ =&\\ 2\\int_{\\ }^{\\ }\\left(\\sin x\\right)\\ln\\left(\\sin x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 2\\left(\\left(-\\cos x\\right)\\ln\\left(\\sin x\\right)-\\int_{\\ }^{\\ }\\left(-\\cos x\\right)\\cdot\\frac{\\cos x}{\\sin x}\\ dx\\right)  \\\\ &= -2\\left(\\cos x\\right)\\ln\\left(\\sin x\\right)+2\\int_{\\ }^{\\ }\\frac{\\cos^{2}x}{\\sin x}\\ dx  \\\\ &= -2\\left(\\cos x\\right)\\ln\\left(\\sin x\\right)+2\\int_{\\ }^{\\ }\\frac{1-\\sin^{2}x}{\\sin x}\\ dx  \\\\ &= -2\\left(\\cos x\\right)\\ln\\left(\\sin x\\right)+2\\int_{\\ }^{\\ }\\csc x-\\sin x\\ dx  \\\\ &= -2\\left(\\cos x\\right)\\ln\\left(\\sin x\\right)-2\\ln\\left(\\csc x+\\cot x\\right)+2\\cos x-c\\end{align*}"
           }
         ]
       }
@@ -2477,13 +2505,25 @@
         "cleanup": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int \\frac{e \\sec^2{x}\\sin{x}}{\\cos{x} - 2\\sec{x}}\\ln \\left(\\frac{\\sec^4{x} + \\tan^4{x} + 2\\sec^2{x}\\tan^2{x}}{\\text{sech}^2\\,{x} + \\text{tanh}^2\\,{x}}\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{e\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\frac{\\left(\\sec^{2}x\\right)^{2}+\\left(\\tan^{2}x\\right)^{2}+2\\sec\\left(x\\right)^{2}\\tan\\left(x\\right)^{2}}{1}\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{e\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\left(\\sec^{2}x+\\tan^{2}x\\right)^{2}\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{e\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\cdot2\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ =&\\ 2e\\int_{\\ }^{\\ }\\frac{\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx\\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int \\frac{e \\sec^2{x}\\sin{x}}{\\cos{x} - 2\\sec{x}}\\ln \\left(\\frac{\\sec^4{x} + \\tan^4{x} + 2\\sec^2{x}\\tan^2{x}}{\\text{sech}^2\\,{x} + \\text{tanh}^2\\,{x}}\\right)\\ dx  \\\\ =&\\ \\int \\frac{e\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\frac{\\left(\\sec^{2}x\\right)^{2}+\\left(\\tan^{2}x\\right)^{2}+2\\sec\\left(x\\right)^{2}\\tan\\left(x\\right)^{2}}{1}\\right)\\ dx  \\\\ =&\\ \\int \\frac{e\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\left(\\sec^{2}x+\\tan^{2}x\\right)^{2}\\right)\\ dx  \\\\ =&\\ \\int \\frac{e\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\cdot2\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ =&\\ 2e\\int \\frac{\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx\\end{align*}"
           }
         ],
         "reform": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= 2e\\int_{\\ }^{\\ }\\frac{\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\cdot\\frac{\\sec x}{\\sec x}\\ dx  \\\\ &= 2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{1-2\\sec^{2}x}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{2\\sec^{2}-1}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{\\sec^{2}x+\\sec^{2}-1}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{\\tan^{2}x+1+\\sec^{2}-1}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int_{\\ }^{\\ }\\frac{\\sec x\\tan x}{\\tan^{2}x+\\sec^{2}}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx\\end{align*}"
+            "content": "\\begin{align*}  &= 2e\\int \\frac{\\sec^{2}x\\sin x}{\\cos x-2\\sec x}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\cdot\\frac{\\sec x}{\\sec x}\\ dx  \\\\ &= 2e\\int \\frac{\\sec x\\tan x}{1-2\\sec^{2}x}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int \\frac{\\sec x\\tan x}{2\\sec^{2}-1}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int \\frac{\\sec x\\tan x}{\\sec^{2}x+\\sec^{2}-1}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int \\frac{\\sec x\\tan x}{\\tan^{2}x+1+\\sec^{2}-1}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ &= -2e\\int \\frac{\\sec x\\tan x}{\\tan^{2}x+\\sec^{2}}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sec^{2}x+\\tan^{2}x &= t  \\\\ \\left(2\\sec x\\cdot\\sec x\\tan x+2\\tan x\\cdot\\sec^{2}x\\right)\\ dx &= dt  \\\\ \\left(2\\tan x\\sec^{2}x+2\\tan x\\sec^{2}x\\right)\\ dx &= dt  \\\\ 4\\tan x\\sec^{2}x\\ dx &= dt  \\\\ dx &= \\frac{1}{4\\tan x\\sec^{2}x}\\ dt  \\\\ \\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ -2e\\int \\frac{\\sec x\\tan x}{\\tan^{2}x+\\sec^{2}}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)\\ dx  \\\\ =&\\ -2e\\int \\frac{\\tan x\\sec^{2}x}{t}\\ln t\\cdot\\frac{1}{4\\tan x\\sec^{2}x}\\ dt  \\\\ =&\\ -\\frac{2e}{4}\\int \\frac{1}{t}\\ln t\\ dt  \\\\ =&\\ -\\frac{e}{2}\\cdot\\frac{1}{2}\\left(\\ln t\\right)^{2}  \\\\ =&\\ -\\frac{e}{4}\\left(\\ln t\\right)^{2}  \\\\ =&\\ -\\frac{e}{4}\\ln\\left(\\sec^{2}x+\\tan^{2}x\\right)^{2}-c\\end{align*}"
           }
         ]
       }
@@ -2622,6 +2662,110 @@
           "content": "...maybe not quicker, but perhaps more fun!"
         }
       ]
+    },
+    "s25f-tt1": {
+      "topic": "integrals",
+      "title": "palisade",
+      "desc": null,
+      "date": "2025 January 9",
+      "tags": [
+        "trig"
+      ],
+      "method": [
+        "spot",
+        "speed"
+      ],
+      "shard": "s25f-tt1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }\\tan\\left(x\\right)\\sec\\left(x\\right)\\tan\\left(\\sec x\\right)\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\ln\\left(\\cos\\left(\\sec x\\right)\\right)-c"
+        }
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }\\tan t\\ dt  \\\\ &= -\\ln\\left(\\cos t\\right)  \\\\ &= -\\ln\\left(\\cos\\left(\\sec x\\right)\\right)-c\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sec x &= t  \\\\ \\sec x\\tan x\\ dx &= dt\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-tz1": {
+      "topic": "integrals",
+      "title": "secanthropic",
+      "desc": null,
+      "date": "2025 January 9",
+      "tags": [
+        "horror",
+        "trig",
+        "frac"
+      ],
+      "method": [
+        "spot",
+        "algebra"
+      ],
+      "shard": "s25f-tz1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    {1 + \\tan{x}}    {        \\sec^4{x}      + \\sec{x}\\tan{x}      - 2\\sec^2{x}\\tan^2{x}      + \\sec{x}      + \\tan{x}      + \\tan^4{x}    }\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "x+\\cot x-\\csc x-c"
+        }
+      ],
+      "solution": {
+        "reform": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int\\frac{1 + \\tan{x}}{\\sec^4{x}+\\sec{x}\\tan{x}-2\\sec^2{x}\\tan^2{x}+\\sec{x}+\\tan{x}+\\tan^4{x}}\\ dx  \\\\ =&\\ \\int \\frac{1+\\tan x}{\\left(\\sec^{4}x-2\\sec^{2}x\\tan^{2}x+\\tan^{4}x\\right)+\\left(\\sec x\\tan x+\\sec x\\right)+\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{1+\\tan x}{\\left(\\sec^{2}x-\\tan^{2}x\\right)^{2}+\\left(\\sec x\\right)\\left(\\tan x+1\\right)+\\tan x}\\ dx\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "We can show that $\\sec^2{x} - \\tan^2{x} = 1$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\sec^2{x} - \\tan^2{x}  \\\\ =&\\ \\frac{1}{\\cos^{2}x}-\\frac{\\sin^{2}x}{\\cos^{2}x}  \\\\ =&\\ \\frac{1-\\sin^{2}x}{\\cos^{2}x}  \\\\ =&\\ \\frac{\\cos^{2}x}{\\cos^{2}x}  \\\\ =&\\ 1\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "So we have"
+          },
+          {
+            "kind": "latex",
+            "content": "= \\int \\frac{1+\\tan x}{1+\\left(\\sec x\\right)\\left(\\tan x+1\\right)+\\tan x}\\ dx"
+          }
+        ],
+        "factorise": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1+\\tan x}{1+\\left(\\sec x\\right)\\left(\\tan x+1\\right)+\\tan x}\\ dx  \\\\ &= \\int \\frac{1+\\tan x}{\\left(1+\\tan x\\right)+\\left(\\sec x\\right)\\left(1+\\tan x\\right)}\\ dx  \\\\ &= \\int \\frac{1+\\tan x}{\\left(1+\\tan x\\right)\\left(1+\\sec x\\right)}\\ dx  \\\\ &= \\int \\frac{1}{1+\\sec x}\\ dx\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{\\cos x}{\\cos x+1}\\ dx  \\\\ &= \\int \\frac{\\cos x+1}{\\cos x+1}-\\frac{1}{\\cos x+1}\\ dx  \\\\ &= \\int dx-\\int \\frac{1}{1+\\cos x}\\ dx  \\\\ &= x-\\int \\frac{1-\\cos x}{\\left(1+\\cos x\\right)\\left(1-\\cos x\\right)}\\ dx  \\\\ &= x-\\int \\frac{1-\\cos x}{1-\\cos^{2}x}\\ dx  \\\\ &= x-\\int \\frac{1-\\cos x}{\\sin^{2}x}\\ dx  \\\\ &= x-\\int \\frac{1}{\\sin^{2}x}\\ dx+\\int \\frac{\\cos}{\\sin^{2}x}\\ dx  \\\\ &= x-\\int \\csc^{2}x\\ dx+\\int \\frac{\\cos x}{\\sin x}\\cdot\\frac{1}{\\sin x}\\ dx  \\\\ &= x+\\int -\\csc^{2}x\\ dx-\\int -\\cot x\\csc x\\ dx  \\\\ &= x+\\cot x-\\csc x-c\\end{align*}"
+          }
+        ]
+      }
     }
   }
 }
