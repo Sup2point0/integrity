@@ -4,8 +4,6 @@
 | index = guides / integrals
 -->
 
-It’s said that *one can learn differentiation in a day, but can’t learn integration in a life time.*
-
 The [Fundamental Theorem of Calculus<sup>↗</sup>](https://wikipedia.org/wiki/Fundamental_theorem_of_calculus) says that *integration* and *differentiation* are the inverses of each other. So why is it that integration is extraordinarily, incomparably more difficult[^difficult-nontrivial] than differentiation?
 
 [^difficult-nontrivial]: Perhaps a better term would be *nontrivial*.
