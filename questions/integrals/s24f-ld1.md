@@ -1,6 +1,6 @@
 ---
 topic: integrals
-title: weird
+title: abode
 desc: 
 date: 2024 December
 tags:
