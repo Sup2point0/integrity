@@ -67,22 +67,22 @@ How could you get rid of $\cos{x}$ in the denominator?
 ```math
 \begin{align*}
   &\ \int \frac{e \sec^2{x}\sin{x}}{\cos{x} - 2\sec{x}}\ln \left(\frac{\sec^4{x} + \tan^4{x} + 2\sec^2{x}\tan^2{x}}{\text{sech}^2\,{x} + \text{tanh}^2\,{x}}\right)\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{e\sec^{2}x\sin x}{\cos x-2\sec x}\ln\left(\frac{\left(\sec^{2}x\right)^{2}+\left(\tan^{2}x\right)^{2}+2\sec\left(x\right)^{2}\tan\left(x\right)^{2}}{1}\right)\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{e\sec^{2}x\sin x}{\cos x-2\sec x}\ln\left(\left(\sec^{2}x+\tan^{2}x\right)^{2}\right)\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{e\sec^{2}x\sin x}{\cos x-2\sec x}\cdot2\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
-  \\ =&\ 2e\int_{\ }^{\ }\frac{\sec^{2}x\sin x}{\cos x-2\sec x}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
+  \\ =&\ \int \frac{e\sec^{2}x\sin x}{\cos x-2\sec x}\ln\left(\frac{\left(\sec^{2}x\right)^{2}+\left(\tan^{2}x\right)^{2}+2\sec\left(x\right)^{2}\tan\left(x\right)^{2}}{1}\right)\ dx
+  \\ =&\ \int \frac{e\sec^{2}x\sin x}{\cos x-2\sec x}\ln\left(\left(\sec^{2}x+\tan^{2}x\right)^{2}\right)\ dx
+  \\ =&\ \int \frac{e\sec^{2}x\sin x}{\cos x-2\sec x}\cdot2\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
+  \\ =&\ 2e\int \frac{\sec^{2}x\sin x}{\cos x-2\sec x}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
 \end{align*}
 ```
 
 ### Reform
 ```math
 \begin{align*}
-  &= 2e\int_{\ }^{\ }\frac{\sec^{2}x\sin x}{\cos x-2\sec x}\ln\left(\sec^{2}x+\tan^{2}x\right)\cdot\frac{\sec x}{\sec x}\ dx
-  \\ &= 2e\int_{\ }^{\ }\frac{\sec x\tan x}{1-2\sec^{2}x}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
-  \\ &= -2e\int_{\ }^{\ }\frac{\sec x\tan x}{2\sec^{2}-1}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
-  \\ &= -2e\int_{\ }^{\ }\frac{\sec x\tan x}{\sec^{2}x+\sec^{2}-1}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
-  \\ &= -2e\int_{\ }^{\ }\frac{\sec x\tan x}{\tan^{2}x+1+\sec^{2}-1}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
-  \\ &= -2e\int_{\ }^{\ }\frac{\sec x\tan x}{\tan^{2}x+\sec^{2}}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
+  &= 2e\int \frac{\sec^{2}x\sin x}{\cos x-2\sec x}\ln\left(\sec^{2}x+\tan^{2}x\right)\cdot\frac{\sec x}{\sec x}\ dx
+  \\ &= 2e\int \frac{\sec x\tan x}{1-2\sec^{2}x}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
+  \\ &= -2e\int \frac{\sec x\tan x}{2\sec^{2}-1}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
+  \\ &= -2e\int \frac{\sec x\tan x}{\sec^{2}x+\sec^{2}-1}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
+  \\ &= -2e\int \frac{\sec x\tan x}{\tan^{2}x+1+\sec^{2}-1}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
+  \\ &= -2e\int \frac{\sec x\tan x}{\tan^{2}x+\sec^{2}}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
 \end{align*}
 ```
 
@@ -101,9 +101,9 @@ How could you get rid of $\cos{x}$ in the denominator?
 ### Solve
 ```math
 \begin{align*}
-  &\ -2e\int_{\ }^{\ }\frac{\sec x\tan x}{\tan^{2}x+\sec^{2}}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
-  \\ =&\ -2e\int_{\ }^{\ }\frac{\tan x\sec^{2}x}{t}\ln t\cdot\frac{1}{4\tan x\sec^{2}x}\ dt
-  \\ =&\ -\frac{2e}{4}\int_{\ }^{\ }\frac{1}{t}\ln t\ dt
+  &\ -2e\int \frac{\sec x\tan x}{\tan^{2}x+\sec^{2}}\ln\left(\sec^{2}x+\tan^{2}x\right)\ dx
+  \\ =&\ -2e\int \frac{\tan x\sec^{2}x}{t}\ln t\cdot\frac{1}{4\tan x\sec^{2}x}\ dt
+  \\ =&\ -\frac{2e}{4}\int \frac{1}{t}\ln t\ dt
   \\ =&\ -\frac{e}{2}\cdot\frac{1}{2}\left(\ln t\right)^{2}
   \\ =&\ -\frac{e}{4}\left(\ln t\right)^{2}
   \\ =&\ -\frac{e}{4}\ln\left(\sec^{2}x+\tan^{2}x\right)^{2}-c
