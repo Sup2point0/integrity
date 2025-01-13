@@ -42,7 +42,7 @@ method:
 ```
 
 
-## Alternate
+## Alternates
 
 We could also make a trigonometric substitution!
 
