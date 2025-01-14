@@ -39,7 +39,7 @@ $0$
 
 ## Solution
 
-### Solve
+### Reform
 ```math
 \begin{align*}
   &\ \int_{0}^{3\pi}\left(\frac{1+\sin4x}{\sin2x+\cos2x}\right)^{3}\ dx

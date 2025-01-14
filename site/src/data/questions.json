@@ -3122,6 +3122,18 @@
         }
       ],
       "solution": {
+        "reform": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{0}^{3\\pi}\\left(\\frac{1+\\sin4x}{\\sin2x+\\cos2x}\\right)^{3}\\ dx  \\\\ =&\\ \\int_{0}^{3\\pi}\\left(\\frac{1+2\\left(\\sin2x\\right)\\left(\\cos2x\\right)}{\\sin2x+\\cos2x}\\right)^{3}\\ dx  \\\\ =&\\ \\int_{0}^{3\\pi}\\left(\\frac{\\left(\\sin2x\\right)^{2}+\\left(\\cos2x\\right)^{2}+2\\left(\\sin2x\\right)\\left(\\cos2x\\right)}{\\sin2x+\\cos2x}\\right)^{3}\\ dx  \\\\ =&\\ \\int_{0}^{3\\pi}\\left(\\frac{\\left(\\sin2x+\\cos2x\\right)^{2}}{\\sin2x+\\cos2x}\\right)^{3}\\ dx  \\\\ =&\\ \\int_{0}^{3\\pi}\\left(\\sin2x+\\cos2x\\right)^{3}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  2x &= t  \\\\ 2\\ dx &= dt\\end{align*}"
+          }
+        ],
         "solve": [
           {
             "kind": "latex",
@@ -3134,12 +3146,6 @@
           {
             "kind": "latex",
             "content": "= 0"
-          }
-        ],
-        "substitute": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  2x &= t  \\\\ 2\\ dx &= dt\\end{align*}"
           }
         ]
       }
