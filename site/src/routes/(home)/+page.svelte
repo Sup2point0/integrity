@@ -1,5 +1,7 @@
 <script lang="ts">
 
+import sample from "@stdlib/random-sample";
+
 import Site from "#scripts/site";
 
 import Card from "#parts/ui/card.svelte";
@@ -7,12 +9,20 @@ import QuestionCard from "#parts/ui/card.question.svelte";
 import Link from "#parts/ui/link.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
 import Line from "#parts/page/line.svelte";
-import Katex from "#parts/katex.svelte";
 
 import Header from "#parts/core/header.svelte";
 
+import { onMount } from "svelte";
 
-const featured = Site.get_featured();
+
+const all_featured = Site.get_featured();
+// start with 1 featured
+let featured = [all_featured[Math.floor(Math.random() * all_featured.length)]];
+
+// fill in more randomly on client side
+onMount(() => {
+  featured = sample(all_featured, { size: 3, replace: false });
+});
 
 </script>
 

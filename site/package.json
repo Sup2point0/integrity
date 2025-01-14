@@ -15,6 +15,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@stdlib/random-sample": "^0.2.1",
     "@sveltejs/adapter-static": "^3.0.2",
     "@sveltejs/kit": "^2.9.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
@@ -23,8 +24,8 @@
     "mdsvex": "^0.12.3",
     "rehype-katex": "^7.0.1",
     "rehype-katex-svelte": "^1.2.0",
-    "remark-math": "^3.0.0",
     "remark-footnotes": "^2.0.0",
+    "remark-math": "^3.0.0",
     "remark-numbered-footnote-labels": "^1.1.0",
     "sass": "^1.77.6",
     "svelte": "^5.0.0",

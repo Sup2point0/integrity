@@ -21,14 +21,14 @@ html, body {
 
 p, td {
   @include font-ui;
+}
 
-  em {
-    font-style: normal;
-    font-variation-settings:
-      "slnt" -9,
-      "CRSV" 1,
-      "SHRP" 0;
-  }
+em {
+  font-style: normal;
+  font-variation-settings:
+    "slnt" -9,
+    "CRSV" 1,
+    "SHRP" 0;
 }
 
 img {

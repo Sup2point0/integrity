@@ -30,7 +30,7 @@ import { base } from "$app/paths";
     <div class="right">
       <a class="credits" href="https://github.com/Sup2point0">
         <div>
-          <p> Made with love by </p>
+          <p> made with love by </p>
           <p id="sup2point0"> Sup#2.0 </p>
         </div>
   
@@ -152,6 +152,7 @@ img#purple-portal {
 }
 
 p#sup2point0 {
+  padding-top: 0.2em;
   color: #3c8dbc;  // fallback
   color: $col-prot;
   font-size: 200%;
