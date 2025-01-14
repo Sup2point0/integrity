@@ -11,6 +11,8 @@ tags:
 method:
   - spot
   - sub
+flags:
+  - feat
 ---
 
 

@@ -1445,7 +1445,7 @@
     },
     "s24f-ld1": {
       "topic": "integrals",
-      "title": "weird",
+      "title": "abode",
       "desc": null,
       "date": "2024 December",
       "tags": [
@@ -2616,6 +2616,9 @@
         "spot",
         "sub"
       ],
+      "flags": [
+        "feat"
+      ],
       "shard": "s25f-nx1",
       "question": [
         {
@@ -2950,7 +2953,7 @@
           }
         ]
       },
-      "alternate": [
+      "alternates": [
         {
           "kind": "text",
           "content": "We could also make a trigonometric substitution!"
@@ -3081,6 +3084,9 @@
       ],
       "method": [
         "spot"
+      ],
+      "flags": [
+        "feat"
       ],
       "shard": "s25f-tm1",
       "question": [

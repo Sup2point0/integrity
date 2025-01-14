@@ -9,6 +9,8 @@ tags:
   - trig
 method:
   - spot
+flags:
+  - featcd s
 ---
 
 
