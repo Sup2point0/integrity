@@ -2,6 +2,8 @@
 
 import Site from "#scripts/site";
 
+import Card from "#parts/ui/card.svelte";
+
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
@@ -19,6 +21,33 @@ import Header from "#parts/core/header.svelte";
   { text: "Speedrun" },
 ]} />
 
-<Header title="Speedrun" />
+<Header title="Speedrun"
+  capt="Coming Soon!"
+/>
 
-<p> Coming soon! </p>
+
+<div class="content">
+  <Card title="Differentiation"
+    intern="speedrun/differentiation"
+    latex={String.raw`\frac{d}{dx}\ e^x`}
+  />
+  <Card title="Integration"
+    intern="speedrun/integration"
+    latex={String.raw`\int f(x)\ dx `}
+  />
+</div>
+
+
+<style lang="scss">
+
+.content {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+}
+
+</style>
