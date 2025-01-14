@@ -29,25 +29,24 @@ function process_questions(raw: any)
 
 function construct_collection(raw: any): QuestionCollection
 {
-  let out: QuestionCollection = {
-    tags: [],
-    questions: {},
-  };
+  let tags_set = new Set<string>();
+  let questions: Record<string, Question> = {};
 
+  let tag: string;
   let question: Question;
 
   for (let [shard, data] of Object.entries(raw)) {
     question = new Question(data);
-    out.questions[shard] = question;
+    questions[shard] = question;
     
-    for (let tag of question.tags) {
-      if (!out.tags.includes(tag)) {
-        out.tags.push(tag);
-      }
+    for (tag of question.tags) {
+      tags_set.add(tag);
     }
   }
 
-  return out;
+  let tags = Array.from(tags_set).sort();
+
+  return { tags, questions };
 }
 
 

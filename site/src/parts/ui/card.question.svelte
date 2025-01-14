@@ -91,7 +91,7 @@ a.question-card {
   align-items: stretch;
 
   &.block {
-    max-width: 20vw;
+    max-width: max(20vw, 20rem);
     flex-direction: column;
   }
   &.row {

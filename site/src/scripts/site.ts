@@ -39,7 +39,12 @@ const Site: SiteData = {
   },
 
   get_all_tags: () => {
-    return Object.values(Site.questions).flatMap(topic => topic.tags);
+    return Array.from(
+      new Set(
+        Object.values(Site.questions)
+        .flatMap(topic => topic.tags)
+      )
+    ).sort();
   },
 
   get_featured: () => {

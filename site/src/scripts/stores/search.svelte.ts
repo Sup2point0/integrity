@@ -18,6 +18,7 @@ export class SearchData
     solved: false,
     flagged: false,
     starred: false,
+    featured: false,
     unnamed: false,
     "has hints": false,
   });
@@ -25,6 +26,7 @@ export class SearchData
     solved: false,
     flagged: false,
     starred: false,
+    featured: false,
     unnamed: false,
     "has hints": false,
   })
@@ -39,6 +41,7 @@ export class SearchData
   sort: "date" | "name" | "rel" | null = $state(null);
   reverse: boolean = $state(false);
 
+
   filter_questions(
     questions: Question[],
   ): Question[]
@@ -46,6 +49,7 @@ export class SearchData
     let out: Question[] = [...questions];
   
     // Filter
+    /* we could optimise the order of applying filters so those that cut out the greatest proportion are applied first (thereby speeding up later filters), but this doesn't really impact performance enough to warrant that lmao */
     if (Object.values(this.tags).includes(true)) {
       out = out.filter(
         question => Object.keys(this.tags).some(tag =>
@@ -58,6 +62,12 @@ export class SearchData
       out = out.filter(question => !question.title);
     } else if (this.exclude.unnamed) {
       out = out.filter(question => question.title);
+    }
+
+    if (this.include.featured) {
+      out = out.filter(question => question.flags?.includes("feat"));
+    } else if (this.exclude.featured) {
+      out = out.filter(question => !(question.flags?.includes("feat")));
     }
   
     if (this.include.hints) {

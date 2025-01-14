@@ -301,6 +301,7 @@ th {
 td {
   min-width: 5em;
   padding: 0.75em 2em;
+  font-size: 95%;
 
   &.flex {
     display: flex;
