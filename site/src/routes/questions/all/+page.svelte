@@ -53,7 +53,7 @@ onMount(() => {
 
 <aside>
   {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> questions of {count} </p>
+    <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {count} </p>
   {:else}
     <p> Oops, no questions found! </p>
   {/if}
