@@ -89,6 +89,14 @@ article {
     }
   }
 
+  img {
+    margin: 1rem 0;
+    box-shadow: 0 3px 8px light-dark(
+      rgb(black, 8%),
+      rgb(white, 0%)
+    );
+  }
+
   table {
     border-collapse: collapse;
 
