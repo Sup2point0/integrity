@@ -47,8 +47,8 @@ import { base } from "$app/paths";
   <section>
     <h2> Tools </h2>
     <div class="links">
-      <Link text="Speedrun" intern="speedrun" />
       <Link text="Workspace" intern="workspace" />
+      <Link text="Speedrun" intern="speedrun" />
     </div>
   </section>
 
