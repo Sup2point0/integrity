@@ -19,7 +19,7 @@ import Header from "#parts/core/header.svelte";
   { text: "Why Is Integration Difficult?" },
 ]} />
 
-<Header title="Why Is Integration Difficult?" capt="You can learn to differentiate in a day, but you can’t learn to integrate in a lifetime." />
+<Header title="Why Is Integration Difficult?" capt={page.capt} />
 
 <article>
   <Content />

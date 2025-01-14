@@ -6,6 +6,7 @@ interface SiteData {
   /** The base URL of the site. */
   root: string;
 
+  pages: Record<string, object>;
   questions: QuestionsData;
 
   get_questions_of_topic: (topic: string) => Question[];
@@ -22,6 +23,7 @@ interface SiteData {
 const Site: SiteData = {
   root: "https://sup2point0.github.io/integrity/",
 
+  pages: (await import("../data/site.json")).pages,
   questions: questions,
 
   get_questions_of_topic: (topic) => {

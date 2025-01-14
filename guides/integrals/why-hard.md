@@ -1,6 +1,7 @@
 # Why Is Integration Difficult?
 <!-- #SQUARK live!
 | dest = guides/integrals/why-hard
+| capt = You can learn to differentiate in a day, but you can’t learn to integrate in a lifetime.
 | index = guides / integrals
 -->
 

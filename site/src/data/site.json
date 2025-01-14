@@ -88,9 +88,9 @@
     },
     "guides/integrals/why-hard.md": {
       "path": "guides/integrals/why-hard.md",
-      "last_deploy": "2025-01-12 09:28:03 +0000",
-      "slocs": 95,
-      "chars": 5072,
+      "last_deploy": "2025-01-14 10:38:40 +0000",
+      "slocs": 96,
+      "chars": 5170,
       "isIndex": false,
       "flags": [
         "live"
@@ -98,8 +98,8 @@
       "dest": "guides/integrals/why-hard",
       "title": "Why Is Integration Difficult?",
       "head": "Why Is Integration Difficult?",
-      "capt": null,
-      "desc": null,
+      "capt": "You can learn to differentiate in a day, but you can’t learn to integrate in a lifetime.",
+      "desc": "You can learn to differentiate in a day, but you can’t learn to integrate in a lifetime.",
       "index": [
         "guides",
         "integrals"
@@ -113,9 +113,9 @@
     },
     "guides/integrals/why.md": {
       "path": "guides/integrals/why.md",
-      "last_deploy": "2024-12-25 13:41:03 +0000",
-      "slocs": 29,
-      "chars": 3478,
+      "last_deploy": "2025-01-14 10:42:28 +0000",
+      "slocs": 30,
+      "chars": 3540,
       "isIndex": false,
       "flags": [
         "live"
@@ -123,8 +123,8 @@
       "dest": "guides/integrals/why",
       "title": "Why Integrate?",
       "head": "Why Integrate?",
-      "capt": null,
-      "desc": null,
+      "capt": "Integration is love, integration is life",
+      "desc": "Integration is love, integration is life",
       "index": [
         "guides",
         "integrals"
