@@ -36,6 +36,10 @@
 - [Addvent](https://sup2point0.github.io/questions/addvent) (Christmas-themed questions)
 - [Desmos](https://www.desmos.com/)
 
+### Upcoming
+- Flag, mark as completed, and favourite questions, saved to local storage
+- Speedrun environment for speedrunning questions
+
 
 <br>
 
@@ -54,7 +58,10 @@
 
 ## Credits
 
-All questions in *Integrity* were created by myself. Of course, maths is maths, so there is every possibility you may find a particular problem elsewhere too!
+All questions in *Integrity* were created by myself. Of course, maths is maths, so there is every possibility a particular combination of expressions I’ve made has appeared a nonzero number of times elsewhere too. Some questions may also have been inspired by others I have encountered before.
+
+### Contribute
+*Integrity* is an independent project for my own maths questions, but I appreciate the sentiment! And if you just want to chat about maths, well, I’m always more than happy to do that >:)
 
 ### AI
 No AI was used for any of these.
