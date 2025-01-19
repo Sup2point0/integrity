@@ -39,7 +39,7 @@ onMount(() => {
   <div class="topics">
     <Card title="Integrals"
       intern="questions/integrals"
-      latex={String.raw`"\int f(x)\ dx`}
+      latex={String.raw`\int f(x)\ dx`}
     />
     <Card title="Graph Drawing"
       intern="questions/graph-drawing"
