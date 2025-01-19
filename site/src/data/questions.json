@@ -3220,24 +3220,46 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int_{\\ }^{\\ }\\frac{2\\sec x-2\\tan x-\\cos x}{\\sin x-1}\\ dx"
+          "content": "\\int \\frac{2\\sec x-2\\tan x-\\cos x}{\\sin x-1}\\ dx"
         }
       ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "We probably want all the trigonometric functions in the same form – either $\\sin$ and $\\cos$ primitives, or $\\sec$ and $\\tan$ evolutions."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Try converting all the functions to $\\sec{x}$ and $\\tan{x}$."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What could you multiply through by to get rid of $\\sin{x}$ and $\\cos{x}$?"
+          }
+        ]
+      },
       "answer": [
         {
           "kind": "latex",
-          "content": ""
+          "content": "-\\ln\\left|\\cos x\\right|-\\ln\\left|\\sec x+\\tan x\\right|-c"
         }
       ],
       "solution": {
         "solve": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\   \\\\ =&\\ \\end{align*}"
-          },
+            "content": "\\begin{align*}  &\\ \\int \\frac{2\\sec x-2\\tan x-\\cos x}{\\sin x-1}\\ dx  \\\\ =&\\ \\int \\frac{2\\sec x-2\\tan x-\\cos x}{\\sin x-1}\\cdot\\frac{\\sec x}{\\sec x}\\ dx  \\\\ =&\\ \\int \\frac{2\\sec^{2}x-2\\sec x\\tan x-1}{\\tan x-\\sec x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(2\\sec^{2}x-1\\right)-2\\sec x\\tan x}{\\tan x-\\sec x}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\left(\\sec^{2}x-1\\right)-2\\sec x\\tan x}{\\tan x-\\sec x}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\tan^{2}x-2\\sec x\\tan x}{\\tan x-\\sec x}\\ dx  \\\\ =&\\ \\int \\frac{\\ \\left(\\sec x-\\tan x\\right)^{2}}{\\tan x-\\sec x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\tan x-\\sec x\\right)^{2}}{\\tan x-\\sec x}\\ dx  \\\\ =&\\ \\int \\tan x-\\sec x\\ dx  \\\\ =&\\ -\\ln\\left|\\cos x\\right|-\\ln\\left|\\sec x+\\tan x\\right|-c\\end{align*}"
+          }
+        ],
+        "factorise": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+            "content": "\\begin{align*}  &= \\ln\\left|\\sec x\\right|-\\ln\\left|\\sec x+\\tan x\\right|  \\\\ &= \\ln\\left|\\frac{\\sec x}{\\sec x+\\tan x}\\right|-c\\end{align*}"
           }
         ]
       }
