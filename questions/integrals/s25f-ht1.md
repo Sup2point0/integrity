@@ -41,12 +41,12 @@ e^{x}-c
 ### Solve
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\sqrt{\frac{\sinh x+\cosh x}{\cosh x-\sinh x}}\ dx
-  \\ =&\ \int_{\ }^{\ }\sqrt{\frac{\frac{1}{2}\left(e^{x}-e^{-x}\right)+\frac{1}{2}\left(e^{x}+e^{-x}\right)}{\frac{1}{2}\left(e^{x}+e^{-x}\right)-\frac{1}{2}\left(e^{x}-e^{-x}\right)}}\ dx
-  \\ =&\ \int_{\ }^{\ }\sqrt{\frac{\left(\frac{1}{2}e^{x}+\frac{1}{2}e^{x}\right)-\left(\frac{1}{2}e^{-x}+\frac{1}{2}e^{-x}\right)}{\left(\frac{1}{2}e^{x}-\frac{1}{2}e^{x}\right)+\left(\frac{1}{2}e^{-x}+\frac{1}{2}e^{-x}\right)}}\ dx
-  \\ =&\ \int_{\ }^{\ }\sqrt{\frac{e^{x}}{e^{-x}}}\ dx
-  \\ =&\ \int_{\ }^{\ }\sqrt{e^{2x}}\ dx
-  \\ =&\ \int_{\ }^{\ }e^{x}\ dx
+  &\ \int \sqrt{\frac{\sinh x+\cosh x}{\cosh x-\sinh x}}\ dx
+  \\ =&\ \int \sqrt{\frac{\frac{1}{2}\left(e^{x}-e^{-x}\right)+\frac{1}{2}\left(e^{x}+e^{-x}\right)}{\frac{1}{2}\left(e^{x}+e^{-x}\right)-\frac{1}{2}\left(e^{x}-e^{-x}\right)}}\ dx
+  \\ =&\ \int \sqrt{\frac{\left(\frac{1}{2}e^{x}+\frac{1}{2}e^{x}\right)-\left(\frac{1}{2}e^{-x}+\frac{1}{2}e^{-x}\right)}{\left(\frac{1}{2}e^{x}-\frac{1}{2}e^{x}\right)+\left(\frac{1}{2}e^{-x}+\frac{1}{2}e^{-x}\right)}}\ dx
+  \\ =&\ \int \sqrt{\frac{e^{x}}{e^{-x}}}\ dx
+  \\ =&\ \int \sqrt{e^{2x}}\ dx
+  \\ =&\ \int e^{x}\ dx
   \\ =&\ e^{x}-c
 \end{align*}
 ```

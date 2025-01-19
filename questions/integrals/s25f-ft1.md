@@ -42,11 +42,11 @@ Think difference of 2 squares.
 ### Solve
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\frac{\sec x}{\sec x-\tan x}\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{\left(\sec x\right)\left(\sec x+\tan x\right)}{\left(\sec x-\tan x\right)\left(\sec x+\tan x\right)}\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{\sec^{2}x+\sec x\tan x}{\sec^{2}x-\tan^{2}x}\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{\sec^{2}x+\sec x\tan x}{1}\ dx
-  \\ =&\ \int_{\ }^{\ }\sec^{2}x\ dx+\int_{\ }^{\ }\sec x\tan x\ dx
+  &\ \int \frac{\sec x}{\sec x-\tan x}\ dx
+  \\ =&\ \int \frac{\left(\sec x\right)\left(\sec x+\tan x\right)}{\left(\sec x-\tan x\right)\left(\sec x+\tan x\right)}\ dx
+  \\ =&\ \int \frac{\sec^{2}x+\sec x\tan x}{\sec^{2}x-\tan^{2}x}\ dx
+  \\ =&\ \int \frac{\sec^{2}x+\sec x\tan x}{1}\ dx
+  \\ =&\ \int \sec^{2}x\ dx+\int \sec x\tan x\ dx
   \\ =&\ \tan x+\sec x-c
 \end{align*}
 ```

@@ -28,11 +28,11 @@ method:
 ### Solve
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\sqrt{\frac{x}{1-\frac{1}{x}}}\ dx
-  \\ =&\ \int_{\ }^{\ }\sqrt{\frac{x^{2}}{x-1}}\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{x}{\sqrt{x-1}}\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{x-1}{\sqrt{x-1}}+\frac{1}{\sqrt{x-1}}\ dx
-  \\ =&\ \int_{\ }^{\ }\left(x-1\right)^{\frac{1}{2}}\ dx+\int_{\ }^{\ }\left(x-1\right)^{-\frac{1}{2}}\ dx
+  &\ \int \sqrt{\frac{x}{1-\frac{1}{x}}}\ dx
+  \\ =&\ \int \sqrt{\frac{x^{2}}{x-1}}\ dx
+  \\ =&\ \int \frac{x}{\sqrt{x-1}}\ dx
+  \\ =&\ \int \frac{x-1}{\sqrt{x-1}}+\frac{1}{\sqrt{x-1}}\ dx
+  \\ =&\ \int \left(x-1\right)^{\frac{1}{2}}\ dx+\int \left(x-1\right)^{-\frac{1}{2}}\ dx
   \\ =&\ \frac{2}{3}\left(x-1\right)^{\frac{3}{2}}+2\left(x-1\right)^{\frac{1}{2}}-c
 \end{align*}
 ```
