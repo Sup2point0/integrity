@@ -38,7 +38,7 @@ import { base } from "$app/paths";
       <Link text="Guess the Graph" intern="questions/guess-graph" />
       <Link text="Addvent" intern="questions/addvent" />
       <Link text="Special" intern="questions/special" />
-      <Link text="Random" button={() => {
+      <Link text="Random" action={() => {
         window.location.href = `${base}/question/${pick_random_question()}`;
       }} />
     </div>

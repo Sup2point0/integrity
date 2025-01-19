@@ -54,7 +54,7 @@ onMount(() => {
       bind:value={search.query}
     />
 
-    <Clicky button={() => { open = !open; }}>
+    <Clicky action={() => { open = !open; }}>
       <img class="arrow" alt="/" src="{base}/arrow.svg"
         style:transform={open ? "rotate(180deg)" : "rotate(0deg)"}
       />

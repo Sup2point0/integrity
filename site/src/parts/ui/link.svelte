@@ -11,18 +11,18 @@ interface Props {
   text: string;
   link?: string;
   intern?: string;
-  button?: () => void;
+  action?: () => void;
   disabled?: boolean;
 }
 
-let { text, link, intern, button, disabled = false }: Props = $props();
+let { text, link, intern, action, disabled = false }: Props = $props();
 
 </script>
 
 
-{#if button}
+{#if action}
   <button class="link" class:disabled
-    onclick={button}
+    onclick={action}
   >
     {text}
   </button>

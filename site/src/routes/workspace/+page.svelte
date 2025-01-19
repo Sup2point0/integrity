@@ -139,7 +139,7 @@ function apply_question(shard: string | null) {
 
   <section id="reset">
     <Clicky text="RESET"
-      button={() => {
+      action={() => {
         if (!check_desmos()) return;
 
         // Allow resets in quick succession
@@ -168,7 +168,7 @@ function apply_question(shard: string | null) {
 
 <nav>
   <section id="left">
-    <Clicky text="View Question" button={() => {
+    <Clicky text="View Question" action={() => {
       let question = try_load_question(selected_question);
 
       if (question) {

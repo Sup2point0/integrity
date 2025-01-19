@@ -68,7 +68,7 @@ function filter_suggestions(): string[]
       <img class="arrow" alt="/" src="{base}/arrow.svg" />
     </button>
 
-    <Clicky button={() => onselect(value)}>
+    <Clicky action={() => onselect(value)}>
       Go
     </Clicky>
   </search>

@@ -10,11 +10,11 @@ interface Props {
   pict?: string;
   link?: string;
   intern?: string;
-  button?: () => void;
+  action?: () => void;
   children?: any;
 }
 
-let { text, pict, link, intern, button, children }: Props = $props();
+let { text, pict, link, intern, action, children }: Props = $props();
 
 </script>
 
@@ -30,9 +30,9 @@ let { text, pict, link, intern, button, children }: Props = $props();
 {/snippet}
 
 
-{#if button}
+{#if action}
   <button class="clicky"
-    onclick={button}
+    onclick={action}
   >
     {@render content()}
   </button>
