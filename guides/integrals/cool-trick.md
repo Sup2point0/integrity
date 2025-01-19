@@ -60,8 +60,8 @@ We’ll use $f$ and $g$ to denote 2 arbitrary functions $f(x)$ and $g(x)$, dropp
 
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }fg'\ dx
-  \\ =&\ f\left(g+c\right)-\int_{\ }^{\ }f'\left(g+c\right)\ dx
+  &\ \int fg'\ dx
+  \\ =&\ f\left(g+c\right)-\int f'\left(g+c\right)\ dx
 \end{align*}
 ```
 
@@ -69,8 +69,8 @@ We’ll expand out and split the integral... (remembering not to make an [S-I+G-
 
 ```math
 \begin{align*}
-  &= fg+fc-\int_{\ }^{\ }f'g+f'c\ dx
-  \\ &= fg+fc-\int_{\ }^{\ }f'g\ dx-\int_{\ }^{\ }f'c\ dx
+  &= fg+fc-\int f'g+f'c\ dx
+  \\ &= fg+fc-\int f'g\ dx-\int f'c\ dx
 \end{align*}
 ```
 
@@ -78,9 +78,9 @@ And the $c$ separates out into an integral of $f'$. Of course by the fundamental
 
 ```math
 \begin{align*}
-  &= fg+fc-\int_{\ }^{\ }f'g\ dx-fc
-  \\ &= fg-\int_{\ }^{\ }f'g\ dx+fc-fc
-  \\ &= fg-\int_{\ }^{\ }f'g\ dx
+  &= fg+fc-\int f'g\ dx-fc
+  \\ &= fg-\int f'g\ dx+fc-fc
+  \\ &= fg-\int f'g\ dx
 \end{align*}
 ```
 
