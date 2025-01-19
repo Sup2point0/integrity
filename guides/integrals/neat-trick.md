@@ -12,7 +12,7 @@ Here’s a pretty standard integral. How would you approach it?
 \int x \tan^{-1}{x}\ dx
 ```
 
-My go-to approach for these is unironically substituting $tan^{-1}{x} = t$, but the fastest way is actually integration by parts.
+My go-to approach for these is unironically substituting $\tan^{-1}{x} = t$, but the fastest way is actually integration by parts.
 
 ```math
 \int f(x) g'(x) = f(x)g(x) - \int f'(x)g(x)\ dx
@@ -39,7 +39,7 @@ Hmm... what now?
 
 Well, here’s the thing: $c$ is an arbitrary constant. We can let it be anything, anything we want. So looking at the terms we’ve got here, what value of $c$ would be most helpful to us? What would give a really nice solution path?
 
-If we put $c = 1$, notice what happens.
+If we put $c = 1$, notice what happens:
 
 ```math
 \begin{align*}
@@ -70,7 +70,7 @@ We’ll expand out and split the integral... (remembering not to make an [S-I+G-
 ```math
 \begin{align*}
   &= fg+fc-\int f'g+f'c\ dx
-  \\ &= fg+fc-\int f'g\ dx-\int f'c\ dx
+  \\ &= fg+fc-\int f'g\ dx- c \int f'\ dx
 \end{align*}
 ```
 
@@ -78,12 +78,14 @@ And the $c$ separates out into an integral of $f'$. Of course by the fundamental
 
 ```math
 \begin{align*}
-  &= fg+fc-\int f'g\ dx-fc
-  \\ &= fg-\int f'g\ dx+fc-fc
+  &= fg+fc-\int f'g\ dx - cf
+  \\ &= fg-\int f'g\ dx + cf - cf
   \\ &= fg-\int f'g\ dx
 \end{align*}
 ```
 
-And would you look at that, the extra terms introduced by adding $+c$ cancelled out! And since this happens regardless of what we choose for $f(x)$ and $g(x)$, we can continue omitting the intermediary $+c$ in integration by parts. Of course, don’t forget to add the general $+c$ at the end to account for the accumulated constant from all the integrating!
+And would you look at that, the extra terms introduced by adding $+c$ cancelled out.
+
+Since this happens regardless of what we choose for $f(x)$ and $g(x)$, we can continue omitting the intermediary $+c$ in integration by parts. Of course, don’t forget to add the general $+c$ at the end to account for the accumulated constant from all the integrating!
 
 I have yet to find more integrals where we can leverage the $+c$ with this trick, though. Not many parts integrals feature derivatives and antidetivatives where all it takes is a constant to cancel them out. If you find any, let me know!
