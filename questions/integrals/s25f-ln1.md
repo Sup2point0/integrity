@@ -22,7 +22,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Those $x^e$ look scary, but they don’t actually mean anything!

@@ -21,7 +21,7 @@ Suppose 3 people walk past Santa every minute of a 9-hour schoolday.
 <strong>What is the probability at least 1 person is tripped up in the week?</strong>
 
 
-## Hint
+## Hints
 
 ### 1
 How many people walk past Santa in a school week?

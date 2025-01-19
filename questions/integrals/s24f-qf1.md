@@ -22,7 +22,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 That division by $2 \pi$ isn’t doing anything here.

@@ -18,7 +18,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 What if it wasn’t $e^x$, but just $x$?
 

@@ -19,7 +19,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Dividing by $\cos^2{x}$ should look familiar...

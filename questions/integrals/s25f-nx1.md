@@ -31,7 +31,7 @@ flags:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Even if you’ve never encountered hyperbolics ($\text{sech}$, $\text{tanh}$), you can use the hyperbolic identity $\cosh^2{x} - \sinh^2{x} = 1$.

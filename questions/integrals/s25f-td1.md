@@ -17,7 +17,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 

@@ -17,7 +17,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 $-x^3$ is a bit nasty.

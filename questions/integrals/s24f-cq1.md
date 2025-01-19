@@ -16,7 +16,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Yeah, this is just work.

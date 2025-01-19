@@ -20,7 +20,7 @@ flags:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 It’s generally good to have all trigonometric functions with the same input.

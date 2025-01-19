@@ -20,7 +20,7 @@ The 4 squirrels <em>Poppy</em>, <em>Quill</em>, <em>Ronald</em>, <em>Sunset</em>
 <strong>Can you determine what order they finished in?</strong>
 
 
-## Hint
+## Hints
 
 ### 1
 Try considering which squirrels can finish in each position.

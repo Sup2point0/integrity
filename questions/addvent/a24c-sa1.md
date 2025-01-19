@@ -23,7 +23,7 @@ Magically, it turns out that if you double the total area they’ve drawn and ad
 <strong>Can you find the total area they drew?</strong>
 
 
-## Hint
+## Hints
 
 ### 1
 What is the total area they drew out in terms of $r$ and $s$?

@@ -18,7 +18,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 $x^x$ is horrific.

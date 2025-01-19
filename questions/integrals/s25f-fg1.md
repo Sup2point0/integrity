@@ -17,7 +17,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 The $\sin{x}$ squared is a bit icky.

@@ -20,7 +20,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Expanding the exponent probably won’t help here.

@@ -18,7 +18,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Try writing $\sinh{x}$ and $\cosh{x}$ in terms of $e^x$ ;)

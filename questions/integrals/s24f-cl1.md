@@ -18,7 +18,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Try writing the integral as a product of 2 expressions.

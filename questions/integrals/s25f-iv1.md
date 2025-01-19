@@ -23,7 +23,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 What’s $sec^2{x} - 1$?

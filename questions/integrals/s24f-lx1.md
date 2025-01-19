@@ -17,7 +17,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 There’s quite a few ways we could clear this up.

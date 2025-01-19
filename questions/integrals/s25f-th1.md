@@ -17,7 +17,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 How could you get rid of the $\cos{x}$?

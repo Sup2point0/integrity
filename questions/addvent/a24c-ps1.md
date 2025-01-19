@@ -17,7 +17,7 @@ There is a ribbon of width $3 \text{cm}$ covering every face of the box in a “
 <strong>What proportion of the total surface area is not covered by ribbon?</strong>
 
 
-## Hint
+## Hints
 
 ### 1
 What’s the total surface area?

@@ -18,7 +18,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 What’s $\sin{30 \degree}$

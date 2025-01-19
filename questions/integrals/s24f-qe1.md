@@ -21,7 +21,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 You’re gonna need substitution for this one.

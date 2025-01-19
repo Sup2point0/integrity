@@ -17,7 +17,7 @@ tags:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 

@@ -18,7 +18,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Let’s start by rewriting those $x^{-1}$.

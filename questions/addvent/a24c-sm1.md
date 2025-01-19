@@ -20,7 +20,7 @@ Finally, I stack the smallest snowball on top of the 2 snowballs, which knocks y
 If my snowman is now left with a volume of $10445\pi\ \text{m}^3$ of snow, what is the largest value $x$ could have been?
 
 
-## Hint
+## Hints
 
 ### 1
 Set up an equation involving $x$.

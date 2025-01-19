@@ -20,7 +20,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 You’re on your own here.
 

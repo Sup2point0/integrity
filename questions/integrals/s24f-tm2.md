@@ -16,7 +16,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 We want our trigonometric functions in terms of the same input expression.

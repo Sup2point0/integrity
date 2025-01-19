@@ -18,7 +18,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Fractions are horrible, so let’s multiply through to make it a polynomial.

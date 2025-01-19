@@ -16,7 +16,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 Those $-$ signs look annoying.

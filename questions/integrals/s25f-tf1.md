@@ -25,7 +25,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 1 step at a time.

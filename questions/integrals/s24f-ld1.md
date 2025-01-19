@@ -17,7 +17,7 @@ method:
 ```
 
 
-## Hint
+## Hints
 
 ### 1
 What do we usually do when we have a polynomial, but with a division by $x$?
