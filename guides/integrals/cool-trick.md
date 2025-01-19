@@ -54,20 +54,36 @@ No $+1 -1$ required, just deal with it by setting $c$. Isn’t that mindblowing?
 
 It feels weird that this works – it’s like we’re abusing maths. It’s unsettling in that you find yourself questioning whether this always holds true.
 
-Well, can’t argue with maths, so let’s go ahead and prove this. In fact, we’ll do it for the general case! Start by applying parts, with $g'(x)$ integrating to $g(x) + c$.
+Well, can’t argue with maths, so let’s go ahead and prove this. In fact, we’ll do it for the general case!
 
-math
+We’ll use $f$ and $g$ to denote 2 arbitrary functions $f(x)$ and $g(x)$, dropping the $(x)$ for brevity. Start by applying parts, with $g'$ integrating to $g + c$. 
 
-We’ll expand out and split the integral...
+```math
+\begin{align*}
+  &\ \int_{\ }^{\ }fg'\ dx
+  \\ =&\ f\left(g+c\right)-\int_{\ }^{\ }f'\left(g+c\right)\ dx
+\end{align*}
+```
 
-math
+We’ll expand out and split the integral... (remembering not to make an [S-I+G-N error](../sign.md)!)
 
-And the $c$ separates out into an integral of $f'(x)$. Of course by the fundamental theorem of calculus the integral of a derivative is just the original function, so this integrates to $cf(x)$.
+```math
+\begin{align*}
+  &= fg+fc-\int_{\ }^{\ }f'g+f'c\ dx
+  \\ &= fg+fc-\int_{\ }^{\ }f'g\ dx-\int_{\ }^{\ }f'c\ dx
+\end{align*}
+```
 
-math
+And the $c$ separates out into an integral of $f'$. Of course by the fundamental theorem of calculus the integral of a derivative is just the original function, so this integrates to $cf$.
+
+```math
+\begin{align*}
+  &= fg+fc-\int_{\ }^{\ }f'g\ dx-fc
+  \\ &= fg-\int_{\ }^{\ }f'g\ dx+fc-fc
+  \\ &= fg-\int_{\ }^{\ }f'g\ dx
+\end{align*}
+```
 
 And would you look at that, the extra terms introduced by adding $+c$ cancelled out! And since this happens regardless of what we choose for $f(x)$ and $g(x)$, we can continue omitting the intermediary $+c$ in integration by parts. Of course, don’t forget to add the general $+c$ at the end to account for the accumulated constant from all the integrating!
-
-math
 
 I have yet to find more integrals where we can leverage the $+c$ with this trick, though. Not many parts integrals feature derivatives and antidetivatives where all it takes is a constant to cancel them out. If you find any, let me know!
