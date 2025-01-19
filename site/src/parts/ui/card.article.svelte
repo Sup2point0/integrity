@@ -4,8 +4,7 @@ A card for selecting an article. -->
 
 <script lang="ts">
 
-import Katex from "#parts/katex.svelte";
-    import Site from "#src/scripts/site";
+import Site from "#scripts/site";
 
 import { base } from "$app/paths";
 
@@ -64,6 +63,7 @@ a.card {
 }
 
 .info {
+  width: 100%;
   padding: 1em 0.4em 0.4em;
   text-align: left;
 
