@@ -22,11 +22,11 @@ import { base } from "$app/paths";
   <section class="centre">
     <NavLink text="Questions" intern="questions">
       <Link text="Integrals" intern="questions/integrals" />
-      <Link text="Graph Drawing" intern="questions/graph-drawing" />
+      <Link text="Graph Drawing" intern="questions/graph-drawing" disabled={true} />
       <Link text="Completing the Square" intern="questions/complete-square" />
-      <Link text="Guess the Graph" intern="questions/guess-graph" />
+      <Link text="Guess the Graph" intern="questions/guess-graph" disabled={true} />
       <Link text="Addvent" intern="questions/addvent" />
-      <Link text="Special" intern="questions/special" />
+      <Link text="Special" intern="questions/special" disabled={true} />
     </NavLink>
 
     <NavLink text="Explore" intern="explore">
@@ -47,8 +47,8 @@ import { base } from "$app/paths";
       <Link text="S-I+G-N Errors" intern="guides/sign" />
       <Link text="Integrals" intern="guides/integrals" />
       <!-- <Link text="Graph Drawing" intern="graph-drawing" /> -->
-      <Link text="Completing the Square" intern="guides/complete-square" />
-      <Link text="Desmos" intern="guides/desmos" />
+      <Link text="Completing the Square" intern="guides/complete-square" disabled={true} />
+      <Link text="Desmos" intern="guides/desmos" disabled={true} />
     </NavLink>
 
     <NavLink text="Info" intern="info" collapse={true}>

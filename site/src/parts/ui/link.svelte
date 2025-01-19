@@ -12,22 +12,23 @@ interface Props {
   link?: string;
   intern?: string;
   button?: () => void;
+  disabled?: boolean;
 }
 
-let { text, link, intern, button }: Props = $props();
+let { text, link, intern, button, disabled = false }: Props = $props();
 
 </script>
 
 
 {#if button}
-  <button class="link"
+  <button class="link" class:disabled
     onclick={button}
   >
     {text}
   </button>
 
 {:else}
-  <a class="link"
+  <a class="link" class:disabled
     href="{link || `${base}/${intern}`}"
   >
     {text}
@@ -55,6 +56,10 @@ let { text, link, intern, button }: Props = $props();
 
   @include interact($col-hover, $col-click);
   @include focus-outline;
+
+  &.disabled {
+    opacity: 0.2;
+  }
 }
 
 </style>
