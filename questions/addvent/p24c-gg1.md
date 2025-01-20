@@ -53,7 +53,7 @@ We have 4 choices for which colour to repeat, leaving 3 choices for the remainin
 Adding these, we find in total we can obtain $24 + 36 = 60$ different designs.
 
 
-## Alternatives
+## Alternates
 
 We count the permutations of 4 colours in 3 slots, then discount those that have 3 of the same colour.
 

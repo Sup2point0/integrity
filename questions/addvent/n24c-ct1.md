@@ -44,7 +44,7 @@ Each layer has $n$ branches of length $n$, so the total length in each layer is 
 \end{align*}
 ```
 
-## Alternatives
+## Alternates
 
 We may also recognise this as the sum of $n$ square numbers, which is given by the formula
 
