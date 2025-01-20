@@ -22,7 +22,7 @@ data = {}
 i = 1
 
 files.each do |file|
-  log "#{i}#{Cols[:grey]} of #{total}: #{Cols[:white]}#{file.parent.basename}#{Cols[:grey]}/#{Cols[:blue]}#{file.basename}"
+  log "#{i}#{GREY} of #{total}: #{WHITE}#{file.parent.basename}#{GREY}/#{BLUE}#{file.basename}"
   
   shard = file.basename(".*")
 
