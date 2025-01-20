@@ -51,9 +51,9 @@ You may need product rule somewhere in the solution!
 ### Reform
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\left(\frac{e^{x}}{\ln e}\right)^{\left(e^{x}+1\right)}\left(\frac{x+1}{\ln e}\right)\ dx
-  \\ =&\ \int_{\ }^{\ }\left(\frac{e^{x}}{1}\right)^{\left(e^{x}+1\right)}\left(\frac{x+1}{1}\right)\ dx
-  \\ =&\ \int_{\ }^{\ }e^{x}\left(e^{x}\right)^{\left(e^{x}\right)}\left(x+1\right)\ dx
+  &\ \int \left(\frac{e^{x}}{\ln e}\right)^{\left(e^{x}+1\right)}\left(\frac{x+1}{\ln e}\right)\ dx
+  \\ =&\ \int \left(\frac{e^{x}}{1}\right)^{\left(e^{x}+1\right)}\left(\frac{x+1}{1}\right)\ dx
+  \\ =&\ \int e^{x}\left(e^{x}\right)^{\left(e^{x}\right)}\left(x+1\right)\ dx
 \end{align*}
 ```
 
@@ -68,9 +68,9 @@ You may need product rule somewhere in the solution!
 ### Solve (1)
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }t^{t}\left(\ln t+1\right)\ dt
-  \\ &= \int_{\ }^{\ }\left(e^{\ln t}\right)^{t}\left(\ln t+1\right)\ dt
-  \\ &= \int_{\ }^{\ }e^{\left(t\ln t\right)}\left(\ln t+1\right)\ dt
+  &= \int t^{t}\left(\ln t+1\right)\ dt
+  \\ &= \int \left(e^{\ln t}\right)^{t}\left(\ln t+1\right)\ dt
+  \\ &= \int e^{\left(t\ln t\right)}\left(\ln t+1\right)\ dt
 \end{align*}
 ```
 
@@ -86,7 +86,7 @@ You may need product rule somewhere in the solution!
 ### Solve (2)
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }e^{v}\ dv
+  &= \int e^{v}\ dv
   \\ &= e^v
   \\ &= e^{\left(t\ln t\right)}
   \\ &= t^t

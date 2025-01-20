@@ -42,9 +42,9 @@ What can you do with $e^{\ln{x}}$?
 
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\left(e^{2}\right)^{\ln\left(x^{2}\right)}\ dx
-  \\ =&\ \int_{\ }^{\ }e^{\left(2\cdot2\ln x\right)}\ dx
-  \\ =&\ \int_{\ }^{\ }x^{4}\ dx
+  &\ \int \left(e^{2}\right)^{\ln\left(x^{2}\right)}\ dx
+  \\ =&\ \int e^{\left(2\cdot2\ln x\right)}\ dx
+  \\ =&\ \int x^{4}\ dx
   \\ =&\ \frac{1}{5}x^{5}-c
 \end{align*}
 ```
