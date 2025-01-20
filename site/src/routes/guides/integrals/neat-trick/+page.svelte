@@ -30,5 +30,5 @@ import Header from "#parts/core/header.svelte";
 
   <h2> Continue Reading </h2>
 
-  // TODO
+  <!-- TODO -->
 </article>
