@@ -83,7 +83,7 @@ Now we can see that Ronald must have finished last, and we can eliminate $R$ fro
 | 3 | | PS |
 | 4 | R | |
 
-And since there is at least 1 squirrel between Ronald and Poppy, it follows that Poppy must have finished 3rd.
+And since there is at least 1 squirrel between Ronald and Poppy, it follows that Poppy must have finished 2nd.
 
 | position | certain | possible |
 | :------- | :------ | :------- |
