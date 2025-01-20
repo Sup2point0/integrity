@@ -39,7 +39,7 @@ function filter_suggestions(): string[]
       limit: Math.max(13 - value.length, 3),
     })
     .map(each => each[0])
-);
+  );
 }
 
 </script>

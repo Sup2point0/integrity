@@ -5,6 +5,9 @@ import type { Latex, Block } from "./root";
  */
 export class Question
 {
+  /** A collection of the question's key information for use in fuzzy searching. */
+  _match: string;
+
   shard: string;
   topic: string;
 
@@ -46,6 +49,13 @@ export class Question
     // this.date = data.date && new Date(data.date);
     // this.tags = data.tags ?? [];
     // this.question = data.question;
+
+    this._match = [
+      this.shard,
+      this.title,
+      this.tags && this.tags.join(" "),
+      this.methods && this.methods.join(" "),
+    ].join(" ").toLowerCase();
   }
 }
 

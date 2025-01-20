@@ -3,6 +3,7 @@
  */
 
 import sample from "@stdlib/random-sample";
+import * as fuzz from "fuzzball";
 
 import type { Question } from "#scripts/types";
 
@@ -54,6 +55,7 @@ export class SearchData
   
     // Filter
     /* we could optimise the order of applying filters so those that cut out the greatest proportion are applied first (thereby speeding up later filters), but this doesn't really impact performance enough to warrant that lmao */
+    /* NOTE still true? */
     if (Object.values(this.tags).includes(true)) {
       out = out.filter(
         question => Object.keys(this.tags).some(tag =>
@@ -90,26 +92,30 @@ export class SearchData
     }
   
     // Search
+    /* string matching is heavy, so do this after filtering as much as we can */
     if (this.query) {
       let query: string = this.query.toLowerCase();
+      let limit = Math.max(Math.round((1.2 ** -query.length) * questions.length), 1);
   
-      /* Fast enough for now. Hopefully we don’t run into performance issues as we add more fields to search. */
-      out = questions.filter(question => {
-        return (
-          question.shard.includes(query) ||
-          question.title && question.title.toLowerCase().includes(query) ||
-          // question.desc && question.desc.toLowerCase().includes(query) ||
-          question.tags && question.tags.some(tag => tag.toLowerCase().includes(query)) ||
-          question.methods && question.methods.some(method => method.toLowerCase().includes(query))
-        );
+      /* fast enough for now, performance could be improved... */
+      let matches = fuzz.extract(query, questions, {
+        processor: (question => question._match),
+        scorer: fuzz.partial_ratio,
+        limit,
       });
+
+      if (limit < 2 && matches[0][1] < 50) {
+        return [];  /* no relevant results */
+      } else {
+        out = matches.map(each => each[0])
+      }
     }
   
     // Sort
     if (this.sort) {
       switch (this.sort) {
         case "rel":
-          this.sort_rel(out);
+          /* already sorted by relevance */
           break;
         
         case "name":
@@ -124,12 +130,8 @@ export class SearchData
           out = sample(out, { replace: false });
       }
     }
-    else {
-      if (this.query) {
-        this.sort_rel(out);
-      } else {
-        this.sort_date(out);
-      }
+    else if (!this.query) {
+      this.sort_date(out);
     }
   
     if (this.reverse) {
