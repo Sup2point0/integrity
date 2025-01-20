@@ -86,6 +86,7 @@ aside {
     color: $col-text-deut;
 
     span {
+      font-weight: 400;
       color: $col-prot;
     }
   }

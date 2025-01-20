@@ -257,11 +257,16 @@ onMount(() => {
         </td>
       </tr>
     </tbody></table>
+
+    <aside> Searching’s laggy? <a target="_blank" href="https://github.com/Sup2point0/integrity/issues">Let me know on GitHub</a>. </aside>
   {/if}
 </search>
 
 
 <style lang="scss">
+
+@use 'src/styles/links' as *;
+
 
 search {
   max-width: 80vw;
@@ -343,6 +348,15 @@ td {
     flex-wrap: wrap;
     gap: 0.25em;
     flex: 1 1 auto;
+  }
+}
+
+
+aside {
+  color: $col-text-deut;
+
+  a {
+    @include underline-link;
   }
 }
 
