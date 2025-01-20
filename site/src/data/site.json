@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-01-19",
+    "exported": "2025-01-20",
     "file_count": 7,
     "page_count": 6
   },
@@ -9,7 +9,7 @@
       "route": null,
       "pages": [
         "guides/complete-square/why.md",
-        "guides/integrals/cool-trick.md",
+        "guides/integrals/neat-trick.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
@@ -23,7 +23,7 @@
     "integrals": {
       "route": null,
       "pages": [
-        "guides/integrals/cool-trick.md",
+        "guides/integrals/neat-trick.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
@@ -32,7 +32,7 @@
   "shard": {
     "guides": [
       "guides/complete-square/why.md",
-      "guides/integrals/cool-trick.md",
+      "guides/integrals/neat-trick.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ],
@@ -40,7 +40,7 @@
       "guides/complete-square/why.md"
     ],
     "integrals": [
-      "guides/integrals/cool-trick.md",
+      "guides/integrals/neat-trick.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ]
@@ -90,11 +90,11 @@
       "date": null,
       "date_display": null
     },
-    "guides/integrals/cool-trick.md": {
-      "path": "guides/integrals/cool-trick.md",
-      "last_deploy": "2025-01-19 09:13:51 +0000",
-      "slocs": 89,
-      "chars": 3722,
+    "guides/integrals/neat-trick.md": {
+      "path": "guides/integrals/neat-trick.md",
+      "last_deploy": "2025-01-20 10:17:25 +0000",
+      "slocs": 91,
+      "chars": 3656,
       "isIndex": false,
       "flags": [
         "live"

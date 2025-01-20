@@ -14,7 +14,7 @@ method:
 ## Question
 ```math
 \int
-  2^x \, 4^x \, 8^x \cdots 256^x
+  2^x \, 4^x \, 8^x ... 256^x
 \ dx
 ```
 

@@ -14,7 +14,9 @@ method:
 
 ## Question
 ```math
-
+\underbrace{\int ... \int}_{20}
+  ( 20! \, x )
+\ dx \, ... \, dx
 ```
 
 
@@ -29,9 +31,7 @@ method:
 
 ## Answer
 ```math
-\underbrace{\int ... \int}_{20}
-  ( 20! \, x )
-\ dx \, ... \, dx
+\frac{1}{21}x^{21}+\frac{1}{20!}c_{1}x^{20}+\frac{1}{19}c_{2}x^{19}+...\frac{1}{3}c_{16}x^{3}+\frac{1}{2}c_{17}x^{2}+c_{18}x+c_{19}
 ```
 
 

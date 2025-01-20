@@ -280,7 +280,7 @@
           "content": "\\begin{align*}  1^1 + 2^2 + 3^3 + \\text{...} + 11^{11} + 12^{12}  \\\\ &= 1 + 4 + 9 + \\text{...} + 121 + 144  \\\\ &= 650\\end{align*}"
         }
       ],
-      "alternatives": [
+      "alternates": [
         {
           "kind": "text",
           "content": "We may also recognise this as the sum of $n$ square numbers, which is given by the formula"
@@ -372,7 +372,7 @@
           }
         ]
       },
-      "alternatives": [
+      "alternates": [
         {
           "kind": "text",
           "content": "We count the permutations of 4 colours in 3 slots, then discount those that have 3 of the same colour.<br><br>In each of the 3 slots, we have 4 colours to choose from, giving $4^3 = 64$ permutations.<br><br>4 of these patterns are 3 buttons of the colour, hence we have $64 - 4 = 60$ designs."
@@ -434,7 +434,7 @@
         },
         {
           "kind": "text",
-          "content": "For each person, the probability they trip up is $0.01 \\% = 0.0001$ (before careful with how many zeroes you have!). So the probability they <em>don’t</em> trip up is $1 - 0.0001 = 0.9999$.<br><br>Now we find how many people walk past in a week. If $3$ walk past every minute, then $3 \\cdot 60 = 180$ walk past in an hour, and $180 \\cdot 9 = 1620$ walk past in the whole day. A school week runs from Monday to Friday, so in the whole week a total of $1620 \\cdot 5 = 8100$ people walk past Santa.<br><br>The probability that none of these people trip over is"
+          "content": "For each person, the probability they trip up is $0.01 \\% = 0.0001$ (be careful with how many zeroes you have!). So the probability they <em>don’t</em> trip up is $1 - 0.0001 = 0.9999$.<br><br>Now we find how many people walk past in a week. If $3$ walk past every minute, then $3 \\cdot 60 = 180$ walk past in an hour, and $180 \\cdot 9 = 1620$ walk past in the whole day. A school week runs from Monday to Friday, so in the whole week a total of $1620 \\cdot 5 = 8100$ people walk past Santa.<br><br>The probability that none of these people trip over is"
         },
         {
           "kind": "latex",
@@ -498,7 +498,7 @@
       "solution": [
         {
           "kind": "text",
-          "content": "Let’s draw a table to show each position and the squirrels that could place in each of them. We’ll use $P, Q, R, S$ to denote the 4 squirrels.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | || 3 | | || 4 | | |<br><br>Poppy did not finish first or last, so must be in 2nd or 3rd place.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | P || 3 | | P || 4 | | |<br><br>Quill beat at least 2 squirrels, so must be in 2nd or 1st place.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | Q || 2 | | PQ || 3 | | P || 4 | | |<br><br>Then we’re given that Sunset finished before Ronald, which is quite broad. It does tell us that Ronald could not have finished 1st, and that Sunset could not have finished last. We’ll note these down and leave the clue for now.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQRS || 3 | | PRS || 4 | | R |<br><br>Now we can see that Ronald must have finished last, and we can eliminate $R$ from the other possibilities.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQS || 3 | | PS || 4 | R | |<br><br>And since there is at least 1 squirrel between Ronald and Poppy, it follows that Poppy must have finished 3rd.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | P | || 3 | | S || 4 | R | |<br><br>Now it’s the home straight and we see that Sunset must have finished 3rd, and Quill in 1st.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | Q | || 2 | P | || 3 | S | || 4 | R | |<br><br>Hence the order is Quill, Poppy, Sunset, Ronald."
+          "content": "Let’s draw a table to show each position and the squirrels that could place in each of them. We’ll use $P, Q, R, S$ to denote the 4 squirrels.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | || 3 | | || 4 | | |<br><br>Poppy did not finish first or last, so must be in 2nd or 3rd place.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | || 2 | | P || 3 | | P || 4 | | |<br><br>Quill beat at least 2 squirrels, so must be in 2nd or 1st place.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | Q || 2 | | PQ || 3 | | P || 4 | | |<br><br>Then we’re given that Sunset finished before Ronald, which is quite broad. It does tell us that Ronald could not have finished 1st, and that Sunset could not have finished last. We’ll note these down and leave the clue for now.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQRS || 3 | | PRS || 4 | | R |<br><br>Now we can see that Ronald must have finished last, and we can eliminate $R$ from the other possibilities.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | | PQS || 3 | | PS || 4 | R | |<br><br>And since there is at least 1 squirrel between Ronald and Poppy, it follows that Poppy must have finished 2nd.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | | QS || 2 | P | || 3 | | S || 4 | R | |<br><br>Now it’s the home straight and we see that Sunset must have finished 3rd, and Quill in 1st.<br><br>| position | certain | possible || :------- | :------ | :------- || 1 | Q | || 2 | P | || 3 | S | || 4 | R | |<br><br>Hence the order is Quill, Poppy, Sunset, Ronald."
         }
       ]
     }
@@ -1172,7 +1172,7 @@
       "answer": [
         {
           "kind": "latex",
-          "content": ""
+          "content": "\\frac{5}{8}\\ln\\left(x^{2}-5\\right)-\\frac{1}{8}\\ln\\left(x^{2}-1\\right)-c"
         }
       ],
       "solution": {
@@ -2343,6 +2343,128 @@
         }
       ]
     },
+    "s25f-cx1": {
+      "topic": "integrals",
+      "title": "blursed",
+      "desc": null,
+      "date": "2025 January 12",
+      "tags": [
+        "horror",
+        "exp",
+        "ln"
+      ],
+      "method": [
+        "spot",
+        "hard",
+        "xx"
+      ],
+      "shard": "s25f-cx1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left(    2x^{\\left(x^2 + 0.5\\right)}  \\right)^2  \\left(    \\ln{x} + 0.5  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "$0.5$ is nasty, eh?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How could you make the $0.5$ nicer?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Watch out for product rule!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\left(x^{2}\\right)^{\\left(x^{2}\\right)}-c"
+        }
+      ],
+      "solution": {
+        "reform": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\left(2x^{\\left(x^{2}+0.5\\right)}\\right)^{2}\\left(\\ln x+0.5\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }4\\left(x^{\\left(2x^{2}+1\\right)}\\right)\\left(\\ln x+0.5\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }4x\\left(x^{\\left(2x^{2}\\right)}\\right)\\left(\\ln x+0.5\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\left(e^{\\left(\\ln x\\right)\\left(2x^{2}\\right)}\\right)\\left(4x\\ln x+2x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\left(\\ln x\\right)\\left(2x^{2}\\right) &= t  \\\\ \\left(4x\\ln x+2x\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }e^{t}\\ dt  \\\\ &= e^t  \\\\ &= e^{\\left(\\ln x\\right)\\left(2x^{2}\\right)}  \\\\ &= x^{\\left(2x^{2}\\right)}-c  \\\\ &= \\left(x^{2}\\right)^{\\left(x^{2}\\right)}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-em1": {
+      "topic": "integrals",
+      "title": "unfazed",
+      "desc": null,
+      "date": "2025 January 18",
+      "tags": [
+        "scare",
+        "exp",
+        "ln"
+      ],
+      "method": [
+        "free"
+      ],
+      "shard": "s25f-em1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left(e^2\\right)^{\\ln(x^2)}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What can you do with $\\ln(x^2)$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What can you do with the powers of $e$?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What can you do with $e^{\\ln{x}}$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{5} x^5 - c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\left(e^{2}\\right)^{\\ln\\left(x^{2}\\right)}\\ dx  \\\\ =&\\ \\int e^{\\left(2\\cdot2\\ln x\\right)}\\ dx  \\\\ =&\\ \\int x^{4}\\ dx  \\\\ =&\\ \\frac{1}{5}x^{5}-c\\end{align*}"
+        }
+      ]
+    },
     "s25f-fg1": {
       "topic": "integrals",
       "title": "frigate",
@@ -2429,6 +2551,60 @@
         ]
       }
     },
+    "s25f-ft1": {
+      "topic": "integrals",
+      "title": "sabotage",
+      "desc": null,
+      "date": "2025 January 12",
+      "tags": [
+        "trig",
+        "frac"
+      ],
+      "method": [
+        "spot"
+      ],
+      "shard": "s25f-ft1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{\\sec{x}}{\\sec{x} - \\tan{x}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You’re looking for something to multiply through by."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Imagine if the denominator contained irrationals."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Think difference of 2 squares."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\tan{x} + \\sec{x} - c"
+        }
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\sec x}{\\sec x-\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\sec x\\right)\\left(\\sec x+\\tan x\\right)}{\\left(\\sec x-\\tan x\\right)\\left(\\sec x+\\tan x\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\sec x\\tan x}{\\sec^{2}x-\\tan^{2}x}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\sec x\\tan x}{1}\\ dx  \\\\ =&\\ \\int \\sec^{2}x\\ dx+\\int \\sec x\\tan x\\ dx  \\\\ =&\\ \\tan x+\\sec x-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-ht1": {
       "topic": "integrals",
       "title": "hyperactive",
@@ -2479,7 +2655,7 @@
         "solve": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\sqrt{\\frac{\\sinh x+\\cosh x}{\\cosh x-\\sinh x}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\sqrt{\\frac{\\frac{1}{2}\\left(e^{x}-e^{-x}\\right)+\\frac{1}{2}\\left(e^{x}+e^{-x}\\right)}{\\frac{1}{2}\\left(e^{x}+e^{-x}\\right)-\\frac{1}{2}\\left(e^{x}-e^{-x}\\right)}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\sqrt{\\frac{\\left(\\frac{1}{2}e^{x}+\\frac{1}{2}e^{x}\\right)-\\left(\\frac{1}{2}e^{-x}+\\frac{1}{2}e^{-x}\\right)}{\\left(\\frac{1}{2}e^{x}-\\frac{1}{2}e^{x}\\right)+\\left(\\frac{1}{2}e^{-x}+\\frac{1}{2}e^{-x}\\right)}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\sqrt{\\frac{e^{x}}{e^{-x}}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\sqrt{e^{2x}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }e^{x}\\ dx  \\\\ =&\\ e^{x}-c\\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int \\sqrt{\\frac{\\sinh x+\\cosh x}{\\cosh x-\\sinh x}}\\ dx  \\\\ =&\\ \\int \\sqrt{\\frac{\\frac{1}{2}\\left(e^{x}-e^{-x}\\right)+\\frac{1}{2}\\left(e^{x}+e^{-x}\\right)}{\\frac{1}{2}\\left(e^{x}+e^{-x}\\right)-\\frac{1}{2}\\left(e^{x}-e^{-x}\\right)}}\\ dx  \\\\ =&\\ \\int \\sqrt{\\frac{\\left(\\frac{1}{2}e^{x}+\\frac{1}{2}e^{x}\\right)-\\left(\\frac{1}{2}e^{-x}+\\frac{1}{2}e^{-x}\\right)}{\\left(\\frac{1}{2}e^{x}-\\frac{1}{2}e^{x}\\right)+\\left(\\frac{1}{2}e^{-x}+\\frac{1}{2}e^{-x}\\right)}}\\ dx  \\\\ =&\\ \\int \\sqrt{\\frac{e^{x}}{e^{-x}}}\\ dx  \\\\ =&\\ \\int \\sqrt{e^{2x}}\\ dx  \\\\ =&\\ \\int e^{x}\\ dx  \\\\ =&\\ e^{x}-c\\end{align*}"
           }
         ]
       }
@@ -2904,7 +3080,7 @@
         "solve": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\sqrt{\\frac{x}{1-\\frac{1}{x}}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\sqrt{\\frac{x^{2}}{x-1}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{x}{\\sqrt{x-1}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{x-1}{\\sqrt{x-1}}+\\frac{1}{\\sqrt{x-1}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\left(x-1\\right)^{\\frac{1}{2}}\\ dx+\\int_{\\ }^{\\ }\\left(x-1\\right)^{-\\frac{1}{2}}\\ dx  \\\\ =&\\ \\frac{2}{3}\\left(x-1\\right)^{\\frac{3}{2}}+2\\left(x-1\\right)^{\\frac{1}{2}}-c\\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int \\sqrt{\\frac{x}{1-\\frac{1}{x}}}\\ dx  \\\\ =&\\ \\int \\sqrt{\\frac{x^{2}}{x-1}}\\ dx  \\\\ =&\\ \\int \\frac{x}{\\sqrt{x-1}}\\ dx  \\\\ =&\\ \\int \\frac{x-1}{\\sqrt{x-1}}+\\frac{1}{\\sqrt{x-1}}\\ dx  \\\\ =&\\ \\int \\left(x-1\\right)^{\\frac{1}{2}}\\ dx+\\int \\left(x-1\\right)^{-\\frac{1}{2}}\\ dx  \\\\ =&\\ \\frac{2}{3}\\left(x-1\\right)^{\\frac{3}{2}}+2\\left(x-1\\right)^{\\frac{1}{2}}-c\\end{align*}"
           }
         ],
         "factorise": [
@@ -3049,6 +3225,74 @@
           "content": "...maybe not quicker, but perhaps more fun!"
         }
       ]
+    },
+    "s25f-ss1": {
+      "topic": "integrals",
+      "title": "steamroller",
+      "desc": null,
+      "date": "2025 January 18",
+      "tags": [
+        "horror",
+        "trig",
+        "pi"
+      ],
+      "method": [
+        "sub",
+        "spot"
+      ],
+      "shard": "s25f-ss1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left( \\frac{x+\\pi}{4} \\right)  \\sin\\left( \\frac{x+\\pi}{4} \\right)  \\sin\\left( \\frac{x-\\pi}{4} \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Ignore the $\\left( \\frac{x+\\pi}{4} \\right)$ on the outside for now."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "The $4$ may be important."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How could you turn $\\sin$ into $\\cos$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x+\\pi}{4}\\cos\\left(\\frac{x+\\pi}{2}\\right)-\\frac{1}{2}\\sin\\left(\\frac{x+\\pi}{2}\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x + \\pi &= t  \\\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "trigonometric identities": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(\\frac{x+\\pi}{4}\\right)\\sin\\left(\\frac{x+\\pi}{4}\\right)\\sin\\left(\\frac{x-\\pi}{4}\\right)\\ dx  \\\\ =&\\ \\int \\frac{t}{4}\\sin\\left(\\frac{t}{4}\\right)\\sin\\left(\\frac{t-2\\pi}{4}\\right)\\ dt  \\\\ =&\\ \\int \\frac{t}{4}\\sin\\left(\\frac{t}{4}\\right)\\sin\\left(\\frac{t}{4}-\\frac{\\pi}{2}\\right)\\ dt  \\\\ =&\\ -\\int \\frac{t}{4}\\sin\\left(\\frac{t}{4}\\right)\\sin\\left(\\frac{\\pi}{2}-\\frac{t}{4}\\right)\\ dt  \\\\ =&\\ -\\int \\frac{t}{4}\\sin\\left(\\frac{t}{4}\\right)\\cos\\left(\\frac{t}{4}\\right)\\ dt  \\\\ =&\\ -\\frac{1}{8}\\int t\\sin\\left(\\frac{t}{2}\\right)\\ dt\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\frac{1}{8}\\left(t\\cdot-2\\cos\\left(\\frac{t}{2}\\right)-\\int -2\\cos\\left(\\frac{t}{2}\\right)\\ dt\\right)  \\\\ &= -\\frac{1}{8}\\left(-2t\\cos\\left(\\frac{t}{2}\\right)+\\int 2\\cos\\left(\\frac{t}{2}\\right)\\ dt\\right)  \\\\ &= \\frac{1}{4}t\\cos\\left(\\frac{t}{2}\\right)-\\frac{1}{2}\\int \\frac{1}{2}\\cos\\left(\\frac{t}{2}\\right)\\ dt  \\\\ &= \\frac{t}{4}\\cos\\left(\\frac{t}{2}\\right)-\\frac{1}{2}\\sin\\left(\\frac{t}{2}\\right)  \\\\ &= \\frac{x+\\pi}{4}\\cos\\left(\\frac{x+\\pi}{2}\\right)-\\frac{1}{2}\\sin\\left(\\frac{x+\\pi}{2}\\right)-c\\end{align*}"
+          }
+        ]
+      }
     },
     "s25f-td1": {
       "topic": "integrals",
@@ -3442,6 +3686,187 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{\\cos x}{\\cos x+1}\\ dx  \\\\ &= \\int \\frac{\\cos x+1}{\\cos x+1}-\\frac{1}{\\cos x+1}\\ dx  \\\\ &= \\int dx-\\int \\frac{1}{1+\\cos x}\\ dx  \\\\ &= x-\\int \\frac{1-\\cos x}{\\left(1+\\cos x\\right)\\left(1-\\cos x\\right)}\\ dx  \\\\ &= x-\\int \\frac{1-\\cos x}{1-\\cos^{2}x}\\ dx  \\\\ &= x-\\int \\frac{1-\\cos x}{\\sin^{2}x}\\ dx  \\\\ &= x-\\int \\frac{1}{\\sin^{2}x}\\ dx+\\int \\frac{\\cos}{\\sin^{2}x}\\ dx  \\\\ &= x-\\int \\csc^{2}x\\ dx+\\int \\frac{\\cos x}{\\sin x}\\cdot\\frac{1}{\\sin x}\\ dx  \\\\ &= x+\\int -\\csc^{2}x\\ dx-\\int -\\cot x\\csc x\\ dx  \\\\ &= x+\\cot x-\\csc x-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-wk1": {
+      "topic": "integrals",
+      "title": "oh look, constants!",
+      "desc": null,
+      "date": "2025 January 19",
+      "tags": [
+        "wack",
+        "series",
+        "fun"
+      ],
+      "method": [
+        "care"
+      ],
+      "shard": "s25f-wk1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\underbrace{\\int ... \\int}_{20}  ( 20! \\, x )\\ dx \\, ... \\, dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{21}x^{21}+\\frac{1}{20!}c_{1}x^{20}+\\frac{1}{19}c_{2}x^{19}+...\\frac{1}{3}c_{16}x^{3}+\\frac{1}{2}c_{17}x^{2}+c_{18}x+c_{19}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Each time we integrate the expression, we raise the power of $x$ by $1$ and divide by the new power.<br><br>So iteration 1, the power increases to $2$ and we divide by $2$. Iteration 2, power to $3$, divide by $3$. More generally, on iteration $n$ the power is $n+1$ and we’ve divided by all the positive integers up to $n$. In other words, $n!$<br><br>So we end up with"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\frac{1}{21}\\times\\frac{1}{20}\\times...\\times\\frac{1}{3}\\times\\frac{1}{2}\\times20!\\times x^{21}  \\\\ =&\\ \\frac{1}{21}x^{21}\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "But of course, we can’t forget the constants... each time we integrate, we add another constant, and that’ll get integrated too. So..."
+        },
+        {
+          "kind": "latex",
+          "content": "= \\frac{1}{21}x^{21}+\\frac{1}{20!}c_{1}x^{20}+\\frac{1}{19}c_{2}x^{19}+...\\frac{1}{3}c_{16}x^{3}+\\frac{1}{2}c_{17}x^{2}+c_{18}x+c_{19}"
+        },
+        {
+          "kind": "text",
+          "content": "Perfect!"
+        }
+      ],
+      "alternates": [
+        {
+          "kind": "text",
+          "content": "Alternatively, we can just write $P(x)$ to denote any polynomial of degree $20$ or less:"
+        },
+        {
+          "kind": "latex",
+          "content": "= \\frac{1}{21}x^{21}+P\\left(x\\right)"
+        }
+      ]
+    },
+    "s25f-wk2": {
+      "topic": "integrals",
+      "title": "target practice",
+      "desc": null,
+      "date": "2025 January 19",
+      "tags": [
+        "fun",
+        "exp"
+      ],
+      "method": [
+        "work"
+      ],
+      "shard": "s25f-wk2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  2^x \\, 4^x \\, 8^x \\cdots 256^x\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "When we’re dealing with exponents, we often want them in terms of the same base."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{36\\ln2}2^{36x}-c"
+        }
+      ],
+      "solution": {
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int 2^{x}\\ 4^{x}\\ 8^{x}\\ ...\\ 256^{x}\\ dx  \\\\ =&\\ \\int 2^{x}\\ 2^{2x}\\ 2^{3x}\\ ...\\ 2^{8x}\\ dx  \\\\ =&\\ \\int 2^{\\left(x+2x+3x+...+8x\\right)}\\ dx  \\\\ =&\\ \\int 2^{36x}\\ dx  \\\\ =&\\ \\int e^{\\left(\\ln2\\right)\\left(36x\\right)}\\ dx  \\\\ =&\\ \\int e^{\\left(36\\ln2\\right)x}\\ dx  \\\\ =&\\ \\frac{1}{36\\ln2}e^{\\left(36\\ln2\\right)x}  \\\\ =&\\ \\frac{1}{36\\ln2}2^{36x}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-xp1": {
+      "topic": "integrals",
+      "title": "hearth",
+      "desc": null,
+      "date": "2025 January 13",
+      "tags": [
+        "scare",
+        "exp",
+        "ln"
+      ],
+      "method": [
+        "spot",
+        "sub"
+      ],
+      "shard": "s25f-xp1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left(    \\frac{e^x}{\\ln{e}}  \\right)^{\\left(    e^x + 1  \\right)}  \\left(    \\frac{x+1}{\\ln{e}}  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What’s $\\ln{e}$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Whenever we have $e^x$, $e^x$ is a probably the substitution."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "You may need product rule somewhere in the solution!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\left(e^{x}\\right)^{\\left(e^{x}\\right)}-c"
+        }
+      ],
+      "solution": {
+        "reform": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(\\frac{e^{x}}{\\ln e}\\right)^{\\left(e^{x}+1\\right)}\\left(\\frac{x+1}{\\ln e}\\right)\\ dx  \\\\ =&\\ \\int \\left(\\frac{e^{x}}{1}\\right)^{\\left(e^{x}+1\\right)}\\left(\\frac{x+1}{1}\\right)\\ dx  \\\\ =&\\ \\int e^{x}\\left(e^{x}\\right)^{\\left(e^{x}\\right)}\\left(x+1\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  e^x &= t \\quad\\to\\quad x = \\ln{t}  \\\\ e^x \\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int t^{t}\\left(\\ln t+1\\right)\\ dt  \\\\ &= \\int \\left(e^{\\ln t}\\right)^{t}\\left(\\ln t+1\\right)\\ dt  \\\\ &= \\int e^{\\left(t\\ln t\\right)}\\left(\\ln t+1\\right)\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  t \\ln{t} &= v  \\\\ \\left(1\\cdot\\ln t+t\\cdot\\frac{1}{t}\\right)\\ dt &= dv  \\\\ \\left(\\ln t+1\\right)\\ dt &= dv\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int e^{v}\\ dv  \\\\ &= e^v  \\\\ &= e^{\\left(t\\ln t\\right)}  \\\\ &= t^t  \\\\ &= \\left(e^{x}\\right)^{\\left(e^{x}\\right)}-c\\end{align*}"
           }
         ]
       }
