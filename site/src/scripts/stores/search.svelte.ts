@@ -95,12 +95,12 @@ export class SearchData
     /* string matching is heavy, so do this after filtering as much as we can */
     if (this.query) {
       let query = this.query.toLowerCase();
-      let limit = Math.max(Math.round((1.2 ** -query.length) * questions.length), 1);
+      let limit = Math.max(Math.round((1.44 ** -query.length) * questions.length), 2);
   
       let matches = fuzz.extract(query, questions, {
         scorer: (query, question) => (
           Math.max(...question._match.map(
-            each => fuzz.partial_ratio(each, query)
+            each => fuzz.ratio(each, query)
           ))
         ),
         limit,
