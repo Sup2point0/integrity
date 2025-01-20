@@ -2,6 +2,8 @@
  * Exposes the `search` object and associated `SearchData` class for storing search this. This does not persist between pages.
  */
 
+import sample from "@stdlib/random-sample";
+
 import type { Question } from "#scripts/types";
 
 
@@ -39,7 +41,7 @@ export class SearchData
   });
 
   view: "grid" | "list" = $state("grid");
-  sort: "date" | "name" | "rel" | null = $state(null);
+  sort: "date" | "name" | "rel" | "rand" | null = $state(null);
   reverse: boolean = $state(false);
 
 
@@ -105,6 +107,9 @@ export class SearchData
         case "date":
           this.sort_date(out);
           break;
+
+        case "rand":
+          out = sample(out, { replace: false });
       }
     }
     else {

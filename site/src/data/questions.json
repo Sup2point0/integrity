@@ -8,7 +8,7 @@
       "tags": [
         "numbers"
       ],
-      "method": [
+      "methods": [
         "calc"
       ],
       "shard": "a24c-pc1",
@@ -109,7 +109,7 @@
       "tags": [
         "algebra"
       ],
-      "method": [
+      "methods": [
         "factorise"
       ],
       "shard": "a24c-sa1",
@@ -184,7 +184,7 @@
       "tags": [
         "algebra"
       ],
-      "method": [
+      "methods": [
         "trap"
       ],
       "shard": "a24c-sm1",
@@ -387,7 +387,7 @@
       "tags": [
         "probability"
       ],
-      "method": [
+      "methods": [
         "trap"
       ],
       "shard": "p24c-st1",
@@ -612,7 +612,7 @@
       "tags": [
         "frac"
       ],
-      "method": [
+      "methods": [
         "work"
       ],
       "shard": "q24cu-fr1",
@@ -736,7 +736,7 @@
         "pi",
         "trig"
       ],
-      "method": [
+      "methods": [
         "work"
       ],
       "shard": "q24cu-hr2",
@@ -883,7 +883,7 @@
         "poly",
         "sqrt"
       ],
-      "method": [
+      "methods": [
         "work"
       ],
       "shard": "s24f-ch1",
@@ -935,7 +935,7 @@
         "frac",
         "inverse trig"
       ],
-      "method": [
+      "methods": [
         "parts",
         "inverse chain rule"
       ],
@@ -995,7 +995,7 @@
       "tags": [
         "exp"
       ],
-      "method": [
+      "methods": [
         "work"
       ],
       "shard": "s24f-cq1",
@@ -1158,7 +1158,7 @@
         "poly",
         "frac"
       ],
-      "method": [
+      "methods": [
         "work",
         "partials"
       ],
@@ -1232,7 +1232,7 @@
         "frac",
         "dread"
       ],
-      "method": [
+      "methods": [
         "work",
         "split",
         "partials"
@@ -1337,7 +1337,7 @@
         "trig",
         "frac"
       ],
-      "method": [
+      "methods": [
         "layer cake"
       ],
       "shard": "s24f-lc1",
@@ -1404,7 +1404,7 @@
         "ln",
         "frac"
       ],
-      "method": [
+      "methods": [
         "layer cake"
       ],
       "shard": "s24f-lc2",
@@ -1452,7 +1452,7 @@
         "poly",
         "ln"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "shard": "s24f-ld1",
@@ -1506,7 +1506,7 @@
         "poly",
         "frac"
       ],
-      "method": [
+      "methods": [
         "work",
         "poly div",
         "arctan"
@@ -1550,7 +1550,7 @@
         "ln",
         "horror"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "shard": "s24f-lm1",
@@ -1588,7 +1588,7 @@
         "horror",
         "long"
       ],
-      "method": [
+      "methods": [
         "spot",
         "sub",
         "trig sub"
@@ -1711,7 +1711,7 @@
         "sqrt",
         "fun"
       ],
-      "method": null,
+      "methods": null,
       "shard": "s24f-lx1",
       "question": [
         {
@@ -1763,7 +1763,7 @@
         "poly",
         "frac"
       ],
-      "method": [
+      "methods": [
         "work"
       ],
       "shard": "s24f-pl1",
@@ -1819,7 +1819,7 @@
         "exp",
         "sqrt"
       ],
-      "method": [
+      "methods": [
         "work",
         "sub",
         "partials"
@@ -1935,7 +1935,7 @@
         "frac",
         "pi"
       ],
-      "method": [
+      "methods": [
         "work",
         "long",
         "trig sub",
@@ -2028,7 +2028,7 @@
         "trig",
         "horror"
       ],
-      "method": [
+      "methods": [
         "factorise"
       ],
       "shard": "s24f-tm1",
@@ -2087,7 +2087,7 @@
       "tags": [
         "trig"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "shard": "s24f-tm2",
@@ -2141,7 +2141,7 @@
         "exp",
         "frac"
       ],
-      "method": [
+      "methods": [
         "exp sub"
       ],
       "shard": "s24f-xp1",
@@ -2185,7 +2185,7 @@
         "exp",
         "poly"
       ],
-      "method": [
+      "methods": [
         "spot",
         "work",
         "sub",
@@ -2255,7 +2255,7 @@
         "exp",
         "fun"
       ],
-      "method": [
+      "methods": [
         "spot",
         "sub"
       ],
@@ -2353,7 +2353,7 @@
         "exp",
         "ln"
       ],
-      "method": [
+      "methods": [
         "spot",
         "hard",
         "xx"
@@ -2422,7 +2422,7 @@
         "exp",
         "ln"
       ],
-      "method": [
+      "methods": [
         "free"
       ],
       "shard": "s25f-em1",
@@ -2474,7 +2474,7 @@
         "trig",
         "ln"
       ],
-      "method": [
+      "methods": [
         "parts"
       ],
       "shard": "s25f-fg1",
@@ -2560,7 +2560,7 @@
         "trig",
         "frac"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "shard": "s25f-ft1",
@@ -2615,7 +2615,7 @@
         "sqrt",
         "frac"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "shard": "s25f-ht1",
@@ -2671,7 +2671,7 @@
         "frac",
         "pi"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "shard": "s25f-iv1",
@@ -2743,7 +2743,7 @@
         "ln",
         "frac"
       ],
-      "method": [
+      "methods": [
         "spot",
         "sub"
       ],
@@ -2862,7 +2862,7 @@
         "ln",
         "frac"
       ],
-      "method": [
+      "methods": [
         "spot",
         "sub"
       ],
@@ -2962,7 +2962,7 @@
         "poly",
         "frac"
       ],
-      "method": [
+      "methods": [
         "work"
       ],
       "shard": "s25f-pt1",
@@ -3060,7 +3060,7 @@
         "sqrt",
         "frac"
       ],
-      "method": [
+      "methods": [
         "work"
       ],
       "shard": "s25f-qt1",
@@ -3100,7 +3100,7 @@
         "trig",
         "fun"
       ],
-      "method": [
+      "methods": [
         "spot",
         "sub"
       ],
@@ -3173,7 +3173,7 @@
         "poly",
         "frac"
       ],
-      "method": [
+      "methods": [
         "poly div"
       ],
       "shard": "s25f-sd1",
@@ -3236,7 +3236,7 @@
         "trig",
         "pi"
       ],
-      "method": [
+      "methods": [
         "sub",
         "spot"
       ],
@@ -3303,7 +3303,7 @@
         "trig",
         "frac"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "shard": "s25f-td1",
@@ -3360,7 +3360,7 @@
         "ln",
         "frac"
       ],
-      "method": [
+      "methods": [
         "work",
         "algebra"
       ],
@@ -3415,7 +3415,7 @@
         "trig",
         "frac"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "shard": "s25f-th1",
@@ -3457,7 +3457,7 @@
         "trig",
         "frac"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "shard": "s25f-th2",
@@ -3518,7 +3518,7 @@
         "scare",
         "trig"
       ],
-      "method": [
+      "methods": [
         "spot"
       ],
       "flags": [
@@ -3594,7 +3594,7 @@
       "tags": [
         "trig"
       ],
-      "method": [
+      "methods": [
         "spot",
         "speed"
       ],
@@ -3636,7 +3636,7 @@
         "trig",
         "frac"
       ],
-      "method": [
+      "methods": [
         "spot",
         "algebra"
       ],
@@ -3700,7 +3700,7 @@
         "series",
         "fun"
       ],
-      "method": [
+      "methods": [
         "care"
       ],
       "shard": "s25f-wk1",
@@ -3758,14 +3758,14 @@
         "fun",
         "exp"
       ],
-      "method": [
+      "methods": [
         "work"
       ],
       "shard": "s25f-wk2",
       "question": [
         {
           "kind": "latex",
-          "content": "\\int  2^x \\, 4^x \\, 8^x \\cdots 256^x\\ dx"
+          "content": "\\int  2^x \\, 4^x \\, 8^x ... 256^x\\ dx"
         }
       ],
       "hints": {
@@ -3801,7 +3801,7 @@
         "exp",
         "ln"
       ],
-      "method": [
+      "methods": [
         "spot",
         "sub"
       ],

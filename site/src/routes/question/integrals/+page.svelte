@@ -37,7 +37,7 @@ let question: Question | null = $derived(page_data.question);
       {#if question?.tags}
         <div class="tags">
           {#each question.tags as tag}
-            <Tag shard={tag} />
+            <Tag {tag} />
           {/each}
         </div>
       {/if}

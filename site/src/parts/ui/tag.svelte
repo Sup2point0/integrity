@@ -2,24 +2,25 @@
 
 <script lang="ts">
 
-import { search } from "#scripts/stores";
-
 import { base } from "$app/paths";
 
 
 interface Props {
-  shard: string;
+  tag: string;
+  kind?: "prot" | "deut";
 }
 
-let { shard }: Props = $props();
+let { tag, kind = "prot" }: Props = $props();
 
 </script>
 
 
-<button class="tag" onclick={() => {
-  window.location.href = `${base}/questions/all?tags=${shard}`;
-}}>
-  {shard.toUpperCase()}
+<button class="tag {kind}"
+  onclick={() => {
+    window.location.href = `${base}/questions/all?tags=${tag}`;
+  }}
+>
+  {tag.toUpperCase()}
 </button>
 
 
@@ -31,8 +32,10 @@ button.tag {
   @include font-ui;
   color: white;
   font-size: 90%;
-  background-color: #3c8dbc;  // fallback
-  background-color: $col-prot;
+  background: #3c8dbc;  // fallback
+
+  &.prot{ background: $col-prot; }
+  &.deut { background: $col-deut; }
   border: none;
   border-radius: 0.5em;
 

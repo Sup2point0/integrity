@@ -207,14 +207,21 @@ onMount(() => {
 
       <tr>
         <th> Sort </th>
-        <td>
+        <td class="flex">
           <Select bind:value={search.sort}
             options={{
               "RELEVANCE": null,
               "DATE": "date",
               "NAME": "name",
+              "RANDOM": "rand",
             }}
           />
+          {#if search.sort === "rand"}
+            <Clicky text="SHUFFLE" action={() => {
+              search.sort = null;
+              search.sort = "rand";
+            }} />
+          {/if}
         </td>
         <td>
           <Toggle text="REVERSE"
