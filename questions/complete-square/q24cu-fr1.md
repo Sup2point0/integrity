@@ -5,7 +5,7 @@ desc:
 date: 2024 November
 tags:
   - frac
-method:
+methods:
   - work
 ---
 

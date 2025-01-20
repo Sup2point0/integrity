@@ -7,7 +7,7 @@ tags:
   - scare
   - exp
   - ln
-method:
+methods:
   - spot
   - sub
 ---

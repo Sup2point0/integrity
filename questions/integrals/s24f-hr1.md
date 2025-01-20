@@ -7,7 +7,7 @@ tags:
   - poly
   - frac
   - dread
-method:
+methods:
   - work
   - split
   - partials

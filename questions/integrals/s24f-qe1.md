@@ -8,7 +8,7 @@ tags:
   - long
   - exp
   - sqrt
-method:
+methods:
   - work
   - sub
   - partials

@@ -6,7 +6,7 @@ date: 2024 December 23
 tags:
   - trig
   - horror
-method:
+methods:
   - factorise
 ---
 

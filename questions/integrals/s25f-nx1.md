@@ -8,7 +8,7 @@ tags:
   - trig
   - ln
   - frac
-method:
+methods:
   - spot
   - sub
 flags:

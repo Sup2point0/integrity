@@ -7,7 +7,7 @@ tags:
   - poly
   - ln
   - frac
-method:
+methods:
   - layer cake
 ---
 

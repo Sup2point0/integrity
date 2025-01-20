@@ -9,7 +9,7 @@ tags:
   - exp
   - ln
   - frac
-method:
+methods:
   - work
   - algebra
 ---

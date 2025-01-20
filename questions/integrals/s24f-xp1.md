@@ -6,7 +6,7 @@ date: 2024 December 17
 tags:
   - exp
   - frac
-method:
+methods:
   - exp sub
 ---
 

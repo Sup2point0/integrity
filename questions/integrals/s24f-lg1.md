@@ -6,7 +6,7 @@ date: 2024 December 24
 tags:
   - poly
   - frac
-method:
+methods:
   - work
   - poly div
   - arctan

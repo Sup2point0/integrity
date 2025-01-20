@@ -5,7 +5,7 @@ desc:
 date: 2024 December 16
 tags:
   - algebra
-method:
+methods:
   - trap
 ---
 

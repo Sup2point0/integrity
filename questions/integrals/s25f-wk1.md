@@ -7,7 +7,7 @@ tags:
   - wack
   - series
   - fun
-method:
+methods:
   - care
 ---
 

@@ -7,7 +7,7 @@ tags:
   - horror
   - trig
   - frac
-method:
+methods:
   - spot
   - algebra
 ---

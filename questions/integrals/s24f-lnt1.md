@@ -6,7 +6,7 @@ date: 2024 December 9
 tags:
   - horror
   - long
-method:
+methods:
   - spot
   - sub
   - trig sub

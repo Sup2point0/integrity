@@ -8,7 +8,7 @@ tags:
   - trig
   - frac
   - pi
-method:
+methods:
   - spot
 ---
 

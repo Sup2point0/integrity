@@ -8,7 +8,7 @@ tags:
   - sqrt
   - frac
   - pi
-method:
+methods:
   - work
   - long
   - trig sub

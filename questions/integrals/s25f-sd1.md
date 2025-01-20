@@ -6,7 +6,7 @@ date: 2025 January 9
 tags:
   - poly
   - frac
-method:
+methods:
   - poly div
 ---
 

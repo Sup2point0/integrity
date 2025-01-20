@@ -6,7 +6,7 @@ date: 2025 January 7
 tags:
   - trig
   - ln
-method:
+methods:
   - parts
 ---
 

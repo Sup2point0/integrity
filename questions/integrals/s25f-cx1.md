@@ -7,7 +7,7 @@ tags:
   - horror
   - exp
   - ln
-method:
+methods:
   - spot
   - hard
   - xx

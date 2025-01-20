@@ -7,7 +7,7 @@ tags:
   - trig
   - exp
   - fun
-method:
+methods:
   - spot
   - sub
 ---

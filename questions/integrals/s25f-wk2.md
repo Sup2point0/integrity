@@ -6,7 +6,7 @@ date: 2025 January 19
 tags:
   - fun
   - exp
-method:
+methods:
   - work
 ---
 

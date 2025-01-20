@@ -6,7 +6,7 @@ date: 2024 December 22
 tags:
   - frac
   - inverse trig
-method:
+methods:
   - parts
   - inverse chain rule
 ---

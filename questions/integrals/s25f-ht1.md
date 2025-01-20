@@ -7,7 +7,7 @@ tags:
   - hyp trig
   - sqrt
   - frac
-method:
+methods:
   - spot
 ---
 

@@ -5,7 +5,7 @@ desc:
 date: 2024 December 24
 tags:
   - trig
-method:
+methods:
   - spot
 ---
 

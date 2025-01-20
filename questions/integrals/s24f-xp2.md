@@ -6,7 +6,7 @@ date: 2024 December 24
 tags:
   - exp
   - poly
-method:
+methods:
   - spot
   - work
   - sub

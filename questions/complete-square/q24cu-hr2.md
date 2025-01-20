@@ -7,7 +7,7 @@ tags:
   - horror
   - pi
   - trig
-method:
+methods:
   - work
 ---
 

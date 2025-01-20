@@ -5,7 +5,7 @@ desc:
 date: 2024 December 13
 tags:
   - probability
-method:
+methods:
   - trap
 ---
 

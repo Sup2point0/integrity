@@ -5,7 +5,7 @@ desc:
 date: 2025 January 9
 tags:
   - trig
-method:
+methods:
   - spot
   - speed
 ---

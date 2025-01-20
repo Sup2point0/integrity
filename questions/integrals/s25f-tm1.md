@@ -7,7 +7,7 @@ tags:
   - definite
   - scare
   - trig
-method:
+methods:
   - spot
 flags:
   - featcd s

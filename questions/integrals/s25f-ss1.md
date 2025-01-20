@@ -7,7 +7,7 @@ tags:
   - horror
   - trig
   - pi
-method:
+methods:
   - sub
   - spot
 ---

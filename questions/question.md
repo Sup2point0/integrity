@@ -5,7 +5,7 @@ desc:
 date: 
 tags:
   - 
-method:
+methods:
   - 
 ---
 

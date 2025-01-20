@@ -5,7 +5,7 @@ desc: A nice exercise in algebra ;)
 date: 2024 December 27
 tags:
   - exp
-method:
+methods:
   - work
 ---
 

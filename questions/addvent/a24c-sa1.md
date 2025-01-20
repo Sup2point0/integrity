@@ -5,7 +5,7 @@ desc:
 date: 2024 December 17
 tags:
   - algebra
-method:
+methods:
   - factorise
 ---
 

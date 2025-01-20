@@ -6,7 +6,7 @@ date: 2024 December 10
 tags:
   - poly
   - sqrt
-method:
+methods:
   - work
 ---
 

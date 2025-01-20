@@ -6,7 +6,7 @@ date: 2025 January 7
 tags:
   - trig
   - fun
-method:
+methods:
   - spot
   - sub
 ---

@@ -8,7 +8,7 @@ tags:
   - trig
   - ln
   - horror
-method:
+methods:
   - spot
 ---
 

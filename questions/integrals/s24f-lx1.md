@@ -7,7 +7,7 @@ tags:
   - ln
   - sqrt
   - fun
-method:
+methods:
 ---
 
 
