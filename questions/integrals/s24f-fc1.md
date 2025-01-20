@@ -29,7 +29,7 @@ method:
 
 ## Answer
 ```math
-
+\frac{5}{8}\ln\left(x^{2}-5\right)-\frac{1}{8}\ln\left(x^{2}-1\right)-c
 ```
 
 
