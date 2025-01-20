@@ -35,6 +35,7 @@ export class SearchData
     question: true,
     dates: true,
     tags: true,
+    methods: false,
   });
 
   view: "grid" | "list" = $state("grid");

@@ -76,6 +76,16 @@ let { question, latex, style = "block" }: Props = $props();
         {/each}
       </div>
     {/if}
+
+    {#if search.show.methods && question.methods && question.methods.length > 0}
+      <div class="tags"
+        transition:fade={{ duration: 250 }}
+      >
+        {#each question.methods as tag}
+          <Tag shard={tag} />
+        {/each}
+      </div>
+    {/if}
   </div>
 </a>
 
