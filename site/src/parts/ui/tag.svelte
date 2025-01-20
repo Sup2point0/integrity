@@ -17,7 +17,7 @@ let { tag, kind = "prot" }: Props = $props();
 
 <button class="tag {kind}"
   onclick={() => {
-    window.location.href = `${base}/questions/all?tags=${tag}`;
+    window.location.href = `${base}/questions/all?tag=${tag}`;
   }}
 >
   {tag.toUpperCase()}

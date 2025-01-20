@@ -12,7 +12,7 @@ import Toggle from "#parts/ui/toggle.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
 
 import { fade } from "svelte/transition";
-import { page } from "$app/stores";
+import { page } from "$app/state";
 import { base } from "$app/paths";
 import { onMount } from "svelte";
 
@@ -27,21 +27,24 @@ let { tags = [] }: Props = $props();
 let open = $state(false);
 
 onMount(() => {
-  /** FIXME search params
-  if ($page.url.searchParams?.size) {
-    open = true;
-    console.log($page.url.searchParams.get("tags"));
+  // TODO FIXME still needs work!
+  // if (page.url.searchParams?.size) {
+  //   open = true;
+  //   let search_tags = page.url.searchParams.getAll("tag");
 
-    if ($page.url.searchParams.has("tags")) {
-      search.tags = Object.fromEntries(
-        tags.map(tag => [tag, false])
-      );
-      for (let tag of $page.url.searchParams.getAll("tags")) {
-        search.tags[tag] = true;
-        search.tags = search.tags;
-      }
-    }
-  } */
+  //   if (search_tags) {
+  //     search.tags = Object.fromEntries(
+  //       tags.map(tag => [tag, false])
+  //     );
+
+  //     setTimeout(() => {for (let tag of search_tags) {
+  //       search.tags[tag] = true;
+  //       search.tags = search.tags;
+  //     }}, 1000);
+
+  //     console.log(search.tags);
+  //   }
+  // }
 });
 
 </script>
@@ -257,8 +260,6 @@ onMount(() => {
         </td>
       </tr>
     </tbody></table>
-
-    <aside> Searching’s laggy? <a target="_blank" href="https://github.com/Sup2point0/integrity/issues">Let me know on GitHub</a>. </aside>
   {/if}
 </search>
 
@@ -348,15 +349,6 @@ td {
     flex-wrap: wrap;
     gap: 0.25em;
     flex: 1 1 auto;
-  }
-}
-
-
-aside {
-  color: $col-text-deut;
-
-  a {
-    @include underline-link;
   }
 }
 
