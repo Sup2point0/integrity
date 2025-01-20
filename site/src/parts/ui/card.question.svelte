@@ -30,11 +30,13 @@ let { question, latex, style = "block" }: Props = $props();
 <a class="question-card {style}"
   href="{base}/question/{question.topic}?shard={question.shard}"
 >
-  <div class="question">
-    {#if latex}
-      <Katex text={latex} inline={false} />
-    {/if}
-  </div>
+  {#if search.show.question}
+    <div class="question" transition:fade={{ duration: 250 }}>
+      {#if latex}
+        <Katex text={latex} inline={false} />
+      {/if}
+    </div>
+  {/if}
 
   <div class="info">
     <div class="row">
@@ -72,7 +74,7 @@ let { question, latex, style = "block" }: Props = $props();
         transition:fade={{ duration: 250 }}
       >
         {#each question.tags as tag}
-          <Tag shard={tag} />
+          <Tag {tag} />
         {/each}
       </div>
     {/if}
@@ -82,7 +84,7 @@ let { question, latex, style = "block" }: Props = $props();
         transition:fade={{ duration: 250 }}
       >
         {#each question.methods as tag}
-          <Tag shard={tag} />
+          <Tag {tag} kind="deut" />
         {/each}
       </div>
     {/if}
