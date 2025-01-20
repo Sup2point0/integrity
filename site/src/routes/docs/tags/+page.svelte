@@ -26,10 +26,10 @@ import Header from "#parts/core/header.svelte";
 <Header title="Tags" />
 
 
-{#snippet tag(shard: string, desc: string)}
+{#snippet tag(text: string, desc: string)}
   <tr>
     <th>
-      <Tag {shard} />
+      <Tag tag={text} />
     </th>
     <td>
       <RenderBlock source={{ kind: "text", content: desc }} />

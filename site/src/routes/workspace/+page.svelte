@@ -4,7 +4,7 @@ import { presets, preset_question } from "./presets";
 
 import Site from "#scripts/site";
 import { userdata } from "#scripts/stores";
-import type { Question } from "#scripts/types";
+import type { Shard, Question } from "#scripts/types";
 
 import Clicky from "#parts/ui/clicky.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
@@ -31,6 +31,7 @@ let last_reset: number = Date.now();
 
 onMount(try_load_desmos);
 
+/* it would be nice to separate these into their own file, but they interact with the page too much... */
 function try_load_desmos(i: number = 0)
 {
   if (i > 3) {
@@ -73,7 +74,7 @@ function apply_preset(preset: string | null = null)
   desmos.setDefaultState(desmos.getState());
 }
 
-function try_load_question(shard: string | null): Question | undefined
+function try_load_question(shard: Shard | null): Question | undefined
 {
   if (!shard) {
     alert("Woah, no question shard provided!");
@@ -89,7 +90,7 @@ function try_load_question(shard: string | null): Question | undefined
   return question;
 }
 
-function apply_question(shard: string | null) {
+function apply_question(shard: Shard | null) {
   let question = try_load_question(shard);
   if (!question) return;
 

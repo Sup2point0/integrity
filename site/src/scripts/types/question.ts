@@ -1,4 +1,4 @@
-import type { Latex, Block } from "./root";
+import type { Shard, Block } from "./root";
 
 /**
  * Represents a generic question.
@@ -8,7 +8,7 @@ export class Question
   /** A collection of the question's key information for use in fuzzy searching. */
   _match: string[];
 
-  shard: string;
+  shard: Shard;
   topic: string;
 
   title?: string;
@@ -60,26 +60,27 @@ export class Question
 }
 
 /**
- * All the collections of questions from different topics.
- */
-export interface QuestionsData
-{
-  [shard: string]: QuestionCollection;
-}
-
-/**
- * A collection of questions from a single topic.
- */
-export interface QuestionCollection
-{
-  tags: string[];
-  questions: QuestionDictionary;
-}
-
-/**
  * A dictionary of questions from a single topic.
  */
 export interface QuestionDictionary
 {
-  [shard: string]: Question;
+  [shard: Shard]: Question;
+}
+
+/**
+ * A collection of questions from a single topic, along with their tags and methods.
+ */
+export interface QuestionCollection
+{
+  tags: string[];
+  methods: string[];
+  questions: QuestionDictionary;
+}
+
+/**
+ * The entire collection of question in Integrity.
+ */
+export interface QuestionsData
+{
+  [shard: Shard]: QuestionCollection;
 }

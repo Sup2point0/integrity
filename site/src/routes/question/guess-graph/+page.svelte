@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import Site from "#scripts/site";
-import type { Question } from "#scripts/types";
+import type { Shard, Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
@@ -16,7 +16,7 @@ import { error } from "@sveltejs/kit";
 
 
 let loaded = false;
-let shard: string | null = null;
+let shard: Shard | null = null;
 let question: Question | null = null;
 
 

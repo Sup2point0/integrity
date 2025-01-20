@@ -2,9 +2,9 @@
 
 import Site from "#scripts/site";
 import { page_data } from "./page-data.svelte.ts";
-import type { Question, QuestionCollection } from "#scripts/types";
+import type { Shard, Question, QuestionCollection } from "#scripts/types";
 
-import { page } from "$app/stores";
+import { page } from "$app/state";
 import { onMount } from "svelte";
 import { error } from "@sveltejs/kit";
 
@@ -13,7 +13,7 @@ let { children } = $props();
 
 
 onMount(() => {
-  let url = $page.url;
+  let url = page.url;
 
   let topic: string | undefined = url.pathname.split("/").at(-1);
   if (topic == null) {
@@ -21,7 +21,7 @@ onMount(() => {
   }
 
   let params = url.searchParams;
-  let shard: string | null = params.get("shard");
+  let shard: Shard | null = params.get("shard");
   if (shard == null) {
     error(400, { message: "URL is missing question shard" });
   }
