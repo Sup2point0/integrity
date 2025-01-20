@@ -15,6 +15,7 @@ export class SearchData
 {
   query: string = $state("");
   tags: States = $state({});
+  methods: States = $state({});
 
   include: States = $state({
     solved: false,
@@ -60,6 +61,15 @@ export class SearchData
         )
       );
     }
+
+    /* TODO filter by method */
+    // if (Object.values(this.methods).includes(true)) {
+    //   out = out.filter(
+    //     question => Object.keys(this.methods).some(method =>
+    //       this.methods[method] && question.methods.includes(method)
+    //     )
+    //   );
+    // }
   
     if (this.include.unnamed) {
       out = out.filter(question => !question.title);
@@ -83,12 +93,14 @@ export class SearchData
     if (this.query) {
       let query: string = this.query.toLowerCase();
   
+      /* Fast enough for now. Hopefully we don’t run into performance issues as we add more fields to search. */
       out = questions.filter(question => {
         return (
           question.shard.includes(query) ||
           question.title && question.title.toLowerCase().includes(query) ||
           // question.desc && question.desc.toLowerCase().includes(query) ||
-          question.tags && question.tags.some(tag => tag.toLowerCase().includes(query))
+          question.tags && question.tags.some(tag => tag.toLowerCase().includes(query)) ||
+          question.methods && question.methods.some(method => method.toLowerCase().includes(query))
         );
       });
     }

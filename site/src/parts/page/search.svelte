@@ -63,6 +63,7 @@ onMount(() => {
 
   {#if open}
     {@const unchecked_tag = Object.values(search.tags).some(tag => !tag)}
+    {@const unchecked_method = Object.values(search.methods).some(method => !method)}
     {@const unchecked_include = Object.values(search.include).some(state => !state)}
     {@const unchecked_exclude = Object.values(search.exclude).some(state => !state)}
     {@const unchecked_show = Object.values(search.show).some(state => !state)}
@@ -93,6 +94,31 @@ onMount(() => {
           />
         </td>
       </tr>
+      
+      <!-- TODO -->
+      <!-- <tr>
+        <th> Methods </th>
+
+        <td class="flex">
+          {#each methods as method}
+            <Toggle text={method.toUpperCase()}
+              value={search.methods[method]}
+              toggle={() => { search.methods[method] = !search.methods[method]; }}
+            />
+          {/each}
+        </td>
+
+        <td>
+          <Toggle text="ALL"
+            value={!unchecked_method}
+            toggle={() => {
+              search.methods = Object.fromEntries(
+                methods.map(method => [method, unchecked_tag])
+              );
+            }}
+          />
+        </td>
+      </tr> -->
 
       <tr>
         <th> Include Only </th>
