@@ -47,7 +47,7 @@ import { base } from "$app/paths";
 
   </div>
 
-  <small>
+  <small class="centre">
     built with <a target="_blank" href="https://svelte.dev/">Svelte 5</a> + <a target="_blank" href="https://svelte.dev/docs/kit/introduction">SvelteKit</a> &ensp; · &ensp; hosted on <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
   </small>
 </footer>
@@ -86,7 +86,6 @@ small {
   @include font-ui;
   font-size: 75%;
   color: $col-text-deut;
-  text-align: center;
 
   a {
     @include underline-link;

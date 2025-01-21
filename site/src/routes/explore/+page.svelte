@@ -33,11 +33,11 @@ import { base } from "$app/paths";
     <div class="links">
       <Link text="All" intern="questions/all" />
       <Link text="Integrals" intern="questions/integrals" />
-      <Link text="Graph Drawing" intern="questions/graph-drawing" />
+      <Link text="Graph Drawing" intern="questions/graph-drawing" disabled={true} />
       <Link text="Completing the Square" intern="questions/complete-square" />
-      <Link text="Guess the Graph" intern="questions/guess-graph" />
+      <Link text="Guess the Graph" intern="questions/guess-graph" disabled={true} />
       <Link text="Addvent" intern="questions/addvent" />
-      <Link text="Special" intern="questions/special" />
+      <Link text="Special" intern="questions/special" disabled={true} />
       <Link text="Random" action={() => {
         window.location.href = `${base}/question/${pick_random_question()}`;
       }} />
@@ -75,7 +75,7 @@ import { base } from "$app/paths";
     <h2> Guides </h2>
     <div class="links">
       <Link text="S-I+G-N Errors" intern="guides/sign" />
-      <Link text="Why Draw Graphs?" intern="" />
+      <Link text="Why Draw Graphs?" intern="guides/graph-drawing" disabled={true} />
     </div>
   </section>
 
@@ -83,27 +83,31 @@ import { base } from "$app/paths";
     <h2> Integrals </h2>
     <div class="links">
       <Link text="Why Integrate?" intern="guides/integration/why" />
+      <Link text="How Do We Integrate?" intern="guides/integration/how" />
+      <Link text="Why Is Integration Difficult?" intern="guides/integration/why-hard" />
+      <Link text="A Neat Little Integration Trick" intern="guides/integration/neat-trick" />
+      <Link text="Epic Errors" intern="guides/integration/epic-errors" />
     </div>
   </section>
 
   <section>
     <h2> Completing the Square </h2>
     <div class="links">
-      <Link text="Why Complete the Square?" intern="guides/complete-square/why" />
+      <Link text="Why Complete the Square?" intern="guides/complete-square/why" disabled={true} />
     </div>
   </section>
 
   <section>
     <h2> Desmos </h2>
     <div class="links">
-      <Link text="Why Desmos?" intern="guides/desmos/why" />
+      <Link text="Why Desmos?" intern="guides/desmos/why" disabled={true} />
     </div>
   </section>
 
   <section>
     <h2> Miscellaneous </h2>
     <div class="links">
-      <Link text="What’s This?" intern="integrity/integrity" />
+      <Link text="What’s This?" intern="integrity/integrity" disabled={true} />
     </div>
   </section>
 </div>
