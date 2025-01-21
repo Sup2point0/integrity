@@ -67,7 +67,7 @@ article {
     border-radius: 0.4em;
   }
 
-  :not(sup, .footnotes ol li) > a {
+  p > a {
     @include underline-link;
   }
 
@@ -103,9 +103,6 @@ article {
     td, th {
       padding: 0.25em 0.5em;
       border: 1px solid $col-line;
-    }
-
-    td {
     }
 
     th {

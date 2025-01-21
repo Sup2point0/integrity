@@ -3,11 +3,10 @@
 import Content from "./content.svx";
 import { metadata as page } from "./content.svx";
 
-import ArticleCard from "#parts/ui/card.article.svelte";
-
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
+import ArticleArray from "#parts/page/article-array.svelte";
 
 </script>
 
@@ -25,11 +24,13 @@ import Header from "#parts/core/header.svelte";
 
 <article>
   <Content />
-  
-  <br>
 
-  <h2> Continue Reading </h2>
-
-  <ArticleCard page="guides/integrals/why-hard.md" />
-  <ArticleCard page="guides/integrals/why.md" />
+  <aside>
+    <h2> Continue Reading </h2>
+    
+    <ArticleArray paths={[
+      "guides/integrals/why-hard.md",
+      "guides/integrals/why.md"
+    ]} />
+  </aside>
 </article>

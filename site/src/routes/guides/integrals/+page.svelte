@@ -2,7 +2,7 @@
 
 import Site from "#scripts/site";
 
-import ArticleCard from "#parts/ui/card.article.svelte";
+import ArticleArray from "#parts/page/article-array.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -23,9 +23,7 @@ import Header from "#parts/core/header.svelte";
 
 
 <div class="browse">
-  {#each Site.guides["integrals"] as page}
-    <ArticleCard page={page.path} />
-  {/each}
+  <ArticleArray paths={Site.guides["integrals"].map(page => page.path)} />
 </div>
 
 
@@ -33,11 +31,6 @@ import Header from "#parts/core/header.svelte";
 
 .browse {
   margin: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 
 </style>
