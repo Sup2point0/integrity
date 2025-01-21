@@ -29,9 +29,9 @@ let copied = $state(false);
   }}
 >
   {#if copied}
-    <img src="{base}/tick-new.svg" />
+    <img alt="" src="{base}/tick-new.svg" />
   {:else}
-    <img src="{base}/copy.svg" />
+    <img alt="" src="{base}/copy.svg" />
   {/if}
 </button>
 

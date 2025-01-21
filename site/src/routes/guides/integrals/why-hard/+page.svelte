@@ -6,6 +6,7 @@ import { metadata as page } from "./content.svx";
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
+import ArticleArray from "#parts/page/article-array.svelte";
 
 </script>
 
@@ -23,4 +24,10 @@ import Header from "#parts/core/header.svelte";
 
 <article>
   <Content />
+    
+  <ArticleArray paths={[
+    "guides/integrals/why.md",
+    "guides/integrals/how.md"
+  ]} />
+</aside>
 </article>
