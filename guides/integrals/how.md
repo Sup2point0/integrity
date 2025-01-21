@@ -12,7 +12,7 @@ But just like the syntax and logic of code, the bonds and structures of organic 
 
 [^complex]: Not literally.
 
-As you learn to integrate, you start to abstract. You filter past the numbers, and the superficial symbols, and eventually the mathematical notation itself, to see the core of an integrand. The functions it’s composed of, and the ways they’ve been arranged. It all becomes a pool of pure mathematical objects. You grow to spot the essence of a problem, its hidden shape that whispers to you what solution path might work. It’s like going from staring at a night sky to suddenly noticing the clouds and constellations taking shape before you.
+As you learn to integrate, you start to abstract. You filter past the numbers, and the superficial symbols, and eventually the mathematical notation itself, to see the real core of an integrand. The functions it’s composed of, and the ways they’ve been arranged. It all becomes a pool of mathematical purity. You grow to spot the essence of a problem, its hidden shape that whispers to you what solution path might work. It’s like going from staring at a night sky to suddenly noticing the clouds and constellations taking shape before you.
 
 But integration is rarely cut-and-dry. What works for one integral may completely fall apart for another.[^fall-apart] There is no fixed algorithm to memorise and execute; we must leverage our knowledge, experience and intuition. For me, this is part of the beauty of integration, and it’s what makes the chase so satisfying. You could call it trial-and-error, but I like to think of it more like *mathematical warfare*.
 
@@ -37,7 +37,7 @@ Even if you haven’t integrated yet, as long as you’ve differentiated before 
 
 This kind of integral is instantly solvable. Since we’re essentially using an established formula, or ‘quoting’ a standard antiderivative, we could call this “quotable”.
 
-So, because we can integrate $2x$, we can now integrate any integral if the form
+So, because we can integrate $2x$, we can now integrate any integral of the form
 
 ```math
 \int kx \ dx
@@ -62,13 +62,13 @@ Let’s upgrade then. Consider
 Some trigonometric antiderivatives are quotable as inverses of derivatives (what a mouthful – I mean like $\frac{d}{dx} \tan{x} = \sec^2{x}$), but this is not one of them. So, we’ll try change it into a form where we can do something. Let’s write $\cot{x}$ in terms of $\sin$ and $\cos$ primitives:
 
 ```math
-\int \frac{\cos{x}}{\sin{x}} \ dx
+= \int \frac{\cos{x}}{\sin{x}} \ dx
 ```
 
-Aha! Now we can substitute $\sin{x} = t$, and the integral becomes
+Aha! Now we can substitute $\sin{x} = t$, $\cos{x}\ dx = dt$, and the integral becomes
 
 ```math
-\int \frac{1}{t} \ dt
+= \int \frac{1}{t} \ dt
 ```
 
 > [!Note]
@@ -78,7 +78,7 @@ And the integral of $1/t$ is quotable as $\ln|t|$, so our solution is $\ln| \sin
 
 It doesn’t matter if you don’t understand (yet) how we could change the integral like that, but this is the heart of integration. Simplifying, layer after layer, until we get it into a form that we can integrate with ease.
 
-To this end, we have a massive arsenal of methods, tricks and formulae that we can harness to transform and reshape an integral. When you just start out, apply them in full, carrying out every step in glorious detail. Quickly you’ll familiarise with the different methods you can use and be able to jump parts of the solution.
+To this end, we have a massive arsenal of methods, tricks and formulae that we can harness to transform and reshape an integral. When you just start out, apply them in full, carrying out every step in glorious detail. Quickly you’ll familiarise with the different methods you can use and be able to skip parts of the solution.
 
 Now that point, where we can jump straight to the solution – or just affirm that we’ve ‘solved’ the integral (since we’re sure we know how to solve ‘the rest’) – will come sooner and sooner. It won’t take long before you find integrals like $\tan{x}$ doable in your head. $xe^x$? Happy days, quotable parts. Even stuff like $\frac{1}{x^2 + 5x + 6}$ you’ll start thinking “ugh, more partials, we know how to do this.”
 
@@ -91,7 +91,19 @@ Integration can be scary, but its rules are fairly intuitive. There are 2 main o
 \int f(x) + g(x) \ dx = \int f(x) \ dx + \int g(x) \ dx
 ```
 
-In other words, integration is *distributive* over addition. And secondly:
+In other words, integration is *distributive* over addition. This means we can break up integrals of addition into addition of integrals.
+
+A key thing to remember here is that this works with fractions too!
+
+```math
+\begin{align*}
+  &\ \int \frac{f(x)+g(x)}{h(x)} \ dx
+  \\ =&\ \int \frac{f(x}{h(x)} + \frac{g(x)}{h(x)} \ dx
+  \\ =&\ \int \frac{f(x}{h(x)} \ dx + \int \frac{g(x)}{h(x)} \ dx
+\end{align*}
+```
+
+And secondly:
 
 ```math
 \int kf(x) \ dx = k \int f(x) dx
@@ -99,7 +111,7 @@ In other words, integration is *distributive* over addition. And secondly:
 
 This means that multiplicative constants *of the whole integral* make no difference, so you can factorise them out.
 
-Bear in mind that $k$ **must** be a constant term – i.e. no $x$-s (or whatever your integrating variable is). [This is a common begineer pitfall](epic-errors.md).
+Bear in mind that $k$ **must** be a constant term – i.e. no $x$-s (or whatever your integrating variable is). [This is a common beginner pitfall](epic-errors.md).
 
 
 ## Sweep the Battlefield
