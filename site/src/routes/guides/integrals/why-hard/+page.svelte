@@ -25,9 +25,12 @@ import ArticleArray from "#parts/page/article-array.svelte";
 <article>
   <Content />
     
-  <ArticleArray paths={[
-    "guides/integrals/why.md",
-    "guides/integrals/how.md"
-  ]} />
-</aside>
+  <aside>
+    <h2> Continue Reading </h2>
+    
+    <ArticleArray paths={[
+      "guides/integrals/why.md",
+      "guides/integrals/how.md"
+    ]} />
+  </aside>
 </article>
