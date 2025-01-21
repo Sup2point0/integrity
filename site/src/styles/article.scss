@@ -4,7 +4,7 @@
 
 @use 'mixins/~colours' as *;
 @use 'mixins/~fonts' as *;
-@use 'links' as *;
+@use 'mixins/~links' as *;
 
 
 @counter-style double-arrows {

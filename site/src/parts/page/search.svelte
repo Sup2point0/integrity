@@ -266,9 +266,6 @@ onMount(() => {
 
 <style lang="scss">
 
-@use 'src/styles/links' as *;
-
-
 search {
   max-width: 80vw;
   padding: 0.5rem;

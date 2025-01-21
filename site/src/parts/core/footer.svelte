@@ -55,9 +55,6 @@ import { base } from "$app/paths";
 
 <style lang="scss">
 
-@use 'src/styles/links' as *;
-
-
 footer {
   width: 100%;
   padding: 4rem 0 2rem;
