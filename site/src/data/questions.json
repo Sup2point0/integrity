@@ -2953,6 +2953,47 @@
         ]
       }
     },
+    "s25f-ph1": {
+      "topic": "integrals",
+      "title": "bureaucracy",
+      "desc": null,
+      "date": "2025 January 10",
+      "tags": [
+        "poly",
+        "frac"
+      ],
+      "methods": [
+        "spot",
+        "sub"
+      ],
+      "shard": "s25f-ph1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{x^{5}}{x^{6}-3x^{4}+4x^{2}-2}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{2}\\ln\\left|x^{2}-1\\right|+\\tan^{-1}\\left(x^{2}-1\\right)-c"
+        }
+      ],
+      "solution": {
+        "reform": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x^{5}}{x^{6}-3x^{4}+4x^{2}-2}\\ dx  \\\\ =&\\ \\int \\frac{x^{5}}{x^{6}-3x^{4}+3x^{2}-1+x^{2}-1}\\ dx  \\\\ =&\\ \\int \\frac{x^{5}}{\\left(x^{2}-1\\right)^{3}+\\left(x^{2}-1\\right)}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{x^{5}}{t^{3}+t}\\ dx  \\\\ &= \\frac{1}{2}\\int \\frac{x^{4}}{t^{3}+t}\\cdot2x\\ dx  \\\\ &= \\frac{1}{2}\\int \\frac{\\left(t+1\\right)^{2}}{t^{3}+t}\\ dt  \\\\ &= \\frac{1}{2}\\int \\frac{t^{2}+2t+1}{t\\left(t^{2}+1\\right)}  \\\\ &= \\frac{1}{2}\\int \\frac{t^{2}+1}{t\\left(t^{2}+1\\right)}+\\frac{2t}{t\\left(t^{2}+1\\right)}\\ dt  \\\\ &= \\frac{1}{2}\\int \\frac{1}{t}\\ dt+\\int \\frac{1}{t^{2}+1}\\ dt  \\\\ &= \\frac{1}{2}\\ln\\left|t\\right|+\\tan^{-1}\\left(t\\right)  \\\\ &= \\frac{1}{2}\\ln\\left|x^{2}-1\\right|+\\tan^{-1}\\left(x^{2}-1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-pt1": {
       "topic": "integrals",
       "title": "mechanism",
@@ -3050,6 +3091,58 @@
           }
         ]
       }
+    },
+    "s25f-qr1": {
+      "topic": "integrals",
+      "title": "gridded",
+      "desc": null,
+      "date": "2025 January 18",
+      "tags": [
+        "horror",
+        "sqrt",
+        "frac"
+      ],
+      "methods": [
+        "work",
+        "acc"
+      ],
+      "shard": "s25f-qr1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\sqrt{ \\frac    { \\sqrt{x-1}+\\sqrt{x+1} }    { \\sqrt{x+1}-\\sqrt{x-1} }  }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Start by splitting the large $\\sqrt{}$ so that it wraps the numerator and denominator separately."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How we get rid of $\\sqrt{}$ in the denominator?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{\\sqrt{2}}{3}\\left(x+1\\right)^{3/2}+\\frac{\\sqrt{2}}{3}\\left(x-1\\right)^{3/2}-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "The strategy for this one, really, is to just keep multiplying by the conjugate of the denominator, so that you can do difference of 2 squares."
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\sqrt{\\frac{\\sqrt{x-1}+\\sqrt{x+1}}{\\sqrt{x+1}-\\sqrt{x-1}}}\\ dx  \\\\ =&\\ \\int \\sqrt{\\frac{\\sqrt{x-1}+\\sqrt{x+1}}{\\sqrt{x+1}-\\sqrt{x-1}}\\cdot\\frac{\\sqrt{x+1}-\\sqrt{x-1}}{\\sqrt{x+1}-\\sqrt{x-1}}}\\ dx  \\\\ =&\\ \\int \\frac{\\sqrt{\\left(\\sqrt{x+1}\\right)^{2}-\\left(\\sqrt{x-1}\\right)^{2}}}{\\sqrt{\\left(\\sqrt{x+1}-\\sqrt{x-1}\\right)^{2}}}\\ dx  \\\\ =&\\ \\int \\frac{\\sqrt{\\left(x+1\\right)-\\left(x-1\\right)}}{\\sqrt{x+1}-\\sqrt{x-1}}\\ dx  \\\\ =&\\ \\int \\frac{\\sqrt{2}}{\\sqrt{x+1}-\\sqrt{x-1}}\\ dx  \\\\ =&\\ \\sqrt{2}\\int \\frac{1}{\\sqrt{x+1}-\\sqrt{x-1}}\\cdot\\frac{\\sqrt{x+1}+\\sqrt{x-1}}{\\sqrt{x+1}+\\sqrt{x-1}}\\ dx  \\\\ =&\\ \\sqrt{2}\\int \\frac{\\sqrt{x+1}+\\sqrt{x-1}}{\\left(\\sqrt{x+1}\\right)^{2}-\\left(\\sqrt{x-1}\\right)^{2}}\\ dx  \\\\ =&\\ \\sqrt{2}\\int \\frac{\\sqrt{x+1}+\\sqrt{x-1}}{\\left(x+1\\right)-\\left(x-1\\right)}\\ dx  \\\\ =&\\ \\sqrt{2}\\int \\frac{\\sqrt{x+1}+\\sqrt{x-1}}{2}\\ dx  \\\\ =&\\ \\frac{\\sqrt{2}}{2}\\int \\sqrt{x+1}+\\sqrt{x-1}\\ dx  \\\\ =&\\ \\frac{\\sqrt{2}}{2}\\left(\\frac{2}{3}\\left(x+1\\right)^{3/2}+\\frac{2}{3}\\left(x-1\\right)^{3/2}\\right)  \\\\ =&\\ \\frac{\\sqrt{2}}{3}\\left(x+1\\right)^{3/2}+\\frac{\\sqrt{2}}{3}\\left(x-1\\right)^{3/2}-c\\end{align*}"
+        }
+      ]
     },
     "s25f-qt1": {
       "topic": "integrals",

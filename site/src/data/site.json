@@ -1,14 +1,16 @@
 {
   "meta": {
-    "exported": "2025-01-20",
-    "file_count": 7,
-    "page_count": 6
+    "exported": "2025-01-21",
+    "file_count": 9,
+    "page_count": 8
   },
   "index": {
     "guides": {
       "route": null,
       "pages": [
         "guides/complete-square/why.md",
+        "guides/integrals/epic-errors.md",
+        "guides/integrals/how.md",
         "guides/integrals/neat-trick.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
@@ -23,6 +25,8 @@
     "integrals": {
       "route": null,
       "pages": [
+        "guides/integrals/epic-errors.md",
+        "guides/integrals/how.md",
         "guides/integrals/neat-trick.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
@@ -32,6 +36,8 @@
   "shard": {
     "guides": [
       "guides/complete-square/why.md",
+      "guides/integrals/epic-errors.md",
+      "guides/integrals/how.md",
       "guides/integrals/neat-trick.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
@@ -40,6 +46,8 @@
       "guides/complete-square/why.md"
     ],
     "integrals": [
+      "guides/integrals/epic-errors.md",
+      "guides/integrals/how.md",
       "guides/integrals/neat-trick.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
@@ -89,6 +97,57 @@
       ],
       "date": null,
       "date_display": null
+    },
+    "guides/integrals/epic-errors.md": {
+      "path": "guides/integrals/epic-errors.md",
+      "last_deploy": "2025-01-21 09:28:18 +0000",
+      "slocs": 69,
+      "chars": 1969,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/integrals/epic-errors",
+      "title": "Epic Errors",
+      "head": "Epic Errors",
+      "capt": "Surprisingly unrare pitfalls in integration",
+      "desc": "Surprisingly unrare pitfalls in integration",
+      "index": [
+        "guides",
+        "integrals"
+      ],
+      "shard": [
+        "guides",
+        "integrals"
+      ],
+      "date": "2025-01-21",
+      "date_display": "2025 January 21"
+    },
+    "guides/integrals/how.md": {
+      "path": "guides/integrals/how.md",
+      "last_deploy": "2025-01-21 09:28:18 +0000",
+      "slocs": 134,
+      "chars": 6931,
+      "isIndex": false,
+      "flags": [
+        "live",
+        "dev"
+      ],
+      "dest": "guides/integrals/how",
+      "title": "How Do We Integrate?",
+      "head": "How Do We Integrate?",
+      "capt": "The Art & Strategy of Integration",
+      "desc": "The Art & Strategy of Integration",
+      "index": [
+        "guides",
+        "integrals"
+      ],
+      "shard": [
+        "guides",
+        "integrals"
+      ],
+      "date": "2025-01-21",
+      "date_display": "2025 January 21"
     },
     "guides/integrals/neat-trick.md": {
       "path": "guides/integrals/neat-trick.md",
