@@ -1,5 +1,5 @@
 # Epic Errors
-<!-- #SQUARK live!
+<!-- #SQUARK live! dev!
 | dest = guides/integrals/epic-errors
 | capt = Surprisingly unrare pitfalls in integration
 | index = guides / integrals
