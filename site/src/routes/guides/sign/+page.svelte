@@ -5,6 +5,7 @@ import { metadata as page } from "./content.svx";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
+import ArticleBanners from "#parts/page/article-banners.svelte";
 
 </script>
 
@@ -15,6 +16,7 @@ import Header from "#parts/core/header.svelte";
 ]} />
 
 <Header title={page.title} capt={page.capt} />
+<ArticleBanners {page} />
 
 <article>
   <Content />

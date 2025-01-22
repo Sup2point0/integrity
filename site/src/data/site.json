@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-01-21",
+    "exported": "2025-01-22",
     "file_count": 9,
     "page_count": 8
   },
@@ -201,12 +201,14 @@
     },
     "guides/integrals/why.md": {
       "path": "guides/integrals/why.md",
-      "last_deploy": "2025-01-14 10:42:28 +0000",
+      "last_deploy": "2025-01-22 20:42:53 +0000",
       "slocs": 30,
-      "chars": 3540,
+      "chars": 3551,
       "isIndex": false,
       "flags": [
-        "live"
+        "live",
+        "opin",
+        "dev"
       ],
       "dest": "guides/integrals/why",
       "title": "Why Integrate?",

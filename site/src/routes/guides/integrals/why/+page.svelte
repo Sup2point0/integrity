@@ -20,7 +20,8 @@ import ArticleArray from "#parts/page/article-array.svelte";
   { text: "Why Integrate?" },
 ]} />
 
-<Header title="Why Integrate?" capt={page.capt} />
+<Header page={page} />
+<!-- title="Why Integrate?" capt={page.capt} /> -->
 
 <article>
   <Content />

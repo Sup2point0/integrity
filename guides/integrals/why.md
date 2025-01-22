@@ -1,5 +1,5 @@
 # Why Integrate?
-<!-- #SQUARK live!
+<!-- #SQUARK live! opin! dev!
 | dest = guides/integrals/why
 | capt = Integration is love, integration is life
 | index = guides / integrals

@@ -2,19 +2,29 @@
 
 <script lang="ts">
 
+import ArticleBanners from "#parts/page/article-banners.svelte";
+
+
 interface Props {
-  title: string;
+  title?: string;
   capt?: string;
+  page?: object;
 }
 
-let { title, capt }: Props = $props();
+let { title, capt, page }: Props = $props();
 
 </script>
 
 
 <header>
-  <h1> {title} </h1>
-  <p> {@html capt}
+  <div class="info">
+    <h1> {title ?? page?.title ?? "Untitled Page"} </h1>
+    <p> {@html capt ?? page?.capt ?? ""} </p>
+  </div>
+
+  {#if page}
+    <ArticleBanners {page} />
+  {/if}
 </header>
 
 
@@ -22,7 +32,10 @@ let { title, capt }: Props = $props();
 
 header {
   width: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+.info {
   padding: 2rem 0 2rem;
   text-align: center;
   border-bottom: 1px solid $col-line;
