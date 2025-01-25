@@ -9,14 +9,12 @@
 
 @counter-style double-arrows {
   system: cyclic;
-  symbols: '–';
   symbols: '⟹';
   suffix: '   ';
 }
 
 @counter-style single-arrows {
   system: cyclic;
-  symbols: '–';
   symbols: '→';
   suffix: '   ';
 }

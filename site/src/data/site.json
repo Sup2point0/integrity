@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-01-22",
+    "exported": "2025-01-24",
     "file_count": 9,
     "page_count": 8
   },
@@ -100,12 +100,13 @@
     },
     "guides/integrals/epic-errors.md": {
       "path": "guides/integrals/epic-errors.md",
-      "last_deploy": "2025-01-21 09:28:18 +0000",
+      "last_deploy": "2025-01-22 21:10:15 +0000",
       "slocs": 69,
-      "chars": 1969,
+      "chars": 1974,
       "isIndex": false,
       "flags": [
-        "live"
+        "live",
+        "dev"
       ],
       "dest": "guides/integrals/epic-errors",
       "title": "Epic Errors",
@@ -125,12 +126,13 @@
     },
     "guides/integrals/how.md": {
       "path": "guides/integrals/how.md",
-      "last_deploy": "2025-01-21 09:28:18 +0000",
+      "last_deploy": "2025-01-22 21:10:24 +0000",
       "slocs": 134,
-      "chars": 6931,
+      "chars": 6937,
       "isIndex": false,
       "flags": [
         "live",
+        "feat",
         "dev"
       ],
       "dest": "guides/integrals/how",
@@ -176,12 +178,14 @@
     },
     "guides/integrals/why-hard.md": {
       "path": "guides/integrals/why-hard.md",
-      "last_deploy": "2025-01-14 10:38:40 +0000",
+      "last_deploy": "2025-01-22 21:10:36 +0000",
       "slocs": 96,
-      "chars": 5170,
+      "chars": 5181,
       "isIndex": false,
       "flags": [
-        "live"
+        "live",
+        "opin",
+        "dev"
       ],
       "dest": "guides/integrals/why-hard",
       "title": "Why Is Integration Difficult?",

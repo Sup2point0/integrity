@@ -4,6 +4,8 @@ import "#styles/essence.scss";
 import "#styles/article.scss";
 import "#styles/a11y.scss";
 
+import { userprefs } from "#scripts/stores";
+
 import Nav from "#parts/core/nav.svelte";
 import Footer from "#parts/core/footer.svelte";
 
@@ -17,7 +19,40 @@ let { children } = $props();
 
 let active = $state(true);
 
+
 onMount(() => {
+  handle_runes();
+  handle_overlay();
+});
+
+/** Handle syncing persisted runes to `localStorage`. */
+function handle_runes()
+{
+  let existing = localStorage.getItem("integrity.prefs");
+  
+  if (existing) {
+    userprefs.set_from_json(JSON.parse(existing));
+  }
+}
+
+/** Sync `userprefs` with `localStorage`. */
+$effect(() => {
+  // declare first to include `userprefs` as reactive dependency
+  let current = $state.snapshot(userprefs);
+
+  // then check to avoid infinite loop
+  if (userprefs._syncing) return;
+
+  try {
+    localStorage.setItem("integrity.prefs", JSON.stringify(current));
+  } catch {
+    alert("Error: Failed to sync preferences locally?");
+  }
+});
+
+/** Handle removing the overlay. */
+function handle_overlay()
+{
   if (typeof(sessionStorage) === "undefined") return;
 
   if (sessionStorage.getItem("integrity.here")) {
@@ -26,7 +61,7 @@ onMount(() => {
     sessionStorage.setItem("integrity.here", "pi");
     setTimeout(() => { active = false; }, 500);
   }
-});
+}
 
 </script>
 

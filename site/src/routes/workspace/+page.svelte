@@ -3,7 +3,7 @@
 import { presets, preset_question } from "./presets";
 
 import Site from "#scripts/site";
-import { userdata } from "#scripts/stores";
+import { userprefs } from "#scripts/stores";
 import type { Shard, Question } from "#scripts/types";
 
 import Clicky from "#parts/ui/clicky.svelte";
@@ -119,7 +119,7 @@ function apply_question(shard: Shard | null) {
 <nav>
   <section id="preset">
     <small> PRESET </small>
-    <Select bind:value={userdata["desmos-preset"]} options={{
+    <Select bind:value={userprefs["desmos-preset"]} options={{
       "Default": null,
       "Integral": "integrals",
       "Completing the Square": "complete-square"
@@ -151,7 +151,7 @@ function apply_question(shard: Shard | null) {
         }
 
         desmos.setBlank();
-        apply_preset(userdata["desmos-preset"]);
+        apply_preset(userprefs["desmos-preset"]);
         last_reset = Date.now();
       }}
     />

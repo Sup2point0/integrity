@@ -1,8 +1,6 @@
 import type { Shard, Block } from "./root";
 
-/**
- * Represents a generic question.
- */
+/** Represents a generic question. */
 export class Question
 {
   /** A collection of the question's key information for use in fuzzy searching. */
@@ -59,17 +57,13 @@ export class Question
   }
 }
 
-/**
- * A dictionary of questions from a single topic.
- */
+/** A dictionary of questions from a single topic. */
 export interface QuestionDictionary
 {
   [shard: Shard]: Question;
 }
 
-/**
- * A collection of questions from a single topic, along with their tags and methods.
- */
+/** A collection of questions from a single topic, along with their tags and methods. */
 export interface QuestionCollection
 {
   tags: string[];
@@ -77,9 +71,7 @@ export interface QuestionCollection
   questions: QuestionDictionary;
 }
 
-/**
- * The entire collection of question in Integrity.
- */
+/** The entire collection of question in Integrity. */
 export interface QuestionsData
 {
   [shard: Shard]: QuestionCollection;

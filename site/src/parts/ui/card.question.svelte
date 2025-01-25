@@ -4,7 +4,7 @@ A card for selecting a question. -->
 
 <script lang="ts">
 
-import { userdata, search } from "#scripts/stores";
+import { userprefs, search } from "#scripts/stores";
 import type { Latex, Question } from "#scripts/types";
 
 import Tag from "#parts/ui/tag.svelte";
@@ -56,12 +56,12 @@ let { question, latex, style = "block" }: Props = $props();
             "off": "#dededede",
             "on": "#00761c",
           }}
-          value={() => userdata.flagged.has(question.shard)}
+          value={() => userprefs.flagged.has(question.shard)}
           enable={() => {
-            try { userdata.flagged.add(question.shard); }
+            try { userprefs.flagged.add(question.shard); }
             catch { return false; } return true; }}
           disable={() => {
-            try { userdata.flagged.delete(question.shard); }
+            try { userprefs.flagged.delete(question.shard); }
             catch { return false; } return true; }}
         >
           <FlagIcon />

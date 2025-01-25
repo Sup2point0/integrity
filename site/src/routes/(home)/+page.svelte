@@ -84,7 +84,7 @@ onMount(() => {
 <Line />
 
 <section>
-  <a href="https://xkcd.com/2117">
+  <a target="_blank" href="https://xkcd.com/2117">
     <img alt="XKCD 2117: Differentiation and Integration"
       src="https://imgs.xkcd.com/comics/differentiation_and_integration.png"
     />

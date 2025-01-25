@@ -1,2 +1,2 @@
-export { search, SearchData } from "./search.svelte.ts";
-export { userdata } from "./user-data.svelte.ts";
+export { search } from "./search.svelte.ts";
+export { userprefs } from "./user-prefs.svelte.ts";
