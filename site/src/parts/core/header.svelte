@@ -18,7 +18,7 @@ let { title, capt, page }: Props = $props();
 
 <header>
   <div class="info">
-    <h1> {title ?? page?.title ?? "Untitled Page"} </h1>
+    <h1> {title ?? page?.head ?? "Untitled Page"} </h1>
     <p> {@html capt ?? page?.capt ?? ""} </p>
   </div>
 

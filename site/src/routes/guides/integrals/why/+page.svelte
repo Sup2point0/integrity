@@ -21,7 +21,6 @@ import ArticleArray from "#parts/page/article-array.svelte";
 ]} />
 
 <Header page={page} />
-<!-- title="Why Integrate?" capt={page.capt} /> -->
 
 <article>
   <Content />
