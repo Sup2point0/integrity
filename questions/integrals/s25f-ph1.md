@@ -26,7 +26,7 @@ methods:
 
 ## Solution
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &\ \int \frac{x^{5}}{x^{6}-3x^{4}+4x^{2}-2}\ dx

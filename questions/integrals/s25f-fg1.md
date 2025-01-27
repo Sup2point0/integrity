@@ -37,7 +37,7 @@ Log laws are always great!
 
 ## Solution
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &\ \int \left(\sin x\right)\ln\left(\sin^{2}x\right)\ dx
@@ -76,7 +76,7 @@ Log laws are always great!
 
 ## Alternates
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &\ \int \left(\sin x\right)\ln\left(\sin^{2}x\right)\ dx

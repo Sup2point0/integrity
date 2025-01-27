@@ -25,7 +25,7 @@ methods:
 
 ## Solution
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &\ \int \frac{4x^{2}}{1-x^{4}}\ dx

@@ -76,7 +76,7 @@ How could you get rid of $\cos{x}$ in the denominator?
 \end{align*}
 ```
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &= 2e\int \frac{\sec^{2}x\sin x}{\cos x-2\sec x}\ln\left(\sec^{2}x+\tan^{2}x\right)\cdot\frac{\sec x}{\sec x}\ dx

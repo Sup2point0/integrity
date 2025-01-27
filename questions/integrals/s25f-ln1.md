@@ -42,7 +42,7 @@ You’ll need many more substitutions.
 
 ## Solution
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &\ \int \frac{\ln\left(\ln\left(x^e\right)\right)}{ex\ln\left(x^e\right)}\ dx

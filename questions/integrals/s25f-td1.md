@@ -34,7 +34,7 @@ methods:
 
 ## Solution
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &\ \int \frac{1}{37\sin^{2}x+111\cos^{2}x}\ dx

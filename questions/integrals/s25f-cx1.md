@@ -47,7 +47,7 @@ Watch out for product rule!
 
 ## Solution
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &\ \int_{\ }^{\ }\left(2x^{\left(x^{2}+0.5\right)}\right)^{2}\left(\ln x+0.5\right)\ dx

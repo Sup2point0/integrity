@@ -48,7 +48,7 @@ You may need product rule somewhere in the solution!
 
 ## Solution
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &\ \int \left(\frac{e^{x}}{\ln e}\right)^{\left(e^{x}+1\right)}\left(\frac{x+1}{\ln e}\right)\ dx

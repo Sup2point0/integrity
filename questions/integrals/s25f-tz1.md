@@ -47,7 +47,7 @@ x+\cot x-\csc x-c
 
 ## Solution
 
-### Reform
+### Reshape
 ```math
 \begin{align*}
   &\ \int\frac{1 + \tan{x}}{\sec^4{x}+\sec{x}\tan{x}-2\sec^2{x}\tan^2{x}+\sec{x}+\tan{x}+\tan^4{x}}\ dx
