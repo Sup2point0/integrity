@@ -1,7 +1,7 @@
 <script>
 
-import Content from "./content.svx";
-import { metadata as page } from "./content.svx";
+import Content from "./~content.svx";
+import { metadata as page } from "./~content.svx";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
