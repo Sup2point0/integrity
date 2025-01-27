@@ -30,7 +30,7 @@ aside {
 
   &:hover {
     border-left: 2px solid $col-deut;
-    box-shadow: 1px 0 4px $col-line;
+    box-shadow: 1px 2px 4px $col-line;
   }
 }
 

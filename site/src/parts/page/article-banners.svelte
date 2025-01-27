@@ -21,7 +21,7 @@ let { page } = $props();
   {/if}
 
   {#if page.flags?.includes("opin")}
-    <Banner title="Objectivity">
+    <Banner title="Objective Minima">
       This piece contains opinionated content, please do not feel obliged to agree.
     </Banner>
   {/if}

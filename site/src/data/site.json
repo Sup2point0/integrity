@@ -1,14 +1,15 @@
 {
   "meta": {
-    "exported": "2025-01-24",
-    "file_count": 9,
-    "page_count": 8
+    "exported": "2025-01-27",
+    "file_count": 10,
+    "page_count": 9
   },
   "index": {
     "guides": {
       "route": null,
       "pages": [
         "guides/complete-square/why.md",
+        "guides/integrals/antiderivatives/sec-3.md",
         "guides/integrals/epic-errors.md",
         "guides/integrals/how.md",
         "guides/integrals/neat-trick.md",
@@ -25,17 +26,25 @@
     "integrals": {
       "route": null,
       "pages": [
+        "guides/integrals/antiderivatives/sec-3.md",
         "guides/integrals/epic-errors.md",
         "guides/integrals/how.md",
         "guides/integrals/neat-trick.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
+    },
+    "antiderivatives": {
+      "route": null,
+      "pages": [
+        "guides/integrals/antiderivatives/sec-3.md"
+      ]
     }
   },
   "shard": {
     "guides": [
       "guides/complete-square/why.md",
+      "guides/integrals/antiderivatives/sec-3.md",
       "guides/integrals/epic-errors.md",
       "guides/integrals/how.md",
       "guides/integrals/neat-trick.md",
@@ -46,11 +55,15 @@
       "guides/complete-square/why.md"
     ],
     "integrals": [
+      "guides/integrals/antiderivatives/sec-3.md",
       "guides/integrals/epic-errors.md",
       "guides/integrals/how.md",
       "guides/integrals/neat-trick.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
+    ],
+    "antiderivatives": [
+      "guides/integrals/antiderivatives/sec-3.md"
     ]
   },
   "pages": {
@@ -94,6 +107,34 @@
       "shard": [
         "guides",
         "complete-square"
+      ],
+      "date": null,
+      "date_display": null
+    },
+    "guides/integrals/antiderivatives/sec-3.md": {
+      "path": "guides/integrals/antiderivatives/sec-3.md",
+      "last_deploy": "2025-01-27 07:57:36 +0000",
+      "slocs": 156,
+      "chars": 5290,
+      "isIndex": false,
+      "flags": [
+        "live",
+        "dev"
+      ],
+      "dest": "guides/integrals/antiderivatives/sec-3",
+      "title": "Integrating the Secant Cubed",
+      "head": "Integrating the Secant Cubed",
+      "capt": "An unlikely duplication",
+      "desc": "An unlikely duplication",
+      "index": [
+        "guides",
+        "integrals",
+        "antiderivatives"
+      ],
+      "shard": [
+        "guides",
+        "integrals",
+        "antiderivatives"
       ],
       "date": null,
       "date_display": null
