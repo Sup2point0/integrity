@@ -50,10 +50,10 @@ Watch out for product rule!
 ### Reshape
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\left(2x^{\left(x^{2}+0.5\right)}\right)^{2}\left(\ln x+0.5\right)\ dx
-  \\ =&\ \int_{\ }^{\ }4\left(x^{\left(2x^{2}+1\right)}\right)\left(\ln x+0.5\right)\ dx
-  \\ =&\ \int_{\ }^{\ }4x\left(x^{\left(2x^{2}\right)}\right)\left(\ln x+0.5\right)\ dx
-  \\ =&\ \int_{\ }^{\ }\left(e^{\left(\ln x\right)\left(2x^{2}\right)}\right)\left(4x\ln x+2x\right)\ dx
+  &\ \int \left(2x^{\left(x^{2}+0.5\right)}\right)^{2}\left(\ln x+0.5\right)\ dx
+  \\ =&\ \int 4\left(x^{\left(2x^{2}+1\right)}\right)\left(\ln x+0.5\right)\ dx
+  \\ =&\ \int 4x\left(x^{\left(2x^{2}\right)}\right)\left(\ln x+0.5\right)\ dx
+  \\ =&\ \int \left(e^{\left(\ln x\right)\left(2x^{2}\right)}\right)\left(4x\ln x+2x\right)\ dx
 \end{align*}
 ```
 
@@ -68,7 +68,7 @@ Watch out for product rule!
 ### Solve
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }e^{t}\ dt
+  &= \int e^{t}\ dt
   \\ &= e^t
   \\ &= e^{\left(\ln x\right)\left(2x^{2}\right)}
   \\ &= x^{\left(2x^{2}\right)}-c
