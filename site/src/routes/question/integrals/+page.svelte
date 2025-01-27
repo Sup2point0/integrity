@@ -71,6 +71,24 @@ let question: Question | null = $derived(page_data.question);
   </Section>
 {/if}
 
+{#if question?.alternates}
+  <Section title="Alternatives">
+    {#if Array.isArray(question.alternates)}
+      {#each question.alternates as source}
+        <RenderBlock {source} />
+      {/each}
+    
+    {:else}
+      {#each Object.entries(question.alternates) as [step, source]}
+        <Section ctx="inner" closed={true} title={step.toUpperCase()}>
+          <RenderBlock {source} />
+        </Section>
+      {/each}
+    
+    {/if}
+  </Section>
+{/if}
+
 
 <style lang="scss">
 

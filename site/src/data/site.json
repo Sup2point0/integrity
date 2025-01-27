@@ -113,9 +113,9 @@
     },
     "guides/integrals/antiderivatives/sec-3.md": {
       "path": "guides/integrals/antiderivatives/sec-3.md",
-      "last_deploy": "2025-01-27 07:57:36 +0000",
+      "last_deploy": "2025-01-27 08:05:10 +0000",
       "slocs": 156,
-      "chars": 5290,
+      "chars": 5292,
       "isIndex": false,
       "flags": [
         "live",

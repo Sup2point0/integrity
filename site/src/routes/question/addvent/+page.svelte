@@ -55,7 +55,7 @@ let question: Question | null = $derived(page_data.question);
     
     {:else}
       {#each Object.entries(question.solution) as [step, source]}
-        <Section ctx="inner" closed={false} title={step}>
+        <Section ctx="inner" closed={false} title={step.toUpperCase()}>
           <RenderBlock {source} />
         </Section>
       {/each}
