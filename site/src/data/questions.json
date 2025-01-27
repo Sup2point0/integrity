@@ -3859,7 +3859,7 @@
         "_": [
           {
             "kind": "text",
-            "content": "Thanks to my friend [iTechnical](https://github.com/itechnicals) for finding this (probably simpler) solution!"
+            "content": "Thanks to my friend <a target=\"_blank\" href=\"https://github.com/itechnicals\">iTechnical</a> for finding this (probably simpler) solution!"
           },
           {
             "kind": "latex",
@@ -3888,6 +3888,10 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int v^{34}\\ dv  \\\\ &= \\frac{1}{35}v^{35}  \\\\ &= \\frac{1}{35}\\left(\\frac{1}{t}-1\\right)^{35}  \\\\ &= \\frac{1}{35}\\left(\\frac{1-t}{t}\\right)^{35}  \\\\ &= \\frac{1}{35}\\left(\\frac{x}{1-x}\\right)^{35}-c\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "<style lang=\"scss\"><br><br>a {  @include underline-link;}<br><br></style>"
           }
         ]
       }

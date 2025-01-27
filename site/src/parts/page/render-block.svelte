@@ -64,8 +64,14 @@ let { source }: Props = $props();
 
 <style lang="scss">
 
-:global(.content strong) {
-  font-weight: 400;
+.content {
+  :global(strong) {
+    font-weight: 400;
+  }
+
+  :global(a) {
+    @include underline-link;
+  }
 }
 
 </style>

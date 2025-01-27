@@ -63,11 +63,23 @@ let question: Question | null = $derived(page_data.question);
 
 {#if question?.solution}
   <Section title="Solution">
-    {#each Object.entries(question.solution) as [step, source]}
-      <Section ctx="inner" closed={false} title={step.toUpperCase()}>
+    {#if Array.isArray(question.solution)}
+      {#each question.solution as source}
         <RenderBlock {source} />
-      </Section>
-    {/each}
+      {/each}
+
+    {:else}
+      {#each Object.entries(question.solution) as [step, source]}
+        {#if step === "_"}
+          <RenderBlock {source} />
+        {:else}
+          <Section ctx="inner" closed={false} title={step.toUpperCase()}>
+            <RenderBlock {source} />
+          </Section>
+        {/if}
+      {/each}
+
+    {/if}
   </Section>
 {/if}
 
@@ -80,9 +92,13 @@ let question: Question | null = $derived(page_data.question);
     
     {:else}
       {#each Object.entries(question.alternates) as [step, source]}
-        <Section ctx="inner" closed={true} title={step.toUpperCase()}>
+        {#if step === "_"}
           <RenderBlock {source} />
-        </Section>
+        {:else}
+          <Section ctx="inner" closed={true} title={step.toUpperCase()}>
+            <RenderBlock {source} />
+          </Section>
+        {/if}
       {/each}
     
     {/if}

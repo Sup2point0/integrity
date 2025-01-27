@@ -85,7 +85,7 @@ What if you try make the exponents in the numerator and denominator the same?
 ## Alternates
 
 ### _
-Thanks to my friend [iTechnical](https://github.com/itechnicals) for finding this (probably simpler) solution!
+Thanks to my friend <a target="_blank" href="https://github.com/itechnicals">iTechnical</a> for finding this (probably simpler) solution!
 
 ```math
 \int \frac{x^{34}}{\left(1-x\right)^{36}}\ dx
@@ -127,4 +127,3 @@ Thanks to my friend [iTechnical](https://github.com/itechnicals) for finding thi
   \\ &= \frac{1}{35}\left(\frac{x}{1-x}\right)^{35}-c
 \end{align*}
 ```
-
