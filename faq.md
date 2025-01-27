@@ -1,4 +1,10 @@
 # FAQ
+<!-- #SQUARK live!
+| dest = info/faq
+| capt = Fervently Anticipated Questions
+| desc = Frequently asked questions about Integrity
+| index = info
+-->
 
 Yes, I’m painfully aware the site’s broken on most versions of Safari. I’m still trying to figure out what change broke it TvT
 

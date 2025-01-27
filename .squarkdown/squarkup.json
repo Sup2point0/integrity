@@ -5,6 +5,7 @@
   "site": "site/",
 
   "sources": [
+    "faq.md",
     "docs/",
     "guides/"
   ],
@@ -14,6 +15,7 @@
   "if-no-dir": ["warn", "create"],
   "on-error": "kill",
 
+  "file-name": "~content",
   "bases": "src/parts/base/",
   "assets": "assets/",
   "site-assets": "assets/site/",
