@@ -75,25 +75,50 @@ import { base } from "$app/paths";
     <h2> Guides </h2>
     <div class="links">
       <Link text="S-I+G-N Errors" intern="guides/sign" />
-      <Link text="Why Draw Graphs?" intern="guides/graph-drawing" disabled={true} />
     </div>
   </section>
 
   <section>
-    <h2> Integrals </h2>
+    <h2> Integration </h2>
     <div class="links">
-      <Link text="Why Integrate?" intern="guides/integration/why" />
-      <Link text="How Do We Integrate?" intern="guides/integration/how" />
-      <Link text="Why Is Integration Difficult?" intern="guides/integration/why-hard" />
-      <Link text="A Neat Little Integration Trick" intern="guides/integration/neat-trick" />
-      <Link text="Epic Errors" intern="guides/integration/epic-errors" />
+      <Link text="Why Integrate?" intern="guides/integrals/why" />
+      <Link text="Why Is Integration Difficult?" intern="guides/integrals/why-hard" />
+      <Link text="How Do We Integrate?" intern="guides/integrals/how" />
+      <Link text="What Do I Do?" intern="guides/integrals/what" />
+      <Link text="Standard Arsenal" intern="guides/integrals/everything-anything" />
+      <Link text="A Neat Little Integration Trick" intern="guides/integrals/neat-trick" />
+      <Link text="Epic Errors" intern="guides/integrals/epic-errors" />
+    </div>
+  </section>
+
+  <section>
+    <h2> Antiderivatives </h2>
+    <div class="links">
+      <Link text="Integrating the Logarithm" intern="guides/integrals/antiderivatives/ln" />
+      <Link text="Integrating the Secant Cubed" intern="guides/integrals/antiderivatives/sec-3" />
+    </div>
+  </section>
+
+  <section>
+    <h2> Methods </h2>
+    <div class="links">
+      <Link text="Substitution" intern="guides/integrals/methods/sub" />
+      <Link text="Power Rule" intern="guides/integrals/methods/power-rule" />
+      <Link text="Parts" intern="guides/integrals/methods/parts" />
+    </div>
+  </section>
+
+  <section>
+    <h2> Graph Drawing </h2>
+    <div class="links">
+      <Link text="Why Draw Graphs?" intern="guides/graph-drawing" disabled={true} />
     </div>
   </section>
 
   <section>
     <h2> Completing the Square </h2>
     <div class="links">
-      <Link text="Why Complete the Square?" intern="guides/complete-square/why" disabled={true} />
+      <Link text="Why Complete the Square?" intern="guides/complete-square/why" />
     </div>
   </section>
 
@@ -116,13 +141,11 @@ import { base } from "$app/paths";
 <style lang="scss">
 
 .content {
-  margin: 1rem;
-  display: flex;
-  flex-direction: row;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, max(16rem, 30%));
   justify-content: center;
-  flex-wrap: wrap;
-  column-gap: 1rem;
-  row-gap: 0;
+  row-gap: 1rem;
 
   @media (max-width: 40rem) {
     justify-content: start;
@@ -144,8 +167,7 @@ section {
 
 
 h2 {
-  margin: 1em 0;
-  padding: 0 0.1em 0.25em;
+  padding: 0.5em 0.2em;
   @include font-serif;
   font-weight: 400;
   font-size: 200%;
