@@ -113,7 +113,7 @@ article {
     padding: 0.5em 1em;
     @include font-code;
     font-size: 100%;
-    background-color: $col-hover;
+    background: $col-hover;
     border-radius: 0.75em;
   }
 }

@@ -66,17 +66,16 @@ footer {
     height: 100%;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: start;
-    flex-wrap: wrap;
     gap: 2rem;
   }
 }
 
 .quicklinks {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   gap: 0.25em;
 }
 
