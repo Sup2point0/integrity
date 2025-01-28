@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-01-27",
-    "file_count": 10,
-    "page_count": 9
+    "exported": "2025-01-28",
+    "file_count": 11,
+    "page_count": 10
   },
   "index": {
     "guides": {
@@ -11,6 +11,7 @@
         "guides/complete-square/why.md",
         "guides/integrals/antiderivatives/sec-3.md",
         "guides/integrals/epic-errors.md",
+        "guides/integrals/everything-anything.md",
         "guides/integrals/how.md",
         "guides/integrals/neat-trick.md",
         "guides/integrals/why-hard.md",
@@ -28,6 +29,7 @@
       "pages": [
         "guides/integrals/antiderivatives/sec-3.md",
         "guides/integrals/epic-errors.md",
+        "guides/integrals/everything-anything.md",
         "guides/integrals/how.md",
         "guides/integrals/neat-trick.md",
         "guides/integrals/why-hard.md",
@@ -46,6 +48,7 @@
       "guides/complete-square/why.md",
       "guides/integrals/antiderivatives/sec-3.md",
       "guides/integrals/epic-errors.md",
+      "guides/integrals/everything-anything.md",
       "guides/integrals/how.md",
       "guides/integrals/neat-trick.md",
       "guides/integrals/why-hard.md",
@@ -57,6 +60,7 @@
     "integrals": [
       "guides/integrals/antiderivatives/sec-3.md",
       "guides/integrals/epic-errors.md",
+      "guides/integrals/everything-anything.md",
       "guides/integrals/how.md",
       "guides/integrals/neat-trick.md",
       "guides/integrals/why-hard.md",
@@ -164,6 +168,33 @@
       ],
       "date": "2025-01-21",
       "date_display": "2025 January 21"
+    },
+    "guides/integrals/everything-anything.md": {
+      "path": "guides/integrals/everything-anything.md",
+      "last_deploy": "2025-01-28 07:52:20 +0000",
+      "slocs": 223,
+      "chars": 5498,
+      "isIndex": false,
+      "flags": [
+        "live",
+        "feat",
+        "dev"
+      ],
+      "dest": "guides/integrals/everything-anything",
+      "title": "Everything & Anything",
+      "head": "Everything & Anything",
+      "capt": "The Prime Integrator’s Standard Arsenal",
+      "desc": "The Prime Integrator’s Standard Arsenal",
+      "index": [
+        "guides",
+        "integrals"
+      ],
+      "shard": [
+        "guides",
+        "integrals"
+      ],
+      "date": "2025-01-28",
+      "date_display": "2025 January 28"
     },
     "guides/integrals/how.md": {
       "path": "guides/integrals/how.md",
