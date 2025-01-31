@@ -3,8 +3,8 @@
   "version": "1.0",
   "private": true,
   "scripts": {
-    "dev": "vite dev",
-      "devx": "npm run prep && npm run dev",
+    "dev": "vite",
+      "devx": "npm run prep && vite --open",
     "prep": "npm run squark && npm run export",
       "prepx": "npm run squarkx && npm run export",
     "squark": "cd ../.stranger-quarkdown && rake squark[fonts,scss] && cd ../site",
