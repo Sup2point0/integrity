@@ -12,7 +12,8 @@ import Katex from "#parts/katex.svelte";
 import Checkbox from "#parts/ui/checkbox.svelte";
 import FlagIcon from "#parts/svg/flag.svelte";
 
-import { fade } from "svelte/transition";
+import { fade, slide } from "svelte/transition";
+import { expoOut } from "svelte/easing";
 import { base } from "$app/paths";
 
 
@@ -39,12 +40,18 @@ let { question, latex, style = "block" }: Props = $props();
   {/if}
 
   <div class="info">
-    <div class="row">
+    <div class="top-row">
       <div class="text">
-        {#if question.title} <h4> {question.title} </h4> {/if}
+        {#if search.show.shard}
+          <p class="shard" transition:slide={{ duration: 500 }}>
+            {question.shard}
+          </p>
+        {/if}
+
+        {#if question.title} <h4 class="name"> {question.title} </h4> {/if}
         
         {#if search.show.dates && question.date}
-          <p transition:fade={{ duration: 250 }}>
+          <p class="date" transition:slide={{ duration: 500 }}>
             {question.date_display}
           </p>
         {/if}
@@ -69,25 +76,23 @@ let { question, latex, style = "block" }: Props = $props();
       </div>
     </div>
 
-    {#if search.show.tags && question.tags && question.tags.length > 0}
-      <div class="tags"
-        transition:fade={{ duration: 250 }}
-      >
-        {#each question.tags as tag}
-          <Tag {tag} />
-        {/each}
-      </div>
-    {/if}
+    <div class="lower-row">
+      {#if search.show.tags && question.tags && question.tags.length > 0}
+        <span class="tags" transition:fade={{ duration: 250 }}>
+          {#each question.tags as tag}
+            <Tag {tag} margin={"0.25em"} />
+          {/each}
+        </span>
+      {/if}
 
-    {#if search.show.methods && question.methods && question.methods.length > 0}
-      <div class="tags"
-        transition:fade={{ duration: 250 }}
-      >
-        {#each question.methods as tag}
-          <Tag {tag} kind="deut" />
-        {/each}
-      </div>
-    {/if}
+      {#if search.show.methods && question.methods && question.methods.length > 0}
+        <span class="tags" transition:fade={{ duration: 250 }}>
+          {#each question.methods as tag}
+            <Tag {tag} kind="deut" margin={"0.25em"} />
+          {/each}
+        </span>
+      {/if}
+    </div>
   </div>
 </a>
 
@@ -161,7 +166,7 @@ a.question-card {
   }
 }
 
-.row {
+.top-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -169,26 +174,33 @@ a.question-card {
 
 .text {
   h4 {
+    display: inline-block;
     margin-bottom: 0.2em;
     font-size: 125%;
     font-weight: 450;
   }
 
-  p {
+  p.date {
     color: $col-text-deut;
     font-size: 100%;
     font-weight: 250;
   }
 }
 
-.tags {
-  margin-top: 1em;
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  flex-wrap: wrap;
-  column-gap: 0.25em;
-  row-gap: 0.2em;
+.lower-row {
+  margin-top: 1rem;
+}
+
+p.shard {
+  width: max-content;
+  padding: 0.25em 0.4em;
+  margin: 0 0 1em;
+  white-space: nowrap;
+  @include font-code;
+  // color: $col-deut;
+  font-size: 80%;
+  background: $col-hover;
+  border-radius: 0.5em;
 }
 
 </style>

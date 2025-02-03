@@ -25,6 +25,12 @@ let { page } = $props();
       This piece contains opinionated content, please do not feel obliged to agree.
     </Banner>
   {/if}
+
+  {#if page.flags?.includes("c")}
+    <Banner title="Constant">
+      TODO
+    </Banner>
+  {/if}
 </section>
 
 

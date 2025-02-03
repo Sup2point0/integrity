@@ -20,7 +20,7 @@ const data = Site.pages[page];
 </script>
 
 
-<a class="card"
+<a class="card" class:invalid={!data}
   href="{base}/{data?.dest}"
 >
   <div class="info">
@@ -60,6 +60,10 @@ a.card {
     $t: 0.16,
   );
   @include focus-outline;
+
+  &.invalid {
+    opacity: 50%;
+  }
 }
 
 .info {

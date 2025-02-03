@@ -8,9 +8,10 @@ import { base } from "$app/paths";
 interface Props {
   tag: string;
   kind?: "prot" | "deut";
+  margin?: string;
 }
 
-let { tag, kind = "prot" }: Props = $props();
+let { tag, kind = "prot", margin }: Props = $props();
 
 </script>
 
@@ -19,6 +20,7 @@ let { tag, kind = "prot" }: Props = $props();
   onclick={() => {
     window.location.href = `${base}/questions/all?tag=${tag}`;
   }}
+  style={margin ? `margin-right: ${margin}; margin-bottom: ${margin}` : ""}
 >
   {tag.toUpperCase()}
 </button>

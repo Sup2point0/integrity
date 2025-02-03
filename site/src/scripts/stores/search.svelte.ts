@@ -37,6 +37,7 @@ export class SearchData
 
   show: States = $state({
     question: true,
+    shard: false,
     dates: true,
     tags: true,
     methods: false,

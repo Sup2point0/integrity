@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-01-31",
-    "file_count": 13,
-    "page_count": 12
+    "exported": "2025-02-03",
+    "file_count": 14,
+    "page_count": 13
   },
   "index": {
     "guides": {
@@ -10,6 +10,7 @@
       "pages": [
         "guides/complete-square/why.md",
         "guides/integrals/antiderivatives/ln.md",
+        "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md",
         "guides/integrals/epic-errors.md",
         "guides/integrals/everything-anything.md",
@@ -29,6 +30,7 @@
       "route": null,
       "pages": [
         "guides/integrals/antiderivatives/ln.md",
+        "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md",
         "guides/integrals/epic-errors.md",
         "guides/integrals/everything-anything.md",
@@ -42,6 +44,7 @@
       "route": null,
       "pages": [
         "guides/integrals/antiderivatives/ln.md",
+        "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md"
       ]
     }
@@ -50,6 +53,7 @@
     "guides": [
       "guides/complete-square/why.md",
       "guides/integrals/antiderivatives/ln.md",
+      "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md",
       "guides/integrals/epic-errors.md",
       "guides/integrals/everything-anything.md",
@@ -63,6 +67,7 @@
     ],
     "integrals": [
       "guides/integrals/antiderivatives/ln.md",
+      "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md",
       "guides/integrals/epic-errors.md",
       "guides/integrals/everything-anything.md",
@@ -73,6 +78,7 @@
     ],
     "antiderivatives": [
       "guides/integrals/antiderivatives/ln.md",
+      "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md"
     ]
   },
@@ -142,12 +148,13 @@
     },
     "guides/integrals/antiderivatives/ln.md": {
       "path": "guides/integrals/antiderivatives/ln.md",
-      "last_deploy": "2025-01-31 15:10:00 +0000",
-      "slocs": 61,
-      "chars": 2456,
+      "last_deploy": "2025-01-31 15:17:00 +0000",
+      "slocs": 75,
+      "chars": 2665,
       "isIndex": false,
       "flags": [
-        "live"
+        "live",
+        "dev"
       ],
       "dest": "guides/integrals/antiderivatives/ln",
       "title": "Integrating the Logarithm",
@@ -166,6 +173,34 @@
       ],
       "date": "2025-01-30",
       "date_display": "2025 January 30"
+    },
+    "guides/integrals/antiderivatives/power-rule.md": {
+      "path": "guides/integrals/antiderivatives/power-rule.md",
+      "last_deploy": "2025-02-03 11:57:04 +0000",
+      "slocs": 105,
+      "chars": 3057,
+      "isIndex": false,
+      "flags": [
+        "live",
+        "c"
+      ],
+      "dest": "guides/integrals/antiderivatives/power-rule",
+      "title": "Power Rule",
+      "head": "Power Rule",
+      "capt": "Introduction to integration",
+      "desc": "Introduction to integration",
+      "index": [
+        "guides",
+        "integrals",
+        "antiderivatives"
+      ],
+      "shard": [
+        "guides",
+        "integrals",
+        "antiderivatives"
+      ],
+      "date": "2025-02-03",
+      "date_display": "2025 February 3"
     },
     "guides/integrals/antiderivatives/sec-3.md": {
       "path": "guides/integrals/antiderivatives/sec-3.md",

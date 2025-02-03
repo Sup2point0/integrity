@@ -46,9 +46,14 @@ import { base } from "$app/paths";
     <NavLink text="Guides" intern="guides">
       <Link text="S-I+G-N Errors" intern="guides/sign" />
       <Link text="Integration" intern="guides/integrals" />
-      <!-- <Link text="Graph Drawing" intern="graph-drawing" /> -->
-      <Link text="Completing the Square" intern="guides/complete-square" disabled={true} />
+      <Link text="Graph Drawing" intern="graph-drawing" disabled={true} />
+      <Link text="Completing the Square" intern="guides/complete-square" />
       <Link text="Desmos" intern="guides/desmos" disabled={true} />
+    </NavLink>
+
+    <NavLink text="Challenges" intern="challenges" collapse={true}>
+      <Link text="MIT Integration Bee" intern="challenges/mit-integration-bee" />
+      <Link text="0–100 Year Challenge" intern="challenges/year" />
     </NavLink>
 
     <NavLink text="Info" intern="info" collapse={true}>
