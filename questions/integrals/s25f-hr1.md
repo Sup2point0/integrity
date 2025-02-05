@@ -32,15 +32,18 @@ flags:
 ## Hints
 
 ### 1
+What does $\sqrt{x^2}$ give?
 
 ### 2
+What does $|x| \operatorname{sign}(x)$ give?
 
 ### 3
+What does $\sin^{-1}{t}$ differentiate to give?
 
 
 ## Answer
 ```math
-
+\sin^{-1}\left(\sin^{-1}\left(x^{2}-1\right)\right)+\sqrt{1-\left(\sin^{-1}\left(x^{2}-1\right)\right)^{2}}-c
 ```
 
 
