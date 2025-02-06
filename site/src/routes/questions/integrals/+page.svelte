@@ -42,7 +42,7 @@ onMount(() => {
 <Search {tags} />
 
 <div class="content {search.view}">
-  {#each filtered as question}
+  {#each filtered as question (question.shard)}
     <QuestionCard {question}
       latex={search.show.question ? question.question.content : undefined}
       style={search.view === "grid" ? "block" : "row"}
@@ -53,7 +53,7 @@ onMount(() => {
 <aside>
   {#if filtered.length > 0}
     <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {count} </p>
-
+    <!-- TEMP -->
     <p> <br> (100+ integrals from school Integration Bee will be added after Pi Day!) </p>
   {:else}
     <p> Oops, no questions found! </p>
