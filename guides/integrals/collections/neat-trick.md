@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = guides/integrals/neat-trick
 | capt = Abusing the +c
-| index = guides / integrals
+| index = guides / integrals / collections
 | date = 2025 January 15
 -->
 

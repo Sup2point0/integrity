@@ -1,8 +1,8 @@
 # Integrating Into Integration
 <!-- #SQUARK live! opin! devx!
 | dest = guides/integrals/int-int
-| capt = Glossary of the Integration Homies
-| index = guides / integrals / collections
+| capt = Glossary of the integration homies
+| index = guides / integrals
 -->
 
 Don’t we love our integration slang.
