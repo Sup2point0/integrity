@@ -17,6 +17,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
 <Breadcrumbs levels={[
   { text: "Guides", intern: "guides" },
   { text: "Integration", intern: "guides/integrals" },
+  { text: "Collections", intern: "guides/integrals/collections" },
   { text: "Neat Integration Trick" },
 ]} />
 
@@ -30,6 +31,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
     
     <ArticleArray paths={[
       "guides/integrals/how.md",
+      "guides/integrals/once.md",
     ]} />
   </aside>
 </article>
