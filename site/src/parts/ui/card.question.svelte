@@ -13,7 +13,6 @@ import Checkbox from "#parts/ui/checkbox.svelte";
 import FlagIcon from "#parts/svg/flag.svelte";
 
 import { fade, slide } from "svelte/transition";
-import { expoOut } from "svelte/easing";
 import { base } from "$app/paths";
 
 

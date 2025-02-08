@@ -17,19 +17,19 @@ import ArticleArray from "#parts/page/article-array.svelte";
 <Breadcrumbs levels={[
   { text: "Guides", intern: "guides" },
   { text: "Integration", intern: "guides/integrals" },
-  { text: "Neat Integration Trick" },
+  { text: page.title },
 ]} />
 
-<Header title="A Neat Little Integration Trick" capt={page.capt} />
+<Header page={page} />
 
 <article>
   <Content />
-  
+
   <aside>
     <h2> Continue Reading </h2>
     
     <ArticleArray paths={[
-      "guides/integrals/how.md",
+      "guides/integrals/epic-errors.md",
     ]} />
   </aside>
 </article>

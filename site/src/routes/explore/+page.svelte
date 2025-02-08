@@ -29,7 +29,7 @@ import { base } from "$app/paths";
 
 <div class="content">
   <section>
-    <h2> Questions </h2>
+    <h3> Questions </h3>
     <div class="links">
       <Link text="All" intern="questions/all" />
       <Link text="Integrals" intern="questions/integrals" />
@@ -45,7 +45,7 @@ import { base } from "$app/paths";
   </section>
 
   <section>
-    <h2> Tools </h2>
+    <h3> Tools </h3>
     <div class="links">
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
@@ -53,15 +53,16 @@ import { base } from "$app/paths";
   </section>
 
   <section>
-    <h2> Docs </h2>
+    <h3> Docs </h3>
     <div class="links">
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
+      <Link text="Speedrun" intern="docs/speedrun" disabled={true} />
     </div>
   </section>
 
   <section>
-    <h2> Info </h2>
+    <h3> Info </h3>
     <div class="links">
       <Link text="About" intern="info/synopsis" />
       <Link text="FAQ" intern="info/faq" />
@@ -70,29 +71,32 @@ import { base } from "$app/paths";
       <Link text="License" intern="info/license" />
     </div>
   </section>
+</div>
 
+<h2> Guides </h2>
+<div class="content">
   <section>
-    <h2> Guides </h2>
+    <h3> Guides </h3>
     <div class="links">
       <Link text="S-I+G-N Errors" intern="guides/sign" />
     </div>
   </section>
 
   <section>
-    <h2> Integration </h2>
+    <h3> Integration </h3>
     <div class="links">
       <Link text="Why Integrate?" intern="guides/integrals/why" />
       <Link text="Why Is Integration Difficult?" intern="guides/integrals/why-hard" />
       <Link text="How Do We Integrate?" intern="guides/integrals/how" />
       <Link text="What Do I Do?" intern="guides/integrals/what" />
       <Link text="Standard Arsenal" intern="guides/integrals/everything-anything" />
-      <Link text="A Neat Little Integration Trick" intern="guides/integrals/neat-trick" />
+      <Link text="Integrals You Can Only Experience Once" intern="guides/integrals/once" />
       <Link text="Epic Errors" intern="guides/integrals/epic-errors" />
     </div>
   </section>
 
   <section>
-    <h2> Antiderivatives </h2>
+    <h3> Antiderivatives </h3>
     <div class="links">
       <Link text="Integrating the Logarithm" intern="guides/integrals/antiderivatives/ln" />
       <Link text="Integrating the Secant Cubed" intern="guides/integrals/antiderivatives/sec-3" />
@@ -100,7 +104,7 @@ import { base } from "$app/paths";
   </section>
 
   <section>
-    <h2> Methods </h2>
+    <h3> Methods </h3>
     <div class="links">
       <Link text="Substitution" intern="guides/integrals/methods/sub" />
       <Link text="Power Rule" intern="guides/integrals/methods/power-rule" />
@@ -109,30 +113,38 @@ import { base } from "$app/paths";
   </section>
 
   <section>
-    <h2> Graph Drawing </h2>
+    <h3> Strategies </h3>
+    <div class="links">
+      <Link text="" intern="guides/integrals/methods/sub" />
+    </div>
+  </section>
+
+  <section>
+    <h3> Collections </h3>
+    <div class="links">
+      <Link text="A Neat Little Integration Trick" intern="guides/integrals/neat-trick" />
+      <Link text="What’s This?" intern="integrity/integrity" disabled={true} />
+    </div>
+  </section>
+
+  <section>
+    <h3> Graph Drawing </h3>
     <div class="links">
       <Link text="Why Draw Graphs?" intern="guides/graph-drawing" disabled={true} />
     </div>
   </section>
 
   <section>
-    <h2> Completing the Square </h2>
+    <h3> Completing the Square </h3>
     <div class="links">
       <Link text="Why Complete the Square?" intern="guides/complete-square/why" />
     </div>
   </section>
 
   <section>
-    <h2> Desmos </h2>
+    <h3> Desmos </h3>
     <div class="links">
       <Link text="Why Desmos?" intern="guides/desmos/why" disabled={true} />
-    </div>
-  </section>
-
-  <section>
-    <h2> Miscellaneous </h2>
-    <div class="links">
-      <Link text="What’s This?" intern="integrity/integrity" disabled={true} />
     </div>
   </section>
 </div>
@@ -167,10 +179,20 @@ section {
 
 
 h2 {
-  padding: 0.5em 0.2em;
+  margin: 1em 0 0.5em;
+  padding: 0 0 1em;
   @include font-serif;
   font-weight: 400;
   font-size: 200%;
+  text-align: center;
+  border-bottom: 1px solid $col-line;
+}
+
+h3 {
+  padding: 0.5em 0.2em;
+  @include font-serif;
+  font-weight: 400;
+  font-size: 150%;
 }
 
 </style>

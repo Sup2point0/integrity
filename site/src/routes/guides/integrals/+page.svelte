@@ -22,6 +22,11 @@ import Header from "#parts/core/header.svelte";
 <Header title="Integration" />
 
 
+<article>
+  <p> Welcome, adventurer, and congratulations on taking your first step along the path of integration. </p>
+  <p> Following this trail mandates you be familiar with differentiation. </p>
+</article>
+
 <div class="browse">
   <ArticleArray paths={Site.guides["integrals"].map(page => page.path)} />
 </div>
@@ -30,7 +35,7 @@ import Header from "#parts/core/header.svelte";
 <style lang="scss">
 
 .browse {
-  margin: 1rem;
+  margin: 5rem 1rem 1rem;
 }
 
 </style>

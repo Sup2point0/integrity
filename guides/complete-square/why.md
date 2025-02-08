@@ -1,5 +1,5 @@
 # Why Complete the Square?
-<!-- #SQUARK live!
+<!-- #SQUARK live! dev!
 | dest = guides/complete-square/why
 | index = guides / complete-square
 -->

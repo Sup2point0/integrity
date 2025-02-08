@@ -1,5 +1,5 @@
 # Power Rule
-<!-- #SQUARK live! c!
+<!-- #SQUARK live! c! simp!
 | dest = guides/integrals/antiderivatives/power-rule
 | capt = Introduction to integration
 | index = guides / integrals / antiderivatives
