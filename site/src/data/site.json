@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-02-05",
-    "file_count": 14,
-    "page_count": 13
+    "exported": "2025-02-08",
+    "file_count": 16,
+    "page_count": 15
   },
   "index": {
     "guides": {
@@ -12,10 +12,12 @@
         "guides/integrals/antiderivatives/ln.md",
         "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md",
+        "guides/integrals/collections/neat-trick.md",
         "guides/integrals/epic-errors.md",
         "guides/integrals/everything-anything.md",
         "guides/integrals/how.md",
-        "guides/integrals/neat-trick.md",
+        "guides/integrals/int-int.md",
+        "guides/integrals/once.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
@@ -32,10 +34,12 @@
         "guides/integrals/antiderivatives/ln.md",
         "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md",
+        "guides/integrals/collections/neat-trick.md",
         "guides/integrals/epic-errors.md",
         "guides/integrals/everything-anything.md",
         "guides/integrals/how.md",
-        "guides/integrals/neat-trick.md",
+        "guides/integrals/int-int.md",
+        "guides/integrals/once.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
@@ -47,6 +51,12 @@
         "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md"
       ]
+    },
+    "collections": {
+      "route": null,
+      "pages": [
+        "guides/integrals/collections/neat-trick.md"
+      ]
     }
   },
   "shard": {
@@ -55,10 +65,12 @@
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md",
+      "guides/integrals/collections/neat-trick.md",
       "guides/integrals/epic-errors.md",
       "guides/integrals/everything-anything.md",
       "guides/integrals/how.md",
-      "guides/integrals/neat-trick.md",
+      "guides/integrals/int-int.md",
+      "guides/integrals/once.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ],
@@ -69,10 +81,12 @@
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md",
+      "guides/integrals/collections/neat-trick.md",
       "guides/integrals/epic-errors.md",
       "guides/integrals/everything-anything.md",
       "guides/integrals/how.md",
-      "guides/integrals/neat-trick.md",
+      "guides/integrals/int-int.md",
+      "guides/integrals/once.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ],
@@ -80,6 +94,9 @@
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md"
+    ],
+    "collections": [
+      "guides/integrals/collections/neat-trick.md"
     ]
   },
   "pages": {
@@ -104,12 +121,13 @@
     },
     "guides/complete-square/why.md": {
       "path": "guides/complete-square/why.md",
-      "last_deploy": "2024-12-22 15:00:14 +0000",
+      "last_deploy": "2025-02-08 09:08:10 +0000",
       "slocs": 122,
-      "chars": 5815,
+      "chars": 5820,
       "isIndex": false,
       "flags": [
-        "live"
+        "live",
+        "dev"
       ],
       "dest": "guides/complete-square/why",
       "title": "Why Complete the Square?",
@@ -176,13 +194,14 @@
     },
     "guides/integrals/antiderivatives/power-rule.md": {
       "path": "guides/integrals/antiderivatives/power-rule.md",
-      "last_deploy": "2025-02-03 11:57:04 +0000",
+      "last_deploy": "2025-02-08 09:08:10 +0000",
       "slocs": 105,
-      "chars": 3057,
+      "chars": 3063,
       "isIndex": false,
       "flags": [
         "live",
-        "c"
+        "c",
+        "simp"
       ],
       "dest": "guides/integrals/antiderivatives/power-rule",
       "title": "Power Rule",
@@ -230,6 +249,33 @@
       "date": null,
       "date_display": null
     },
+    "guides/integrals/collections/neat-trick.md": {
+      "path": "guides/integrals/collections/neat-trick.md",
+      "last_deploy": "2025-02-08 09:08:10 +0000",
+      "slocs": 91,
+      "chars": 3682,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/integrals/collections/neat-trick",
+      "title": "A Neat Little Integration Trick",
+      "head": "A Neat Little Integration Trick",
+      "capt": "Abusing the +c",
+      "desc": "Abusing the +c",
+      "index": [
+        "guides",
+        "integrals",
+        "collections"
+      ],
+      "shard": [
+        "guides",
+        "integrals",
+        "collections"
+      ],
+      "date": "2025-01-15",
+      "date_display": "2025 January 15"
+    },
     "guides/integrals/epic-errors.md": {
       "path": "guides/integrals/epic-errors.md",
       "last_deploy": "2025-01-22 21:10:15 +0000",
@@ -258,7 +304,7 @@
     },
     "guides/integrals/everything-anything.md": {
       "path": "guides/integrals/everything-anything.md",
-      "last_deploy": "2025-01-28 07:54:02 +0000",
+      "last_deploy": "2025-02-08 09:08:10 +0000",
       "slocs": 223,
       "chars": 5498,
       "isIndex": false,
@@ -270,8 +316,8 @@
       "dest": "guides/integrals/everything-anything",
       "title": "Everything & Anything",
       "head": "Everything & Anything",
-      "capt": "The Prime Integrator’s Standard Arsenal",
-      "desc": "The Prime Integrator’s Standard Arsenal",
+      "capt": "The prime pntegrator’s standard arsenal",
+      "desc": "The prime pntegrator’s standard arsenal",
       "index": [
         "guides",
         "integrals"
@@ -310,20 +356,22 @@
       "date": "2025-01-21",
       "date_display": "2025 January 21"
     },
-    "guides/integrals/neat-trick.md": {
-      "path": "guides/integrals/neat-trick.md",
-      "last_deploy": "2025-01-20 10:17:25 +0000",
-      "slocs": 91,
-      "chars": 3656,
+    "guides/integrals/int-int.md": {
+      "path": "guides/integrals/int-int.md",
+      "last_deploy": "2025-02-08 09:08:10 +0000",
+      "slocs": 75,
+      "chars": 2096,
       "isIndex": false,
       "flags": [
-        "live"
+        "live",
+        "opin",
+        "devx"
       ],
-      "dest": "guides/integrals/neat-trick",
-      "title": "A Neat Little Integration Trick",
-      "head": "A Neat Little Integration Trick",
-      "capt": "Abusing the +c",
-      "desc": "Abusing the +c",
+      "dest": "guides/integrals/int-int",
+      "title": "Integrating Into Integration",
+      "head": "Integrating Into Integration",
+      "capt": "Glossary of the integration homies",
+      "desc": "Glossary of the integration homies",
       "index": [
         "guides",
         "integrals"
@@ -332,8 +380,36 @@
         "guides",
         "integrals"
       ],
-      "date": "2025-01-15",
-      "date_display": "2025 January 15"
+      "date": null,
+      "date_display": null
+    },
+    "guides/integrals/once.md": {
+      "path": "guides/integrals/once.md",
+      "last_deploy": "2025-02-08 09:08:10 +0000",
+      "slocs": 44,
+      "chars": 1741,
+      "isIndex": false,
+      "flags": [
+        "live",
+        "opin",
+        "devx",
+        "dev"
+      ],
+      "dest": "guides/integrals/once",
+      "title": "Integrals You Can Only Experience Once",
+      "head": "Integrals You Can Only Experience Once",
+      "capt": "Landmarks on the expedition of integration",
+      "desc": "Landmarks on the expedition of integration",
+      "index": [
+        "guides",
+        "integrals"
+      ],
+      "shard": [
+        "guides",
+        "integrals"
+      ],
+      "date": null,
+      "date_display": null
     },
     "guides/integrals/why-hard.md": {
       "path": "guides/integrals/why-hard.md",

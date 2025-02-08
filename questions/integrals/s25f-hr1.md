@@ -1,6 +1,6 @@
 ---
 topic: integrals
-title: machine
+title: machina
 desc: 
 date: 
 tags:

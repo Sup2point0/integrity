@@ -32,7 +32,7 @@ Those 2 integrals look awfully similar...
 Do $x - 1$ and $x + 1$ look familiar to you?
 
 ### 3
-Starts with f and rhymes with <em>tractorise</em>
+Starts with “f” and rhymes with <em>tractorise</em>.
 
 
 ## Answer

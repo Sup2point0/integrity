@@ -1592,24 +1592,26 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int \\frac{\\ln\\left|\\sec x\\right|-\\ln\\left|\\csc x\\right|}{\\csc x\\cos^{3}x}\\ dx"
+          "content": "\\int \\frac{\\ln\\left(\\sec x\\right)-\\ln\\left(\\csc x\\right)}{\\csc x\\cos^{3}x}\\ dx"
         }
       ],
       "answer": [
         {
           "kind": "latex",
-          "content": ""
+          "content": "\\frac{1}{4}\\left(\\tan^{2}x\\right)\\left(2\\ln\\left(\\tan x\\right)-1\\right)-c"
         }
       ],
       "solution": {
-        "solve": [
+        "reshape": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\   \\\\ =&\\ \\end{align*}"
-          },
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\ln\\left(\\sec x\\right)-\\ln\\left(\\csc x\\right)}{\\csc x\\cos^{3}x}\\ dx  \\\\ =&\\ \\int \\frac{\\ln\\left(\\sec x\\right)-\\ln\\left(\\csc x\\right)}{\\left(\\csc x\\right)\\left(\\cos x\\right)^{3}}\\ dx  \\\\ =&\\ \\int \\frac{\\ln\\left(\\frac{1}{\\cos x}\\right)-\\ln\\left(\\frac{1}{\\sin x}\\right)}{\\left(\\cos x\\right)^{3}}\\cdot\\sin x\\ dx  \\\\ =&\\ \\int \\frac{-\\ln\\left(\\cos x\\right)+\\ln\\left(\\sin x\\right)}{\\left(\\cos x\\right)^{3}}\\cdot\\sin x\\ dx  \\\\ =&\\ \\int \\frac{\\ln\\left(\\sin x\\right)-\\ln\\left(\\cos x\\right)}{\\left(\\cos x\\right)^{3}}\\cdot\\sin x\\ dx  \\\\ =&\\ \\int \\ln\\left(\\frac{\\sin x}{\\cos x}\\right)\\cdot\\frac{1}{\\left(\\cos x\\right)^{3}}\\cdot\\sin x\\ dx  \\\\ =&\\ \\int \\ln\\left(\\tan x\\right)\\cdot\\frac{1}{\\cos^{2}x}\\cdot\\frac{\\sin x}{\\cos x}\\ dx  \\\\ =&\\ \\int \\ln\\left(\\tan x\\right)\\left(\\sec^{2}x\\tan x\\right)\\ dx  \\\\ =&\\ \\frac{1}{4}\\int 2\\ln\\left(\\tan x\\right)\\left(2\\sec^{2}x\\tan x\\right)\\ dx  \\\\ =&\\ \\frac{1}{4}\\int \\ln\\left(\\tan^{2}x\\right)\\left(2\\tan x\\sec^{2}x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+            "content": "\\begin{align*}  &= \\frac{1}{4}\\int \\ln t\\ dt  \\\\ &= \\frac{1}{4}t\\left(\\ln t-1\\right)  \\\\ &= \\frac{1}{4}\\left(\\tan^{2}x\\right)\\left(2\\ln\\left(\\tan x\\right)-1\\right)-c\\end{align*}"
           }
         ]
       }
@@ -4500,6 +4502,45 @@
           {
             "kind": "latex",
             "content": "= 0"
+          }
+        ]
+      }
+    },
+    "s25f-tr1": {
+      "topic": "integrals",
+      "title": "laughable",
+      "desc": null,
+      "date": "2025 February 1",
+      "tags": [
+        "sqrt"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25f-tr1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\left(10-\\sqrt{x}\\right)^{10}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{66}\\left(\\sqrt{x}-10\\right)^{11}\\left(11\\sqrt{x}+10\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  10-\\sqrt{x} &= t  \\\\ x &= \\left(10-t\\right)^{2}  \\\\ dx &= -2\\left(10-t\\right)\\ dt  \\\\ &= 2t-20\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(10-\\sqrt{x}\\right)^{10}\\ dx  \\\\ =&\\ \\int t^{10}\\cdot\\left(2t-20\\right)\\ dt  \\\\ =&\\ \\int 2t^{11}-20t^{10}\\ dt  \\\\ =&\\ \\frac{2}{12}t^{12}-\\frac{20}{11}t^{11}  \\\\ =&\\ \\frac{1}{66}t^{11}\\left(11t-120\\right)  \\\\ =&\\ =\\frac{1}{66}\\left(10-\\sqrt{x}\\right)^{11}\\left(11\\left(10-\\sqrt{x}\\right)-120\\right)  \\\\ =&\\ =\\frac{1}{66}\\left(10-\\sqrt{x}\\right)^{11}\\left(-11\\sqrt{x}-10\\right)  \\\\ =&\\ =\\frac{1}{66}\\left(10-\\sqrt{x}\\right)^{11}\\cdot-\\left(11\\sqrt{x}+10\\right)  \\\\ =&\\ \\frac{1}{66}\\left(\\sqrt{x}-10\\right)^{11}\\left(11\\sqrt{x}+10\\right)-c\\end{align*}"
           }
         ]
       }
