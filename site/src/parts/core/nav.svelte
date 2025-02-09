@@ -118,4 +118,10 @@ section {
   }
 }
 
+@media (max-width: 40rem) {
+  nav {
+    padding: 0 1rem;
+  }
+}
+
 </style>
