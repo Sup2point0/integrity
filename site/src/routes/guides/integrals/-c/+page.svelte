@@ -19,7 +19,7 @@ import Header from "#parts/core/header.svelte";
   { text: page.title },
 ]} />
 
-<Header page={page} />
+<Header {page} />
 
 <article>
   <Content />

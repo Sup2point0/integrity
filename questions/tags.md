@@ -9,7 +9,7 @@ Tags to indicate what sort of question you’re facing.
 | :---------- | :------ | :-------- |
 | conditions  |  | `definite` |
 | descriptors | `funny`<br>`horror`<br>`scare`<br>`dread` |
-| topics      | `algebra`<br>`combinatorics`<br>`complex`<br>`numbers`<br>`sequences` | `frac`<br>`poly`<br>`sqrt`<br>`trig`<br>`exp`<br>`ln`<br>`inverse trig`<br>`hyp trig` |
+| topics      | `algebra`<br>`combinatorics`<br>`complex`<br>`numbers`<br>`sequences`<br>`series` | `frac`<br>`poly`<br>`sqrt`<br>`trig`<br>`exp`<br>`ln`<br>`inverse trig`<br>`hyp trig` |
 | cameos      | `pi`<br>`e` |
 
 

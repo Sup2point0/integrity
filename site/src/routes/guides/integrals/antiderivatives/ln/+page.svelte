@@ -21,7 +21,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
   { text: page.title },
 ]} />
 
-<Header page={page} />
+<Header {page} />
 
 <article>
   <!-- <PreReading>
