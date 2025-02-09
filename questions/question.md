@@ -33,7 +33,7 @@ methods:
 
 ## Solution
 
-### Solve
+### Reshape
 ```math
 \begin{align*}
   &\ 
