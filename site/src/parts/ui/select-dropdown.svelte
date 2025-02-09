@@ -83,6 +83,7 @@ button.select {
   @include font-ui;
   font-size: 90%;
   background-color: light-dark(white, black);
+  border: 1px solid #dedede;  // fallback
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 1.5px 2px -0.5px $col-line;
@@ -113,6 +114,7 @@ ul.dropdown {
   opacity: 0;
 
   background-color: light-dark(white, black);
+  border: 1px solid #dedede;  // fallback
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 2px 3px -0.5px $col-line;
