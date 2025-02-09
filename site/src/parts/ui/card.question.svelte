@@ -117,6 +117,7 @@ a.question-card {
   }
 
   @include font-ui;
+  color: black;  // fallback
   color: $col-text;
   text-decoration: none;
   background-color: auto;

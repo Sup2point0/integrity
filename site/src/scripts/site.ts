@@ -12,8 +12,10 @@ interface SiteData {
   get_questions_of_topic: (topic: string) => Question[];
   get_list_of_all_questions: () => Question[];
   get_map_of_all_questions: () => Record<string, Question>;
+  get_featured_questions: () => Question[];
   get_all_tags: () => string[];
-  get_featured: () => Question[];
+  get_list_of_all_guides: () => object[];
+  get_featured_guides: () => object[];
 
   guides: {
     [topic: string]: object[];
@@ -41,6 +43,10 @@ const Site: SiteData = {
     );
   },
 
+  get_featured_questions: () => {
+    return Site.get_list_of_all_questions().filter(q => q.flags?.includes("feat"));
+  },
+
   get_all_tags: () => {
     return Array.from(
       new Set(
@@ -50,8 +56,12 @@ const Site: SiteData = {
     ).sort();
   },
 
-  get_featured: () => {
-    return Site.get_list_of_all_questions().filter(q => q.flags?.includes("feat"));
+  get_list_of_all_guides: () => {
+    return Object.values(Site.guides).flatMap(topic => Object.values(topic));
+  },
+
+  get_featured_guides: () => {
+    return Site.get_list_of_all_guides().filter(guide => guide.flags?.includes("feat"));
   },
 };
 
