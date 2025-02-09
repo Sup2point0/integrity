@@ -41,6 +41,7 @@ methods:
 \end{align*}
 ```
 
+### Substitute
 ```math
 \begin{align*}
   &= 
