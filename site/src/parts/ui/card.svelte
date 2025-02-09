@@ -60,6 +60,7 @@ a.card {
   color: $col-text;
   text-decoration: none;
   background-color: auto;
+  border: 1px solid #dedede;  // fallback
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 2px 2px -0.5px $col-line;
@@ -121,6 +122,7 @@ a.card {
     width: 80%;
     padding: 0 0 0.5em;
     margin: 0 0 0.5em;
+    border-bottom: 1px solid #dedede;  // fallback
     border-bottom: 1px solid $col-line;
   }
 }
