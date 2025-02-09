@@ -21,9 +21,7 @@ methods:
 
 
 ## Answer
-```math
-\pi/2
-```
+$\pi / 2$
 
 
 ## Solution
