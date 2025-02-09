@@ -25,6 +25,7 @@ let { title, children }: Props = $props();
 
 aside {
   padding: 0.25em 1.5em 0.4em;
+  border-left: 2px solid #3c8dbc;  // fallback
   border-left: 2px solid $col-prot;
   transition: box-shadow 0.12s ease-out;
 

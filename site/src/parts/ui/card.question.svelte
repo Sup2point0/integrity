@@ -108,11 +108,11 @@ a.question-card {
 
   &.block {
     max-width: max(20vw, 20rem);
-    flex-direction: column;
+    flex-flow: column;
   }
   &.row {
     width: 100%;
-    flex-direction: row-reverse;
+    flex-flow: row-reverse;
     justify-content: end;
   }
 
@@ -120,7 +120,7 @@ a.question-card {
   color: black;  // fallback
   color: $col-text;
   text-decoration: none;
-  background-color: auto;
+  background: auto;
   border: 1px solid #dedede;  // fallback
   border: 1px solid $col-line;
   border-radius: 0.5em;
@@ -139,7 +139,7 @@ a.question-card {
   padding: 1rem;
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -168,7 +168,7 @@ a.question-card {
 
 .top-row {
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
   justify-content: space-between;
 }
 

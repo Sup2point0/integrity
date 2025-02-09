@@ -31,7 +31,7 @@ let { text, value, toggle }: Props = $props();
   @include font-ui;
   font-size: 90%;
   color: $col-text;
-  background-color: light-dark(white, black);
+  background: light-dark(white, black);
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 1.5px 2px -0.5px $col-line;
@@ -43,8 +43,8 @@ let { text, value, toggle }: Props = $props();
 
   &.active {
     color: white;
-    background-color: #3c8dbc;  // fallback
-    background-color: $col-prot;
+    background: #3c8dbc;  // fallback
+    background: $col-prot;
     border: 1px solid $col-prot;
     box-shadow: none;
     

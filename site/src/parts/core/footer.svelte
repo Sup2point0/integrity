@@ -97,7 +97,7 @@ small {
 }
 .right {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: end;
   text-align: right;
 }
@@ -110,7 +110,7 @@ a.credits {
   width: max-content;
   padding: 1em;
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
   column-gap: 1rem;
   color: $col-text;
   text-align: right;

@@ -55,7 +55,7 @@ button {
   width: 2.5em;
   height: 2.5em;
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
   justify-content: center;
   align-items: center;
   color: var(--col-off, $col-clicky-click);

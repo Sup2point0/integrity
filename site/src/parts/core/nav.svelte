@@ -85,12 +85,13 @@ nav {
   top: 0;
   z-index: 20;
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: stretch;
   align-items: center;
-  flex-wrap: nowrap;
   gap: 0.5rem;
-  background-color: $col-nav;
+
+  background: rgb(white, 60%);  // fallback
+  background: $col-nav;
   border-bottom: 1px solid #dedede;  // fallback
   border-bottom: 1px solid $col-line;
   box-shadow: 0 2px 2px -1px #dedede;  // fallback
@@ -110,9 +111,8 @@ nav {
 
 section {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: center;
-  flex-wrap: nowrap;
 
   &.centre {
     flex: 1 1 auto;

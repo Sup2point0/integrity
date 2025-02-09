@@ -35,9 +35,8 @@ import Meta from "#parts/page/meta.svelte";
 .content {
   margin: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
   text-align: center;
 }

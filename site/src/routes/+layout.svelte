@@ -104,7 +104,7 @@ function handle_overlay()
 .layout {
   padding: 1rem 1rem 4rem;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
 }
 
@@ -123,11 +123,11 @@ aside.overlay {
   left: 0;
   z-index: 20;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: #3c8dbc;  // fallback
-  background-color: light-dark(
+  background: #3c8dbc;  // fallback
+  background: light-dark(
     $col-prot,
     color-mix(in oklch, $col-prot, black 25%)
   );
@@ -138,7 +138,7 @@ aside.overlay {
     flex-grow: 1;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
   }

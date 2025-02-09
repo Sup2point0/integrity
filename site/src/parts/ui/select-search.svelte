@@ -105,7 +105,7 @@ function filter_suggestions(): string[]
 
 search {
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
   justify-content: center;
   align-items: stretch;
   column-gap: 0.5em;
@@ -113,7 +113,7 @@ search {
 
 button.select {
   padding: 0.5em 0.8em;
-  background-color: light-dark(white, black);
+  background: light-dark(white, black);
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 1.5px 2px -0.5px $col-line;
@@ -163,7 +163,7 @@ ul.dropdown {
   visibility: hidden;
   opacity: 0;
 
-  background-color: light-dark(white, black);
+  background: light-dark(white, black);
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 2px 3px -0.5px $col-line;
@@ -202,7 +202,7 @@ li {
 
   &.active {
     color: white;
-    background-color: $col-prot;
+    background: $col-prot;
 
     @include interact(
       $hover: color-mix(in oklch, $col-prot, black 8%),

@@ -69,11 +69,10 @@ section {
 .row {
   padding: 0.5em 1em;
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: stretch;
   align-items: center;
-  flex-wrap: nowrap;
-  background-color: auto;
+  background: auto;
   border-bottom: 1px solid $col-line;
   @include interact($col-hover, $col-click);
 

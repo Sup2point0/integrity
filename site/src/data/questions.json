@@ -1659,7 +1659,7 @@
         "3": [
           {
             "kind": "text",
-            "content": "Starts with f and rhymes with <em>tractorise</em>"
+            "content": "Starts with “f” and rhymes with <em>tractorise</em>."
           }
         ]
       },
@@ -1772,7 +1772,7 @@
         "3": [
           {
             "kind": "text",
-            "content": "Starts with “f” and rhymes with *tractorise*."
+            "content": "Starts with “f” and rhymes with <em>tractorise</em>."
           }
         ]
       },
@@ -2484,6 +2484,61 @@
         ]
       }
     },
+    "s25f-cr1": {
+      "topic": "integrals",
+      "title": "cope",
+      "desc": null,
+      "date": "2025 January 30",
+      "tags": [
+        "frac",
+        "trig",
+        "ln"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-cr1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { 2 + x\\tan{x} }    { x }  \\ln\\left(    x \\sec{x}  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What’s the derivative of $x \\sec{x}$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How could you get the derivative on the outside?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{2}\\ln\\left(x\\sec x\\right)^{2}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1+x\\tan x}{x}\\ln\\left(x\\sec x\\right)\\ dx  \\\\ =&\\ \\int \\frac{1+x\\tan x}{x}\\ln\\left(x\\sec x\\right)\\cdot\\frac{\\sec x}{\\sec x}\\ dx  \\\\ =&\\ \\int \\frac{\\sec x+x\\sec x\\tan x}{x\\sec x}\\ln\\left(x\\sec x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1}{t}\\ln t\\ dt  \\\\ &= \\frac{1}{2}\\left(\\ln t\\right)^{2}  \\\\ &= \\frac{1}{2}\\ln\\left(x\\sec x\\right)^{2}-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-cx1": {
       "topic": "integrals",
       "title": "blursed",
@@ -2661,6 +2716,60 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= -\\int e^{v}\\ dv  \\\\ &= -e^{v}  \\\\ &= -e^{\\frac{1}{t}}  \\\\ &= -\\exp\\left(\\frac{1}{\\sec x-1}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-et2": {
+      "topic": "integrals",
+      "title": "ember",
+      "desc": null,
+      "date": "2025 February 2",
+      "tags": [
+        "trig",
+        "exp"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-et2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int e^{x}\\left(\\sin\\left(x\\right)\\cos\\left(x\\right)^{3}-\\sin\\left(x\\right)^{3}\\cos\\left(x\\right)\\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Starts with “f” and rhymes with <em>tractorise</em>."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Identify stuff"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "=\\frac{1}{68}e^{x}\\left(\\sin4x-4\\cos4x\\right)-c"
+        }
+      ],
+      "solution": {
+        "double angle identities": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int e^{x}\\left(\\sin\\left(x\\right)\\cos\\left(x\\right)^{3}-\\sin\\left(x\\right)^{3}\\cos\\left(x\\right)\\right)\\ dx  \\\\ =&\\ \\int e^{x}\\left(\\sin x\\cos x\\right)\\left(\\cos^{2}x-\\sin^{2}x\\right)\\ dx  \\\\ =&\\ \\frac{1}{2}\\int e^{x}\\sin2x\\cos2x\\ dx  \\\\ =&\\ \\frac{1}{4}\\int e^{x}\\sin4x\\ dx\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{1}{4}\\int e^{x}\\sin4x\\ dx    &= \\frac{1}{4}\\left(e^{x}\\sin4x-4\\int e^{x}\\cos4x\\ dx\\right)  \\\\ &= \\frac{1}{4}\\left(e^{x}\\sin4x-4\\left(e^{x}\\cos4x+4\\int e^{x}\\sin4x\\ dx\\right)\\right)  \\\\ &= \\frac{1}{4}e^{x}\\sin4x-e^{x}\\cos4x-4\\int e^{x}\\sin4x\\ dx  \\\\ \\frac{1+16}{4}\\int e^{x}\\sin4x\\ dx    &=\\frac{1}{4}e^{x}\\sin4x-e^{x}\\cos4x  \\\\ \\int_{\\ }^{\\ }e^{x}\\sin4x\\ dx    &= \\frac{1}{17}\\left(\\frac{1}{4}e^{x}\\sin4x-e^{x}\\cos4x\\right)  \\\\ &= \\frac{1}{68}e^{x}\\left(\\sin4x-4\\cos4x\\right)-c\\end{align*}"
           }
         ]
       }
@@ -2885,7 +2994,7 @@
     },
     "s25f-hr1": {
       "topic": "integrals",
-      "title": "machine",
+      "title": "machina",
       "desc": null,
       "date": null,
       "tags": [
@@ -3119,6 +3228,137 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &\\ \\int \\sqrt{\\frac{\\sinh x+\\cosh x}{\\cosh x-\\sinh x}}\\ dx  \\\\ =&\\ \\int \\sqrt{\\frac{\\frac{1}{2}\\left(e^{x}-e^{-x}\\right)+\\frac{1}{2}\\left(e^{x}+e^{-x}\\right)}{\\frac{1}{2}\\left(e^{x}+e^{-x}\\right)-\\frac{1}{2}\\left(e^{x}-e^{-x}\\right)}}\\ dx  \\\\ =&\\ \\int \\sqrt{\\frac{\\left(\\frac{1}{2}e^{x}+\\frac{1}{2}e^{x}\\right)-\\left(\\frac{1}{2}e^{-x}+\\frac{1}{2}e^{-x}\\right)}{\\left(\\frac{1}{2}e^{x}-\\frac{1}{2}e^{x}\\right)+\\left(\\frac{1}{2}e^{-x}+\\frac{1}{2}e^{-x}\\right)}}\\ dx  \\\\ =&\\ \\int \\sqrt{\\frac{e^{x}}{e^{-x}}}\\ dx  \\\\ =&\\ \\int \\sqrt{e^{2x}}\\ dx  \\\\ =&\\ \\int e^{x}\\ dx  \\\\ =&\\ e^{x}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ib1": {
+      "topic": "integrals",
+      "title": "acrid",
+      "desc": null,
+      "date": "2025 January 31",
+      "tags": [
+        "series",
+        "poly"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-ib1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left(    x  + \\frac{1}{2} x^4  + \\frac{3}{8} x^7  + \\frac{5}{16} x^{10}  + \\frac{35}{64} x^{13}  + ...  \\right)^2\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Ignore the coefficients for now, just focus on the powers of $x$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What can you factorise out of the series?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What do you notice about the leftover powers of $x$?"
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "This isn’t a geometric series, but another kind of infinite series."
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "Does $1 + k_1x + k_2x^2 + k_3x^3 + ...$ look familiar to you?"
+          }
+        ],
+        "6": [
+          {
+            "kind": "text",
+            "content": "What about $1 + nx + \\frac{n(n-1)}{2!}x^2$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{1}{3}\\ln\\left(1-x^{3}\\right)-c"
+        }
+      ],
+      "solution": {
+        "binomial expansion": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(x+\\frac{1}{2}x^{4}+\\frac{3}{8}x^{7}+\\frac{5}{16}x^{10}+\\frac{35}{64}x^{13}+...\\right)^{2}\\ dx  \\\\ =&\\ \\int \\left(x\\left(1+\\frac{1}{2}x^{3}+\\frac{3}{8}x^{6}+\\frac{5}{16}x^{9}+\\frac{35}{64}x^{12}+...\\right)\\right)^{2}\\ dx  \\\\ =&\\ \\int x^{2}\\left(1+\\frac{1}{2}\\left(x^{3}\\right)+\\frac{3}{8}\\left(x^{3}\\right)^{2}+\\frac{5}{16}\\left(x^{3}\\right)^{3}+\\frac{35}{64}\\left(x^{3}\\right)^{4}+...\\right)^{2}\\ dx  \\\\ =&\\ \\int x^{2}\\left(\\left(1-x^{3}\\right)^{-1/2}\\right)^{2}\\ dx\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{x^{2}}{1-x^{3}}\\ dx  \\\\ &= -\\frac{1}{3}\\int \\frac{-3x^{2}}{1-x^{3}}\\ dx  \\\\ &= -\\frac{1}{3}\\ln\\left(1-x^{3}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ik1": {
+      "topic": "integrals",
+      "title": "intcore",
+      "desc": null,
+      "date": "2025 January 30",
+      "tags": [
+        "funny"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-ik1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{1}{x}  \\int    \\frac{1}{x}      \\int        \\frac{1}{x}      \\ dx  \\ dx\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Remember your constants!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{6}\\left(\\ln x\\right)^{3}+cx-C"
+        }
+      ],
+      "solution": {
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\int \\frac{1}{x}\\ dx = \\ln x+c"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{1}{x}\\int_{\\ }^{\\ }\\frac{1}{x}\\ dx\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{1}{x}\\left(\\ln x+c\\right)\\ dx  \\\\ =&\\ \\frac{1}{2}\\left(\\ln x\\right)^{2}+cx\\end{align*}"
+          }
+        ],
+        "solve (3)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{1}{x}\\int_{\\ }^{\\ }\\frac{1}{x}\\int_{\\ }^{\\ }\\frac{1}{x}\\ dx\\ dx\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{1}{x}\\left(\\frac{1}{2}\\left(\\ln x\\right)^{2}+cx\\right)\\ dx  \\\\ =&\\ \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{1}{x}\\left(\\ln x\\right)^{2}+\\int_{\\ }^{\\ }c\\ dx  \\\\ =&\\ \\frac{1}{6}\\left(\\ln x\\right)^{3}+cx-C\\end{align*}"
           }
         ]
       }
@@ -3603,6 +3843,46 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &\\ \\int \\frac{480}{x\\left(x-1\\right)\\left(x+1\\right)\\left(x-4\\right)\\left(x+4\\right)}\\ dx  \\\\ =&\\ \\int \\frac{30}{x}-\\frac{16}{x-1}-\\frac{16}{x+1}+\\frac{1}{x-4}+\\frac{1}{x+4}\\ dx  \\\\ =&\\ 30\\ln\\left|x\\right|-16\\ln\\left|x-1\\right|-16\\ln\\left|x+1\\right|+\\ln\\left|x-4\\right|+\\ln\\left|x+4\\right|  \\\\ =&\\ 30\\ln\\left|x\\right|-16\\ln\\left|x^{2}-1\\right|+\\ln\\left|x^{2}-16\\right|-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-pp2": {
+      "topic": "integrals",
+      "title": "crossfire",
+      "desc": null,
+      "date": "2025 February 1",
+      "tags": [
+        "poly",
+        "ln"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-pp2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\ }^{\\ }x\\left(x^{2}+5\\right)^{3}\\ln x\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }x\\left(x^{2}+5\\right)^{3}\\ln x\\ dx  \\\\ =&\\ \\frac{1}{2}\\int_{\\ }^{\\ }2x\\left(x^{2}+5\\right)^{3}\\ln x\\ dx\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
           }
         ]
       }
@@ -4428,6 +4708,39 @@
         ]
       }
     },
+    "s25f-tl1": {
+      "topic": "integrals",
+      "title": "calling",
+      "desc": null,
+      "date": "2025 January 30",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-tl1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  (\\sec{x})(\\tan{x})(\\sec{x}\\tan{x})(\\sec^2{x})\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{5}\\tan^{5}x+\\frac{1}{3}\\tan^{3}x-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(\\sec x\\right)\\left(\\tan x\\right)\\left(\\sec x\\tan x\\right)\\left(\\sec^{2}x\\right)\\ dx  \\\\ =&\\ \\int \\sec^{4}x\\tan^{2}x\\ dx  \\\\ =&\\ \\int \\left(\\sec^{2}x\\right)\\left(\\tan^{2}x+1\\right)\\left(\\tan^{2}x\\right)\\ dx  \\\\ =&\\ \\int \\tan^{4}x\\sec^{2}x+\\tan^{2}x\\sec^{2}x\\ dx  \\\\ =&\\ \\frac{1}{5}\\tan^{5}x+\\frac{1}{3}\\tan^{3}x-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-tm1": {
       "topic": "integrals",
       "title": "masquerade",
@@ -5050,6 +5363,119 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int e^{v}\\ dv  \\\\ &= e^v  \\\\ &= e^{\\left(t\\ln t\\right)}  \\\\ &= t^t  \\\\ &= \\left(e^{x}\\right)^{\\left(e^{x}\\right)}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-xt1": {
+      "topic": "integrals",
+      "title": "morphling",
+      "desc": null,
+      "date": "2025 January 30",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-xt1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\sin(4x)\\cos(3x)^2 + \\sin(3x)\\cos(3x)\\cos(4x) + \\sin(3x)\\cos(7x)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Do you spot any duplicate expressions?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You can factor out that duplicate expression."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "You can do something with the leftover after factorising."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{1}{10}\\cos\\left(10x\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\sin(4x)\\cos(3x)^{2}+\\sin(3x)\\cos(3x)\\cos(4x)+\\sin(3x)\\cos(7x)\\ dx  \\\\ =&\\ \\int \\left(\\cos3x\\right)\\left(\\sin4x\\cos3x+\\sin3x\\cos4x\\right)+\\sin3x\\cos7x\\ dx  \\\\ =&\\ \\int \\left(\\cos3x\\right)\\left(\\sin\\left(3x+4x\\right)\\right)+\\sin3x\\cos7x\\ dx  \\\\ =&\\ \\int \\sin\\left(3x+7x\\right)\\ dx  \\\\ =&\\ \\int \\sin\\left(10x\\right)\\ dx  \\\\ =&\\ -\\frac{1}{10}\\cos\\left(10x\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-xv1": {
+      "topic": "integrals",
+      "title": "chrome",
+      "desc": null,
+      "date": "2025 January 30",
+      "tags": [
+        "exp",
+        "ln"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-xv1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  e^x x^{e^x} \\left(    \\frac{1}{x} + \\ln{x}  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "$x$ in the base looks dangerous."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What can you do with the $e^x$ on the outside?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "When we substitute, we’re looking for a derivative on the outside."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "x^{\\left(e^{x}\\right)}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int e^{x}x^{e^{x}}\\left(\\frac{1}{x}+\\ln x\\right)\\ dx  \\\\ =&\\ \\int e^{x}\\left(e^{\\ln x}\\right)^{e^{x}}\\left(\\frac{1}{x}+\\ln x\\right)\\ dx  \\\\ =&\\ \\int e^{\\left(e^{x}\\ln x\\right)}\\left(\\frac{1}{x}e^{x}+e^{x}\\ln x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int e^{t}\\ dt  \\\\ &= e^{t}  \\\\ &= e^{\\left(e^{x}\\ln x\\right)}  \\\\ &= x^{\\left(e^{x}\\right)}-c\\end{align*}"
           }
         ]
       }

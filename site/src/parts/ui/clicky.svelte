@@ -54,7 +54,7 @@ let { text, pict, link, intern, action, children }: Props = $props();
   @include font-ui;
   color: $col-text;
   text-decoration: none;
-  background-color: light-dark(white, black);
+  background: light-dark(white, black);
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 1.5px 2px -0.5px $col-line;

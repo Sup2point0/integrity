@@ -82,7 +82,7 @@ button.select {
 
   @include font-ui;
   font-size: 90%;
-  background-color: light-dark(white, black);
+  background: light-dark(white, black);
   border: 1px solid #dedede;  // fallback
   border: 1px solid $col-line;
   border-radius: 0.5em;
@@ -113,7 +113,7 @@ ul.dropdown {
   visibility: hidden;
   opacity: 0;
 
-  background-color: light-dark(white, black);
+  background: light-dark(white, black);
   border: 1px solid #dedede;  // fallback
   border: 1px solid $col-line;
   border-radius: 0.5em;
@@ -154,7 +154,7 @@ li {
 
   &.active {
     color: white;
-    background-color: $col-prot;
+    background: $col-prot;
 
     @include interact(
       $hover: color-mix(in oklch, $col-prot, black 8%),

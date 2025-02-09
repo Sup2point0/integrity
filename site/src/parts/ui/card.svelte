@@ -59,7 +59,7 @@ a.card {
   @include font-ui;
   color: $col-text;
   text-decoration: none;
-  background-color: auto;
+  background: auto;
   border: 1px solid #dedede;  // fallback
   border: 1px solid $col-line;
   border-radius: 0.5em;
@@ -74,11 +74,11 @@ a.card {
 
   &.block {
     max-width: 20vw;
-    flex-direction: column;
+    flex-flow: column;
   }
   &.row {
     width: 100%;
-    flex-direction: row-reverse;
+    flex-flow: row-reverse;
     justify-content: end;
   }
 }
@@ -88,7 +88,7 @@ a.card {
   padding: 1rem;
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   text-align: center;

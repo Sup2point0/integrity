@@ -49,10 +49,9 @@ nav.breadcrumbs {
   width: max-content;
   padding: 0.5em 0;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: start;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .current {

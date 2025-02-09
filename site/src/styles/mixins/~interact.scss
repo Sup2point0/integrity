@@ -2,18 +2,18 @@
 
 
 @mixin interact($hover: none, $click: none, $t: 0.1) {
-  transition: background-color #{$t}s ease-out;
+  transition: background #{$t}s ease-out;
   
   &:hover {
     cursor: pointer;
-    background-color: rgb(black, 3%);  // fallback
-    background-color: $hover;
+    background: rgb(black, 3%);  // fallback
+    background: $hover;
   }
 
   &:active {
     cursor: pointer;
-    background-color: rgb(black, 5%);  // fallback
-    background-color: $click;
+    background: rgb(black, 5%);  // fallback
+    background: $click;
   }
 }
 

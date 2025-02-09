@@ -130,17 +130,15 @@ section {
 
 .browse .topics {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .featured .questions {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 

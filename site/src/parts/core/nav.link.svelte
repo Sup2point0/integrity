@@ -104,14 +104,16 @@ a {
   position: absolute;
   z-index: 50;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 0.2rem;
   visibility: hidden;
   opacity: 0;
 
-  background-color: $col-nav;
+  background: rgb(white, 60%);  // fallback
+  background: $col-nav;
   border-radius: 0.5em;
   backdrop-filter: blur(12px);
+  box-shadow: 0 2px 2px #dedede;  // fallback
   box-shadow: 0 2px 2px $col-line;
   transform: translateY(-0.4em);
   transition:

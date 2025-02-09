@@ -61,7 +61,7 @@ article {
     padding: 0.25em 0.5em;
     @include font-code;
     font-size: 90%;
-    background-color: $col-click;
+    background: $col-click;
     border-radius: 0.4em;
   }
 

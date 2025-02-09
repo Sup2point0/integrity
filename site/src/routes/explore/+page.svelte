@@ -168,7 +168,7 @@ section {
   min-width: 12vw;
   padding: 0 1em;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: collapse;
 
   .links {

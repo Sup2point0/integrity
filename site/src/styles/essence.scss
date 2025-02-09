@@ -16,6 +16,8 @@
 
 html, body {
   width: 100%;
+  background: white;  // fallback
+  background: light-dark(white, black);
 }
 
 
@@ -38,6 +40,6 @@ img {
 
 ::selection {
   color: white !important;
-  background-color: #3c8dbc !important;  // fallback
-  background-color: $col-prot !important;
+  background: #3c8dbc !important;  // fallback
+  background: $col-prot !important;
 }

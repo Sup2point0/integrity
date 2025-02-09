@@ -271,7 +271,7 @@ search {
   padding: 0.5rem;
   margin: 2rem 0;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
@@ -279,7 +279,7 @@ search {
 div.search-bar {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
   justify-content: center;
   align-items: stretch;
   column-gap: 0.5em;
@@ -294,7 +294,7 @@ input[type='search'] {
   @include font-ui;
   color: $col-text;
   font-size: 100%;
-  background-color: light-dark(white, black);
+  background: light-dark(white, black);
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 1.5px 2px -0.5px $col-line;
@@ -341,9 +341,8 @@ td {
 
   &.flex {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: start;
-    flex-wrap: wrap;
     gap: 0.25em;
     flex: 1 1 auto;
   }

@@ -226,7 +226,7 @@ nav {
 #desmos-window {
   width: 100%;
   height: 80vh;
-  background-color: $col-hover;
+  background: $col-hover;
 
   p {
     padding-top: 10vh;

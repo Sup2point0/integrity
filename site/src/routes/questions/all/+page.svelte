@@ -73,7 +73,7 @@ onMount(() => {
   }
 
   &.list {
-    flex-direction: column;
+    flex-flow: column;
     align-items: stretch;
   }
 }

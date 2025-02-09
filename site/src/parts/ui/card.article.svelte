@@ -49,7 +49,7 @@ a.card {
   @include font-ui;
   color: $col-text;
   text-decoration: none;
-  background-color: auto;
+  background: auto;
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 2px 2px -0.5px $col-line;
