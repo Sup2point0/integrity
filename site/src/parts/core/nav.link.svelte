@@ -88,6 +88,7 @@ a {
   p {
     @include font-ui;
     font-weight: 350;
+    color: black;
     color: $col-text;
   }
 
