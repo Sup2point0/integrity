@@ -100,7 +100,7 @@ onMount(() => {
   </div>
   
   <div class="centre">
-    <Clicky text="View All" intern="questions/all" />
+    <Clicky text="View All" intern="guides" />
   </div>
 </section>
 
@@ -141,7 +141,6 @@ section {
   justify-content: center;
   gap: 1rem;
 }
-
 
 .centre {
   width: max-content;
