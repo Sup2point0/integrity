@@ -53,7 +53,7 @@ Identify stuff
   \\ &= \frac{1}{4}e^{x}\sin4x-e^{x}\cos4x-4\int e^{x}\sin4x\ dx
   \\ \frac{1+16}{4}\int e^{x}\sin4x\ dx
     &=\frac{1}{4}e^{x}\sin4x-e^{x}\cos4x
-  \\ \int_{\ }^{\ }e^{x}\sin4x\ dx
+  \\ \int e^{x}\sin4x\ dx
     &= \frac{1}{17}\left(\frac{1}{4}e^{x}\sin4x-e^{x}\cos4x\right)
   \\ &= \frac{1}{68}e^{x}\left(\sin4x-4\cos4x\right)-c
 \end{align*}
