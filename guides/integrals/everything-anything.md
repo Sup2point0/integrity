@@ -1,7 +1,7 @@
 # Everything & Anything
 <!-- #SQUARK live! feat! dev!
 | dest = guides/integrals/everything-anything
-| capt = The prime pntegrator’s standard arsenal
+| capt = The prime integrator’s standard arsenal
 | index = guides / integrals
 | date = 2025 January 28
 -->
