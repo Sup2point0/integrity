@@ -91,7 +91,9 @@ nav {
   flex-wrap: nowrap;
   gap: 0.5rem;
   background-color: $col-nav;
+  border-bottom: 1px solid #dedede;  // fallback
   border-bottom: 1px solid $col-line;
+  box-shadow: 0 2px 2px -1px #dedede;  // fallback
   box-shadow: 0 2px 2px -1px $col-line;
 
   &::before {
