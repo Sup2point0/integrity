@@ -6,11 +6,12 @@ import { Question } from "#scripts/types";
 import type { QuestionsData, QuestionCollection } from "#scripts/types";
 
 
-const questions_data = (await import("../data/questions.json")).default;
+import questions_data from "../data/questions.json" assert { type: "json" };
 export const questions = process_questions(questions_data);
 
-const pages_data = (await import("../data/site.json")).default;
-export const guides = find_guides(pages_data.pages);
+import pages_data from "../data/site.json";
+export const pages = pages_data.pages;
+export const guides = find_guides(pages);
 
 
 function process_questions(raw: any)
