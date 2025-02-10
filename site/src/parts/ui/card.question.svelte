@@ -117,11 +117,11 @@ a.question-card {
   }
 
   @include font-ui;
-  color: black;  // fallback
+  color: $col-text-fallback;
   color: $col-text;
   text-decoration: none;
   background: auto;
-  border: 1px solid #dedede;  // fallback
+  border: 1px solid $col-line-fallback;
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 2px 2px -0.5px $col-line;
@@ -154,14 +154,14 @@ a.question-card {
   text-align: left;
 
   a.question-card.block & {
-    border-top: 1px solid #dedede;  // fallback
+    border-top: 1px solid $col-line-fallback;
     border-top: 1px solid $col-line;
   }
 
   a.question-card.row & {
     min-width: 40%;
     flex: 0 1 auto;
-    border-right: 1px solid #dedede;  // fallback
+    border-right: 1px solid $col-line-fallback;
     border-right: 1px solid $col-line;
   }
 }

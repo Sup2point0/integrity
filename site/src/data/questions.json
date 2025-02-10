@@ -1166,7 +1166,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int \\frac{x^{3}}{x^{4}-6x^{2}+5}dx"
+          "content": "\\int \\frac{x^{3}}{x^{4}-6x^{2}+5}\\ dx"
         }
       ],
       "answer": [
@@ -1179,7 +1179,7 @@
         "factorise": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\int \\frac{x^{3}}{x^{4}-6x^{2}+5}dx  \\\\ &= \\frac{1}{2}\\int \\frac{x^{2}\\cdot2x}{\\left(x^{2}-1\\right)\\left(x^{2}-5\\right)}\\ dx\\end{align*}"
+            "content": "\\begin{align*}  &= \\int \\frac{x^{3}}{x^{4}-6x^{2}+5}\\ dx  \\\\ &= \\frac{1}{2}\\int \\frac{x^{2}\\cdot2x}{\\left(x^{2}-1\\right)\\left(x^{2}-5\\right)}\\ dx\\end{align*}"
           }
         ],
         "substitute": [
@@ -2608,6 +2608,75 @@
         ]
       }
     },
+    "s25f-di1": {
+      "topic": "integrals",
+      "title": "humour",
+      "desc": null,
+      "date": "2025 February 6",
+      "tags": [
+        "definite",
+        "frac",
+        "ln"
+      ],
+      "methods": [
+        "tough",
+        "spot",
+        "sub"
+      ],
+      "shard": "s25f-di1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{0}^{\\infin} \\frac{1}{x\\ln{x}} \\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Evaluating the integral indefinitely results in issues."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Can you prove some sort of identity?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What would happen if the integral is equal to the negative of itself?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$0$"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x &= \\frac{1}{t}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
+          }
+        ],
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{0}^{\\infty}\\frac{1}{x\\ln x}\\ dx  \\\\ =&\\ \\int_{\\infty}^{0}\\frac{1}{\\left(\\frac{1}{t}\\right)\\ln\\left(\\frac{1}{t}\\right)}\\cdot-\\frac{1}{t^{2}}\\ dt  \\\\ =&\\ \\int_{0}^{\\infty}\\frac{1}{t^{2}\\left(\\frac{1}{t}\\right)\\ln\\left(\\frac{1}{t}\\right)}\\ dt  \\\\ =&\\ \\int_{0}^{\\infty}\\frac{1}{t\\ln\\left(t^{-1}\\right)}\\ dt  \\\\ =&\\ -\\int_{0}^{\\infty}\\frac{1}{t\\ln\\left(t\\right)}\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\int_{0}^{\\infty}\\frac{1}{x\\ln x}\\ dx &= -\\int_{0}^{\\infty}\\frac{1}{t\\ln\\left(t\\right)}\\ dt  \\\\ \\Rightarrow \\int_{0}^{\\infty}\\frac{1}{x\\ln x}\\ dx &= 0\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-em1": {
       "topic": "integrals",
       "title": "unfazed",
@@ -2769,7 +2838,97 @@
         "parts": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  \\frac{1}{4}\\int e^{x}\\sin4x\\ dx    &= \\frac{1}{4}\\left(e^{x}\\sin4x-4\\int e^{x}\\cos4x\\ dx\\right)  \\\\ &= \\frac{1}{4}\\left(e^{x}\\sin4x-4\\left(e^{x}\\cos4x+4\\int e^{x}\\sin4x\\ dx\\right)\\right)  \\\\ &= \\frac{1}{4}e^{x}\\sin4x-e^{x}\\cos4x-4\\int e^{x}\\sin4x\\ dx  \\\\ \\frac{1+16}{4}\\int e^{x}\\sin4x\\ dx    &=\\frac{1}{4}e^{x}\\sin4x-e^{x}\\cos4x  \\\\ \\int_{\\ }^{\\ }e^{x}\\sin4x\\ dx    &= \\frac{1}{17}\\left(\\frac{1}{4}e^{x}\\sin4x-e^{x}\\cos4x\\right)  \\\\ &= \\frac{1}{68}e^{x}\\left(\\sin4x-4\\cos4x\\right)-c\\end{align*}"
+            "content": "\\begin{align*}  \\frac{1}{4}\\int e^{x}\\sin4x\\ dx    &= \\frac{1}{4}\\left(e^{x}\\sin4x-4\\int e^{x}\\cos4x\\ dx\\right)  \\\\ &= \\frac{1}{4}\\left(e^{x}\\sin4x-4\\left(e^{x}\\cos4x+4\\int e^{x}\\sin4x\\ dx\\right)\\right)  \\\\ &= \\frac{1}{4}e^{x}\\sin4x-e^{x}\\cos4x-4\\int e^{x}\\sin4x\\ dx  \\\\ \\frac{1+16}{4}\\int e^{x}\\sin4x\\ dx    &=\\frac{1}{4}e^{x}\\sin4x-e^{x}\\cos4x  \\\\ \\int e^{x}\\sin4x\\ dx    &= \\frac{1}{17}\\left(\\frac{1}{4}e^{x}\\sin4x-e^{x}\\cos4x\\right)  \\\\ &= \\frac{1}{68}e^{x}\\left(\\sin4x-4\\cos4x\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ex1": {
+      "topic": "integrals",
+      "title": "abnormal",
+      "desc": null,
+      "date": "2025 January 27",
+      "tags": [
+        "exp"
+      ],
+      "methods": [
+        "spot",
+        "draw"
+      ],
+      "shard": "s25f-ex1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{-\\infty}^{\\infty}exe^{-x^{2}}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$0$"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{-\\infty}^{\\infty}exe^{-x^{2}}\\ dx  \\\\ =&\\ e\\int_{-\\infty}^{\\infty}xe^{-x^{2}}\\ dx\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "The integrand is odd, since we have multiplied the even normal distribution $e^{-x^2}$ by the odd $x$.<br><br>The areas either side are also convergent, so they safely cancel to give $0$."
+        }
+      ]
+    },
+    "s25f-ex2": {
+      "topic": "integrals",
+      "title": "hydraulic",
+      "desc": null,
+      "date": "2025 February 8",
+      "tags": [
+        "sqrt",
+        "exp"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-ex2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\sqrt{e^{6x}-e^{9x}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Starts with “f” and rhymes with <em>tractorise</em>."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{2}{9}\\left(1-e^{3x}\\right)^{3/2}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\sqrt{e^{6x}-e^{9x}}\\ dx  \\\\ =&\\ \\int \\sqrt{e^{6x}\\left(1-e^{3x}\\right)}\\ dx  \\\\ =&\\ \\int e^{3x}\\sqrt{1-e^{3x}}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1-e^{3x} &= t  \\\\ -3e^{3x}\\ dx &= dt  \\\\ dx &= -\\frac{1}{3}e^{3x}\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\frac{1}{3}\\int \\sqrt{t}\\ dt  \\\\ &= -\\frac{1}{3}\\cdot\\frac{2}{3}t^{3/2}  \\\\ &= -\\frac{2}{9}\\left(1-e^{3x}\\right)^{3/2}-c\\end{align*}"
           }
         ]
       }
@@ -2856,6 +3015,66 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= 2\\left(\\left(-\\cos x\\right)\\ln\\left(\\sin x\\right)-\\int \\left(-\\cos x\\right)\\cdot\\frac{\\cos x}{\\sin x}\\ dx\\right)  \\\\ &= -2\\left(\\cos x\\right)\\ln\\left(\\sin x\\right)+2\\int \\frac{\\cos^{2}x}{\\sin x}\\ dx  \\\\ &= -2\\left(\\cos x\\right)\\ln\\left(\\sin x\\right)+2\\int \\frac{1-\\sin^{2}x}{\\sin x}\\ dx  \\\\ &= -2\\left(\\cos x\\right)\\ln\\left(\\sin x\\right)+2\\int \\csc x-\\sin x\\ dx  \\\\ &= -2\\left(\\cos x\\right)\\ln\\left(\\sin x\\right)-2\\ln\\left(\\csc x+\\cot x\\right)+2\\cos x-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-fr1": {
+      "topic": "integrals",
+      "title": "cavity",
+      "desc": null,
+      "date": "2025 February 1",
+      "tags": [
+        "poly",
+        "frac"
+      ],
+      "methods": [
+        "work"
+      ],
+      "shard": "s25f-fr1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{1}{1+x^{1/5}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You can safely substitute $x^{1/5} = t$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{12}\\left(15\\left(x^{1/5}+1\\right)^{4}-80\\left(x^{1/5}+1\\right)^{3}+180\\left(x^{1/5}+1\\right)^{2}-240\\left(x^{1/5}+1\\right)+60\\ln\\left(x^{1/5}+1\\right)\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{1/5} &= t  \\\\ x &= t^{5}  \\\\ dx &= 5t^{4}dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{1+x^{1/5}}\\ dx  \\\\ =&\\ \\int \\frac{1}{1+t}\\cdot5t^{4}\\ dt  \\\\ =&\\ 5\\int \\frac{t^{4}}{t+1}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  t+1=v  \\\\ t=v-1  \\\\ dt=dv\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 5\\int \\frac{\\left(v-1\\right)^{4}}{v}\\ dv  \\\\ &= 5\\int \\frac{v^{4}-4v^{3}+6v^{2}-4v+1}{v}\\ dv  \\\\ &= 5\\int v^{3}-4v^{2}+6v-4+\\frac{1}{v}\\ dv  \\\\ &= \\frac{5}{4}v^{4}-\\frac{20}{3}v^{3}+15v^{2}-20v+5\\ln v-c  \\\\ &= \\frac{1}{12}\\left(15v^{4}-80v^{3}+180v^{2}-240v+60\\ln v\\right)  \\\\ &= \\frac{1}{12}\\left(15\\left(x^{1/5}+1\\right)^{4}-80\\left(x^{1/5}+1\\right)^{3}+180\\left(x^{1/5}+1\\right)^{2}-240\\left(x^{1/5}+1\\right)+60\\ln\\left(x^{1/5}+1\\right)\\right)-c\\end{align*}"
           }
         ]
       }
@@ -3352,13 +3571,13 @@
         "solve (2)": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{1}{x}\\int_{\\ }^{\\ }\\frac{1}{x}\\ dx\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{1}{x}\\left(\\ln x+c\\right)\\ dx  \\\\ =&\\ \\frac{1}{2}\\left(\\ln x\\right)^{2}+cx\\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{x}\\int \\frac{1}{x}\\ dx\\ dx  \\\\ =&\\ \\int \\frac{1}{x}\\left(\\ln x+c_{1}\\right)\\ dx  \\\\ =&\\ \\int \\frac{1}{x}\\ln x\\ dx+c_{1}\\int \\frac{1}{x}\\ dx  \\\\ =&\\ \\frac{1}{2}\\left(\\ln x\\right)^{2}+c_{1}\\ln x+c_{2}\\end{align*}"
           }
         ],
         "solve (3)": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{1}{x}\\int_{\\ }^{\\ }\\frac{1}{x}\\int_{\\ }^{\\ }\\frac{1}{x}\\ dx\\ dx\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{1}{x}\\left(\\frac{1}{2}\\left(\\ln x\\right)^{2}+cx\\right)\\ dx  \\\\ =&\\ \\frac{1}{2}\\int_{\\ }^{\\ }\\frac{1}{x}\\left(\\ln x\\right)^{2}+\\int_{\\ }^{\\ }c\\ dx  \\\\ =&\\ \\frac{1}{6}\\left(\\ln x\\right)^{3}+cx-C\\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{x}\\int \\frac{1}{x}\\int \\frac{1}{x}\\ dx\\ dx\\ dx  \\\\ =&\\ \\int \\frac{1}{x}\\left(\\frac{1}{2}\\left(\\ln x\\right)^{2}+c_{1}\\ln x+c_{2}\\right)\\ dx  \\\\ =&\\ \\frac{1}{2}\\int \\frac{1}{x}\\left(\\ln x\\right)^{2}+c_{1}\\int \\frac{1}{x}\\ln x\\ dx+c_{2}\\int \\frac{1}{x}\\ dx  \\\\ =&\\ \\frac{1}{6}\\left(\\ln x\\right)^{3}+\\frac{c_{1}}{2}\\left(\\ln x\\right)^{2}+c_{2}\\ln x-c_{3}\\end{align*}"
           }
         ]
       }
@@ -3436,6 +3655,43 @@
           }
         ]
       }
+    },
+    "s25f-jc1": {
+      "topic": "integrals",
+      "title": "jelly",
+      "desc": null,
+      "date": "2025 February 2",
+      "tags": [
+        "definite",
+        "sqrt"
+      ],
+      "methods": [
+        "spot",
+        "draw"
+      ],
+      "shard": "s25f-jc1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{1}^{3}  \\sqrt{2x - x^2}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$\\pi / 2$"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{0}^{2}\\sqrt{2x-x^{2}}\\ dx  \\\\ =&\\ \\int_{0}^{2}\\sqrt{1-1+2x-x^{2}}\\ dx  \\\\ =&\\ \\int_{0}^{2}\\sqrt{1-\\left(x-1\\right)^{2}}\\ dx\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "This is a semicircle centred at $x = 1$ with radius $r = 1$, so its area is $\\pi r^2/2 = \\pi/2$."
+        }
+      ]
     },
     "s25f-lc1": {
       "topic": "integrals",
@@ -3863,7 +4119,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int_{\\ }^{\\ }x\\left(x^{2}+5\\right)^{3}\\ln x\\ dx"
+          "content": "\\int x\\left(x^{2}+5\\right)^{3}\\ln x\\ dx"
         }
       ],
       "answer": [
@@ -3876,13 +4132,19 @@
         "reshape": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }x\\left(x^{2}+5\\right)^{3}\\ln x\\ dx  \\\\ =&\\ \\frac{1}{2}\\int_{\\ }^{\\ }2x\\left(x^{2}+5\\right)^{3}\\ln x\\ dx\\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int x\\left(x^{2}+5\\right)^{3}\\ln x\\ dx  \\\\ =&\\ \\frac{1}{2}\\int 2x\\left(x^{2}+5\\right)^{3}\\ln x\\ dx\\end{align*}"
           }
         ],
         "parts": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+            "content": "\\begin{align*}  f &= \\ln{x}    &\\quad g &= \\frac{1}{4}\\left(x^{2}+5\\right)^{4}  \\\\ f' &= \\frac{1}{x}    &\\quad g' &= 2x\\left(x^{2}+5\\right)^{3}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2}\\left(fg-\\int f'g\\right)  \\\\ &= \\frac{1}{2}\\left(\\frac{1}{4}\\left(x^{2}+5\\right)^{4}\\left(\\ln x\\right)-\\frac{1}{4}\\int \\frac{1}{x}\\left(x^{2}+5\\right)^{4}\\ dx\\right)  \\\\ &= \\frac{1}{8}\\left(x^{2}+5\\right)^{4}\\left(\\ln x\\right)-\\frac{1}{8}\\int \\frac{x^{8}+20x^{6}+150x^{4}+500x^{2}+625}{x}\\ dx  \\\\ &= \\frac{1}{8}\\left(x^{2}+5\\right)^{4}\\left(\\ln x\\right)-\\frac{1}{8}\\int x^{7}+20x^{5}+150x^{3}+500x+\\frac{625}{x}\\ dx  \\\\ &= \\frac{1}{8}\\left(x^{2}+5\\right)^{4}\\left(\\ln x\\right)-\\frac{1}{64}x^{8}-\\frac{5}{12}x^{6}-\\frac{75}{16}x^{4}-\\frac{250}{8}x^{2}-\\frac{625}{8}\\ln x-c\\end{align*}"
           }
         ]
       }
@@ -4145,6 +4407,165 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\frac{2}{3}\\sqrt{x-1}\\left(\\left(x-1\\right)+3\\right)  \\\\ &= \\frac{2}{3}\\sqrt{x-1}\\left(x+2\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-qt2": {
+      "topic": "integrals",
+      "title": "architechnica",
+      "desc": null,
+      "date": "2025 February 1",
+      "tags": [
+        "dread",
+        "sqrt",
+        "trig"
+      ],
+      "methods": [
+        "tough",
+        "work"
+      ],
+      "flags": [
+        "feat"
+      ],
+      "shard": "s25f-qt2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\sqrt{1-\\tan^{2}x}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "If the $\\tan{x}$ were just $x$, how would you solve the integral?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You can do a compound substitution of $\\tan{x} = \\sin{x}$."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "The resultant integral looks simpler, but is just as horrific."
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "You want to divide through by something."
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "How can you rewrite the expression in terms of just 1 trigonometric function?"
+          }
+        ],
+        "6": [
+          {
+            "kind": "text",
+            "content": "Can you factorise the resultant polynomial?"
+          }
+        ],
+        "7": [
+          {
+            "kind": "text",
+            "content": "Partial fractions will be of help."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\sin^{-1}\\left(\\tan x\\right)+\\sqrt{2}\\tan^{-1}\\left(\\frac{\\sqrt{2}\\tan x}{\\sqrt{1-\\tan^{2}x}}\\right)-c"
+        }
+      ],
+      "solution": {
+        "trigonometric substitution": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\tan x &= \\sin t  \\\\ x &= \\tan^{-1}\\left(\\sin t\\right)  \\\\ dx &= \\frac{1}{1+\\sin^{2}t}\\cdot\\cos t\\ dt\\end{align*}"
+          }
+        ],
+        "trigonometric identities": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\sqrt{1-\\tan^{2}x}\\ dx  \\\\ =&\\ \\int \\sqrt{1-\\sin^{2}t}\\cdot\\frac{\\cos t}{1+\\sin^{2}t}\\ dt  \\\\ =&\\ \\int \\frac{\\cos^{2}t}{1+\\sin^{2}t}\\ dt  \\\\ =&\\ \\int \\frac{\\cos^{2}t}{1+\\sin^{2}t}\\cdot\\frac{\\sec^{2}t}{\\sec^{2}t}\\ dt  \\\\ =&\\ \\int \\frac{\\sec^{2}t}{\\sec^{4}t+\\sec^{2}t\\tan^{2}t}\\ dt  \\\\ =&\\ \\int \\frac{\\sec^{2}t}{\\left(\\tan^{2}t+1\\right)^{2}+\\left(\\tan^{2}t+1\\right)\\left(\\tan^{2}t\\right)}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\tan t &= v  \\\\ \\sec^{2}t\\ dt &= dv\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1}{\\left(v^{2}+1\\right)^{2}+\\left(v^{2}+1\\right)\\left(v^{2}\\right)}\\ dv  \\\\ &= \\int \\frac{1}{v^{4}+2v^{2}+1+v^{4}+v^{2}}\\ dv  \\\\ &= \\int \\frac{1}{2v^{4}+3v^{2}+1}\\ dv\\end{align*}"
+          }
+        ],
+        "factor theorem": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  v^2 = w  \\\\ \\Rightarrow \\int \\frac{1}{2v^{4}+3v^{2}+1}\\ dv    &= \\int \\frac{1}{2w^{2}+3w+1}\\ dv\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "$w = -1$ is a solution to $2w^2 + 3w + 1 = 0$, therefore $(w + 1)$ is a factor:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\int \\frac{1}{2w^{2}+3w+1}\\ dv    &= \\int \\frac{1}{\\left(w+1\\right)\\left(2w+1\\right)}\\ dv  \\\\ &= \\int \\frac{1}{\\left(v^{2}+1\\right)\\left(2v^{2}+1\\right)}\\ dv\\end{align*}"
+          }
+        ],
+        "partial fractions": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{1}{\\left(v^{2}+1\\right)\\left(2v^{2}+1\\right)}    &= \\frac{pv+q}{v^{2}+1}+\\frac{rv+s}{2v^{2}+1}  \\\\ 1 &= \\left(pv+q\\right)\\left(2v^{2}+1\\right)+\\left(rv+s\\right)\\left(v^{2}+1\\right)  \\\\ 1 &= pv\\left(2v^{2}+1\\right)+q\\left(2v^{2}+1\\right)+rv\\left(v^{2}+1\\right)+s\\left(v^{2}+1\\right)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $v^2 = -1$, so $v = i$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1 &= pi\\left(-2+1\\right)+q\\left(-2+1\\right)+0+0  \\\\ 1 &= -pi-q\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Comparing real and imaginary components gives"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  p &= 0  \\\\ q &= -1\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $v^2 = -1/2$, so $v = i/\\sqrt{2}$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1 &= \\left(pv+q\\right)\\left(2\\cdot-\\frac{1}{2}+1\\right)+\\left(rv+s\\right)\\left(-\\frac{1}{2}+1\\right)  \\\\ 1 &= 0+\\frac{1}{2}r\\cdot\\frac{i}{\\sqrt{2}}+\\frac{1}{2}s  \\\\ 2 &= \\frac{ir}{\\sqrt{2}}+s\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Comparing real and imaginary components gives"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  r &= 0  \\\\ s &= 2\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\int \\frac{1}{\\left(v^{2}+1\\right)\\left(2v^{2}+1\\right)}\\ dv    &= \\int -\\frac{1}{v^{2}+1}+\\frac{2}{2v^{2}+1}\\ dv  \\\\ &= -\\tan^{-1}v+\\int \\frac{1}{v^{2}+1/2}\\ dv  \\\\ &= -\\tan^{-1}v+\\sqrt{2}\\tan^{-1}\\left(\\sqrt{2}v\\right)  \\\\ &= -t+\\sqrt{2}\\tan^{-1}\\left(\\sqrt{2}\\tan t\\right)  \\\\ &= -\\sin^{-1}\\left(\\tan x\\right)+\\sqrt{2}\\tan^{-1}\\left(\\frac{\\sqrt{2}\\tan x}{\\sqrt{1-\\tan^{2}x}}\\right)-c\\end{align*}"
           }
         ]
       }

@@ -40,6 +40,6 @@ img {
 
 ::selection {
   color: white !important;
-  background: #3c8dbc !important;  // fallback
+  background: $col-prot-fallback !important;  // fallback
   background: $col-prot !important;
 }

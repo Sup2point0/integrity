@@ -38,7 +38,7 @@ header {
 .info {
   padding: 2rem 0 2rem;
   text-align: center;
-  border-bottom: 1px solid #dedede;  // fallback
+  border-bottom: 1px solid $col-line-fallback;
   border-bottom: 1px solid $col-line;
 }
 

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-02-09",
+    "exported": "2025-02-10",
     "file_count": 16,
     "page_count": 15
   },
@@ -304,7 +304,7 @@
     },
     "guides/integrals/everything-anything.md": {
       "path": "guides/integrals/everything-anything.md",
-      "last_deploy": "2025-02-08 09:08:10 +0000",
+      "last_deploy": "2025-02-09 14:10:44 +0000",
       "slocs": 223,
       "chars": 5498,
       "isIndex": false,
@@ -316,8 +316,8 @@
       "dest": "guides/integrals/everything-anything",
       "title": "Everything & Anything",
       "head": "Everything & Anything",
-      "capt": "The prime pntegrator’s standard arsenal",
-      "desc": "The prime pntegrator’s standard arsenal",
+      "capt": "The prime integrator’s standard arsenal",
+      "desc": "The prime integrator’s standard arsenal",
       "index": [
         "guides",
         "integrals"

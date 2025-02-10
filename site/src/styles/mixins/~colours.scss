@@ -33,10 +33,19 @@ $col-clicky-click: light-dark(
   oklch(95% 0 0),
   oklch(30% 0 0));
 
-  // less intense interaction colours for larger clickable parts
+// less intense interaction colours for larger clickable parts
 $col-card-hover: light-dark(
   oklch(99% 0 0),
   oklch(22% 0 0));
 $col-card-click: light-dark(
   oklch(96% 0 0),
   oklch(28% 0 0));
+
+
+// fallbacks
+$col-prot-fallback: #4d9dcd;
+$col-deut-fallback: #f07d1c;
+$col-text-fallback: #000000;
+$col-text-deut-fallback: #a6b0b6;
+$col-line-fallback: #dedede;
+$col-nav-fallback: rgb(white, 60%);

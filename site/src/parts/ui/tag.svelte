@@ -34,7 +34,7 @@ button.tag {
   @include font-ui;
   color: white;
   font-size: 90%;
-  background: #3c8dbc;  // fallback
+  background: $col-prot-fallback;
 
   &.prot{ background: $col-prot; }
   &.deut { background: $col-deut; }

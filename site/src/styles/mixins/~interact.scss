@@ -24,7 +24,7 @@
   }
   
   &:focus-visible:not(:active) {
-    outline: 1px solid #3c8dbc;  // fallback
+    outline: 1px solid $col-prot-fallback;
     outline: 1px solid $col-prot;
   }
 }

@@ -43,7 +43,7 @@ let { text, value, toggle }: Props = $props();
 
   &.active {
     color: white;
-    background: #3c8dbc;  // fallback
+    background: $col-prot-fallback;
     background: $col-prot;
     border: 1px solid $col-prot;
     box-shadow: none;

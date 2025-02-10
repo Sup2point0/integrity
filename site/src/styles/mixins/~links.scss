@@ -2,13 +2,13 @@
 
 
 @mixin link {
-  color: #3c8dbc;  // fallback
+  color: $col-prot-fallback;
   color: $col-prot;
   text-decoration: none;
   transition: color 0.12s ease-out;
 
   &:hover, &:focus {
-    color: #f07d1c;  // fallback
+    color: $col-deut-fallback;
     color: $col-deut;
   }
 }
@@ -24,7 +24,7 @@
     left: 0.2em;
     width: calc(100% - 0.4em);
     height: 1px;
-    background: #3c8dbc;  // fallback
+    background: $col-prot-fallback;
     background: $col-prot;
     transform: scaleX(1);
     transform-origin: center;
@@ -35,7 +35,7 @@
     &:after {
       width: 100%;
       left: 0;
-      background: #f07d1c;  // fallback
+      background: $col-deut-fallback;
       background: $col-deut;
       transform: scaleX(1.02)
     }

@@ -126,7 +126,7 @@ aside.overlay {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background: #3c8dbc;  // fallback
+  background: $col-prot-fallback;
   background: light-dark(
     $col-prot,
     color-mix(in oklch, $col-prot, black 25%)
