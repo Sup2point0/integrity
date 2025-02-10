@@ -14,7 +14,7 @@ methods:
 
 ## Question
 ```math
-\int \frac{x^{3}}{x^{4}-6x^{2}+5}dx
+\int \frac{x^{3}}{x^{4}-6x^{2}+5}\ dx
 ```
 
 
@@ -38,7 +38,7 @@ methods:
 ### Factorise
 ```math
 \begin{align*}
-  &= \int \frac{x^{3}}{x^{4}-6x^{2}+5}dx
+  &= \int \frac{x^{3}}{x^{4}-6x^{2}+5}\ dx
   \\ &= \frac{1}{2}\int \frac{x^{2}\cdot2x}{\left(x^{2}-1\right)\left(x^{2}-5\right)}\ dx
 \end{align*}
 ```
