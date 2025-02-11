@@ -6,6 +6,7 @@ import { metadata as page } from "./~content.svx";
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
+import PreReading from "#parts/page/pre-reading.svelte";
 import ArticleArray from "#parts/page/article-array.svelte";
 
 </script>
@@ -23,12 +24,12 @@ import ArticleArray from "#parts/page/article-array.svelte";
 
 <Header {page} />
 
-<article>
-  <!-- <PreReading>
-    <Link text="Integration by Parts" intern="guides/integrals/methods/parts" />
-    <Link text="General Substitution" intern="guides/integrals/methods/sub" />
-  </PreReading> -->
+<PreReading paths={[
+  "guides/integrals/methods/parts.md",
+  "guides/integrals/methods/sub.md",
+]} />
 
+<article>
   <Content />
 
   <aside>

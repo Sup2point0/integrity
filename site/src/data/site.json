@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-02-10",
+    "exported": "2025-02-11",
     "file_count": 16,
     "page_count": 15
   },
@@ -166,13 +166,12 @@
     },
     "guides/integrals/antiderivatives/ln.md": {
       "path": "guides/integrals/antiderivatives/ln.md",
-      "last_deploy": "2025-01-31 15:17:00 +0000",
-      "slocs": 75,
-      "chars": 2665,
+      "last_deploy": "2025-02-11 09:49:50 +0000",
+      "slocs": 201,
+      "chars": 6943,
       "isIndex": false,
       "flags": [
-        "live",
-        "dev"
+        "live"
       ],
       "dest": "guides/integrals/antiderivatives/ln",
       "title": "Integrating the Logarithm",
@@ -189,8 +188,8 @@
         "integrals",
         "antiderivatives"
       ],
-      "date": "2025-01-30",
-      "date_display": "2025 January 30"
+      "date": "2025-02-11",
+      "date_display": "2025 February 11"
     },
     "guides/integrals/antiderivatives/power-rule.md": {
       "path": "guides/integrals/antiderivatives/power-rule.md",
@@ -440,9 +439,9 @@
     },
     "guides/integrals/why.md": {
       "path": "guides/integrals/why.md",
-      "last_deploy": "2025-01-22 20:42:53 +0000",
+      "last_deploy": "2025-02-11 09:20:18 +0000",
       "slocs": 30,
-      "chars": 3551,
+      "chars": 3590,
       "isIndex": false,
       "flags": [
         "live",
