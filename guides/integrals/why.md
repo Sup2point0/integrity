@@ -11,7 +11,7 @@ There are few other places in maths where you will find such a tremendous overla
 
 I used to despise integration – oh, I thought I did – but no, what I despised was the *thought* of integration. If you only pass that initial hurdle of fear and unfamiliarity, you will find yourself atop a summit overlooking swathes of mathematical landscapes awaiting exploration. The rays of dawn will never have felt so vitalising upon your skin.
 
-Integration is the pinnacle of mathematical problem solving. If you are a fan of thinking, then you will surely enjoy integration. If you like logic puzzles, then integration isn’t too far off; you’ve just got a couple more symbols to worry about. If you’re into shooter games, then, eh, still a nonzero probability you’ll like integration.
+Integration is the pinnacle of mathematical problem solving. If you are a fan of thinking, then you will surely enjoy integration. If you like logic puzzles, then integration isn’t too far off; you’ve just got a couple more symbols to worry about. If you’re into hyper-realistic real-time 1st-person shooter games, then... eh, still a nonzero probability you’ll like integration.
 
 If differentiation is but a water molecule, then integration is the seven oceans, with tides that shape the shore of your understanding, and more chaos to float your boat than you could ever imagine. The uncertainty of the blue waters staring back at you may cast terror into your heart, but with nought but a few days at sea, it will soon start to feel like home.
 
