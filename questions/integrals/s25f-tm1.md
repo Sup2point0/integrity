@@ -10,7 +10,7 @@ tags:
 methods:
   - spot
 flags:
-  - featcd s
+  - feat
 ---
 
 
