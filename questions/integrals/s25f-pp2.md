@@ -19,7 +19,7 @@ methods:
 
 ## Answer
 ```math
-
+\frac{1}{8}\left(x^{2}+5\right)^{4}\left(\ln x\right)-\frac{1}{64}x^{8}-\frac{5}{12}x^{6}-\frac{75}{16}x^{4}-\frac{250}{8}x^{2}-\frac{625}{8}\ln x-c
 ```
 
 

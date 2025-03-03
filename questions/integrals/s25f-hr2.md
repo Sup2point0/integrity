@@ -19,7 +19,7 @@ methods:
 
 ## Answer
 ```math
-
+\frac{17}{2}x^{2/17}\sec\left(x^{1/17}\right)^{2}-17x^{1/17}\tan\left(x^{1/17}\right)-17\ln\left(\cos\left(x^{1/17}\right)\right)-c
 ```
 
 
