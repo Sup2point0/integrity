@@ -2380,6 +2380,38 @@
         }
       ]
     },
+    "s25f-ca1": {
+      "topic": "integrals",
+      "title": "fits",
+      "desc": null,
+      "date": "2025 January 29",
+      "tags": [
+        "frac",
+        "trig"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-ca1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { 2 + x + \\sec{x} + \\sec{x}\\tan{x} }    { 1 + x + \\sec{x} }\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "x+\\ln\\left(1+x+\\sec x\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{2+x+\\sec x+\\sec x\\tan x}{1+x+\\sec x}\\ dx  \\\\ =&\\ \\int \\frac{1+x+\\sec x}{1+x+\\sec x}+\\frac{1+\\sec x\\tan x}{1+x+\\sec x}\\ dx  \\\\ =&\\ \\int 1+\\frac{1+\\sec x\\tan x}{1+x+\\sec x}\\ dx  \\\\ =&\\ x+\\ln\\left(1+x+\\sec x\\right)-c\\end{align*}"
+        }
+      ]
+    },
     "s25f-cc1": {
       "topic": "integrals",
       "title": "dreadnought",
@@ -2843,6 +2875,65 @@
         ]
       }
     },
+    "s25f-ev1": {
+      "topic": "integrals",
+      "title": "evaporation",
+      "desc": null,
+      "date": "2025 February 13",
+      "tags": [
+        "frac"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-ev1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left(    1 + \\frac{1}{x}  \\right)  \\left(    x + \\frac{1}{x}  \\right)  \\left(    \\frac{x^2 + 1}{x}  \\right)  \\left(    1 - \\frac{1}{x}  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Which terms can you combine?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Can you obtain 2 terms with a particular relationship?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Said relationship facilitates a substitution..."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{3}\\left(x+\\frac{1}{x}\\right)^{3}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(1+\\frac{1}{x}\\right)\\left(x+\\frac{1}{x}\\right)\\left(\\frac{x^{2}+1}{x}\\right)\\left(1-\\frac{1}{x}\\right)\\ dx  \\\\ =&\\ \\int \\left(1+\\frac{1}{x}\\right)\\left(1-\\frac{1}{x}\\right)\\cdot\\left(x+\\frac{1}{x}\\right)\\left(\\frac{x^{2}+1}{x}\\right)\\ dx  \\\\ =&\\ \\int \\left(1-\\frac{1}{x^{2}}\\right)\\cdot\\left(x+\\frac{1}{x}\\right)\\left(\\frac{x^{2}+1}{x}\\right)\\ dx  \\\\ =&\\ \\int \\left(1-\\frac{1}{x^{2}}\\right)\\cdot\\left(x+\\frac{1}{x}\\right)\\left(x+\\frac{1}{x}\\right)\\ dx  \\\\ =&\\ \\int \\left(1-\\frac{1}{x^{2}}\\right)\\left(x+\\frac{1}{x}\\right)^{2}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int t^{2}\\ dt  \\\\ &= \\frac{1}{3}t^{3}  \\\\ &= \\frac{1}{3}\\left(x+\\frac{1}{x}\\right)^{3}-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-ex1": {
       "topic": "integrals",
       "title": "abnormal",
@@ -2929,6 +3020,53 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= -\\frac{1}{3}\\int \\sqrt{t}\\ dt  \\\\ &= -\\frac{1}{3}\\cdot\\frac{2}{3}t^{3/2}  \\\\ &= -\\frac{2}{9}\\left(1-e^{3x}\\right)^{3/2}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ex3": {
+      "topic": "integrals",
+      "title": "exactly what I mean",
+      "desc": null,
+      "date": "2025 February 14",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-ex3",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  x\\tan{x} + \\ln(\\sec{x})\\ dx = x \\ln(\\cos{x})"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Do you notice anything about both expressions?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-x\\ln\\left(\\cos x\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int x\\tan x+\\ln\\left(\\sec x\\right)\\ dx  \\\\ =&\\ \\int x\\cdot\\frac{\\sin x}{\\cos x}+\\ln\\left(\\frac{1}{\\cos x}\\right)\\ dx  \\\\ =&\\ \\int x\\cdot\\frac{\\sin x}{\\cos x}-\\ln\\left(\\cos x\\right)\\ dx  \\\\ =&\\ -\\int x\\cdot\\frac{-\\sin x}{\\cos x}+\\ln\\left(\\cos x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "inverse product rule": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{d}{dx}\\ x\\ln\\left(\\cos x\\right) &= \\ln\\left(\\cos x\\right)+x\\cdot\\frac{1}{\\cos x}\\cdot-\\sin x  \\\\ \\int \\ln\\left(\\cos x\\right)+x\\cdot\\frac{1}{\\cos x}\\cdot-\\sin x &= x\\ln\\left(\\cos x\\right)  \\\\ -\\int x\\cdot\\frac{-\\sin x}{\\cos x}+\\ln\\left(\\cos x\\right)\\ dx &= -x\\ln\\left(\\cos x\\right)-c\\end{align*}"
           }
         ]
       }
@@ -3129,6 +3267,112 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &\\ \\int \\frac{\\sec x}{\\sec x-\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\sec x\\right)\\left(\\sec x+\\tan x\\right)}{\\left(\\sec x-\\tan x\\right)\\left(\\sec x+\\tan x\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\sec x\\tan x}{\\sec^{2}x-\\tan^{2}x}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\sec x\\tan x}{1}\\ dx  \\\\ =&\\ \\int \\sec^{2}x\\ dx+\\int \\sec x\\tan x\\ dx  \\\\ =&\\ \\tan x+\\sec x-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-fv1": {
+      "topic": "integrals",
+      "title": "blossom",
+      "desc": null,
+      "date": "2025 February 6",
+      "tags": [
+        "frac",
+        "poly"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-fv1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left(    \\frac{1}{x} + \\frac{1}{x^3}  \\right)^3\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Can you factorise anything out?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Can you factorise anything out further?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What pops out on the outside?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{1}{8}\\left(1+\\frac{1}{x^{2}}\\right)^{4}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(\\frac{1}{x}+\\frac{1}{x^{3}}\\right)^{3}\\ dx  \\\\ =&\\ \\int \\left(\\frac{1}{x}\\left(1+\\frac{1}{x^{2}}\\right)\\right)^{3}\\ dx  \\\\ =&\\ \\int \\frac{1}{x^{3}}\\left(1+\\frac{1}{x^{2}}\\right)^{3}\\ dx  \\\\ =&\\ -\\frac{1}{2}\\int -\\frac{2}{x^{3}}\\left(1+\\frac{1}{x^{2}}\\right)^{3}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1+\\frac{1}{x^{2}} & =t  \\\\ -\\frac{2}{x^{3}}\\ dx & =dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\frac{1}{2}\\int t^{3}\\ dt  \\\\ &= -\\frac{1}{8}t^{4}  \\\\ &= -\\frac{1}{8}\\left(1+\\frac{1}{x^{2}}\\right)^{4}-c\\end{align*}"
+          }
+        ]
+      },
+      "alternates": {
+        "trigonometric substitution": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(\\frac{1}{x}+\\frac{1}{x^{3}}\\right)^{3}\\ dx  \\\\ =&\\ \\int \\left(\\frac{x^{2}+1}{x^{3}}\\right)^{3}\\ dx\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Sometimes, this can be less hassle."
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x &= \\tan{t}  \\\\ dx &= \\sec^2{t} \\ dt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Here, not so much."
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\left(\\frac{\\tan^{2}t+1}{\\tan^{3}t}\\right)^{3}\\cdot\\sec^{2}t\\ dt  \\\\ &= \\int \\left(\\frac{\\sec^{2}t}{\\tan^{3}t}\\right)^{3}\\cdot\\sec^{2}t\\ dt  \\\\ &= \\int \\left(\\frac{1}{\\cos^{2}t}\\cdot\\frac{\\cos^{3}t}{\\sin^{3}t}\\right)^{3}\\cdot\\frac{1}{\\cos^{2}t}\\ dt  \\\\ &= \\int \\frac{\\cos^{3}t}{\\sin^{9}t}\\cdot\\frac{1}{\\cos^{2}t}dt  \\\\ &= \\int \\frac{\\cos t}{\\sin^{9}t}\\ dt  \\\\ &= \\int \\cot t\\csc^{8}t\\ dt  \\\\ &= -\\int \\left(-\\csc t\\cot t\\right)\\left(\\csc t\\right)^{7}\\ dt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Inverse chain rule:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\csc{t} &= v  \\\\ -\\csc{t} \\cot{t} \\ dt &= dv\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Finally:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\int v^{7}\\ dv  \\\\ &= -\\frac{1}{8}v^{8}  \\\\ &= -\\frac{1}{8}\\left(\\csc t\\right)^{8}  \\\\ &= -\\frac{1}{8}\\left(\\frac{\\sqrt{x^{2}+1}}{x}\\right)^{8}  \\\\ &= -\\frac{1}{8}\\left(\\frac{x^{2}+1}{x^{2}}\\right)^{4}  \\\\ &= -\\frac{1}{8}\\left(1+\\frac{1}{x^{2}}\\right)^{4}-c\\end{align*}"
           }
         ]
       }
@@ -3392,6 +3636,52 @@
           {
             "kind": "text",
             "content": "Note: you’ll need to enable complex mode in Desmos to check this."
+          }
+        ]
+      }
+    },
+    "s25f-hr2": {
+      "topic": "integrals",
+      "title": "like it or not",
+      "desc": null,
+      "date": "2025 February 27",
+      "tags": [
+        "frac",
+        "trig"
+      ],
+      "methods": [
+        "work"
+      ],
+      "shard": "s25f-hr2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{1}{x^{14/17}}\\sec\\left(x^{1/17}\\right)^{2}\\tan\\left(x^{1/17}\\right)\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{17}{2}x^{2/17}\\sec\\left(x^{1/17}\\right)^{2}-17x^{1/17}\\tan\\left(x^{1/17}\\right)-17\\ln\\left(\\cos\\left(x^{1/17}\\right)\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{1/17} &= t  \\\\ x &= t^{17}  \\\\ dx &= 17t^{16}\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{x^{14/17}}\\sec\\left(x^{1/17}\\right)^{2}\\tan\\left(x^{1/17}\\right)\\ dx  \\\\ =&\\ \\int x^{-14/17}\\sec\\left(t\\right)^{2}\\tan\\left(t\\right)\\cdot17t^{16}\\ dt  \\\\ =&\\ 17\\int \\left(x^{1/17}\\right)^{-14}\\sec\\left(t\\right)^{2}\\tan\\left(t\\right)\\cdot t^{16}\\ dt  \\\\ =&\\ 17\\int t^{-14}\\sec\\left(t\\right)^{2}\\tan\\left(t\\right)\\cdot t^{16}\\ dt  \\\\ =&\\ 17\\int t^{2}\\sec^{2}t\\tan t\\ dt\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 17\\left(t^{2}\\cdot\\frac{1}{2}\\sec^{2}t-\\int 2t\\cdot\\frac{1}{2}\\sec^{2}t\\ dt\\right)  \\\\ &= 17\\left(\\frac{1}{2}t^{2}\\sec^{2}t-\\int t\\sec^{2}t\\ dt\\right)  \\\\ &= 17\\left(\\frac{1}{2}t^{2}\\sec^{2}t-\\left(t\\tan t-\\int \\tan t\\ dt\\right)\\right)  \\\\ &= 17\\left(\\frac{1}{2}t^{2}\\sec^{2}t-\\left(t\\tan t+\\ln\\left(\\cos t\\right)\\right)\\right)  \\\\ &= 17\\left(\\frac{1}{2}t^{2}\\sec^{2}t-t\\tan t-\\ln\\left(\\cos t\\right)\\right)  \\\\ &= \\frac{17}{2}x^{2/17}\\sec\\left(x^{1/17}\\right)^{2}-17x^{1/17}\\tan\\left(x^{1/17}\\right)-17\\ln\\left(\\cos\\left(x^{1/17}\\right)\\right)-c\\end{align*}"
           }
         ]
       }
@@ -3864,6 +4154,221 @@
         }
       ]
     },
+    "s25f-lv3": {
+      "topic": "integrals",
+      "title": "what do you mean you don’t want to integrate",
+      "desc": "Happy Valentine’s day!",
+      "date": "2025 February 14",
+      "tags": [
+        "horror",
+        "frac",
+        "poly",
+        "exp",
+        "trig"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "flags": [
+        "feat"
+      ],
+      "shard": "s25f-lv3",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left[    \\frac      { 1 + x \\sin{x} }      { \\cos{x} }  \\right]  \\left[<br><br>  \\frac    { x^5 \\sec(x)^2 }    { 2 \\pi }  \\exp\\left(    \\frac{4}{3} \\pi x^3 \\int_{0}^{\\infin}      \\frac        { \\ln{y} }        { 1 + y^2 }    \\ dy  \\right)  +  \\frac    { x^3 \\sec(x)^2 }    { \\pi }  \\exp\\left(    4 \\pi x^2 \\int_{\\infin}^{0}      \\frac        { \\ln{y} }        { 1 + y^2 }    \\ dy  \\right)<br><br>  \\right]\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Take a breath."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You look beautiful today."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Start by evaluating the inner integral?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{12\\pi}x^{4}\\sec^{4}x\\left(3+x^{2}\\sec^{2}x\\right)-c"
+        }
+      ],
+      "solution": {
+        "_": [
+          {
+            "kind": "text",
+            "content": "Hehehehehehehehehe.<br><br>Yes.<br><br>Before we dive in, let’s analyse the structure of the integral a bit. There’s a lot of junk here, especially suspicious junk like $\\pi x^3$ and $\\pi x ^ 2$. There also seems to be a lot of factorising we could do with all the $x$ terms and trig functions.<br><br>The thing that probably jumps out most is the nested integral. Notice that this is a definite integral, so it’ll just collapse to a constant. Let’s start by evaluating that integral."
+          }
+        ],
+        "inner integral": [
+          {
+            "kind": "latex",
+            "content": "\\int_{0}^{\\infty}\\frac{\\ln y}{1+y^{2}}\\ dy"
+          },
+          {
+            "kind": "text",
+            "content": "Trying to evaluate this integral indefinitely doesn’t work (you can try exp or trig sub, but they won’t lead anywhere), so there must be a trick for evaluating it definitely. A common trick with definite integrals involving $\\ln{x}$ is to substitute $x = 1/t$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x &= \\frac{1}{t}\\ \\to\\ t=\\frac{1}{x}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "When we substitute this in (remember to change our limits), something interesting happens:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\infty}^{0}\\frac{\\ln\\left(\\frac{1}{t}\\right)}{1+\\left(\\frac{1}{t}\\right)^{2}}\\cdot-\\frac{1}{t^{2}}\\ dt  \\\\ &= -\\int_{\\infty}^{0}\\frac{\\ln\\left(t^{-1}\\right)}{1+\\frac{1}{t^{2}}}\\cdot\\frac{1}{t^{2}}\\ dt  \\\\ &= -\\int_{\\infty}^{0}\\frac{-\\ln t}{t^{2}+1}\\ dt  \\\\ &= \\int_{\\infty}^{0}\\frac{\\ln t}{1+t^{2}}\\ dt  \\\\ &= -\\int_{0}^{\\infty}\\frac{\\ln t}{1+t^{2}}\\ dt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Note that the integrating variable in an integral can be anything – it doesn’t matter if it’s $x$ or $t$. So this is identical to our original integral, but negative:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\int_{0}^{\\infty}\\frac{\\ln x}{1+x^{2}}\\ dx &= -\\int_{0}^{\\infty}\\frac{\\ln t}{1+t^{2}}\\ dx  \\\\ I &= -I\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "What does this tell us? Well, the only real number which equals itself is $0$ – hence the integral must evaluate to $0$."
+          },
+          {
+            "kind": "latex",
+            "content": "\\int_{0}^{\\infty}\\frac{\\ln x}{1+x^{2}}\\ dx=0"
+          }
+        ],
+        "product rule": [
+          {
+            "kind": "text",
+            "content": "Well, this certainly simplifies things a lot. Both exponents of $e$ just collapse to $0$, giving:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\int \\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\right]\\ dx"
+          },
+          {
+            "kind": "text",
+            "content": "Let’s simplify the left bracket, and pull out the $\\pi$ coefficients:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\left[\\frac{\\cos x}{\\cos x}+\\frac{x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\right]\\ dx  \\\\ &= \\int \\left[1+x\\tan x\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\right]\\ dx  \\\\ &= \\frac{1}{2\\pi}\\int \\left[1+x\\tan x\\right]\\left[x^{5}\\sec\\left(x\\right)^{6}+2x^{3}\\sec\\left(x\\right)^{4}\\right]\\ dx\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Given the prevalence of $x$ and $\\sec(x)$-s, there’s a good chance we can try a substitution $x \\sec{x} = t$."
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x\\sec x &= t  \\\\ \\left(\\sec x+x\\sec x\\tan x\\right)\\ dx &= dt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "We can make the expression for $dt$ in our integrand by pulling out a factor of $\\sec{x}$ from the right bracket:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2\\pi}\\int \\left[1+x\\tan x\\right]\\left[\\sec x\\right]\\left[x^{5}\\sec\\left(x\\right)^{5}+2x^{3}\\sec\\left(x\\right)^{3}\\right]\\ dx  \\\\ &= \\frac{1}{2\\pi}\\int \\left[\\sec x+x\\sec x\\tan x\\right]\\left[x^{5}\\sec\\left(x\\right)^{5}+2x^{3}\\sec\\left(x\\right)^{3}\\right]\\ dx\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "And would you look at that, the powers of $x$ and $\\sec{x}$ match up perfectly. So, making our substitution:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2\\pi}\\int \\left[x^{5}\\sec\\left(x\\right)^{5}+2x^{3}\\sec\\left(x\\right)^{3}\\right]\\ dt  \\\\ &= \\frac{1}{2\\pi}\\int \\left[\\left(x\\sec x\\right)^{5}+2\\left(x\\sec x\\right)^{3}\\right]\\ dt  \\\\ &= \\frac{1}{2\\pi}\\int t^{5}+2t^{3}\\ dt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Home straight from here."
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\frac{1}{2\\pi}\\int t^{5}+2t^{3}\\ dt  \\\\ =&\\ \\frac{1}{2\\pi}\\left(\\frac{1}{6}t^{6}+\\frac{1}{2}t^{4}\\right)  \\\\ =&\\ \\frac{1}{12\\pi}t^{4}\\left(t^{2}+3\\right)  \\\\ =&\\ \\frac{1}{12\\pi}\\left(x\\sec x\\right)^{4}\\left(\\left(x\\sec x\\right)^{2}+3\\right)  \\\\ =&\\ \\frac{1}{12\\pi}x^{4}\\sec^{4}x\\left(3+x^{2}\\sec^{2}x\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-nb1": {
+      "topic": "integrals",
+      "title": "kurtosis",
+      "desc": null,
+      "date": "2025 January 10",
+      "tags": [
+        "frac",
+        "poly",
+        "sqrt"
+      ],
+      "methods": [
+        "trig sub"
+      ],
+      "shard": "s25f-nb1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{x^{31}}{\\sqrt{4-x^{16}}}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{1}{24}\\sqrt{4-x^{16}}\\left(x^{16}+8\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{16} &= 4\\sin^{2}t  \\\\ 16x^{15}\\ dx &= 8\\sin t\\cos t\\ dt  \\\\ dx &= \\frac{1}{2x^{15}}\\sin t\\cos t\\ dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x^{31}}{\\sqrt{4-x^{16}}}\\ dx  \\\\ =&\\ \\int \\frac{x^{16}\\cdot x^{15}}{\\sqrt{4-x^{16}}}\\cdot\\frac{1}{2x^{15}}\\sin t\\cos t\\ dt  \\\\ =&\\ \\frac{1}{2}\\int \\frac{4\\sin^{2}t}{\\sqrt{4-4\\sin^{2}t}}\\cdot\\sin t\\cos t\\ dt  \\\\ =&\\ \\frac{4}{2}\\int \\frac{\\sin^{2}t}{2\\cos t}\\cdot\\sin t\\cos t\\ dt  \\\\ =&\\ \\int \\sin^{3}t\\ dt  \\\\ =&\\ \\int \\left(\\sin t\\right)\\left(\\sin^{2}t\\right)\\ dt  \\\\ =&\\ -\\int \\left(-\\sin t\\right)\\left(1-\\cos^{2}t\\right)\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\cos t &= v  \\\\ -\\sin t\\ dt &= dv\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\int 1-v^{2}\\ dv  \\\\ &= -v+\\frac{1}{3}v^{3}  \\\\ &= v\\left(\\frac{1}{3}v^{2}-1\\right)  \\\\ &= \\left(\\cos t\\right)\\left(\\frac{1}{3}\\left(\\cos t\\right)^{2}-1\\right)  \\\\ &= \\left(\\cos t\\right)\\left(\\frac{1}{3}\\cos^{2}t-\\frac{1}{3}-\\frac{2}{3}\\right)  \\\\ &= \\left(\\cos t\\right)\\left(\\frac{1}{3}\\left(\\cos^{2}t-1\\right)-\\frac{2}{3}\\right)  \\\\ &= \\left(\\cos t\\right)\\left(-\\frac{1}{3}\\sin^{2}t-\\frac{2}{3}\\right)  \\\\ &= -\\frac{1}{3}\\left(\\cos t\\right)\\left(\\sin^{2}t+2\\right)\\end{align*}"
+          }
+        ],
+        "reformulate": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{16} &= 4\\sin^{2}t  \\\\ x^{8} &= 2\\sin t  \\\\ \\sin t &= \\frac{1}{2}x^{8}  \\\\ \\cos t &= \\sqrt{1-\\sin^2{t}}  \\\\ \\cos t &= \\sqrt{1-\\frac{1}{4}x^{16}}\\end{align*}"
+          }
+        ],
+        "solve (3)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\frac{1}{3}\\sqrt{1-\\frac{1}{4}x^{16}}\\left(\\frac{1}{4}x^{16}+2\\right)  \\\\ &= -\\frac{1}{6}\\sqrt{4-x^{16}}\\left(\\frac{1}{4}x^{16}+2\\right)  \\\\ &= -\\frac{1}{24}\\sqrt{4-x^{16}}\\left(x^{16}+8\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-nx1": {
       "topic": "integrals",
       "title": "neurotic",
@@ -4125,7 +4630,7 @@
       "answer": [
         {
           "kind": "latex",
-          "content": ""
+          "content": "\\frac{1}{8}\\left(x^{2}+5\\right)^{4}\\left(\\ln x\\right)-\\frac{1}{64}x^{8}-\\frac{5}{12}x^{6}-\\frac{75}{16}x^{4}-\\frac{250}{8}x^{2}-\\frac{625}{8}\\ln x-c"
         }
       ],
       "solution": {
@@ -4445,7 +4950,7 @@
         "2": [
           {
             "kind": "text",
-            "content": "You can do a compound substitution of $\\tan{x} = \\sin{x}$."
+            "content": "You can do a compound substitution of $\\tan{x} = \\sin{t}$."
           }
         ],
         "3": [
@@ -4482,7 +4987,7 @@
       "answer": [
         {
           "kind": "latex",
-          "content": "-\\sin^{-1}\\left(\\tan x\\right)+\\sqrt{2}\\tan^{-1}\\left(\\frac{\\sqrt{2}\\tan x}{\\sqrt{1-\\tan^{2}x}}\\right)-c"
+          "content": "\\sqrt{2}\\tan^{-1}\\left(\\frac{\\sqrt{2}\\tan x}{\\sqrt{1-\\tan^{2}x}}\\right)-\\sin^{-1}\\left(\\tan x\\right)-c"
         }
       ],
       "solution": {
@@ -4512,60 +5017,60 @@
         ],
         "factor theorem": [
           {
+            "kind": "text",
+            "content": "Write $v^2 = w$ for convenience."
+          },
+          {
             "kind": "latex",
-            "content": "\\begin{align*}  v^2 = w  \\\\ \\Rightarrow \\int \\frac{1}{2v^{4}+3v^{2}+1}\\ dv    &= \\int \\frac{1}{2w^{2}+3w+1}\\ dv\\end{align*}"
+            "content": "\\frac{1}{2v^{4}+3v^{2}+1}=\\frac{1}{2w^{2}+3w+1}"
           },
           {
             "kind": "text",
-            "content": "$w = -1$ is a solution to $2w^2 + 3w + 1 = 0$, therefore $(w + 1)$ is a factor:"
+            "content": "$w = -1$ is a solution to $2w^\" + 3w + 1 = 0$, therefore $(w + 1)$ is a factor:"
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  \\int \\frac{1}{2w^{2}+3w+1}\\ dv    &= \\int \\frac{1}{\\left(w+1\\right)\\left(2w+1\\right)}\\ dv  \\\\ &= \\int \\frac{1}{\\left(v^{2}+1\\right)\\left(2v^{2}+1\\right)}\\ dv\\end{align*}"
+            "content": "\\frac{1}{2w^{2}+3w+1} = \\frac{1}{\\left(w+1\\right)\\left(2w+1\\right)}"
           }
         ],
         "partial fractions": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  \\frac{1}{\\left(v^{2}+1\\right)\\left(2v^{2}+1\\right)}    &= \\frac{pv+q}{v^{2}+1}+\\frac{rv+s}{2v^{2}+1}  \\\\ 1 &= \\left(pv+q\\right)\\left(2v^{2}+1\\right)+\\left(rv+s\\right)\\left(v^{2}+1\\right)  \\\\ 1 &= pv\\left(2v^{2}+1\\right)+q\\left(2v^{2}+1\\right)+rv\\left(v^{2}+1\\right)+s\\left(v^{2}+1\\right)\\end{align*}"
+            "content": "\\begin{align*}  \\frac{1}{\\left(w+1\\right)\\left(2w+1\\right)}    &= \\frac{p}{w+1}+\\frac{q}{2w+1}  \\\\ 1 &= p\\left(2w+1\\right)+q\\left(w+1\\right)\\end{align*}"
           },
           {
             "kind": "text",
-            "content": "Let $v^2 = -1$, so $v = i$:"
+            "content": "Let $w = -1$:"
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  1 &= pi\\left(-2+1\\right)+q\\left(-2+1\\right)+0+0  \\\\ 1 &= -pi-q\\end{align*}"
+            "content": "\\begin{align*}  1 &= p\\left(-2+1\\right)  \\\\ p &= -1\\end{align*}"
           },
           {
             "kind": "text",
-            "content": "Comparing real and imaginary components gives"
+            "content": "Let $w = -1/2$:"
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  p &= 0  \\\\ q &= -1\\end{align*}"
-          },
-          {
-            "kind": "text",
-            "content": "Let $v^2 = -1/2$, so $v = i/\\sqrt{2}$:"
-          },
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  1 &= \\left(pv+q\\right)\\left(2\\cdot-\\frac{1}{2}+1\\right)+\\left(rv+s\\right)\\left(-\\frac{1}{2}+1\\right)  \\\\ 1 &= 0+\\frac{1}{2}r\\cdot\\frac{i}{\\sqrt{2}}+\\frac{1}{2}s  \\\\ 2 &= \\frac{ir}{\\sqrt{2}}+s\\end{align*}"
-          },
-          {
-            "kind": "text",
-            "content": "Comparing real and imaginary components gives"
-          },
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  r &= 0  \\\\ s &= 2\\end{align*}"
+            "content": "\\begin{align*}  1 &= q\\left(-\\frac{1}{2}+1\\right)  \\\\ q &= 2\\end{align*}"
           }
         ],
         "solve (2)": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  \\int \\frac{1}{\\left(v^{2}+1\\right)\\left(2v^{2}+1\\right)}\\ dv    &= \\int -\\frac{1}{v^{2}+1}+\\frac{2}{2v^{2}+1}\\ dv  \\\\ &= -\\tan^{-1}v+\\int \\frac{1}{v^{2}+1/2}\\ dv  \\\\ &= -\\tan^{-1}v+\\sqrt{2}\\tan^{-1}\\left(\\sqrt{2}v\\right)  \\\\ &= -t+\\sqrt{2}\\tan^{-1}\\left(\\sqrt{2}\\tan t\\right)  \\\\ &= -\\sin^{-1}\\left(\\tan x\\right)+\\sqrt{2}\\tan^{-1}\\left(\\frac{\\sqrt{2}\\tan x}{\\sqrt{1-\\tan^{2}x}}\\right)-c\\end{align*}"
+            "content": "\\begin{align*}  \\int \\frac{1}{\\left(w+1\\right)\\left(2w+1\\right)}\\ dv    &= \\int -\\frac{1}{w+1}+\\frac{2}{2w+1}\\ dv  \\\\ &= \\int \\frac{2}{2v^{2}+1}-\\frac{1}{v^{2}+1}\\ dv  \\\\ &= \\int \\frac{1}{\\frac{1}{2}+v^{2}}-\\frac{1}{1+v^{2}}\\ dv  \\\\ &= \\sqrt{2}\\tan^{-1}\\left(\\sqrt{2}v\\right)-\\tan^{-1}v  \\\\ &= \\sqrt{2}\\tan^{-1}\\left(\\sqrt{2}\\tan t\\right)-t\\end{align*}"
+          }
+        ],
+        "reformulate": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sin t &= \\tan x  \\\\ \\cos t &= \\sqrt{1-\\tan^{2}x}  \\\\ \\tan t &= \\frac{\\sin t}{\\cos t}  \\\\ &= \\frac{\\tan x}{\\sqrt{1-\\tan^{2}x}}\\end{align*}"
+          }
+        ],
+        "solve (3)": [
+          {
+            "kind": "latex",
+            "content": "=\\sqrt{2}\\tan^{-1}\\left(\\frac{\\sqrt{2}\\tan x}{\\sqrt{1-\\tan^{2}x}}\\right)-\\sin^{-1}\\left(\\tan x\\right)-c"
           }
         ]
       }
@@ -4688,6 +5193,100 @@
           "content": "\\begin{align*}  &\\ \\int -1\\ dx  \\\\ =&\\ -x-c\\end{align*}"
         }
       ]
+    },
+    "s25f-sc1": {
+      "topic": "integrals",
+      "title": "fantastically bananas",
+      "desc": null,
+      "date": "2025 February 9",
+      "tags": [
+        "trig",
+        "frag"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-sc1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { 1 + \\sin^2{x} + \\cos^2{x} - \\cot^2{x} }    { ( \\sin^2{x} + \\cos^2{x} + \\tan^2{x} )^{-1} }  \\sin(2x)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Some stuff simplifies here!"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Reducing to $\\sin$ and $\\cos$ primitives will help you spot a lot of things."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-2\\ln\\left|\\sin{2x}\\right|-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{\\sin^{2}x+\\cos^{2}x-\\cot^{2}x}{\\left(\\sin^{2}x+\\cos^{2}x+\\tan^{2}x\\right)^{-1}}\\sin\\left(2x\\right)\\ dx  \\\\ =&\\ \\int \\frac{1-\\cot^{2}x}{\\left(1+\\tan^{2}x\\right)^{-1}}\\sin\\left(2x\\right)\\ dx  \\\\ =&\\ \\int \\frac{1-\\cot^{2}x}{\\left(\\sec^{2}x\\right)^{-1}}\\sin\\left(2x\\right)\\ dx  \\\\ =&\\ \\int \\frac{1}{\\cos^{2}x}\\left(1-\\frac{\\cos^{2}x}{\\sin^{2}x}\\right)\\sin\\left(2x\\right)\\ dx  \\\\ =&\\ \\int \\frac{1}{\\cos^{2}x}\\left(\\frac{\\sin^{2}x-\\cos^{2}x}{\\sin^{2}x}\\right)\\sin\\left(2x\\right)\\ dx  \\\\ =&\\ -\\int \\frac{\\left(\\cos^{2}x-\\sin^{2}x\\right)\\sin\\left(2x\\right)}{\\left(\\cos^{2}x\\right)\\left(\\sin^{2}x\\right)}\\ dx  \\\\ =&\\ -\\int \\frac{\\cos\\left(2x\\right)\\sin\\left(2x\\right)}{\\left(\\sin x\\cos x\\right)^{2}}\\ dx  \\\\ =&\\ -4\\int \\frac{\\sin\\left(2x\\right)\\cos\\left(2x\\right)}{\\left(2\\sin x\\cos x\\right)^{2}}\\ dx  \\\\ =&\\ -4\\int \\frac{\\sin\\left(2x\\right)\\cos\\left(2x\\right)}{\\sin\\left(2x\\right)^{2}}\\ dx  \\\\ =&\\ -2\\int \\frac{2\\cos2x}{\\sin2x}\\ dx  \\\\ =&\\ -2\\ln\\left|\\sin2x\\right|-c\\end{align*}"
+        }
+      ]
+    },
+    "s25f-sc2": {
+      "topic": "integrals",
+      "title": "end it",
+      "desc": null,
+      "date": "2025 February 26",
+      "tags": [
+        "scare",
+        "poly"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-sc2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  (x^6 + \\pi)  (x^{12} + \\pi^2)  (x^{24} + \\pi^4)  (x^{29} - \\pi x^{23})\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "DOTS!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{72}x^{24}\\left(x^{48}-3\\pi^{8}\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(x^{6}+\\pi\\right)\\left(x^{12}+\\pi^{2}\\right)\\left(x^{24}+\\pi^{4}\\right)\\left(x^{29}-\\pi x^{23}\\right)\\ dx  \\\\ =&\\ \\int \\left(x^{6}+\\pi\\right)\\left(x^{12}+\\pi^{2}\\right)\\left(x^{24}+\\pi^{4}\\right)\\left(x^{6}-\\pi\\right)x^{23}\\ dx  \\\\ =&\\ \\int x^{23}\\left(x^{12}-\\pi^{2}\\right)\\left(x^{12}+\\pi^{2}\\right)\\left(x^{24}+\\pi^{4}\\right)\\ dx  \\\\ =&\\ \\int x^{23}\\left(x^{24}-\\pi^{4}\\right)\\left(x^{24}+\\pi^{4}\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{24}\\int \\left(t-\\pi^{4}\\right)\\left(t+\\pi^{4}\\right)\\ dt  \\\\ &= \\frac{1}{24}\\int t^{2}-\\pi^{8}\\ dt  \\\\ &= \\frac{1}{72}t^{3}-\\frac{\\pi^{8}}{24}t  \\\\ &= \\frac{1}{72}t\\left(t^{2}-3\\pi^{8}\\right)  \\\\ &= \\frac{1}{72}x^{24}\\left(x^{48}-3\\pi^{8}\\right)-c\\end{align*}"
+          }
+        ]
+      }
     },
     "s25f-sd1": {
       "topic": "integrals",
@@ -5176,7 +5775,7 @@
         "spot"
       ],
       "flags": [
-        "featcd s"
+        "feat"
       ],
       "shard": "s25f-tm1",
       "question": [
@@ -5900,6 +6499,104 @@
           }
         ]
       }
+    },
+    "s25f-zr1": {
+      "topic": "integrals",
+      "title": "deadlock",
+      "desc": null,
+      "date": "2025 January 12",
+      "tags": [
+        "horror",
+        "inverse trig",
+        "frac"
+      ],
+      "methods": [
+        "spot",
+        "tough"
+      ],
+      "shard": "s25f-zr1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{x-2x^{2}\\tan^{-1}{x}}{\\left(x^{2}+1\\right)^{2}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Does the denominator look familiar?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What might a squared denominator indicate?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Starts with “f” and rhymes with <em>tractorise</em>."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x\\tan^{-1}{x}}{x^{2}+1}-\\frac{1}{2}\\left(\\tan^{-1}{x}\\right)^{2}-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "This is quite a lot to take in.<br><br>We can guess the $(x^2 + 1)^2$ in the denominator isn’t related to substituting $tan^{-1}{x}$, since it’s been squared. But squaring a term in the denominator is reminiscent of quotient rule – and we happen to have 2 terms subtracted in the numerator too – so let’s see whether we can spot if there’s something that’s been differentiated via quotient rule.<br><br>Recall that the quotient rule is"
+        },
+        {
+          "kind": "latex",
+          "content": "\\frac{d}{dx}\\left(\\frac{f}{g}\\right)=\\frac{gf'-fg'}{g^{2}}"
+        },
+        {
+          "kind": "text",
+          "content": "We can pretty easily spot $g$ would be $x^2 + 1$. Differentiating this would give $2x$. We have $2x^2$ in the numerator, but we can factor out $x$ to give $2x$:"
+        },
+        {
+          "kind": "latex",
+          "content": "=\\int x\\cdot\\frac{1-2x\\tan^{-1}x}{\\left(x^{2}+1\\right)^{2}}\\ dx"
+        },
+        {
+          "kind": "text",
+          "content": "Looking at this, we can now guess that $f$ is $\\tan^{-1}{x}$. Let’s confirm how we would get the $1$, though. If we differentiate $f$ we obtain $\\frac{1}{x^2 + 1}$ – and what’d’y’know, this perfectly cancels with $g$ to give $1$."
+        },
+        {
+          "kind": "latex",
+          "content": "=\\int x\\cdot\\frac{\\frac{x^{2}+1}{x^{2}+1}-2x\\tan^{-1}x}{\\left(x^{2}+1\\right)^{2}}\\ dx"
+        },
+        {
+          "kind": "text",
+          "content": "So we can now apply inverse quotient rule:"
+        },
+        {
+          "kind": "latex",
+          "content": "=\\int x\\left(\\frac{d}{dx}\\left(\\frac{\\tan^{-1}x}{x^{2}+1}\\right)\\right)\\ dx"
+        },
+        {
+          "kind": "text",
+          "content": "And now, it’s gotta be parts of course!"
+        },
+        {
+          "kind": "latex",
+          "content": "=x\\cdot\\frac{\\tan^{-1}x}{x^{2}+1}-\\int \\frac{\\tan^{-1}x}{x^{2}+1}\\ dx"
+        },
+        {
+          "kind": "text",
+          "content": "Finally, we have inverse chain rule on the right, since $\\frac{1}{x^2 + 1}$ is the derivative of $\\tan^{-1}{x}$."
+        },
+        {
+          "kind": "latex",
+          "content": "=\\frac{x\\tan^{-1}x}{x^{2}+1}-\\frac{1}{2}\\left(\\tan^{-1}x\\right)^{2}-c"
+        }
+      ]
     },
     "s25i-me1": {
       "topic": "integrals",
