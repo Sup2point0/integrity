@@ -21,12 +21,12 @@ flags:
 \int
   \left[
     \frac
-      { 1 + x \sin{x} }
+      { \cos{x} + x \sin{x} }
       { \cos{x} }
   \right]
   \left[
     \frac
-      { x^5 \sec(x)^2 }
+      { x^5 \sec(x)^6 }
       { 2 \pi }
     \exp\left(
       \frac{4}{3} \pi x^3 \int_{0}^{\infin}
@@ -37,7 +37,7 @@ flags:
     \right)
     +
     \frac
-      { x^3 \sec(x)^2 }
+      { x^3 \sec(x)^4 }
       { \pi }
     \exp\left(
       4 \pi x^2 \int_{\infin}^{0}
