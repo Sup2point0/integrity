@@ -15,7 +15,7 @@ methods:
 ```math
 \int
   \frac
-    { 1 + \sin^2{x} + \cos^2{x} - \cot^2{x} }
+    { \sin^2{x} + \cos^2{x} - \cot^2{x} }
     { ( \sin^2{x} + \cos^2{x} + \tan^2{x} )^{-1} }
   \sin(2x)
 \ dx

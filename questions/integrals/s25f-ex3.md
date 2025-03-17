@@ -14,7 +14,7 @@ methods:
 ```math
 \int
   x\tan{x} + \ln(\sec{x})
-\ dx = x \ln(\cos{x})
+\ dx
 ```
 
 

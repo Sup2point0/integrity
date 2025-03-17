@@ -3985,6 +3985,12 @@
         "substitute": [
           {
             "kind": "latex",
+            "content": "\\begin{align*}  xe^{x} &= t  \\\\ e^{x}\\left(x+1\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{t}{t-1}\\ dt  \\\\ &= \\int \\frac{t-1}{t-1}+\\frac{1}{t-1}\\ dt  \\\\ &= \\int 1+\\frac{1}{t-1}\\ dt  \\\\ &= t+\\ln\\left(t-1\\right)  \\\\ &= xe^{x}+\\ln\\left(xe^{x}-1\\right)-c\\end{align*}"
           }
         ]
