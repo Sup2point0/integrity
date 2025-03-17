@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-03-03",
-    "file_count": 16,
-    "page_count": 15
+    "exported": "2025-03-17",
+    "file_count": 17,
+    "page_count": 16
   },
   "index": {
     "guides": {
@@ -379,6 +379,25 @@
         "guides",
         "integrals"
       ],
+      "date": null,
+      "date_display": null
+    },
+    "guides/integrals/methods/sub.md": {
+      "path": "guides/integrals/methods/sub.md",
+      "last_deploy": "2025-03-13 12:25:51 +0000",
+      "slocs": 127,
+      "chars": 4676,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "",
+      "title": "Substitution",
+      "head": "Substitution",
+      "capt": null,
+      "desc": null,
+      "index": [],
+      "shard": [],
       "date": null,
       "date_display": null
     },

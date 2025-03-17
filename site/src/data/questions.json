@@ -2282,6 +2282,144 @@
         ]
       }
     },
+    "s25c-pp1": {
+      "topic": "integrals",
+      "title": "RECONNECTION",
+      "desc": null,
+      "date": "2025 March 8",
+      "tags": [
+        "trig",
+        "exp"
+      ],
+      "methods": [
+        "parts"
+      ],
+      "shard": "s25c-pp1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_0^{\\pi} x \\cdot \\frac{d}{dx} \\left( \\frac{e^x+\\cos{x}}{e^x+\\sin{x}} \\right) \\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{\\pi}{2}\\left(\\frac{e^{\\pi/2}}{e^{\\pi/2}+1}\\right)-\\ln\\left(e^{\\pi/2}+1\\right)"
+        }
+      ],
+      "solution": {
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int x\\cdot\\frac{d}{dx}\\left(\\frac{e^{x}+\\cos x}{e^{x}+\\sin x}\\right)\\ dx  \\\\ =&\\ x\\cdot\\frac{e^{x}+\\cos x}{e^{x}+\\sin x}-\\int \\frac{e^{x}+\\cos x}{e^{x}+\\sin x}\\ dx  \\\\ =&\\ x\\cdot\\frac{e^{x}+\\cos x}{e^{x}+\\sin x}-\\ln\\left(e^{x}+\\sin x\\right)-c\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{0}^{\\pi/2}x\\cdot\\frac{d}{dx}\\left(\\frac{e^{x}+\\cos x}{e^{x}+\\sin x}\\right)\\ dx  \\\\ =&\\ \\left[ x\\cdot\\frac{e^{x}+\\cos x}{e^{x}+\\sin x}-\\ln\\left|e^{x}+\\sin x\\right| \\right]_0^{\\pi/2}  \\\\ =&\\ \\left[\\frac{\\pi}{2}\\cdot\\frac{e^{\\pi/2}+\\cos\\left(\\pi/2\\right)}{e^{\\pi/2}+\\sin\\left(\\pi/2\\right)}-\\ln\\left(e^{\\pi/2}+\\sin\\left(\\pi/2\\right)\\right)\\right]-\\left[0-\\ln\\left(e^{0}+\\sin\\left(0\\right)\\right)\\right]  \\\\ =&\\ \\frac{\\pi}{2}\\cdot\\frac{e^{\\pi/2}+0}{e^{\\pi/2}+1}-\\ln\\left(e^{\\pi/2}+1\\right)+\\ln\\left(1+0\\right)  \\\\ =&\\ \\frac{\\pi}{2}\\left(\\frac{e^{\\pi/2}}{e^{\\pi/2}+1}\\right)-\\ln\\left(e^{\\pi/2}+1\\right)\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-af1": {
+      "topic": "integrals",
+      "title": "afterthought",
+      "desc": null,
+      "date": "2025 February 14",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25f-af1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  x^3  \\left(    \\frac{1}{x} + \\tan{x}  \\right)  \\left(    \\sec^3{x}  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Can you group any terms together?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Can you take out something from the group?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What would go really nicely with $\\tan{x}$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{3}\\left(x\\sec x\\right)^{3}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int x^{3}\\left(\\frac{1}{x}+\\tan x\\right)\\left(\\sec^{3}x\\right)\\ dx  \\\\ =&\\ \\int \\left(x\\sec x\\right)^{3}\\left(\\frac{1}{x}+\\tan x\\right)\\ dx  \\\\ =&\\ \\int \\left(x\\sec x\\right)^{2}\\left(\\sec x+x\\sec x\\tan x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x\\sec x &= t  \\\\ \\left(\\sec x+x\\sec x\\tan x\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int t^{2}\\ dt  \\\\ &= \\frac{1}{3}t^{3}  \\\\ &= \\frac{1}{3}\\left(x\\sec x\\right)^{3}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-at1": {
+      "topic": "integrals",
+      "title": "attention is all you need",
+      "desc": null,
+      "date": "2025 March 8",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-at1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\cos(0) - \\sin(x) - \\cos(\\pi) }    { \\sin(\\pi) - \\cos(x) - \\sin(0) }\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\ln\\left(\\cos x\\right)-2\\ln\\left(\\sec x+\\tan x\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\cos\\left(0\\right)-\\sin\\left(x\\right)-\\cos\\left(\\pi\\right)}{\\sin\\left(\\pi\\right)-\\cos\\left(x\\right)-\\sin\\left(0\\right)}\\ dx  \\\\ =&\\ \\int \\frac{1-\\sin x-\\left(-1\\right)}{0-\\cos x-0}\\ dx  \\\\ =&\\ \\int \\frac{2-\\sin x}{-\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{\\sin x-2}{\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{\\sin x}{\\cos x}-\\frac{2}{\\cos x}\\ dx  \\\\ =&\\ -\\int \\frac{-\\sin x}{\\cos x}-2\\int \\sec x\\ dx  \\\\ =&\\ -\\ln\\left(\\cos x\\right)-2\\ln\\left(\\sec x+\\tan x\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-bw1": {
       "topic": "integrals",
       "title": "ammunition",
@@ -2571,6 +2709,61 @@
         ]
       }
     },
+    "s25f-cv1": {
+      "topic": "integrals",
+      "title": "Integrity’s Finest",
+      "desc": null,
+      "date": "2025 March 8",
+      "tags": [
+        "inverse trig"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-cv1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\cos^{-1}x}{\\sqrt{1-x^{2}}}-\\frac{\\sin^{-1}x}{\\sqrt{1-x^{2}}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What’s the derivative of $\\sin^{-1}{x}$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What’s the derivative of $\\cos^{-1}{x}$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\sin^{-1}x\\cos^{-1}x-c"
+        }
+      ],
+      "solution": {
+        "inverse product rule": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{d}{dx}\\left(\\sin^{-1}x\\right) &= \\frac{1}{\\sqrt{1-x^{2}}}  \\\\ \\frac{d}{dx}\\left(\\cos^{-1}x\\right) &= -\\frac{1}{\\sqrt{1-x^{2}}}  \\\\ \\frac{d}{dx}\\left(\\sin^{-1}x\\cos^{-1}x\\right) &= \\frac{\\cos^{-1}}{\\sqrt{1-x^{2}}}-\\frac{\\sin^{-1}}{\\sqrt{1-x^{2}}}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Hence"
+          },
+          {
+            "kind": "latex",
+            "content": "\\int \\frac{\\cos^{-1}}{\\sqrt{1-x^{2}}}-\\frac{\\sin^{-1}}{\\sqrt{1-x^{2}}}\\ dx=\\sin^{-1}x\\cos^{-1}x-c"
+          }
+        ]
+      }
+    },
     "s25f-cx1": {
       "topic": "integrals",
       "title": "blursed",
@@ -2705,6 +2898,113 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  \\int_{0}^{\\infty}\\frac{1}{x\\ln x}\\ dx &= -\\int_{0}^{\\infty}\\frac{1}{t\\ln\\left(t\\right)}\\ dt  \\\\ \\Rightarrow \\int_{0}^{\\infty}\\frac{1}{x\\ln x}\\ dx &= 0\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-dv1": {
+      "topic": "integrals",
+      "title": "jelly",
+      "desc": null,
+      "date": "2025 February 15",
+      "tags": [
+        "poly"
+      ],
+      "methods": [
+        "work"
+      ],
+      "shard": "s25f-dv1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { x^4 + 12x^3 + 54x^2 + 108x + 84 }    { x+3 }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Factorisation will make things much less painful."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{4}\\left(x+3\\right)^{4}+3\\ln\\left(x+3\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{x^{4}+12x^{3}+54x^{2}+108x+84}{x+3}\\ dx  \\\\ =&\\ \\int \\frac{x^{4}+12x^{3}+54x^{2}+108x+81+3}{x+3}\\ dx  \\\\ =&\\ \\int \\frac{\\left(x+3\\right)^{4}}{x+3}+\\frac{3}{x+3}\\ dx  \\\\ =&\\ \\int \\left(x+3\\right)^{3}+\\frac{3}{x+3}\\ dx  \\\\ =&\\ \\frac{1}{4}\\left(x+3\\right)^{4}+3\\ln\\left(x+3\\right)-c\\end{align*}"
+        }
+      ]
+    },
+    "s25f-ed1": {
+      "topic": "integrals",
+      "title": "closure",
+      "desc": null,
+      "date": "2025 February 26",
+      "tags": [
+        "sqrt",
+        "trig",
+        "ln"
+      ],
+      "methods": [
+        "tough",
+        "spot"
+      ],
+      "shard": "s25f-ed1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { 1 + \\sqrt{x} }    {x}  \\cot\\left(      1 - 2\\sqrt{x} - \\ln{x}    \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How could you rewrite the coefficient on the outside?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How could you rewrite the terms of $x$ on the inside?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What substitution might you make, and what derivative would you hence look for?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\ln\\left(\\sin\\left(1-2\\sqrt{x}-\\ln x\\right)\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1+\\sqrt{x}}{x}\\cot\\left(1-2\\sqrt{x}-\\ln x\\right)\\ dx  \\\\ =&\\ \\int \\frac{1+\\sqrt{x}}{x}\\cot\\left(1-\\left(2\\sqrt{x}+\\ln x\\right)\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  2\\sqrt{x}+\\ln x &= t  \\\\ \\left(\\frac{1}{\\sqrt{x}}+\\frac{1}{x}\\right)\\ dx &= dt  \\\\ \\frac{\\sqrt{x}+1}{x}\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\cot\\left(1-t\\right)\\ dt  \\\\ &= -\\int \\frac{-\\cos\\left(1-t\\right)}{\\sin\\left(1-t\\right)}\\ dt  \\\\ &= -\\ln\\left(\\sin\\left(1-t\\right)\\right)  \\\\ &= -\\ln\\left(\\sin\\left(1-2\\sqrt{x}-\\ln x\\right)\\right)-c\\end{align*}"
           }
         ]
       }
@@ -3071,6 +3371,79 @@
         ]
       }
     },
+    "s25f-ff1": {
+      "topic": "integrals",
+      "title": "fiver",
+      "desc": null,
+      "date": "2025 February 14",
+      "tags": [
+        "poly"
+      ],
+      "methods": [
+        "tough",
+        "spot",
+        "sub"
+      ],
+      "shard": "s25f-ff1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { (x^5 + 1)^4 }    { x }  \\left(    x \\left(      x^5 + 1    \\right)^5    + x  \\right)^5\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What substitution might you make?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What derivative would you need on the outside to make that substitution?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What can factorise out from the large bracket?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{150}\\left(\\left(x^{5}+1\\right)^{5}+1\\right)^{6}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\left(x^{5}+1\\right)^{4}}{x}\\left(x\\left(x^{5}+1\\right)^{5}+x\\right)^{5}\\ dx  \\\\ =&\\ \\int \\frac{\\left(x^{5}+1\\right)^{4}}{x}\\left[x\\left(\\left(x^{5}+1\\right)^{5}+1\\right)\\right]^{5}\\ dx  \\\\ =&\\ \\int x^{4}\\left(x^{5}+1\\right)^{4}\\left[\\left(x^{5}+1\\right)^{5}+1\\right]^{5}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{5}+1 &= t  \\\\ 5x^{4}\\ dx &= dt\\end{align*}\\\\ \\Rightarrow \\frac{1}{5}\\int t^{4}\\left(t^{5}+1\\right)^{5}\\ dt"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  t^{5}+1 &= v  \\\\ 5t^{4}\\ dt &= dv\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{25}\\int v^{5}\\ dv  \\\\ &= \\frac{1}{150}v^{6}  \\\\ &= \\frac{1}{150}\\left(t^{5}+1\\right)^{6}  \\\\ &= \\frac{1}{150}\\left(\\left(x^{5}+1\\right)^{5}+1\\right)^{6}-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-fg1": {
       "topic": "integrals",
       "title": "frigate",
@@ -3377,6 +3750,86 @@
         ]
       }
     },
+    "s25f-gd1": {
+      "topic": "integrals",
+      "title": "wishes",
+      "desc": null,
+      "date": "2025 February 26",
+      "tags": [
+        "frac",
+        "poly",
+        "sqrt",
+        "inverse trig"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25f-gd1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{1}{    2x^{3/2} - 2x + x^{1/2}  }  \\left[    2 \\tan^{-1}\\left(      2\\sqrt{x}-1    \\right)  \\right]^2\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What does $\\sqrt{x}$ differentiate to?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What does $2\\sqrt{x}$ square to?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What does the derivative of $\\tan^{-1}{x}$ look like?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{8}{3}\\tan^{-1}\\left(2\\sqrt{x}-1\\right)^{3}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{2x^{3/2}-2x+x^{1/2}}\\left[2\\tan^{-1}\\left(2\\sqrt{x}-1\\right)\\right]^{2}\\ dx  \\\\ =&\\ \\int \\frac{1}{\\sqrt{x}\\left(2x-2\\sqrt{x}+1\\right)}\\left[2\\tan^{-1}\\left(2\\sqrt{x}-1\\right)\\right]^{2}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  2\\sqrt{x}-1 &= t  \\\\ \\frac{1}{\\sqrt{x}}\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1}{2x-2\\sqrt{x}+1}\\left(2\\tan^{-1}t\\right)^{2}\\ dt  \\\\ &= \\int \\frac{2}{4x-4\\sqrt{x}+2}\\left(2\\tan^{-1}t\\right)^{2}\\ dt  \\\\ &= 2\\int \\frac{1}{\\left(2\\sqrt{x}\\right)^{2}-2\\left(2\\sqrt{x}\\right)+1+1}\\left(2\\tan^{-1}t\\right)^{2}\\ dt  \\\\ &= 2\\int \\frac{1}{\\left(2\\sqrt{x}-1\\right)^{2}+1}\\left(2\\tan^{-1}t\\right)^{2}\\ dt  \\\\ &= 2\\int \\frac{1}{t^{2}+1}\\left(2\\tan^{-1}t\\right)^{2}\\ dt  \\\\ &= 8\\int \\frac{1}{1+t^{2}}\\left(\\tan^{-1}t\\right)^{2}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\tan^{-1}t &= v  \\\\ \\frac{1}{1+t^{2}}\\ dt &= dv\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 8\\int v^{2}\\ dv  \\\\ &= \\frac{8}{3}v^{3}  \\\\ &= \\frac{8}{3}\\left(\\tan^{-1}t\\right)^{3}  \\\\ &= \\frac{8}{3}\\tan^{-1}\\left(2\\sqrt{x}-1\\right)^{3}-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-gg1": {
       "topic": "integrals",
       "title": "relapse",
@@ -3407,6 +3860,132 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &\\ \\int \\frac{\\tan\\left(x\\right)^{29}}{\\sec\\left(x\\right)^{30}}\\ dx  \\\\ =&\\ \\int \\frac{\\sin\\left(x\\right)^{29}}{\\cos\\left(x\\right)^{29}}\\cdot\\cos\\left(x\\right)^{30}\\ dx  \\\\ =&\\ \\int \\sin\\left(x\\right)^{29}\\cos\\left(x\\right)\\ dx  \\\\ =&\\ \\frac{1}{30}\\sin\\left(x\\right)^{30}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-hc1": {
+      "topic": "integrals",
+      "title": "heavy is the chain",
+      "desc": null,
+      "date": "2025 March 13",
+      "tags": [
+        "poly"
+      ],
+      "methods": [
+        "trig sub"
+      ],
+      "shard": "s25f-hc1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { 1 }    { x^{2160}\\sqrt{1 - x^{2159}} }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "We will need to substitute $x^{2159}$. What power of $x$ would you require in the numerator to make this substitution?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "$2160 = 2159 + 1$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{1}{2159}\\left(\\frac{\\sqrt{1-x^{2159}}}{x^{2159}}+\\ln\\left(\\frac{1+\\sqrt{1-x^{2159}}}{\\sqrt{x^{2159}}}\\right)\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{2159} &= t  \\\\ 2159x^{2158}\\ dx &= dt  \\\\ dx &= \\frac{1}{2159x^{2158}}\\ dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{x^{2160}\\sqrt{1-x^{2159}}}\\ dx  \\\\ =&\\ \\int \\frac{1}{x^{2160}\\sqrt{1-t}}\\cdot\\frac{1}{2159x^{2158}}\\ dt  \\\\ =&\\ \\frac{1}{2159}\\int \\frac{1}{x^{4318}\\sqrt{1-t}}\\ dt  \\\\ =&\\ \\frac{1}{2159}\\int \\frac{1}{\\left(x^{2159}\\right)^{2}\\sqrt{1-t}}\\ dt  \\\\ =&\\ \\frac{1}{2159}\\int \\frac{1}{t^{2}\\sqrt{1-t}}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  t &= \\cos^{2}v  \\\\ dt &= \\left(2\\cos v\\cdot-\\sin v\\ \\right)\\ dv  \\\\ &= -2\\sin v\\cos v\\ dv\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2159}\\int \\frac{1}{\\left(\\cos^{2}v\\right)^{2}\\sqrt{1-\\cos^{2}v}}\\cdot-2\\sin v\\cos v\\ dv  \\\\ &= -\\frac{2}{2159}\\int \\frac{\\left(\\sin v\\right)\\left(\\cos v\\right)}{\\left(\\cos v\\right)^{4}\\left(\\sin v\\right)}\\ dv  \\\\ &= -\\frac{2}{2159}\\int \\frac{1}{\\left(\\cos v\\right)^{3}}\\ dv  \\\\ &= -\\frac{2}{2159}\\int \\sec^{3}v\\ dv  \\\\ &= -\\frac{2}{2159}\\cdot\\frac{1}{2}\\left(\\sec v\\tan v+\\ln\\left(\\sec v+\\tan v\\right)\\right)  \\\\ &= -\\frac{1}{2159}\\left(\\frac{\\sin v}{\\cos^{2}v}+\\ln\\left(\\frac{1+\\sin v}{\\cos v}\\right)\\right)  \\\\ &= -\\frac{1}{2159}\\left(\\frac{\\sqrt{1-t}}{t}+\\ln\\left(\\frac{1+\\sqrt{1-t}}{\\sqrt{t}}\\right)\\right)  \\\\ &= -\\frac{1}{2159}\\left(\\frac{\\sqrt{1-x^{2159}}}{x^{2159}}+\\ln\\left(\\frac{1+\\sqrt{1-x^{2159}}}{\\sqrt{x^{2159}}}\\right)\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-hd1": {
+      "topic": "integrals",
+      "title": "heads up, incoming",
+      "desc": null,
+      "date": "2025 March 13",
+      "tags": [
+        "frac",
+        "exp"
+      ],
+      "methods": [
+        "spot",
+        "sub"
+      ],
+      "shard": "s25f-hd1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { x (x+1) e^x }    { x - e^{-x} }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Both $e^x$ and $e^{-x}$ is pretty nasty."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Can you pull out any term from the numerator that looks similar to something in the denominator?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What if the derivative of the substitution looks similar to its derivative?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "xe^{x}+\\ln\\left(xe^{x}-1\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x\\left(x+1\\right)e^{x}}{x-e^{-x}}\\ dx  \\\\ =&\\ \\int \\frac{x\\left(x+1\\right)e^{x}}{x-e^{-x}}\\cdot\\frac{e^{x}}{e^{x}}\\ dx  \\\\ =&\\ \\int \\frac{x\\left(x+1\\right)e^{2x}}{xe^{x}-1}\\ dx  \\\\ =&\\ \\int \\frac{xe^{x}\\cdot e^{x}\\left(x+1\\right)}{xe^{x}-1}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{t}{t-1}\\ dt  \\\\ &= \\int \\frac{t-1}{t-1}+\\frac{1}{t-1}\\ dt  \\\\ &= \\int 1+\\frac{1}{t-1}\\ dt  \\\\ &= t+\\ln\\left(t-1\\right)  \\\\ &= xe^{x}+\\ln\\left(xe^{x}-1\\right)-c\\end{align*}"
           }
         ]
       }
@@ -4176,7 +4755,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int  \\left[    \\frac      { 1 + x \\sin{x} }      { \\cos{x} }  \\right]  \\left[<br><br>  \\frac    { x^5 \\sec(x)^2 }    { 2 \\pi }  \\exp\\left(    \\frac{4}{3} \\pi x^3 \\int_{0}^{\\infin}      \\frac        { \\ln{y} }        { 1 + y^2 }    \\ dy  \\right)  +  \\frac    { x^3 \\sec(x)^2 }    { \\pi }  \\exp\\left(    4 \\pi x^2 \\int_{\\infin}^{0}      \\frac        { \\ln{y} }        { 1 + y^2 }    \\ dy  \\right)<br><br>  \\right]\\ dx"
+          "content": "\\int  \\left[    \\frac      { \\cos{x} + x \\sin{x} }      { \\cos{x} }  \\right]  \\left[    \\frac      { x^5 \\sec(x)^6 }      { 2 \\pi }    \\exp\\left(      \\frac{4}{3} \\pi x^3 \\int_{0}^{\\infin}        \\frac          { \\ln{y} }          { 1 + y^2 }      \\ dy    \\right)    +    \\frac      { x^3 \\sec(x)^4 }      { \\pi }    \\exp\\left(      4 \\pi x^2 \\int_{\\infin}^{0}        \\frac          { \\ln{y} }          { 1 + y^2 }      \\ dy    \\right)  \\right]\\ dx"
         }
       ],
       "hints": {
@@ -4257,7 +4836,7 @@
           },
           {
             "kind": "latex",
-            "content": "\\int \\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\right]\\ dx"
+            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }\\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}\\exp\\left(\\frac{4}{3}\\pi x^{3}\\int_{0}^{\\infty}\\frac{\\ln y}{1+y^{2}}\\ dy\\right)+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\exp\\left(4\\pi x^{2}\\int_{\\infty}^{0}\\frac{\\ln y}{1+y^{2}}\\ dy\\right)\\right]\\ dx  \\\\ &= \\int_{\\ }^{\\ }\\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}e^{0}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}e^{0}\\right]\\ dx  \\\\ &= \\int \\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\right]\\ dx\\end{align*}"
           },
           {
             "kind": "text",
@@ -5349,6 +5928,107 @@
           "content": "...maybe not quicker, but perhaps more fun!"
         }
       ]
+    },
+    "s25f-sl1": {
+      "topic": "integrals",
+      "title": "salient",
+      "desc": null,
+      "date": "2025 February 15",
+      "tags": [
+        "frac",
+        "sqrt"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-sl1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\sqrt{\\pi} + \\sqrt{x} }    { 2x + \\sqrt{x} }\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\sqrt{x}+\\left(\\sqrt{\\pi}-\\frac{1}{2}\\right)\\ln\\left(2\\sqrt{x}+1\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{x} &= t  \\\\ x &= t^{2}  \\\\ dx &= 2t\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\sqrt{\\pi}+\\sqrt{x}}{2x+\\sqrt{x}}\\ dx  \\\\ =&\\ \\int \\frac{\\sqrt{\\pi}+t}{2t^{2}+t}\\cdot2t\\ dt  \\\\ =&\\ \\int \\frac{2\\sqrt{\\pi}+2t}{2t+1}\\ dt  \\\\ =&\\ \\int \\frac{2t+1}{2t+1}+\\frac{2\\sqrt{\\pi}-1}{2t+1}\\ dt  \\\\ =&\\ \\int dt+\\left(\\sqrt{\\pi}-\\frac{1}{2}\\right)\\int \\frac{2}{2t+1}\\ dt  \\\\ =&\\ t+\\left(\\sqrt{\\pi}-\\frac{1}{2}\\right)\\ln\\left(2t+1\\right)  \\\\ =&\\ \\sqrt{x}+\\left(\\sqrt{\\pi}-\\frac{1}{2}\\right)\\ln\\left(2\\sqrt{x}+1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-sm1": {
+      "topic": "integrals",
+      "title": "shimmer",
+      "desc": null,
+      "date": "2025 February 26",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-sm1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  e^x \\left( \\sin{x} + x \\sin{x} + x \\cos{x} \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You could expand and solve each integral individually, but it’s been written in this form for a reason."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What if you wrote the lone $\\sin{x}$ as $1 \\cdot \\sin{x}$?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Under what circumstances would you get 3 terms when differentiating?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "xe^{x}\\sin x-c"
+        }
+      ],
+      "solution": {
+        "inverse triple product rule": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{d}{dx}xe^{x}\\sin x    &= e^{x}\\sin x+xe^{x}\\sin x+xe^{x}\\cos x  \\\\ &= e^{x}\\left(\\sin x+x\\cos x+x\\sin x\\right)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Hence"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int e^{x}\\left(\\sin x+x\\cos x+x\\sin x\\right)\\ dx  \\\\ =&\\ xe^{x}\\sin x-c\\end{align*}"
+          }
+        ]
+      }
     },
     "s25f-ss1": {
       "topic": "integrals",

@@ -60,7 +60,7 @@ xe^{x}+\ln\left(xe^{x}-1\right)-c
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &= \int \frac{t}{t-1}\ dt
