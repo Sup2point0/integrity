@@ -63,7 +63,7 @@ What substitution might you make, and what derivative would you hence look for?
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &= \int \cot\left(1-t\right)\ dt
