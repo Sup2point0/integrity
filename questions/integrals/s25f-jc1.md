@@ -14,7 +14,7 @@ methods:
 
 ## Question
 ```math
-\int_{1}^{3}
+\int_{0}^{2}
   \sqrt{2x - x^2}
 \ dx
 ```
