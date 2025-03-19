@@ -4,10 +4,12 @@ title: in my heart
 desc: 
 date: 2024 December 28
 tags:
-  - ln
-  - sqrt
   - fun
+  - sqrt
+  - poly
+  - ln
 methods:
+  - speed
 ---
 
 
@@ -31,7 +33,7 @@ Starts with “f” and rhymes with <em>tractorise</em>.
 
 ## Answer
 ```math
-\int \ln\left(\sqrt{x\sqrt{x^{2}+4x-21}}\right)\ dx
+\frac{1}{2}x\left(\ln x-1\right)+\frac{1}{4}\left(x-3\right)\left(\ln\left(x-3\right)-1\right)+\frac{1}{4}\left(x+7\right)\left(\ln\left(x+7\right)-1\right)-c
 ```
 
 
