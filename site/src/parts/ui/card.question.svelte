@@ -24,6 +24,8 @@ interface Props {
 
 let { question, latex, style = "block" }: Props = $props();
 
+$inspect($userprefs);
+
 </script>
 
 
@@ -62,12 +64,12 @@ let { question, latex, style = "block" }: Props = $props();
             "off": "#dededede",
             "on": "#00761c",
           }}
-          value={() => userprefs.flagged.has(question.shard)}
+          value={() => $userprefs.flagged.has(question.shard)}
           enable={() => {
-            try { userprefs.flagged.add(question.shard); }
+            try { $userprefs.flagged.add(question.shard); }
             catch { return false; } return true; }}
           disable={() => {
-            try { userprefs.flagged.delete(question.shard); }
+            try { $userprefs.flagged.delete(question.shard); }
             catch { return false; } return true; }}
         >
           <FlagIcon />

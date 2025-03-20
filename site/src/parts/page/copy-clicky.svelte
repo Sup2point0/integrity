@@ -46,7 +46,7 @@ button.copy {
   border-radius: 0.5em;
   opacity: 40%;
 
-  @include interact($col-hover, $col-click);
+  @include interact();
   @include focus-outline;
 }
 

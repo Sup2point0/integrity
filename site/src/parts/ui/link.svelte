@@ -54,7 +54,7 @@ let { text, link, intern, action, disabled = false }: Props = $props();
   border: none;
   border-radius: 0.5em;
 
-  @include interact($col-hover, $col-click);
+  @include interact();
   @include focus-outline;
 
   &.disabled {

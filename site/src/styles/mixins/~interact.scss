@@ -1,7 +1,7 @@
 @use '~colours' as *;
 
 
-@mixin interact($hover: none, $click: none, $t: 0.1) {
+@mixin interact($hover: $col-hover, $click: $col-click, $t: 0.1) {
   transition: background #{$t}s ease-out;
   
   &:hover {

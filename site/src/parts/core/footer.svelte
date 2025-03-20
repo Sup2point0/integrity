@@ -117,7 +117,7 @@ a.credits {
   text-decoration: none;
   border-radius: 1em;
 
-  @include interact($col-hover, $col-click);
+  @include interact();
   @include focus-outline;
 
   p {

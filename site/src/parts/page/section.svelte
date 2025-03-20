@@ -74,7 +74,7 @@ section {
   align-items: center;
   background: auto;
   border-bottom: 1px solid $col-line;
-  @include interact($col-hover, $col-click);
+  @include interact();
 
   &:hover {
     border-color: $col-prot;

@@ -119,7 +119,7 @@ function apply_question(shard: Shard | null) {
 <nav>
   <section id="preset">
     <small> PRESET </small>
-    <Select bind:value={userprefs["desmos-preset"]} options={{
+    <Select bind:value={$userprefs["desmos-preset"]} options={{
       "Default": null,
       "Integral": "integrals",
       "Completing the Square": "complete-square"
@@ -151,7 +151,7 @@ function apply_question(shard: Shard | null) {
         }
 
         desmos.setBlank();
-        apply_preset(userprefs["desmos-preset"]);
+        apply_preset($userprefs["desmos-preset"]);
         last_reset = Date.now();
       }}
     />
