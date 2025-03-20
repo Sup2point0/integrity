@@ -11,6 +11,7 @@ import Tag from "#parts/ui/tag.svelte";
 import Katex from "#parts/katex.svelte";
 import Checkbox from "#parts/ui/checkbox.svelte";
 import FlagIcon from "#parts/svg/flag.svelte";
+import TickIcon from "#parts/svg/tick.svelte";
 
 import { fade, slide } from "svelte/transition";
 import { base } from "$app/paths";
@@ -23,8 +24,6 @@ interface Props {
 }
 
 let { question, latex, style = "block" }: Props = $props();
-
-$inspect($userprefs);
 
 </script>
 
@@ -62,18 +61,62 @@ $inspect($userprefs);
         <Checkbox
           cols={{
             "off": "#dededede",
-            "on": "#00761c",
+            "on": "#4d9dcd",
           }}
-          value={() => $userprefs.flagged.has(question.shard)}
+          value={() => $userprefs.solved.has(question.shard)}
           enable={() => {
-            try { $userprefs.flagged.add(question.shard); }
-            catch { return false; } return true; }}
+            try {
+              $userprefs.solved.add(question.shard);
+              $userprefs.solved = $userprefs.solved;
+            }
+            catch {
+              return false;
+            }
+            return true; }
+          }
           disable={() => {
-            try { $userprefs.flagged.delete(question.shard); }
-            catch { return false; } return true; }}
+            try {
+              $userprefs.solved.delete(question.shard);
+              $userprefs.solved = $userprefs.solved;
+            }
+            catch {
+              return false;
+            }
+            return true; }
+          }
         >
           <FlagIcon />
         </Checkbox>
+
+        <!-- <Checkbox
+          cols={{
+            "off": "#dededede",
+            "on": "#00761c",
+          }}
+          value={() => $userprefs.solved.has(question.shard)}
+          enable={() => {
+            try {
+              $userprefs.solved.add(question.shard);
+              $userprefs.solved = $userprefs.solved;
+            }
+            catch {
+              return false;
+            }
+            return true; }
+          }
+          disable={() => {
+            try {
+              $userprefs.solved.delete(question.shard);
+              $userprefs.solved = $userprefs.solved;
+            }
+            catch {
+              return false;
+            }
+            return true; }
+          }
+        >
+          <TickIcon />
+        </Checkbox> -->
       </div>
     </div>
 

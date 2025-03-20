@@ -8,13 +8,13 @@ import { persisted, type Serializer } from "svelte-persisted-store";
 export class UserPrefs
 {
   /** Shards of questions marked as solved. */
-  solved: string[] = $state([]);
+  solved: Set<string> = $state(new Set());
 
   /** shards of flagged questions. */
   flagged: Set<string> = $state(new Set());
 
   /** Shards of starred questions. */
-  starred: string[] = $state([]);
+  starred: Set<string> = $state(new Set());
 
   /** Search view preference. */
   "search-view": "grid" | "list" = $state("grid");
@@ -22,13 +22,25 @@ export class UserPrefs
   /** Preset of the Workspace Desmos window. */
   "desmos-preset": "integrals" | "complete-square" | null = $state("integrals");
 
+  /** Expose attributes for syncing to localStorage. */
+  to_json(): object
+  {
+    return {
+      solved: Array.from(this.solved),
+      flagged: Array.from(this.flagged),
+      starred: Array.from(this.starred),
+      "search-view": this["search-view"],
+      "desmos-preset": this["desmos-preset"],
+    }
+  }
+
   /** Load attributes from `localStorage` JSON. */
   set_from_json(data: object): UserPrefs
   {
     // TODO surely we can come up with a better way...
-    this.solved = data.solved ?? this.solved;
+    this.solved = new Set(data.solved ?? this.solved);
     this.flagged = new Set(data.flagged ?? this.flagged);
-    this.starred = data.starred ?? this.starred;
+    this.starred = new Set(data.starred ?? this.starred);
     this["search-view"] = data["search-view"] ?? this["search-view"];
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
 
@@ -44,16 +56,9 @@ class UserPrefsSerializer implements Serializer<UserPrefs>
     return new UserPrefs().set_from_json(JSON.parse(data));
   }
 
-  /** Expose `UserPrefs` attributes for syncing to localStorage. */
   stringify(data: UserPrefs): string
   {
-    return JSON.stringify({
-      solved: data.solved,
-      flagged: Array.from(data.flagged),
-      starred: data.starred,
-      "search-view": data["search-view"],
-      "desmos-preset": data["desmos-preset"],
-    });
+    return JSON.stringify(data.to_json());
   }
 }
 
