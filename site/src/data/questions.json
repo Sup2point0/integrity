@@ -3339,7 +3339,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int  x\\tan{x} + \\ln(\\sec{x})\\ dx = x \\ln(\\cos{x})"
+          "content": "\\int  x\\tan{x} + \\ln(\\sec{x})\\ dx"
         }
       ],
       "hints": {
@@ -4548,7 +4548,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int_{1}^{3}  \\sqrt{2x - x^2}\\ dx"
+          "content": "\\int_{0}^{2}  \\sqrt{2x - x^2}\\ dx"
         }
       ],
       "answer": [
@@ -5795,7 +5795,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int  \\frac    { 1 + \\sin^2{x} + \\cos^2{x} - \\cot^2{x} }    { ( \\sin^2{x} + \\cos^2{x} + \\tan^2{x} )^{-1} }  \\sin(2x)\\ dx"
+          "content": "\\int  \\frac    { \\sin^2{x} + \\cos^2{x} - \\cot^2{x} }    { ( \\sin^2{x} + \\cos^2{x} + \\tan^2{x} )^{-1} }  \\sin(2x)\\ dx"
         }
       ],
       "hints": {

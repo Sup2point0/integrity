@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-03-17",
+    "exported": "2025-03-20",
     "file_count": 17,
     "page_count": 16
   },
@@ -357,12 +357,13 @@
     },
     "guides/integrals/int-int.md": {
       "path": "guides/integrals/int-int.md",
-      "last_deploy": "2025-02-08 09:08:10 +0000",
+      "last_deploy": "2025-03-20 10:00:28 +0000",
       "slocs": 75,
-      "chars": 2096,
+      "chars": 2102,
       "isIndex": false,
       "flags": [
         "live",
+        "feat",
         "opin",
         "devx"
       ],
@@ -485,12 +486,13 @@
     },
     "guides/sign.md": {
       "path": "guides/sign.md",
-      "last_deploy": "2024-12-24 21:10:14 +0000",
+      "last_deploy": "2025-03-20 09:59:59 +0000",
       "slocs": 79,
-      "chars": 4146,
+      "chars": 4152,
       "isIndex": false,
       "flags": [
-        "live"
+        "live",
+        "feat"
       ],
       "dest": "guides/sign",
       "title": "S-I+G-N Errors",

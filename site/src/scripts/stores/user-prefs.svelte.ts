@@ -2,11 +2,11 @@
  * Exposes the `userprefs` object and associated `UserPrefs` class for storing user preferences and data. This is synced with `localStorage`.
  */
 
+import { persisted, type Serializer } from "svelte-persisted-store";
+
+
 export class UserPrefs
 {
-  /** Flag for syncing data with `localStorage`. */
-  _syncing: boolean = true;
-
   /** Shards of questions marked as solved. */
   solved: string[] = $state([]);
 
@@ -22,22 +22,9 @@ export class UserPrefs
   /** Preset of the Workspace Desmos window. */
   "desmos-preset": "integrals" | "complete-square" | null = $state("integrals");
 
-  /** Expose attributes for syncing to localStorage. */
-  toJSON()
-  {
-    return {
-      solved: this.solved,
-      flagged: Array.from(this.flagged),
-      starred: this.starred,
-      "search-view": this["search-view"],
-      "desmos-preset": this["desmos-preset"],
-    };
-  }
-
   /** Load attributes from `localStorage` JSON. */
-  set_from_json(data: object)
+  set_from_json(data: object): UserPrefs
   {
-    this._syncing = true;
     // TODO surely we can come up with a better way...
     this.solved = data.solved ?? this.solved;
     this.flagged = new Set(data.flagged ?? this.flagged);
@@ -45,9 +32,34 @@ export class UserPrefs
     this["search-view"] = data["search-view"] ?? this["search-view"];
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
 
-    this._syncing = false;
+    return this;
   }
 }
 
+
+class UserPrefsSerializer implements Serializer<UserPrefs>
+{
+  parse(data: string): UserPrefs
+  {
+    return new UserPrefs().set_from_json(JSON.parse(data));
+  }
+
+  /** Expose `UserPrefs` attributes for syncing to localStorage. */
+  stringify(data: UserPrefs): string
+  {
+    return JSON.stringify({
+      solved: data.solved,
+      flagged: Array.from(data.flagged),
+      starred: data.starred,
+      "search-view": data["search-view"],
+      "desmos-preset": data["desmos-preset"],
+    });
+  }
+}
+
+
 /** User data and preferences. */
-export const userprefs = $state(new UserPrefs());
+export const userprefs = persisted("integrity.prefs", new UserPrefs(), {
+  serializer: new UserPrefsSerializer(),
+  syncTabs: true,
+});
