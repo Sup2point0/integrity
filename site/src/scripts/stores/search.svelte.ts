@@ -5,6 +5,9 @@
 import sample from "@stdlib/random-sample";
 import * as fuzz from "fuzzball";
 
+import { get } from "svelte/store";
+
+import { userprefs } from "#scripts/stores";
 import type { Question } from "#scripts/types";
 
 
@@ -79,17 +82,35 @@ export class SearchData
     //     )
     //   );
     // }
-  
-    if (this.include.unnamed) {
-      out = out.filter(question => !question.title);
-    } else if (this.exclude.unnamed) {
-      out = out.filter(question => question.title);
+
+    if (this.include.solved) {
+      out = out.filter(question => get(userprefs).solved.has(question.shard));
+    } else if (this.exclude.solved) {
+      out = out.filter(question => !get(userprefs).solved.has(question.shard));
+    }
+
+    if (this.include.flagged) {
+      out = out.filter(question => get(userprefs).flagged.has(question.shard));
+    } else if (this.exclude.solved) {
+      out = out.filter(question => !get(userprefs).flagged.has(question.shard));
+    }
+
+    if (this.include.starred) {
+      out = out.filter(question => get(userprefs).starred.has(question.shard));
+    } else if (this.exclude.solved) {
+      out = out.filter(question => !get(userprefs).starred.has(question.shard));
     }
 
     if (this.include.featured) {
       out = out.filter(question => question.flags?.includes("feat"));
     } else if (this.exclude.featured) {
       out = out.filter(question => !(question.flags?.includes("feat")));
+    }
+  
+    if (this.include.unnamed) {
+      out = out.filter(question => !question.title);
+    } else if (this.exclude.unnamed) {
+      out = out.filter(question => question.title);
     }
   
     if (this.include.hints) {

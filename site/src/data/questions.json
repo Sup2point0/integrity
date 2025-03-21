@@ -1744,11 +1744,14 @@
       "desc": null,
       "date": "2024 December 28",
       "tags": [
-        "ln",
+        "fun",
         "sqrt",
-        "fun"
+        "poly",
+        "ln"
       ],
-      "methods": null,
+      "methods": [
+        "speed"
+      ],
       "shard": "s24f-lx1",
       "question": [
         {
@@ -1779,7 +1782,7 @@
       "answer": [
         {
           "kind": "latex",
-          "content": "\\int \\ln\\left(\\sqrt{x\\sqrt{x^{2}+4x-21}}\\right)\\ dx"
+          "content": "\\frac{1}{2}x\\left(\\ln x-1\\right)+\\frac{1}{4}\\left(x-3\\right)\\left(\\ln\\left(x-3\\right)-1\\right)+\\frac{1}{4}\\left(x+7\\right)\\left(\\ln\\left(x+7\\right)-1\\right)-c"
         }
       ],
       "solution": {
@@ -2904,7 +2907,7 @@
     },
     "s25f-dv1": {
       "topic": "integrals",
-      "title": "jelly",
+      "title": "runaway",
       "desc": null,
       "date": "2025 February 15",
       "tags": [
@@ -6943,7 +6946,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int  \\frac    { (1+e^{-x/2})(1-x+e^{-x/2}) }    { \\sqrt{x-e^{-x/2}} }\\ dx"
+          "content": "\\int  \\frac    { (2+e^{-x/2})(1-x+e^{-x/2}) }    { \\sqrt{x-e^{-x/2}} }\\ dx"
         }
       ],
       "hints": {
