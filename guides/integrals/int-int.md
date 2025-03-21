@@ -1,5 +1,5 @@
 # Integrating Into Integration
-<!-- #SQUARK live! opin! devx!
+<!-- #SQUARK live! feat! opin! devx!
 | dest = guides/integrals/int-int
 | capt = Glossary of the integration homies
 | index = guides / integrals

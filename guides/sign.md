@@ -1,5 +1,5 @@
 # S-I+G-N Errors
-<!-- #SQUARK live!
+<!-- #SQUARK live! feat!
 | dest = guides/sign
 | capt = The “semicolon missing” of Mathematics
 -->
