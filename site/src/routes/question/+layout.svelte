@@ -1,6 +1,7 @@
 <script lang="ts">
 
 import Site from "#scripts/site";
+import { userprefs } from "#scripts/stores";
 import { page_data } from "./page-data.svelte.ts";
 import type { Shard, Question, QuestionCollection } from "#scripts/types";
 
@@ -35,6 +36,9 @@ onMount(() => {
   if (question == null) {
     error(404, { message: "Could not find question" });
   }
+
+  $userprefs.seen.add(question.shard);
+  $userprefs = $userprefs;
 
   page_data.question = question;
 });

@@ -7,6 +7,9 @@ import { persisted, type Serializer } from "svelte-persisted-store";
 
 export class UserPrefs
 {
+  /** Shards of questions whose pages have been visited before. */
+  seen: Set<string> = $state(new Set());
+
   /** Shards of questions marked as solved. */
   solved: Set<string> = $state(new Set());
 
@@ -26,6 +29,7 @@ export class UserPrefs
   to_json(): object
   {
     return {
+      seen: Array.from(this.seen),
       solved: Array.from(this.solved),
       flagged: Array.from(this.flagged),
       starred: Array.from(this.starred),
@@ -35,9 +39,10 @@ export class UserPrefs
   }
 
   /** Load attributes from `localStorage` JSON. */
-  set_from_json(data: object): UserPrefs
+  set_from_json(data: Partial<UserPrefs>): UserPrefs
   {
     // TODO surely we can come up with a better way...
+    this.seen = new Set(data.seen ?? this.seen);
     this.solved = new Set(data.solved ?? this.solved);
     this.flagged = new Set(data.flagged ?? this.flagged);
     this.starred = new Set(data.starred ?? this.starred);
