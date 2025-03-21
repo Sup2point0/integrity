@@ -12,12 +12,9 @@ interface Props {
 let { value, total = 1 }: Props = $props();
 
 
-// let frac = $derived(value / total);
-let frac = Math.random();
-// let frac = 1;
+let frac = $derived(value / total);
 
 let live = $state(false);
-
 let self: HTMLElement;
 
 onMount(() => {
