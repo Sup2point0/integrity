@@ -504,16 +504,16 @@
       "date": null,
       "date_display": null
     },
-    "challenges/mit-integration-bee/2023.md": {
-      "path": "challenges/mit-integration-bee/2023.md",
-      "last_deploy": "2025-01-25 15:51:35 +0000",
+    "challenges/mit-ib/2023.md": {
+      "path": "challenges/mit-ib/2023.md",
+      "last_deploy": "2025-03-21 09:03:10 +0000",
       "slocs": 38,
-      "chars": 988,
+      "chars": 981,
       "isIndex": false,
       "flags": [
         "live"
       ],
-      "dest": "challenges/mit-integrals/2023",
+      "dest": "challenges/mit-ib/2023",
       "title": "MIT Integration Bee 2023",
       "head": "MIT Integration Bee 2023",
       "capt": null,
