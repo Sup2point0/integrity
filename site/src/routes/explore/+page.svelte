@@ -49,6 +49,7 @@ import { base } from "$app/paths";
     <div class="links">
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
+      <Link text="Data" intern="data" />
     </div>
   </section>
 
@@ -58,6 +59,15 @@ import { base } from "$app/paths";
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
       <Link text="Speedrun" intern="docs/speedrun" disabled={true} />
+    </div>
+  </section>
+
+  <section>
+    <h3> Challenges </h3>
+    <div class="links">
+      <Link text="MIT Integration Bee" intern="challenges/mit" disabled={true} />
+      <Link text="UNSW Integration Bee" intern="challenges/unsw" disabled={true} />
+      <Link text="0–100 Year Challenge" intern="challenges/year" />
     </div>
   </section>
 

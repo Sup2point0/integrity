@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-03-20",
-    "file_count": 17,
-    "page_count": 16
+    "exported": "2025-03-21",
+    "file_count": 19,
+    "page_count": 18
   },
   "index": {
     "guides": {
@@ -499,6 +499,44 @@
       "head": "S-I+G-N Errors",
       "capt": "The “semicolon missing” of Mathematics",
       "desc": "The “semicolon missing” of Mathematics",
+      "index": [],
+      "shard": [],
+      "date": null,
+      "date_display": null
+    },
+    "challenges/mit-integration-bee/2023.md": {
+      "path": "challenges/mit-integration-bee/2023.md",
+      "last_deploy": "2025-01-25 15:51:35 +0000",
+      "slocs": 38,
+      "chars": 988,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "challenges/mit-integrals/2023",
+      "title": "MIT Integration Bee 2023",
+      "head": "MIT Integration Bee 2023",
+      "capt": null,
+      "desc": null,
+      "index": [],
+      "shard": [],
+      "date": null,
+      "date_display": null
+    },
+    "challenges/year/2024.md": {
+      "path": "challenges/year/2024.md",
+      "last_deploy": "2025-03-20 16:31:44 +0000",
+      "slocs": 140,
+      "chars": 4347,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "challenges/year/2024",
+      "title": "2024 Year Challenge",
+      "head": "2024 Year Challenge",
+      "capt": null,
+      "desc": null,
       "index": [],
       "shard": [],
       "date": null,
