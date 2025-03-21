@@ -1,6 +1,6 @@
 ---
 topic: integrals
-title: jelly
+title: runaway
 desc: 
 date: 2025 February 15
 tags:
