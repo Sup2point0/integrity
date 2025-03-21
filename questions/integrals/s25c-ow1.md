@@ -41,7 +41,6 @@ The numerator could either be a multiple of the bottom, or a multiple of its der
 
 ## Solution
 
-### Reshape
 ```math
 \begin{align*}
   &\ \int \frac{24x^{4}+64x^{3}+9x^{2}+12x+3}{1+3x^{2}+8x^{4}}\ dx
