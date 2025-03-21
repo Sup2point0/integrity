@@ -43,6 +43,12 @@ export class SearchData
     methods: false,
   });
 
+  buttons: States = $state({
+    solved: true,
+    flag: true,
+    star: true,
+  });
+
   view: "grid" | "list" = $state("grid");
   sort: "date" | "name" | "rel" | "rand" | null = $state(null);
   reverse: boolean = $state(false);

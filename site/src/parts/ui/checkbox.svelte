@@ -55,7 +55,6 @@ button {
   width: 2.5em;
   height: 2.5em;
   display: flex;
-  flex-flow: row;
   justify-content: center;
   align-items: center;
   color: var(--col-off, $col-clicky-click);
@@ -75,7 +74,11 @@ button.active {
 }
 
 .content {
-  max-width: 1em;
+  width: inherit;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   aspect-ratio: 1;
 }
 

@@ -8,8 +8,7 @@
 <style lang="scss">
 
 svg {
-  width: inherit;
-  max-width: 100%;
+  max-width: 40%;
   max-height: inherit;
 }
 

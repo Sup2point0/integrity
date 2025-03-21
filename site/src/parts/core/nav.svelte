@@ -36,6 +36,7 @@ import { base } from "$app/paths";
       }} />
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
+      <Link text="Data" intern="data" />
     </NavLink>
 
     <NavLink text="Docs" intern="docs" collapse={true}>
@@ -52,7 +53,8 @@ import { base } from "$app/paths";
     </NavLink>
 
     <NavLink text="Challenges" intern="challenges" collapse={true}>
-      <Link text="MIT Integration Bee" intern="challenges/mit-integration-bee" />
+      <Link text="MIT Integration Bee" intern="challenges/mit-integration-bee" disabled={true} />
+      <Link text="UNSW Integration Bee" intern="challenges/unsw" disabled={true} />
       <Link text="0–100 Year Challenge" intern="challenges/year" />
     </NavLink>
 

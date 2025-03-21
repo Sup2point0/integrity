@@ -70,6 +70,7 @@ onMount(() => {
     {@const unchecked_include = Object.values(search.include).some(state => !state)}
     {@const unchecked_exclude = Object.values(search.exclude).some(state => !state)}
     {@const unchecked_show = Object.values(search.show).some(state => !state)}
+    {@const unchecked_buttons = Object.values(search.buttons).some(state => !state)}
 
     <table class="search-filters"
       transition:fade={{ duration: 200 }}
@@ -218,6 +219,32 @@ onMount(() => {
               search.show = Object.fromEntries(
                 Object.entries(search.show).map(
                   ([prop, state]) => [prop, unchecked_show]
+                )
+              );
+            }}
+          />
+        </td>
+      </tr>
+
+      <tr>
+        <th> Buttons </th>
+
+        <td class="flex">
+          {#each Object.entries(search.buttons) as [prop, state]}
+            <Toggle text={prop.toUpperCase()}
+              value={state}
+              toggle={() => { search.buttons[prop] = !search.buttons[prop]; }}
+            />
+          {/each}
+        </td>
+        
+        <td>
+          <Toggle text="ALL"
+            value={!unchecked_buttons}
+            toggle={() => {
+              search.buttons = Object.fromEntries(
+                Object.entries(search.buttons).map(
+                  ([prop, state]) => [prop, unchecked_buttons]
                 )
               );
             }}

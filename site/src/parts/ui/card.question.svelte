@@ -10,8 +10,9 @@ import type { Latex, Question } from "#scripts/types";
 import Tag from "#parts/ui/tag.svelte";
 import Katex from "#parts/katex.svelte";
 import Checkbox from "#parts/ui/checkbox.svelte";
-import FlagIcon from "#parts/svg/flag.svelte";
-import TickIcon from "#parts/svg/tick.svelte";
+import FlagIcon from "#parts/svg/flag-icon.svelte";
+import TickIcon from "#parts/svg/tick-icon.svelte";
+import StarIcon from "#parts/svg/star-icon.svelte";
 
 import { fade, slide } from "svelte/transition";
 import { base } from "$app/paths";
@@ -24,6 +25,20 @@ interface Props {
 }
 
 let { question, latex, style = "block" }: Props = $props();
+
+
+function safe_exec(func: () => any)
+{
+  return () => {
+    try {
+      func();
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+    return true;
+  }
+}
 
 </script>
 
@@ -58,65 +73,56 @@ let { question, latex, style = "block" }: Props = $props();
       </div>
 
       <div class="buttons">
-        <Checkbox
-          cols={{
-            "off": "#dededede",
-            "on": "#4d9dcd",
-          }}
-          value={() => $userprefs.solved.has(question.shard)}
-          enable={() => {
-            try {
+        {#if search.buttons.solved}
+          <Checkbox
+            cols={{ "off": "#dededede", "on": "oklch(70.74% 0.1702 53.41)" }}
+            value={() => $userprefs.solved.has(question.shard)}
+            enable={safe_exec(() => {
               $userprefs.solved.add(question.shard);
               $userprefs.solved = $userprefs.solved;
-            }
-            catch {
-              return false;
-            }
-            return true; }
-          }
-          disable={() => {
-            try {
+            })}
+            disable={safe_exec(() => {
               $userprefs.solved.delete(question.shard);
               $userprefs.solved = $userprefs.solved;
-            }
-            catch {
-              return false;
-            }
-            return true; }
-          }
-        >
-          <FlagIcon />
-        </Checkbox>
+            })}
+          >
+            <TickIcon />
+          </Checkbox>
+        {/if}
 
-        <!-- <Checkbox
-          cols={{
-            "off": "#dededede",
-            "on": "#00761c",
-          }}
-          value={() => $userprefs.solved.has(question.shard)}
-          enable={() => {
-            try {
-              $userprefs.solved.add(question.shard);
-              $userprefs.solved = $userprefs.solved;
-            }
-            catch {
-              return false;
-            }
-            return true; }
-          }
-          disable={() => {
-            try {
-              $userprefs.solved.delete(question.shard);
-              $userprefs.solved = $userprefs.solved;
-            }
-            catch {
-              return false;
-            }
-            return true; }
-          }
-        >
-          <TickIcon />
-        </Checkbox> -->
+        {#if search.buttons.flag}
+          <Checkbox
+            cols={{ "off": "#ededed", "on": "oklch(64.09% 0.1702 150.09)" }}
+            value={() => $userprefs.flagged.has(question.shard)}
+            enable={safe_exec(() => {
+              $userprefs.flagged.add(question.shard);
+              $userprefs.flagged = $userprefs.flagged;
+            })}
+            disable={safe_exec(() => {
+              $userprefs.flagged.delete(question.shard);
+              $userprefs.flagged = $userprefs.flagged;
+            })}
+          >
+            <FlagIcon />
+          </Checkbox>
+        {/if}
+
+        {#if search.buttons.star}
+          <Checkbox
+            cols={{ "off": "#ededed", "on": "oklch(81.02% 0.1702 85.48)" }}
+            value={() => $userprefs.starred.has(question.shard)}
+            enable={safe_exec(() => {
+              $userprefs.starred.add(question.shard);
+              $userprefs.starred = $userprefs.starred;
+            })}
+            disable={safe_exec(() => {
+              $userprefs.starred.delete(question.shard);
+              $userprefs.starred = $userprefs.starred;
+            })}
+          >
+            <StarIcon />
+          </Checkbox>
+        {/if}
       </div>
     </div>
 
