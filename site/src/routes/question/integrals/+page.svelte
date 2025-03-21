@@ -21,7 +21,7 @@ let question: Question | null = $derived(page_data.question);
   { text: "Questions", intern: "questions" },
   { text: "Integrals", intern: "questions/integrals" },
   { text: question?.shard ?? "?" },
-]} copy={true} />
+]} copy={true} shard={question?.shard} />
 
 <section class="question">
   <Katex text={question?.question.content} />

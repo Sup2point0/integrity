@@ -81,7 +81,7 @@ function handle_overlay()
 }
 
 main {
-  width: min(80%, 60rem);
+  width: min(80%, 64rem);
   max-width: 100vw;
   min-height: 75vh;
 }

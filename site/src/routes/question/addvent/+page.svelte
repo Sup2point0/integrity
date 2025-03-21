@@ -18,7 +18,7 @@ let question: Question | null = $derived(page_data.question);
   { text: "Questions", intern: "questions" },
   { text: "Addvent", intern: "questions/addvent" },
   { text: question?.shard ?? "?" },
-]} />
+]} copy={true} shard={question?.shard} />
 
 <section class="question">
   <RenderBlock source={question?.question} />

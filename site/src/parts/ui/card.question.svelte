@@ -4,15 +4,12 @@ A card for selecting a question. -->
 
 <script lang="ts">
 
-import { userprefs, search } from "#scripts/stores";
+import { search } from "#scripts/stores";
 import type { Latex, Question } from "#scripts/types";
 
+import SaveButtons from "#parts/page/save-buttons.svelte";
 import Tag from "#parts/ui/tag.svelte";
 import Katex from "#parts/katex.svelte";
-import Checkbox from "#parts/ui/checkbox.svelte";
-import FlagIcon from "#parts/svg/flag-icon.svelte";
-import TickIcon from "#parts/svg/tick-icon.svelte";
-import StarIcon from "#parts/svg/star-icon.svelte";
 
 import { fade, slide } from "svelte/transition";
 import { base } from "$app/paths";
@@ -25,20 +22,6 @@ interface Props {
 }
 
 let { question, latex, style = "block" }: Props = $props();
-
-
-function safe_exec(func: () => any)
-{
-  return () => {
-    try {
-      func();
-    } catch (e) {
-      console.error(e);
-      return false;
-    }
-    return true;
-  }
-}
 
 </script>
 
@@ -55,93 +38,48 @@ function safe_exec(func: () => any)
   {/if}
 
   <div class="info">
-    <div class="top-row">
-      <div class="text">
-        {#if search.show.shard}
-          <p class="shard" transition:slide={{ duration: 500 }}>
-            {question.shard}
-          </p>
-        {/if}
+    <div class="left-right">
+      <div class="row">
+        <div class="upper">
+          <div class="text">
+            {#if search.show.shard}
+              <p class="shard" transition:slide={{ duration: 500 }}>
+                {question.shard}
+              </p>
+            {/if}
 
-        {#if question.title} <h4 class="name"> {question.title} </h4> {/if}
-        
-        {#if search.show.dates && question.date}
-          <p class="date" transition:slide={{ duration: 500 }}>
-            {question.date_display}
-          </p>
-        {/if}
+            {#if question.title} <h4 class="name"> {question.title} </h4> {/if}
+            
+            {#if search.show.dates && question.date}
+              <p class="date" transition:slide={{ duration: 500 }}>
+                {question.date_display}
+              </p>
+            {/if}
+          </div>
+        </div>
+
+        <div class="lower">
+          {#if search.show.tags && question.tags && question.tags.length > 0}
+            <span class="tags" transition:fade={{ duration: 250 }}>
+              {#each question.tags as tag}
+                <Tag {tag} margin={"0.25em"} />
+              {/each}
+            </span>
+          {/if}
+
+          {#if search.show.methods && question.methods && question.methods.length > 0}
+            <span class="tags" transition:fade={{ duration: 250 }}>
+              {#each question.methods as tag}
+                <Tag {tag} kind="deut" margin={"0.25em"} />
+              {/each}
+            </span>
+          {/if}
+        </div>
       </div>
 
-      <div class="buttons">
-        {#if search.buttons.solved}
-          <Checkbox
-            cols={{ "off": "#dededede", "on": "oklch(70.74% 0.1702 53.41)" }}
-            value={() => $userprefs.solved.has(question.shard)}
-            enable={safe_exec(() => {
-              $userprefs.solved.add(question.shard);
-              $userprefs.solved = $userprefs.solved;
-            })}
-            disable={safe_exec(() => {
-              $userprefs.solved.delete(question.shard);
-              $userprefs.solved = $userprefs.solved;
-            })}
-          >
-            <TickIcon />
-          </Checkbox>
-        {/if}
-
-        {#if search.buttons.flag}
-          <Checkbox
-            cols={{ "off": "#ededed", "on": "oklch(64.09% 0.1702 150.09)" }}
-            value={() => $userprefs.flagged.has(question.shard)}
-            enable={safe_exec(() => {
-              $userprefs.flagged.add(question.shard);
-              $userprefs.flagged = $userprefs.flagged;
-            })}
-            disable={safe_exec(() => {
-              $userprefs.flagged.delete(question.shard);
-              $userprefs.flagged = $userprefs.flagged;
-            })}
-          >
-            <FlagIcon />
-          </Checkbox>
-        {/if}
-
-        {#if search.buttons.star}
-          <Checkbox
-            cols={{ "off": "#ededed", "on": "oklch(81.02% 0.1702 85.48)" }}
-            value={() => $userprefs.starred.has(question.shard)}
-            enable={safe_exec(() => {
-              $userprefs.starred.add(question.shard);
-              $userprefs.starred = $userprefs.starred;
-            })}
-            disable={safe_exec(() => {
-              $userprefs.starred.delete(question.shard);
-              $userprefs.starred = $userprefs.starred;
-            })}
-          >
-            <StarIcon />
-          </Checkbox>
-        {/if}
+      <div class="save-buttons">
+        <SaveButtons shard={question.shard} />
       </div>
-    </div>
-
-    <div class="lower-row">
-      {#if search.show.tags && question.tags && question.tags.length > 0}
-        <span class="tags" transition:fade={{ duration: 250 }}>
-          {#each question.tags as tag}
-            <Tag {tag} margin={"0.25em"} />
-          {/each}
-        </span>
-      {/if}
-
-      {#if search.show.methods && question.methods && question.methods.length > 0}
-        <span class="tags" transition:fade={{ duration: 250 }}>
-          {#each question.methods as tag}
-            <Tag {tag} kind="deut" margin={"0.25em"} />
-          {/each}
-        </span>
-      {/if}
     </div>
   </div>
 </a>
@@ -217,7 +155,29 @@ a.question-card {
   }
 }
 
-.top-row {
+.left-right {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.row {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+
+.save-buttons {
+  flex-grow: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.upper {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -236,10 +196,6 @@ a.question-card {
     font-size: 100%;
     font-weight: 250;
   }
-}
-
-.lower-row {
-  margin-top: 1rem;
 }
 
 p.shard {

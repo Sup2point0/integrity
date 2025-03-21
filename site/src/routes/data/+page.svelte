@@ -28,7 +28,7 @@ const total_questions = Site.get_list_of_all_questions().length;
 
 <Header title="Data" capt="Your personal statistics" />
 
-<main>
+<div class="stats">
   <section>
     <div class="row">
       <p class="label"> Questions Solved </p>
@@ -52,12 +52,12 @@ const total_questions = Site.get_list_of_all_questions().length;
     </div>
     <ProgressBar value={$userprefs.flagged.size / total_questions} />
   </section>
-</main>
+</div>
 
 
 <style lang="scss">
 
-main {
+.stats {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
