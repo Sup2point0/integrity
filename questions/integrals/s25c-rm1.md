@@ -43,7 +43,7 @@ What does $\frac{1}{2\pi x - 1}$ integrate to?
 
 ## Answer
 ```math
-
+-\frac{\pi x^{2}-x}{4\pi\left(2\pi x-1\right)^{2}}+\frac{1}{8\pi^{2}}\ln\left(2\pi x-1\right)-c
 ```
 
 
