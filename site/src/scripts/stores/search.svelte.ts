@@ -26,7 +26,6 @@ export class SearchData
     flagged: false,
     starred: false,
     featured: false,
-    unnamed: false,
     "has hints": false,
   });
   exclude: States = $state({
@@ -34,7 +33,6 @@ export class SearchData
     flagged: false,
     starred: false,
     featured: false,
-    unnamed: false,
     "has hints": false,
   })
 
@@ -105,12 +103,6 @@ export class SearchData
       out = out.filter(question => question.flags?.includes("feat"));
     } else if (this.exclude.featured) {
       out = out.filter(question => !(question.flags?.includes("feat")));
-    }
-  
-    if (this.include.unnamed) {
-      out = out.filter(question => !question.title);
-    } else if (this.exclude.unnamed) {
-      out = out.filter(question => question.title);
     }
   
     if (this.include.hints) {
