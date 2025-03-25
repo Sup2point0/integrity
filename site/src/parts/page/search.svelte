@@ -5,7 +5,7 @@ A search bar and associated filters.
 
 <script lang="ts">
 
-import { search } from "#scripts/stores";
+import { search, userprefs } from "#scripts/stores";
 
 import Clicky from "#parts/ui/clicky.svelte";
 import Toggle from "#parts/ui/toggle.svelte";
@@ -255,7 +255,7 @@ onMount(() => {
       <tr>
         <th> View </th>
         <td>
-          <Select bind:value={search.view}
+          <Select bind:value={$userprefs["search-view"]}
             options={{"GRID": "grid", "LIST": "list"}}
           />
         </td>
