@@ -22,6 +22,9 @@ export class UserPrefs
   /** Search view preference. */
   "search-view": "grid" | "list" = $state("grid");
 
+  /** Whether search filters should be expanded. */
+  "search-exp" = $state(true);
+
   /** Preset of the Workspace Desmos window. */
   "desmos-preset": "integrals" | "complete-square" | null = $state("integrals");
 
@@ -34,6 +37,7 @@ export class UserPrefs
       flagged: Array.from(this.flagged),
       starred: Array.from(this.starred),
       "search-view": this["search-view"],
+      "search-exp": this["search-exp"],
       "desmos-preset": this["desmos-preset"],
     }
   }
@@ -47,6 +51,7 @@ export class UserPrefs
     this.flagged = new Set(data.flagged ?? this.flagged);
     this.starred = new Set(data.starred ?? this.starred);
     this["search-view"] = data["search-view"] ?? this["search-view"];
+    this["search-exp"] = data["search-exp"] ?? this["search-exp"];
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
 
     return this;
