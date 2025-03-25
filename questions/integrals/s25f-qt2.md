@@ -98,7 +98,7 @@ Write $v^2 = w$ for convenience.
 \frac{1}{2v^{4}+3v^{2}+1}=\frac{1}{2w^{2}+3w+1}
 ```
 
-$w = -1$ is a solution to $2w^" + 3w + 1 = 0$, therefore $(w + 1)$ is a factor:
+$w = -1$ is a solution to $2w^2 + 3w + 1 = 0$, therefore $(w + 1)$ is a factor:
 
 ```math
 \frac{1}{2w^{2}+3w+1} = \frac{1}{\left(w+1\right)\left(2w+1\right)}
