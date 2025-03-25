@@ -18,6 +18,7 @@ interface States {
 export class SearchData
 {
   query: string = $state("");
+
   tags: States = $state({});
   methods: States = $state({});
 
@@ -64,6 +65,7 @@ export class SearchData
     // Filter
     /* we could optimise the order of applying filters so those that cut out the greatest proportion are applied first (thereby speeding up later filters), but this doesn't really impact performance enough to warrant that lmao */
     /* NOTE still true? */
+    
     if (Object.values(this.tags).includes(true)) {
       out = out.filter(
         question => Object.keys(this.tags).some(tag =>
@@ -72,14 +74,13 @@ export class SearchData
       );
     }
 
-    /* TODO filter by method */
-    // if (Object.values(this.methods).includes(true)) {
-    //   out = out.filter(
-    //     question => Object.keys(this.methods).some(method =>
-    //       this.methods[method] && question.methods.includes(method)
-    //     )
-    //   );
-    // }
+    if (Object.values(this.methods).includes(true)) {
+      out = out.filter(
+        question => Object.keys(this.methods).some(method =>
+          this.methods[method] && question.methods.includes(method)
+        )
+      );
+    }
 
     if (this.include.solved) {
       out = out.filter(question => get(userprefs).solved.has(question.shard));

@@ -14,6 +14,7 @@ interface SiteData {
   get_map_of_all_questions: () => Record<string, Question>;
   get_featured_questions: () => Question[];
   get_all_tags: () => string[];
+  get_all_methods: () => string[];
   get_list_of_all_guides: () => object[];
   get_featured_guides: () => object[];
 
@@ -52,6 +53,15 @@ const Site: SiteData = {
       new Set(
         Object.values(Site.questions)
         .flatMap(topic => topic.tags)
+      )
+    ).sort();
+  },
+
+  get_all_methods: () => {
+    return Array.from(
+      new Set(
+        Object.values(Site.questions)
+        .flatMap(topic => topic.methods)
       )
     ).sort();
   },

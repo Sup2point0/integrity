@@ -13,8 +13,9 @@ import Search from "#parts/page/search.svelte";
 import { onMount } from "svelte";
 
 
-const tags = Site.questions["complete-square"].tags;
 const count = Site.get_questions_of_topic("complete-square").length;
+const tags = Site.questions["complete-square"].tags;
+const methods = Site.questions["complete-square"].methods;
 
 let filtered = $derived(
   search.filter_questions(Site.get_questions_of_topic("complete-square"))
@@ -23,6 +24,7 @@ let filtered = $derived(
 
 onMount(() => {
   search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+  search.methods = Object.fromEntries(methods.map(method => [method, false]));
 })
 
 </script>
@@ -39,7 +41,7 @@ onMount(() => {
 ]} />
 
 <Header title="Completing the Square" />
-<Search {tags} />
+<Search />
 
 <div class="content {$userprefs["search-view"]}">
   {#each filtered as question}

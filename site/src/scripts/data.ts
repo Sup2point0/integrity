@@ -9,7 +9,7 @@ import type { QuestionsData, QuestionCollection } from "#scripts/types";
 import questions_data from "../data/questions.json" assert { type: "json" };
 export const questions = process_questions(questions_data);
 
-import pages_data from "../data/site.json";
+import pages_data from "../data/site.json" assert { type: "json" };
 export const pages = pages_data.pages;
 export const guides = find_guides(pages);
 
@@ -30,24 +30,32 @@ function process_questions(raw: any)
 
 function construct_collection(raw: any): QuestionCollection
 {
-  let tags_set = new Set<string>();
   let questions: Record<string, Question> = {};
+  let tags_set = new Set<string>();
+  let methods_set = new Set<string>();
 
-  let tag: string;
   let question: Question;
+  let tag: string;
+  let method: string;
 
   for (let [shard, data] of Object.entries(raw)) {
     question = new Question(data);
     questions[shard] = question;
     
     for (tag of question.tags) {
+      if (tag === null) continue;
       tags_set.add(tag);
+    }
+    for (method of question.methods) {
+      if (method === null) continue;
+      methods_set.add(method);
     }
   }
 
   let tags = Array.from(tags_set).sort();
+  let methods = Array.from(methods_set).sort();
 
-  return { tags, questions };
+  return { questions, tags, methods };
 }
 
 

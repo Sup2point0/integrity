@@ -2071,6 +2071,9 @@
       "methods": [
         "factorise"
       ],
+      "flags": [
+        "feat"
+      ],
       "shard": "s24f-tm1",
       "question": [
         {
@@ -2285,6 +2288,73 @@
         ]
       }
     },
+    "s25c-at1": {
+      "topic": "integrals",
+      "title": "STRAIGHT DOWN",
+      "desc": null,
+      "date": "2025 March 20",
+      "tags": [
+        "frac",
+        "trig",
+        "exp"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25c-at1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { 2e^x + 2\\cos{x} }    { e^x \\left( e^x + 2\\sin{x} \\right) - \\left(\\cos^2{x} - 2 \\right) }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What does the top look similar to?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How could you make the bottom only contain 1 trigonometric function?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Starts with “f” and rhymes with <em>tractorise</em>."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "2\\tan^{-1}\\left(e^{x}+\\sin x\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{2e^{x}+2\\cos x}{e^{x}\\left(e^{x}+2\\sin x\\right)-\\left(\\cos^{2}x-2\\right)}\\ dx  \\\\ =&\\ \\int \\frac{2e^{x}+2\\cos x}{e^{x}\\left(e^{x}+2\\sin x\\right)-\\left(1-\\sin^{2}x-2\\right)}\\ dx  \\\\ =&\\ \\int \\frac{2e^{x}+2\\cos x}{e^{x}\\left(e^{x}+2\\sin x\\right)+\\sin^{2}x+1}\\ dx  \\\\ =&\\ \\int \\frac{2e^{x}+2\\cos x}{e^{2x}+2e^{2}\\sin x+\\sin^{2}x+1}\\ dx  \\\\ =&\\ \\int \\frac{2e^{x}+2\\cos x}{\\left(e^{x}+\\sin x\\right)^{2}+1}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  e^{x}+\\sin x &= t  \\\\ \\left(e^{x}+\\cos x\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{2}{t^{2}+1}\\ dt  \\\\ &= 2\\tan^{-1}t  \\\\ &= 2\\tan^{-1}\\left(e^{x}+\\sin x\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25c-bb1": {
       "topic": "integrals",
       "title": "b(r[a{ck}e]t)s",
@@ -2443,6 +2513,9 @@
       "methods": [
         "tough",
         "spot"
+      ],
+      "flags": [
+        "feat"
       ],
       "shard": "s25c-rm1",
       "question": [
@@ -2628,6 +2701,75 @@
           "content": "\\begin{align*}  &\\ \\int \\frac{\\sinh\\left(ix\\right)\\cosh\\left(ix\\right)}{\\tanh\\left(ix\\right)\\operatorname{sech}\\left(ix\\right)}\\ dx  \\\\ =&\\ \\int \\frac{i\\sin\\left(x\\right)\\cos\\left(x\\right)}{i\\tan\\left(x\\right)\\sec\\left(x\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\sin\\left(x\\right)\\cos\\left(x\\right)}{\\tan\\left(x\\right)\\sec\\left(x\\right)}\\ dx  \\\\ =&\\ \\int \\sin\\left(x\\right)\\cos\\left(x\\right)\\cdot\\frac{\\cos\\left(x\\right)}{\\sin\\left(x\\right)}\\cdot\\cos\\left(x\\right)\\ dx  \\\\ =&\\ \\int \\cos\\left(x\\right)^{3}\\ dx  \\\\ =&\\ \\int \\left(\\cos x\\right)\\left(1-\\sin^{2}x\\right)\\ dx  \\\\ =&\\ \\int \\cos x-\\cos x\\sin^{2}x\\ dx  \\\\ =&\\ \\sin x-\\frac{1}{3}\\left(\\sin x\\right)^{3}-c\\end{align*}"
         }
       ]
+    },
+    "s25c-xp2": {
+      "topic": "integrals",
+      "title": "dragonometry",
+      "desc": null,
+      "date": "2025 March 18",
+      "tags": [
+        "horror",
+        "frac",
+        "exp",
+        "inverse trig",
+        "complex"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25c-xp2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { 2\\pi }    { 4\\pi^2 x^2 - 1 }  \\exp\\left(    \\frac      { \\tan^{-1}(2\\pi ix) - 2\\pi^2 }      { 2\\pi i }  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What’s the derivative of $\\tan^{-1}(x)$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What’s $i^2$?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "You can also use the fact that $\\tan^{-1}(ix) = i\\tanh^{-1}(x)$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "2\\pi\\exp\\left(\\frac{\\tanh^{-1}\\left(2\\pi x\\right)}{2\\pi}\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{2\\pi}{4\\pi^{2}x^{2}-1}\\exp\\left(\\frac{\\tan^{-1}\\left(2\\pi ix\\right)-2\\pi^{2}}{2\\pi i}\\right)\\ dx  \\\\ =&\\ \\int \\frac{2\\pi}{4\\pi^{2}x^{2}-1}\\exp\\left(\\frac{i\\tanh^{-1}\\left(2\\pi x\\right)-2\\pi^{2}}{2\\pi i}\\right)\\ dx  \\\\ =&\\ \\int \\frac{2\\pi}{4\\pi^{2}x^{2}-1}\\exp\\left(\\frac{\\tanh^{-1}\\left(2\\pi x\\right)}{2\\pi}-\\frac{\\pi}{i}\\right)\\ dx  \\\\ =&\\ \\int \\frac{2\\pi}{4\\pi^{2}x^{2}-1}\\exp\\left(\\frac{\\tanh^{-1}\\left(2\\pi x\\right)}{2\\pi}+\\pi i\\right)\\ dx  \\\\ =&\\ \\int \\frac{2\\pi}{4\\pi^{2}x^{2}-1}\\exp\\left(\\frac{\\tanh^{-1}\\left(2\\pi x\\right)}{2\\pi}\\right)\\exp\\left(\\pi i\\right)\\ dx  \\\\ =&\\ \\int \\frac{2\\pi}{4\\pi^{2}x^{2}-1}\\exp\\left(\\frac{\\tanh^{-1}\\left(2\\pi x\\right)}{2\\pi}\\right)\\left(-1\\right)\\ dx  \\\\ =&\\ \\int \\frac{2\\pi}{1-4\\pi^{2}x^{2}}\\exp\\left(\\frac{\\tanh^{-1}\\left(2\\pi x\\right)}{2\\pi}\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\tanh^{-1}\\left(2\\pi x\\right) &= t  \\\\ \\frac{2\\pi}{1-\\left(2\\pi x\\right)^{2}}\\ dx &= dt  \\\\ \\frac{2\\pi}{1-4\\pi^{2}x^{2}}\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\exp\\left(\\frac{t}{2\\pi}\\right)\\ dt  \\\\ &= 2\\pi\\exp\\left(\\frac{t}{2\\pi}\\right)  \\\\ &= 2\\pi\\exp\\left(\\frac{\\tanh^{-1}\\left(2\\pi x\\right)}{2\\pi}\\right)-c\\end{align*}"
+          }
+        ]
+      }
     },
     "s25c-xz1": {
       "topic": "integrals",
@@ -3994,6 +4136,9 @@
       "methods": [
         "spot"
       ],
+      "flags": [
+        "feat"
+      ],
       "shard": "s25f-ft1",
       "question": [
         {
@@ -4334,6 +4479,9 @@
         "spot",
         "sub"
       ],
+      "flags": [
+        "feat"
+      ],
       "shard": "s25f-hd1",
       "question": [
         {
@@ -4384,6 +4532,81 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{t}{t-1}\\ dt  \\\\ &= \\int \\frac{t-1}{t-1}+\\frac{1}{t-1}\\ dt  \\\\ &= \\int 1+\\frac{1}{t-1}\\ dt  \\\\ &= t+\\ln\\left(t-1\\right)  \\\\ &= xe^{x}+\\ln\\left(xe^{x}-1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-hd2": {
+      "topic": "integrals",
+      "title": "azimuth",
+      "desc": null,
+      "date": "2025 March 9",
+      "tags": [
+        "definite",
+        "poly",
+        "series"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-hd2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{0}^{1/2}\\frac{1-\\sqrt{x}}{2}\\left(x^{1/2}+x+x^{3/2}+x^{2}+...\\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What values does $x$ take?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How else can you write the infinite sum?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What’s the relationship between each term in the infinite series?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{3\\left(\\sqrt{2}\\right)^{3}}"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ x^{1/2}+x+x^{3/2}+x^{2}+...  \\\\ =&\\ x^{1/2}+x^{2/2}+x^{3/2}+x^{4/2}+...\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "This is a geometric series with $a = r = x^{1/2}$. Note that our indefinite integral is from $x = 0$ to $x = 1/2$, so $|x| < 1$ for all $x$. This means the series converges, so we can collapse it to the sum of a converging infinite geometric series:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\frac{a}{1-r}=\\frac{x^{1/2}}{1-x^{1/2}}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1-\\sqrt{x}}{2}\\left(x^{1/2}+x+x^{3/2}+x^{2}+...\\right)\\ dx  \\\\ =&\\ \\frac{1}{2}\\int \\left(1-\\sqrt{x}\\right)\\cdot\\frac{x^{1/2}}{1-x^{1/2}}\\ dx  \\\\ =&\\ \\frac{1}{2}\\int \\frac{\\left(1-\\sqrt{x}\\right)\\sqrt{x}}{1-\\sqrt{x}}\\ dx  \\\\ =&\\ \\frac{1}{2}\\int \\sqrt{x}\\ dx  \\\\ =&\\ \\frac{1}{2}\\cdot\\frac{2}{3}x^{3/2}  \\\\ =&\\ \\frac{1}{3}x^{3/2}-c\\end{align*}"
+          }
+        ],
+        "evaluate": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{0}^{1/2}\\frac{1-\\sqrt{x}}{2}\\left(x^{1/2}+x+x^{3/2}+x^{2}+...\\right)\\ dx  \\\\ =&\\ \\frac{1}{3}\\left[x^{3/2}\\right]_{0}^{1/2}  \\\\ =&\\ \\frac{1}{3}\\left(\\frac{1}{2}\\right)^{3/2}-0  \\\\ =&\\ \\frac{1}{3\\left(\\sqrt{2}\\right)^{3}}\\end{align*}"
           }
         ]
       }
@@ -4923,6 +5146,9 @@
       ],
       "methods": [
         "spot"
+      ],
+      "flags": [
+        "feat"
       ],
       "shard": "s25f-iv1",
       "question": [
@@ -6155,6 +6381,103 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  \\\\ f &= t & g' &= \\sec\\left(t\\right)^{3}\\sec\\left(t\\right)\\tan\\left(t\\right)  \\\\ f' &= 1 & g &= \\frac{1}{4}\\sec\\left(t\\right)^{4}\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-rc1": {
+      "topic": "integrals",
+      "title": "relinquish",
+      "desc": null,
+      "date": "2025 March 20",
+      "tags": [
+        "frac",
+        "exp",
+        "infinite"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25f-rc1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{1}{    e^x + \\frac{1}{      e^x + ...    }  }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You’ll need a substitution for this."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You will need to <em>solve</em> the substitution."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Let $y$ denote the integrand."
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "What does the integrand contain?"
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "Another one of itself!"
+          }
+        ],
+        "6": [
+          {
+            "kind": "text",
+            "content": "Use the relationship $y = \\frac{1}{e^x+y}$."
+          }
+        ],
+        "7": [
+          {
+            "kind": "text",
+            "content": "Find an(other) expression for $y$ in terms of only $x$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{1}{2}e^{x}+\\frac{1}{2}\\sqrt{4+e^{2x}}-\\tanh^{-1}\\left(\\frac{1}{2}\\sqrt{4+e^{2x}}\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  y &= \\frac{1}{e^{x}+\\frac{1}{e^{x}+...}}  \\\\ y &= \\frac{1}{e^{x}+y}  \\\\ y\\left(e^{x}+y\\right) &= 1  \\\\ ye^{x}+y^{2} &= 1  \\\\ \\left(y+\\frac{1}{2}e^{x}\\right)^{2}-\\left(\\frac{1}{2}e^{x}\\right)^{2} &= 1  \\\\ \\left(y+\\frac{1}{2}e^{x}\\right)^{2} &= 1+\\frac{1}{4}e^{2x}  \\\\ y+\\frac{1}{2}e^{x} &= \\sqrt{1+\\frac{1}{4}e^{2x}}  \\\\ y &= -\\frac{1}{2}e^{x}+\\sqrt{1+\\frac{1}{4}e^{2x}}\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\int \\frac{1}{e^{x}+\\frac{1}{e^{x}+...}}\\ dx    &= \\int y\\ dx  \\\\ &= \\int -\\frac{1}{2}e^{x}+\\sqrt{1+\\frac{1}{4}e^{2x}}\\ dx  \\\\ &= -\\frac{1}{2}\\int e^{x}\\ dx+\\frac{1}{2}\\int \\sqrt{4+e^{2x}}\\ dx  \\\\ &= -\\frac{1}{2}e^{x}+\\frac{1}{2}\\int \\sqrt{4+e^{2x}}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{4+e^{2x}} &= t  \\\\ 4+e^{2x} &= t^{2}  \\\\ e^{2x} &= t^{2}-4  \\\\ 2x &= \\ln\\left(t^{2}-4\\right)  \\\\ x &= \\frac{1}{2}\\ln\\left(t^{2}-4\\right)  \\\\ dx &= \\frac{1}{2}\\cdot\\frac{1}{t^{2}-4}\\cdot2t  \\\\ &= \\frac{t}{t^{2}-4}\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\frac{1}{2}e^{x}+\\frac{1}{2}\\int t\\cdot\\frac{t}{t^{2}-4}\\ dt  \\\\ &= -\\frac{1}{2}e^{x}+\\frac{1}{2}\\int \\frac{t^{2}-4+4}{t^{2}-4}\\ dt  \\\\ &= -\\frac{1}{2}e^{x}+\\frac{1}{2}\\int 1+\\frac{4}{t^{2}-4}\\ dt  \\\\ &= -\\frac{1}{2}e^{x}+\\frac{1}{2}t-2\\int \\frac{1}{4-t^{2}}\\ dt  \\\\ &= -\\frac{1}{2}e^{x}+\\frac{1}{2}t-2\\cdot\\frac{1}{\\sqrt{4}}\\tanh^{-1}\\left(\\frac{1}{\\sqrt{4}}t\\right)  \\\\ &= -\\frac{1}{2}e^{x}+\\frac{1}{2}t-\\tanh^{-1}\\left(\\frac{1}{2}t\\right)  \\\\ &= -\\frac{1}{2}e^{x}+\\frac{1}{2}\\sqrt{4+e^{2x}}-\\tanh^{-1}\\left(\\frac{1}{2}\\sqrt{4+e^{2x}}\\right)-c\\end{align*}"
           }
         ]
       }

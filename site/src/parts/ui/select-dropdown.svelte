@@ -113,6 +113,7 @@ ul.dropdown {
   visibility: hidden;
   opacity: 0;
 
+  background: white;  // fallback
   background: light-dark(white, black);
   border: 1px solid $col-line-fallback;
   border: 1px solid $col-line;

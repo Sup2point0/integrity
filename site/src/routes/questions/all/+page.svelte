@@ -16,6 +16,7 @@ import { onMount } from "svelte";
 const questions = Site.get_list_of_all_questions();
 const count = questions.length;
 const tags = Site.get_all_tags();
+const methods = Site.get_all_methods();
 
 let filtered = $derived(
   search.filter_questions(questions)
@@ -24,6 +25,7 @@ let filtered = $derived(
 
 onMount(() => {
   search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+  search.methods = Object.fromEntries(methods.map(method => [method, false]));
 })
 
 </script>
@@ -40,7 +42,7 @@ onMount(() => {
 ]} />
 
 <Header title="All Questions" />
-<Search {tags} />
+<Search />
 
 <div class="content {$userprefs["search-view"]}">
   {#each filtered as question}

@@ -12,16 +12,8 @@ import Toggle from "#parts/ui/toggle.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
 
 import { fade } from "svelte/transition";
-import { page } from "$app/state";
 import { base } from "$app/paths";
 import { onMount } from "svelte";
-
-
-interface Props {
-  tags?: string[];
-}
-
-let { tags = [] }: Props = $props();
 
 
 let open = $state(false);
@@ -79,10 +71,10 @@ onMount(() => {
         <th> Topics </th>
 
         <td class="flex">
-          {#each tags as tag}
+          {#each Object.entries(search.tags) as [tag, state]}
             <Toggle text={tag.toUpperCase()}
-              value={search.tags[tag]}
-              toggle={() => { search.tags[tag] = !search.tags[tag]; }}
+              value={state}
+              toggle={() => { search.tags[tag] = !state; }}
             />
           {/each}
         </td>
@@ -91,23 +83,22 @@ onMount(() => {
           <Toggle text="ALL"
             value={!unchecked_tag}
             toggle={() => {
-              search.tags = Object.fromEntries(
-                tags.map(tag => [tag, unchecked_tag])
-              );
+              for (let tag in search.tags) {
+                search.tags[tag] = unchecked_tag;
+              }
             }}
           />
         </td>
       </tr>
       
-      <!-- TODO -->
-      <!-- <tr>
+      <tr>
         <th> Methods </th>
 
         <td class="flex">
-          {#each methods as method}
+          {#each Object.entries(search.methods) as [method, state]}
             <Toggle text={method.toUpperCase()}
-              value={search.methods[method]}
-              toggle={() => { search.methods[method] = !search.methods[method]; }}
+              value={state}
+              toggle={() => { search.methods[method] = !state; }}
             />
           {/each}
         </td>
@@ -116,13 +107,13 @@ onMount(() => {
           <Toggle text="ALL"
             value={!unchecked_method}
             toggle={() => {
-              search.methods = Object.fromEntries(
-                methods.map(method => [method, unchecked_tag])
-              );
+              for (let method in search.methods) {
+                search.methods[method] = unchecked_method;
+              }
             }}
           />
         </td>
-      </tr> -->
+      </tr>
 
       <tr>
         <th> Include Only </th>
