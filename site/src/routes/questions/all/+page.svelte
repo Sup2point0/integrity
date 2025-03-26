@@ -14,13 +14,10 @@ import { onMount } from "svelte";
 
 
 const questions = Site.get_list_of_all_questions();
-const count = questions.length;
 const tags = Site.get_all_tags();
 const methods = Site.get_all_methods();
 
-let filtered = $derived(
-  search.filter_questions(questions)
-);
+let filtered = $derived(search.filter_questions(questions));
 
 
 onMount(() => {
@@ -55,7 +52,7 @@ onMount(() => {
 
 <aside>
   {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {count} </p>
+    <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {questions.length} </p>
   {:else}
     <p> Oops, no questions found! </p>
   {/if}

@@ -10,7 +10,6 @@ import Header from "#parts/core/header.svelte";
 
 
 const questions = Site.get_questions_of_topic("addvent");
-const count = questions.length;
 
 </script>
 
@@ -36,7 +35,7 @@ const count = questions.length;
 </div>
 
 <aside>
-  <p> Showing <span>{count}</span> questions of {count} </p>
+  <p> Showing <span>{questions.length}</span> questions of {questions.length} </p>
 </aside>
 
 

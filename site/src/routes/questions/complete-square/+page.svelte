@@ -13,13 +13,11 @@ import Search from "#parts/page/search.svelte";
 import { onMount } from "svelte";
 
 
-const count = Site.get_questions_of_topic("complete-square").length;
+const questions = Site.get_questions_of_topic("complete-square");
 const tags = Site.questions["complete-square"].tags;
 const methods = Site.questions["complete-square"].methods;
 
-let filtered = $derived(
-  search.filter_questions(Site.get_questions_of_topic("complete-square"))
-);
+let filtered = $derived(search.filter_questions(questions));
 
 
 onMount(() => {
@@ -54,7 +52,7 @@ onMount(() => {
 
 <aside>
   {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {count} </p>
+    <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {questions.length} </p>
   {:else}
     <p> Oops, no questions found! </p>
   {/if}

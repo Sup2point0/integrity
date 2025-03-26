@@ -13,13 +13,11 @@ import Search from "#parts/page/search.svelte";
 import { onMount } from "svelte";
 
 
-const count = Site.get_questions_of_topic("integrals").length;
+const questions = Site.get_questions_of_topic("integrals");
 const tags = Site.questions["integrals"].tags;
 const methods = Site.questions["integrals"].methods;
 
-let filtered = $derived(
-  search.filter_questions(Site.get_questions_of_topic("integrals"))
-);
+let filtered = $derived(search.filter_questions(questions));
 
 
 onMount(() => {
@@ -54,7 +52,7 @@ onMount(() => {
 
 <aside>
   {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {count} </p>
+    <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {questions.length} </p>
     <!-- TEMP -->
     <p> <br> (100+ integrals from school Integration Bee will be added after the Antarctican New Year!) </p>
   {:else}
