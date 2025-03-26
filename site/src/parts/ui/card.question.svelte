@@ -10,6 +10,7 @@ import type { Latex, Question } from "#scripts/types";
 import SaveButtons from "#parts/page/save-buttons.svelte";
 import Tag from "#parts/ui/tag.svelte";
 import Katex from "#parts/katex.svelte";
+import DesmosPreview from "#parts/desmos-preview.svelte";
 
 import { fade, slide } from "svelte/transition";
 import { base } from "$app/paths";
@@ -18,10 +19,11 @@ import { base } from "$app/paths";
 interface Props {
   question: Question;
   latex?: Latex;
+  desmos?: Latex;
   style?: "block" | "row";
 }
 
-let { question, latex, style = "block" }: Props = $props();
+let { question, latex, desmos, style = "block" }: Props = $props();
 
 </script>
 
@@ -33,6 +35,10 @@ let { question, latex, style = "block" }: Props = $props();
     <div class="question" transition:fade={{ duration: 250 }}>
       {#if latex}
         <Katex text={latex} inline={false} />
+      {/if}
+
+      {#if desmos}
+        <DesmosPreview latex={desmos} bounds={question["graph-bounds"]} />
       {/if}
     </div>
   {/if}
@@ -69,8 +75,8 @@ let { question, latex, style = "block" }: Props = $props();
 
           {#if search.show.methods && question.methods && question.methods.length > 0}
             <span class="tags" transition:fade={{ duration: 250 }}>
-              {#each question.methods as tag}
-                <Tag {tag} kind="deut" margin={"0.25em"} />
+              {#each question.methods as method}
+                <Tag tag={method} kind="deut" margin={"0.25em"} />
               {/each}
             </span>
           {/if}

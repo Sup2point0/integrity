@@ -36,6 +36,9 @@ export class Question
   /** Alternate solutions. */
   alternates?: Block[];
 
+  /** Bounds of the viewport for a graph question. */
+  "graph-bounds"?: number;
+
   constructor(data: any)
   {
     Object.assign(this, data);

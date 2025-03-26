@@ -873,6 +873,29 @@
       }
     }
   },
+  "guess-graph": {
+    "g24f-xs1": {
+      "topic": "guess-graph",
+      "title": "crossnaught",
+      "desc": null,
+      "date": "2024 September",
+      "tags": [
+        "implicit",
+        "poly"
+      ],
+      "methods": [
+        null
+      ],
+      "graph-bounds": 3,
+      "shard": "g24f-xs1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\left(x+y\\right)^{1000}-\\left(x-y\\right)^{1000}=x^{2}y^{2}"
+        }
+      ]
+    }
+  },
   "integrals": {
     "s24f-ch1": {
       "topic": "integrals",
@@ -6290,7 +6313,7 @@
           },
           {
             "kind": "text",
-            "content": "$w = -1$ is a solution to $2w^\" + 3w + 1 = 0$, therefore $(w + 1)$ is a factor:"
+            "content": "$w = -1$ is a solution to $2w^2 + 3w + 1 = 0$, therefore $(w + 1)$ is a factor:"
           },
           {
             "kind": "latex",

@@ -31,7 +31,7 @@ let last_reset: number = Date.now();
 
 onMount(try_load_desmos);
 
-/* it would be nice to separate these into their own file, but they interact with the page too much... */
+/* it would be nice to separate these functions into their own file, but they interact with the page too much... */
 function try_load_desmos(i: number = 0)
 {
   if (i > 3) {
@@ -103,7 +103,7 @@ function apply_question(shard: Shard | null) {
 
 
 <Meta title="Workspace"
-  desc="Workspace for solving questions in Integrity"
+  desc="Preset Desmos calculator for solving questions in Integrity"
 >
   <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </Meta>

@@ -1,14 +1,17 @@
 <!-- @component Katex
 
-LaTeX rendered by KaTeX. -->
+LaTeX rendered by KaTeX.
+-->
 
 <script lang="ts">
 
 import katex from "katex";
 
+import type { Latex } from "#scripts/types";
+
 
 interface Props {
-  text?: string;
+  text?: Latex;
   inline?: boolean;
 }
 
