@@ -40,7 +40,9 @@ onMount(() => {
   { text: "Guess the Graph" },
 ]} />
 
-<Header title="Guess the Graph" />
+<Header title="Guess the Graph"
+  capt="Full disclaimer: most of these graphs are not guessable. It’s more just my collection of cool graphs lmao."
+/>
 <Search />
 
 <div class="content {$userprefs["search-view"]}">

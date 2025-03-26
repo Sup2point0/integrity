@@ -6,6 +6,7 @@ date: 2024 June
 tags:
   - cool
   - implicit
+  - inequality
   - trig
 graph-bounds: 6
 ---
