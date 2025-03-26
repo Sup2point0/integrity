@@ -2,7 +2,7 @@
 topic: guess-graph
 title: rain
 desc: 
-date: 2024 September
+date: 2024 May
 tags:
   - functions
   - implicit

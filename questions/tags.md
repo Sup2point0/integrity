@@ -5,11 +5,11 @@
 
 Tags to indicate what sort of question you’re facing.
 
-|             | general | integrals |
-| :---------- | :------ | :-------- |
+|             | general | integrals | guess the graph |
+| :---------- | :------ | :-------- | :-------------- |
 | conditions  |  | `definite` |
 | descriptors | `funny`<br>`horror`<br>`scare`<br>`dread` |
-| topics      | `algebra`<br>`combinatorics`<br>`complex`<br>`numbers`<br>`sequences`<br>`series` | `frac`<br>`poly`<br>`sqrt`<br>`trig`<br>`exp`<br>`ln`<br>`inverse trig`<br>`hyp trig` |
+| topics      | `algebra`<br>`combinatorics`<br>`complex`<br>`infinite`<br>`numbers`<br>`sequences`<br>`series` | `frac`<br>`poly`<br>`sqrt`<br>`trig`<br>`exp`<br>`ln`<br>`inverse trig`<br>`hyp trig` | `implicit`<br>`parametric` |
 | cameos      | `pi`<br>`e` |
 
 
