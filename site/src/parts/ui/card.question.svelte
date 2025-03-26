@@ -5,7 +5,7 @@ A card for selecting a question. -->
 <script lang="ts">
 
 import { search } from "#scripts/stores";
-import type { Latex, Question } from "#scripts/types";
+import type { Latex, Block, Question } from "#scripts/types";
 
 import SaveButtons from "#parts/page/save-buttons.svelte";
 import Tag from "#parts/ui/tag.svelte";
@@ -19,7 +19,7 @@ import { base } from "$app/paths";
 interface Props {
   question: Question;
   latex?: Latex;
-  desmos?: Latex;
+  desmos?: Block | Block[];
   style?: "block" | "row";
 }
 
@@ -38,7 +38,7 @@ let { question, latex, desmos, style = "block" }: Props = $props();
       {/if}
 
       {#if desmos}
-        <DesmosPreview latex={desmos} bounds={question["graph-bounds"]} />
+        <DesmosPreview blocks={desmos} bounds={question["graph-bounds"]} />
       {/if}
     </div>
   {/if}

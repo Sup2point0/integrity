@@ -36,13 +36,16 @@ export class Question
   /** Alternate solutions. */
   alternates?: Block[];
 
+  /** Expressions to show in a Desmos graph. */
+  desmos?: Block | Block[];
+
   /** Bounds of the viewport for a graph question. */
   "graph-bounds"?: number;
 
   constructor(data: any)
   {
     Object.assign(this, data);
-    this.question = data.question[0];
+    this.question = data.question && data.question[0];
     this.date_display = data.date;
     this.date = new Date(data.date);
     // this.title = data.title;

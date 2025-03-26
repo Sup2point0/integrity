@@ -5,16 +5,16 @@ A graph rendered by Desmos
 
 <script lang="ts">
 
-import type { Latex } from "#scripts/types";
+import type { Block } from "#scripts/types";
 
 import { onMount } from "svelte";
 
 interface Props {
-  latex: Latex;
+  blocks: Block | Block[];
   bounds?: number;
 }
 
-let { latex, bounds = 2 }: Props = $props();
+let { blocks, bounds = 2 }: Props = $props();
 
 
 let desmos: any | false | null = null;
@@ -26,34 +26,42 @@ onMount(try_load_desmos);
 function try_load_desmos()
 {
   desmos = Desmos.GraphingCalculator(self, {
-    keypad: false,
-    graphPaper: false,
-    expressions: false,
+    expressions: false, keypad: false,
+    graphPaper: false, showGrid: false,
     settingsMenu: false,
-    zoomButtons: false,
-    lockViewport: true,
-    showGrid: false,
-    showXAxis: false,
-    showYAxis: false,
-    xAxisNumbers: false,
-    yAxisNumbers: false,
+    lockViewport: true, zoomButtons: false,
+    showXAxis: false, showYAxis: false,
+    xAxisNumbers: false, yAxisNumbers: false,
   });
   desmos.setMathBounds({
-    left: -bounds,
-    right: bounds,
-    bottom: -bounds,
-    top: bounds,
+    left: -bounds, right: bounds,
+    bottom: -bounds, top: bounds,
   });
-  desmos.setExpressions([
-    { id: "guess-graph-question", latex }
-  ]);
+
+  if (Array.isArray(blocks)) {
+    desmos.setExpressions(
+      blocks.map((block, i) => ({
+        id: `guess-graph-question-${i}`,
+        latex: block.content,
+        color: pick_col()
+      }))
+    );
+  } else {
+    desmos.setExpressions([
+      { id: "guess-graph-question", latex: blocks.content, color: pick_col() }
+    ]);
+  }
+}
+
+function pick_col()
+{
+  return Object.values(Desmos.Colors).sort(() => Math.random() - 0.5)[0];
 }
 
 </script>
 
 
 <div class="desmos-preview"
-  onclick={e => e.preventDefault()}
   bind:this={self}
 >
   
