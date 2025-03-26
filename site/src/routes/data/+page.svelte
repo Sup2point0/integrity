@@ -43,7 +43,7 @@ function check_integrity()
       fix_integrity();
     }
   } else {
-    if (checks > 3 && Math.random() > 0.8) {
+    if (checks > 3 && Math.random() > 0.9) {
       confirm("Mate, are you having a bubble bath?");
     } else {
       confirm("No errors found, looking good!");

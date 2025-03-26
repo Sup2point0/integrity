@@ -18,13 +18,30 @@ let { blocks, bounds = 2 }: Props = $props();
 
 
 let desmos: any | false | null = null;
-
+let live = $state(false);
 let self: HTMLElement;
 
-onMount(try_load_desmos);
+onMount(() => {
+  let observer = new IntersectionObserver(entries => {
+    for (let entry of entries) {
+      if (entry.isIntersecting && !live) {
+        live = try_load_desmos();
+      }
+    }
+  });
+
+  observer.observe(self);
+});
 
 function try_load_desmos()
 {
+  try {
+    Desmos;
+  } catch {
+    desmos = false;
+    return false;
+  }
+
   desmos = Desmos.GraphingCalculator(self, {
     expressions: false, keypad: false,
     graphPaper: false, showGrid: false,
@@ -51,6 +68,8 @@ function try_load_desmos()
       { id: "guess-graph-question", latex: blocks.content, color: pick_col() }
     ]);
   }
+
+  return true;
 }
 
 function pick_col()
@@ -64,7 +83,11 @@ function pick_col()
 <div class="desmos-preview"
   bind:this={self}
 >
-  
+  {#if desmos === false}
+    Error loading Desmos preview =(
+  {:else if !live}
+    Loading...
+  {/if}
 </div>
 
 
@@ -72,7 +95,7 @@ function pick_col()
 
 .desmos-preview {
   width: 100%;
-  min-width: 10rem;
+  min-width: 12rem;
   max-width: 100%;
   aspect-ratio: 1;
 }

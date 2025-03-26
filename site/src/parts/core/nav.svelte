@@ -24,7 +24,7 @@ import { base } from "$app/paths";
       <Link text="Integrals" intern="questions/integrals" />
       <Link text="Graph Drawing" intern="questions/graph-drawing" disabled={true} />
       <Link text="Completing the Square" intern="questions/complete-square" />
-      <Link text="Guess the Graph" intern="questions/guess-graph" disabled={true} />
+      <Link text="Guess the Graph" intern="questions/guess-graph" />
       <Link text="Addvent" intern="questions/addvent" />
       <Link text="Special" intern="questions/special" disabled={true} />
     </NavLink>

@@ -67,6 +67,12 @@ button {
     $col-card-click,
   );
   @include focus-outline;
+
+  transition: all 0.1s ease-out;
+
+  &:hover, &:focus, &:active {
+    color: var(--col-on, $col-deut);
+  }
 }
 
 button.active {

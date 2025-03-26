@@ -874,17 +874,32 @@
     }
   },
   "guess-graph": {
+    "g24f-ac1": {
+      "topic": "guess-graph",
+      "title": "another activation",
+      "desc": null,
+      "date": "2024 July",
+      "tags": [
+        "implicit",
+        "poly"
+      ],
+      "graph-bounds": 5,
+      "shard": "g24f-ac1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x}{y}-\\frac{y}{x}=\\sqrt{xy}"
+        }
+      ]
+    },
     "g24f-cl1": {
       "topic": "guess-graph",
       "title": "clover",
       "desc": null,
-      "date": "2024 September",
+      "date": "2024 May",
       "tags": [
         "implicit",
         "variable"
-      ],
-      "methods": [
-        null
       ],
       "graph-bounds": 1,
       "shard": "g24f-cl1",
@@ -899,17 +914,246 @@
         }
       ]
     },
+    "g24f-ds1": {
+      "topic": "guess-graph",
+      "title": "DEATH STAR",
+      "desc": null,
+      "date": "2024 June",
+      "tags": [
+        "epic",
+        "gcd",
+        "implicit",
+        "lcm"
+      ],
+      "graph-bounds": 5,
+      "shard": "g24f-ds1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\gcd\\left(\\operatorname{lcm}\\left(x,y\\right),xy\\right)=1"
+        }
+      ]
+    },
+    "g24f-fs1": {
+      "topic": "guess-graph",
+      "title": "fullscreen",
+      "desc": null,
+      "date": "2024 June",
+      "tags": [
+        "implicit",
+        "lcm"
+      ],
+      "graph-bounds": 2,
+      "shard": "g24f-fs1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\operatorname{lcm}\\left(x,y\\right)=1"
+        }
+      ]
+    },
+    "g24f-gc1": {
+      "topic": "guess-graph",
+      "title": "MAX MOSAIC",
+      "desc": null,
+      "date": "2024 June",
+      "tags": [
+        "epic",
+        "gcd",
+        "implicit"
+      ],
+      "graph-bounds": 13,
+      "shard": "g24f-gc1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\gcd\\left(x,y\\right)=1"
+        }
+      ]
+    },
+    "g24f-gc2": {
+      "topic": "guess-graph",
+      "title": "SHEER MOSAICS",
+      "desc": null,
+      "date": "2024 June",
+      "tags": [
+        "epic",
+        "gcd",
+        "implicit"
+      ],
+      "graph-bounds": null,
+      "shard": "g24f-gc2",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\gcd\\left(x,y,x+y\\right)=1"
+        }
+      ]
+    },
+    "g24f-gd1": {
+      "topic": "guess-graph",
+      "title": "rain",
+      "desc": null,
+      "date": "2024 May",
+      "tags": [
+        "functions",
+        "implicit"
+      ],
+      "graph-bounds": 10,
+      "shard": "g24f-gd1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "x\\operatorname{lcm}\\left(x,y\\right)-y\\gcd\\left(x,y\\right)=0"
+        }
+      ]
+    },
+    "g24f-gd2": {
+      "topic": "guess-graph",
+      "title": "agitation",
+      "desc": null,
+      "date": "2024 May",
+      "tags": [
+        "functions",
+        "implicit"
+      ],
+      "graph-bounds": 4,
+      "shard": "g24f-gd2",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\operatorname{lcm}\\left(x,y\\right)=x^{2}y^{2}"
+        }
+      ]
+    },
+    "g24f-hc1": {
+      "topic": "guess-graph",
+      "title": "honeycomb",
+      "desc": null,
+      "date": "2024 June",
+      "tags": [
+        "cool",
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 6,
+      "shard": "g24f-hc1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\sin\\left(x\\right)\\cos\\left(y\\right)\\sin\\left(xy\\right)\\cos\\left(x^{2}\\right)\\cos\\left(y^{2}\\right)>k"
+        },
+        {
+          "kind": "latex",
+          "content": "k=0.29"
+        }
+      ]
+    },
+    "g24f-qd1": {
+      "topic": "guess-graph",
+      "title": "wavy quadrants",
+      "desc": null,
+      "date": "2024 July",
+      "tags": [
+        "function",
+        "implicit",
+        "inequality"
+      ],
+      "graph-bounds": 13,
+      "shard": "g24f-qd1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "f\\left(p,\\ q\\right)=\\frac{pq-\\sqrt{p^{2}+q^{2}}}{\\left|p+q\\right|}"
+        },
+        {
+          "kind": "latex",
+          "content": "f\\left(x,y\\right)<\\sin\\left(x\\right)\\cos\\left(y\\right)+1"
+        }
+      ]
+    },
+    "g24f-rc1": {
+      "topic": "guess-graph",
+      "title": "dubious reciprocal",
+      "desc": null,
+      "date": "2024 June",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 5,
+      "shard": "g24f-rc1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "xy-\\cos\\left(xy\\right)=0"
+        }
+      ]
+    },
+    "g24f-sj1": {
+      "topic": "guess-graph",
+      "title": "jagged",
+      "desc": null,
+      "date": "2024 May",
+      "tags": [
+        "functions",
+        "gcd",
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 10,
+      "shard": "g24f-sj1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\gcd\\left(x,y\\right)=\\operatorname{round}\\left(\\sin\\left(xy\\right)\\right)"
+        }
+      ]
+    },
+    "g24f-wd1": {
+      "topic": "guess-graph",
+      "title": "windmill wave",
+      "desc": null,
+      "date": "2024 June",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 8,
+      "shard": "g24f-wd1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\cos\\left(x\\right)-\\cos\\left(y\\right)=xy"
+        }
+      ]
+    },
+    "g24f-wv1": {
+      "topic": "guess-graph",
+      "title": "wavy mosaic",
+      "desc": null,
+      "date": "2024 May",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 10,
+      "shard": "g24f-wv1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\sin\\left(x\\right)+\\sin\\left(y\\right)+\\sin\\left(xy\\right)+\\cos\\left(xy\\right)=1"
+        }
+      ]
+    },
     "g24f-xs1": {
       "topic": "guess-graph",
       "title": "crossnaught",
       "desc": null,
-      "date": "2024 September",
+      "date": "2024 May",
       "tags": [
         "implicit",
         "poly"
-      ],
-      "methods": [
-        null
       ],
       "graph-bounds": 3,
       "shard": "g24f-xs1",
@@ -917,6 +1161,27 @@
         {
           "kind": "latex",
           "content": "\\left(x+y\\right)^{1000}-\\left(x-y\\right)^{1000}=x^{2}y^{2}"
+        }
+      ]
+    }
+  },
+  "guess-graphs": {
+    "g24f-sv1": {
+      "topic": "guess-graphs",
+      "title": "antechnica",
+      "desc": null,
+      "date": "2024 May",
+      "tags": [
+        "abs",
+        "gcd",
+        "implicit"
+      ],
+      "graph-bounds": null,
+      "shard": "g24f-sv1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\gcd\\left(x+y,x-y,y-x\\right)=\\left|x\\right|"
         }
       ]
     }

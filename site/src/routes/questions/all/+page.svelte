@@ -44,7 +44,8 @@ onMount(() => {
 <div class="content {$userprefs["search-view"]}">
   {#each filtered as question}
     <QuestionCard {question}
-      latex={question.question.kind === "latex" ? question.question.content : undefined}
+      latex={question.question?.kind === "latex" ? question.question.content : undefined}
+      desmos={question.desmos}
       style={$userprefs["search-view"] === "grid" ? "block" : "row"}
     />
   {/each}
