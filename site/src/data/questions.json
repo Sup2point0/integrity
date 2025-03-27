@@ -892,6 +892,41 @@
         }
       ]
     },
+    "g24f-ac2": {
+      "topic": "guess-graph",
+      "title": "new activation function just dropped",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "trig"
+      ],
+      "graph-bounds": 5,
+      "shard": "g24f-ac2",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "x=y^{2}\\csc y"
+        }
+      ]
+    },
+    "g24f-ac3": {
+      "topic": "guess-graph",
+      "title": "more activation",
+      "desc": null,
+      "date": "2024 November",
+      "tags": [
+        "exp",
+        "log"
+      ],
+      "graph-bounds": 3,
+      "shard": "g24f-ac3",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\ln\\left(e^{x}+1\\right)"
+        }
+      ]
+    },
     "g24f-ae1": {
       "topic": "guess-graph",
       "title": "aliens!",
@@ -925,6 +960,23 @@
         {
           "kind": "latex",
           "content": "\\sin\\left(x\\right)\\cos\\left(y\\right)-\\cos\\left(x\\right)\\sin\\left(y\\right)=x^{2}y^{2}"
+        }
+      ]
+    },
+    "g24f-ap1": {
+      "topic": "guess-graph",
+      "title": "pulse",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "poly"
+      ],
+      "graph-bounds": 3,
+      "shard": "g24f-ap1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x}{x^{4}+x^{2}+1}"
         }
       ]
     },
@@ -983,6 +1035,24 @@
         {
           "kind": "latex",
           "content": "\\frac{\\left(x-y\\right)^{\\left(y-x\\right)}}{xy}=0.1"
+        }
+      ]
+    },
+    "g24f-cs1": {
+      "topic": "guess-graph",
+      "title": "fancy cross",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 1,
+      "shard": "g24f-cs1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "xy=y\\sin x"
         }
       ]
     },
@@ -1214,6 +1284,24 @@
         }
       ]
     },
+    "g24f-hk1": {
+      "topic": "guess-graph",
+      "title": "hook",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "inverse trig",
+        "trig"
+      ],
+      "graph-bounds": 4,
+      "shard": "g24f-hk1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\sin\\left(x\\right)\\cos^{-1}\\left(x\\right)"
+        }
+      ]
+    },
     "g24f-hp1": {
       "topic": "guess-graph",
       "title": "questionable hyperbola?",
@@ -1223,7 +1311,7 @@
         "implicit",
         "ln"
       ],
-      "graph-bounds": 7,
+      "graph-bounds": 8,
       "shard": "g24f-hp1",
       "desmos": [
         {
@@ -1323,6 +1411,48 @@
         }
       ]
     },
+    "g24f-mt1": {
+      "topic": "guess-graph",
+      "title": "meta",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "derivative",
+        "inverse trig",
+        "poly",
+        "sqrt"
+      ],
+      "graph-bounds": 2.5,
+      "shard": "g24f-mt1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "x\\sqrt{2x-x^{2}}"
+        },
+        {
+          "kind": "latex",
+          "content": "\\frac{d}{dx}\\left(\\frac{\\left(1-\\left(x-1\\right)^{2}\\right)^{\\frac{3}{2}}}{2}+\\frac{1}{2}\\sin^{-1}\\left(x-1\\right)+\\frac{\\left(x-1\\right)\\sqrt{1-\\left(x-1\\right)^{2}}}{2}\\right)"
+        }
+      ]
+    },
+    "g24f-mt2": {
+      "topic": "guess-graph",
+      "title": "woah",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "poly",
+        "trig"
+      ],
+      "graph-bounds": 4,
+      "shard": "g24f-mt2",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{4e^{2}}\\left(x-2e\\right)^{2}-\\sec^{2}e^{x}"
+        }
+      ]
+    },
     "g24f-qd1": {
       "topic": "guess-graph",
       "title": "wavy quadrants",
@@ -1403,6 +1533,42 @@
         }
       ]
     },
+    "g24f-sp2": {
+      "topic": "guess-graph",
+      "title": "spicy!",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 20,
+      "shard": "g24f-sp2",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "x\\sin y-y=x"
+        }
+      ]
+    },
+    "g24f-sp3": {
+      "topic": "guess-graph",
+      "title": "sharp!",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 10,
+      "shard": "g24f-sp3",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{x^{2}}-y^{2}=\\sin xy"
+        }
+      ]
+    },
     "g24f-wd1": {
       "topic": "guess-graph",
       "title": "windmill wave",
@@ -1472,6 +1638,96 @@
         {
           "kind": "latex",
           "content": "\\cos\\left(x\\right)\\sec\\left(y\\right)-\\csc\\left(x\\right)\\tan\\left(y\\right)=0"
+        }
+      ]
+    },
+    "g24f-wv4": {
+      "topic": "guess-graph",
+      "title": "spicy waves",
+      "desc": null,
+      "date": "2024 September",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 10,
+      "shard": "g24f-wv4",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "y\\sin\\left(\\cos x\\right)=\\cos\\left(x\\sin y\\right)"
+        }
+      ]
+    },
+    "g24f-wv5": {
+      "topic": "guess-graph",
+      "title": "spicy waves!!",
+      "desc": null,
+      "date": "2024 September",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 10,
+      "shard": "g24f-wv5",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "y^{2}\\sin\\left(y\\cos x\\right)=x\\cos\\left(x\\sin y^{2}\\right)"
+        }
+      ]
+    },
+    "g24f-wv6": {
+      "topic": "guess-graph",
+      "title": "wavier!",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 5,
+      "shard": "g24f-wv6",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\sin y=\\frac{1}{\\tan x}"
+        }
+      ]
+    },
+    "g24f-wv7": {
+      "topic": "guess-graph",
+      "title": "wavyyyy",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "ln",
+        "trig"
+      ],
+      "graph-bounds": 4,
+      "shard": "g24f-wv7",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "\\left(\\sin x\\right)\\ln\\left(\\sin^{2}x\\right)"
+        }
+      ]
+    },
+    "g24f-ww1": {
+      "topic": "guess-graph",
+      "title": "wavy!",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "implicit",
+        "trig"
+      ],
+      "graph-bounds": 13,
+      "shard": "g24f-ww1",
+      "desmos": [
+        {
+          "kind": "latex",
+          "content": "y\\sin x=x\\cos y"
         }
       ]
     },

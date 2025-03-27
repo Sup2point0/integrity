@@ -31,7 +31,7 @@ export class Question
   answer?: Block;
 
   /** The intended solution. */
-  solution?: Block[];
+  solution?: Block | Block[];
 
   /** Alternate solutions. */
   alternates?: Block[];

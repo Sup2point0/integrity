@@ -1,96 +1,94 @@
 <script lang="ts">
 
-import Site from "#scripts/site";
-import type { Shard, Question } from "#scripts/types";
+import { page_data } from "../page-data.svelte.ts";
+import type { Question } from "#scripts/types";
 
-import Katex from "#parts/katex.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
-
-import Header from "#parts/core/header.svelte";
+import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Section from "#parts/page/section.svelte";
 
-import { page } from "$app/stores";
 import { onMount } from "svelte";
-import { error } from "@sveltejs/kit";
 
 
-let loaded = false;
-let shard: Shard | null = null;
-let question: Question | null = null;
+let question: Question | null = $derived(page_data.question);
+
+let desmos: any | false | null = $state(null);
+let self: HTMLElement;
 
 
-onMount(() => {
-  let params = $page.url.searchParams;
+onMount(try_load_desmos);
 
-  shard = params.get("shard");
-  if (shard == null) {
-    error(404, { message: "Question not found!" });
+function try_load_desmos(i: number = 0)
+{
+  if (i > 3) {
+    desmos = false;  // fail after too many tries
+    return;
+  };
+
+  try {
+    Desmos;
+
+    desmos = Desmos.GraphingCalculator(self, {
+      expressionsCollapsed: true,
+    });
+
+    if (Array.isArray(question?.desmos)) {
+      desmos.setExpressions(
+        question?.desmos.map((block, i) => ({
+          id: `guess-graph-question-${i}`,
+          latex: block.content,
+          color: pick_col()
+        }))
+      );
+    } else {
+      desmos.setExpressions([
+        { id: "guess-graph-question", latex: question?.desmos.content, color: pick_col() }
+      ]);
+    }
+  } catch {
+    setTimeout(
+      () => try_load_desmos(++i),
+      100 + i*i * 100
+    );
   }
+}
 
-  question = Site.questions["guess-graph"].questions[shard!];
-  if (question == null) {
-    error(404, { message: "Question not found!" });
-  }
-
-  loaded = true;
-});
+function pick_col()
+{
+  return Object.values(Desmos.Colors).sort(() => Math.random() - 0.5)[0];
+}
 
 </script>
 
 
-{#if loaded && question}
-  <Breadcrumbs levels={[
-    { text: "Questions", intern: "questions" },
-    { text: "Guess the Graph", intern: "questions/guess-graph" },
-    { text: shard ?? "?" },
-  ]} />
+<Meta title="Guess the Graph">
+  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</Meta>
 
-  <section class="question">
-    <Katex text={question.question.content} />
-  </section>
 
-  {#if question.hints}
-    <Section title="Hints">
-      {#each Object.entries(question.hints) as [hint, source]}
-        <Section ctx="inner" title={hint}>
-          <RenderBlock {source} />
-        </Section>
-      {/each}
-    </Section>
+<Breadcrumbs levels={[
+  { text: "Questions", intern: "questions" },
+  { text: "Guess the Graph", intern: "questions/guess-graph" },
+  { text: question?.shard ?? "?" },
+]} copy={true} shard={question?.shard} />
+
+<div id="desmos-window"
+  bind:this={self}
+>
+  {#if desmos === null}
+    <p> Loading Desmos calculator... </p>
+  {:else if desmos === false}
+    <p> Oops, failed to load Desmos calculator! </p>
+    <p> Please try checking your internet connection and reloading the page. </p>
   {/if}
-
-  {#if question.answer}
-    <Section title="Answer">
-      <RenderBlock source={question.answer} />
-    </Section>
-  {/if}
-
-  {#if question.solution}
-    <Section title="Solution">
-      {#each Object.entries(question.solution) as [step, source]}
-        <Section ctx="inner" closed={false} title={step}>
-          <RenderBlock {source} />
-        </Section>
-      {/each}
-    </Section>
-  {/if}
-
-{:else}
-  <p> Hold tight, loading... </p>
-
-{/if}
+</div>
 
 
 <style lang="scss">
 
-section {
-  text-align: center;
-
-  &.question {
-    margin: 4rem 0;
-    font-size: 150%;
-  }
+#desmos-window {
+  margin-top: 1rem;
+  width: 100%;
+  height: 80vh;
 }
 
 </style>

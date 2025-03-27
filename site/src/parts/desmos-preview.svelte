@@ -1,6 +1,6 @@
 <!-- @component DesmosPreview
 
-A graph rendered by Desmos
+A graph rendered by Desmos.
 -->
 
 <script lang="ts">
