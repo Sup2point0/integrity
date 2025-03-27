@@ -59,7 +59,7 @@ How could you get the derivative on the outside?
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &= \int \frac{1}{t}\ln t\ dt
