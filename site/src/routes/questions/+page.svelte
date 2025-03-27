@@ -40,6 +40,10 @@ import Header from "#parts/core/header.svelte";
     intern="questions/guess-graph"
     pict="previews/guess-graph.png"
   />
+  <Card title="Cool Graphs"
+    intern="questions/cool-graphs"
+    pict="previews/guess-graph.png"
+  />
   <Card title="Addvent"
     intern="questions/addvent"
     pict="previews/addvent-text.png"

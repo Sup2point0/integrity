@@ -58,14 +58,14 @@ function try_load_desmos()
   if (Array.isArray(blocks)) {
     desmos.setExpressions(
       blocks.map((block, i) => ({
-        id: `guess-graph-question-${i}`,
+        id: `graph-${i}`,
         latex: block.content,
         color: pick_col()
       }))
     );
   } else {
     desmos.setExpressions([
-      { id: "guess-graph-question", latex: blocks.content, color: pick_col() }
+      { id: "graph", latex: blocks.content, color: pick_col() }
     ]);
   }
 

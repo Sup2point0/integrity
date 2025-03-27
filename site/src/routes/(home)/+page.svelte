@@ -58,13 +58,9 @@ onMount(() => {
       intern="questions/complete-square"
       latex={"a(x - p)^2 + q"}
     />
-    <!-- <Card title="Guess the Graph"
-      intern="questions/guess-graph"
+    <Card title="Cool Graphs"
+      intern="questions/cool-graphs"
       pict="previews/guess-graph.png"
-    /> -->
-    <Card title="Addvent"
-      intern="questions/addvent"
-      pict="previews/addvent-text.png"
     />
   </div>
 

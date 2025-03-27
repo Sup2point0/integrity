@@ -873,9 +873,9 @@
       }
     }
   },
-  "guess-graph": {
+  "cool-graphs": {
     "g24f-ac1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "another activation",
       "desc": null,
       "date": "2024 July",
@@ -893,7 +893,7 @@
       ]
     },
     "g24f-ac2": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "new activation function just dropped",
       "desc": null,
       "date": "2024 October",
@@ -910,7 +910,7 @@
       ]
     },
     "g24f-ac3": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "more activation",
       "desc": null,
       "date": "2024 November",
@@ -928,7 +928,7 @@
       ]
     },
     "g24f-ae1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "aliens!",
       "desc": null,
       "date": "2024 September",
@@ -946,7 +946,7 @@
       ]
     },
     "g24f-an1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "annoyed",
       "desc": null,
       "date": "2024 July",
@@ -964,7 +964,7 @@
       ]
     },
     "g24f-ap1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "pulse",
       "desc": null,
       "date": "2024 October",
@@ -981,7 +981,7 @@
       ]
     },
     "g24f-cc1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "neo circle",
       "desc": null,
       "date": "2024 September",
@@ -999,7 +999,7 @@
       ]
     },
     "g24f-cl1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "clover",
       "desc": null,
       "date": "2024 May",
@@ -1021,7 +1021,7 @@
       ]
     },
     "g24f-cl2": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "claws!",
       "desc": null,
       "date": "2024 September",
@@ -1039,7 +1039,7 @@
       ]
     },
     "g24f-cs1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "fancy cross",
       "desc": null,
       "date": "2024 October",
@@ -1057,7 +1057,7 @@
       ]
     },
     "g24f-ct1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "intersecting waves",
       "desc": null,
       "date": "2024 September",
@@ -1075,7 +1075,7 @@
       ]
     },
     "g24f-ds1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "DEATH STAR",
       "desc": null,
       "date": "2024 June",
@@ -1095,7 +1095,7 @@
       ]
     },
     "g24f-fs1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "fullscreen",
       "desc": null,
       "date": "2024 June",
@@ -1113,7 +1113,7 @@
       ]
     },
     "g24f-fw1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "fluzzy wuzzy",
       "desc": null,
       "date": "2025 September",
@@ -1131,7 +1131,7 @@
       ]
     },
     "g24f-fz1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "fluzzy",
       "desc": null,
       "date": "2024 September",
@@ -1149,7 +1149,7 @@
       ]
     },
     "g24f-gc1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "MAX MOSAIC",
       "desc": null,
       "date": "2024 June",
@@ -1168,7 +1168,7 @@
       ]
     },
     "g24f-gc2": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "SHEER MOSAICS",
       "desc": null,
       "date": "2024 June",
@@ -1187,7 +1187,7 @@
       ]
     },
     "g24f-gd1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "rain",
       "desc": null,
       "date": "2024 May",
@@ -1205,7 +1205,7 @@
       ]
     },
     "g24f-gd2": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "agitation",
       "desc": null,
       "date": "2024 May",
@@ -1223,7 +1223,7 @@
       ]
     },
     "g24f-gd3": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "dubious grids",
       "desc": null,
       "date": "2024 July",
@@ -1242,7 +1242,7 @@
       ]
     },
     "g24f-gd4": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "display: grid",
       "desc": null,
       "date": "2024 September",
@@ -1261,7 +1261,7 @@
       ]
     },
     "g24f-hc1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "honeycomb",
       "desc": null,
       "date": "2024 June",
@@ -1285,7 +1285,7 @@
       ]
     },
     "g24f-hk1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "hook",
       "desc": null,
       "date": "2024 October",
@@ -1303,7 +1303,7 @@
       ]
     },
     "g24f-hp1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "questionable hyperbola?",
       "desc": null,
       "date": "2024 September",
@@ -1321,7 +1321,7 @@
       ]
     },
     "g24f-hp2": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "questionably hyperbolic",
       "desc": null,
       "date": "2024 September",
@@ -1339,7 +1339,7 @@
       ]
     },
     "g24f-hx1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "helix",
       "desc": null,
       "date": "2024 September",
@@ -1357,7 +1357,7 @@
       ]
     },
     "g24f-jg1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "jaggeder",
       "desc": null,
       "date": "2024 September",
@@ -1375,7 +1375,7 @@
       ]
     },
     "g24f-mp1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "friendship is magic",
       "desc": null,
       "date": "2024 July",
@@ -1394,7 +1394,7 @@
       ]
     },
     "g24f-ms1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "mosaic",
       "desc": null,
       "date": "2024 July",
@@ -1412,7 +1412,7 @@
       ]
     },
     "g24f-mt1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "meta",
       "desc": null,
       "date": "2024 October",
@@ -1436,7 +1436,7 @@
       ]
     },
     "g24f-mt2": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "woah",
       "desc": null,
       "date": "2024 October",
@@ -1454,7 +1454,7 @@
       ]
     },
     "g24f-qd1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "wavy quadrants",
       "desc": null,
       "date": "2024 July",
@@ -1477,7 +1477,7 @@
       ]
     },
     "g24f-rc1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "dubious reciprocal",
       "desc": null,
       "date": "2024 June",
@@ -1495,7 +1495,7 @@
       ]
     },
     "g24f-sj1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "jagged",
       "desc": null,
       "date": "2024 May",
@@ -1515,7 +1515,7 @@
       ]
     },
     "g24f-sp1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "spasmodic",
       "desc": null,
       "date": "2024 September",
@@ -1534,7 +1534,7 @@
       ]
     },
     "g24f-sp2": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "spicy!",
       "desc": null,
       "date": "2024 October",
@@ -1552,7 +1552,7 @@
       ]
     },
     "g24f-sp3": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "sharp!",
       "desc": null,
       "date": "2024 October",
@@ -1570,7 +1570,7 @@
       ]
     },
     "g24f-wd1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "windmill wave",
       "desc": null,
       "date": "2024 June",
@@ -1588,7 +1588,7 @@
       ]
     },
     "g24f-wv1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "wavy mosaic",
       "desc": null,
       "date": "2024 May",
@@ -1606,7 +1606,7 @@
       ]
     },
     "g24f-wv2": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "dubious waves",
       "desc": null,
       "date": "2024 July",
@@ -1624,7 +1624,7 @@
       ]
     },
     "g24f-wv3": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "true waves",
       "desc": null,
       "date": "2024 July",
@@ -1642,7 +1642,7 @@
       ]
     },
     "g24f-wv4": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "spicy waves",
       "desc": null,
       "date": "2024 September",
@@ -1660,7 +1660,7 @@
       ]
     },
     "g24f-wv5": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "spicy waves!!",
       "desc": null,
       "date": "2024 September",
@@ -1678,7 +1678,7 @@
       ]
     },
     "g24f-wv6": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "wavier!",
       "desc": null,
       "date": "2024 October",
@@ -1696,7 +1696,7 @@
       ]
     },
     "g24f-wv7": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "wavyyyy",
       "desc": null,
       "date": "2024 October",
@@ -1714,7 +1714,7 @@
       ]
     },
     "g24f-ww1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "wavy!",
       "desc": null,
       "date": "2024 October",
@@ -1732,7 +1732,7 @@
       ]
     },
     "g24f-xs1": {
-      "topic": "guess-graph",
+      "topic": "cool-graphs",
       "title": "crossnaught",
       "desc": null,
       "date": "2024 May",
@@ -1750,9 +1750,9 @@
       ]
     }
   },
-  "guess-graphs": {
+  "cool-graphss": {
     "g24f-sv1": {
-      "topic": "guess-graphs",
+      "topic": "cool-graphss",
       "title": "antechnica",
       "desc": null,
       "date": "2024 May",
@@ -4058,7 +4058,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int  \\frac    { 2 + x\\tan{x} }    { x }  \\ln\\left(    x \\sec{x}  \\right)\\ dx"
+          "content": "\\int  \\frac    { 1 + x\\tan{x} }    { x }  \\ln\\left(    x \\sec{x}  \\right)\\ dx"
         }
       ],
       "hints": {
@@ -4089,6 +4089,12 @@
           }
         ],
         "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x \\sec{x} &= t  \\\\ \\left(\\sec x+x\\sec x\\tan x\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{1}{t}\\ln t\\ dt  \\\\ &= \\frac{1}{2}\\left(\\ln t\\right)^{2}  \\\\ &= \\frac{1}{2}\\ln\\left(x\\sec x\\right)^{2}-c\\end{align*}"
