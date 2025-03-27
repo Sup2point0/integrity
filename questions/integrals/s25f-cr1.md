@@ -16,7 +16,7 @@ methods:
 ```math
 \int
   \frac
-    { 2 + x\tan{x} }
+    { 1 + x\tan{x} }
     { x }
   \ln\left(
     x \sec{x}
