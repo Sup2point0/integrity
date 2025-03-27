@@ -18,7 +18,7 @@ methods:
     \frac
       { e^x }
       { e^x+1 }
-    - \frac
+    + \frac
       { 1 }
       { e^x-1 }
   }
