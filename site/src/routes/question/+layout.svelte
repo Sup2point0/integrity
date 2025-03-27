@@ -6,14 +6,19 @@ import { page_data } from "./page-data.svelte.ts";
 import type { Shard, Question, QuestionCollection } from "#scripts/types";
 
 import { page } from "$app/state";
-import { onMount } from "svelte";
+import { onMount, untrack } from "svelte";
 import { error } from "@sveltejs/kit";
 
 
 let { children } = $props();
 
 
-onMount(() => {
+// onMount(() => untrack(load_question));
+
+$effect(() => untrack(load_question));
+
+function load_question()
+{
   let url = page.url;
 
   let topic: string | undefined = url.pathname.split("/").at(-1);
@@ -41,7 +46,7 @@ onMount(() => {
   $userprefs = $userprefs;
 
   page_data.question = question;
-});
+}
 
 </script>
 

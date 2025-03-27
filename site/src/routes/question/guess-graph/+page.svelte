@@ -3,8 +3,11 @@
 import { page_data } from "../page-data.svelte.ts";
 import type { Question } from "#scripts/types";
 
+import Clicky from "#parts/ui/clicky.svelte";
+
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
+import Header from "#parts/core/header.svelte";
 
 import { onMount } from "svelte";
 
@@ -26,14 +29,15 @@ function try_load_desmos(i: number = 0)
 
   try {
     Desmos;
+    if (question === null) throw new Error();
 
     desmos = Desmos.GraphingCalculator(self, {
       expressionsCollapsed: true,
     });
 
-    if (Array.isArray(question?.desmos)) {
+    if (Array.isArray(question.desmos)) {
       desmos.setExpressions(
-        question?.desmos.map((block, i) => ({
+        question.desmos.map((block, i) => ({
           id: `guess-graph-question-${i}`,
           latex: block.content,
           color: pick_col()
@@ -41,7 +45,7 @@ function try_load_desmos(i: number = 0)
       );
     } else {
       desmos.setExpressions([
-        { id: "guess-graph-question", latex: question?.desmos.content, color: pick_col() }
+        { id: "guess-graph-question", latex: question.desmos!.content, color: pick_col() }
       ]);
     }
   } catch {
@@ -50,6 +54,12 @@ function try_load_desmos(i: number = 0)
       100 + i*i * 100
     );
   }
+}
+
+function reload_desmos()
+{
+  desmos.destroy();
+  try_load_desmos();
 }
 
 function pick_col()
@@ -71,6 +81,8 @@ function pick_col()
   { text: question?.shard ?? "?" },
 ]} copy={true} shard={question?.shard} />
 
+<Header title={question?.title} capt={question?.date_display} />
+
 <div id="desmos-window"
   bind:this={self}
 >
@@ -82,13 +94,23 @@ function pick_col()
   {/if}
 </div>
 
+<Clicky text="Reload Graph" action={reload_desmos} />
+<!-- TEMP -->
+<p class="caption"> Currently trying to fix an issue with the page loading the wrong graph, bear with me! </p>
+
 
 <style lang="scss">
 
 #desmos-window {
-  margin-top: 1rem;
+  margin: 1rem 0;
   width: 100%;
   height: 80vh;
+}
+
+p.caption {
+  padding-top: 1em;
+  font-size: 100%;
+  color: $col-text-deut;
 }
 
 </style>
