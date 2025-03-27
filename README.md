@@ -34,10 +34,10 @@
 - [Completing the Square](https://sup2point0.github.io/integrity/questions/complete-square)
 - [Guess the Graph](https://sup2point0.github.io/integrity/questions/guess-graph)
 - [Addvent](https://sup2point0.github.io/questions/addvent) (Christmas-themed questions)
+- [Cool Graphs](https://sup2point0.github.io/integrity/questions/cool-graphs)
 - [Desmos](https://www.desmos.com/)
 
 ### Upcoming
-- Flag, mark as completed, and favourite questions, saved to local storage
 - Speedrun environment for speedrunning questions
 
 
