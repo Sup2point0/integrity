@@ -68,7 +68,7 @@ Oh hey, this is difference of 2 squares!
 =\int \frac{1}{\sqrt{1-\frac{1}{x^{2}}}}\ln\left(x^{2}-1\right)\ dx
 ```
 
-### Substitute
+### Substitute (1)
 
 ```math
 \begin{align*}
@@ -78,7 +78,7 @@ Oh hey, this is difference of 2 squares!
 \end{align*}
 ```
 
-### Solve
+### Solve (1)
 Reduce to primitives to spot eliminations:
 
 ```math
@@ -89,7 +89,7 @@ Reduce to primitives to spot eliminations:
 \end{align*}
 ```
 
-### Substitute
+### Substitute (2)
 
 ```math
 \begin{align*}
@@ -99,7 +99,7 @@ Reduce to primitives to spot eliminations:
 \end{align*}
 ```
 
-### Solve
+### Solve (2)
 Integral of $\ln{v}$ is quotable, see [Antiderivatives/Logarithms]
 
 ```math

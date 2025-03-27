@@ -68,7 +68,7 @@ Said relationship facilitates a substitution...
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &= \int t^{2}\ dt

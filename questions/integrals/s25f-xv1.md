@@ -58,7 +58,7 @@ x^{\left(e^{x}\right)}-c
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &= \int e^{t}\ dt

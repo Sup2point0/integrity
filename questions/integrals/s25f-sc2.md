@@ -54,7 +54,7 @@ DOTS!
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &= \frac{1}{24}\int \left(t-\pi^{4}\right)\left(t+\pi^{4}\right)\ dt

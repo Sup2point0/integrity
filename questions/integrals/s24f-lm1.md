@@ -51,7 +51,7 @@ methods:
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &= \frac{1}{4}\int \ln t\ dt

@@ -43,7 +43,7 @@ methods:
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &= \int \frac{x^{5}}{t^{3}+t}\ dx
