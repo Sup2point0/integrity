@@ -70,7 +70,7 @@ button {
 
   transition: all 0.1s ease-out;
 
-  &:hover, &:focus, &:active {
+  &:hover, &:active {
     color: var(--col-on, $col-deut);
   }
 }
