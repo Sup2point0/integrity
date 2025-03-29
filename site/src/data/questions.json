@@ -1986,7 +1986,7 @@
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  t &= \\frac{x+1}{2}  \\\\ dt &= \\frac{1}{2}dx\\ \\to\\ dx=2\\ dt\\end{align*}"
+            "content": "\\begin{align*}  t &= \\frac{x+1}{2}  \\\\ dt &= \\frac{1}{2}d \\quad\\to\\quad x=2\\ dt\\end{align*}"
           },
           {
             "kind": "text",
@@ -2316,7 +2316,7 @@
         "substitute": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  \\frac{1}{x}=t\\ \\to\\ x &= \\frac{1}{t}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
+            "content": "\\begin{align*}  \\frac{1}{x}= \\quad\\to\\quad  &= \\frac{1}{t}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
           }
         ],
         "solve": [
@@ -2509,6 +2509,12 @@
         "substitute": [
           {
             "kind": "latex",
+            "content": "\\begin{align*}  \\tan^{2}x &= t  \\\\ 2\\tan x\\sec^{2}x\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
             "content": "\\begin{align*}  &= \\frac{1}{4}\\int \\ln t\\ dt  \\\\ &= \\frac{1}{4}t\\left(\\ln t-1\\right)  \\\\ &= \\frac{1}{4}\\left(\\tan^{2}x\\right)\\left(2\\ln\\left(\\tan x\\right)-1\\right)-c\\end{align*}"
           }
         ]
@@ -2602,13 +2608,29 @@
             "content": "=\\int \\frac{1}{\\sqrt{1-\\frac{1}{x^{2}}}}\\ln\\left(x^{2}-1\\right)\\ dx"
           }
         ],
-        "substitute": [
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x &= \\sec t  \\\\ dx &= \\sec t\\tan t\\ dt  \\\\ =\\int \\frac{1}{\\sqrt{1-\\frac{1}{\\sec^{2}t}}}\\ln\\left(\\sec^{2}t-1\\right)\\left(\\sec t\\tan t\\right)\\ dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "text",
+            "content": "Reduce to primitives to spot eliminations:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1}{\\sqrt{1-\\cos^{2}t}}\\cdot\\ln\\left(\\tan^{2}t\\right)\\cdot\\frac{1}{\\cos t}\\cdot\\frac{\\sin t}{\\cos t}\\ dt  \\\\ &= \\int \\frac{1}{\\sin t}\\cdot2\\ln\\left(\\tan t\\right)\\cdot\\frac{\\sin t}{\\cos^{2}t}\\ dt  \\\\ &= 2\\int \\ln\\left(\\tan t\\right)\\sec^{2}t\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
           {
             "kind": "latex",
             "content": "\\begin{align*}  \\tan t &= v  \\\\ \\sec^{2}t\\ dt &= dv  \\\\ =2\\int \\ln v\\ dv\\end{align*}"
           }
         ],
-        "solve": [
+        "solve (2)": [
           {
             "kind": "text",
             "content": "Integral of $\\ln{v}$ is quotable, see [Antiderivatives/Logarithms]"
@@ -2799,7 +2821,7 @@
         "substitute (1)": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  1+e^{x} &= t\\ \\to\\ e^{x}=t-1  \\\\ e^{x}\\ dx &= dt\\ \\to\\ dx=\\frac{dt}{t-1}\\end{align*}"
+            "content": "\\begin{align*}  1+e^{x} &=  \\quad\\to\\quad ^{x}=t-1  \\\\ e^{x}\\ dx &= d \\quad\\to\\quad x=\\frac{dt}{t-1}\\end{align*}"
           }
         ],
         "solve (1)": [
@@ -3182,6 +3204,61 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= -\\frac{1}{2}\\left(te^{t}-\\int e^{t}\\ dt\\right)  \\\\ &= -\\frac{1}{2}\\left(te^{t}-e^{t}\\right)  \\\\ &= \\frac{1}{2}e^{t}\\left(1-t\\right)  \\\\ &= \\frac{1}{2}e^{\\left(1+\\frac{1}{x^{2}}\\right)}\\left(1-\\left(1+\\frac{1}{x^{2}}\\right)\\right)  \\\\ &= \\frac{1}{2}e^{\\left(1+\\frac{1}{x^{2}}\\right)}\\left(-\\frac{1}{x^{2}}\\right)  \\\\ &= -\\frac{1}{2x^{2}}e^{\\left(1+\\frac{1}{x^{2}}\\right)}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25c-aq1": {
+      "topic": "integrals",
+      "title": "INVERSION",
+      "desc": null,
+      "date": "2025 March 25",
+      "tags": [
+        "frac",
+        "sqrt",
+        "inverse trig"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25c-aq1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\cos^{-1}{x} }    { \\sqrt{1-x^2} \\sqrt{1-\\cos^{-1}{x}} }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What substitution would you make to get rid of $\\cos^{-1}(x)$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{2}{3}\\sqrt{1-\\cos^{-1}x}\\left(2+\\cos^{-1}x\\right)-c"
+        }
+      ],
+      "solution": {
+        "trigonometric substitution": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x &= \\cos t \\quad\\to\\quad \\cos^{-1}x=t  \\\\ dx &= -\\sin t\\ dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\cos^{-1}x}{\\sqrt{1-x^{2}}\\sqrt{1-\\cos^{-1}x}}\\ dx  \\\\ =&\\ \\int \\frac{t}{\\sqrt{1-\\cos^{2}t}\\sqrt{1-t}}\\cdot-\\sin t\\ dt  \\\\ =&\\ -\\int \\frac{t}{\\sqrt{1-t}}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1-v}{\\sqrt{v}}\\ dv  \\\\ &= \\int \\frac{1}{\\sqrt{v}}-\\sqrt{v}\\ dv  \\\\ &= 2\\sqrt{v}-\\frac{2}{3}v^{3/2}  \\\\ &= \\frac{2}{3}\\sqrt{v}\\left(3-v\\right)  \\\\ &= \\frac{2}{3}\\sqrt{1-t}\\left(3-\\left(1-t\\right)\\right)  \\\\ &= \\frac{2}{3}\\sqrt{1-\\cos^{-1}x}\\left(2+\\cos^{-1}x\\right)-c\\end{align*}"
           }
         ]
       }
@@ -4620,6 +4697,12 @@
           }
         ],
         "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x + \\frac{1}{x} &= t  \\\\ \\left(1 - \\frac{1}{x^2}\\right) \\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int t^{2}\\ dt  \\\\ &= \\frac{1}{3}t^{3}  \\\\ &= \\frac{1}{3}\\left(x+\\frac{1}{x}\\right)^{3}-c\\end{align*}"
@@ -6151,6 +6234,77 @@
         }
       ]
     },
+    "s25f-kl1": {
+      "topic": "integrals",
+      "title": "reminiscence",
+      "desc": null,
+      "date": "2025 March 24",
+      "tags": [
+        "frac",
+        "trig"
+      ],
+      "methods": [
+        "tough",
+        "spot"
+      ],
+      "shard": "s25f-kl1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{1}{1-\\tan{x}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Multiplying by the conjugate won’t actually do anything for us here."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Start by writing the integrand in terms of $\\sin{x}$ and $\\cos{x}$ primitives."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How could you write the numerator so it’s either equal to the denominator, or is the derivative?"
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "What happens if you multiply the numerator by $2$?"
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "Write $2\\cos{x}$ as $\\cos{x} + \\cos{x}$."
+          }
+        ],
+        "6": [
+          {
+            "kind": "text",
+            "content": "You can perform polynomial division when the numerator is $2\\cos{x}$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{2}x-\\frac{1}{2}\\ln\\left(\\sin x-\\cos x\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{1}{1-\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{1}{1-\\tan x}\\cdot\\frac{\\cos x}{\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{\\cos x}{\\cos x-\\sin x}\\ dx  \\\\ =&\\ \\frac{1}{2}\\int \\frac{2\\cos x}{\\cos x-\\sin x}\\ dx  \\\\ =&\\ \\frac{1}{2}\\int \\frac{2\\cos x+\\sin x-\\sin x}{\\cos x-\\sin x}\\ dx  \\\\ =&\\ \\frac{1}{2}\\left(\\int \\frac{\\cos x-\\sin x}{\\cos x-\\sin x}\\ dx+\\int \\frac{\\cos x+\\sin x}{\\cos x-\\sin x}\\ dx\\right)  \\\\ =&\\ \\frac{1}{2}\\int \\ dx-\\frac{1}{2}\\int \\frac{\\cos x+\\sin x}{\\sin x-\\cos x}\\ dx  \\\\ =&\\ \\frac{1}{2}x-\\frac{1}{2}\\ln\\left(\\sin x-\\cos x\\right)-c\\end{align*}"
+        }
+      ]
+    },
     "s25f-lc1": {
       "topic": "integrals",
       "title": "kindred",
@@ -6204,6 +6358,51 @@
           }
         ]
       }
+    },
+    "s25f-lg1": {
+      "topic": "integrals",
+      "title": "fissure",
+      "desc": null,
+      "date": "2025 March 27",
+      "tags": [
+        "log"
+      ],
+      "methods": [
+        "parts"
+      ],
+      "shard": "s25f-lg1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  x \\log_{10}(x)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You may not know how to differentiate $\\log_{10}(x)$, but you do know how to differentiate $\\ln(x)$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Use the change of base formula $\\log_b(x) = \\log_c(x) / \\log_c(b)$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x^{2}}{4\\ln10}\\left(2\\ln x-1\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int x\\log_{10}\\left(x\\right)\\ dx  \\\\ =&\\ \\int x\\cdot\\frac{\\ln x}{\\ln10}\\ dx  \\\\ =&\\ \\frac{1}{\\ln10}\\int x\\ln x\\ dx  \\\\ =&\\ \\frac{1}{\\ln10}\\left(\\frac{1}{2}x^{2}\\ln x-\\int \\frac{1}{2}x^{2}\\cdot\\frac{1}{x}\\ dx\\right)  \\\\ =&\\ \\frac{1}{\\ln10}\\left(\\frac{1}{2}x^{2}\\ln x-\\frac{1}{2}\\int x\\ dx\\right)  \\\\ =&\\ \\frac{1}{\\ln10}\\left(\\frac{1}{2}x^{2}\\ln x-\\frac{1}{4}x^{2}\\right)  \\\\ =&\\ \\frac{x^{2}}{4\\ln10}\\left(2\\ln x-1\\right)-c\\end{align*}"
+        }
+      ]
     },
     "s25f-ln1": {
       "topic": "integrals",
@@ -6391,7 +6590,7 @@
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  x &= \\frac{1}{t}\\ \\to\\ t=\\frac{1}{x}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
+            "content": "\\begin{align*}  x &= \\frac{1}{t \\quad\\to\\quad =\\frac{1}{x}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
           },
           {
             "kind": "text",
@@ -6675,6 +6874,12 @@
         "substitute": [
           {
             "kind": "latex",
+            "content": "\\begin{align*}  x^2 - 1 &= t \\quad\\to\\quad x^2 = t+1  \\\\ 2x \\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{x^{5}}{t^{3}+t}\\ dx  \\\\ &= \\frac{1}{2}\\int \\frac{x^{4}}{t^{3}+t}\\cdot2x\\ dx  \\\\ &= \\frac{1}{2}\\int \\frac{\\left(t+1\\right)^{2}}{t^{3}+t}\\ dt  \\\\ &= \\frac{1}{2}\\int \\frac{t^{2}+2t+1}{t\\left(t^{2}+1\\right)}  \\\\ &= \\frac{1}{2}\\int \\frac{t^{2}+1}{t\\left(t^{2}+1\\right)}+\\frac{2t}{t\\left(t^{2}+1\\right)}\\ dt  \\\\ &= \\frac{1}{2}\\int \\frac{1}{t}\\ dt+\\int \\frac{1}{t^{2}+1}\\ dt  \\\\ &= \\frac{1}{2}\\ln\\left|t\\right|+\\tan^{-1}\\left(t\\right)  \\\\ &= \\frac{1}{2}\\ln\\left|x^{2}-1\\right|+\\tan^{-1}\\left(x^{2}-1\\right)-c\\end{align*}"
           }
         ]
@@ -6936,7 +7141,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int  \\sqrt{    \\frac      { e^x }      { e^x+1 }    - \\frac      { 1 }      { e^x-1 }  }\\ dx"
+          "content": "\\int  \\sqrt{    \\frac      { e^x }      { e^x+1 }    + \\frac      { 1 }      { e^x-1 }  }\\ dx"
         }
       ],
       "hints": {
@@ -6988,6 +7193,60 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\frac{1}{2}\\int \\frac{\\sqrt{\\sec^{2}v-1}}{\\left(\\sec v\\right)\\left(\\sec v-1\\right)}\\cdot\\sec v\\tan v\\ dv  \\\\ &= \\frac{1}{2}\\int \\frac{\\tan^{2}v}{\\sec v-1}\\ dv  \\\\ &= \\frac{1}{2}\\int \\frac{\\tan^{2}v}{\\sec v-1}\\cdot\\frac{\\sec v+1}{\\sec v+1}\\ dv  \\\\ &= \\frac{1}{2}\\int \\frac{\\sec v\\tan^{2}v+\\tan^{2}v}{\\sec^{2}v-1}\\ dv  \\\\ &= \\frac{1}{2}\\int \\frac{\\sec v\\tan^{2}v}{\\tan^{2}v}+\\frac{\\tan^{2}v}{\\tan^{2}v}\\ dv  \\\\ &= \\frac{1}{2}\\int \\sec v+1\\ dv  \\\\ &= \\frac{1}{2}\\ln\\left|\\sec v+\\tan v\\right|+\\frac{1}{2}v  \\\\ &= \\frac{1}{2}\\ln\\left|t+\\sqrt{t^{2}-1}\\right|+\\frac{1}{2}\\sec^{-1}t  \\\\ &= \\frac{1}{2}\\ln\\left|e^{2x}+\\sqrt{e^{4x}-1}\\right|+\\frac{1}{2}\\sec^{-1}\\left(e^{2x}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ql1": {
+      "topic": "integrals",
+      "title": "vanquish",
+      "desc": null,
+      "date": "2025 March 25",
+      "tags": [
+        "frac",
+        "trig"
+      ],
+      "methods": [
+        "layer cake"
+      ],
+      "shard": "s25f-ql1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\tan{x} + x \\left( \\tan^2{x} + \\sec^2{x} \\right) }    { \\cos{x} - x\\tan{x} }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Get rid of $\\cos{x}$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\ln\\left(1-x\\sec x\\tan x\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\tan x+x\\left(\\tan^{2}x+\\sec^{2}x\\right)}{\\cos x-x\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{\\tan x+x\\tan^{2}x+x\\sec^{2}x}{\\cos x-x\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{\\tan x+x\\tan^{2}x+x\\sec^{2}x}{\\cos x-x\\tan x}\\cdot\\frac{\\sec x}{\\sec x}\\ dx  \\\\ =&\\ \\int \\frac{\\sec x\\tan x+x\\sec x\\tan^{2}x+x\\sec^{3}x}{1-x\\sec x\\tan x}\\ dx\\end{align*}"
+          }
+        ],
+        "layer cake": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{d}{dx}\\left(x\\sec x\\tan x\\right)    &= \\left(\\frac{d}{dx}x\\right)\\sec x\\tan x+x\\left(\\frac{d}{dx}\\sec x\\right)\\tan x+x\\sec x\\left(\\frac{d}{dx}\\tan x\\right)  \\\\ &= \\left(\\sec x\\tan x\\right)+\\left(x\\sec x\\tan x\\cdot\\tan x\\right)+\\left(x\\sec x\\cdot\\sec^{2}x\\right)  \\\\ &= \\sec x\\tan x+x\\sec x\\tan^{2}x+x\\sec^{3}x\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{\\sec x\\tan x+x\\sec x\\tan^{2}x+x\\sec^{3}x}{1-x\\sec x\\tan x}\\ dx  \\\\ &= -\\int \\frac{\\sec x\\tan x+x\\sec x\\tan^{2}x+x\\sec^{3}x}{x\\sec x\\tan x-1}\\ dx  \\\\ &= -\\ln\\left(1-x\\sec x\\tan x\\right)-c\\end{align*}"
           }
         ]
       }
@@ -7546,6 +7805,12 @@
           }
         ],
         "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{24} &= t  \\\\ 24x^{23} \\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\frac{1}{24}\\int \\left(t-\\pi^{4}\\right)\\left(t+\\pi^{4}\\right)\\ dt  \\\\ &= \\frac{1}{24}\\int t^{2}-\\pi^{8}\\ dt  \\\\ &= \\frac{1}{72}t^{3}-\\frac{\\pi^{8}}{24}t  \\\\ &= \\frac{1}{72}t\\left(t^{2}-3\\pi^{8}\\right)  \\\\ &= \\frac{1}{72}x^{24}\\left(x^{48}-3\\pi^{8}\\right)-c\\end{align*}"
@@ -9013,6 +9278,12 @@
           }
         ],
         "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  e^{x}\\ln x &= t  \\\\ \\left(\\frac{1}{x}e^{x}+e^{x}\\ln x\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int e^{t}\\ dt  \\\\ &= e^{t}  \\\\ &= e^{\\left(e^{x}\\ln x\\right)}  \\\\ &= x^{\\left(e^{x}\\right)}-c\\end{align*}"

@@ -25,6 +25,12 @@ interface Props {
 
 let { question, latex, desmos, style = "block" }: Props = $props();
 
+
+function check_valid(data: Array<any>): boolean
+{
+  return data && data.length > 0 && data[0];
+}
+
 </script>
 
 
@@ -65,7 +71,7 @@ let { question, latex, desmos, style = "block" }: Props = $props();
         </div>
 
         <div class="lower">
-          {#if search.show.tags && question.tags && question.tags.length > 0}
+          {#if question.tags && check_valid(question.tags)}
             <span class="tags" transition:fade={{ duration: 250 }}>
               {#each question.tags as tag}
                 <Tag {tag} margin={"0.25em"} />
@@ -73,7 +79,7 @@ let { question, latex, desmos, style = "block" }: Props = $props();
             </span>
           {/if}
 
-          {#if search.show.methods && question.methods && question.methods.length > 0}
+          {#if question.methods && check_valid(question.methods)}
             <span class="tags" transition:fade={{ duration: 250 }}>
               {#each question.methods as method}
                 <Tag tag={method} kind="deut" margin={"0.25em"} />

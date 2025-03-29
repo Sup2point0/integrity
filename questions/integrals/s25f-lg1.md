@@ -4,9 +4,9 @@ title: fissure
 desc: 
 date: 2025 March 27
 tags:
-  - 
+  - log
 methods:
-  - 
+  - parts
 ---
 
 
