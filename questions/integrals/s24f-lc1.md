@@ -48,7 +48,7 @@ Substitute $\frac{1}{x}$.
 ### Substitute
 ```math
 \begin{align*}
-  \frac{1}{x}=t\ \to\ x &= \frac{1}{t}
+  \frac{1}{x}= \quad\to\quad  &= \frac{1}{t}
   \\ dx &= -\frac{1}{t^{2}}\ dt
 \end{align*}
 ```

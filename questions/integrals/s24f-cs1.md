@@ -51,7 +51,7 @@ There really isn’t anything else to do here, so let’s go ahead and make the 
 ```math
 \begin{align*}
   t &= \frac{x+1}{2}
-  \\ dt &= \frac{1}{2}dx\ \to\ dx=2\ dt
+  \\ dt &= \frac{1}{2}d \quad\to\quad x=2\ dt
 \end{align*}
 ```
 

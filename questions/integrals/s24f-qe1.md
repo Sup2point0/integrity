@@ -44,8 +44,8 @@ Start with $1 + e^x = t$.
 ### Substitute (1)
 ```math
 \begin{align*}
-  1+e^{x} &= t\ \to\ e^{x}=t-1
-  \\ e^{x}\ dx &= dt\ \to\ dx=\frac{dt}{t-1}
+  1+e^{x} &=  \quad\to\quad ^{x}=t-1
+  \\ e^{x}\ dx &= d \quad\to\quad x=\frac{dt}{t-1}
 \end{align*}
 ```
 
