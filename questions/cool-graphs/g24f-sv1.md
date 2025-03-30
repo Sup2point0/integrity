@@ -1,5 +1,5 @@
 ---
-topic: cool-graphss
+topic: cool-graphs
 title: antechnica
 desc: 
 date: 2024 May
