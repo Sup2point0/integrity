@@ -71,7 +71,7 @@ function check_valid(data: Array<any>): boolean
         </div>
 
         <div class="lower">
-          {#if question.tags && check_valid(question.tags)}
+          {#if check_valid(question.tags) && search.show.tags}
             <span class="tags" transition:fade={{ duration: 250 }}>
               {#each question.tags as tag}
                 <Tag {tag} margin={"0.25em"} />
@@ -79,7 +79,7 @@ function check_valid(data: Array<any>): boolean
             </span>
           {/if}
 
-          {#if question.methods && check_valid(question.methods)}
+          {#if check_valid(question.methods) && search.show.methods}
             <span class="tags" transition:fade={{ duration: 250 }}>
               {#each question.methods as method}
                 <Tag tag={method} kind="deut" margin={"0.25em"} />

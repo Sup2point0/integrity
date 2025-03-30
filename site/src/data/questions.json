@@ -3383,6 +3383,138 @@
         }
       ]
     },
+    "s25c-ee1": {
+      "topic": "integrals",
+      "title": "akaka",
+      "desc": "I’m quite proud of coming up with this one in a vacuum, even if it is actually a well-known integral.",
+      "date": "2025 March 17",
+      "tags": [
+        "definite",
+        "dread",
+        "exp"
+      ],
+      "methods": [
+        "tough",
+        "parts"
+      ],
+      "shard": "s25c-ee1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{-\\infin}^{\\infin}  x^4 e^{-x^2}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Gaussian integral."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What’s the area under the normal distribution?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Evaluating the integral indefinitely is hard."
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "How would you integrate $x^2 e^{-x^2}$?"
+          }
+        ],
+        "6": [
+          {
+            "kind": "text",
+            "content": "Use integration by parts."
+          }
+        ],
+        "7": [
+          {
+            "kind": "text",
+            "content": "For $\\int x^2 e^{-x^2} \\ dx$, write it as $\\int x \\cdot xe^{-x^2} \\ dx$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{3}{4}\\sqrt{\\pi}"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{-\\infty}^{\\infty}x^{4}e^{-x^{2}}\\ dx  \\\\ =&\\ \\int_{-\\infty}^{\\infty}x^{3}\\cdot xe^{-x^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "parts (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  f &= x^3 & g' &= xe^{-x^{2}}  \\\\ f' &= 3x^2 & g &= \\int_{\\ }^{\\ }xe^{-x^{2}}\\ dx  \\\\ && &= \\frac{1}{2}\\int_{\\ }^{\\ }2xe^{-x^{2}}\\ dx  \\\\ && &= -\\frac{1}{2}e^{-x^{2}}\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ fg-\\int_{-\\infty}^{\\infty}f'g\\ dx  \\\\ =&\\ \\left[x^{3}\\cdot-\\frac{1}{2}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}-\\int_{-\\infty}^{\\infty}\\left(3x^{2}\\right)\\left(-\\frac{1}{2}e^{-x^{2}}\\right)\\ dx  \\\\ =&\\ \\left[-\\frac{1}{2}x^{3}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{3}{2}\\int_{-\\infty}^{\\infty}x^{2}e^{-x^{2}}\\ dx  \\\\ =&\\ \\left[-\\frac{1}{2}x^{3}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{3}{2}\\int_{-\\infty}^{\\infty}x\\cdot xe^{-x^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "parts (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  p &= x \\quad&\\quad q' &= q'=xe^{-x^{2}}  \\\\ p' &= 1 \\quad&\\quad q &= \\int_{\\ }^{\\ }xe^{-x^{2}}\\ dx  \\\\ && &= \\frac{1}{2}\\int_{\\ }^{\\ }2xe^{-x^{2}}\\ dx  \\\\ && &= -\\frac{1}{2}e^{-x^{2}}\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\left[-\\frac{1}{2}x^{3}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{3}{2}\\left(pq-\\int_{-\\infin}^{\\infin}p'q\\ dx\\right)  \\\\ &= \\left[-\\frac{1}{2}x^{3}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{3}{2}\\left(\\left[x\\cdot-\\frac{1}{2}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}-\\int_{-\\infty}^{\\infty}\\left(-\\frac{1}{2}e^{-x^{2}}\\right)\\ dx\\right)  \\\\ &= \\left[-\\frac{1}{2}x^{3}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{3}{2}\\left(\\left[x\\cdot-\\frac{1}{2}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{1}{2}\\int_{-\\infty}^{\\infty}e^{-x^{2}}\\ dx\\right)  \\\\ &= \\left[-\\frac{1}{2}x^{3}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{3}{2}\\left[x\\cdot-\\frac{1}{2}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{3}{4}\\int_{-\\infty}^{\\infty}e^{-x^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "evaluate": [
+          {
+            "kind": "text",
+            "content": "As $x \\to \\pm \\infin$, $x^k e^{-x^2} \\to 0$. We know this intuitively since"
+          },
+          {
+            "kind": "latex",
+            "content": "x^k e^{-x^2} = \\frac{x^k}{e^{x^2}}"
+          },
+          {
+            "kind": "text",
+            "content": "Exponentials always grow faster than polynomials, so the ratio tends to $0$ as $x$ grows. Since the exponential has an $x^2$, this also applies for negative $x$.<br><br>More rigorously, we can derive this with L’Hôpital’s rule:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\lim_{x \\to \\pm\\infin} {\\frac{f(x)}{g(x)}}    &= \\lim_{x \\to \\pm\\infin} {\\frac{f'(x)}{g'(x)}}  \\\\ \\lim_{x \\to \\pm\\infin} {\\frac{x^k}{e^{x^2}}}    &= \\lim_{x \\to \\pm\\infin} {\\frac{kx^{k-1}}{2xe^{x^2}}}  \\\\ &= \\lim_{x \\to \\pm\\infin} {\\frac{k(k-1)x^{k-2}}{4x^2e^{x^2}}}  \\\\ &= ...  \\\\ &= C \\lim_{x \\to \\pm\\infin} {\\frac{1}{x^n e^{x^2}}}  \\\\ &= 0\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Eventually all terms in $x$ vanish from the numerator, leaving just a constant, and the entire limit collapses to $0$. The sign of $x$ makes no difference.<br><br>Therefore"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\left[-\\frac{1}{2}x^{3}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{3}{2}\\left[x\\cdot-\\frac{1}{2}e^{-x^{2}}\\right]_{-\\infty}^{\\infty}+\\frac{3}{4}\\int_{-\\infty}^{\\infty}e^{-x^{2}}\\ dx  \\\\ =&\\ \\left[0-0\\right]+\\frac{3}{2}\\left[0-0\\right]+\\frac{3}{4}\\int_{-\\infty}^{\\infty}e^{-x^{2}}\\ dx  \\\\ =&\\ \\frac{3}{4}\\int_{-\\infty}^{\\infty}e^{-x^{2}}\\ dx\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "And this is a gaussian (normal distribution), which the area under is quotable as $\\sqrt{\\pi}$. Hence the overall integral evaluates to"
+          },
+          {
+            "kind": "latex",
+            "content": "\\frac{3}{4} \\sqrt{\\pi}"
+          }
+        ]
+      }
+    },
     "s25c-ow1": {
       "topic": "integrals",
       "title": "welcome to the arena",
@@ -6736,6 +6868,89 @@
         ]
       }
     },
+    "s25f-np1": {
+      "topic": "integrals",
+      "title": "intensity",
+      "desc": null,
+      "date": "2025 March 22",
+      "tags": [
+        "dread",
+        "frac",
+        "poly"
+      ],
+      "methods": [
+        "parts"
+      ],
+      "shard": "s25f-np1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\left(x^{2}+2x\\right)\\left(1-2x^{3}\\right)}{\\left(x^{3}+1\\right)^{2}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Write the integral as"
+          },
+          {
+            "kind": "latex",
+            "content": "\\int \\left(x^{2}+2x\\right)\\cdot\\frac{\\left(x^{3}+1\\right)-3x^{3}}{\\left(x^{3}+1\\right)^{2}}\\ dx"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "$3x^3$ looks suspiciously like $3x^2 \\cdot x$."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "If you know what the fraction is the derivative of, you can integrate the fraction."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x^{3}+2x^{2}}{x^{3}+1}-\\ln\\left(x^{2}-x+1\\right)-\\frac{2\\sqrt{3}}{3}\\tan^{-1}\\left(\\frac{2\\sqrt{3}}{3}\\left(x-\\frac{1}{2}\\right)\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\left(x^{2}+2x\\right)\\left(1-2x^{3}\\right)}{\\left(x^{3}+1\\right)^{2}}\\ dx  \\\\ =&\\ \\int \\left(x^{2}+2x\\right)\\cdot\\frac{\\left(x^{3}+1\\right)-3x^{3}}{\\left(x^{3}+1\\right)^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "text",
+            "content": "Notice"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{d}{dx}\\left(\\frac{x}{x^{3}+1}\\right)    &= \\frac{\\left(x^{3}+1\\right)-x\\left(3x^{2}\\right)}{\\left(x^{3}+1\\right)^{2}}  \\\\ &= \\frac{x^{3}+1-3x^{3}}{\\left(x^{3}+1\\right)^{2}}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "So we can integrate by parts:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  f &= x^2+2x \\quad&\\quad g' &= \\frac{\\left(x^{3}+1\\right)-3x^{3}}{\\left(x^{3}+1\\right)^{2}}  \\\\ f' &= 2x+2 \\quad&\\quad g &= \\frac{x}{x^{3}+1}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dx  \\\\ =&\\ \\left(x^{2}+2x\\right)\\left(\\frac{x}{x^{3}+1}\\right)-\\int \\left(2x+2\\right)\\left(\\frac{x}{x^{3}+1}\\right)\\ dx  \\\\ =&\\ \\frac{x\\left(x^{2}+2x\\right)}{x^{3}+1}-\\int \\frac{x\\left(2x+2\\right)}{x^{3}+1}\\ dx  \\\\ =&\\ \\frac{x^{3}+2x^{2}}{x^{3}+1}-\\int \\frac{2x\\left(x+1\\right)}{\\left(x+1\\right)\\left(x^{2}-x+1\\right)}\\ dx  \\\\ =&\\ \\frac{x^{3}+2x^{2}}{x^{3}+1}-\\int \\frac{2x}{x^{2}-x+1}\\ dx  \\\\ =&\\ \\frac{x^{3}+2x^{2}}{x^{3}+1}-\\int \\frac{2x-1+1}{x^{2}-x+1}\\ dx  \\\\ =&\\ \\frac{x^{3}+2x^{2}}{x^{3}+1}-\\int \\frac{2x-1}{x^{2}-x+1}+\\frac{1}{\\left(x-1/2\\right)^{2}+3/4}\\ dx  \\\\ =&\\ \\frac{x^{3}+2x^{2}}{x^{3}+1}-\\ln\\left(x^{2}-x+1\\right)-\\sqrt{\\frac{4}{3}}\\tan^{-1}\\left(\\sqrt{\\frac{4}{3}}\\left(x-\\frac{1}{2}\\right)\\right)  \\\\ =&\\ \\frac{x^{3}+2x^{2}}{x^{3}+1}-\\ln\\left(x^{2}-x+1\\right)-\\frac{2\\sqrt{3}}{3}\\tan^{-1}\\left(\\frac{2\\sqrt{3}}{3}\\left(x-\\frac{1}{2}\\right)\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-nx1": {
       "topic": "integrals",
       "title": "neurotic",
@@ -8070,6 +8285,67 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  \\frac{1}{999}\\int \\frac{1}{t\\left(t+1\\right)}\\ dt    &= \\frac{1}{999}\\int \\frac{1}{t}-\\frac{1}{t+1}\\ dt  \\\\ &= \\frac{1}{999}\\left(\\ln t-\\ln\\left(t+1\\right)\\right)  \\\\ &= \\frac{1}{999}\\ln\\left(\\frac{t}{t+1}\\right)  \\\\ &= \\frac{1}{999}\\ln\\left(\\frac{x^{999}}{x^{999}+1}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-sq1": {
+      "topic": "integrals",
+      "title": "MISFITS",
+      "desc": null,
+      "date": "2025 March 27",
+      "tags": [
+        "frac",
+        "poly",
+        "sqrt"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25f-sq1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\sqrt{1 - x^{9099}} }    { x }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Honestly, sometimes you can just substitute and hope for the best."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{2}{9099}\\left(\\sqrt{1-x^{9099}}-\\tanh^{-1}\\sqrt{1-x^{9099}}\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1-x^{9099} &= t \\quad\\to\\quad x^{9099}=1-t  \\\\ -9099x^{9098}\\ dx &= dt  \\\\ dx &= -\\frac{1}{9099x^{9098}}\\ dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\sqrt{1-x^{9099}}}{x}\\ dx  \\\\ =&\\ \\int \\frac{\\sqrt{t}}{x}\\cdot-\\frac{1}{9099x^{9098}}\\ dt  \\\\ =&\\ -\\frac{1}{9099}\\int \\frac{\\sqrt{t}}{x^{9099}}\\ dt  \\\\ =&\\ -\\frac{1}{9099}\\int \\frac{\\sqrt{t}}{1-t}\\ dt  \\\\ =&\\ \\frac{1}{9099}\\int \\frac{\\sqrt{t}}{t-1}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{t} &= v  \\\\ t &= v^{2}  \\\\ dt &= 2v\\ dv\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{9099}\\int \\frac{v}{v^{2}-1}\\cdot2v\\ dv  \\\\ &= \\frac{2}{9099}\\int \\frac{v^{2}}{v^{2}-1}\\ dv  \\\\ &= \\frac{2}{9099}\\int \\frac{v^{2}-1+1}{v^{2}-1}\\ dv  \\\\ &= \\frac{2}{9099}\\int 1+\\frac{1}{v^{2}-1}\\ dv  \\\\ &= \\frac{2}{9099}\\int 1-\\frac{1}{1-v^{2}}\\ dv  \\\\ &= \\frac{2}{9099}\\left(v-\\tanh^{-1}v\\right)  \\\\ &= \\frac{2}{9099}\\left(\\sqrt{t}-\\tanh^{-1}\\sqrt{t}\\right)  \\\\ &= \\frac{2}{9099}\\left(\\sqrt{1-x^{9099}}-\\tanh^{-1}\\sqrt{1-x^{9099}}\\right)-c\\end{align*}"
           }
         ]
       }
