@@ -7,6 +7,7 @@ import Katex from "#parts/katex.svelte";
 import Tag from "#parts/ui/tag.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
 import Line from "#parts/page/line.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Section from "#parts/page/section.svelte";
@@ -43,6 +44,7 @@ let question: Question | null = $derived(page_data.question);
       {/if}
     </div>
   {/if}
+  
 </section>
 
 {#if question?.hints}
@@ -80,6 +82,12 @@ let question: Question | null = $derived(page_data.question);
       {/each}
 
     {/if}
+
+    <div style:padding="1rem 0" style:float="right">
+      <Clicky text="Check a Different Solution"
+        intern="workspace?topic={question.topic}&shard={question.shard}"
+      />
+    </div>
   </Section>
 {/if}
 
@@ -109,15 +117,15 @@ let question: Question | null = $derived(page_data.question);
 <style lang="scss">
 
 section.question {
-  margin: 4rem 0;
+  padding: 3rem 0 2rem;
   font-size: 150%;
   text-align: center;
 
   .info {
-    margin: 3rem 0;
+    padding: 1rem 0 0;
 
     .tags {
-      margin: 2rem 0 0;
+      padding: 0.5rem 0 0;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
@@ -126,6 +134,10 @@ section.question {
       font-size: 80%;
     }
   }
+}
+
+section.buttons {
+  padding: 3rem 0 0;
 }
 
 </style>
