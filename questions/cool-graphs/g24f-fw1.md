@@ -2,7 +2,7 @@
 topic: cool-graphs
 title: fluzzy wuzzy
 desc: 
-date: 2025 September
+date: 2024 September
 tags:
   - implicit
   - trig
