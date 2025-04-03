@@ -38,7 +38,7 @@ How can you rewrite the expression within $\tan()$?
 ```math
 \begin{align*}
   &\ \int \frac{1}{x^{2}}\sec\left(1-\frac{1}{x}\right)\tan\left(\frac{x-1}{x}\right)\ dx
-  \\ =&\ \int \frac{1}{x^{2}}\sec\left(1-\frac{1}{x}\right)\tan\left(\frac{x}{x}-\frac{1}{x}\right)\ dx poo
+  \\ =&\ \int \frac{1}{x^{2}}\sec\left(1-\frac{1}{x}\right)\tan\left(\frac{x}{x}-\frac{1}{x}\right)\ dx
   \\ =&\ 
 \end{align*}
 ```

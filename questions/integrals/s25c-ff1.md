@@ -1,6 +1,6 @@
 ---
 topic: integrals
-title: dreams of light
+title: full flavour
 desc: The final integral for our Integration Bee 2025.
 date: 2025 April 2
 tags:
