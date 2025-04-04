@@ -1,6 +1,6 @@
 ---
 topic: integrals
-title: dreams of light
+title: dreams of integrity
 desc: The integral that came to me in a dream.
 date: 2024 October 22
 tags:
