@@ -66,8 +66,8 @@ import { base } from "$app/paths";
   <section>
     <h3> Challenges </h3>
     <div class="links">
-      <Link text="MIT Integration Bee" intern="challenges/mit" disabled={true} />
-      <Link text="UNSW Integration Bee" intern="challenges/unsw" disabled={true} />
+      <Link text="MIT Integration Bee" intern="challenges/mit-ib" />
+      <Link text="UNSW Integration Bee" intern="challenges/unsw-ib" disabled={true} />
       <Link text="0–100 Year Challenge" intern="challenges/year" />
     </div>
   </section>
