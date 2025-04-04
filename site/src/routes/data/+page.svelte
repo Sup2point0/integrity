@@ -1,5 +1,8 @@
 <script lang="ts">
 
+import TimeAgo from "javascript-time-ago";
+import en from "javascript-time-ago/locale/en";
+
 import Site from "#src/scripts/site";
 import { userprefs } from "#scripts/stores";
 
@@ -15,10 +18,26 @@ let checking = $state(false);
 let checks = 0;
 
 const total_questions = Site.get_list_of_all_questions().length;
+const total_integrals = Site.get_questions_of_topic("integrals").length;
+
+let seen_integrals = $derived(
+  [...$userprefs.seen].filter(q => q.startsWith("s")).length);
+let solved_integrals = $derived(
+  [...$userprefs.solved].filter(q => q.startsWith("s")).length);
+
+
+try {
+  TimeAgo.addDefaultLocale(en);
+} catch (e) {
+  console.error(e);
+}
+const time_ago = new TimeAgo("en-US");
 
 
 function export_prefs()
 {
+  $userprefs.saved = new Date().getTime();
+
   const data = JSON.stringify($userprefs.to_json(), null, 2);
   const blob = new Blob([data], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -105,27 +124,53 @@ function fix_integrity()
       </div>
       <ProgressBar value={$userprefs.solved?.size / total_questions} />
     </section>
-    
+
+    <section>
+      <div class="row">
+        <p class="label"> Integrals Seen </p>
+        <p class="count"> <span>{seen_integrals}</span> of {total_integrals} </p>
+      </div>
+      <ProgressBar value={seen_integrals / total_integrals} />
+    </section>
+
+    <section>
+      <div class="row">
+        <p class="label"> Integrals Solved </p>
+        <p class="count"> <span>{solved_integrals}</span> of {total_integrals} </p>
+      </div>
+      <ProgressBar value={solved_integrals / total_integrals} />
+    </section>
+  </div>
+
+  <div class="stats">
     <section>
       <div class="row">
         <p class="label"> Questions Starred </p>
-        <p class="count"> <span>{$userprefs.starred?.size}</span> of {total_questions} </p>
+        <p class="count"> <span>{$userprefs.starred?.size}</span> </p>
       </div>
-      <ProgressBar value={$userprefs.starred?.size / total_questions} />
     </section>
     
     <section>
       <div class="row">
         <p class="label"> Questions Flagged </p>
-        <p class="count"> <span>{$userprefs.flagged?.size}</span> of {total_questions} </p>
+        <p class="count"> <span>{$userprefs.flagged?.size}</span> </p>
       </div>
-      <ProgressBar value={$userprefs.flagged?.size / total_questions} />
+    </section>
+    
+    <section>
+      <div class="row">
+        <p class="label"> Visits to <em>Integrity</em> </p>
+        <p class="count"> <span>{$userprefs.visits ?? "0"}</span> </p>
+      </div>
     </section>
   </div>
 
   <section>
     <Clicky text="Export Data" action={export_prefs} />
     <p class="caption"> Save your preferences and data as a JSON file. </p>
+    {#if $userprefs.saved}
+      <p class="caption"> Last saved: <span>{time_ago.format(new Date($userprefs.saved))}</span> </p>
+    {/if}
   </section>
 
   <section>
@@ -134,6 +179,10 @@ function fix_integrity()
       setTimeout(check_integrity, 0);
     }} />
     <p class="caption"> See something questionable about your stats? Check your data for errors such as null values or invalid question shards. </p>
+  </section>
+
+  <section>
+    <p> Want to flex your stats? Just drop me a message on <a target="_blank" href="https://discordapp.com/users/752972078579449888">Disc</a> ;) </p>
   </section>
 </div>
 
@@ -169,11 +218,6 @@ section {
     &.count {
       color: $col-text-deut;
     }
-
-    span {
-      font-weight: 400;
-      color: $col-prot;
-    }
   }
 }
 
@@ -181,6 +225,15 @@ p.caption {
   padding-top: 1em;
   font-size: 100%;
   color: $col-text-deut;
+}
+
+p span {
+  font-weight: 400;
+  color: $col-prot;
+}
+
+a {
+  @include underline-link;
 }
 
 </style>

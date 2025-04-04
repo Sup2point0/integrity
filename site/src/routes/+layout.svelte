@@ -4,6 +4,8 @@ import "#styles/essence.scss";
 import "#styles/article.scss";
 import "#styles/a11y.scss";
 
+import { userprefs } from "#scripts/stores";
+
 import Nav from "#parts/core/nav.svelte";
 import Footer from "#parts/core/footer.svelte";
 
@@ -20,6 +22,7 @@ let active = $state(true);
 
 onMount(() => {
   handle_overlay();
+  $userprefs && $userprefs.visits++;
 });
 
 /** Handle removing the overlay. */
