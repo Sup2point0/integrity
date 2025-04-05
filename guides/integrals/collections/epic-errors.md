@@ -1,6 +1,6 @@
 # Epic Errors
 <!-- #SQUARK live! dev!
-| dest = guides/integrals/epic-errors
+| dest = guides/integrals/collections/epic-errors
 | capt = Surprisingly unrare pitfalls in integration
 | index = guides / integrals
 | date = 2025 January 21

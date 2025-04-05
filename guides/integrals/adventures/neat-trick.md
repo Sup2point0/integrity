@@ -1,6 +1,6 @@
 # A Neat Little Integration Trick
 <!-- #SQUARK live!
-| dest = guides/integrals/collections/neat-trick
+| dest = guides/integrals/adventures/neat-trick
 | capt = Abusing the +c
 | index = guides / integrals / collections
 | date = 2025 January 15

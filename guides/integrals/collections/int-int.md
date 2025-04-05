@@ -1,6 +1,6 @@
 # Integrating Into Integration
 <!-- #SQUARK live! feat! opin! devx!
-| dest = guides/integrals/int-int
+| dest = guides/integrals/collections/int-int
 | capt = Glossary of the integration homies
 | index = guides / integrals
 -->

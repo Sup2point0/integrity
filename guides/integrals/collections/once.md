@@ -1,6 +1,6 @@
 # Integrals You Can Only Experience Once
 <!-- #SQUARK live! opin! devx! dev!
-| dest = guides/integrals/once
+| dest = guides/integrals/collections/once
 | capt = Landmarks on the expedition of integration
 | index = guides / integrals
 -->

@@ -1,6 +1,6 @@
 # Why -c?
 <!-- #SQUARK live!
-| dest = guides/integrals/-c
+| dest = guides/integrals/adventures/-c
 -->
 
 Why $-c$?
