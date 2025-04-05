@@ -81,7 +81,7 @@ And hey, we know this integrates to $\ln(t)$ – so our answer is
 \end{align*}
 ```
 
-Looking back, a way to jump straight to this with straight-up layer came is to elevate the $\frac{1}{x}$ into the numerator:
+Looking back, a way to jump straight to this with straight-up layer cake is to elevate the $\frac{1}{x}$ into the numerator:
 
 ```math
 \int \frac{1}{x \ln{x}} \ dx = \int \frac{\frac{1}{x}}{\ln{x}} \ dx
