@@ -295,9 +295,15 @@ onMount(() => {
       </tr>
     </tbody></table>
 
-    <Clicky text={$userprefs["search-exp"] ? "Show Less" : "Show More"}
-      action={() => { $userprefs["search-exp"] = !$userprefs["search-exp"]; }}
-    />
+    <div class="buttons">      
+      <Clicky text={$userprefs["search-exp"] ? "Show Less" : "Show More"}
+        action={() => { $userprefs["search-exp"] = !$userprefs["search-exp"]; }}
+      />
+
+      <!-- <Clicky text="Reset to Defaults"
+        action={() => { window.confirm("Clear search filters?") && search.reset_defaults(); }}
+      /> -->
+    </div>
   {/if}
 </search>
 
@@ -384,6 +390,15 @@ td {
     gap: 0.25em;
     flex: 1 1 auto;
   }
+}
+
+.buttons {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  column-gap: 0.5em;
+  font-size: 95%;
 }
 
 </style>

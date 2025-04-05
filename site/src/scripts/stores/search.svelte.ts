@@ -56,6 +56,11 @@ export class SearchData
   reverse: boolean = $state(false);
 
 
+  reset_defaults()
+  {
+  }
+
+
   filter_questions(
     questions: Question[],
   ): Question[]

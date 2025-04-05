@@ -53,8 +53,6 @@ onMount(() => {
 <aside>
   {#if filtered.length > 0}
     <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {questions.length} </p>
-    <!-- TEMP -->
-    <p> <br> (100+ integrals from school Integration Bee will be added after the Antarctican New Year!) </p>
   {:else}
     <p> Oops, no questions found! </p>
   {/if}
