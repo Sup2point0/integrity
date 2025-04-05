@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-04-04",
-    "file_count": 19,
-    "page_count": 18
+    "exported": "2025-04-05",
+    "file_count": 20,
+    "page_count": 19
   },
   "index": {
     "guides": {
@@ -17,6 +17,7 @@
         "guides/integrals/everything-anything.md",
         "guides/integrals/how.md",
         "guides/integrals/int-int.md",
+        "guides/integrals/methods/partials.md",
         "guides/integrals/once.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
@@ -39,6 +40,7 @@
         "guides/integrals/everything-anything.md",
         "guides/integrals/how.md",
         "guides/integrals/int-int.md",
+        "guides/integrals/methods/partials.md",
         "guides/integrals/once.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
@@ -57,6 +59,12 @@
       "pages": [
         "guides/integrals/collections/neat-trick.md"
       ]
+    },
+    "methods": {
+      "route": null,
+      "pages": [
+        "guides/integrals/methods/partials.md"
+      ]
     }
   },
   "shard": {
@@ -70,6 +78,7 @@
       "guides/integrals/everything-anything.md",
       "guides/integrals/how.md",
       "guides/integrals/int-int.md",
+      "guides/integrals/methods/partials.md",
       "guides/integrals/once.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
@@ -86,6 +95,7 @@
       "guides/integrals/everything-anything.md",
       "guides/integrals/how.md",
       "guides/integrals/int-int.md",
+      "guides/integrals/methods/partials.md",
       "guides/integrals/once.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
@@ -97,6 +107,9 @@
     ],
     "collections": [
       "guides/integrals/collections/neat-trick.md"
+    ],
+    "methods": [
+      "guides/integrals/methods/partials.md"
     ]
   },
   "pages": {
@@ -166,7 +179,7 @@
     },
     "guides/integrals/antiderivatives/ln.md": {
       "path": "guides/integrals/antiderivatives/ln.md",
-      "last_deploy": "2025-02-11 09:49:50 +0000",
+      "last_deploy": "2025-04-05 09:09:26 +0100",
       "slocs": 201,
       "chars": 6943,
       "isIndex": false,
@@ -383,9 +396,36 @@
       "date": null,
       "date_display": null
     },
+    "guides/integrals/methods/partials.md": {
+      "path": "guides/integrals/methods/partials.md",
+      "last_deploy": "2025-04-05 09:13:53 +0100",
+      "slocs": 231,
+      "chars": 8710,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/integrals/methods/partials",
+      "title": "Partial Fractions",
+      "head": "Partial Fractions",
+      "capt": null,
+      "desc": null,
+      "index": [
+        "guides",
+        "integrals",
+        "methods"
+      ],
+      "shard": [
+        "guides",
+        "integrals",
+        "methods"
+      ],
+      "date": null,
+      "date_display": null
+    },
     "guides/integrals/methods/sub.md": {
       "path": "guides/integrals/methods/sub.md",
-      "last_deploy": "2025-03-13 12:25:51 +0000",
+      "last_deploy": "2025-04-04 21:03:45 +0100",
       "slocs": 127,
       "chars": 4676,
       "isIndex": false,

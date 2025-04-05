@@ -47,7 +47,7 @@ import Header from "#parts/core/header.svelte";
   <h2> Topics </h2>
 
   <div class="browse">
-    <Card title="Integrals"
+    <Card title="Integration"
       intern="guides/integrals"
       latex={"\\int f(x) \\, dx"}
     />
