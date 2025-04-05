@@ -18,7 +18,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
   { text: "Guides", intern: "guides" },
   { text: "Integration", intern: "guides/integrals" },
   { text: "Collections", intern: "guides/integrals/collections" },
-  { text: "Epic Errors" },
+  { text: page.title },
 ]} />
 
 <Header {page} />
@@ -28,10 +28,10 @@ import ArticleArray from "#parts/page/article-array.svelte";
 
   <aside>
     <h2> Continue Reading </h2>
-
+    
     <ArticleArray paths={[
-      "guides/integrals/why-hard.md",
-      "guides/integrals/how.md"
+      "guides/integrals/collections/everything-anything",
+      "guides/integrals/collections/epic-errors.md",
     ]} />
   </aside>
 </article>
