@@ -1,8 +1,8 @@
 {
   "meta": {
     "exported": "2025-04-05",
-    "file_count": 23,
-    "page_count": 21
+    "file_count": 24,
+    "page_count": 22
   },
   "index": {
     "guides": {
@@ -17,6 +17,7 @@
         "guides/integrals/collections/everything-anything.md",
         "guides/integrals/collections/int-int.md",
         "guides/integrals/collections/once.md",
+        "guides/integrals/collections/standard-integrals.md",
         "guides/integrals/how.md",
         "guides/integrals/methods/partials.md",
         "guides/integrals/methods/power-partials.md",
@@ -41,6 +42,7 @@
         "guides/integrals/collections/everything-anything.md",
         "guides/integrals/collections/int-int.md",
         "guides/integrals/collections/once.md",
+        "guides/integrals/collections/standard-integrals.md",
         "guides/integrals/how.md",
         "guides/integrals/methods/partials.md",
         "guides/integrals/methods/power-partials.md",
@@ -51,7 +53,8 @@
     "collections": {
       "route": null,
       "pages": [
-        "guides/integrals/adventures/neat-trick.md"
+        "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/collections/standard-integrals.md"
       ]
     },
     "antiderivatives": {
@@ -81,6 +84,7 @@
       "guides/integrals/collections/everything-anything.md",
       "guides/integrals/collections/int-int.md",
       "guides/integrals/collections/once.md",
+      "guides/integrals/collections/standard-integrals.md",
       "guides/integrals/how.md",
       "guides/integrals/methods/partials.md",
       "guides/integrals/methods/power-partials.md",
@@ -99,6 +103,7 @@
       "guides/integrals/collections/everything-anything.md",
       "guides/integrals/collections/int-int.md",
       "guides/integrals/collections/once.md",
+      "guides/integrals/collections/standard-integrals.md",
       "guides/integrals/how.md",
       "guides/integrals/methods/partials.md",
       "guides/integrals/methods/power-partials.md",
@@ -106,7 +111,8 @@
       "guides/integrals/why.md"
     ],
     "collections": [
-      "guides/integrals/adventures/neat-trick.md"
+      "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/collections/standard-integrals.md"
     ],
     "antiderivatives": [
       "guides/integrals/antiderivatives/ln.md",
@@ -403,6 +409,33 @@
       "date": null,
       "date_display": null
     },
+    "guides/integrals/collections/standard-integrals.md": {
+      "path": "guides/integrals/collections/standard-integrals.md",
+      "last_deploy": "2025-04-05 13:26:24 +0100",
+      "slocs": 82,
+      "chars": 2060,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/integrals/collections/standard-integrals",
+      "title": "Standard Integrals",
+      "head": "Standard Integrals",
+      "capt": null,
+      "desc": null,
+      "index": [
+        "guides",
+        "integrals",
+        "collections"
+      ],
+      "shard": [
+        "guides",
+        "integrals",
+        "collections"
+      ],
+      "date": null,
+      "date_display": null
+    },
     "guides/integrals/how.md": {
       "path": "guides/integrals/how.md",
       "last_deploy": "2025-01-22 21:10:24 +0000",
@@ -598,9 +631,9 @@
     },
     "challenges/year/2025.md": {
       "path": "challenges/year/2025.md",
-      "last_deploy": "2025-04-05 12:50:26 +0100",
+      "last_deploy": "2025-04-05 13:11:01 +0100",
       "slocs": 124,
-      "chars": 3533,
+      "chars": 4005,
       "isIndex": false,
       "flags": [
         "live"
