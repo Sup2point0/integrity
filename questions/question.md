@@ -48,3 +48,11 @@ methods:
   \\ &= 
 \end{align*}
 ```
+
+### Parts
+```math
+\begin{align*}
+      f &=  \quad&\quad g' &= 
+  \\ f' &=  \quad&\quad g &= 
+\end{align*}
+```

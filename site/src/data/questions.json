@@ -1770,6 +1770,86 @@
     }
   },
   "integrals": {
+    "s24c-cc1": {
+      "topic": "integrals",
+      "title": "connection",
+      "desc": null,
+      "date": "2024 November",
+      "tags": [
+        "poly"
+      ],
+      "methods": [
+        "acc",
+        "speed"
+      ],
+      "shard": "s24c-cc1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{x}{x-1}\\ dx-\\int \\frac{x}{x+1}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Can you combine the integrands?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\ln\\left(x^{2}-1\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{x}{x-1}\\ dx-\\int \\frac{x}{x+1}\\ dx  \\\\ =&\\ \\int \\frac{x}{x-1}-\\frac{x}{x+1}\\ dx  \\\\ =&\\ \\int \\frac{x\\left(x+1\\right)-x\\left(x-1\\right)}{\\left(x-1\\right)\\left(x+1\\right)}\\ dx  \\\\ =&\\ \\int \\frac{x^{2}+x-x^{2}+x}{x^{2}-1}\\ dx  \\\\ =&\\ \\int \\frac{2x}{x^{2}-1}\\ dx  \\\\ =&\\ \\ln\\left(x^{2}-1\\right)-c\\end{align*}"
+        }
+      ]
+    },
+    "s24c-hw1": {
+      "topic": "integrals",
+      "title": "trick or treat",
+      "desc": null,
+      "date": "2024 December 13",
+      "tags": [
+        "ln",
+        "exp"
+      ],
+      "methods": [
+        "acc"
+      ],
+      "shard": "s24c-hw1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int 2\\ln\\left(e\\cdot2^{x}\\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How can you separate the $e$ and $2^x$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "2x+x^{2}\\ln2-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int 2\\ln\\left(e\\cdot2^{x}\\right)\\ dx  \\\\ =&\\ \\int 2\\left(\\ln e+x\\ln2\\right)\\ dx  \\\\ =&\\ \\ 2\\int dx+\\ln2\\int 2x\\ dx  \\\\ =&\\ 2x+x^{2}\\ln2-c\\end{align*}"
+        }
+      ]
+    },
     "s24c-qq1": {
       "topic": "integrals",
       "title": "simplify",
@@ -1887,6 +1967,126 @@
           "content": "\\begin{align*}  &\\ \\int \\frac{2\\sqrt{x-1}+x}{\\sqrt{x-1}+1}\\ dx  \\\\ =&\\ \\int \\frac{2\\sqrt{x-1}+\\left(x-1\\right)+1}{\\sqrt{x-1}+1}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\sqrt{x-1}+1\\right)^{2}}{\\sqrt{x-1}+1}\\ dx  \\\\ =&\\ \\int \\sqrt{x-1}+1\\ dx  \\\\ =&\\ \\frac{2}{3}\\left(x-1\\right)^{3/2}+x-c\\end{align*}"
         }
       ]
+    },
+    "s24c-sb1": {
+      "topic": "integrals",
+      "title": "classic",
+      "desc": null,
+      "date": "2024 September",
+      "tags": [
+        "frac",
+        "sqrt"
+      ],
+      "methods": [
+        null
+      ],
+      "shard": "s24c-sb1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\sqrt{x}}{1+\\sqrt{x}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "$\\sqrt{x}$ is usually a safe substitution to make."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "x-2\\sqrt{x}+2\\ln\\left(\\sqrt{x}+1\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\sqrt{x}}{1+\\sqrt{x}}\\ dx  \\\\ =&\\ \\int \\frac{\\sqrt{x}+1-1}{\\sqrt{x}+1}\\ dx  \\\\ =&\\ \\int 1-\\frac{1}{\\sqrt{x}+1}\\ dx  \\\\ =&\\ x-\\int \\frac{1}{\\sqrt{x}+1}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{x} &= t  \\\\ x &= t^{2}  \\\\ dx &= 2t\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= x-\\int \\frac{1}{t+1}\\cdot2t\\ dt  \\\\ &= x-2\\int \\frac{t}{t+1}\\ dt  \\\\ &= x-2\\int \\frac{t+1}{t+1}-\\frac{1}{t+1}\\ dt  \\\\ &= x-2\\int dt+2\\int \\frac{1}{t+1}\\ dt  \\\\ &= x-2t+2\\ln\\left(t+1\\right)  \\\\ &= x-2\\sqrt{x}+2\\ln\\left(\\sqrt{x}+1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s24c-se1": {
+      "topic": "integrals",
+      "title": "scenic",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "poly",
+        "exp"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s24c-se1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int x^{3}e^{\\left(x^{2}-1\\right)}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How could you remove the $-1$ from the exponent?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How else can you write $x^3$?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What’s the derivative of $x^2$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{2}e^{\\left(x^{2}-1\\right)}\\left(x^{2}-1\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int x^{3}e^{\\left(x^{2}-1\\right)}\\ dx  \\\\ =&\\ \\frac{1}{e}\\int x^{3}e^{x^{2}}\\ dx  \\\\ =&\\ \\frac{1}{2e}\\int 2x\\cdot x^{2}\\cdot e^{x^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^2 &= t  \\\\ 2x \\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2e}\\int te^{t}\\ dt  \\\\ &= \\frac{1}{2e}e^{t}\\left(t-1\\right)  \\\\ &= \\frac{1}{2}e^{\\left(t-1\\right)}\\left(t-1\\right)  \\\\ &= \\frac{1}{2}e^{\\left(x^{2}-1\\right)}\\left(x^{2}-1\\right)-c\\end{align*}"
+          }
+        ]
+      }
     },
     "s24c-sp1": {
       "topic": "integrals",
@@ -10599,6 +10799,64 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int e^{t}\\ dt  \\\\ &= e^{t}  \\\\ &= e^{\\left(e^{x}\\ln x\\right)}  \\\\ &= x^{\\left(e^{x}\\right)}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-xz1": {
+      "topic": "integrals",
+      "title": "Elite Varkolyn Vanguard Special Combat Assault Rifle",
+      "desc": null,
+      "date": "2025 April 3",
+      "tags": [
+        "horror"
+      ],
+      "methods": [
+        null
+      ],
+      "flags": [
+        "feat"
+      ],
+      "shard": "s25f-xz1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left(    \\frac{1}{\\sin^2{x}} -    \\frac{1}{\\cos^2{x}}  \\right)  2580^{    \\sqrt{      (\\tan{x}+1)^2 + (\\cot{x}+1)^2 -      (\\sec^2{x} + \\csc^2{x})    }  }\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "solution": {
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\left(\\tan x+1\\right)^{2}+\\left(\\cot x+1\\right)^{2}-\\left(\\sec^{2}x+\\csc^{2}x\\right)  \\\\ =&\\ \\left(\\tan^{2}x+2\\tan x+1\\right)+\\left(\\cot^{2}x+2\\cot x+1\\right)-\\left(\\sec^{2}x+\\csc^{2}x\\right)  \\\\ =&\\ \\left(\\tan^{2}x+1\\right)+2\\tan x+\\left(\\cot^{2}x+1\\right)+2\\cot x-\\sec^{2}x-\\csc^{2}x  \\\\ =&\\ \\sec^{2}x+2\\tan x+\\csc^{2}x+2\\cot x-\\sec^{2}x-\\csc^{2}x  \\\\ =&\\ 2\\tan x+2\\cot x\\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\left(\\frac{1}{\\sin^{2}x}-\\frac{1}{\\cos^{2}x}\\right)2580^{\\sqrt{\\left(\\tan x+1\\right)^{2}+\\left(\\cot x+1\\right)^{2}-\\left(\\sec^{2}x+\\csc^{2}x\\right)}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\left(\\frac{1}{\\sin^{2}x}-\\frac{1}{\\cos^{2}x}\\right)2580^{\\sqrt{2\\tan x+2\\cot x}}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{2\\tan x+2\\cot x}=t  \\\\ 2\\tan x+2\\cot x=t^{2}  \\\\ \\tan x+\\cot x=\\frac{1}{2}t^{2}  \\\\ \\frac{\\sin x}{\\cos x}+\\frac{\\cos x}{\\sin x}=\\frac{1}{2}t^{2}  \\\\ \\frac{\\sin^{2}x+\\cos^{2}x}{\\sin x\\cos x}=\\frac{1}{2}t^{2}  \\\\ \\frac{1}{\\sin x\\cos x}=\\frac{1}{2}t^{2}  \\\\ \\frac{2}{\\sin2x}=\\frac{1}{2}t^{2}  \\\\ -\\frac{4\\cos2x}{\\left(\\sin2x\\right)^{2}}\\ dx=t\\ dt  \\\\ \\frac{4\\cos2x}{\\left(2\\sin x\\cos x\\right)^{2}}\\ dx=-t\\ dt  \\\\ \\frac{\\cos^{2}x-\\sin^{2}x}{\\left(\\sin^{2}x\\right)\\left(\\cos^{2}x\\right)}\\ dx=-t\\ dt  \\\\ \\left(\\frac{1}{\\sin^{2}x}-\\frac{1}{\\cos^{2}x}\\right)\\ dx=-t\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }2580^{t}\\cdot-t\\ dt  \\\\ &= -\\int_{\\ }^{\\ }te^{\\left(\\ln2580\\right)t}\\ dt\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      f &= t \\quad&\\quad g' &= e^{\\left(\\ln2580\\right)t}  \\\\ f' &= 1 \\quad&\\quad g &= \\frac{1}{\\ln2580}e^{\\left(\\ln2580\\right)t}\\end{align*}"
           }
         ]
       }

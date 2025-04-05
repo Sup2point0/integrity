@@ -1,6 +1,6 @@
 ---
 topic: integrals
-title: 
+title: lacking
 desc: 
 date: 2024 December
 tags:
