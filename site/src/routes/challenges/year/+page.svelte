@@ -1,5 +1,8 @@
 <script lang="ts">
 
+import Content from "./~content.svx";
+import { metadata as page } from "./~content.svx";
+
 import Card from "#parts/ui/card.svelte";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -9,7 +12,7 @@ import Meta from "#parts/page/meta.svelte";
 </script>
 
 
-<Meta title="0–100 Year Challenge" desc="Making the numbers from 0 to 100 with the digits of the year, in order" />
+<Meta title={page.title} desc={page.desc} />
 
 
 <Breadcrumbs levels={[
@@ -17,17 +20,23 @@ import Meta from "#parts/page/meta.svelte";
   { text: "0–100 Year Challenge"}
 ]} />
 
-<Header title="0–100 Year Challenge" capt="Making the numbers from 0 to 100 with the digits of the year, in order" />
+<Header {page} />
 
 
 <div class="content">
   <Card title="2024" intern="challenges/year/2024" />
+  <Card title="2025" intern="challenges/year/2025" />
 </div>
+
+<article>
+  <Content />
+</article>
 
 
 <style lang="scss">
 
 .content {
+  padding-bottom: 2rem;
   margin: 1rem;
   display: flex;
   flex-flow: row wrap;

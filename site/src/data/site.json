@@ -1,8 +1,8 @@
 {
   "meta": {
     "exported": "2025-04-05",
-    "file_count": 21,
-    "page_count": 19
+    "file_count": 23,
+    "page_count": 21
   },
   "index": {
     "guides": {
@@ -19,6 +19,7 @@
         "guides/integrals/collections/once.md",
         "guides/integrals/how.md",
         "guides/integrals/methods/partials.md",
+        "guides/integrals/methods/power-partials.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
@@ -42,6 +43,7 @@
         "guides/integrals/collections/once.md",
         "guides/integrals/how.md",
         "guides/integrals/methods/partials.md",
+        "guides/integrals/methods/power-partials.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
@@ -63,7 +65,8 @@
     "methods": {
       "route": null,
       "pages": [
-        "guides/integrals/methods/partials.md"
+        "guides/integrals/methods/partials.md",
+        "guides/integrals/methods/power-partials.md"
       ]
     }
   },
@@ -80,6 +83,7 @@
       "guides/integrals/collections/once.md",
       "guides/integrals/how.md",
       "guides/integrals/methods/partials.md",
+      "guides/integrals/methods/power-partials.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ],
@@ -97,6 +101,7 @@
       "guides/integrals/collections/once.md",
       "guides/integrals/how.md",
       "guides/integrals/methods/partials.md",
+      "guides/integrals/methods/power-partials.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ],
@@ -109,7 +114,8 @@
       "guides/integrals/antiderivatives/sec-3.md"
     ],
     "methods": [
-      "guides/integrals/methods/partials.md"
+      "guides/integrals/methods/partials.md",
+      "guides/integrals/methods/power-partials.md"
     ]
   },
   "pages": {
@@ -453,9 +459,9 @@
     },
     "guides/integrals/methods/power-partials.md": {
       "path": "guides/integrals/methods/power-partials.md",
-      "last_deploy": "2025-04-05 09:58:16 +0100",
-      "slocs": 158,
-      "chars": 4746,
+      "last_deploy": "2025-04-05 10:30:10 +0100",
+      "slocs": 159,
+      "chars": 4785,
       "isIndex": false,
       "flags": [
         "live"
@@ -465,8 +471,16 @@
       "head": "High-Power Partials",
       "capt": "Substitution without substitution",
       "desc": "Substitution without substitution",
-      "index": [],
-      "shard": [],
+      "index": [
+        "guides",
+        "integrals",
+        "methods"
+      ],
+      "shard": [
+        "guides",
+        "integrals",
+        "methods"
+      ],
       "date": null,
       "date_display": null
     },
@@ -577,6 +591,44 @@
       "head": "2024 Year Challenge",
       "capt": null,
       "desc": null,
+      "index": [],
+      "shard": [],
+      "date": null,
+      "date_display": null
+    },
+    "challenges/year/2025.md": {
+      "path": "challenges/year/2025.md",
+      "last_deploy": "2025-04-05 12:50:26 +0100",
+      "slocs": 124,
+      "chars": 3533,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "challenges/year/2025",
+      "title": "2024 Year Challenge",
+      "head": "2024 Year Challenge",
+      "capt": null,
+      "desc": null,
+      "index": [],
+      "shard": [],
+      "date": null,
+      "date_display": null
+    },
+    "challenges/year/README.md": {
+      "path": "challenges/year/README.md",
+      "last_deploy": "2025-04-05 12:43:46 +0100",
+      "slocs": 37,
+      "chars": 2129,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "challenges/year",
+      "title": "0–100 Year Challenge",
+      "head": "0–100 Year Challenge",
+      "capt": "Making the numbers from 0 to 100 with the digits of the year, in order",
+      "desc": "Making the numbers from 0 to 100 with the digits of the year, in order",
       "index": [],
       "shard": [],
       "date": null,
