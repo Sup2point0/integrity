@@ -1,12 +1,10 @@
 # FAQ
 <!-- #SQUARK live!
 | dest = info/faq
-| capt = Fervently Anticipated Questions
+| capt = Frequently Asked Questions
 | desc = Frequently asked questions about Integrity
 | index = info
 -->
-
-Yes, I’m painfully aware the site’s broken on most versions of Safari. I’m still trying to figure out what change broke it TvT
 
 ### What’s *Integrity* for?
 It’s a home for all the [maths questions](questions/) I’ve created, [guides](guides/) I’ve written, and various other mathematical adventures. You can find out more in [Synopsis](synopsis.md).
@@ -39,6 +37,23 @@ Oh my days, I actually love creating questions (especially integrals) too much. 
 
 It’s just fun, what can I say.
 
+### Why are the questions so difficult?
+Well, the vast majority of integrals on *Integrity* are made to be nontrivial. I want this site to be a source of high-quality, thought-provoking, handcrafted integrals that aren’t just a test of speed.
+
+Some questions are only tough because they have a very specific and obscure trick.
+
+This is less true for the [Completing the Square](questions/complete-square/) questions, but how hard can completing the square get...
+
+### Why are the questions so easy?
+Okayy, can’t fault you for being too good at maths! The integrals are definitely above A-level level, but I wouldn’t say anything above A-level Further Maths knowledge. (Can confirm: my A-level maths friends could solve most of them.)
+
+And [Addvent](questions/addvent/) was for Addvent, there’s a reason the questions were accessible.
+
+### I’ve finished all the questions, do you have any more?
+Hello!! Congratulations on solving so many, and tysm for using *Integrity*!
+
+I’m regularly adding more questions (because I can’t seem to stop writing more), so just check back in a bit and there’ll almost certainly be more waiting for you.
+
 ### Can I use these questions?
 Absolutely, you’re more than welcome to! For more details, see [License](README.md#License).
 
@@ -61,7 +76,12 @@ See [decoded](edu.md).
 They’re unique identifiers for each question which encode its topic, purpose, year etc. You can find out more in [Docs](docs/shards.md).
 
 ### Is dark mode available?
-Yep! The site is synced with your local system’s theme. I decided against allowing different themes on this site, since the focus is on maths :v
+Yep! The site is synced with your local system’s theme, so just enable dark mode on your device.
+
+I decided against allowing different themes on this site, since the focus is on maths :v
+
+### I’d like to request a feature please!
+Just [drop an Issue on Github](https://github.com/Sup2point0/integrity/issues), and if I like the feature, I’ll get round to implementing it!
 
 ### Uh, there’s a LaTeX rendering error?
 Oh dear, the parsing engine’s flopped again. Or more likely, I’ve made some typo in the source LaTeX. Drop an [issue on GitHub](https://github.com/Sup2point0/integrity/issues) and I’ll be right on fixing it.
