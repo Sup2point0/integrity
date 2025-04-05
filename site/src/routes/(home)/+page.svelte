@@ -131,11 +131,13 @@ section {
   gap: 1rem;
 }
 
-.featured .questions {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 1rem;
+.featured {
+  .questions, .guides {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 
 .centre {

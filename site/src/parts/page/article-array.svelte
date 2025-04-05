@@ -29,7 +29,6 @@ let { paths }: Props = $props();
 ul {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
   gap: 1rem;
 }
 
