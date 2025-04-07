@@ -83,11 +83,14 @@ I decided against allowing different themes on this site, since the focus is on 
 ### I’d like to request a feature please!
 Just [drop an Issue on Github](https://github.com/Sup2point0/integrity/issues), and if I like the feature, I’ll get round to implementing it!
 
-### Uh, there’s a LaTeX rendering error?
-Oh dear, the parsing engine’s flopped again. Or more likely, I’ve made some typo in the source LaTeX. Drop an [issue on GitHub](https://github.com/Sup2point0/integrity/issues) and I’ll be right on fixing it.
+### Are the questions checked?
+All integrals are checked with Desmos before being added to *Integrity*, if possible. For those where the solution is difficult to plot, or are just generally horrific, solutions have been verified with either [WolframAlpha<sup>↗</sup>](https://www.wolframalpha.com/) or my mathematically inclined friend [iTechnical](https://github.com/itechnicals).
 
 ### Uhh, a question has an incorrect solution?
 Ohhh dear, I’ve done it again. *Definitely* drop an [issue on GitHub](https://github.com/Sup2point0/integrity/issues) and I’ll fix it as soon as I can.
+
+### Uh, there’s a LaTeX rendering error?
+Oh dear, the parsing engine’s flopped again. Or more likely, I’ve made some typo in the source LaTeX. Drop an [issue on GitHub](https://github.com/Sup2point0/integrity/issues) and I’ll be right on fixing it.
 
 ### Uhhh, the site’s broken?
 If the loading overlay’s taking a while, it almost certainly means JavaScript’s broken or crashed. This seems to happen very easily on Safari, but rarely on Chrome. I do check the site after each deployment, so if it’s immediately unusable I will go and fix it.
