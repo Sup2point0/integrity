@@ -1,4 +1,4 @@
-import type { Shard, Block } from "./root";
+import type { Shard, Latex, Block } from "./root";
 
 /** Represents a generic question. */
 export class Question
@@ -60,8 +60,34 @@ export class Question
       ...(this.tags ?? []),
       ...(this.methods ?? []),
     ].filter(each => each);
+
+    if (typeof this.question?.content === "string") {      
+      this.question.content = this.question.content.replaceAll(/\s\s+/g, "");
+    }
+  }
+
+  /** Sanitises the LaTeX of the question so that it can easily be injected into Desmos. */
+  sanitise(): Latex | null
+  {
+    if (typeof this.question?.content !== "string") {
+      return null;
+    }
+
+    let out = this.question.content;
+
+    out = out.replaceAll(
+      /\\(sin|cos|tan|sec|cot|csc)\^([\d])[\(\{]([a-z])[\)\}]/g,
+      "\\$1\\left($3\\right)^$2"
+    );
+    out = out.replaceAll(
+      /\\(sin|cos|tan|sec|cot|csc)[\(\{]([a-z])[\)\}]/g,
+      "\\$1\\left($2\\right)"
+    );
+
+    return out;
   }
 }
+
 
 /** A dictionary of questions from a single topic. */
 export interface QuestionDictionary

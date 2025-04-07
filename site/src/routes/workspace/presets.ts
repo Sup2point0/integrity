@@ -5,7 +5,8 @@ export function preset_question(desmos: any, question: Question)
 {
   switch (question.topic) {
     case "integrals":
-      let integral = (question.question.content
+      let content = question.sanitise() ?? "error";
+      let integral = (content
         .replace("\\int", "")
         .replace("dx", "")
       );

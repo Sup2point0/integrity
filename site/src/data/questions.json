@@ -3116,7 +3116,7 @@
     },
     "s24f-pl1": {
       "topic": "integrals",
-      "title": null,
+      "title": "lacking",
       "desc": null,
       "date": "2024 December",
       "tags": [
@@ -9521,6 +9521,190 @@
         ]
       }
     },
+    "s25f-sy1": {
+      "topic": "integrals",
+      "title": "sayonara",
+      "desc": "This is a wild ride.",
+      "date": "2025 February 9",
+      "tags": [
+        "dread",
+        "frac",
+        "sqrt",
+        "trig"
+      ],
+      "methods": [
+        "long",
+        "tough"
+      ],
+      "flags": [
+        "feat"
+      ],
+      "shard": "s25f-sy1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\sqrt{\\frac    { \\tan{x} }    { 1+\\tan{x }  }}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Before you substitute the entire integrand, I’d recommend simplifying the expression inside the $\\sqrt{}$ a bit so that it’s easier to differentiate."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Now substitute the integrand."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Ah, a rational function, just what we like to see..."
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "You can write all of the powers in terms of a lower power of another variable."
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "Find the complex solutions to the denominator."
+          }
+        ],
+        "6": [
+          {
+            "kind": "text",
+            "content": "Partial fractions works with complex roots too!"
+          }
+        ],
+        "7": [
+          {
+            "kind": "text",
+            "content": "Write your integrands in terms of"
+          },
+          {
+            "kind": "latex",
+            "content": "\\frac{k}{ax^2 + b}"
+          }
+        ],
+        "8": [
+          {
+            "kind": "text",
+            "content": "Just 2 arctans now."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1-i}{\\sqrt{-2i-2}}\\tan^{-1}\\left(\\sqrt{\\frac{\\tan x}{1+\\tan x}}\\sqrt{\\frac{2}{-i-1}}\\right)+\\frac{1+i}{\\sqrt{2i-2}}\\tan^{-1}\\left(\\sqrt{\\frac{\\tan x}{1+\\tan x}}\\sqrt{\\frac{2}{i-1}}\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\sqrt{\\frac{\\tan x}{1+\\tan x}}\\ dx  \\\\ =&\\ \\int \\sqrt{\\frac{1+\\tan x-1}{1+\\tan x}}\\ dx  \\\\ =&\\ \\int \\sqrt{1-\\frac{1}{1+\\tan x}}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1-\\frac{1}{1+\\tan x} &= t  \\\\ \\frac{1}{1+\\tan x} &= 1-t  \\\\ 1+\\tan x &= \\frac{1}{1-t}  \\\\ \\tan x &= \\frac{1}{1-t}-1  \\\\ &= \\frac{1}{1-t}-\\frac{1-t}{1-t}  \\\\ &= \\frac{1-\\left(1-t\\right)}{1-t}  \\\\ &= \\frac{t}{1-t}  \\\\ x &= \\tan^{-1}\\left(\\frac{t}{1-t}\\right)  \\\\ \\Rightarrow\\quad dx &= \\frac{1}{1+\\left(\\frac{t}{1-t}\\right)^{2}}\\cdot\\frac{\\left(1-t\\right)-t\\left(-1\\right)}{\\left(1-t\\right)^{2}}\\ dt  \\\\ &= \\frac{1}{1+\\frac{t^{2}}{\\left(1-t\\right)^{2}}}\\cdot\\frac{1-t+t}{\\left(1-t\\right)^{2}}\\ dt  \\\\ &= \\frac{1}{1+\\frac{t^{2}}{\\left(1-t\\right)^{2}}}\\cdot\\frac{1}{\\left(1-t\\right)^{2}}\\ dt  \\\\ &= \\frac{1}{\\left(1-t\\right)^{2}+t^{2}}\\ dt  \\\\ &= \\frac{1}{t^{2}-2t+1+t^{2}}\\ dt  \\\\ &= \\frac{1}{2t^{2}-2t+1}\\ dt\\end{align*}"
+          }
+        ],
+        "simplify (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\sqrt{1-\\frac{1}{1+\\tan x}}\\ dx  \\\\ =&\\ \\int \\sqrt{t}\\cdot\\frac{1}{2t^{2}-2t+1}\\ dt  \\\\ =&\\ \\int \\frac{\\sqrt{t}}{2t^{2}-2t+1}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{t} &= v  \\\\ t &= v^{2}  \\\\ dt &= 2v\\ dv\\end{align*}"
+          }
+        ],
+        "simplify (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{v}{2v^{4}-2v^{2}+1}\\cdot2v\\ dv  \\\\ &= \\int \\frac{v^{2}}{v^{4}-v^{2}+1/2}\\ dv\\end{align*}"
+          }
+        ],
+        "factorise": [
+          {
+            "kind": "text",
+            "content": "Write $v^2 = w$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\frac{v^{2}}{v^{4}-v^{2}+1/2}=\\frac{w}{w^{2}-w+1/2}"
+          },
+          {
+            "kind": "text",
+            "content": "Using quadratic formula:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  w^{2}-w+\\frac{1}{2} &= 0  \\\\ w &= \\frac{-b\\pm\\sqrt{b^{2}-4ac}}{2a}  \\\\ &= \\frac{1\\pm\\sqrt{1-2}}{2}  \\\\ &= \\frac{1\\pm i}{2}\\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "w=\\frac{1+i}{2},\\ w'=\\frac{1-i}{2}"
+          },
+          {
+            "kind": "text",
+            "content": "Therefore:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  w^{2}-w+\\frac{1}{2} &= \\left(w-\\frac{1+i}{2}\\right)\\left(w-\\frac{1-i}{2}\\right)  \\\\ \\frac{w}{w^{2}-w+1/2} &= \\frac{w}{\\left(w-\\frac{1+i}{2}\\right)\\left(w-\\frac{1-i}{2}\\right)}  \\\\ &= \\frac{w}{\\left(w-\\frac{1+i}{2}\\right)\\left(w-\\frac{1-i}{2}\\right)}\\cdot\\frac{4}{4}  \\\\ &= \\frac{4w}{\\left(2w-\\left(1+i\\right)\\right)\\left(2w-\\left(1-i\\right)\\right)}\\end{align*}"
+          }
+        ],
+        "complex partial fractions": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{4w}{\\left(2w-\\left(1+i\\right)\\right)\\left(2w-\\left(1-i\\right)\\right)} &= \\frac{p}{2w-\\left(1+i\\right)}+\\frac{q}{2w-\\left(1-i\\right)}  \\\\ 4w &= p\\left[2w-\\left(1-i\\right)\\right]+q\\left[2w-\\left(1+i\\right)\\right]\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $w = \\frac{1+i}{2}$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  4\\left(\\frac{1+i}{2}\\right)    &= p\\left[2\\left(\\frac{1+i}{2}\\right)-\\left(1-i\\right)\\right]+q\\left[2\\left(\\frac{1+i}{2}\\right)-\\left(1+i\\right)\\right]  \\\\ 2+2i &= p\\left[\\left(1+i\\right)-\\left(1-i\\right)\\right]+q\\left[\\left(1+i\\right)-\\left(1+i\\right)\\right]  \\\\ 2+2i &= p\\left(2i\\right)+0  \\\\ p &= \\frac{1}{i}+1  \\\\ &= 1-i\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $w = \\frac{1-i}{2}$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  4\\left(\\frac{1-i}{2}\\right)    &= p\\left[2\\left(\\frac{1-i}{2}\\right)-\\left(1-i\\right)\\right]+q\\left[2\\left(\\frac{1-i}{2}\\right)-\\left(1+i\\right)\\right]  \\\\ 2\\left(1-i\\right) &= p\\left[\\left(1-i\\right)-\\left(1-i\\right)\\right]+q\\left[\\left(1-i\\right)-\\left(1+i\\right)\\right]  \\\\ 2-2i &= 0+q\\left(-2i\\right)  \\\\ qi &= i-1  \\\\ q &= 1-\\frac{1}{i}  \\\\ &= 1+i\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Hence:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{4w}{\\left(2w-\\left(1+i\\right)\\right)\\left(2w-\\left(1-i\\right)\\right)}=\\frac{1-i}{2w-\\left(1+i\\right)}+\\frac{1+i}{2w-\\left(1-i\\right)}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{v^{2}}{v^{4}-v^{2}+1/2}\\ dv  \\\\ =&\\ =\\int \\frac{1-i}{2w-\\left(1+i\\right)}+\\frac{1+i}{2w-\\left(1-i\\right)}\\ dv  \\\\ =&\\ \\int \\frac{1-i}{2v^{2}-\\left(1+i\\right)}+\\frac{1+i}{2v^{2}-\\left(1-i\\right)}\\ dv  \\\\ =&\\ \\frac{1}{2}\\int \\frac{1-i}{v^{2}-\\left(\\frac{1+i}{2}\\right)}+\\frac{1+i}{v^{2}-\\frac{1-i}{2}}\\ dv  \\\\ =&\\ \\frac{1-i}{2}\\int \\frac{1}{v^{2}-\\left(\\frac{1+i}{2}\\right)}\\ dv+\\frac{1+i}{2}\\int \\frac{1}{v^{2}-\\left(\\frac{1-i}{2}\\right)}\\ dv  \\\\ =&\\ \\frac{1-i}{2}\\int \\frac{1}{v^{2}+\\left(\\frac{-i-1}{2}\\right)}\\ dv+\\frac{1+i}{2}\\int \\frac{1}{v^{2}+\\left(\\frac{i-1}{2}\\right)}\\ dv  \\\\ =&\\ \\frac{1-i}{2}\\sqrt{\\frac{2}{-i-1}}\\tan^{-1}\\left(v\\sqrt{\\frac{2}{-i-1}}\\right)+\\frac{1+i}{2}\\sqrt{\\frac{2}{i-1}}\\tan^{-1}\\left(v\\sqrt{\\frac{2}{i-1}}\\right)  \\\\ =&\\ \\frac{1-i}{\\sqrt{-2i-2}}\\tan^{-1}\\left(v\\sqrt{\\frac{2}{-i-1}}\\right)+\\frac{1+i}{\\sqrt{2i-2}}\\tan^{-1}\\left(v\\sqrt{\\frac{2}{i-1}}\\right)  \\\\ =&\\ \\frac{1-i}{\\sqrt{-2i-2}}\\tan^{-1}\\left(\\sqrt{t}\\sqrt{\\frac{2}{-i-1}}\\right)+\\frac{1+i}{\\sqrt{2i-2}}\\tan^{-1}\\left(\\sqrt{t}\\sqrt{\\frac{2}{i-1}}\\right)  \\\\ =&\\ \\frac{1-i}{\\sqrt{-2i-2}}\\tan^{-1}\\left(\\sqrt{1-\\frac{1}{1+\\tan x}}\\sqrt{\\frac{2}{-i-1}}\\right)+\\frac{1+i}{\\sqrt{2i-2}}\\tan^{-1}\\left(\\sqrt{1-\\frac{1}{1+\\tan x}}\\sqrt{\\frac{2}{i-1}}\\right)  \\\\ =&\\ \\frac{1-i}{\\sqrt{-2i-2}}\\tan^{-1}\\left(\\sqrt{\\frac{\\tan x}{1+\\tan x}}\\sqrt{\\frac{2}{-i-1}}\\right)+\\frac{1+i}{\\sqrt{2i-2}}\\tan^{-1}\\left(\\sqrt{\\frac{\\tan x}{1+\\tan x}}\\sqrt{\\frac{2}{i-1}}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-tc1": {
       "topic": "integrals",
       "title": "brittle",
@@ -10799,64 +10983,6 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int e^{t}\\ dt  \\\\ &= e^{t}  \\\\ &= e^{\\left(e^{x}\\ln x\\right)}  \\\\ &= x^{\\left(e^{x}\\right)}-c\\end{align*}"
-          }
-        ]
-      }
-    },
-    "s25f-xz1": {
-      "topic": "integrals",
-      "title": "Elite Varkolyn Vanguard Special Combat Assault Rifle",
-      "desc": null,
-      "date": "2025 April 3",
-      "tags": [
-        "horror"
-      ],
-      "methods": [
-        null
-      ],
-      "flags": [
-        "feat"
-      ],
-      "shard": "s25f-xz1",
-      "question": [
-        {
-          "kind": "latex",
-          "content": "\\int  \\left(    \\frac{1}{\\sin^2{x}} -    \\frac{1}{\\cos^2{x}}  \\right)  2580^{    \\sqrt{      (\\tan{x}+1)^2 + (\\cot{x}+1)^2 -      (\\sec^2{x} + \\csc^2{x})    }  }\\ dx"
-        }
-      ],
-      "answer": [
-        {
-          "kind": "latex",
-          "content": ""
-        }
-      ],
-      "solution": {
-        "simplify": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\left(\\tan x+1\\right)^{2}+\\left(\\cot x+1\\right)^{2}-\\left(\\sec^{2}x+\\csc^{2}x\\right)  \\\\ =&\\ \\left(\\tan^{2}x+2\\tan x+1\\right)+\\left(\\cot^{2}x+2\\cot x+1\\right)-\\left(\\sec^{2}x+\\csc^{2}x\\right)  \\\\ =&\\ \\left(\\tan^{2}x+1\\right)+2\\tan x+\\left(\\cot^{2}x+1\\right)+2\\cot x-\\sec^{2}x-\\csc^{2}x  \\\\ =&\\ \\sec^{2}x+2\\tan x+\\csc^{2}x+2\\cot x-\\sec^{2}x-\\csc^{2}x  \\\\ =&\\ 2\\tan x+2\\cot x\\end{align*}"
-          },
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\left(\\frac{1}{\\sin^{2}x}-\\frac{1}{\\cos^{2}x}\\right)2580^{\\sqrt{\\left(\\tan x+1\\right)^{2}+\\left(\\cot x+1\\right)^{2}-\\left(\\sec^{2}x+\\csc^{2}x\\right)}}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\left(\\frac{1}{\\sin^{2}x}-\\frac{1}{\\cos^{2}x}\\right)2580^{\\sqrt{2\\tan x+2\\cot x}}\\ dx\\end{align*}"
-          }
-        ],
-        "substitute": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  \\sqrt{2\\tan x+2\\cot x}=t  \\\\ 2\\tan x+2\\cot x=t^{2}  \\\\ \\tan x+\\cot x=\\frac{1}{2}t^{2}  \\\\ \\frac{\\sin x}{\\cos x}+\\frac{\\cos x}{\\sin x}=\\frac{1}{2}t^{2}  \\\\ \\frac{\\sin^{2}x+\\cos^{2}x}{\\sin x\\cos x}=\\frac{1}{2}t^{2}  \\\\ \\frac{1}{\\sin x\\cos x}=\\frac{1}{2}t^{2}  \\\\ \\frac{2}{\\sin2x}=\\frac{1}{2}t^{2}  \\\\ -\\frac{4\\cos2x}{\\left(\\sin2x\\right)^{2}}\\ dx=t\\ dt  \\\\ \\frac{4\\cos2x}{\\left(2\\sin x\\cos x\\right)^{2}}\\ dx=-t\\ dt  \\\\ \\frac{\\cos^{2}x-\\sin^{2}x}{\\left(\\sin^{2}x\\right)\\left(\\cos^{2}x\\right)}\\ dx=-t\\ dt  \\\\ \\left(\\frac{1}{\\sin^{2}x}-\\frac{1}{\\cos^{2}x}\\right)\\ dx=-t\\ dt\\end{align*}"
-          }
-        ],
-        "solve": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }2580^{t}\\cdot-t\\ dt  \\\\ &= -\\int_{\\ }^{\\ }te^{\\left(\\ln2580\\right)t}\\ dt\\end{align*}"
-          }
-        ],
-        "parts": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}      f &= t \\quad&\\quad g' &= e^{\\left(\\ln2580\\right)t}  \\\\ f' &= 1 \\quad&\\quad g &= \\frac{1}{\\ln2580}e^{\\left(\\ln2580\\right)t}\\end{align*}"
           }
         ]
       }

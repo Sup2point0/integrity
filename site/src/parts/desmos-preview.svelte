@@ -17,7 +17,7 @@ interface Props {
 let { blocks, bounds = 2 }: Props = $props();
 
 
-let desmos: any | false | null = null;
+let desmos: any | false | null = $state(null);
 let live = $state(false);
 let self: HTMLElement;
 
