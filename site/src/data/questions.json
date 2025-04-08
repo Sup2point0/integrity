@@ -3736,7 +3736,7 @@
         "parts (1)": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  f &= x^3 & g' &= xe^{-x^{2}}  \\\\ f' &= 3x^2 & g &= \\int_{\\ }^{\\ }xe^{-x^{2}}\\ dx  \\\\ && &= \\frac{1}{2}\\int_{\\ }^{\\ }2xe^{-x^{2}}\\ dx  \\\\ && &= -\\frac{1}{2}e^{-x^{2}}\\end{align*}"
+            "content": "\\begin{align*}  f &= x^3 & g' &= xe^{-x^{2}}  \\\\ f' &= 3x^2 & g &= \\int xe^{-x^{2}}\\ dx  \\\\ && &= \\frac{1}{2}\\int 2xe^{-x^{2}}\\ dx  \\\\ && &= -\\frac{1}{2}e^{-x^{2}}\\end{align*}"
           }
         ],
         "solve (1)": [
@@ -3748,7 +3748,7 @@
         "parts (2)": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  p &= x \\quad&\\quad q' &= q'=xe^{-x^{2}}  \\\\ p' &= 1 \\quad&\\quad q &= \\int_{\\ }^{\\ }xe^{-x^{2}}\\ dx  \\\\ && &= \\frac{1}{2}\\int_{\\ }^{\\ }2xe^{-x^{2}}\\ dx  \\\\ && &= -\\frac{1}{2}e^{-x^{2}}\\end{align*}"
+            "content": "\\begin{align*}  p &= x \\quad&\\quad q' &= q'=xe^{-x^{2}}  \\\\ p' &= 1 \\quad&\\quad q &= \\int xe^{-x^{2}}\\ dx  \\\\ && &= \\frac{1}{2}\\int 2xe^{-x^{2}}\\ dx  \\\\ && &= -\\frac{1}{2}e^{-x^{2}}\\end{align*}"
           }
         ],
         "solve (2)": [
@@ -4015,6 +4015,38 @@
         ]
       }
     },
+    "s25c-tt1": {
+      "topic": "integrals",
+      "title": "unstable concoction",
+      "desc": null,
+      "date": "2025 April 1",
+      "tags": [
+        "frac",
+        "trig"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25c-tt1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\sin{x} \\sec{x} \\tan{x} }    { \\cos{x} \\csc{x} \\cot{x} }\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{3}\\tan^{3}x-\\tan x+x-C"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{\\sin x\\sec x\\tan x}{\\cos x\\csc x\\cot x}\\ dx  \\\\ =&\\ \\int \\frac{\\sin x\\cdot\\frac{1}{\\cos x}\\cdot\\frac{\\sin x}{\\cos x}}{\\cos x\\cdot\\frac{1}{\\sin x}\\cdot\\frac{\\cos x}{\\sin x}}\\ dx  \\\\ =&\\ \\int \\frac{\\sin^{4}x}{\\cos^{4}x}\\ dx  \\\\ =&\\ \\int \\tan^{4}x\\ dx  \\\\ =&\\ \\int \\left(\\tan^{2}x\\right)\\left(\\sec^{2}x-1\\right)\\ dx  \\\\ =&\\ \\int \\sec^{2}x\\tan^{2}x-\\tan^{2}x\\ dx  \\\\ =&\\ \\frac{1}{3}\\tan^{3}x-\\int_{\\ }^{\\ }\\sec^{2}x-1\\ dx  \\\\ =&\\ \\frac{1}{3}\\tan^{3}x-\\tan x+x-C\\end{align*}"
+        }
+      ]
+    },
     "s25c-vr1": {
       "topic": "integrals",
       "title": "VRAM",
@@ -4141,6 +4173,38 @@
           }
         ]
       }
+    },
+    "s25c-xf1": {
+      "topic": "integrals",
+      "title": "food for thought",
+      "desc": null,
+      "date": "2025 April 1",
+      "tags": [
+        "frac",
+        "exp"
+      ],
+      "methods": [
+        null
+      ],
+      "shard": "s25c-xf1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { e^x - 1 }    { e^x + 1 }\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "2\\ln\\left(e^{x}+1\\right)-x-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{e^{x}-1}{e^{x}+1}\\ dx  \\\\ =&\\ \\int \\frac{e^{x}+1-2}{e^{x}+1}\\ dx  \\\\ =&\\ \\int 1-\\frac{2}{e^{x}+1}\\ dx  \\\\ =&\\ x-2\\int \\frac{1}{1+e^{x}}\\ dx  \\\\ =&\\ x-2\\int \\frac{1+e^{x}-e^{x}}{1+e^{x}}\\ dx  \\\\ =&\\ x-2\\int 1-\\frac{e^{x}}{1+e^{x}}\\ dx  \\\\ =&\\ x-2x+2\\ln\\left(1+e^{x}\\right)  \\\\ =&\\ 2\\ln\\left(e^{x}+1\\right)-x-c\\end{align*}"
+        }
+      ]
     },
     "s25c-xp1": {
       "topic": "integrals",
@@ -4586,6 +4650,66 @@
         ]
       }
     },
+    "s25f-af2": {
+      "topic": "integrals",
+      "title": "never gonna",
+      "desc": null,
+      "date": "2025 April 1",
+      "tags": [
+        "frac",
+        "exp",
+        "ln",
+        "inverse trig"
+      ],
+      "methods": [
+        "troll"
+      ],
+      "shard": "s25f-af2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{1}{\\ln{x}}  \\tan^{-1} \\left(    \\frac{x}{1 + e^x}  \\right)\\ dy"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "It’s not actually difficult."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Look carefully."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Look carefully!"
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "Hey, what’s the date today?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{y}{\\ln x}\\tan^{-1}\\left(\\frac{x}{1+e^{x}}\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{1}{\\ln x}\\tan^{-1}\\left(\\frac{x}{1+e^{x}}\\right)\\ dy  \\\\ =&\\ \\frac{1}{\\ln x}\\tan^{-1}\\left(\\frac{x}{1+e^{x}}\\right)\\int dy  \\\\ =&\\ \\frac{y}{\\ln x}\\tan^{-1}\\left(\\frac{x}{1+e^{x}}\\right)-c\\end{align*}"
+        }
+      ]
+    },
     "s25f-at1": {
       "topic": "integrals",
       "title": "attention is all you need",
@@ -4977,6 +5101,81 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{1}{t}\\ln t\\ dt  \\\\ &= \\frac{1}{2}\\left(\\ln t\\right)^{2}  \\\\ &= \\frac{1}{2}\\ln\\left(x\\sec x\\right)^{2}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-cs1": {
+      "topic": "integrals",
+      "title": "cos why not",
+      "desc": null,
+      "date": "2025 March 24",
+      "tags": [
+        "frac",
+        "trig",
+        "inverse trig"
+      ],
+      "methods": [
+        "fun"
+      ],
+      "shard": "s25f-cs1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{-1}^{1}\\frac{\\sin^{-1}\\left(\\cos{x}\\right)}{\\sin\\left(\\cos^{-1}{x}\\right)}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "$\\text{trig}^{-1}(\\text{trig}(x))$ cancels to $x$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "But this is only true over a certain domain."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "$\\cos^{-1}\\left( \\cos{x} \\right)$ is even, but $x$ is odd."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{2}\\pi^{2}-2"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{-1}^{1}\\frac{\\sin^{-1}\\left(\\cos x\\right)}{\\sin\\left(\\cos^{-1}x\\right)}\\ dx  \\\\ =&\\ 2\\int_{0}^{1}\\frac{\\sin^{-1}\\left(\\cos x\\right)}{\\sin\\left(\\cos^{-1}x\\right)}\\ dx  \\\\ =&\\ 2\\int_{0}^{1}\\frac{\\frac{\\pi}{2}-\\cos^{-1}\\left(\\cos x\\right)}{\\sin\\left(\\cos^{-1}x\\right)}\\ dx\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "$\\cos^{-1}(\\cos{x}) = x$ for $0 \\leq x \\leq 1$, hence"
+          },
+          {
+            "kind": "latex",
+            "content": "= 2\\int_{0}^{1}\\frac{\\frac{\\pi}{2}-x}{\\sin\\left(\\cos^{-1}x\\right)}\\ dx"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\cos^{-1}x &= t  \\\\ x &= \\cos t  \\\\ dx &= -\\sin t\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 2\\int_{\\pi/2}^{0}\\frac{\\frac{\\pi}{2}-\\cos t}{\\sin t}\\cdot-\\sin t\\ dt  \\\\ &= 2\\int_{0}^{\\pi/2}\\frac{\\pi}{2}-\\cos t\\ dt  \\\\ &= 2\\left[\\frac{\\pi}{2}t-\\sin t\\right]_{0}^{\\pi/2}  \\\\ &= 2\\left[\\left(\\frac{\\pi}{2}\\cdot\\frac{\\pi}{2}-\\sin\\left(\\frac{\\pi}{2}\\right)\\right)-\\left(0\\right)\\right]  \\\\ &= 2\\left(\\left(\\frac{\\pi}{2}\\right)^{2}-1\\right)  \\\\ &= \\frac{1}{2}\\pi^{2}-2\\end{align*}"
           }
         ]
       }
@@ -5459,6 +5658,79 @@
         {
           "kind": "latex",
           "content": "\\begin{align*}  &\\ \\int \\left(e^{2}\\right)^{\\ln\\left(x^{2}\\right)}\\ dx  \\\\ =&\\ \\int e^{\\left(2\\cdot2\\ln x\\right)}\\ dx  \\\\ =&\\ \\int x^{4}\\ dx  \\\\ =&\\ \\frac{1}{5}x^{5}-c\\end{align*}"
+        }
+      ]
+    },
+    "s25f-eo1": {
+      "topic": "integrals",
+      "title": "cooked, calmly",
+      "desc": null,
+      "date": "2025 January 13",
+      "tags": [
+        "definite",
+        "scare",
+        "exp"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-eo1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{0}^{1}  \\left(    e^x \\cdot e^{-1/2} + e^{-x} \\cdot e^{1/2}  \\right)^5\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Ignore the $()^5$ for now."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Can you combine the exponents?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What translation has taken place?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$0$"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{0}^{1}\\left(e^{x}\\cdot e^{-1/2}-e^{-x}\\cdot e^{1/2}\\right)^{5}\\ dx  \\\\ =&\\ \\int_{0}^{1}\\left(e^{\\left(x-1/2\\right)}-e^{\\left(-x+1/2\\right)}\\right)^{5}\\ dx  \\\\ =&\\ \\int_{0}^{1}\\left(e^{\\left(x-1/2\\right)}-e^{-\\left(x-1/2\\right)}\\right)^{5}\\ dx\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "We could try solve this integral by expanding, but that would be horrific. Instead let’s think about what its graph would look like.<br><br>Firstly, notice this is a translation of the graph $\\left(e^x - e^{-x}\\right)^5$ by $1/2$ in the positive $x$-direction. So let’s make a substitution:"
+        },
+        {
+          "kind": "latex",
+          "content": "x-\\frac{1}{2}=t"
+        },
+        {
+          "kind": "text",
+          "content": "Which gives:"
+        },
+        {
+          "kind": "latex",
+          "content": "= \\int_{-1/2}^{1/2}\\left(e^{t}-e^{-t}\\right)^{5}\\ dt"
+        },
+        {
+          "kind": "text",
+          "content": "Now we notice that the integral is odd. We can show this in many ways.<br><br>Generally, the difference between a function $f(x)$ and its reflection $f(-x)$ produces an odd graph. (Here $f(x) = e^x$)<br><br>For those who have done hyperbolic trigonometry, you may also recognise this expression as $2 \\cdot \\left(\\frac{e^x - e^{-x}}{2}\\right) = 2\\sinh{x}$, which is odd.<br><br>The exponent is odd, so this parity does not change. All that’s left is to recognise is that the limits are equal but opposite, so the positive and negative areas cancel out, giving $0$."
         }
       ]
     },
@@ -7659,7 +7931,7 @@
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\int_{\\ }^{\\ }\\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}\\exp\\left(\\frac{4}{3}\\pi x^{3}\\int_{0}^{\\infty}\\frac{\\ln y}{1+y^{2}}\\ dy\\right)+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\exp\\left(4\\pi x^{2}\\int_{\\infty}^{0}\\frac{\\ln y}{1+y^{2}}\\ dy\\right)\\right]\\ dx  \\\\ &= \\int_{\\ }^{\\ }\\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}e^{0}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}e^{0}\\right]\\ dx  \\\\ &= \\int \\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\right]\\ dx\\end{align*}"
+            "content": "\\begin{align*}  &= \\int \\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}\\exp\\left(\\frac{4}{3}\\pi x^{3}\\int_{0}^{\\infty}\\frac{\\ln y}{1+y^{2}}\\ dy\\right)+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\exp\\left(4\\pi x^{2}\\int_{\\infty}^{0}\\frac{\\ln y}{1+y^{2}}\\ dy\\right)\\right]\\ dx  \\\\ &= \\int \\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}e^{0}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}e^{0}\\right]\\ dx  \\\\ &= \\int \\left[\\frac{\\cos x+x\\sin x}{\\cos x}\\right]\\left[\\frac{x^{5}\\sec\\left(x\\right)^{6}}{2\\pi}+\\frac{x^{3}\\sec\\left(x\\right)^{4}}{\\pi}\\right]\\ dx\\end{align*}"
           },
           {
             "kind": "text",
@@ -8013,7 +8285,7 @@
         "poly"
       ],
       "methods": [
-        "parts"
+        "sub"
       ],
       "shard": "s25f-pm1",
       "question": [
@@ -8022,37 +8294,23 @@
           "content": "\\int  \\frac    { (1-x)^2 }    { (x+1)^{404} }\\ dx"
         }
       ],
-      "hints": {
-        "1": [
-          {
-            "kind": "text",
-            "content": "The numerator and denominator look very different."
-          }
-        ]
-      },
       "answer": [
         {
           "kind": "latex",
-          "content": "\\frac{1}{201\\cdot401\\cdot403\\left(x+1\\right)^{401}}-\\frac{\\left(x-1\\right)^{2}}{403\\left(x+1\\right)^{403}}-\\frac{x-1}{201\\cdot403\\left(x+1\\right)^{402}}-c"
+          "content": "\\frac{1}{\\left(x+1\\right)^{403}}\\left(-\\frac{1}{401}\\left(x+1\\right)^{2}+\\frac{4}{402}\\left(x+1\\right)-\\frac{4}{403}\\right)-c"
         }
       ],
       "solution": {
-        "reshape": [
+        "substitute": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int \\frac{\\left(1-x\\right)^{2}}{\\left(x+1\\right)^{404}}\\ dx  \\\\ =&\\ \\int \\frac{\\left(x-1\\right)^{2}}{\\left(x+1\\right)^{404}}\\ dx  \\\\ =&\\ \\int \\left(x-1\\right)^{2}\\cdot\\frac{1}{\\left(x+1\\right)^{404}}\\ dx\\end{align*}"
-          }
-        ],
-        "parts": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  f &= \\left(x-1\\right)^{2} \\quad&\\quad g' &= \\frac{1}{\\left(x+1\\right)^{404}}  \\\\ f' &= 2\\left(x-1\\right) \\quad&\\quad g &= -\\frac{1}{403\\left(x+1\\right)^{403}}\\end{align*}"
+            "content": "\\begin{align*}  x+1 &= t  \\\\ x &= t-1  \\\\ dx &= dt\\end{align*}"
           }
         ],
         "solve": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dx  \\\\ =&\\ -\\frac{\\left(x-1\\right)^{2}}{403\\left(x+1\\right)^{403}}+\\int \\frac{2\\left(x-1\\right)}{403\\left(x+1\\right)^{403}}\\ dx  \\\\ =&\\ -\\frac{\\left(x-1\\right)^{2}}{403\\left(x+1\\right)^{403}}+\\left(2\\left(x-1\\right)\\cdot-\\frac{1}{402\\cdot403\\left(x+1\\right)^{402}}-\\int 2\\cdot-\\frac{1}{402\\cdot403\\left(x+1\\right)^{402}}\\right)\\ dx  \\\\ =&\\ -\\frac{\\left(x-1\\right)^{2}}{403\\left(x+1\\right)^{403}}-\\frac{2\\left(x-1\\right)}{402\\cdot403\\left(x+1\\right)^{402}}+\\int \\frac{2}{402\\cdot403\\left(x+1\\right)^{402}}\\ dx  \\\\ =&\\ -\\frac{\\left(x-1\\right)^{2}}{403\\left(x+1\\right)^{403}}-\\frac{2\\left(x-1\\right)}{402\\cdot403\\left(x+1\\right)^{402}}+\\frac{2}{401\\cdot402\\cdot403\\left(x+1\\right)^{401}}  \\\\ =&\\ \\frac{1}{201\\cdot401\\cdot403\\left(x+1\\right)^{401}}-\\frac{\\left(x-1\\right)^{2}}{403\\left(x+1\\right)^{403}}-\\frac{x-1}{201\\cdot403\\left(x+1\\right)^{402}}-c\\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\left(1-x\\right)^{2}}{\\left(x+1\\right)^{404}}\\ dx  \\\\ =&\\ \\int \\frac{\\left(1-\\left(t-1\\right)\\right)^{2}}{t^{404}}\\ dt  \\\\ =&\\ \\int \\frac{\\left(2-t\\right)^{2}}{t^{404}}\\ dt  \\\\ =&\\ \\int \\frac{t^{2}-4t+4}{t^{404}}\\ dt  \\\\ =&\\ \\int \\frac{1}{t^{402}}-\\frac{4}{t^{403}}+\\frac{4}{t^{404}}\\ dt  \\\\ =&\\ -\\frac{1}{401t^{401}}+\\frac{4}{402t^{402}}-\\frac{4}{403t^{403}}  \\\\ =&\\ \\frac{1}{t^{403}}\\left(-\\frac{1}{401}t^{2}+\\frac{4}{402}t-\\frac{4}{403}\\right)  \\\\ =&\\ \\frac{1}{\\left(x+1\\right)^{403}}\\left(-\\frac{1}{401}\\left(x+1\\right)^{2}+\\frac{4}{402}\\left(x+1\\right)-\\frac{4}{403}\\right)-c\\end{align*}"
           }
         ]
       }

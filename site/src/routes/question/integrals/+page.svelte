@@ -8,8 +8,10 @@ import Tag from "#parts/ui/tag.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
 import Line from "#parts/page/line.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
+import CopyClicky from "#parts/page/copy-clicky.svelte";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
+import Header from "#parts/core/header.svelte";
 import Section from "#parts/page/section.svelte";
 
 
@@ -24,28 +26,45 @@ let question: Question | null = $derived(page_data.question);
   { text: question?.shard ?? "?" },
 ]} copy={true} shard={question?.shard} />
 
+
+<!-- <Header title={question?.title} capt={question?.desc ?? question?.date_display} /> -->
+
 <section class="question">
-  <Katex text={question?.question.content} />
+  <div class="latex">
+    <Katex text={question?.question.content} />
+  </div>
 
-  {#if question?.desc || question?.tags}
-    <div class="info">
+  <div class="utils upper">
+    <CopyClicky value={question?.question.content} />
+  </div>
+
+  <Line width="80%" margin="1rem auto" />
+
+  <div class="utils lower">
+    <Clicky text="Open in Workspace" intern="workspace?topic=integrals&shard={question?.shard}" />
+  </div>
+</section>
+
+<Section title="Info">
+  <div class="info">
+    <div class="details">
+      <h4 class="name"> {question?.title ?? "unnamed"} </h4>  
+      <p class="date"> {question?.date_display} </p>
+      
       {#if question?.desc}
-      <p> {question.desc} </p>
-      {/if}
-
-      <Line width="80%" margin="1rem auto" />
-
-      {#if question?.tags}
-        <div class="tags">
-          {#each question.tags as tag}
-            <Tag {tag} />
-          {/each}
-        </div>
+        <p class="desc"> {question.desc} </p>
       {/if}
     </div>
-  {/if}
-  
-</section>
+
+    {#if question?.tags}
+      <div class="tags">
+        {#each question.tags as tag}
+          <Tag {tag} />
+        {/each}
+      </div>
+    {/if}
+  </div>
+</Section>
 
 {#if question?.hints}
   <Section title="Hints">
@@ -118,26 +137,62 @@ let question: Question | null = $derived(page_data.question);
 
 section.question {
   padding: 3rem 0 2rem;
-  font-size: 150%;
   text-align: center;
-
-  .info {
-    padding: 1rem 0 0;
-
-    .tags {
-      padding: 0.5rem 0 0;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      column-gap: 0.25em;
-      row-gap: 0.2em;
-      font-size: 80%;
-    }
+  
+  .latex {
+    font-size: 150%;
   }
 }
 
-section.buttons {
-  padding: 3rem 0 0;
+.utils {
+  &.upper {
+    padding-right: 10%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+  }
+
+  &.lower {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.info {
+  padding: 0 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: start;
+  
+  .details {
+    h4.name {
+      margin-bottom: 0.4em;
+      font-size: 125%;
+      font-weight: 450;
+    }
+
+    p.date {
+      color: $col-text-deut;
+      font-size: 100%;
+      font-weight: 250;
+    }
+
+    p.desc {
+      padding-top: 2em;
+    }
+  }
+  
+  .tags {
+    padding: 0.5rem 0 0;
+    height: max-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 0.25em;
+    row-gap: 0.2em;
+    font-size: 125%;
+  }
 }
 
 </style>

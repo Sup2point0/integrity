@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-04-07",
+    "exported": "2025-04-08",
     "file_count": 24,
     "page_count": 22
   },
@@ -593,9 +593,9 @@
     },
     "challenges/mit-ib/2023.md": {
       "path": "challenges/mit-ib/2023.md",
-      "last_deploy": "2025-03-21 09:03:10 +0000",
+      "last_deploy": "2025-04-08 12:28:08 +0100",
       "slocs": 38,
-      "chars": 981,
+      "chars": 990,
       "isIndex": false,
       "flags": [
         "live"
@@ -631,9 +631,9 @@
     },
     "challenges/year/2025.md": {
       "path": "challenges/year/2025.md",
-      "last_deploy": "2025-04-05 13:11:01 +0100",
+      "last_deploy": "2025-04-08 11:56:54 +0100",
       "slocs": 124,
-      "chars": 4005,
+      "chars": 4442,
       "isIndex": false,
       "flags": [
         "live"
@@ -650,9 +650,9 @@
     },
     "challenges/year/README.md": {
       "path": "challenges/year/README.md",
-      "last_deploy": "2025-04-05 12:43:46 +0100",
+      "last_deploy": "2025-04-08 12:27:36 +0100",
       "slocs": 37,
-      "chars": 2129,
+      "chars": 2124,
       "isIndex": false,
       "flags": [
         "live"
