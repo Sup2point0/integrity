@@ -7897,7 +7897,7 @@
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  x &= \\frac{1}{t \\quad\\to\\quad =\\frac{1}{x}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
+            "content": "\\begin{align*}  x &= \\frac{1}{t} \\quad\\to\\quad =\\frac{1}{x}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
           },
           {
             "kind": "text",

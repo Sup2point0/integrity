@@ -65,7 +65,7 @@ article {
     border-radius: 0.4em;
   }
 
-  p > a {
+  p > a, ul li > a {
     @include underline-link;
   }
 
