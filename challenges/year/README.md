@@ -9,7 +9,7 @@ The 0–100 year challenge is simple: use the digits of the year, each exactly o
 The introductory challenge allows the digits to appear in any order. For instance, to make $20$ from $2023$:
 
 ```math
-(3 - 2) \cdot 20 = 20
+(3 - 2) \times 20 = 20
 ```
 
 But we don’t do that here. We do the *elite* challenge, where all 4 digits must appear exactly in their original order. For instance, to make 100 from 2024:
@@ -23,8 +23,8 @@ Naturally, the difficulty of the challenge depends entirely on what operations y
 | ruleset | allowed operations | description |
 | :------ | :----------------- | :---------- |
 | Core    | $() \\ + \\ - \\ \cdot \\ / \\ x^y \\ ! \\ xy$ | Only the simplest of arithmetic operations, as well as combining digits to form multi-digit numbers. So far, no years are 100%-able at this level. |
-| Further Core | `.x` | Allows conversion to decimal without a leading $0$. Technically valid, right? |
-| Expansion | $\log_x(y) \\ \sin^{-1}(x) \\ \cos^{-1}(x) \\ \tan^{-1}(x)$ | These make the challenge SO much more fun. |
+| Further Core | $.x$ | Allows conversion to decimal without a leading $0$. Technically valid, right? |
+| Expansion | $\log_x(y) \\ \arcsin(x) \\ \arccos(x) \\ \arctan(x)$ | These make the challenge SO much more fun. |
 | Further Expansion | $x!!$ | |
 | Absurd Expansion | $\text{round}() \\ \text{floor}() \\ \text{ceil}() \\ \sqrt{}$ | At this point, the challenge isn’t fun anymore. |
 
