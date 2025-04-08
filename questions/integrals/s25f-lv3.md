@@ -126,8 +126,8 @@ Well, this certainly simplifies things a lot. Both exponents of $e$ just collaps
 
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }\left[\frac{\cos x+x\sin x}{\cos x}\right]\left[\frac{x^{5}\sec\left(x\right)^{6}}{2\pi}\exp\left(\frac{4}{3}\pi x^{3}\int_{0}^{\infty}\frac{\ln y}{1+y^{2}}\ dy\right)+\frac{x^{3}\sec\left(x\right)^{4}}{\pi}\exp\left(4\pi x^{2}\int_{\infty}^{0}\frac{\ln y}{1+y^{2}}\ dy\right)\right]\ dx
-  \\ &= \int_{\ }^{\ }\left[\frac{\cos x+x\sin x}{\cos x}\right]\left[\frac{x^{5}\sec\left(x\right)^{6}}{2\pi}e^{0}+\frac{x^{3}\sec\left(x\right)^{4}}{\pi}e^{0}\right]\ dx
+  &= \int \left[\frac{\cos x+x\sin x}{\cos x}\right]\left[\frac{x^{5}\sec\left(x\right)^{6}}{2\pi}\exp\left(\frac{4}{3}\pi x^{3}\int_{0}^{\infty}\frac{\ln y}{1+y^{2}}\ dy\right)+\frac{x^{3}\sec\left(x\right)^{4}}{\pi}\exp\left(4\pi x^{2}\int_{\infty}^{0}\frac{\ln y}{1+y^{2}}\ dy\right)\right]\ dx
+  \\ &= \int \left[\frac{\cos x+x\sin x}{\cos x}\right]\left[\frac{x^{5}\sec\left(x\right)^{6}}{2\pi}e^{0}+\frac{x^{3}\sec\left(x\right)^{4}}{\pi}e^{0}\right]\ dx
   \\ &= \int \left[\frac{\cos x+x\sin x}{\cos x}\right]\left[\frac{x^{5}\sec\left(x\right)^{6}}{2\pi}+\frac{x^{3}\sec\left(x\right)^{4}}{\pi}\right]\ dx
 \end{align*}
 ```

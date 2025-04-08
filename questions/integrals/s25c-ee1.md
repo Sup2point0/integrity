@@ -62,8 +62,8 @@ For $\int x^2 e^{-x^2} \ dx$, write it as $\int x \cdot xe^{-x^2} \ dx$.
 ```math
 \begin{align*}
   f &= x^3 & g' &= xe^{-x^{2}}
-  \\ f' &= 3x^2 & g &= \int_{\ }^{\ }xe^{-x^{2}}\ dx
-  \\ && &= \frac{1}{2}\int_{\ }^{\ }2xe^{-x^{2}}\ dx
+  \\ f' &= 3x^2 & g &= \int xe^{-x^{2}}\ dx
+  \\ && &= \frac{1}{2}\int 2xe^{-x^{2}}\ dx
   \\ && &= -\frac{1}{2}e^{-x^{2}}
 \end{align*}
 ```
@@ -82,8 +82,8 @@ For $\int x^2 e^{-x^2} \ dx$, write it as $\int x \cdot xe^{-x^2} \ dx$.
 ```math
 \begin{align*}
   p &= x \quad&\quad q' &= q'=xe^{-x^{2}}
-  \\ p' &= 1 \quad&\quad q &= \int_{\ }^{\ }xe^{-x^{2}}\ dx
-  \\ && &= \frac{1}{2}\int_{\ }^{\ }2xe^{-x^{2}}\ dx
+  \\ p' &= 1 \quad&\quad q &= \int xe^{-x^{2}}\ dx
+  \\ && &= \frac{1}{2}\int 2xe^{-x^{2}}\ dx
   \\ && &= -\frac{1}{2}e^{-x^{2}}
 \end{align*}
 ```
