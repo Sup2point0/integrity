@@ -62,7 +62,7 @@ export class Question
     ].filter(each => each);
 
     if (typeof this.question?.content === "string") {      
-      this.question.content = this.question.content.replaceAll(/\s\s+/g, "");
+      this.question.content = this.question.content.replaceAll(/\s\s+/g, " ");
     }
   }
 
