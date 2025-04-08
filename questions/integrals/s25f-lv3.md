@@ -89,7 +89,7 @@ Trying to evaluate this integral indefinitely doesn’t work (you can try exp or
 
 ```math
 \begin{align*}
-  x &= \frac{1}{t \quad\to\quad =\frac{1}{x}
+  x &= \frac{1}{t} \quad\to\quad =\frac{1}{x}
   \\ dx &= -\frac{1}{t^{2}}\ dt
 \end{align*}
 ```
