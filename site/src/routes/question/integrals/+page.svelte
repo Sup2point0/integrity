@@ -102,9 +102,13 @@ let question: Question | null = $derived(page_data.question);
 
     {/if}
 
-    <div style:padding="1rem 0" style:float="right">
+    <div class="utils upper">
       <Clicky text="Check a Different Solution"
         intern="workspace?topic={question.topic}&shard={question.shard}"
+      />
+
+      <Clicky text="Report Error in Solution"
+        link="https://github.com/Sup2point0/integrity/issues"
       />
     </div>
   </Section>
@@ -150,6 +154,7 @@ section.question {
     display: flex;
     flex-flow: row wrap;
     justify-content: end;
+    column-gap: 0.5rem;
   }
 
   &.lower {
