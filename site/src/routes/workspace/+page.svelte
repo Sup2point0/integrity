@@ -25,19 +25,23 @@ const questions_map = Site.get_map_of_all_questions();
 /** The current input of the question selector, is a question shard. */
 let selected_question: string | null = null;
 
-let desmos: any | false | null = null;
+let desmos: any | false | null = $state(null);
 let last_reset: number = Date.now();
 
 
 
 onMount(() => {
   try_load_desmos();
-  
+});
+
+/** Try load the question from the shard provided in the URL params. */
+function try_process_url()
+{
   let shard = page.url.searchParams.get("shard");
   if (shard) {
     apply_question(shard);
   }
-});
+}
 
 /* It would be nice to separate these functions into their own file, but they interact with the page too much... */
 function try_load_desmos(i: number = 0)
@@ -51,6 +55,7 @@ function try_load_desmos(i: number = 0)
     desmos = Desmos.GraphingCalculator(
       document.getElementById("desmos-window")
     );
+    try_process_url();
   } catch {
     setTimeout(
       () => try_load_desmos(++i),
@@ -62,7 +67,7 @@ function try_load_desmos(i: number = 0)
 function check_desmos(): boolean
 {
   if (!desmos) {
-    alert("Oops, desmos calculator hasn’t loaded!");
+    alert("Oops, Desmos calculator hasn’t loaded!");
     return false;
   }
   return true;

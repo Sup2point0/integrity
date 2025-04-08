@@ -6,15 +6,28 @@ export function preset_question(desmos: any, question: Question)
   switch (question.topic) {
     case "integrals":
       let content = question.sanitise() ?? "error";
-      let integral = (content
-        .replace("\\int", "")
-        .replace("dx", "")
-      );
 
-      desmos.setExpression({
-        id: "integrals-latex-integral",
-        latex: String.raw`g\left(x\right) = ${integral}`
-      });
+      if (question.tags.includes("definite")) {
+        let integral = (content
+          .replace("\\infin", "\\infty")
+        );
+
+        desmos.setExpression({
+          id: "integrals-latex-integral",
+          latex: integral,
+        })
+      }
+      else {
+        let integral = (content
+          .replace("\\int", "")
+          .replace("dx", "")
+        );
+        
+        desmos.setExpression({
+          id: "integrals-latex-integral",
+          latex: String.raw`g\left(x\right) = ${integral}`
+        });
+      }
   }
 }
 
