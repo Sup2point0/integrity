@@ -2,7 +2,7 @@
   "meta": {
     "exported": "2025-04-08",
     "file_count": 24,
-    "page_count": 22
+    "page_count": 23
   },
   "index": {
     "guides": {
@@ -21,6 +21,7 @@
         "guides/integrals/how.md",
         "guides/integrals/methods/partials.md",
         "guides/integrals/methods/power-partials.md",
+        "guides/integrals/methods/sub.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
@@ -46,6 +47,7 @@
         "guides/integrals/how.md",
         "guides/integrals/methods/partials.md",
         "guides/integrals/methods/power-partials.md",
+        "guides/integrals/methods/sub.md",
         "guides/integrals/why-hard.md",
         "guides/integrals/why.md"
       ]
@@ -69,7 +71,8 @@
       "route": null,
       "pages": [
         "guides/integrals/methods/partials.md",
-        "guides/integrals/methods/power-partials.md"
+        "guides/integrals/methods/power-partials.md",
+        "guides/integrals/methods/sub.md"
       ]
     }
   },
@@ -88,6 +91,7 @@
       "guides/integrals/how.md",
       "guides/integrals/methods/partials.md",
       "guides/integrals/methods/power-partials.md",
+      "guides/integrals/methods/sub.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ],
@@ -107,6 +111,7 @@
       "guides/integrals/how.md",
       "guides/integrals/methods/partials.md",
       "guides/integrals/methods/power-partials.md",
+      "guides/integrals/methods/sub.md",
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ],
@@ -121,7 +126,8 @@
     ],
     "methods": [
       "guides/integrals/methods/partials.md",
-      "guides/integrals/methods/power-partials.md"
+      "guides/integrals/methods/power-partials.md",
+      "guides/integrals/methods/sub.md"
     ]
   },
   "pages": {
@@ -504,6 +510,35 @@
       "head": "High-Power Partials",
       "capt": "Substitution without substitution",
       "desc": "Substitution without substitution",
+      "index": [
+        "guides",
+        "integrals",
+        "methods"
+      ],
+      "shard": [
+        "guides",
+        "integrals",
+        "methods"
+      ],
+      "date": null,
+      "date_display": null
+    },
+    "guides/integrals/methods/sub.md": {
+      "path": "guides/integrals/methods/sub.md",
+      "last_deploy": "2025-04-08 14:36:35 +0100",
+      "slocs": 116,
+      "chars": 4487,
+      "isIndex": false,
+      "flags": [
+        "live",
+        "feat",
+        "dev"
+      ],
+      "dest": "guides/integrals/methods/sub",
+      "title": "General Substitution",
+      "head": "General Substitution",
+      "capt": "Reducing an integral",
+      "desc": "Reducing an integral",
       "index": [
         "guides",
         "integrals",

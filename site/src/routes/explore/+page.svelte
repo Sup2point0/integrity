@@ -117,7 +117,7 @@ import { base } from "$app/paths";
   <section>
     <h3> Methods </h3>
     <div class="links">
-      <Link text="Substitution" intern="guides/integrals/methods/sub" disabled={true} />
+      <Link text="Substitution" intern="guides/integrals/methods/sub" />
       <Link text="Parts" intern="guides/integrals/methods/parts" />
       <Link text="Partial Fractions" intern="guides/integrals/methods/partials" />
       <Link text="Power Partials" intern="guides/integrals/methods/power-partials" />
