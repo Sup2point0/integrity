@@ -41,7 +41,7 @@ let question: Question | null = $derived(page_data.question);
   <Line width="80%" margin="1rem auto" />
 
   <div class="utils lower">
-    <Clicky text="Open in Workspace" intern="workspace?topic=integrals&shard={question?.shard}" />
+    <Clicky text="Open in Workspace" intern="workspace?shard={question?.shard}" />
   </div>
 </section>
 

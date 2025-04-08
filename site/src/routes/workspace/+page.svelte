@@ -15,6 +15,7 @@ import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 
 import { onMount } from "svelte";
+import { page } from "$app/state";
 import { base } from "$app/paths";
 
 
@@ -29,9 +30,16 @@ let last_reset: number = Date.now();
 
 
 
-onMount(try_load_desmos);
+onMount(() => {
+  try_load_desmos();
+  
+  let shard = page.url.searchParams.get("shard");
+  if (shard) {
+    apply_question(shard);
+  }
+});
 
-/* it would be nice to separate these functions into their own file, but they interact with the page too much... */
+/* It would be nice to separate these functions into their own file, but they interact with the page too much... */
 function try_load_desmos(i: number = 0)
 {
   if (i > 3) {
