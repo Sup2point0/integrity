@@ -73,6 +73,13 @@ article {
     @include link;
   }
 
+  blockquote {
+    padding-left: 1em;
+    color: $col-text-deut;
+    border-left: 2px solid $col-deut-fallback;
+    border-left: 2px solid $col-deut;
+  }
+
   ul {
     font-weight: 250;
     list-style-type: double-arrows;
