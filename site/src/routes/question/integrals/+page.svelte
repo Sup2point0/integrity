@@ -104,7 +104,7 @@ let question: Question | null = $derived(page_data.question);
 
     <div class="utils upper">
       <Clicky text="Check a Different Solution"
-        intern="workspace?topic={question.topic}&shard={question.shard}"
+        intern="workspace?shard={question.shard}"
       />
 
       <Clicky text="Report Error in Solution"

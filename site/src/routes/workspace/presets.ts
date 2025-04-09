@@ -1,7 +1,7 @@
 import type { Question } from "#scripts/types";
 
 
-export function preset_question(desmos: any, question: Question)
+export function inject_question(desmos: any, question: Question)
 {
   switch (question.topic) {
     case "integrals":

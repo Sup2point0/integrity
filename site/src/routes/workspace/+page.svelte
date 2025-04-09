@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import { presets, preset_question } from "./presets";
+import { presets, inject_question } from "./presets";
 
 import Site from "#scripts/site";
 import { userprefs } from "#scripts/stores";
@@ -23,7 +23,7 @@ const questions = Site.get_list_of_all_questions();
 const questions_map = Site.get_map_of_all_questions();
 
 /** The current input of the question selector, is a question shard. */
-let selected_question: string | null = null;
+let selected_question: string | null = $state(null);
 
 let desmos: any | false | null = $state(null);
 let last_reset: number = Date.now();
@@ -39,6 +39,7 @@ function try_process_url()
 {
   let shard = page.url.searchParams.get("shard");
   if (shard) {
+    selected_question = shard;
     apply_question(shard);
   }
 }
@@ -109,7 +110,7 @@ function apply_question(shard: Shard | null) {
 
   desmos.setBlank();
   apply_preset(question.topic);
-  preset_question(desmos, question);
+  inject_question(desmos, question);
 }
 
 </script>

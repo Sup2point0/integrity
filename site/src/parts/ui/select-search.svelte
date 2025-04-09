@@ -52,10 +52,10 @@ function filter_suggestions(): string[]
       onkeydown={e => {
         if (e.key === "Enter" || e.key === " ") { open = !open; }
       }}
-      onfocus={() => { open = true; }}
-      onfocusout={() => { open = false; }}
       onmouseenter={() => { open = true; }}
+      onfocus={() => { open = true; }}
       onmouseleave={() => { open = false; }}
+      onfocusout={() => { open = false; }}
     >
       <input type="search"
         bind:value
@@ -150,6 +150,13 @@ input[type = 'search'] {
   background: none;
   border: none;
   outline: none;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
 }
 
 
@@ -176,7 +183,7 @@ ul.dropdown {
     transform 0.24s cubic-bezier(0.19, 1, 0.22, 1);  // ease-in exp
 
   &.open,
-  button.select:is(:hover, :focus, :focus-within) ~ &,  // NOTE diff to `select-dropdown`, has :focus-within
+  search:is(:hover, :focus, :focus-within) ~ &,
   &:hover,
   &:has(li:focus)
   {
