@@ -18,6 +18,26 @@ Don’t we love our integration slang.
 [Multiplying through](../strategies/multiply.md) (or [dividing by](../strategies/divide.md)) a factor when integrating a fraction. Reference to [Integration is Like Organic Chemistry](../adventures/chem.md).
 
 
+## conjugate
+
+> *I’ll try multiplying through by the conjugate and see what happens.*
+
+In relation to an expression $p \pm q$, “conjugate” refers to the expression with the opposite sign. This is extrapolated from the [complex conjugate<sup>↗</sup>](https://wikipedia.org/wiki/Complex_conjugate).
+
+For instance, the conjugate of $\sec{x}-\tan{x}$ is $\sec{x}+\tan{x}$. Multiplying by the conjugate usually allows [difference of 2 squares](#dots) to be applied.
+
+
+## DOTS
+
+> *Then use difference of 2 squares, so this factorises like that, and these factors cancel out!*
+
+Difference of 2 squares. Refers to the identity
+
+```math
+x^2 - y^2 = (x-y)(x + y)
+```
+
+
 ## evolution
 
 > *You probably only want one of primitives or evolutions.*
@@ -46,6 +66,30 @@ We pair the trigonometric functions in this way because their derivatives match 
 > *e<sup>&thinsp;x</sup> is famously both the derivative and antiderivative of e<sup>&thinsp;x</sup>.*
 
 Well-known, well-established.
+
+
+## ICR
+
+> *If you multiply through by $2$, it’s easier to spot the inverse chain rule.*
+
+[Inverse chain rule](../method/archain-rule.md).
+
+
+## IPR
+
+> *You can skip too the solution much faster here by spotting the inverse product rule.*
+
+[Inverse product rule](../methods/arcprod-rule.md).
+
+
+## IQR
+
+> *It’s really, really hard to spot the inverse quotient rule in this integral.
+
+Inverse quotient rule.
+
+### Notes
+Famously not the [inter-quartile range<sup>↗</sup>](https://wikipedia.org/wiki/Interquartile_range).
 
 
 ## JMWC
@@ -108,6 +152,30 @@ A solution is *quotable* if it’s sufficiently simple to jump straight to the a
 ```math
 \int \frac{1}{x^2 + 9} = \frac{1}{3} \tan^{-1}\left( \frac{1}{3}x \right) + c
 ```
+
+
+## silver bullet
+
+> *Don’t tell me I have to use silver bullet.*
+
+Alias for [integration by parts](../methods/parts.md). Reference to the fact that parts is famously “not a silver bullet”.
+
+
+## straight-up
+
+> *Is this straight-up?*
+
+> *Yo, it’s just straight-up inverse product rule!*
+
+Often used as a shorthand for [straight-up layer cake](#straight-up-layer-cake). Refers more generally to an integrand where one method can be applied exactly.
+
+For instance, “straight-up inverse chain rule”:
+
+```math
+10x^9 (x^10
+```
+
+Without the coefficient of $10$ it’s not “straight-up”; the $10x^9$ signposts quite obviously that it’s the derivative of $x^10$.
 
 
 ## straight-up layer cake
