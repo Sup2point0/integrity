@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import Site from "#src/scripts/site";
-import { pick_random_question } from "#scripts/utils";
+import { pick_random_question, pick_random_guide } from "#scripts/utils";
 
 import Link from "#parts/ui/link.svelte";
 
@@ -32,6 +32,9 @@ import { base } from "$app/paths";
     <h3> Questions </h3>
     <div class="links">
       <Link text="All" intern="questions/all" />
+      <Link text="Random" action={() => {
+        window.location.href = `${base}/question/${pick_random_question()}`;
+      }} />
       <Link text="Integrals" intern="questions/integrals" />
       <Link text="Graph Drawing" intern="questions/graph-drawing" disabled={true} />
       <Link text="Completing the Square" intern="questions/complete-square" />
@@ -39,9 +42,6 @@ import { base } from "$app/paths";
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
       <Link text="Addvent" intern="questions/addvent" />
       <Link text="Special" intern="questions/special" disabled={true} />
-      <Link text="Random" action={() => {
-        window.location.href = `${base}/question/${pick_random_question()}`;
-      }} />
     </div>
   </section>
 
@@ -89,6 +89,9 @@ import { base } from "$app/paths";
   <section>
     <h3> Guides </h3>
     <div class="links">
+      <Link text="Random" action={() => {
+        window.location.href = `${base}/${pick_random_guide()}`;
+      }} />
       <Link text="S-I+G-N Errors" intern="guides/sign" />
     </div>
   </section>

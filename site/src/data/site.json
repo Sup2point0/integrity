@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-04-08",
+    "exported": "2025-04-09",
     "file_count": 24,
     "page_count": 23
   },
@@ -361,9 +361,9 @@
     },
     "guides/integrals/collections/int-int.md": {
       "path": "guides/integrals/collections/int-int.md",
-      "last_deploy": "2025-04-05 09:42:03 +0100",
-      "slocs": 128,
-      "chars": 3552,
+      "last_deploy": "2025-04-09 16:01:20 +0100",
+      "slocs": 196,
+      "chars": 5302,
       "isIndex": false,
       "flags": [
         "live",

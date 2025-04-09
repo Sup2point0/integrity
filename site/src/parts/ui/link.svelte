@@ -60,6 +60,11 @@ let { text, link, intern, action, disabled = false }: Props = $props();
   &.disabled {
     opacity: 0.2;
   }
+
+}
+
+button.link {
+  width: 100%;
 }
 
 </style>

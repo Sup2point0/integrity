@@ -1,1 +1,1 @@
-export { pick_random_question } from "./pick-question";
+export { pick_random_question, pick_random_guide } from "./pick";
