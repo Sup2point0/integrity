@@ -83,6 +83,14 @@ export class Question
       /\\(sin|cos|tan|sec|cot|csc)[\(\{]([a-z])[\)\}]/g,
       "\\$1\\left($2\\right)"
     );
+    out = out.replaceAll(
+      /\\left\[/g,
+      "\\left("
+    );
+    out = out.replaceAll(
+      /\\right\]/g,
+      "\\right)"
+    );
 
     return out;
   }
