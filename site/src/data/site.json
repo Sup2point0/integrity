@@ -76,7 +76,7 @@
       ]
     }
   },
-  "shard": {
+  "tags": {
     "guides": [
       "guides/complete-square/why.md",
       "guides/integrals/adventures/neat-trick.md",
@@ -146,7 +146,7 @@
       "capt": "Question Identifier Codes",
       "desc": "Explaining the question identifier codes used throughout Integrity",
       "index": [],
-      "shard": [],
+      "tags": [],
       "date": null,
       "date_display": null
     },
@@ -169,7 +169,7 @@
         "guides",
         "complete-square"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "complete-square"
       ],
@@ -191,7 +191,7 @@
       "capt": null,
       "desc": null,
       "index": [],
-      "shard": [],
+      "tags": [],
       "date": null,
       "date_display": null
     },
@@ -214,7 +214,7 @@
         "integrals",
         "collections"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals",
         "collections"
@@ -241,7 +241,7 @@
         "integrals",
         "antiderivatives"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals",
         "antiderivatives"
@@ -270,7 +270,7 @@
         "integrals",
         "antiderivatives"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals",
         "antiderivatives"
@@ -298,7 +298,7 @@
         "integrals",
         "antiderivatives"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals",
         "antiderivatives"
@@ -325,7 +325,7 @@
         "guides",
         "integrals"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals"
       ],
@@ -354,7 +354,7 @@
         "guides",
         "integrals"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals"
       ],
@@ -382,7 +382,7 @@
         "guides",
         "integrals"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals"
       ],
@@ -410,7 +410,7 @@
         "guides",
         "integrals"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals"
       ],
@@ -436,7 +436,7 @@
         "integrals",
         "collections"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals",
         "collections"
@@ -464,7 +464,7 @@
         "guides",
         "integrals"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals"
       ],
@@ -490,7 +490,7 @@
         "integrals",
         "methods"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals",
         "methods"
@@ -517,7 +517,7 @@
         "integrals",
         "methods"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals",
         "methods"
@@ -546,7 +546,7 @@
         "integrals",
         "methods"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals",
         "methods"
@@ -574,7 +574,7 @@
         "guides",
         "integrals"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals"
       ],
@@ -601,7 +601,7 @@
         "guides",
         "integrals"
       ],
-      "shard": [
+      "tags": [
         "guides",
         "integrals"
       ],
@@ -624,7 +624,7 @@
       "capt": "The “semicolon missing” of Mathematics",
       "desc": "The “semicolon missing” of Mathematics",
       "index": [],
-      "shard": [],
+      "tags": [],
       "date": null,
       "date_display": null
     },
@@ -643,7 +643,7 @@
       "capt": null,
       "desc": null,
       "index": [],
-      "shard": [],
+      "tags": [],
       "date": null,
       "date_display": null
     },
@@ -662,7 +662,7 @@
       "capt": null,
       "desc": null,
       "index": [],
-      "shard": [],
+      "tags": [],
       "date": null,
       "date_display": null
     },
@@ -681,7 +681,7 @@
       "capt": null,
       "desc": null,
       "index": [],
-      "shard": [],
+      "tags": [],
       "date": null,
       "date_display": null
     },
@@ -700,7 +700,7 @@
       "capt": "Making the numbers from 0 to 100 with the digits of the year, in order",
       "desc": "Making the numbers from 0 to 100 with the digits of the year, in order",
       "index": [],
-      "shard": [],
+      "tags": [],
       "date": null,
       "date_display": null
     }

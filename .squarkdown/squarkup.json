@@ -2,25 +2,26 @@
   "$schema": "../.stranger-quarkdown/squarkdown/resources/squarkup-schema.json",
 
   "repo": "integrity",
-  "site": "site/",
 
-  "sources": [
+  "paths / site": "site/",
+  "paths / sources": [
     "faq.md",
     "docs/",
     "guides/",
     "challenges/"
   ],
-  "site-data": "src/data/site.json",
-  "dest": "src/routes/",
+  "paths / dest": "src/routes/",
 
-  "if-no-dir": ["warn", "create"],
-  "on-error": "kill",
+  "out / file-name": "~content",
+  "out / site-data": "src/data/site.json",
 
-  "file-name": "~content",
-  "bases": "src/parts/base/",
-  "assets": "assets/",
-  "site-assets": "assets/site/",
-  "fonts": [
+  "opts / if-no-dir": ["warn", "create"],
+  "opts / on-error": "kill",
+
+  "bases / path": "src/parts/base/",
+  "assets / path": "assets/",
+  "assets / site-assets": "assets/site/",
+  "fonts / queries": [
     "Geologica:slnt,wght,CRSV@-12..0,100..900,1",
     "Crimson+Pro:ital,wght@0,200..900;1,200..900"
   ]
