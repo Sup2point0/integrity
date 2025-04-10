@@ -1,9 +1,9 @@
 # Everything & Anything
-<!-- #SQUARK live! feat! dev!
+<!-- #SQUARK live! feat! c! devx! dev!
 | dest = guides/integrals/collections/everything-anything
 | capt = The prime integrator’s standard arsenal
 | index = guides / integrals
-| date = 2025 January 28
+| date = 2025 April 10
 -->
 
 Integration can’t be learnt in a day. Nor can you, or should you, memorise in a day all of the useful formulae, identities and other quotable results that will come in crucial throughout your adventures in integration.
@@ -98,7 +98,7 @@ Analogous to exponents, division inside the logarithm correponds to subtraction 
 
 ```math
 \begin{align*}
-  \log\left(\frac{x}{y}\right) &= \log(x \cdot y^{-1})
+  \log\left( \frac{x}{y} \right) &= \log(x \cdot y^{-1})
   \\ &= \log{x} + \log(y^{-1})
   \\ &= \log{x} - \log{y}
 \end{align*}
@@ -121,7 +121,7 @@ x^2 + y^2 + 2xy = (x + y)^2
 ```
 
 ### Partial Fractions
-...
+> *Main article: [Partial Fractions](../methods/partials.md)*
 
 
 ## Derivatives & Antiderivatives
@@ -142,47 +142,125 @@ $e^x$ is famously its own derivative and antiderivative.
 
 ```math
 \begin{align*}
-  e^x &= e^x
-  \\ e^kx &= ke^kx
+  \frac{d}{dx} \, e^x &= e^x
+  \\ \frac{d}{dx} \, e^{kx} &= ke^{kx}
 \end{align*}
 ```
 
+$\ln(x)$ has a very nice derivative.
+
 ```math
-\ln{x} = \frac{1}{x}
+\frac{d}{dx} \ln{x} = \frac{1}{x}
 ```
 
 ### Trigonometry
-The primitive trigonometric functions $\sin$ and $\cos$ form a cycle when differentiated:
+The primitive trig functions $\sin(x)$ and $\cos(x)$ form a cycle when differentiated:
 
 ```math
 \begin{align*}
-  \sin{x} &= \cos{x}
-  \\ \cos{x} &= -\sin{x}
+  \frac{d}{dx} \, \sin{x} &= \cos{x}
+  \\ \frac{d}{dx} \, \cos{x} &= -\sin{x}
+  \\ \frac{d}{dx} \left( -\sin{x} \right) &= -\cos{x}
+  \\ \frac{d}{dx} \left( -\cos{x} \right) &= \sin{x}
+\end{align*}
+```
+
+The evolved trig functions $\tan(x)$ and $\sec(x)$ have memorable derivatives that ‘roll’ off the tongue:
+
+```math
+\begin{align*}
+  \frac{d}{dx} \, \tan{x} &= \sec^2{x}
+  \\ \frac{d}{dx} \, \sec{x} &= \sec{x}\tan{x}
+\end{align*}
+```
+
+The other evolved trig functions $\cot(x)$ and $\csc(x)$ have analogous derivatives, except negative:
+
+```math
+\begin{align*}
+  \frac{d}{dx} \, \cot{x} &= -\csc^2{x}
+  \\ \frac{d}{dx} \, \csc{x} &= -\csc{x}\cot{x}
 \end{align*}
 ```
 
 ### Hyperbolic Trigonometry
+...
 
 
 ## Integration
 
 ### Power rule
-...
+For $n \neq -1$:
+
+```math
+\int x^n \ dx = \frac{1}{n+1} x^{n+1}
+```
+
+For $n = 0$ this is equivalent to integrating a constant:
+
+```math
+\int k \ dx = kx
+```
 
 ### Inverse chain rule
-...
+```math
+\int f'(g(x)) \, g'(x) \ dx = f(g(x))
+```
 
 ### Substitution
 ...
 
 ### Layer cake
-...
+For the degenerate case of [power rule](#power-rule) where $n = -1$, the integral is different:
+
+```math
+\int \frac{1}{x} = \ln{x}
+```
+
+Combining this with substitution provides a useful abstraction:
+
+```math
+\int \frac{f'(x)}{f(x)} \ dx = \ln(f(x))
+```
 
 ### Parts
-...
+When integrating a product of 2 expressions
+
+```math
+\int fg' \ dx = fg - \int f'g \ dx
+```
 
 ### Arctan
-...
+```math
+\int \frac{1}{x^2 + 1} = \tan^{-1}{x}
+```
+
+In the general case
+
+```math
+\int \frac{1}{x^2 + a^2} = \frac{1}{a} \tan^{-1}\left( \frac{x}{a} \right)
+```
+
+Any integral of the form
+
+```math
+\int \frac{1}{ax^2 + b} \ dx
+```
+
+can be reduced to this form by factoring out $\frac{1}{a}$.
+
+### Artanh
+Analogous to [arctan](#arctan), but negative.
+
+```math
+\int \frac{1}{1 - x^2} = \tanh^{-1}{x}
+```
+
+And in the general case
+
+```math
+\int \frac{1}{a^2 - x^2} = \frac{1}{a} \tanh^{-1}\left( \frac{x}{a} \right)
+```
 
 
 ## Trigonometry
@@ -198,16 +276,67 @@ It’s super useful to visualise trigonometric functions with a right triangle. 
 ### Values
 
 ### Identities
-The core trigonometric identity is
+The primitive trigonometric identity is:
 
 ```math
 \sin^2{x} + \cos^2{x} = 1
 ```
 
-Dividing through by $\cos^2{x}$ gives
+Dividing through by $\cos^2{x}$ gives the evolved identity:
 
 ```math
 \tan^2{x} + 1 = \sec^2{x}
+```
+
+Dividing through by $\sin^2{x}$ gives the other evolved identity:
+
+```math
+1 + \cot^2{x} = \csc^2{x}
+```
+
+The angle addition (compound angle) formulae for $\sin(x)$ is:
+
+```math
+\begin{align*}
+  \sin\left( x \textcolor{#4d9dcd}{+} y \right) &= \sin(x)\cos(y) \textcolor{#4d9dcd}{+} \cos(x)\sin(y)
+  \\ \sin\left( x \textcolor{#f07d1c}{-} y \right) &= \sin(x)\cos(y) \textcolor{#f07d1c}{-} \cos(x)\sin(y)
+\end{align*}
+```
+
+And for $\cos(x)$:
+
+```math
+\begin{align*}
+  \cos\left( x \textcolor{#4d9dcd}{+} y \right) &= \cos(x)\cos(y) \textcolor{#f07d1c}{-} \sin(x)\sin(y)
+  \\ \cos\left( x \textcolor{#f07d1c}{-} y \right) &= \cos(x)\cos(y) \textcolor{#4d9dcd}{+} \sin(x)\sin(y)
+\end{align*}
+```
+
+For $x = y$ we have the double angle formulae:
+
+```math
+\begin{align*}
+  \sin(2x) &= 2\sin{x}\cos{x}
+  \\ \cos(2x) &= \cos^2{x} - \sin^2{x}
+\end{align*}
+```
+
+Rearranging the latter identity gives alternate double angle formulae:
+
+```math
+\begin{align*}
+  \cos(2x) &= 1 - 2\sin^2{x}
+  \\ \cos(2x) &= 2\cos^2{x} - 1
+\end{align*}
+```
+
+Rearranging these gives the power reduction formulae:
+
+```math
+\begin{align*}
+  \sin^2{x} &= \frac{1}{2} \left( 1 \textcolor{#f07d1c}{-} \cos{2x} \right)
+  \\ \cos^2{x} &= \frac{1}{2} \left( 1 \textcolor{#4d9dcd}{+} \cos{2x} \right)
+\end{align*}
 ```
 
 
@@ -221,3 +350,16 @@ Dividing through by $\cos^2{x}$ gives
 ## Series
 
 ### Sum of Geometric Series
+For a geometric series with first term $a$ and common ratio $r$
+
+```math
+a \quad ar \quad ar^2 \quad ar^3 \quad ar^4 \quad ...
+```
+
+If $\left| r \right| < 1$ then the infinite summation of the  series converges:
+
+```math
+S_{\infin} = \frac{a}{1-r}
+```
+
+This shows up *everywhere*.
