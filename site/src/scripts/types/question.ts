@@ -53,6 +53,7 @@ export class Question
     // this.date = data.date && new Date(data.date);
     // this.tags = data.tags ?? [];
     // this.question = data.question;
+    this.answer = Array.isArray(data.answer) ? data.answer[0] : data.answer;
 
     this._match = [
       this.shard.toLowerCase(),
@@ -67,14 +68,15 @@ export class Question
   }
 
   /** Sanitises the LaTeX of the question so that it can easily be injected into Desmos. */
-  sanitise(): Latex | null
+  static sanitise(latex?: Latex | null): Latex | null
   {
-    if (typeof this.question?.content !== "string") {
+    if (typeof latex !== "string") {
       return null;
     }
 
-    let out = this.question.content;
+    let out = latex;
 
+    // standardise brackets
     out = out.replaceAll(
       /\\(sin|cos|tan|sec|cot|csc)\^([\d])[\(\{]([a-z])[\)\}]/g,
       "\\$1\\left($3\\right)^$2"
@@ -83,6 +85,12 @@ export class Question
       /\\(sin|cos|tan|sec|cot|csc)[\(\{]([a-z])[\)\}]/g,
       "\\$1\\left($2\\right)"
     );
+    out = out.replaceAll(
+      /\\(sin|cos|tan|sec|cot|csc) x([\\\+])/g,
+      "\\$1\\left(x\\right)$2"
+    );
+
+    // brackets
     out = out.replaceAll(
       /\\left\[/g,
       "\\left("

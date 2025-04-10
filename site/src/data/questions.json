@@ -4618,6 +4618,96 @@
         }
       ]
     },
+    "s25cu-ex1": {
+      "topic": "integrals",
+      "title": "exposition",
+      "desc": null,
+      "date": "2025 March 30",
+      "tags": [
+        "frac",
+        "exp"
+      ],
+      "methods": [
+        "work"
+      ],
+      "shard": "s25cu-ex1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{1+e^{-x}}{e^{x}+e^{-x}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Split the integral."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\tan^{-1}\\left(e^{x}\\right)+x-\\frac{1}{2}\\ln\\left(e^{2x}+1\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1+e^{-x}}{e^{x}+e^{-x}}\\ dx  \\\\ =&\\ \\int \\frac{1+e^{-x}}{e^{x}+e^{-x}}\\cdot\\frac{e^{x}}{e^{x}}\\ dx  \\\\ =&\\ \\int \\frac{e^{x}+1}{e^{2x}+1}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  e^{x} &= t  \\\\ x &= \\ln t  \\\\ dx &= \\frac{1}{t}\\ dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{t+1}{t^{2}+1}\\cdot\\frac{1}{t}\\ dt  \\\\ &= \\int \\frac{t}{t\\left(t^{2}+1\\right)}+\\frac{1}{t\\left(t^{2}+1\\right)}\\ dt  \\\\ &= \\int \\frac{1}{t^{2}+1}+\\frac{1}{t\\left(t^{2}+1\\right)}\\ dt  \\\\ &= \\tan^{-1}t+\\int \\frac{1}{t\\left(t^{2}+1\\right)}\\ dt\\end{align*}"
+          }
+        ],
+        "partials": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{1}{t\\left(t^{2}+1\\right)}    &= \\frac{p}{t}+\\frac{qt+r}{t^{2}+1}  \\\\ 1 &= p\\left(t^{2}+1\\right)+qt^{2}+rt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $t = 0$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1 &= p\\left(0+1\\right)+0+0  \\\\ p &= 1\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Equate coefficients of $t^2$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  0 &= p+q  \\\\ q &= -p  \\\\ &= -1\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Equate coefficients of $t$:"
+          },
+          {
+            "kind": "latex",
+            "content": "0 = r"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\tan^{-1}t+\\int \\frac{1}{t\\left(t^{2}+1\\right)}\\ dt  \\\\ =&\\ \\tan^{-1}t+\\int \\frac{1}{t}-\\frac{t}{t^{2}+1}\\ dt  \\\\ =&\\ \\tan^{-1}t+\\ln t-\\frac{1}{2}\\ln\\left(t^{2}+1\\right)  \\\\ =&\\ \\tan^{-1}\\left(e^{x}\\right)+\\ln\\left(e^{x}\\right)-\\frac{1}{2}\\ln\\left(e^{2x}+1\\right)  \\\\ =&\\ \\tan^{-1}\\left(e^{x}\\right)+x-\\frac{1}{2}\\ln\\left(e^{2x}+1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25cu-lv1": {
       "topic": "integrals",
       "title": "leverage",
@@ -5252,6 +5342,38 @@
           }
         ]
       }
+    },
+    "s25f-cc3": {
+      "topic": "integrals",
+      "title": "drastic illumination",
+      "desc": null,
+      "date": "2025 April 4",
+      "tags": [
+        "frac",
+        "trig"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-cc3",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{1}    { \\cos^2{x} - \\cos{x} }\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\cot x+\\csc x-\\ln\\left(\\sec x+\\tan x\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{1}{\\cos^{2}x-\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{1}{\\left(\\cos x\\right)\\left(\\cos x-1\\right)}\\ dx  \\\\ =&\\ \\int \\frac{1}{\\left(\\cos x\\right)\\left(\\cos x-1\\right)}\\cdot\\frac{\\cos x+1}{\\cos x+1}\\ dx  \\\\ =&\\ \\int \\frac{\\cos x+1}{\\left(\\cos x\\right)\\left(\\cos^{2}x-1\\right)}\\ dx  \\\\ =&\\ -\\int \\frac{\\cos x+1}{\\left(\\cos x\\right)\\left(1-\\cos^{2}x\\right)}\\ dx  \\\\ =&\\ -\\int \\frac{\\cos x+1}{\\left(\\cos x\\right)\\left(\\sin^{2}x\\right)}\\ dx  \\\\ =&\\ -\\int \\frac{1}{\\sin^{2}x}+\\frac{1}{\\cos x\\sin^{2}x}\\ dx  \\\\ =&\\ -\\int \\csc^{2}x+\\sec x\\csc^{2}x\\ dx  \\\\ =&\\ \\int -\\csc^{2}x-\\left(\\sec x\\right)\\left(\\cot^{2}x+1\\right)\\ dx  \\\\ =&\\ \\cot x-\\int \\frac{1}{\\cos x}\\cdot\\frac{\\cos^{2}x}{\\sin^{2}x}+\\sec x\\ dx  \\\\ =&\\ \\cot x+\\int -\\cot x\\csc x\\ dx-\\int \\sec x\\ dx  \\\\ =&\\ \\cot x+\\csc x-\\ln\\left(\\sec x+\\tan x\\right)-c\\end{align*}"
+        }
+      ]
     },
     "s25f-cd1": {
       "topic": "integrals",
@@ -7186,6 +7308,72 @@
         ]
       }
     },
+    "s25f-hp2": {
+      "topic": "integrals",
+      "title": "hope for the best",
+      "desc": null,
+      "date": "2025 March 27",
+      "tags": [
+        "scare",
+        "exp"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25f-hp2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { x+1 }    { x }  (xe^x)^{9699}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What substitution might you make?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How might you manipulate the outside so it facilitates that substitution?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Could you take out an $xe^x$ from the $9699$ of them you have?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{9699}\\left(xe^{x}\\right)^{9699}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x+1}{x}\\left(xe^{x}\\right)^{9699}\\ dx  \\\\ =&\\ \\int \\frac{x+1}{x}\\left(xe^{x}\\right)^{9698}\\cdot xe^{x}\\ dx  \\\\ =&\\ \\int e^{x}\\left(x+1\\right)\\left(xe^{x}\\right)^{9698}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  xe^{x} &= t  \\\\ e^{x}\\left(x+1\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int t^{9698}\\ dt  \\\\ &= \\frac{1}{9699}t^{9699}  \\\\ &= \\frac{1}{9699}\\left(xe^{x}\\right)^{9699}-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-hq1": {
       "topic": "integrals",
       "title": "hallucinations",
@@ -8539,6 +8727,90 @@
         ]
       }
     },
+    "s25f-lw1": {
+      "topic": "integrals",
+      "title": "lukewarm",
+      "desc": null,
+      "date": "2025 March 27",
+      "tags": [
+        "frac",
+        "poly"
+      ],
+      "methods": [
+        "trig sub"
+      ],
+      "shard": "s25f-lw1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { x^2 }    { (x^6 + 1)^2 }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Expanding won’t help."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What if you write $x^6$ as $\\left( x^3 \\right)^2$?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Use a trig sub!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{6}\\left[\\tan^{-1}\\left(x^{3}\\right)+\\frac{x^{3}}{x^{6}+1}\\right]-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x^{2}}{\\left(x^{6}+1\\right)^{2}}\\ dx  \\\\ =&\\ \\int \\frac{x^{2}}{\\left(\\left(x^{3}\\right)^{2}+1\\right)^{2}}\\ dx  \\\\ =&\\ \\frac{1}{3}\\int \\frac{3x^{2}}{\\left(\\left(x^{3}\\right)^{2}+1\\right)^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^3 &= t  \\\\ 3x^2 \\ dx &= dt\\end{align*}"
+          }
+        ],
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\frac{1}{3}\\int \\frac{1}{\\left(t^{2}+1\\right)^{2}}\\ dt"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  t &= \\tan v  \\\\ dt &= \\sec^{2}v\\ dv\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{3}\\int \\frac{1}{\\left(\\tan^{2}v+1\\right)^{2}}\\cdot\\sec^{2}v\\ dv  \\\\ &= \\frac{1}{3}\\int \\frac{1}{\\sec^{4}v}\\cdot\\sec^{2}v\\ dv  \\\\ &= \\frac{1}{3}\\int \\cos^{2}v\\ dv  \\\\ &= \\frac{1}{6}\\int 1+\\cos2v\\ dv  \\\\ &= \\frac{1}{6}v+\\frac{1}{12}\\sin2v  \\\\ &= \\frac{1}{6}\\left[v+\\sin v\\cos v\\right]\\end{align*}"
+          }
+        ],
+        "reformulate": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{6}\\left[\\tan^{-1}t+\\left(\\frac{t}{\\sqrt{t^{2}+1}}\\right)\\left(\\frac{1}{\\sqrt{t^{2}+1}}\\right)\\right]  \\\\ &= \\frac{1}{6}\\left[\\tan^{-1}t+\\frac{t}{t^{2}+1}\\right]  \\\\ &= \\frac{1}{6}\\left[\\tan^{-1}\\left(x^{3}\\right)+\\frac{x^{3}}{x^{6}+1}\\right]-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-nb1": {
       "topic": "integrals",
       "title": "kurtosis",
@@ -8872,6 +9144,73 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &\\ \\int \\frac{\\left(1-x\\right)^{2}}{\\left(x+1\\right)^{404}}\\ dx  \\\\ =&\\ \\int \\frac{\\left(1-\\left(t-1\\right)\\right)^{2}}{t^{404}}\\ dt  \\\\ =&\\ \\int \\frac{\\left(2-t\\right)^{2}}{t^{404}}\\ dt  \\\\ =&\\ \\int \\frac{t^{2}-4t+4}{t^{404}}\\ dt  \\\\ =&\\ \\int \\frac{1}{t^{402}}-\\frac{4}{t^{403}}+\\frac{4}{t^{404}}\\ dt  \\\\ =&\\ -\\frac{1}{401t^{401}}+\\frac{4}{402t^{402}}-\\frac{4}{403t^{403}}  \\\\ =&\\ \\frac{1}{t^{403}}\\left(-\\frac{1}{401}t^{2}+\\frac{4}{402}t-\\frac{4}{403}\\right)  \\\\ =&\\ \\frac{1}{\\left(x+1\\right)^{403}}\\left(-\\frac{1}{401}\\left(x+1\\right)^{2}+\\frac{4}{402}\\left(x+1\\right)-\\frac{4}{403}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-pm2": {
+      "topic": "integrals",
+      "title": "postmortem",
+      "desc": null,
+      "date": "2025 April 3",
+      "tags": [
+        "frac",
+        "trig",
+        "ln"
+      ],
+      "methods": [
+        null
+      ],
+      "shard": "s25f-pm2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\ln\\left(2\\tan^{2}x+2\\sec x\\tan x+1\\right)}{\\cos x}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Try factorise the expression inside the logarithm."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You have 2 of $\\tan(x)^2$."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How else can you write $\\tan(x)^2$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\ln\\left(\\sec x+\\tan x\\right)^{2}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\ln\\left(2\\tan^{2}x+2\\sec x\\tan x+1\\right)}{\\cos x}\\ dx  \\\\ =&\\ \\int \\left(\\sec x\\right)\\ln\\left(2\\tan^{2}x+2\\sec x\\tan x+1\\right)\\ dx  \\\\ =&\\ \\int \\left(\\sec x\\right)\\ln\\left(\\tan^{2}x+\\tan^{2}x+2\\sec x\\tan x+1\\right)\\ dx  \\\\ =&\\ \\int \\left(\\sec x\\right)\\ln\\left(\\left(1+\\tan^{2}x\\right)+\\tan^{2}x+2\\sec x\\tan x\\right)\\ dx  \\\\ =&\\ \\int \\left(\\sec x\\right)\\ln\\left(\\sec^{2}x+\\tan^{2}x+2\\sec x\\tan x\\right)\\ dx  \\\\ =&\\ \\int \\left(\\sec x\\right)\\ln\\left(\\left(\\sec x+\\tan x\\right)^{2}\\right)\\ dx  \\\\ =&\\ 2\\int \\left(\\sec x\\right)\\ln\\left(\\sec x+\\tan x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\ln\\left(\\sec x+\\tan x\\right) &= t  \\\\ \\sec x\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 2\\int t\\ dt  \\\\ &= t^{2}  \\\\ &= \\ln\\left(\\sec x+\\tan x\\right)^{2}-c\\end{align*}"
           }
         ]
       }
@@ -9960,6 +10299,85 @@
           "content": "\\begin{align*}  &\\ \\int \\frac{2}{e^{x}+e^{-x}}\\ dx-\\int \\operatorname{sech}x\\ dx  \\\\ =&\\ \\int \\operatorname{sech}x\\ -\\operatorname{sech}x\\ dx  \\\\ =&\\ \\int 0\\ dx  \\\\ =&\\ c\\end{align*}"
         }
       ]
+    },
+    "s25f-rv1": {
+      "topic": "integrals",
+      "title": "luck of the draw",
+      "desc": null,
+      "date": "2025 March 27",
+      "tags": [
+        "scare",
+        "frac",
+        "trig"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-rv1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\cot^2{x} + \\csc{x} \\cot{x} - \\csc^2{x} + 1 }    { \\cot^2{x} - \\tan^2{x} + \\sec^2{x} + 1 }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You’ll need to selectively simplify here."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You’ll also need a substitution later on."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What looks the most like a derivative here?"
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "Even if multiple things look like a derivative, one of them might be more difficult to simplify."
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "$\\csc(x)\\cot(x)$ is the one you’re looking for."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\tan^{-1}\\left(\\csc x\\right)-c"
+        }
+      ],
+      "solution": {
+        "trig identities": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\cot^{2}x+\\csc x\\cot x-\\csc^{2}x+1}{\\cot^{2}x-\\tan^{2}x+\\sec^{2}x+1}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\cot^{2}x-\\csc^{2}x\\right)+\\csc x\\cot x+1}{\\left(\\sec^{2}x-\\tan^{2}x\\right)+\\left(\\cot^{2}x+1\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\left(-1\\right)+\\csc x\\cot x+1}{1+\\csc^{2}x}\\ dx  \\\\ =&\\ \\int \\frac{\\csc x\\cot x}{\\csc^{2}x+1}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\csc x &= t  \\\\ -\\csc x\\cot x\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\int \\frac{1}{t^{2}+1}\\ dt  \\\\ &= -\\tan^{-1}t  \\\\ &= -\\tan^{-1}\\left(\\csc x\\right)-c\\end{align*}"
+          }
+        ]
+      }
     },
     "s25f-sc1": {
       "topic": "integrals",
@@ -12024,6 +12442,68 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int e^{t}\\ dt  \\\\ &= e^{t}  \\\\ &= e^{\\left(e^{x}\\ln x\\right)}  \\\\ &= x^{\\left(e^{x}\\right)}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-xx1": {
+      "topic": "integrals",
+      "title": "legacy",
+      "desc": null,
+      "date": "2025 March 27",
+      "tags": [
+        "horror",
+        "exp",
+        "ln"
+      ],
+      "methods": [
+        "spot",
+        "arcprod"
+      ],
+      "shard": "s25f-xx1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  x^{(-2 + 1/x)} \\left(    \\ln(x^2) - 2  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "The $-2$ looks sus, eh?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Write $x^{(-2+1/x)}$ as $x^{(1/x)}/x^2$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-2x^{1/x}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int x^{\\left(-2+1/x\\right)}\\left(\\ln\\left(x^{2}\\right)-2\\right)\\ dx  \\\\ =&\\ \\int x^{-2}\\cdot x^{1/x}\\left(2\\ln x-2\\right)\\ dx  \\\\ =&\\ -2\\int x^{1/x}\\left(\\frac{1-\\ln x}{x^{2}}\\right)\\ dx  \\\\ =&\\ -2\\int e^{\\left(\\ln x\\right)/x}\\left(\\frac{1-\\ln x}{x^{2}}\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{\\ln x}{x} &= t  \\\\ \\ln x\\cdot\\frac{1}{x} &= t  \\\\ \\left(\\frac{1}{x}\\cdot\\frac{1}{x}+\\ln x\\cdot-\\frac{1}{x^{2}}\\right)\\ dx &= dt  \\\\ \\left(\\frac{1}{x^{2}}-\\frac{\\ln x}{x^{2}}\\right)\\ dx &= dt  \\\\ \\frac{1-\\ln x}{x^{2}}\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -2\\int e^{t}\\ dt  \\\\ &= -2e^{t}  \\\\ &= -2x^{1/x}-c\\end{align*}"
           }
         ]
       }

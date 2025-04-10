@@ -9,7 +9,7 @@ import { base } from "$app/paths";
 
 
 interface Props {
-  value: string | undefined;
+  value?: string | null;
 }
 
 let { value }: Props = $props();

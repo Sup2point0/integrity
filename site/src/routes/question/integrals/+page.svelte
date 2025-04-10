@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import { page_data } from "../page-data.svelte.ts";
-import type { Question } from "#scripts/types";
+import { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
 import Tag from "#parts/ui/tag.svelte";
@@ -11,7 +11,6 @@ import Clicky from "#parts/ui/clicky.svelte";
 import CopyClicky from "#parts/page/copy-clicky.svelte";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
 import Section from "#parts/page/section.svelte";
 
 
@@ -35,7 +34,7 @@ let question: Question | null = $derived(page_data.question);
   </div>
 
   <div class="utils upper">
-    <CopyClicky value={question?.question.content} />
+    <CopyClicky value={Question.sanitise(question?.question.content)} />
   </div>
 
   <Line width="80%" margin="1rem auto" />
@@ -79,6 +78,10 @@ let question: Question | null = $derived(page_data.question);
 {#if question?.answer}
   <Section title="Answer">
     <RenderBlock source={question.answer} />
+
+    <span style="position: absolute; right: 0; transform: translateY(-3rem);">
+      <CopyClicky value={Question.sanitise(question?.answer.content)} />
+    </span>
   </Section>
 {/if}
 
@@ -102,7 +105,7 @@ let question: Question | null = $derived(page_data.question);
 
     {/if}
 
-    <div class="utils upper">
+    <div class="utils solution">
       <Clicky text="Check a Different Solution"
         intern="workspace?shard={question.shard}"
       />
@@ -149,17 +152,24 @@ section.question {
 }
 
 .utils {
-  &.upper {
-    padding-right: 10%;
+  &.uper, &.solution {
     display: flex;
     flex-flow: row wrap;
     justify-content: end;
-    column-gap: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  &.upper {
+    padding-right: 10%;
   }
 
   &.lower {
     display: flex;
     justify-content: center;
+  }
+
+  &.solution {
+    padding-top: 2rem;
   }
 }
 

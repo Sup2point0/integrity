@@ -83,7 +83,7 @@ small {
   margin-top: 4rem;
   display: block;
   @include font-ui;
-  font-size: 75%;
+  font-size: 85%;
   color: $col-text-deut;
 
   a {

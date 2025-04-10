@@ -17,7 +17,7 @@
   position: relative;
   @include link;
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -32,7 +32,7 @@
   }
 
   &:hover, &:focus {
-    &:after {
+    &::after {
       width: 100%;
       left: 0;
       background: $col-deut-fallback;

@@ -57,6 +57,8 @@ let open = $state(!closed);
 <style lang="scss">
 
 section {
+  position: relative;
+  
   &.outer {
     margin: 1.5rem 0 0;
   }
