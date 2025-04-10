@@ -4,7 +4,7 @@ import { presets, inject_question } from "./presets";
 
 import Site from "#scripts/site";
 import { userprefs } from "#scripts/stores";
-import type { Shard, Question } from "#scripts/types";
+import { Question, type Shard } from "#scripts/types";
 
 import Clicky from "#parts/ui/clicky.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
@@ -183,6 +183,17 @@ function apply_question(shard: Shard | null) {
 
 <nav>
   <section id="left">
+    <Clicky text="Load Answer" action={() => {
+      let question = try_load_question(selected_question);
+
+      desmos.setExpression({
+        id: "integrals-latex-antideriv",
+        latex: `f\\left(x\\right) = ${Question.sanitise(question?.answer[0].content)}`,
+      });
+    }} />
+  </section>
+
+  <section id="right">
     <Clicky text="View Question" action={() => {
       let question = try_load_question(selected_question);
 
@@ -191,10 +202,6 @@ function apply_question(shard: Shard | null) {
       }
     }} />
   </section>
-
-  <!-- <section id="right">
-    <Clicky text="Open in Desmos" link="https://desmos.com/calculator" />
-  </section> -->
 </nav>
 
 <p class="caption">
@@ -239,7 +246,7 @@ nav {
 
 #desmos-window {
   width: 100%;
-  height: 80vh;
+  height: 75vh;
   background: $col-hover;
 
   p {

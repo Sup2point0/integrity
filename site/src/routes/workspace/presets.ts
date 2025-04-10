@@ -1,11 +1,11 @@
-import type { Question } from "#scripts/types";
+import { Question } from "#scripts/types";
 
 
 export function inject_question(desmos: any, question: Question)
 {
   switch (question.topic) {
     case "integrals":
-      let content = question.sanitise() ?? "error";
+      let content = Question.sanitise(question.question.content) ?? "error";
 
       if (question.tags.includes("definite")) {
         let integral = (content
@@ -41,14 +41,14 @@ export const presets: Record<string, object[]> =
       latex: " "
     },
     { id: "integrals-text-antideriv", type: "text",
-      text: "Type your antiderivative here:"
+      text: "Type your antiderivative (answer) here:"
     },
     { id: "integrals-latex-antideriv",
       hidden: true,
       latex: String.raw`f\left(x\right) = `
     },
     { id: "integrals-text-integral", type: "text",
-      text: "Type your integral here:"
+      text: "Type your integral (question) here:"
     },
     { id: "integrals-latex-integral",
       latex: String.raw`g\left(x\right) = `
@@ -64,6 +64,12 @@ export const presets: Record<string, object[]> =
     },
     { id: "integrals-text-guide", type: "text",
       text: "If the graphs of f'(x) and g(x) match, then your antiderivative is correct!"
+    },
+    { id: "integrals-text-filler-3",
+      latex: " "
+    },
+    { id: "integrals-latex-c",
+      latex: "c = 0"
     },
   ],
   "complete-square": [
