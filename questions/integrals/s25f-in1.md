@@ -36,7 +36,7 @@ methods:
 \end{align*}
 ```
 
-### Reshape
+### Solve
 ```math
 \begin{align*}
   &\ \int x\tan^{-1}\sqrt{x}\ dx
