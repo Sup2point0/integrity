@@ -32,10 +32,13 @@ methods:
 ## Hints
 
 ### 1
+You can simplify the expression inside the $\sqrt{}$.
 
 ### 2
+You can expand the expression outside.
 
 ### 3
+What’s the relationship between the 2 expressions?
 
 
 ## Answer
