@@ -3,7 +3,7 @@
 | dest = guides/integrals/collections/everything-anything
 | capt = The prime integrator’s standard arsenal
 | index = guides / integrals
-| date = 2025 April 10
+| date = 2025 April 11
 -->
 
 Integration can’t be learnt in a day. Nor can you, or should you, memorise in a day all of the useful formulae, identities and other quotable results that will come in crucial throughout your adventures in integration.
@@ -184,7 +184,32 @@ The other evolved trig functions $\cot(x)$ and $\csc(x)$ have analogous derivati
 ```
 
 ### Hyperbolic Trigonometry
-...
+The hyp trig functions also form a cycle when differentiated, except the signs vanish:
+
+```math
+\begin{align*}
+  \frac{d}{dx} \, \sinh{x} &= \cosh{x}
+  \\ \frac{d}{dx} \, \cosh{x} &= \sinh{x}
+\end{align*}
+```
+
+The compound evolutions are analogous:
+
+```math
+\begin{align*}
+  \frac{d}{dx} \, \tanh{x} &= \operatorname{sech}^2{x}
+  \\ \frac{d}{dx} \, \coth{x} &= \operatorname{csch}^2{x}
+\end{align*}
+```
+
+The other evolutions have a sign change:
+
+```math
+\begin{align*}
+  \frac{d}{dx} \, \operatorname{sech}{x} &= - \operatorname{sech}{x}\tanh{x}
+  \\ \frac{d}{dx} \, \operatorname{csch}{x} &= \operatorname{csch}{x}\coth{x}
+\end{align*}
+```
 
 
 ## Integration
@@ -208,7 +233,29 @@ For $n = 0$ this is equivalent to integrating a constant:
 ```
 
 ### Substitution
-...
+For an integral
+
+```math
+\int f(g(x)) \, g'(x) \ dx
+```
+
+Letting $g(x) = t$ gives
+
+```math
+g'(x) \ dx = dt
+```
+
+So
+
+```math
+\int f(t) \ dt
+```
+
+Or equivalently:
+
+```math
+\int f(g(x)) \ dx = \int f(t) \cdot \frac{1}{g'(x)} \ dt
+```
 
 ### Layer cake
 For the degenerate case of [power rule](#power-rule) where $n = -1$, the integral is different:
@@ -342,9 +389,21 @@ Rearranging these gives the power reduction formulae:
 
 ## Hyperbolic Trigonometry
 
+You don’t need to even understand hyperbolic trig to use it in integration. Effectively, it’s just redressed trig with some sign changes.
+
 ### Functions
+The hyp trig functions can be defined in terms of $e^x$:
+
+```math
+\begin{align*}
+  \sinh{x} &= \frac{e^x - e^{-x}}{2}
+  \\ \cosh{x} &= \frac{e^x + e^{-x}}{2}
+\end{align*}
+```
 
 ### Identities
+
+It’s also worth noting that any question which can be solved with [hyp trig sub]() can also be solved with plain trig sub, using the identity $\tan^2{x} + 1 = \sec^2{x}$.
 
 
 ## Series
