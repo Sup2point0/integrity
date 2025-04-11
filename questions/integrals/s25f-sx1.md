@@ -53,10 +53,10 @@ Always up for a substitution.
 ### Reshape
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\sec^{-1}\left(\frac{1}{x}\right)\csc^{-1}\left(\frac{1}{x}\right)\ dx
-  \\ =&\ \int_{\ }^{\ }\cos^{-1}\left(x\right)\sin^{-1}\left(x\right)\ dx
-  \\ =&\ \int_{\ }^{\ }\left(\frac{\pi}{2}-\sin^{-1}x\right)\sin^{-1}x\ dx
-  \\ =&\ \int_{\ }^{\ }\frac{\pi}{2}\sin^{-1}x-\left(\sin^{-1}x\right)^{2}\ dx
+  &\ \int \sec^{-1}\left(\frac{1}{x}\right)\csc^{-1}\left(\frac{1}{x}\right)\ dx
+  \\ =&\ \int \cos^{-1}\left(x\right)\sin^{-1}\left(x\right)\ dx
+  \\ =&\ \int \left(\frac{\pi}{2}-\sin^{-1}x\right)\sin^{-1}x\ dx
+  \\ =&\ \int \frac{\pi}{2}\sin^{-1}x-\left(\sin^{-1}x\right)^{2}\ dx
 \end{align*}
 ```
 
@@ -72,11 +72,11 @@ Always up for a substitution.
 ### Solve
 ```math
 \begin{align*}
-  &= \int_{\ }^{\ }\left(\frac{\pi}{2}t-t^{2}\right)\cdot\cos t\ dt
-  \\ &= \frac{\pi}{2}\int_{\ }^{\ }t\cos t\ dt-\int_{\ }^{\ }t^{2}\cos t\ dt
-  \\ &= \frac{\pi}{2}\left(t\sin t-\int_{\ }^{\ }\sin t\ dt\right)-\left(t^{2}\sin t-\int_{\ }^{\ }2t\sin t\ dt\right)
-  \\ &= \frac{\pi}{2}\left(t\sin t+\cos t\right)-\left(t^{2}\sin t+2\int_{\ }^{\ }t\cdot-\sin t\ dt\right)
-  \\ &= \frac{\pi}{2}\left(t\sin t+\cos t\right)-\left(t^{2}\sin t+2\left(t\cos t-\int_{\ }^{\ }\cos t\ dt\right)\right)
+  &= \int \left(\frac{\pi}{2}t-t^{2}\right)\cdot\cos t\ dt
+  \\ &= \frac{\pi}{2}\int t\cos t\ dt-\int t^{2}\cos t\ dt
+  \\ &= \frac{\pi}{2}\left(t\sin t-\int \sin t\ dt\right)-\left(t^{2}\sin t-\int 2t\sin t\ dt\right)
+  \\ &= \frac{\pi}{2}\left(t\sin t+\cos t\right)-\left(t^{2}\sin t+2\int t\cdot-\sin t\ dt\right)
+  \\ &= \frac{\pi}{2}\left(t\sin t+\cos t\right)-\left(t^{2}\sin t+2\left(t\cos t-\int \cos t\ dt\right)\right)
   \\ &= \frac{\pi}{2}\left(t\sin t+\cos t\right)-\left(t^{2}\sin t+2\left(t\cos t-\sin t\right)\right)
   \\ &= \frac{\pi}{2}\left(t\sin t+\cos t\right)-\left(t^{2}\sin t+2t\cos t-2\sin t\right)
   \\ &= \frac{\pi}{2}\left(t\sin t+\cos t\right)-t\left(t\sin t+2\cos t\right)+2\sin t
