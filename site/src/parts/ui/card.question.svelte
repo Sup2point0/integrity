@@ -40,7 +40,7 @@ function check_valid(data: Array<any>): boolean
   {#if search.show.question}
     <div class="question" transition:fade={{ duration: 250 }}>
       {#if latex}
-        <Katex text={latex} inline={false} />
+        <Katex text={latex} inline={false} client_render={true} />
       {/if}
 
       {#if desmos}
