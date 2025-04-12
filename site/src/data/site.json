@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-04-10",
+    "exported": "2025-04-12",
     "file_count": 24,
     "page_count": 23
   },
@@ -334,9 +334,9 @@
     },
     "guides/integrals/collections/everything-anything.md": {
       "path": "guides/integrals/collections/everything-anything.md",
-      "last_deploy": "2025-04-10 09:52:36 +0100",
-      "slocs": 365,
-      "chars": 8901,
+      "last_deploy": "2025-04-11 21:25:14 +0100",
+      "slocs": 424,
+      "chars": 10251,
       "isIndex": false,
       "flags": [
         "live",
@@ -358,8 +358,8 @@
         "guides",
         "integrals"
       ],
-      "date": "2025-04-10",
-      "date_display": "2025 April 10"
+      "date": "2025-04-11",
+      "date_display": "2025 April 11"
     },
     "guides/integrals/collections/int-int.md": {
       "path": "guides/integrals/collections/int-int.md",

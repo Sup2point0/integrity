@@ -56,11 +56,13 @@ export class SearchData
   reverse: boolean = $state(false);
 
 
+  /** Reset all search options to their defaults. */
   reset_defaults()
   {
+    // TODO
   }
 
-
+  /** Apply the filters to the given list of questions. */
   filter_questions(
     questions: Question[],
   ): Question[]
@@ -143,7 +145,7 @@ export class SearchData
     if (this.sort) {
       switch (this.sort) {
         case "rel":
-          /* already sorted by relevance */
+          out = this.sort_rel(out);
           break;
         
         case "name":
@@ -151,7 +153,7 @@ export class SearchData
           break;
         
         case "date":
-          this.sort_date(out);
+          out = this.sort_date(out);
           break;
 
         case "rand":
@@ -159,7 +161,7 @@ export class SearchData
       }
     }
     else if (!this.query) {
-      this.sort_date(out);
+      out = this.sort_rel(out);
     }
   
     if (this.reverse) {
@@ -170,11 +172,27 @@ export class SearchData
   }
 
   sort_rel(source: Question[]) {
-    return source;  // TODO
+    let categories = Object.groupBy(source, question => this.categorise_rel(question));
+
+    for (let category of Object.values(categories)) {
+      // @ts-ignore
+      category.sort((prot, deut) => (prot.date && deut.date) ? (deut.date - prot.date) : -1);
+    }
+
+    return Object.values(categories).flatMap(category => category);
+  }
+
+  categorise_rel(question: Question)
+  {
+    if (get(userprefs).flagged.has(question.shard)) return 30;
+    if (get(userprefs).starred.has(question.shard)) return 40;
+    if (get(userprefs).solved.has(question.shard)) return 50;
+    return 0;
   }
 
   sort_date(source: Question[]) {
-    return source.sort((prot, deut) => (prot.date && deut.date) ? deut.date - prot.date : -1);
+    // @ts-ignore
+    return source.sort((prot, deut) => (prot.date && deut.date) ? (deut.date - prot.date) : -1);
   }
 }
 
