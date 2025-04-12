@@ -23,7 +23,7 @@ methods:
 
 ## Answer
 ```math
-\frac{1}{3}\tan^{3}x-\tan x+x-C
+\frac{1}{3}\tan^{3}x-\tan x+x-c
 ```
 
 
@@ -38,6 +38,6 @@ methods:
   \\ =&\ \int \left(\tan^{2}x\right)\left(\sec^{2}x-1\right)\ dx
   \\ =&\ \int \sec^{2}x\tan^{2}x-\tan^{2}x\ dx
   \\ =&\ \frac{1}{3}\tan^{3}x-\int \sec^{2}x-1\ dx
-  \\ =&\ \frac{1}{3}\tan^{3}x-\tan x+x-C
+  \\ =&\ \frac{1}{3}\tan^{3}x-\tan x+x-c
 \end{align*}
 ```

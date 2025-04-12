@@ -32,7 +32,7 @@ Remember your constants!
 
 ## Answer
 ```math
-\frac{1}{6}\left(\ln x\right)^{3}+cx-C
+\frac{1}{6}\left(\ln x\right)^{3}+cx-c
 ```
 
 

@@ -29,7 +29,7 @@ What could you multiply through by?
 
 ## Answer
 ```math
-2\tan x-x-2\sec x-C
+2\tan x-x-2\sec x-c
 ```
 
 
@@ -42,6 +42,6 @@ What could you multiply through by?
   \\ =&\ \int \frac{\left(\sec x-\tan x\right)^{2}}{\sec^{2}x-\tan^{2}x}\ dx
   \\ =&\ \int \frac{\sec^{2}x+\tan^{2}x-2\sec x\tan x}{1}\ dx
   \\ =&\ \int \sec^{2}x+\left(\sec^{2}x-1\right)-2\sec x\tan x\ dx
-  \\ =&\ 2\tan x-x-2\sec x-C
+  \\ =&\ 2\tan x-x-2\sec x-c
 \end{align*}
 ```
