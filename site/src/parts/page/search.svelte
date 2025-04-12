@@ -12,6 +12,7 @@ import Toggle from "#parts/ui/toggle.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
 
 import { fade } from "svelte/transition";
+import { page } from "$app/state";
 import { base } from "$app/paths";
 import { onMount } from "svelte";
 
@@ -22,23 +23,31 @@ let methods_expanded = $state(false);
 
 onMount(() => {
   // TODO FIXME still needs work!
-  // if (page.url.searchParams?.size) {
-  //   open = true;
-  //   let search_tags = page.url.searchParams.getAll("tag");
+  if (page.url.searchParams?.size) {
+    open = true;
 
-  //   if (search_tags) {
-  //     search.tags = Object.fromEntries(
-  //       tags.map(tag => [tag, false])
-  //     );
-
-  //     setTimeout(() => {for (let tag of search_tags) {
-  //       search.tags[tag] = true;
-  //       search.tags = search.tags;
-  //     }}, 1000);
-
-  //     console.log(search.tags);
-  //   }
-  // }
+    let search_tags = page.url.searchParams.getAll("tag");
+    if (search_tags) {
+      tags_expanded = true;
+      setTimeout(() => {
+        for (let tag of search_tags) {
+          search.tags[tag] = true;
+        }
+        search.tags = search.tags;
+      }, 0);
+    }
+    
+    let search_methods = page.url.searchParams.getAll("method");
+    if (search_methods) {
+      methods_expanded = true;
+      setTimeout(() => {
+        for (let method of search_methods) {
+          search.methods[method] = true;
+        }
+        search.methods = search.methods;
+      }, 0);
+    }
+  }
 });
 
 </script>
