@@ -3,6 +3,8 @@
 A select dropdown input.
 -->
 
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 <script lang="ts">
 
 import { base } from "$app/paths";

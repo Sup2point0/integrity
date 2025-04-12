@@ -188,7 +188,7 @@ function apply_question(shard: Shard | null) {
 
       desmos.setExpression({
         id: "integrals-latex-antideriv",
-        latex: `f\\left(x\\right) = ${Question.sanitise(question?.answer[0].content)}`,
+        latex: `f\\left(x\\right) = ${Question.sanitise(question?.answer?.content)}`,
       });
     }} />
   </section>
