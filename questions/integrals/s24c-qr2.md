@@ -40,7 +40,7 @@ $x$ is the same as $\left(\sqrt{x}\right)^2$.
 \end{align*}
 ```
 
-### Reshape
+### Solve
 ```math
 \begin{align*}
   &\ \int \frac{\sqrt{x}}{1+x}\ dx
