@@ -7,7 +7,7 @@ import * as fuzz from "fuzzball";
 
 import { get } from "svelte/store";
 
-import { userprefs } from "#scripts/stores";
+import { userprefs } from "./user-prefs.svelte.ts";
 import type { Question } from "#scripts/types";
 
 

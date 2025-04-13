@@ -1816,6 +1816,86 @@
         }
       ]
     },
+    "s24c-ax1": {
+      "topic": "integrals",
+      "title": "probably",
+      "desc": null,
+      "date": "2024 November",
+      "tags": [
+        "dread",
+        "frac",
+        "inverse trig"
+      ],
+      "methods": [
+        "sub",
+        "parts"
+      ],
+      "shard": "s24c-ax1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\sin^{-1}x}{x^{2}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How would you get rid of $\\sin^{-1}(x)$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Substitute!"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How else can you write $\\frac{\\cos{t}}{\\sin^2{t}}$?"
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "Split it as $\\frac{1}{\\sin{x}} \\cdot \\frac{\\cos{x}}{\\sin{x}}$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{\\sin^{-1}x}{x}+\\ln\\left(\\frac{1-\\sqrt{1-x^{2}}}{x}\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sin^{-1}x &= t  \\\\ x &= \\sin t  \\\\ dx &= \\cos t\\ dt\\end{align*}"
+          }
+        ],
+        "solve (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\sin^{-1}x}{x^{2}}\\ dx  \\\\ =&\\ \\int \\frac{t}{\\sin^{2}t}\\cdot\\cos t\\ dt  \\\\ =&\\ \\int t\\csc t\\cot t\\ dt  \\\\ =&\\ -\\int t\\cdot-\\csc t\\cot t\\ dt\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      f &= t \\quad&\\quad g' &= -\\csc t\\cot t  \\\\ f' &= 1 \\quad&\\quad g &= \\csc t\\end{align*}"
+          }
+        ],
+        "solve (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ -\\left(fg-\\int f'g\\ dt\\right)  \\\\ =&\\ -\\left(t\\csc t-\\int \\csc t\\ dt\\right)  \\\\ =&\\ -t\\csc t+\\ln\\left(\\csc t-\\cot t\\right)  \\\\ =&\\ -\\frac{t}{\\sin t}+\\ln\\left(\\frac{1-\\cos t}{\\sin t}\\right)  \\\\ =&\\ -\\frac{\\sin^{-1}x}{x}+\\ln\\left(\\frac{1-\\sqrt{1-x^{2}}}{x}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s24c-cc1": {
       "topic": "integrals",
       "title": "connection",
@@ -1996,6 +2076,74 @@
         ]
       }
     },
+    "s24c-il1": {
+      "topic": "integrals",
+      "title": "inverted",
+      "desc": null,
+      "date": "2024 September",
+      "tags": [
+        "frac",
+        "trig",
+        "ln"
+      ],
+      "methods": [
+        "spot",
+        "layer cake"
+      ],
+      "shard": "s24c-il1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\tan x}{\\ln\\left(\\cos x\\right)}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How else could you write $\\tan(x)$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What’s left on top?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What’s the integral of $\\tan(x)$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\ln\\left(\\ln\\left(\\cos x\\right)\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\tan x}{\\ln\\left(\\cos x\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\sin x}{\\left(\\cos x\\right)\\ln\\left(\\cos x\\right)}\\ dx  \\\\ =&\\ -\\int \\frac{-\\sin x}{\\left(\\cos x\\right)\\ln\\left(\\cos x\\right)}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\cos x &= t  \\\\ -\\sin x\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\int \\frac{1}{t\\ln t}\\ dt  \\\\ &= -\\ln\\left(\\ln t\\right)  \\\\ &= -\\ln\\left(\\ln\\left(\\cos x\\right)\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s24c-lc1": {
       "topic": "integrals",
       "title": "unlocked",
@@ -2122,6 +2270,54 @@
           "content": "\\begin{align*}  &\\ \\int \\left(x-2x+3x-4x\\right)^{2}\\ dx  \\\\ =&\\ \\int \\left(-2x\\right)^{2}  \\\\ =&\\ 4\\int x^{2}\\ dx  \\\\ =&\\ \\frac{4}{3}x^{3}-c\\end{align*}"
         }
       ]
+    },
+    "s24c-pl1": {
+      "topic": "integrals",
+      "title": "actually",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "frac",
+        "sqrt"
+      ],
+      "methods": [
+        "trig sub"
+      ],
+      "shard": "s24c-pl1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{1}{\\left(1-x^{2}\\right)^{3/2}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What if the $3/2$ were just a $1/2$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x}{\\sqrt{1-x^{2}}}-c"
+        }
+      ],
+      "solution": {
+        "trigonometric substitution": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x &= \\sin{t}  \\\\ dx &= \\cos{t} \\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{\\left(1-x^{2}\\right)^{3/2}}\\ dx2  \\\\ =&\\ \\int \\frac{1}{\\left(1-\\sin^{2}t\\right)^{3/2}}\\cdot\\cos t\\ dt  \\\\ =&\\ \\int \\frac{\\cos t}{\\cos^{3}t}\\ dt  \\\\ =&\\ \\int \\sec^{2}t\\ dt  \\\\ =&\\ \\tan t  \\\\ =&\\ \\frac{\\sin t}{\\cos t}  \\\\ =&\\ \\frac{x}{\\sqrt{1-x^{2}}}-c\\end{align*}"
+          }
+        ]
+      }
     },
     "s24c-ps1": {
       "topic": "integrals",
@@ -2730,6 +2926,109 @@
           "content": "\\begin{align*}  &\\ \\int \\frac{x^{4}+x^{3}+x^{2}+x+1}{x^{2}+1}\\ dx  \\\\ =&\\ \\int \\frac{\\left(x^{4}+x^{2}\\right)+\\left(x^{3}+x\\right)+1}{x^{2}+1}\\ dx  \\\\ =&\\ \\int \\frac{x^{2}\\left(x^{2}+1\\right)+x\\left(x^{2}+1\\right)+1}{x^{2}+1}\\ dx  \\\\ =&\\ \\int x^{2}+x+\\frac{1}{x^{2}+1}\\ dx  \\\\ =&\\ \\frac{1}{3}x^{3}+\\frac{1}{2}x^{2}+\\tan^{-1}x-c\\end{align*}"
         }
       ]
+    },
+    "s24c-th1": {
+      "topic": "integrals",
+      "title": "hidey",
+      "desc": null,
+      "date": "2024 October",
+      "tags": [
+        "frac",
+        "trig"
+      ],
+      "methods": [
+        "speed",
+        "spot"
+      ],
+      "shard": "s24c-th1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{1+\\sin x}{\\sec x+\\tan x}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Expand and hope for the best."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\sin x-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{1+\\sin x}{\\sec x+\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{1+\\sin x}{\\frac{1}{\\cos x}+\\frac{\\sin x}{\\cos x}}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\cos x\\right)\\left(1+\\sin x\\right)}{1+\\sin x}\\ dx  \\\\ =&\\ \\int \\cos x\\ dx  \\\\ =&\\ \\sin x-c\\end{align*}"
+        }
+      ]
+    },
+    "s24c-tq1": {
+      "topic": "integrals",
+      "title": "doable",
+      "desc": null,
+      "date": "2024 September",
+      "tags": [
+        "sqrt",
+        "trig"
+      ],
+      "methods": [
+        "speed",
+        "sub",
+        "parts"
+      ],
+      "shard": "s24c-tq1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\sin\\sqrt{x}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Substitute!"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Let $\\sqrt{x} = t$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-2\\sqrt{x}\\cos\\sqrt{x}+2\\sin\\sqrt{x}-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{x} &= t  \\\\ x &= t^{2}  \\\\ dx &= 2t\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\sin\\sqrt{x}\\ dx  \\\\ =&\\ \\int \\sin t\\cdot2t\\ dt  \\\\ =&\\ 2\\int t\\sin t\\ dt\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 2\\left(t\\cdot-\\cos t-\\int -\\cos t\\ dt\\right)  \\\\ &= -2t\\cos t+2\\sin t  \\\\ &= -2\\sqrt{x}\\cos\\sqrt{x}+2\\sin\\sqrt{x}-c\\end{align*}"
+          }
+        ]
+      }
     },
     "s24c-ts1": {
       "topic": "integrals",
