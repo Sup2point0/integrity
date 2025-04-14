@@ -27,21 +27,21 @@ const opts = {
 };
 
 
-// let self: HTMLElement | null = $state(null);
+let self: HTMLElement | null = null;
 
-// onMount(() => {
-//   if (!text || !self) return;
+onMount(() => {
+  if (!text || !self) return;
   
-//   katex.render(text, self, opts);
-// });
+  katex.render(text, self, opts);
+});
 
 </script>
 
 
-<!-- {#if client_render}
+{#if client_render}
   <span bind:this={self}></span>
 
-{:else} -->
+{:else}
   {@html text && katex.renderToString(text, opts)}
 
-<!-- {/if} -->
+{/if}
