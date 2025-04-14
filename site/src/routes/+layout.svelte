@@ -22,8 +22,7 @@ let active = $state(true);
 
 onMount(() => {
   handle_overlay();
-  $userprefs && $userprefs.visits++;
-  fetch("https://sup2point0.npkn.net/integrity/");
+  count_visits();
 });
 
 /** Handle removing the overlay. */
@@ -37,6 +36,13 @@ function handle_overlay()
     sessionStorage.setItem("integrity.here", "pi");
     setTimeout(() => { active = false; }, 500);
   }
+}
+
+function count_visits()
+{
+  if ($userprefs) $userprefs.visits++;
+
+  fetch("https://sup2point0.npkn.net/integrity/");
 }
 
 </script>

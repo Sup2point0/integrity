@@ -4891,6 +4891,38 @@
         }
       ]
     },
+    "s25c-dp1": {
+      "topic": "integrals",
+      "title": "dauntless",
+      "desc": null,
+      "date": "2025 March 23",
+      "tags": [
+        "frac",
+        "poly"
+      ],
+      "methods": [
+        "parts"
+      ],
+      "shard": "s25c-dp1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    {x+99}    {(99-x)^2}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x+99}{99-x}+\\ln\\left(99-x\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{x+99}{\\left(99-x\\right)^{2}}\\ dx  \\\\ =&\\ \\int \\left(x+99\\right)\\cdot\\frac{1}{\\left(99-x\\right)^{2}}\\ dx  \\\\ =&\\ \\left(x+99\\right)\\cdot\\frac{1}{99-x}-\\int 1\\cdot\\frac{1}{99-x}\\ dx  \\\\ =&\\ \\frac{x+99}{99-x}+\\ln\\left(99-x\\right)-c\\end{align*}"
+        }
+      ]
+    },
     "s25c-ee1": {
       "topic": "integrals",
       "title": "akaka",
