@@ -22,7 +22,6 @@ let tags_expanded = $state(false);
 let methods_expanded = $state(false);
 
 onMount(() => {
-  // TODO FIXME still needs work!
   if (page.url.searchParams?.size) {
     open = true;
 

@@ -27,7 +27,7 @@ const opts = {
 };
 
 
-let self: HTMLElement | null = null;
+let self: HTMLElement | null = $state(null);
 
 onMount(() => {
   if (!text || !self) return;
