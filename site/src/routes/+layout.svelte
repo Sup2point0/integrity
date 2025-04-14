@@ -23,6 +23,7 @@ let active = $state(true);
 onMount(() => {
   handle_overlay();
   $userprefs && $userprefs.visits++;
+  fetch("https://sup2point0.npkn.net/integrity/");
 });
 
 /** Handle removing the overlay. */
