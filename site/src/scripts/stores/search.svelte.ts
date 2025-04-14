@@ -172,6 +172,8 @@ export class SearchData
   }
 
   sort_rel(source: Question[]) {
+    if (typeof Object.groupBy === "undefined") return this.sort_date(source);
+    
     let categories = Object.groupBy(source, question => this.categorise_rel(question));
 
     for (let category of Object.values(categories)) {
