@@ -58,7 +58,7 @@ import { base } from "$app/paths";
 
     <NavLink text="Challenges" intern="challenges" collapse={true}>
       <Link text="MIT Integration Bee" intern="challenges/mit-ib" />
-      <Link text="UNSW Integration Bee" intern="challenges/unsw-ib" disabled={true} />
+      <Link text="UNSW Integration Bee" intern="challenges/unsw-ib" />
       <Link text="0–100 Year Challenge" intern="challenges/year" />
     </NavLink>
 

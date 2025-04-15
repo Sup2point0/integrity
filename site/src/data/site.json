@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-04-14",
-    "file_count": 24,
-    "page_count": 23
+    "exported": "2025-04-15",
+    "file_count": 25,
+    "page_count": 24
   },
   "index": {
     "guides": {
@@ -640,6 +640,25 @@
       "dest": "challenges/mit-ib/2023",
       "title": "MIT Integration Bee 2023",
       "head": "MIT Integration Bee 2023",
+      "capt": null,
+      "desc": null,
+      "index": [],
+      "tags": [],
+      "date": null,
+      "date_display": null
+    },
+    "challenges/unsw-ib/2022.md": {
+      "path": "challenges/unsw-ib/2022.md",
+      "last_deploy": "2025-04-15 10:34:46 +0100",
+      "slocs": 140,
+      "chars": 3874,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "challenges/unsw-ib/2022",
+      "title": "UNSW Maths Society Integration Bee 2022",
+      "head": "UNSW Maths Society Integration Bee 2022",
       "capt": null,
       "desc": null,
       "index": [],
