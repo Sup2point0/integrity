@@ -47,12 +47,11 @@ export class Question
     Object.assign(this, data);
     this.question = data.question && data.question[0];
     this.date_display = data.date;
-    this.date = new Date(data.date);
-    // this.title = data.title;
-    // this.desc = data.desc;
-    // this.date = data.date && new Date(data.date);
-    // this.tags = data.tags ?? [];
-    // this.question = data.question;
+    try {
+      this.date = new Date(data.date);
+    } catch {
+      this.date = new Date();
+    }
     this.answer = Array.isArray(data.answer) ? data.answer[0] : data.answer;
 
     this._match = [
