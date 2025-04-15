@@ -2,7 +2,7 @@
 topic: integrals
 title: straight-up
 desc: 
-date: 2024 Spetember
+date: 2024 September
 tags:
   - frac
   - exp
