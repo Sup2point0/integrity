@@ -50,9 +50,6 @@ export class SearchData
     flag: true,
     star: true,
   });
-
-  view: "grid" | "list" = $state("grid");
-  sort: "date" | "name" | "rel" | "rand" | null = $state(null);
   reverse: boolean = $state(false);
 
 
@@ -142,18 +139,20 @@ export class SearchData
     }
   
     // Sort
-    if (this.sort) {
-      switch (this.sort) {
+    let sort_by = get(userprefs)["search-sort"];
+
+    if (sort_by) {
+      switch (sort_by) {
         case "rel":
           out = this.sort_rel(out);
           break;
         
-        case "name":
-          out.sort((prot, deut) => (prot.title && deut.title) ? prot.title.localeCompare(deut.title) : -1);
-          break;
-        
         case "date":
           out = this.sort_date(out);
+          break;
+        
+        case "name":
+          out.sort((prot, deut) => (prot.title && deut.title) ? prot.title.localeCompare(deut.title) : -1);
           break;
 
         case "rand":

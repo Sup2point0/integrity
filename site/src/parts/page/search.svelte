@@ -279,7 +279,7 @@ onMount(() => {
       <tr>
         <th> Sort </th>
         <td class="flex">
-          <Select bind:value={search.sort}
+          <Select bind:value={$userprefs["search-sort"]}
             options={{
               "RELEVANCE": null,
               "DATE": "date",
@@ -287,10 +287,10 @@ onMount(() => {
               "RANDOM": "rand",
             }}
           />
-          {#if search.sort === "rand"}
+          {#if $userprefs["search-sort"] === "rand"}
             <Clicky text="SHUFFLE" action={() => {
-              search.sort = null;
-              search.sort = "rand";
+              $userprefs["search-sort"] = null;
+              $userprefs["search-sort"] = "rand";
             }} />
           {/if}
         </td>
