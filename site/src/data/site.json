@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-04-15",
+    "exported": "2025-04-16",
     "file_count": 25,
     "page_count": 24
   },
@@ -363,9 +363,9 @@
     },
     "guides/integrals/collections/int-int.md": {
       "path": "guides/integrals/collections/int-int.md",
-      "last_deploy": "2025-04-09 16:05:17 +0100",
-      "slocs": 196,
-      "chars": 5382,
+      "last_deploy": "2025-04-16 10:05:05 +0100",
+      "slocs": 231,
+      "chars": 6797,
       "isIndex": false,
       "flags": [
         "live",
@@ -386,8 +386,8 @@
         "guides",
         "integrals"
       ],
-      "date": null,
-      "date_display": null
+      "date": "2025-04-16",
+      "date_display": "2025 April 16"
     },
     "guides/integrals/collections/once.md": {
       "path": "guides/integrals/collections/once.md",
