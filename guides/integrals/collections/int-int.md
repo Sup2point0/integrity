@@ -3,6 +3,7 @@
 | dest = guides/integrals/collections/int-int
 | capt = Glossary of the integration homies
 | index = guides / integrals
+| date = 2025 April 16
 -->
 
 Don’t we love our integration slang.
@@ -25,6 +26,13 @@ Don’t we love our integration slang.
 In relation to an expression $p \pm q$, “conjugate” refers to the expression with the opposite sign. This is extrapolated from the [complex conjugate<sup>↗</sup>](https://wikipedia.org/wiki/Complex_conjugate).
 
 For instance, the conjugate of $\sec{x}-\tan{x}$ is $\sec{x}+\tan{x}$. Multiplying by the conjugate usually allows [difference of 2 squares](#dots) to be applied.
+
+
+## DBI method
+
+> *dbi just use DBI method*
+
+A more cultured name for the [DI method](https://www.youtube.com/watch?v=2I-_SV8cwsw), a popular method for speedrunning [integration by parts](../methods/parts.md).
 
 
 ## DOTS
@@ -194,3 +202,30 @@ A degenerate case of [layer cake](#layer-cake) where the numerator is the exact 
 > *Starts with “f” and rhymes with **tractorise**.*
 
 Cockney rhyming slang(?) for *factorise*.
+
+
+## translation
+
+> *Undo the translation and you find it’s odd.*
+
+Refers to an integral where the input has been translated, i.e. $x$ has been mapped to $x + a$.
+
+<!-- TODO -->
+
+
+## trivial
+
+> *And the rest is trivial, happy days!*
+
+In the context of integration, this describes an integral that is sufficiently simplified such that we can be certain it is solvable – i.e. the method(s) or solution route is obvious. If we strip integration to its essence, then the goal when solving any integral is to reduce it to a trivial form.
+
+### Notes
+It is important to clarify that “trivial” does not make any comments on the difficulty of carrying out the integration; it only describes the nature of the integral. A trivial integral may have an obvious method that is still nontrivial to execute accurately.
+
+As is the case in the rest of mathematics, what one perceives as “trivial” is very much a function of one’s exposure to integration. To an adventurer who has seen
+
+```math
+\int \frac{1}{x\ln{x}} \ dx
+```
+
+37 times before this is not a hard integral, but for someone who has only just started encountering integrals with $\ln(x)$ this could be very nontrivial to spot indeed.
