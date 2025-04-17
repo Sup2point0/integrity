@@ -3,7 +3,7 @@
 | dest = guides/integrals/collections/everything-anything
 | capt = The prime integrator’s standard arsenal
 | index = guides / integrals
-| date = 2025 April 11
+| date = 2025 April 17
 -->
 
 Integration can’t be learnt in a day. Nor can you, or should you, memorise in a day all of the useful formulae, identities and other quotable results that will come in crucial throughout your adventures in integration.
@@ -198,7 +198,7 @@ The compound evolutions are analogous:
 ```math
 \begin{align*}
   \frac{d}{dx} \, \tanh{x} &= \operatorname{sech}^2{x}
-  \\ \frac{d}{dx} \, \coth{x} &= \operatorname{csch}^2{x}
+  \\ \frac{d}{dx} \, \coth{x} &= -\operatorname{csch}^2{x}
 \end{align*}
 ```
 
