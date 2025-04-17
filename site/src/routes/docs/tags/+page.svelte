@@ -18,7 +18,6 @@ import Header from "#parts/core/header.svelte";
 
 
 <Breadcrumbs levels={[
-  { text: "Integrity", link: Site.root },
   { text: "Docs", intern: "docs" },
   { text: "Tags" },
 ]} />
@@ -50,18 +49,26 @@ import Header from "#parts/core/header.svelte";
         "Questions that look horrific. There’s a good chance you’ll look at it and think “what is this.” or “hell nah I’m not doing that”. <br><br> If you’re looking to impress others who aren’t as far down the wormhole as you, these are pretty wow-inducing.")}
       {@render tag("SCARE",
         "These questions give you a right fright at first glance, but aren’t actually that difficult. Like <strong>HORROR</strong>, but less horrible. Probably.")}
+      {@render tag("DREAD",
+        "These questions can either look clean or horrific, but the common denominator is that as you start tackling it, you quickly realise it’s really not that easy or nice, and things are about to get messy.")}
       {@render tag("TRAP",
         "Looks like that, eh? Heads up: it isn’t. Laced with ditches for you to step into if you’re not careful. Fun for sharing with others.")}
       {@render tag("SIGN",
         "Beware the S-I+G-N error(s)!")}
       {@render tag("NICE",
         "Warning: features exceptionally juicy maths that may be conducive to questionable noises. Reader discretion is advised.")}
+      {@render tag("LONG",
+        "Warning: features potentially very long maths that may require a lot of time and work.")}
       {@render tag("FUN",
         "Sometimes, maths is just so fun.")}
       {@render tag("TOUGH",
         "These ones are exceptionally tough with a potentially really non-obvious solution, especially if you haven’t seen this style of question before.")}
       {@render tag("ELITE",
-        "May require advanced knowledge.")}
+        "May require advanced knowledge. This usually refers to hyp trig, complex numbers, Taylor expansions, etc.")}
+      {@render tag("FUNNY",
+        "Giggles")}
+      {@render tag("WACK",
+        "What is this?")}
       {@render tag("TROLL",
         "Heh, get played. Questions that pull a fast one on you.")}
       {@render tag("FREE",
