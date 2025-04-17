@@ -2,11 +2,12 @@
 
 import Site from "#scripts/site";
 
-import ArticleArray from "#parts/page/article-array.svelte";
+import Content from "./integrals.svx";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
+import ArticleArray from "#parts/page/article-array.svelte";
 
 </script>
 
@@ -23,8 +24,7 @@ import Header from "#parts/core/header.svelte";
 
 
 <article>
-  <p> Welcome, adventurer, and congratulations on taking your first step along the path of integration. </p>
-  <p> Following this trail mandates you be familiar with differentiation. </p>
+  <Content />
 </article>
 
 <div class="browse">

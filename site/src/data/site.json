@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-04-16",
+    "exported": "2025-04-17",
     "file_count": 25,
     "page_count": 24
   },
@@ -583,9 +583,9 @@
     },
     "guides/integrals/why.md": {
       "path": "guides/integrals/why.md",
-      "last_deploy": "2025-02-11 09:20:18 +0000",
-      "slocs": 30,
-      "chars": 3590,
+      "last_deploy": "2025-04-17 09:54:11 +0100",
+      "slocs": 35,
+      "chars": 4140,
       "isIndex": false,
       "flags": [
         "live",
@@ -605,8 +605,8 @@
         "guides",
         "integrals"
       ],
-      "date": null,
-      "date_display": null
+      "date": "2025-04-17",
+      "date_display": "2025 April 17"
     },
     "guides/sign.md": {
       "path": "guides/sign.md",
