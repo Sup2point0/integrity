@@ -30,6 +30,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
     
     <ArticleArray paths={[
       "guides/integrals/why-hard.md",
+      "guides/integrals/how.md",
     ]} />
   </aside>
 </article>
