@@ -7,6 +7,7 @@ import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import ArticleArray from "#parts/page/article-array.svelte";
+import ArticleFooter from "#parts/page/footer.article.svelte";
 
 </script>
 
@@ -33,4 +34,6 @@ import ArticleArray from "#parts/page/article-array.svelte";
       "guides/integrals/how.md",
     ]} />
   </aside>
+
+  <ArticleFooter {page} />
 </article>

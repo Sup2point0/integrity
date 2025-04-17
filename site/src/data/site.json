@@ -583,14 +583,13 @@
     },
     "guides/integrals/why.md": {
       "path": "guides/integrals/why.md",
-      "last_deploy": "2025-04-17 09:54:11 +0100",
+      "last_deploy": "2025-04-17 09:55:37 +0100",
       "slocs": 35,
-      "chars": 4140,
+      "chars": 4135,
       "isIndex": false,
       "flags": [
         "live",
-        "opin",
-        "dev"
+        "opin"
       ],
       "dest": "guides/integrals/why",
       "title": "Why Integrate?",
