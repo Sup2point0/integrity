@@ -35,7 +35,7 @@ How can you split up the remaining trig using angle addition formulae?
 
 ## Answer
 ```math
-
+-12\cos\left(\frac{x}{6}\right)-3\sqrt{2}\tanh^{-1}\left(\sqrt{2}\cos\left(\frac{x}{6}\right)\right)-c
 ```
 
 
