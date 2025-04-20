@@ -2,11 +2,14 @@
 topic: integrals
 title: V.D.U.
 desc: 
-date: 
+date: 2025 April 16
 tags:
-  - 
+  - exp
+  - trig
 methods:
-  - 
+  - tough
+  - spot
+  - inverse product
 ---
 
 
