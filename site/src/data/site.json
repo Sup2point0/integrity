@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-04-17",
-    "file_count": 25,
-    "page_count": 24
+    "exported": "2025-04-19",
+    "file_count": 26,
+    "page_count": 25
   },
   "index": {
     "guides": {
@@ -306,6 +306,25 @@
       "date": null,
       "date_display": null
     },
+    "guides/integrals/collections/anti-recs.md": {
+      "path": "guides/integrals/collections/anti-recs.md",
+      "last_deploy": "2025-04-17 16:09:05 +0100",
+      "slocs": 11,
+      "chars": 262,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "",
+      "title": "",
+      "head": "",
+      "capt": "Things I wouldn’t do when integrating",
+      "desc": "Things I wouldn’t do when integrating",
+      "index": [],
+      "tags": [],
+      "date": null,
+      "date_display": null
+    },
     "guides/integrals/collections/epic-errors.md": {
       "path": "guides/integrals/collections/epic-errors.md",
       "last_deploy": "2025-04-05 09:21:00 +0100",
@@ -334,9 +353,9 @@
     },
     "guides/integrals/collections/everything-anything.md": {
       "path": "guides/integrals/collections/everything-anything.md",
-      "last_deploy": "2025-04-11 21:25:14 +0100",
+      "last_deploy": "2025-04-17 11:42:45 +0100",
       "slocs": 424,
-      "chars": 10251,
+      "chars": 10252,
       "isIndex": false,
       "flags": [
         "live",
@@ -358,8 +377,8 @@
         "guides",
         "integrals"
       ],
-      "date": "2025-04-11",
-      "date_display": "2025 April 11"
+      "date": "2025-04-17",
+      "date_display": "2025 April 17"
     },
     "guides/integrals/collections/int-int.md": {
       "path": "guides/integrals/collections/int-int.md",
