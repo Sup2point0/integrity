@@ -4,8 +4,7 @@ title: INVERSION
 desc: 
 date: 2025 March 25
 tags:
-  - frac
-  - sqrt
+ - sqrt
   - inverse trig
 methods:
   - sub

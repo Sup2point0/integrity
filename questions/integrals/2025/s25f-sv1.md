@@ -4,8 +4,7 @@ title: what is this
 desc: 
 date: 2025 April 15
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - tough
   - spot

@@ -4,8 +4,7 @@ title: like it or not
 desc: 
 date: 2025 February 27
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - work
 ---

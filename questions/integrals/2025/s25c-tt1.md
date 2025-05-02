@@ -4,8 +4,7 @@ title: unstable concoction
 desc: 
 date: 2025 April 1
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - speed
 ---

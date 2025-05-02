@@ -5,8 +5,7 @@ desc:
 date: 2025 March 13
 tags:
   - scare
-  - frac
-  - poly
+ - poly
 methods:
   - 
 ---

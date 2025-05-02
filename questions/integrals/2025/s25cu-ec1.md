@@ -4,8 +4,7 @@ title: scent
 desc: 
 date: 2025 March 20
 tags:
-  - frac
-  - exp
+ - exp
   - trig
 methods:
   - spot

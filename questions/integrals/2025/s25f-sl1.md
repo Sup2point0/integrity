@@ -4,8 +4,7 @@ title: salient
 desc: 
 date: 2025 February 15
 tags:
-  - frac
-  - sqrt
+ - sqrt
 methods:
   - spot
 ---

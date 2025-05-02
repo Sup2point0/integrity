@@ -4,8 +4,7 @@ title: sprout
 desc: 
 date: 2025 March 25
 tags:
-  - frac
-  - poly
+ - poly
 methods:
   - sub
 ---

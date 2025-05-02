@@ -5,8 +5,7 @@ desc:
 date: 2025 March 17
 tags:
   - scare
-  - frac
-  - ln
+ - ln
 methods:
   - speed
 ---

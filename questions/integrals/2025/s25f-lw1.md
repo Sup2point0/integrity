@@ -4,8 +4,7 @@ title: lukewarm
 desc: 
 date: 2025 March 27
 tags:
-  - frac
-  - poly
+ - poly
 methods:
   - trig sub
 ---

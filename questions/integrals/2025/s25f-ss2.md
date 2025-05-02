@@ -4,8 +4,7 @@ title: recirculation
 desc: 
 date: 2025 April 7
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - tough
   - spot

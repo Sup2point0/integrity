@@ -4,8 +4,7 @@ title: drastic illumination
 desc: 
 date: 2025 April 4
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - spot
 ---

@@ -4,8 +4,7 @@ title: welcome to the arena
 desc: 
 date: 2025 March 17
 tags:
-  - frac
-  - poly
+ - poly
 methods:
   - 
 ---

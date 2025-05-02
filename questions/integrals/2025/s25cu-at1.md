@@ -4,8 +4,7 @@ title: STRAIGHT DOWN
 desc: 
 date: 2025 March 20
 tags:
-  - frac
-  - trig
+ - trig
   - exp
 methods:
   - spot

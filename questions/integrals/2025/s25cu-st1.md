@@ -4,8 +4,7 @@ title: carrier
 desc: 
 date: 2025 April 2
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - spot
 ---

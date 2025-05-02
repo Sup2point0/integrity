@@ -4,8 +4,7 @@ title: relinquish
 desc: 
 date: 2025 March 20
 tags:
-  - frac
-  - exp
+ - exp
   - infinite
 methods:
   - sub

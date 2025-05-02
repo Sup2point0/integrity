@@ -6,8 +6,7 @@ date: 2025 January 12
 tags:
   - horror
   - trig
-  - frac
-  - pi
+ - pi
 methods:
   - spot
 flags:

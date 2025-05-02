@@ -5,8 +5,7 @@ desc:
 date: 2025 March 22
 tags:
   - dread
-  - frac
-  - poly
+ - poly
 methods:
   - parts
 ---

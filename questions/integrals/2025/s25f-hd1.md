@@ -4,8 +4,7 @@ title: heads up, incoming
 desc: 
 date: 2025 March 13
 tags:
-  - frac
-  - exp
+ - exp
 methods:
   - spot
   - sub

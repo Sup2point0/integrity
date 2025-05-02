@@ -4,8 +4,7 @@ title: JMWCQ
 desc: 
 date: 2025 April 16
 tags:
-  - frac
-  - sqrt
+ - sqrt
   - trig
 methods:
   - tough

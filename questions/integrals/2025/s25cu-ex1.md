@@ -4,8 +4,7 @@ title: exposition
 desc: 
 date: 2025 March 30
 tags:
-  - frac
-  - exp
+ - exp
 methods:
   - work
 ---

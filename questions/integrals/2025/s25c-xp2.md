@@ -5,8 +5,7 @@ desc:
 date: 2025 March 18
 tags:
   - horror
-  - frac
-  - exp
+ - exp
   - inverse trig
   - complex
 methods:

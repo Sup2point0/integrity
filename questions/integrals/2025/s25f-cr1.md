@@ -4,8 +4,7 @@ title: cope
 desc: 
 date: 2025 January 30
 tags:
-  - frac
-  - trig
+ - trig
   - ln
 methods:
   - spot

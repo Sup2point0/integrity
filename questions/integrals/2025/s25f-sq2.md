@@ -4,8 +4,7 @@ title: as is
 desc: 
 date: 2025 March 27
 tags:
-  - frac
-  - sqrt
+ - sqrt
 methods:
   - speed
 ---

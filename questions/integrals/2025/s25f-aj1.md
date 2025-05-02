@@ -5,8 +5,7 @@ desc:
 date: 2025 April 16
 tags:
   - horror
-  - frac
-  - ln
+ - ln
   - trig
 methods:
   - tough

@@ -4,8 +4,7 @@ title: wishes
 desc: 
 date: 2025 February 26
 tags:
-  - frac
-  - poly
+ - poly
   - sqrt
   - inverse trig
 methods:

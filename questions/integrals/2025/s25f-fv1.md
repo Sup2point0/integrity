@@ -4,8 +4,7 @@ title: blossom
 desc: 
 date: 2025 February 6
 tags:
-  - frac
-  - poly
+ - poly
 methods:
   - spot
 ---

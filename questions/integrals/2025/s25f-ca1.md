@@ -4,8 +4,7 @@ title: fits
 desc: 
 date: 2025 January 29
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - speed
 ---

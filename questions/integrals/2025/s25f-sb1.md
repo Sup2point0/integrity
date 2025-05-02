@@ -4,8 +4,7 @@ title: sub base
 desc: 
 date: 2025 January 4
 tags:
-  - frac
-  - poly
+ - poly
 methods:
   - sub
 ---

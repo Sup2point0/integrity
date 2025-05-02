@@ -4,8 +4,7 @@ title: hypertrauma
 desc: 
 date: 2025 March 17
 tags:
-  - frac
-  - hyp trig
+ - hyp trig
   - complex
 methods:
   - speed

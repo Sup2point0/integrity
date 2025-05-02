@@ -5,8 +5,7 @@ desc:
 date: 2025 February 6
 tags:
   - definite
-  - frac
-  - ln
+ - ln
 methods:
   - tough
   - spot

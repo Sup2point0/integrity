@@ -4,8 +4,7 @@ title: cirrus
 desc: 
 date: 2025 March 8
 tags:
-  - frac
-  - trig
+ - trig
   - exp
 methods:
   - spot

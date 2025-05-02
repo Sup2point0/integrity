@@ -4,8 +4,7 @@ title: food for thought
 desc: 
 date: 2025 April 1
 tags:
-  - frac
-  - exp
+ - exp
 methods:
   - 
 ---

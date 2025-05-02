@@ -4,8 +4,7 @@ title: crossnaut
 desc: 
 date: 2025 March 17
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - speed
 ---

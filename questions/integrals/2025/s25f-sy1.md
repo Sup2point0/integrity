@@ -5,8 +5,7 @@ desc: This is a wild ride.
 date: 2025 February 9
 tags:
   - dread
-  - frac
-  - sqrt
+ - sqrt
   - trig
 methods:
   - long

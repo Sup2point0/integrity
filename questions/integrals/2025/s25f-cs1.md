@@ -4,8 +4,7 @@ title: cos why not
 desc: 
 date: 2025 March 24
 tags:
-  - frac
-  - trig
+ - trig
   - inverse trig
 methods:
   - fun

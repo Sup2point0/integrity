@@ -4,8 +4,7 @@ title: dauntless
 desc: 
 date: 2025 March 23
 tags:
-  - frac
-  - poly
+ - poly
 methods:
   - parts
 ---

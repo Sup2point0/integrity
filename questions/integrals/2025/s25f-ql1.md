@@ -4,8 +4,7 @@ title: vanquish
 desc: 
 date: 2025 March 25
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - layer cake
 ---
