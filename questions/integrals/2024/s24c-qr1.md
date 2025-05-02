@@ -4,8 +4,7 @@ title: don’t overcomplicate
 desc: 
 date: 2024 September
 tags:
-  - frac
-  - sqrt
+ - sqrt
 methods:
   - sub
 ---

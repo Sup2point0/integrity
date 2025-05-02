@@ -4,8 +4,7 @@ title: simply devastating
 desc: 
 date: 2024 September
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - speed
 ---

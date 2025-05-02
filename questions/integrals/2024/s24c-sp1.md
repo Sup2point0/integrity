@@ -5,8 +5,7 @@ desc:
 date: 2024 September
 tags:
   - scare
-  - frac
-  - poly
+ - poly
 methods:
   - 
 ---

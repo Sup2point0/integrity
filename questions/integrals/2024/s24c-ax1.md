@@ -5,8 +5,7 @@ desc:
 date: 2024 November
 tags:
   - dread
-  - frac
-  - inverse trig
+ - inverse trig
 methods:
   - sub
   - parts

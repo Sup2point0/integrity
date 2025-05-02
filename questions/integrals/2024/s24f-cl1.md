@@ -4,8 +4,7 @@ title: skylight
 desc: 
 date: 2024 December 22
 tags:
-  - frac
-  - inverse trig
+ - inverse trig
 methods:
   - parts
   - inverse chain rule

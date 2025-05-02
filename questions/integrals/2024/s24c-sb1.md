@@ -4,8 +4,7 @@ title: classic
 desc: 
 date: 2024 September
 tags:
-  - frac
-  - sqrt
+ - sqrt
 methods:
   - 
 ---

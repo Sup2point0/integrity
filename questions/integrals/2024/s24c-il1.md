@@ -4,8 +4,7 @@ title: inverted
 desc: 
 date: 2024 September
 tags:
-  - frac
-  - trig
+ - trig
   - ln
 methods:
   - spot

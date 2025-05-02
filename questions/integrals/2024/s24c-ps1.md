@@ -4,8 +4,7 @@ title: spotted
 desc: 
 date: 2024 October
 tags:
-  - frac
-  - trig
+ - trig
   - exp
 methods:
   - spot

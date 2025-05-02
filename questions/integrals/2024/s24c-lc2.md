@@ -4,8 +4,7 @@ title: straight-up
 desc: 
 date: 2024 September
 tags:
-  - frac
-  - exp
+ - exp
 methods:
   - spot
   - layer cake

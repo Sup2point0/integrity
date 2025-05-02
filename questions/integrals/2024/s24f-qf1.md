@@ -6,8 +6,7 @@ date: 2024 December 13
 tags:
   - dread
   - sqrt
-  - frac
-  - pi
+ - pi
 methods:
   - work
   - long

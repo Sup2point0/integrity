@@ -4,8 +4,7 @@ title: hidey
 desc: 
 date: 2024 October
 tags:
-  - frac
-  - trig
+ - trig
 methods:
   - speed
   - spot

@@ -4,8 +4,7 @@ title: init
 desc: 
 date: 2024 September
 tags:
-  - frac
-  - poly
+ - poly
 methods:
   - speed
 ---

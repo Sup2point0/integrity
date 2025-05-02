@@ -4,8 +4,7 @@ title: actually
 desc: 
 date: 2024 October
 tags:
-  - frac
-  - sqrt
+ - sqrt
 methods:
   - trig sub
 ---
