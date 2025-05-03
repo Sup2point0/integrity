@@ -38,7 +38,7 @@ onMount(() => {
 
 <svelte:head>
   <title> Integrity · Sup#2.0 </title>
-  <meta name="description" content="All my hand-crafted maths questions!" />
+  <meta name="description" content="Lovingly handcrafted mathematics questions for the intellectually adventurous." />
 </svelte:head>
 
 

@@ -15,7 +15,7 @@ import { base } from "$app/paths";
 
 
 <Meta title="Explore"
-  desc="Explore the content of Integrity"
+  desc="Explore questions, tools and articles on Integrity"
 />
 
 

@@ -29,7 +29,6 @@ let desmos: any | false | null = $state(null);
 let last_reset: number = Date.now();
 
 
-
 onMount(() => {
   try_load_desmos();
 });
@@ -117,7 +116,7 @@ function apply_question(shard: Shard | null) {
 
 
 <Meta title="Workspace"
-  desc="Preset Desmos calculator for solving questions in Integrity"
+  desc="An in-built Desmos calculator with presets to check solutions to integrals and other problems on Integrity"
 >
   <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </Meta>

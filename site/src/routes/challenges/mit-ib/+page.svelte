@@ -9,7 +9,9 @@ import Meta from "#parts/page/meta.svelte";
 </script>
 
 
-<Meta title="MIT Integration Bee" desc="Fun questions from the MIT Integration Bee rounds" />
+<Meta title="MIT Integration Bee"
+  desc="Fun questions from the MIT Integration Bee rounds"
+/>
 
 
 <Breadcrumbs levels={[
