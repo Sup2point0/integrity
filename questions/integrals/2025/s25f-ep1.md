@@ -4,7 +4,7 @@ title: nature
 desc: 
 date: 2025 February 5
 tags:
- - exp
+  - exp
 methods:
   - spot
 ---

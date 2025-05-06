@@ -4,7 +4,7 @@ title: exposition
 desc: 
 date: 2025 March 30
 tags:
- - exp
+  - exp
 methods:
   - work
 ---

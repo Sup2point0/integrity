@@ -4,7 +4,7 @@ title: neogenesis
 desc: 
 date: 2025 April 5
 tags:
- - poly
+  - poly
   - ln
 methods:
   - 

@@ -5,7 +5,7 @@ desc:
 date: 2025 March 27
 tags:
   - scare
- - trig
+  - trig
 methods:
   - spot
 ---

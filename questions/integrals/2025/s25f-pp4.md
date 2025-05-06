@@ -4,7 +4,7 @@ title: solitude
 desc: 
 date: 2025 March 27
 tags:
- - poly
+  - poly
 methods:
   - long
   - partials

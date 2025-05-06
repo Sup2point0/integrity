@@ -4,7 +4,7 @@ title: hallucinations
 desc: 
 date: 2025 March 27
 tags:
- - sqrt
+  - sqrt
 methods:
   - hyp trig sub
 ---

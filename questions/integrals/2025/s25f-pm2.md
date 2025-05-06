@@ -4,7 +4,7 @@ title: postmortem
 desc: 
 date: 2025 April 3
 tags:
- - trig
+  - trig
   - ln
 methods:
   - 

@@ -4,7 +4,7 @@ title: kurtosis
 desc: 
 date: 2025 January 10
 tags:
- - poly
+  - poly
   - sqrt
 methods:
   - trig sub

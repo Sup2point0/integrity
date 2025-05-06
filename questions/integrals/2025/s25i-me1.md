@@ -4,7 +4,7 @@ title: unfazed!
 desc: 
 date: 2025 January 23
 tags:
- - trig
+  - trig
   - exp
 methods:
   - tough

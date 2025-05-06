@@ -4,7 +4,7 @@ title: heads up, incoming
 desc: 
 date: 2025 March 13
 tags:
- - exp
+  - exp
 methods:
   - spot
   - sub

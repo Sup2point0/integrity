@@ -5,7 +5,7 @@ desc: Happy Valentine’s day!
 date: 2025 February 14
 tags:
   - horror
- - poly
+  - poly
   - exp
   - trig
 methods:

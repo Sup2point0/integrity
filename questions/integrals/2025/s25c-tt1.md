@@ -4,7 +4,7 @@ title: unstable concoction
 desc: 
 date: 2025 April 1
 tags:
- - trig
+  - trig
 methods:
   - speed
 ---

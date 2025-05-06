@@ -4,7 +4,7 @@ title: finality
 desc: 
 date: 2025 March 16
 tags:
- - exp
+  - exp
   - trig
 methods:
   - spot

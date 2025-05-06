@@ -4,7 +4,7 @@ title: relinquish
 desc: 
 date: 2025 March 20
 tags:
- - exp
+  - exp
   - infinite
 methods:
   - sub

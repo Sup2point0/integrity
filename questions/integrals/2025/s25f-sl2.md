@@ -4,7 +4,7 @@ title: splendid
 desc: 
 date: 2025 February 5
 tags:
- - ln
+  - ln
 methods:
   - spot
   - layer cake

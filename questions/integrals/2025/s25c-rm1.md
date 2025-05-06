@@ -4,7 +4,7 @@ title: partial pain
 desc: 
 date: 2025 March 17
 tags:
- - poly
+  - poly
   - pi
 methods:
   - tough

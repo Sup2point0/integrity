@@ -4,7 +4,7 @@ title: never gonna
 desc: 
 date: 2025 April 1
 tags:
- - exp
+  - exp
   - ln
   - inverse trig
 methods:

@@ -4,7 +4,7 @@ title: blossom
 desc: 
 date: 2025 February 6
 tags:
- - poly
+  - poly
 methods:
   - spot
 ---

@@ -4,7 +4,7 @@ title: full flavour
 desc: The final integral for our Integration Bee 2025.
 date: 2025 April 2
 tags:
- - trig
+  - trig
   - exp
 methods:
   - sub

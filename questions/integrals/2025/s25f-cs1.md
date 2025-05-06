@@ -4,7 +4,7 @@ title: cos why not
 desc: 
 date: 2025 March 24
 tags:
- - trig
+  - trig
   - inverse trig
 methods:
   - fun

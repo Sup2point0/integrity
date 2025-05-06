@@ -5,7 +5,7 @@ desc:
 date: 2025 January 23
 tags:
   - horror
- - exp
+  - exp
   - sqrt
 methods:
   - spot

@@ -4,7 +4,7 @@ title: priorities
 desc: 
 date: 2025 March 31
 tags:
- - sqrt
+  - sqrt
   - inverse trig
 methods:
   - sub

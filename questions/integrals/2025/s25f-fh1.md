@@ -4,7 +4,7 @@ title: fractured hearted
 desc: 
 date: 2025 April 7
 tags:
- - trig
+  - trig
 methods:
   - work
 ---

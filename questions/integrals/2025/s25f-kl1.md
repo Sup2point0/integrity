@@ -4,7 +4,7 @@ title: reminiscence
 desc: 
 date: 2025 March 24
 tags:
- - trig
+  - trig
 methods:
   - tough
   - spot

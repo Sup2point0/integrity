@@ -5,7 +5,7 @@ desc:
 date: 2025 March 17
 tags:
   - scare
- - ln
+  - ln
 methods:
   - speed
 ---

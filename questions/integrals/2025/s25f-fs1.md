@@ -4,7 +4,7 @@ title: foreshadowing
 desc: 
 date: 2025 March 8
 tags:
- - poly
+  - poly
   - sqrt
 methods:
   - 

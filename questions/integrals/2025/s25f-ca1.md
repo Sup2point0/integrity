@@ -4,7 +4,7 @@ title: fits
 desc: 
 date: 2025 January 29
 tags:
- - trig
+  - trig
 methods:
   - speed
 ---

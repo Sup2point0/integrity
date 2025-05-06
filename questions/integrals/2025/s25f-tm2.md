@@ -4,7 +4,7 @@ title: task manager
 desc: 
 date: 2025 March 27
 tags:
- - sqrt
+  - sqrt
   - exp
 methods:
   - sub

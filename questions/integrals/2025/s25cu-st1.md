@@ -4,7 +4,7 @@ title: carrier
 desc: 
 date: 2025 April 2
 tags:
- - trig
+  - trig
 methods:
   - spot
 ---

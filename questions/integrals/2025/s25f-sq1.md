@@ -4,7 +4,7 @@ title: MISFITS
 desc: 
 date: 2025 March 27
 tags:
- - poly
+  - poly
   - sqrt
 methods:
   - sub

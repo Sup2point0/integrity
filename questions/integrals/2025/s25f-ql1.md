@@ -4,7 +4,7 @@ title: vanquish
 desc: 
 date: 2025 March 25
 tags:
- - trig
+  - trig
 methods:
   - layer cake
 ---

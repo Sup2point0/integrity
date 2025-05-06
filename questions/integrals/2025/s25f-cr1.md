@@ -4,7 +4,7 @@ title: cope
 desc: 
 date: 2025 January 30
 tags:
- - trig
+  - trig
   - ln
 methods:
   - spot

@@ -4,7 +4,7 @@ title: recirculation
 desc: 
 date: 2025 April 7
 tags:
- - trig
+  - trig
 methods:
   - tough
   - spot

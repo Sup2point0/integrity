@@ -4,7 +4,7 @@ title: covert operations
 desc: 
 date: 2025 April 15
 tags:
- - sqrt
+  - sqrt
   - poly
 methods:
   - spot

@@ -5,7 +5,7 @@ desc:
 date: 2025 March 25
 tags:
   - dread
- - sqrt
+  - sqrt
   - exp
   - ln
 methods:

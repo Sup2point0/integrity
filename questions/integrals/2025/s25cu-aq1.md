@@ -4,7 +4,7 @@ title: INVERSION
 desc: 
 date: 2025 March 25
 tags:
- - sqrt
+  - sqrt
   - inverse trig
 methods:
   - sub

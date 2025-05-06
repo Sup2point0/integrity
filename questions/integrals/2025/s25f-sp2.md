@@ -5,7 +5,7 @@ desc: Celebrating 200 integrals on <em>Integrity</em>!!
 date: 2025 April 15
 tags:
   - scare
- - exp
+  - exp
   - ln
 methods:
   - fun

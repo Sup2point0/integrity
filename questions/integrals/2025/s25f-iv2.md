@@ -4,7 +4,7 @@ title: everything will be alright
 desc: 
 date: 2025 March 27
 tags:
- - trig
+  - trig
 methods:
   - spot
 ---

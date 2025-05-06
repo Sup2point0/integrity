@@ -4,7 +4,7 @@ title: salient
 desc: 
 date: 2025 February 15
 tags:
- - sqrt
+  - sqrt
 methods:
   - spot
 ---
