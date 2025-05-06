@@ -1,5 +1,9 @@
-# output
+# squark
 ~content.svx
+
+scss-config.js
+
+# output
 static/
 build/
 

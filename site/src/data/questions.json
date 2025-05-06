@@ -1776,7 +1776,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "poly"
       ],
       "methods": [
@@ -1823,7 +1822,6 @@
       "date": "2024 November",
       "tags": [
         "dread",
-        "frac",
         "inverse trig"
       ],
       "methods": [
@@ -1942,7 +1940,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -2022,7 +2019,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -2082,7 +2078,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "trig",
         "ln"
       ],
@@ -2150,7 +2145,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "sqrt"
       ],
       "methods": [
@@ -2198,7 +2192,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "exp"
       ],
       "methods": [
@@ -2277,7 +2270,6 @@
       "desc": null,
       "date": "2024 October",
       "tags": [
-        "frac",
         "sqrt"
       ],
       "methods": [
@@ -2325,7 +2317,6 @@
       "desc": null,
       "date": "2024 October",
       "tags": [
-        "frac",
         "trig",
         "exp"
       ],
@@ -2548,7 +2539,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "sqrt"
       ],
       "methods": [
@@ -2596,7 +2586,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "sqrt"
       ],
       "methods": [
@@ -2695,7 +2684,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "sqrt"
       ],
       "methods": [
@@ -2881,7 +2869,6 @@
       "date": "2024 September",
       "tags": [
         "scare",
-        "frac",
         "poly"
       ],
       "methods": [
@@ -2933,7 +2920,6 @@
       "desc": null,
       "date": "2024 October",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -3036,7 +3022,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -3096,7 +3081,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "exp"
       ],
       "methods": [
@@ -3185,7 +3169,6 @@
       "desc": null,
       "date": "2024 September",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -3277,7 +3260,6 @@
       "desc": null,
       "date": "2024 December 22",
       "tags": [
-        "frac",
         "inverse trig"
       ],
       "methods": [
@@ -3656,7 +3638,6 @@
       "date": "2024 December 13",
       "tags": [
         "poly",
-        "frac",
         "dread"
       ],
       "methods": [
@@ -3972,7 +3953,6 @@
       "desc": null,
       "date": "2024 December 10",
       "tags": [
-        "frac",
         "trig",
         "ln",
         "horror"
@@ -4426,7 +4406,6 @@
       "tags": [
         "dread",
         "sqrt",
-        "frac",
         "pi"
       ],
       "methods": [
@@ -4519,7 +4498,6 @@
       "desc": null,
       "date": "2024 December 10",
       "tags": [
-        "frac",
         "sqrt"
       ],
       "methods": [
@@ -4560,7 +4538,6 @@
       "desc": null,
       "date": "2024 November",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -4845,7 +4822,6 @@
       "date": "2025 March 17",
       "tags": [
         "scare",
-        "frac",
         "ln"
       ],
       "methods": [
@@ -4897,7 +4873,6 @@
       "desc": null,
       "date": "2025 March 23",
       "tags": [
-        "frac",
         "poly"
       ],
       "methods": [
@@ -5061,7 +5036,6 @@
       "desc": "The final integral for our Integration Bee 2025.",
       "date": "2025 April 2",
       "tags": [
-        "frac",
         "trig",
         "exp"
       ],
@@ -5148,7 +5122,6 @@
       "desc": null,
       "date": "2025 March 17",
       "tags": [
-        "frac",
         "poly"
       ],
       "methods": [
@@ -5200,7 +5173,6 @@
       "desc": null,
       "date": "2025 March 17",
       "tags": [
-        "frac",
         "poly",
         "pi"
       ],
@@ -5283,7 +5255,6 @@
       "desc": null,
       "date": "2025 April 1",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -5442,7 +5413,6 @@
       "desc": null,
       "date": "2025 April 1",
       "tags": [
-        "frac",
         "exp"
       ],
       "methods": [
@@ -5474,7 +5444,6 @@
       "desc": null,
       "date": "2025 March 17",
       "tags": [
-        "frac",
         "hyp trig",
         "complex"
       ],
@@ -5528,7 +5497,6 @@
       "date": "2025 March 18",
       "tags": [
         "horror",
-        "frac",
         "exp",
         "inverse trig",
         "complex"
@@ -5596,7 +5564,6 @@
       "desc": null,
       "date": "2025 March 17",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -5636,7 +5603,6 @@
       "desc": null,
       "date": "2025 March 25",
       "tags": [
-        "frac",
         "sqrt",
         "inverse trig"
       ],
@@ -5691,7 +5657,6 @@
       "desc": null,
       "date": "2025 March 20",
       "tags": [
-        "frac",
         "trig",
         "exp"
       ],
@@ -5758,7 +5723,6 @@
       "desc": null,
       "date": "2025 March 20",
       "tags": [
-        "frac",
         "exp",
         "trig"
       ],
@@ -5800,7 +5764,6 @@
       "desc": null,
       "date": "2025 March 30",
       "tags": [
-        "frac",
         "exp"
       ],
       "methods": [
@@ -5943,7 +5906,6 @@
       "desc": null,
       "date": "2025 March 16",
       "tags": [
-        "frac",
         "exp",
         "trig"
       ],
@@ -5997,7 +5959,6 @@
       "desc": null,
       "date": "2025 April 2",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -6102,7 +6063,6 @@
       "desc": null,
       "date": "2025 April 1",
       "tags": [
-        "frac",
         "exp",
         "ln",
         "inverse trig"
@@ -6163,7 +6123,6 @@
       "date": "2025 April 16",
       "tags": [
         "horror",
-        "frac",
         "ln",
         "trig"
       ],
@@ -6398,7 +6357,6 @@
       "desc": null,
       "date": "2025 January 29",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -6630,7 +6588,6 @@
       "desc": null,
       "date": "2025 April 4",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -6662,7 +6619,6 @@
       "desc": null,
       "date": "2025 March 31",
       "tags": [
-        "frac",
         "sqrt",
         "inverse trig"
       ],
@@ -6729,7 +6685,6 @@
       "desc": null,
       "date": "2025 January 30",
       "tags": [
-        "frac",
         "trig",
         "ln"
       ],
@@ -6790,7 +6745,6 @@
       "desc": null,
       "date": "2025 March 24",
       "tags": [
-        "frac",
         "trig",
         "inverse trig"
       ],
@@ -6916,6 +6870,73 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &\\ \\int \\sin\\left(\\tan^{-1}x\\right)^{2}\\ dx  \\\\ =&\\ \\int \\sin\\left(t\\right)^{2}\\ dx  \\\\ =&\\ \\int \\left(\\frac{x}{\\sqrt{x^{2}+1}}\\right)^{2}\\ dx  \\\\ =&\\ \\int \\frac{x^{2}}{x^{2}+1}\\ dx  \\\\ =&\\ \\int \\frac{x^{2}+1-1}{x^{2}+1}\\ dx  \\\\ =&\\ \\int 1-\\frac{1}{x^{2}+1}\\ dx  \\\\ =&\\ x-\\tan^{-1}x-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ct2": {
+      "topic": "integrals",
+      "title": "slacking",
+      "desc": null,
+      "date": "2025 April 17",
+      "tags": [
+        "trig",
+        "poly angle"
+      ],
+      "methods": [
+        "fun",
+        "spot"
+      ],
+      "shard": "s25f-ct2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\cos2x}{1+\\left(\\sin x-\\cos x\\right)^{2}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What’s the derivative of $\\sin(x)-\\cos(x)$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How else could you write $\\cos(2x)$?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "$\\cos(2x)$ happens to split very nicely when factorised (equivalently, it factorises very nicely when split)."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{1}{2}\\ln\\left(\\left(\\sin x-\\cos x\\right)^{2}+1\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\cos2x}{1+\\left(\\sin x-\\cos x\\right)^{2}}\\ dx  \\\\ =&\\ \\int \\frac{\\cos^{2}x-\\sin^{2}x}{1+\\left(\\sin x-\\cos x\\right)^{2}}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\cos x-\\sin x\\right)\\left(\\cos x+\\sin x\\right)}{1+\\left(\\sin x-\\cos x\\right)^{2}}\\ dx  \\\\ =&\\ -\\int \\frac{\\left(\\sin x-\\cos x\\right)\\left(\\cos x+\\sin x\\right)}{1+\\left(\\sin x-\\cos x\\right)^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sin x-\\cos x &= t  \\\\ \\left(\\cos x+\\sin x\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\int \\frac{t}{1+t^{2}}\\ dt  \\\\ &= -\\frac{1}{2}\\int \\frac{2t}{t^{2}+1}\\ dt  \\\\ &= -\\frac{1}{2}\\ln\\left(t^{2}+1\\right)  \\\\ &= -\\frac{1}{2}\\ln\\left(\\left(\\sin x-\\cos x\\right)^{2}+1\\right)-c\\end{align*}"
           }
         ]
       }
@@ -7106,7 +7127,6 @@
       "date": "2025 February 6",
       "tags": [
         "definite",
-        "frac",
         "ln"
       ],
       "methods": [
@@ -7474,7 +7494,6 @@
       "desc": null,
       "date": "2025 February 5",
       "tags": [
-        "frac",
         "exp"
       ],
       "methods": [
@@ -8074,7 +8093,6 @@
       "desc": null,
       "date": "2025 April 7",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -8154,7 +8172,6 @@
       "tags": [
         "scare",
         "funny",
-        "frac",
         "poly"
       ],
       "methods": [
@@ -8262,7 +8279,6 @@
       "desc": null,
       "date": "2025 March 8",
       "tags": [
-        "frac",
         "poly",
         "sqrt"
       ],
@@ -8364,7 +8380,6 @@
       "desc": null,
       "date": "2025 February 6",
       "tags": [
-        "frac",
         "poly"
       ],
       "methods": [
@@ -8470,7 +8485,6 @@
       "desc": null,
       "date": "2025 February 26",
       "tags": [
-        "frac",
         "poly",
         "sqrt",
         "inverse trig"
@@ -8649,7 +8663,6 @@
       "desc": null,
       "date": "2025 March 13",
       "tags": [
-        "frac",
         "exp"
       ],
       "methods": [
@@ -8965,7 +8978,6 @@
       "desc": null,
       "date": "2025 March 27",
       "tags": [
-        "frac",
         "sqrt"
       ],
       "methods": [
@@ -9224,7 +9236,6 @@
       "desc": null,
       "date": "2025 February 27",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -9665,7 +9676,6 @@
       "tags": [
         "horror",
         "trig",
-        "frac",
         "pi"
       ],
       "methods": [
@@ -9740,7 +9750,6 @@
       "desc": null,
       "date": "2025 March 27",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -9825,7 +9834,6 @@
       "desc": null,
       "date": "2025 April 16",
       "tags": [
-        "frac",
         "sqrt",
         "trig"
       ],
@@ -9911,7 +9919,6 @@
       "desc": null,
       "date": "2025 March 24",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -10037,7 +10044,6 @@
       "date": "2025 March 25",
       "tags": [
         "dread",
-        "frac",
         "sqrt",
         "exp",
         "ln"
@@ -10301,7 +10307,6 @@
       "date": "2025 February 14",
       "tags": [
         "horror",
-        "frac",
         "poly",
         "exp",
         "trig"
@@ -10450,7 +10455,6 @@
       "desc": null,
       "date": "2025 March 27",
       "tags": [
-        "frac",
         "poly"
       ],
       "methods": [
@@ -10534,7 +10538,6 @@
       "desc": null,
       "date": "2025 April 15",
       "tags": [
-        "frac",
         "sqrt",
         "poly"
       ],
@@ -10582,13 +10585,66 @@
         }
       ]
     },
+    "s25f-lx1": {
+      "topic": "integrals",
+      "title": "instincts",
+      "desc": null,
+      "date": "2025 April 18",
+      "tags": [
+        "trig",
+        "ln"
+      ],
+      "methods": [
+        "parts"
+      ],
+      "shard": "s25f-lx1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int x\\sin\\left(\\ln x\\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Straight into substitution!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{5}x^{2}\\left(2\\sin\\left(\\ln x\\right)-\\cos\\left(\\ln x\\right)\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\ln x &= t  \\\\ x &= e^{t}  \\\\ dx &= e^{t}\\ dt\\end{align*}"
+          }
+        ],
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int x\\sin\\left(\\ln x\\right)\\ dx  \\\\ =&\\ \\int e^{t}\\sin\\left(t\\right)\\cdot e^{t}\\ dt  \\\\ =&\\ \\int e^{2t}\\sin t\\ dt\\end{align*}"
+          }
+        ],
+        "parts duplication": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\int e^{2t}\\sin t\\ dt    &= \\frac{1}{2}e^{2t}\\sin t-\\int \\frac{1}{2}e^{2t}\\cos t\\ dt  \\\\ &= \\frac{1}{2}e^{2t}\\sin t-\\frac{1}{2}\\left(\\frac{1}{2}e^{2t}\\cos t-\\int \\frac{1}{2}e^{2t}\\cdot-\\sin t\\ dt\\right)  \\\\ &= \\frac{1}{2}e^{2t}\\sin t-\\frac{1}{4}e^{2t}\\cos t-\\frac{1}{4}\\int e^{2t}\\sin t\\ dt  \\\\ \\frac{5}{4}\\int e^{2t}\\sin t\\ dt    &= \\frac{1}{4}e^{2t}\\left(2\\sin t-\\cos t\\right)  \\\\ \\int e^{2t}\\sin t\\ dt    &= \\frac{1}{5}e^{2t}\\left(2\\sin t-\\cos t\\right)  \\\\ &= \\frac{1}{5}x^{2}\\left(2\\sin\\left(\\ln x\\right)-\\cos\\left(\\ln x\\right)\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-nb1": {
       "topic": "integrals",
       "title": "kurtosis",
       "desc": null,
       "date": "2025 January 10",
       "tags": [
-        "frac",
         "poly",
         "sqrt"
       ],
@@ -10653,7 +10709,6 @@
       "desc": null,
       "date": "2025 April 5",
       "tags": [
-        "frac",
         "poly",
         "ln"
       ],
@@ -10709,7 +10764,6 @@
       "date": "2025 March 22",
       "tags": [
         "dread",
-        "frac",
         "poly"
       ],
       "methods": [
@@ -10940,7 +10994,6 @@
       "desc": null,
       "date": "2025 March 25",
       "tags": [
-        "frac",
         "poly"
       ],
       "methods": [
@@ -10980,7 +11033,6 @@
       "desc": null,
       "date": "2025 April 3",
       "tags": [
-        "frac",
         "trig",
         "ln"
       ],
@@ -11229,7 +11281,6 @@
       "desc": null,
       "date": "2025 March 27",
       "tags": [
-        "frac",
         "poly"
       ],
       "methods": [
@@ -11492,7 +11543,6 @@
       "desc": null,
       "date": "2025 March 25",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -12072,7 +12122,6 @@
       "desc": null,
       "date": "2025 March 20",
       "tags": [
-        "frac",
         "exp",
         "infinite"
       ],
@@ -12288,7 +12337,6 @@
       "date": "2025 March 27",
       "tags": [
         "scare",
-        "frac",
         "trig"
       ],
       "methods": [
@@ -12366,7 +12414,6 @@
       "desc": null,
       "date": "2025 January 4",
       "tags": [
-        "frac",
         "poly"
       ],
       "methods": [
@@ -12582,7 +12629,6 @@
       "desc": null,
       "date": "2025 February 15",
       "tags": [
-        "frac",
         "sqrt"
       ],
       "methods": [
@@ -12622,7 +12668,6 @@
       "desc": null,
       "date": "2025 February 5",
       "tags": [
-        "frac",
         "ln"
       ],
       "methods": [
@@ -12743,7 +12788,6 @@
       "date": "2025 March 13",
       "tags": [
         "scare",
-        "frac",
         "poly"
       ],
       "methods": [
@@ -12836,7 +12880,6 @@
       "date": "2025 April 15",
       "tags": [
         "scare",
-        "frac",
         "exp",
         "ln"
       ],
@@ -12933,7 +12976,6 @@
       "desc": null,
       "date": "2025 March 27",
       "tags": [
-        "frac",
         "poly",
         "sqrt"
       ],
@@ -12994,7 +13036,6 @@
       "desc": null,
       "date": "2025 March 27",
       "tags": [
-        "frac",
         "sqrt"
       ],
       "methods": [
@@ -13094,7 +13135,6 @@
       "desc": null,
       "date": "2025 April 7",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -13143,13 +13183,84 @@
         ]
       }
     },
+    "s25f-st1": {
+      "topic": "integrals",
+      "title": "creativity is running out",
+      "desc": null,
+      "date": "2025 April 18",
+      "tags": [
+        "sqrt",
+        "trig"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25f-st1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\tan x}{1+\\sqrt{\\sec x}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Start with an obvious substitution."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "The derivative of $\\sec(x)$ includes itself."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "The overall substitution is $\\sqrt{\\sec{x}} = t$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "2\\ln\\sqrt{\\sec x}-2\\ln\\left(1+\\sqrt{\\sec x}\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sec{t} &= t  \\\\ \\sec x\\tan x\\ dx &= dt  \\\\ \\tan x\\ dx &= \\frac{1}{t}\\ dt\\end{align*}"
+          }
+        ],
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\tan x}{1+\\sqrt{\\sec x}}\\ dx  \\\\ =&\\ \\int \\frac{1}{1+\\sqrt{t}}\\cdot\\frac{1}{t}\\ dt  \\\\ =&\\ \\int \\frac{1}{t\\left(1+\\sqrt{t}\\right)}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{t} &= v  \\\\ t &= v^{2}  \\\\ dt &= 2v\\ dv\\end{align*}"
+          }
+        ],
+        "partial fractions": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1}{v^{2}\\left(1+v\\right)}\\cdot2v\\ dv  \\\\ &= 2\\int \\frac{1}{v\\left(1+v\\right)}\\ dv  \\\\ &= 2\\int \\frac{1}{v}-\\frac{1}{1+v}\\ dv  \\\\ &= 2\\ln v-2\\ln\\left(1+v\\right)  \\\\ &= 2\\ln\\sqrt{t}-2\\ln\\left(1+\\sqrt{t}\\right)  \\\\ &= 2\\ln\\sqrt{\\sec x}-2\\ln\\left(1+\\sqrt{\\sec x}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-sv1": {
       "topic": "integrals",
       "title": "what is this",
       "desc": null,
       "date": "2025 April 15",
       "tags": [
-        "frac",
         "trig"
       ],
       "methods": [
@@ -13337,7 +13448,6 @@
       "date": "2025 February 9",
       "tags": [
         "dread",
-        "frac",
         "sqrt",
         "trig"
       ],
@@ -13941,7 +14051,6 @@
       "desc": null,
       "date": "2025 March 27",
       "tags": [
-        "frac",
         "sqrt",
         "exp"
       ],
@@ -13990,7 +14099,6 @@
       "desc": null,
       "date": "2025 March 8",
       "tags": [
-        "frac",
         "trig",
         "exp"
       ],
@@ -14080,6 +14188,66 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &\\ \\int \\left(10-\\sqrt{x}\\right)^{10}\\ dx  \\\\ =&\\ \\int t^{10}\\cdot\\left(2t-20\\right)\\ dt  \\\\ =&\\ \\int 2t^{11}-20t^{10}\\ dt  \\\\ =&\\ \\frac{2}{12}t^{12}-\\frac{20}{11}t^{11}  \\\\ =&\\ \\frac{1}{66}t^{11}\\left(11t-120\\right)  \\\\ =&\\ =\\frac{1}{66}\\left(10-\\sqrt{x}\\right)^{11}\\left(11\\left(10-\\sqrt{x}\\right)-120\\right)  \\\\ =&\\ =\\frac{1}{66}\\left(10-\\sqrt{x}\\right)^{11}\\left(-11\\sqrt{x}-10\\right)  \\\\ =&\\ =\\frac{1}{66}\\left(10-\\sqrt{x}\\right)^{11}\\cdot-\\left(11\\sqrt{x}+10\\right)  \\\\ =&\\ \\frac{1}{66}\\left(\\sqrt{x}-10\\right)^{11}\\left(11\\sqrt{x}+10\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ts1": {
+      "topic": "integrals",
+      "title": "automata",
+      "desc": null,
+      "date": "2025 April 18",
+      "tags": [
+        "sqrt",
+        "poly"
+      ],
+      "methods": [
+        "trig sub"
+      ],
+      "shard": "s25f-ts1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{x}{x+\\sqrt{x^{2}+1}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What does $\\sqrt{x^2+1}$ suggest?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Trig sub is probably easier here than hyp trig sub."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Let $x^2 = \\tan(t)$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{3}\\left[\\left(x^{2}+1\\right)^{3/2}-x^{3}\\right]-c"
+        }
+      ],
+      "solution": {
+        "trigonometric substitution": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x &= \\tan{t}  \\\\ dx &= \\sec^2{t} \\ dt\\end{align*}"
+          }
+        ],
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x}{x+\\sqrt{x^{2}+1}}\\ dx  \\\\ =&\\ \\int \\frac{\\tan t}{\\tan t+\\sqrt{\\tan^{2}t+1}}\\cdot\\sec^{2}t\\ dt  \\\\ =&\\ \\int \\frac{\\sec^{2}t\\tan t}{\\tan t+\\sec t}\\ dt  \\\\ =&\\ \\int \\frac{\\sec^{2}t\\tan t}{\\tan t+\\sec t}\\cdot\\frac{\\tan t-\\sec t}{\\tan t-\\sec t}\\ dt  \\\\ =&\\ \\int \\frac{\\left(\\sec^{2}t\\tan t\\right)\\left(\\tan t-\\sec t\\right)}{\\tan^{2}t-\\sec^{2}t}\\ dt  \\\\ =&\\ \\int \\frac{\\left(\\sec^{2}t\\tan t\\right)\\left(\\tan t-\\sec t\\right)}{-1}\\ dt  \\\\ =&\\ -\\int \\sec^{2}t\\tan^{2}t-\\sec^{3}t\\tan t\\ dt  \\\\ =&\\ \\int \\sec^{2}t\\cdot\\sec t\\tan t\\ dt-\\int \\tan^{2}t\\cdot\\sec^{2}t\\ dt  \\\\ =&\\ \\frac{1}{3}\\sec^{3}t-\\frac{1}{3}\\tan^{3}t  \\\\ =&\\ \\frac{1}{3}\\left[\\left(x^{2}+1\\right)^{3/2}-x^{3}\\right]-c\\end{align*}"
           }
         ]
       }
@@ -14344,12 +14512,15 @@
       "topic": "integrals",
       "title": "V.D.U.",
       "desc": null,
-      "date": null,
+      "date": "2025 April 16",
       "tags": [
-        null
+        "exp",
+        "trig"
       ],
       "methods": [
-        null
+        "tough",
+        "spot",
+        "inverse product"
       ],
       "shard": "s25f-vd2",
       "question": [
@@ -14629,7 +14800,6 @@
       "date": "2025 January 23",
       "tags": [
         "horror",
-        "frac",
         "exp",
         "sqrt"
       ],
@@ -15314,7 +15484,6 @@
       "desc": null,
       "date": "2025 January 23",
       "tags": [
-        "frac",
         "trig",
         "exp"
       ],

@@ -1,10 +1,37 @@
 {
   "meta": {
-    "exported": "2025-04-20",
-    "file_count": 26,
-    "page_count": 25
+    "exported": "2025-05-06",
+    "file_count": 27,
+    "page_count": 27
   },
   "index": {
+    "docs": {
+      "route": null,
+      "pages": [
+        "docs/integrals.md"
+      ]
+    },
+    "integrals": {
+      "route": null,
+      "pages": [
+        "docs/integrals.md",
+        "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/antiderivatives/ln.md",
+        "guides/integrals/antiderivatives/power-rule.md",
+        "guides/integrals/antiderivatives/sec-3.md",
+        "guides/integrals/collections/epic-errors.md",
+        "guides/integrals/collections/everything-anything.md",
+        "guides/integrals/collections/int-int.md",
+        "guides/integrals/collections/once.md",
+        "guides/integrals/collections/standard-integrals.md",
+        "guides/integrals/how.md",
+        "guides/integrals/methods/partials.md",
+        "guides/integrals/methods/power-partials.md",
+        "guides/integrals/methods/sub.md",
+        "guides/integrals/why-hard.md",
+        "guides/integrals/why.md"
+      ]
+    },
     "guides": {
       "route": null,
       "pages": [
@@ -32,26 +59,6 @@
         "guides/complete-square/why.md"
       ]
     },
-    "integrals": {
-      "route": null,
-      "pages": [
-        "guides/integrals/adventures/neat-trick.md",
-        "guides/integrals/antiderivatives/ln.md",
-        "guides/integrals/antiderivatives/power-rule.md",
-        "guides/integrals/antiderivatives/sec-3.md",
-        "guides/integrals/collections/epic-errors.md",
-        "guides/integrals/collections/everything-anything.md",
-        "guides/integrals/collections/int-int.md",
-        "guides/integrals/collections/once.md",
-        "guides/integrals/collections/standard-integrals.md",
-        "guides/integrals/how.md",
-        "guides/integrals/methods/partials.md",
-        "guides/integrals/methods/power-partials.md",
-        "guides/integrals/methods/sub.md",
-        "guides/integrals/why-hard.md",
-        "guides/integrals/why.md"
-      ]
-    },
     "collections": {
       "route": null,
       "pages": [
@@ -77,6 +84,27 @@
     }
   },
   "tags": {
+    "docs": [
+      "docs/integrals.md"
+    ],
+    "integrals": [
+      "docs/integrals.md",
+      "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/antiderivatives/ln.md",
+      "guides/integrals/antiderivatives/power-rule.md",
+      "guides/integrals/antiderivatives/sec-3.md",
+      "guides/integrals/collections/epic-errors.md",
+      "guides/integrals/collections/everything-anything.md",
+      "guides/integrals/collections/int-int.md",
+      "guides/integrals/collections/once.md",
+      "guides/integrals/collections/standard-integrals.md",
+      "guides/integrals/how.md",
+      "guides/integrals/methods/partials.md",
+      "guides/integrals/methods/power-partials.md",
+      "guides/integrals/methods/sub.md",
+      "guides/integrals/why-hard.md",
+      "guides/integrals/why.md"
+    ],
     "guides": [
       "guides/complete-square/why.md",
       "guides/integrals/adventures/neat-trick.md",
@@ -98,23 +126,6 @@
     "complete-square": [
       "guides/complete-square/why.md"
     ],
-    "integrals": [
-      "guides/integrals/adventures/neat-trick.md",
-      "guides/integrals/antiderivatives/ln.md",
-      "guides/integrals/antiderivatives/power-rule.md",
-      "guides/integrals/antiderivatives/sec-3.md",
-      "guides/integrals/collections/epic-errors.md",
-      "guides/integrals/collections/everything-anything.md",
-      "guides/integrals/collections/int-int.md",
-      "guides/integrals/collections/once.md",
-      "guides/integrals/collections/standard-integrals.md",
-      "guides/integrals/how.md",
-      "guides/integrals/methods/partials.md",
-      "guides/integrals/methods/power-partials.md",
-      "guides/integrals/methods/sub.md",
-      "guides/integrals/why-hard.md",
-      "guides/integrals/why.md"
-    ],
     "collections": [
       "guides/integrals/adventures/neat-trick.md",
       "guides/integrals/collections/standard-integrals.md"
@@ -131,6 +142,31 @@
     ]
   },
   "pages": {
+    "docs/integrals.md": {
+      "path": "docs/integrals.md",
+      "last_deploy": "2025-04-22 16:54:38 +0100",
+      "slocs": 8,
+      "chars": 113,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "docs/integrals",
+      "title": "Integrals on *Integrity*",
+      "head": "Integrals on *Integrity*",
+      "capt": "",
+      "desc": "",
+      "index": [
+        "docs",
+        "integrals"
+      ],
+      "tags": [
+        "docs",
+        "integrals"
+      ],
+      "date": null,
+      "date_display": null
+    },
     "docs/shard.md": {
       "path": "docs/shard.md",
       "last_deploy": "2024-12-22 14:21:58 +0000",
@@ -145,6 +181,25 @@
       "head": "Shards",
       "capt": "Question Identifier Codes",
       "desc": "Explaining the question identifier codes used throughout Integrity",
+      "index": [],
+      "tags": [],
+      "date": null,
+      "date_display": null
+    },
+    "guides/README.md": {
+      "path": "guides/README.md",
+      "last_deploy": "2025-04-22 16:59:44 +0100",
+      "slocs": 10,
+      "chars": 792,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides",
+      "title": "Guides",
+      "head": "Guides",
+      "capt": null,
+      "desc": null,
       "index": [],
       "tags": [],
       "date": null,
@@ -465,9 +520,9 @@
     },
     "guides/integrals/how.md": {
       "path": "guides/integrals/how.md",
-      "last_deploy": "2025-01-22 21:10:24 +0000",
-      "slocs": 134,
-      "chars": 6937,
+      "last_deploy": "2025-04-22 17:05:22 +0100",
+      "slocs": 139,
+      "chars": 7024,
       "isIndex": false,
       "flags": [
         "live",
