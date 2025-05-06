@@ -185,10 +185,10 @@ export class SearchData
 
   categorise_rel(question: Question)
   {
-    if (get(userprefs).flagged.has(question.shard)) return 30;
+    if (get(userprefs).flagged.has(question.shard)) return 5;
     if (get(userprefs).starred.has(question.shard)) return 40;
     if (get(userprefs).solved.has(question.shard)) return 50;
-    return 0;
+    return 10;
   }
 
   sort_date(source: Question[]) {
