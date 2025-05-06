@@ -12,6 +12,7 @@ import Footer from "#parts/core/footer.svelte";
 import { fade } from "svelte/transition";
 import { quadIn } from "svelte/easing";
 import { onMount } from "svelte";
+import { page } from "$app/state";
 
 
 let { children } = $props();
@@ -40,9 +41,11 @@ function handle_overlay()
 
 function count_visits()
 {
-  if ($userprefs) $userprefs.visits++;
+  if ($userprefs) $userprefs.visits++;  
 
-  fetch("https://sup2point0.npkn.net/integrity/");
+  if (page.url.hostname !== "localhost") {
+    fetch("https://sup2point0.npkn.net/integrity/");
+  }
 }
 
 </script>
