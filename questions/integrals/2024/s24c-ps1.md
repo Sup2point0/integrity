@@ -4,7 +4,7 @@ title: spotted
 desc: 
 date: 2024 October
 tags:
- - trig
+  - trig
   - exp
 methods:
   - spot

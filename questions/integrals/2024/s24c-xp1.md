@@ -4,7 +4,7 @@ title: experience
 desc: 
 date: 2024 September
 tags:
- - exp
+  - exp
 methods:
   - spot
 ---

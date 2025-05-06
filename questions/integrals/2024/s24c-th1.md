@@ -4,7 +4,7 @@ title: hidey
 desc: 
 date: 2024 October
 tags:
- - trig
+  - trig
 methods:
   - speed
   - spot

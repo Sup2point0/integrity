@@ -4,7 +4,7 @@ title: init
 desc: 
 date: 2024 September
 tags:
- - poly
+  - poly
 methods:
   - speed
 ---

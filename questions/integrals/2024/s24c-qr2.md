@@ -4,7 +4,7 @@ title: scenic
 desc: 
 date: 2024 September
 tags:
- - sqrt
+  - sqrt
 methods:
   - sub
 ---

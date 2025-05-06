@@ -4,7 +4,7 @@ title: again, again
 desc: 
 date: 2024 December 10
 tags:
- - sqrt
+  - sqrt
 methods:
   - speed
   - sub

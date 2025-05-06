@@ -4,7 +4,7 @@ title: linked
 desc: 
 date: 2024 November
 tags:
- - trig
+  - trig
 methods:
   - spot
   - layer cake

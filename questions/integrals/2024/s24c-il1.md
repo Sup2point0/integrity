@@ -4,7 +4,7 @@ title: inverted
 desc: 
 date: 2024 September
 tags:
- - trig
+  - trig
   - ln
 methods:
   - spot

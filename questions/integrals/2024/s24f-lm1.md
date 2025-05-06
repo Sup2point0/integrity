@@ -4,7 +4,7 @@ title: pathological
 desc: 
 date: 2024 December 10
 tags:
- - trig
+  - trig
   - ln
   - horror
 methods:
