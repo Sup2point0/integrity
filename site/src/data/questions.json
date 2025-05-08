@@ -15559,5 +15559,326 @@
         }
       ]
     }
+  },
+  "special": {
+    "f24ps-ox1": {
+      "topic": "special",
+      "title": "A Graph Drawing Interview Question",
+      "desc": null,
+      "date": 2024,
+      "tags": [
+        "graph drawing",
+        "interview"
+      ],
+      "shard": "f24ps-ox1",
+      "description": [
+        {
+          "kind": "text",
+          "content": "This is an Oxbridge-style interview question I wrote for my friends. I’m quite proud of it since it builds up very naturally (heh), tests a lot of graph drawing skills, and links to many graph-related topics.<br><br>As is standard in problem-solving-based interviews, you’re given guidance and nudges in the right direction throughout. Of course in a real interview the interviewer can vary their help based on what you’ve done, but for a webpage this is a much harder task.<br><br>As such, you may find that some hints are irrelevant to you, in which case you can just ignore them. I would recommend revealing all the hints before checking the final answer, so that you can catch a mistake if you’ve made one and give the question another try."
+        }
+      ],
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\frac  { \\ln\\left( 1/x^2 \\right) }  { e^{(1/x)} }"
+        }
+      ],
+      "part 1": {
+        "question": [
+          {
+            "kind": "text",
+            "content": "Draw the following graph:"
+          },
+          {
+            "kind": "latex",
+            "content": "y = \\ln\\left( \\frac{1}{x^2} \\right)"
+          }
+        ],
+        "hint 1": [
+          {
+            "kind": "text",
+            "content": "Instead of drawing $y = 1/x^2$, could you simplify the expression first to make it much easier to sketch?"
+          }
+        ],
+        "hint 2": [
+          {
+            "kind": "text",
+            "content": "Write $1/x^2$ as $x^{-2}$."
+          }
+        ],
+        "hint 3": [
+          {
+            "kind": "text",
+            "content": "If you’ve only drawn a graph for positive $x$, think carefully about the domain of the function."
+          }
+        ],
+        "answer": [
+          {
+            "kind": "text",
+            "content": "Your graph should look like this:"
+          },
+          {
+            "kind": "text",
+            "content": "```desmos"
+          },
+          {
+            "kind": "text",
+            "content": "```"
+          }
+        ],
+        "solution": [
+          {
+            "kind": "text",
+            "content": "We start by simplifying the expression using a log law:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  y &= \\ln\\left( 1/x^2 \\right)  \\\\ &= \\ln\\left( x^{-2} \\right)  \\\\ &= -2 \\ln(x)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "However, notice that this has changed the domain of the function! $\\ln(1/x^2)$ is defined for all real $x \\neq 0$, but $\\ln(x)$ is only defined for positive $x$. This is because we removed the square, which was making an otherwise negative input positive.<br><br>So, we also need to include negative values of $x$ in our graph. This means we’re drawing"
+          },
+          {
+            "kind": "latex",
+            "content": "y = -2 \\ln|x|"
+          },
+          {
+            "kind": "text",
+            "content": "> [!Note]> We could also use a complex-valued logarithm, but this is unrealistic to draw.<br><br>This is simply a flipped $\\ln(x)$ graph, which is also reflected in the $y$ axis:"
+          },
+          {
+            "kind": "text",
+            "content": "```desmos"
+          },
+          {
+            "kind": "text",
+            "content": "```"
+          }
+        ]
+      },
+      "part 2": {
+        "question": [
+          {
+            "kind": "text",
+            "content": "Now draw this following graph:"
+          },
+          {
+            "kind": "latex",
+            "content": "y = e^{(1/x)}"
+          }
+        ],
+        "hint 1": [
+          {
+            "kind": "text",
+            "content": "Start by drawing $y = 1/x$."
+          }
+        ],
+        "hint 2": [
+          {
+            "kind": "text",
+            "content": "As $x \\to \\infin$, the $1/x \\to 0$. What does $e^{(1/x)}$ tend to then?"
+          }
+        ],
+        "hint 3": [
+          {
+            "kind": "text",
+            "content": "Do the same for $x \\to -\\infin$."
+          }
+        ],
+        "hint 4": [
+          {
+            "kind": "text",
+            "content": "What happens as $x$ approaches $0$ from the positive side?"
+          }
+        ],
+        "hint 5": [
+          {
+            "kind": "text",
+            "content": "Would you expect the graph to be symmetric?"
+          }
+        ],
+        "answer": [
+          {
+            "kind": "text",
+            "content": "Your graph should look like this:"
+          },
+          {
+            "kind": "text",
+            "content": "```desmos"
+          },
+          {
+            "kind": "text",
+            "content": "```"
+          }
+        ]
+      },
+      "part 3": {
+        "question": [
+          {
+            "kind": "text",
+            "content": "In the previous 2 parts you drew 2 graphs. Define those as functions:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  f(x) &= \\ln\\left( 1/x^2 \\right)  \\\\ g(x) &= e^{(1/x)}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Now draw the graph of their quotient:"
+          },
+          {
+            "kind": "latex",
+            "content": "y = \\frac{f(x)}{g(x)}"
+          }
+        ],
+        "hint 1": [
+          {
+            "kind": "text",
+            "content": "Start by handling the extremes, where $x \\to \\pm \\infin$."
+          }
+        ],
+        "hint 2": [
+          {
+            "kind": "text",
+            "content": "Dividing by $1$ leaves a graph unchanged."
+          }
+        ],
+        "hint 3": [
+          {
+            "kind": "text",
+            "content": "When $f(x) = 0$, you have $f(x) / g(x) = 0$ regardless of what $g(x)$ is."
+          }
+        ],
+        "hint 4": [
+          {
+            "kind": "text",
+            "content": "Now let’s tackle the left. As $x \\to 0$ from the negative side, $g(x) \\to 0$. So what happens when you divide $f(x)$ by this increasingly small value?"
+          }
+        ],
+        "hint 5": [
+          {
+            "kind": "text",
+            "content": "The right is a little more fiddly. As $x$ approaches $0$ from the positive side, both $f(x)$ and $g(x)$ are tending to $\\infin$, but how do we know which is growing faster? This is not easy to figure out.<br><br>There are 3 cases:<br><br>- $f(x)$ grows faster than $g(x)$ and $f(x) / g(x) \\to \\infin$- $f(x)$ grows slower than $g(x)$ and $f(x) / g(x) \\to 0$- $f(x)$ and $g(x)$ grow at the same rate and $f(x) / g(x) \\to 1$<br><br>The last case is unlikely since $f(x)$ and $g(x)$ have entirely different types of functions ($f$ has a $\\ln$, $g$ an $\\exp$).<br><br>What defining feature would allow you to distinguish between the graph tending to $\\infin$ vs $0$?"
+          }
+        ],
+        "hint 6": [
+          {
+            "kind": "text",
+            "content": "Draw out the 2 cases where the graph tends to $\\infin$ and $0$. What do you notice about the case where it tends to $0$?"
+          }
+        ],
+        "hint 7": [
+          {
+            "kind": "text",
+            "content": "The graph must rise above the $x$ axis between $0 \\leq x \\leq 1$. So for it to return to $0$ at $x = 0$, there must be a turning point. How do you find the turning point?"
+          }
+        ],
+        "hint 8": [
+          {
+            "kind": "text",
+            "content": "Differentiate $f(x) / g(x)$, then solve for when this derivative is $0$. You should obtain"
+          },
+          {
+            "kind": "latex",
+            "content": "\\ln(x) = -x"
+          },
+          {
+            "kind": "text",
+            "content": "If this has a solution for $0 \\leq x \\leq 1$, the graph must have a turning point."
+          }
+        ],
+        "hint 9": [
+          {
+            "kind": "text",
+            "content": "You don’t need to solve for the precise value of $x$, you just need to ascertain if it lies in $0 \\leq x \\leq 1$.<br><br>What if you write the equation as"
+          },
+          {
+            "kind": "latex",
+            "content": "\\ln(x) = y = -x"
+          }
+        ],
+        "hint 10": [
+          {
+            "kind": "text",
+            "content": "Draw out $y = \\ln(x)$ and $y = -x$ (!)"
+          }
+        ],
+        "answer": [
+          {
+            "kind": "text",
+            "content": "Your graph should look like this:"
+          },
+          {
+            "kind": "text",
+            "content": "```desmos"
+          },
+          {
+            "kind": "text",
+            "content": "```"
+          }
+        ]
+      },
+      "part 4": {
+        "question": [
+          {
+            "kind": "text",
+            "content": "Now draw the graph of the product:"
+          },
+          {
+            "kind": "latex",
+            "content": "y = f(x) \\cdot g(x)"
+          }
+        ],
+        "hint 1": [
+          {
+            "kind": "text",
+            "content": "If you already know what their quotient looks like, can you manipulate the expression to easily determine what their product looks like?"
+          }
+        ],
+        "hint 2": [
+          {
+            "kind": "text",
+            "content": "Write the expression as follows:"
+          },
+          {
+            "kind": "latex",
+            "content": "f(x) \\cdot g(x) = f(x) \\cdot \\frac{1}{g(x)}"
+          }
+        ],
+        "hint 3": [
+          {
+            "kind": "text",
+            "content": "What is $1/g(x)$ equal to?"
+          }
+        ],
+        "hint 4": [
+          {
+            "kind": "text",
+            "content": "What would $f(-x) \\cdot g(-x)$ look like?"
+          }
+        ],
+        "answer": [
+          {
+            "kind": "text",
+            "content": "Your graph should look like this:"
+          },
+          {
+            "kind": "text",
+            "content": "```desmos"
+          },
+          {
+            "kind": "text",
+            "content": "```"
+          }
+        ],
+        "thought": [
+          {
+            "kind": "text",
+            "content": "If you didn’t use it in your solution, can you explain why $f(x) \\cdot g(x)$ looks like $f(x) / g(x)$, but reflected in the $y$ axis?"
+          }
+        ]
+      }
+    }
   }
 }

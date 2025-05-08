@@ -1,10 +1,9 @@
 <script lang="ts">
 
 import Site from "#scripts/site";
-import { search, userprefs } from "#scripts/stores";
+import { search } from "#scripts/stores";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -14,40 +13,38 @@ import Search from "#parts/page/search.svelte";
 import { onMount } from "svelte";
 
 
-const questions = Site.get_questions_of_topic("integrals");
-const tags = Site.questions["integrals"].tags;
-const methods = Site.questions["integrals"].methods;
+const questions = Site.get_questions_of_topic("special");
+const tags = Site.questions["special"].tags;
 
-let limit = $state(60);
-let filtered = $derived(search.filter_questions(questions).slice(0, limit));
+let filtered = $derived(search.filter_questions(questions));
 
 
 onMount(() => {
   search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
-  search.methods = Object.fromEntries(methods.map(method => [method, false]));
+  search.methods = {};
 })
 
 </script>
 
 
-<Meta title="Integrals"
-  desc="200+ handcrafted high-difficulty integrals for avid integrators and maths fans"
+<Meta title="Special Questions"
+  desc="Special one-off questions on wider areas of mathematics"
 />
 
 
 <Breadcrumbs levels={[
   { text: "Questions", intern: "questions" },
-  { text: "Integrals" },
+  { text: "Special" },
 ]} />
 
-<Header title="Integrals" />
+<Header title="Special Questions" />
 <Search />
 
-<div class="content {$userprefs["search-view"]}">
+<div class="content">
   {#each filtered as question (question.shard)}
     <QuestionCard {question}
       latex={search.show.question ? question.question.content : undefined}
-      style={$userprefs["search-view"] === "grid" ? "block" : "row"}
+      style="row"
     />
   {/each}
 </div>
@@ -58,13 +55,6 @@ onMount(() => {
   {:else}
     <p> Oops, no questions found! </p>
   {/if}
-  
-  {#if limit < questions.length}
-    <div class="buttons">
-      <Clicky text="Show More" action={() => { limit += 60; }} />
-      <Clicky text="Show All" action={() => { limit = questions.length }} />
-    </div>
-  {/if}
 </aside>
 
 
@@ -72,18 +62,9 @@ onMount(() => {
 
 .content {
   display: flex;
+  flex-flow: column;
+  align-items: stretch;
   gap: 1rem;
-
-  &.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, max(16rem, 30%));
-    justify-content: center;
-  }
-
-  &.list {
-    flex-flow: column;
-    align-items: stretch;
-  }
 }
 
 aside {
@@ -101,14 +82,6 @@ aside {
       font-weight: 400;
       color: $col-prot;
     }
-  }
-
-  .buttons {
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    gap: 0.5rem;
   }
 }
 

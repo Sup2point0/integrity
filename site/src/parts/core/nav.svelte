@@ -27,7 +27,7 @@ import { base } from "$app/paths";
       <Link text="Guess the Graph" intern="questions/guess-graph" disabled={true} />
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
       <Link text="Addvent" intern="questions/addvent" />
-      <Link text="Special" intern="questions/special" disabled={true} />
+      <Link text="Special" intern="questions/special" />
     </NavLink>
 
     <NavLink text="Explore" intern="explore">
