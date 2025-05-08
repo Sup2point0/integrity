@@ -38,7 +38,7 @@ onMount(() => {
 
 <svelte:head>
   <title> Integrity · Sup#2.0 </title>
-  <meta name="description" content="Lovingly handcrafted mathematics questions for the intellectually adventurous." />
+  <meta name="description" content="Lovingly handcrafted maths questions for the intellectually adventurous. Features 200+ challenging integrals, plus problems on completing the square, graph drawing and more!" />
 </svelte:head>
 
 
@@ -56,7 +56,7 @@ onMount(() => {
     /> -->
     <Card title="Completing the Square"
       intern="questions/complete-square"
-      latex={"a(x - p)^2 + q"}
+      latex={"a(x-p)^2 + q"}
     />
     <Card title="Cool Graphs"
       intern="questions/cool-graphs"
