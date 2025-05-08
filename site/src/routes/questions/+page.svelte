@@ -42,11 +42,15 @@ import Header from "#parts/core/header.svelte";
   />
   <Card title="Cool Graphs"
     intern="questions/cool-graphs"
-    pict="previews/guess-graph.png"
+    pict="previews/cool-graphs.png"
   />
   <Card title="Addvent"
     intern="questions/addvent"
     pict="previews/addvent-text.png"
+  />
+  <Card title="Special"
+    intern="questions/special"
+    latex={String.raw`\exp(x) = \sum_{n=0}^{\infin} \frac{x^n}{n!}`}
   />
 </div>
 

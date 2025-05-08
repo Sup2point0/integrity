@@ -15564,27 +15564,21 @@
     "f24ps-ox1": {
       "topic": "special",
       "title": "A Graph Drawing Interview Question",
-      "desc": null,
-      "date": 2024,
+      "desc": "This is an Oxbridge-style interview question I wrote for my friends. I’m quite proud of it since it builds up very naturally (heh), tests a lot of graph drawing skills, and links to many graph-related topics.\n\nAs is standard in problem-solving-based interviews, you’re given guidance and nudges in the right direction throughout. Of course in a real interview the interviewer can vary their help based on what you’ve done, but for a webpage this is a much harder task.\n\nAs such, you may find that some hints are irrelevant to you, in which case you can just ignore them. I would recommend revealing all the hints before checking the final answer, so that you can catch a mistake if you’ve made one and give the question another try.\n",
+      "date": "2024 November 27",
       "tags": [
         "graph drawing",
         "interview"
       ],
       "shard": "f24ps-ox1",
-      "description": [
-        {
-          "kind": "text",
-          "content": "This is an Oxbridge-style interview question I wrote for my friends. I’m quite proud of it since it builds up very naturally (heh), tests a lot of graph drawing skills, and links to many graph-related topics.<br><br>As is standard in problem-solving-based interviews, you’re given guidance and nudges in the right direction throughout. Of course in a real interview the interviewer can vary their help based on what you’ve done, but for a webpage this is a much harder task.<br><br>As such, you may find that some hints are irrelevant to you, in which case you can just ignore them. I would recommend revealing all the hints before checking the final answer, so that you can catch a mistake if you’ve made one and give the question another try."
-        }
-      ],
       "question": [
         {
           "kind": "latex",
           "content": "\\frac  { \\ln\\left( 1/x^2 \\right) }  { e^{(1/x)} }"
         }
       ],
-      "part 1": {
-        "question": [
+      "part 1:": {
+        "_": [
           {
             "kind": "text",
             "content": "Draw the following graph:"
@@ -15657,8 +15651,8 @@
           }
         ]
       },
-      "part 2": {
-        "question": [
+      "part 2:": {
+        "_": [
           {
             "kind": "text",
             "content": "Now draw this following graph:"
@@ -15713,8 +15707,8 @@
           }
         ]
       },
-      "part 3": {
-        "question": [
+      "part 3:": {
+        "_": [
           {
             "kind": "text",
             "content": "In the previous 2 parts you drew 2 graphs. Define those as functions:"
@@ -15819,8 +15813,8 @@
           }
         ]
       },
-      "part 4": {
-        "question": [
+      "part 4:": {
+        "_": [
           {
             "kind": "text",
             "content": "Now draw the graph of the product:"

@@ -1,21 +1,17 @@
 ---
 topic: special
 title: A Graph Drawing Interview Question
-desc: 
-date: 2024 
+desc: |
+  This is an Oxbridge-style interview question I wrote for my friends. I’m quite proud of it since it builds up very naturally (heh), tests a lot of graph drawing skills, and links to many graph-related topics.
+
+  As is standard in problem-solving-based interviews, you’re given guidance and nudges in the right direction throughout. Of course in a real interview the interviewer can vary their help based on what you’ve done, but for a webpage this is a much harder task.
+
+  As such, you may find that some hints are irrelevant to you, in which case you can just ignore them. I would recommend revealing all the hints before checking the final answer, so that you can catch a mistake if you’ve made one and give the question another try.
+date: 2024 November 27
 tags:
   - graph drawing
   - interview
 ---
-
-
-## Description
-
-This is an Oxbridge-style interview question I wrote for my friends. I’m quite proud of it since it builds up very naturally (heh), tests a lot of graph drawing skills, and links to many graph-related topics.
-
-As is standard in problem-solving-based interviews, you’re given guidance and nudges in the right direction throughout. Of course in a real interview the interviewer can vary their help based on what you’ve done, but for a webpage this is a much harder task.
-
-As such, you may find that some hints are irrelevant to you, in which case you can just ignore them. I would recommend revealing all the hints before checking the final answer, so that you can catch a mistake if you’ve made one and give the question another try.
 
 
 ## Question
@@ -26,9 +22,9 @@ As such, you may find that some hints are irrelevant to you, in which case you c
 ```
 
 
-## Part 1
+## Part 1:
 
-### Question
+### _
 Draw the following graph:
 
 ```math
@@ -78,9 +74,9 @@ This is simply a flipped $\ln(x)$ graph, which is also reflected in the $y$ axis
 ```
 
 
-## Part 2
+## Part 2:
 
-### Question
+### _
 Now draw this following graph:
 
 ```math
@@ -111,9 +107,9 @@ Your graph should look like this:
 ### Solution
 
 
-## Part 3
+## Part 3:
 
-### Question
+### _
 In the previous 2 parts you drew 2 graphs. Define those as functions:
 
 ```math
@@ -190,9 +186,9 @@ Your graph should look like this:
 ### Solution
 
 
-## Part 4
+## Part 4:
 
-### Question
+### _
 Now draw the graph of the product:
 
 ```math
