@@ -1,6 +1,6 @@
 <!-- @component Search
 
-A search bar and associated filters.
+A search bar which expands to show filters.
 -->
 
 <script lang="ts">
@@ -77,65 +77,69 @@ onMount(() => {
     <table class="search-filters"
       transition:fade={{ duration: 200 }}
     ><tbody>
-      <tr>
-        <th> Topics </th>
+      {#if Object.keys(search.tags).length}
+        <tr>
+          <th> Topics </th>
 
-        <td class="flex" style:font-size="92%">
-          {#if tags_expanded}
-            {#each Object.entries(search.tags) as [tag, state]}
-              <Toggle text={tag.toUpperCase()}
-                value={state}
-                toggle={() => { search.tags[tag] = !state; }}
-              />
-            {/each}
-          {/if}
+          <td class="flex" style:font-size="92%">
+            {#if tags_expanded}
+              {#each Object.entries(search.tags) as [tag, state]}
+                <Toggle text={tag.toUpperCase()}
+                  value={state}
+                  toggle={() => { search.tags[tag] = !state; }}
+                />
+              {/each}
+            {/if}
 
-          <Clicky text={tags_expanded ? "Show Less" : "Show More"}
-            action={() => { tags_expanded = !tags_expanded; }}
-          />
-        </td>
+            <Clicky text={tags_expanded ? "Show Less" : "Show More"}
+              action={() => { tags_expanded = !tags_expanded; }}
+            />
+          </td>
 
-        <td>
-          <Toggle text="ALL"
-            value={!unchecked_tag}
-            toggle={() => {
-              for (let tag in search.tags) {
-                search.tags[tag] = unchecked_tag;
-              }
-            }}
-          />
-        </td>
-      </tr>
+          <td>
+            <Toggle text="ALL"
+              value={!unchecked_tag}
+              toggle={() => {
+                for (let tag in search.tags) {
+                  search.tags[tag] = unchecked_tag;
+                }
+              }}
+            />
+          </td>
+        </tr>
+      {/if}
       
-      <tr>
-        <th> Methods </th>
+      {#if Object.keys(search.methods).length}
+        <tr>
+          <th> Methods </th>
 
-        <td class="flex" style:font-size="92%">
-          {#if methods_expanded}
-            {#each Object.entries(search.methods) as [method, state]}
-              <Toggle text={method.toUpperCase()}
-                value={state}
-                toggle={() => { search.methods[method] = !state; }}
-              />
-            {/each}
-          {/if}
+          <td class="flex" style:font-size="92%">
+            {#if methods_expanded}
+              {#each Object.entries(search.methods) as [method, state]}
+                <Toggle text={method.toUpperCase()}
+                  value={state}
+                  toggle={() => { search.methods[method] = !state; }}
+                />
+              {/each}
+            {/if}
 
-          <Clicky text={methods_expanded ? "Show Less" : "Show More"}
-            action={() => { methods_expanded = !methods_expanded; }}
-          />
-        </td>
+            <Clicky text={methods_expanded ? "Show Less" : "Show More"}
+              action={() => { methods_expanded = !methods_expanded; }}
+            />
+          </td>
 
-        <td>
-          <Toggle text="ALL"
-            value={!unchecked_method}
-            toggle={() => {
-              for (let method in search.methods) {
-                search.methods[method] = unchecked_method;
-              }
-            }}
-          />
-        </td>
-      </tr>
+          <td>
+            <Toggle text="ALL"
+              value={!unchecked_method}
+              toggle={() => {
+                for (let method in search.methods) {
+                  search.methods[method] = unchecked_method;
+                }
+              }}
+            />
+          </td>
+        </tr>
+      {/if}
 
       {#if $userprefs["search-exp"]}
         <tr transition:fade={{ duration: 200 }}>
