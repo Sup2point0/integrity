@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-05-08",
-    "file_count": 27,
-    "page_count": 27
+    "exported": "2025-05-12",
+    "file_count": 28,
+    "page_count": 28
   },
   "index": {
     "docs": {
@@ -142,6 +142,25 @@
     ]
   },
   "pages": {
+    "docs/fun-facts.md": {
+      "path": "docs/fun-facts.md",
+      "last_deploy": "2025-05-08 18:23:26 +0100",
+      "slocs": 12,
+      "chars": 695,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "docs/fun-facts",
+      "title": "Fun Facts",
+      "head": "Fun Facts",
+      "capt": null,
+      "desc": "Some cool little details you may not have noticed about Integrity!",
+      "index": [],
+      "tags": [],
+      "date": null,
+      "date_display": null
+    },
     "docs/integrals.md": {
       "path": "docs/integrals.md",
       "last_deploy": "2025-04-22 16:54:38 +0100",

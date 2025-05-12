@@ -16,6 +16,16 @@ import Section from "#parts/page/section.svelte";
 
 let question: Question | null = $derived(page_data.question);
 
+
+function display_title(text: string): string
+{
+  if (text.endsWith(")")) {
+    return text.slice(0, text.lastIndexOf("(")).toUpperCase();
+  } else {
+    return text.toUpperCase();
+  }
+}
+
 </script>
 
 
@@ -97,7 +107,7 @@ let question: Question | null = $derived(page_data.question);
         {#if step === "_"}
           <RenderBlock {source} />
         {:else}
-          <Section ctx="inner" closed={false} title={step.toUpperCase()}>
+          <Section ctx="inner" closed={false} title={display_title(step)}>
             <RenderBlock {source} />
           </Section>
         {/if}
@@ -129,7 +139,7 @@ let question: Question | null = $derived(page_data.question);
         {#if step === "_"}
           <RenderBlock {source} />
         {:else}
-          <Section ctx="inner" closed={true} title={step.toUpperCase()}>
+          <Section ctx="inner" closed={true} title={display_title(step)}>
             <RenderBlock {source} />
           </Section>
         {/if}
@@ -152,7 +162,7 @@ section.question {
 }
 
 .utils {
-  &.uper, &.solution {
+  &.upper, &.solution {
     display: flex;
     flex-flow: row wrap;
     justify-content: end;
