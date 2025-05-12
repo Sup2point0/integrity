@@ -1,8 +1,8 @@
 # Synopsis
 
-Y’know what, in recent months I’ve come to really enjoy writing my own maths questions. So much like [*Assort*](https://github.com/Sup2point0/Assort) is a repository of all my creations, *Integrity* is a collection of all my maths questions. (At least, that’s what it started out as.)
+I’ve come to really enjoy writing my own maths questions, particularly integrals. So, much like [*Assort*](https://github.com/Sup2point0/Assort) is a repository of all my creations, *Integrity* is a collection of all my maths questions. I started writing these for maths competitions I was helping run at school, but now I just write them for fun.
 
-Currently, most of these were written for maths competitions at school, including an Integration Bee, Competitive Completing the Square, and Christmas Maths Advent ([*Addvent*](https://sup2point0.github.io/integrity/questions/addvent)).
+In addition to questions you’ll also find [guides](https://sup2point0.github.io/integrity/guides) covering mathematical topics (currently only integration in significant depth), and other tools for practising maths.
 
 
 <br>
@@ -10,12 +10,12 @@ Currently, most of these were written for maths competitions at school, includin
 
 ## Site
 
-- Built with [Svelte 5](https://svelte.dev) + [SvelteKit](https://svelte.dev/docs/kit/introduction)
+- Built with [Svelte 5](https://svelte.dev) + [SvelteKit](https://svelte.dev/docs/kit)
 - [SCSS](https://sass-lang.com) for styling
 - [KaTeX](https://katex.org) for LaTeX
 - [MDsveX](https://mdsvex.pngwn.io) for Markdown
 - [Desmos API](https://www.desmos.com) for Desmos, used with permission kindly provided by Desmos Studio PBC
-- My [Stranger Quarkdown](https://github.com/Sup2point0/stranger-quarkdown) engine for automating content deployment
+- My [*StrangerQuarkdown*](https://github.com/Sup2point0/stranger-quarkdown) engine for automating content deployment
 
 ### Fonts
 Fonts from [Google Fonts](https://fonts.google.com).
