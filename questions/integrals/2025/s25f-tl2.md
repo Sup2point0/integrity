@@ -52,8 +52,8 @@ The $+2$ is irrelevant.
 ```math
 \begin{align*}
   &\ \int \frac{\left(\sin^{2}x+\sin x\right)\ln\left(\sin^{2}x+2\right)}{\sec x+\tan x}\ dx
-  \\ =&\ \int \frac{\left(\sin^{2}x+\sin x\right)\ln\left(\sin^{2}x+2\right)}{\displaystyle \frac{1}{\cos x}+\frac{\sin x}{\cos x}}\ dx
-  \\ =&\ \int \frac{\left(\sin x\right)\left(\sin x+1\right)\ln\left(\sin^{2}x+2\right)}{\displaystyle \frac{\sin x+1}{\cos x}}\ dx
+  \\ =&\ \int \frac{\left(\sin^{2}x+\sin x\right)\ln\left(\sin^{2}x+2\right)}{\frac{1}{\cos x}+\frac{\sin x}{\cos x}}\ dx
+  \\ =&\ \int \frac{\left(\sin x\right)\left(\sin x+1\right)\ln\left(\sin^{2}x+2\right)}{\frac{\sin x+1}{\cos x}}\ dx
   \\ =&\ \int \left(\sin x\right)\left(\cos x\right)\ln\left(\sin^{2}x+2\right)\ dx
 \end{align*}
 ```
