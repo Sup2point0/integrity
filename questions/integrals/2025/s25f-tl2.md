@@ -48,7 +48,7 @@ The $+2$ is irrelevant.
 
 ## Solution
 
-### Reshape
+### Simplify
 ```math
 \begin{align*}
   &\ \int \frac{\left(\sin^{2}x+\sin x\right)\ln\left(\sin^{2}x+2\right)}{\sec x+\tan x}\ dx
@@ -67,7 +67,7 @@ The $+2$ is irrelevant.
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &= \int \ln t\cdot\frac{1}{2}\ dt
