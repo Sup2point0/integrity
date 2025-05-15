@@ -61,7 +61,7 @@ function display_title(text: string): string
       <p class="date"> {question?.date_display} </p>
       
       {#if question?.desc}
-        <p class="desc"> {question.desc} </p>
+        <p class="desc"> {@html question.desc} </p>
       {/if}
     </div>
 
