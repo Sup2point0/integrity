@@ -8,7 +8,7 @@
 
 Integration can’t be learnt in a day. Nor can you, or should you, memorise in a day all of the useful formulae, identities and other quotable results that will come in crucial throughout your adventures in integration.
 
-You can use this page as a quick reference, refresher, roadmap, or (if you really want) crash course in the core components of integration. I wouldn’t really recommend trying to ‘learn’ something you’ve never encountered just from this page – each topic goes far too deep to adequately cover in this confined space, and you’ll almost certainly be better off, say, watching a YouTube video by 3b1b on it ;)
+You can use this page as a quick reference, refresher, roadmap, or (if you really want) crash course in the core components of integration. I wouldn’t really recommend trying to ‘learn’ something you’ve never encountered just from this page – each topic goes far too deep to adequately cover in this confined space, and you’ll almost certainly be better off, say, watching a YouTube video by [3b1b<sup>↗</sup>](https://youtube.com/@3blue1brown) on it ;)
 
 What will be far more long-lasting, worthwhile and rewarding than simply memorising these formulae is developing your mathematical fluency and intuition. The best way to remember them is not to recite them, or make flash cards, but to *use* them. Try deriving identities yourself. Only through practice, experimentation and self-discovery will you learn unforgettably.[^learn]
 
@@ -20,20 +20,20 @@ Enjoy 🥕
 ## Algebra
 
 ### Completing the Square
-Given a quadratic with no coefficient of $x^2$
+Given a quadratic with no coefficient of $x^2$,
 
 ```math
 x^2 + bx + c
 ```
 
-We can “complete the square” to reduce the power of $x$ like so
+We can “complete the square” to reduce the power of $x$.
 
 ```math
 = \left(x - \frac{b}{2} \right)^2 - \left(\frac{b}{2}\right)^2 + c
 ```
 
 ### Power Laws
-A negative exponent is equivalent to taking a reciprocal:
+A negative exponent is equivalent to taking a reciprocal.
 
 ```math
 x^{-1} = \frac{1}{x}
@@ -41,7 +41,7 @@ x^{-1} = \frac{1}{x}
   \qquad e^{-x} = \frac{1}{e^x}
 ```
 
-When multiplying terms with the same base, you can add the exponents:
+When multiplying terms with the same base, you can add the exponents.
 
 ```math
 \begin{align*}
@@ -67,34 +67,34 @@ When dividing, you can subtract the exponents. This is equivalent to making the 
 > [!Tip]
 > Here $\log$ denotes a logarithm of any base, although the natural logarithm $\ln$ (with base $e$) is primarily used in integration. If you see a rogue $\log$ in the wilderness of mathematics with no base indicated, you can pretty safely assume it’s $\ln$.
 
-An exponent inside a logarithm can be extracted as a coefficient:
+An exponent inside a logarithm can be extracted as a coefficient.
 
 ```math
 \log(x^n) = n \log{x}
 ```
 
-Note that the exponent must be applied to the **whole** term. For instance
+Note that the exponent must be applied to the **whole** term. For instance,
 
 ```math
 \log(x^2 + 1) \neq 2 \log(x + 1)
 ```
 
-Also, unless you intend to use a [complex-valued logarithm](...), it’s best to wrap the leftover term with an absolute value:
+Also, unless you intend to use a [complex-valued logarithm<sup>↗</sup>](https://wikipedia.org/wiki/Complex_logarithm), it’s best to wrap the leftover term with an absolute value.
 
 ```math
 \log(x^n) = n \log{|x|}
 ```
 
-Multiplication *inside* the log corresponds to addition outside:
+Multiplication *inside* the log corresponds to addition outside.
 
 ```math
 \log{xy} = \log{x} + \log{y}
 ```
 
 > [!Note]
-> Unless you are using a [complex-valued logarithm], this only holds true for positive $x$ and $y$.
+> Unless you are using a complex-valued logarithm, this only holds true for positive $x$ and $y$.
 
-Analogous to exponents, division inside the logarithm correponds to subtraction outside:
+Analogous to exponents, division inside the logarithm corresponds to subtraction outside.
 
 ```math
 \begin{align*}
@@ -126,16 +126,9 @@ x^2 + y^2 + 2xy = (x + y)^2
 
 ## Derivatives & Antiderivatives
 
-Integration and differentiation are inverses of each other. Learning something’s derivative is the same as learning it’s antiderivative; it might just take time to get used to going from one to the other.
+Integration and differentiation are inverses of each other. Learning something’s derivative is the same as learning its antiderivative; it might just take time to get used to going from one to the other.
 
-Also, this stuff is really not quite linear (no pun intended). You sort of pick them up bit by bit as you go, there’s no ‘order’ to learning them. Many even toe into multiple different rules or methods, so categorising them is a somewhat overly restrictive endeavour.
-
-### Core
-```math
-\begin{align*}
-  x^n &= nx^{x-1}
-\end{align*}
-```
+Also, this stuff is really not quite linear (no pun intended). You sort of pick them up bit by bit as you go, there’s no ‘order’ to learning them. Many even tie into multiple different rules or methods, so categorising them is a somewhat overly restrictive endeavour.
 
 ### Exponentials & Logarithms
 $e^x$ is famously its own derivative and antiderivative.
@@ -154,7 +147,7 @@ $\ln(x)$ has a very nice derivative.
 ```
 
 ### Trigonometry
-The primitive trig functions $\sin(x)$ and $\cos(x)$ form a cycle when differentiated:
+The primitive trig functions $\sin(x)$ and $\cos(x)$ form a cycle when differentiated.
 
 ```math
 \begin{align*}
@@ -165,7 +158,7 @@ The primitive trig functions $\sin(x)$ and $\cos(x)$ form a cycle when different
 \end{align*}
 ```
 
-The evolved trig functions $\tan(x)$ and $\sec(x)$ have memorable derivatives that ‘roll’ off the tongue:
+The evolved trig functions $\tan(x)$ and $\sec(x)$ have memorable derivatives that ‘roll’ off the tongue.
 
 ```math
 \begin{align*}
@@ -174,7 +167,7 @@ The evolved trig functions $\tan(x)$ and $\sec(x)$ have memorable derivatives th
 \end{align*}
 ```
 
-The other evolved trig functions $\cot(x)$ and $\csc(x)$ have analogous derivatives, except negative:
+The other evolved trig functions $\cot(x)$ and $\csc(x)$ have analogous derivatives, except negative.
 
 ```math
 \begin{align*}
@@ -184,7 +177,7 @@ The other evolved trig functions $\cot(x)$ and $\csc(x)$ have analogous derivati
 ```
 
 ### Hyperbolic Trigonometry
-The hyp trig functions also form a cycle when differentiated, except the signs vanish:
+The hyp trig functions also form a cycle when differentiated, except the signs vanish.
 
 ```math
 \begin{align*}
@@ -193,7 +186,7 @@ The hyp trig functions also form a cycle when differentiated, except the signs v
 \end{align*}
 ```
 
-The compound evolutions are analogous:
+The compound evolutions are analogous.
 
 ```math
 \begin{align*}
@@ -202,7 +195,7 @@ The compound evolutions are analogous:
 \end{align*}
 ```
 
-The other evolutions have a sign change:
+The other evolutions have a sign change.
 
 ```math
 \begin{align*}
@@ -215,21 +208,23 @@ The other evolutions have a sign change:
 ## Integration
 
 ### Power rule
-For $n \neq -1$:
+For $n \neq -1$,
 
 ```math
 \int x^n \ dx = \frac{1}{n+1} x^{n+1}
 ```
 
-For $n = 0$ this is equivalent to integrating a constant:
+For $n = 0$ this is equivalent to integrating a constant.
 
 ```math
 \int k \ dx = kx
 ```
 
 ### Inverse chain rule
+
 ```math
-\int f'(g(x)) \, g'(x) \ dx = f(g(x))
+\int f'(g) \, g' \ dx = f(g)
+\\ \int f'(g(x)) \, g'(x) \ dx = f(g(x))
 ```
 
 ### Substitution
@@ -251,20 +246,20 @@ So
 \int f(t) \ dt
 ```
 
-Or equivalently:
+Or equivalently,
 
 ```math
 \int f(g(x)) \ dx = \int f(t) \cdot \frac{1}{g'(x)} \ dt
 ```
 
 ### Layer cake
-For the degenerate case of [power rule](#power-rule) where $n = -1$, the integral is different:
+For the degenerate case of [power rule](#power-rule) where $n = -1$, the integral is different.
 
 ```math
 \int \frac{1}{x} = \ln{x}
 ```
 
-Combining this with substitution provides a useful abstraction:
+Combining this with substitution provides a useful abstraction, famously known as [layer cake](int-int.md#layer-cake).
 
 ```math
 \int \frac{f'(x)}{f(x)} \ dx = \ln(f(x))
@@ -296,6 +291,10 @@ Any integral of the form
 
 can be reduced to this form by factoring out $\frac{1}{a}$.
 
+```math
+= \frac{1}{a} \int \frac{1}{x^2 + b/a} \ dx
+```
+
 ### Artanh
 Analogous to [arctan](#arctan), but negative.
 
@@ -323,25 +322,25 @@ It’s super useful to visualise trigonometric functions with a right triangle. 
 ### Values
 
 ### Identities
-The primitive trigonometric identity is:
+The primitive trigonometric identity is
 
 ```math
 \sin^2{x} + \cos^2{x} = 1
 ```
 
-Dividing through by $\cos^2{x}$ gives the evolved identity:
+Dividing through by $\cos(x)^2$ gives the evolved identity.
 
 ```math
 \tan^2{x} + 1 = \sec^2{x}
 ```
 
-Dividing through by $\sin^2{x}$ gives the other evolved identity:
+Dividing through by $\sin(x)^2$ gives the other evolved identity.
 
 ```math
 1 + \cot^2{x} = \csc^2{x}
 ```
 
-The angle addition (compound angle) formulae for $\sin(x)$ is:
+The angle addition (compound angle) formulae for $\sin(x)$ is
 
 ```math
 \begin{align*}
@@ -350,7 +349,7 @@ The angle addition (compound angle) formulae for $\sin(x)$ is:
 \end{align*}
 ```
 
-And for $\cos(x)$:
+And for $\cos(x)$,
 
 ```math
 \begin{align*}
@@ -359,7 +358,7 @@ And for $\cos(x)$:
 \end{align*}
 ```
 
-For $x = y$ we have the double angle formulae:
+For $x = y$ we have the double angle formulae.
 
 ```math
 \begin{align*}
@@ -368,7 +367,7 @@ For $x = y$ we have the double angle formulae:
 \end{align*}
 ```
 
-Rearranging the latter identity gives alternate double angle formulae:
+Rearranging the latter identity gives alternate double angle formulae.
 
 ```math
 \begin{align*}
@@ -377,7 +376,7 @@ Rearranging the latter identity gives alternate double angle formulae:
 \end{align*}
 ```
 
-Rearranging these gives the power reduction formulae:
+Rearranging these gives the power reduction formulae.
 
 ```math
 \begin{align*}
@@ -392,7 +391,7 @@ Rearranging these gives the power reduction formulae:
 You don’t need to even understand hyperbolic trig to use it in integration. Effectively, it’s just redressed trig with some sign changes.
 
 ### Functions
-The hyp trig functions can be defined in terms of $e^x$:
+The hyp trig functions can be defined in terms of $e^x$.
 
 ```math
 \begin{align*}
@@ -403,19 +402,47 @@ The hyp trig functions can be defined in terms of $e^x$:
 
 ### Identities
 
-It’s also worth noting that any question which can be solved with [hyp trig sub]() can also be solved with plain trig sub, using the identity $\tan^2{x} + 1 = \sec^2{x}$.
+> [!Tip]
+> It’s worth noting that any question which can be solved with [hyp trig sub]() can also be solved with plain trig sub, using the identity $\tan^2{x} + 1 = \sec^2{x}$.
+
+The primitive hyp trig identity is
+
+```math
+\cosh^2{x} - \sinh^2{x} = 1
+```
+
+Rearranging gives
+
+```math
+\begin{align*}
+  \cosh^2{x} &= \sinh^2{x} + 1
+  \\ \sinh^2{x} &= \cosh^2{x} - 1
+\end{align*}
+```
+
+Dividing through by $\cosh(x)^2$ gives the evolved identity.
+
+```math
+1 - \tanh^2{x} = \operatorname{sech}^2{x}
+```
+
+Dividing through by $\sinh(x)^2$ gives the other evolved identity.
+
+```math
+\coth^2{x} - 1 = \operatorname{csch}^2{x}
+```
 
 
 ## Series
 
 ### Sum of Geometric Series
-For a geometric series with first term $a$ and common ratio $r$
+For a geometric series with first term $a$ and common ratio $r$,
 
 ```math
 a \quad ar \quad ar^2 \quad ar^3 \quad ar^4 \quad ...
 ```
 
-If $\left| r \right| < 1$ then the infinite summation of the  series converges:
+If $\left| r \right| < 1$ then the infinite summation of the  series converges.
 
 ```math
 S_{\infin} = \frac{a}{1-r}
