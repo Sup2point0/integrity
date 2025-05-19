@@ -3,7 +3,7 @@
 | dest = guides/integrals/collections/int-int
 | capt = Glossary of the integration homies
 | index = guides / integrals
-| date = 2025 April 16
+| date = 2025 May 19
 -->
 
 Don’t we love our integration slang.
@@ -80,21 +80,21 @@ Well-known, well-established.
 
 > *If you multiply through by $2$, it’s easier to spot the inverse chain rule.*
 
-[Inverse chain rule](../method/archain-rule.md).
+[Inverse chain rule](../method/archain-rule.md). Also known as *archain*.
 
 
 ## IPR
 
 > *You can skip too the solution much faster here by spotting the inverse product rule.*
 
-[Inverse product rule](../methods/arcprod-rule.md).
+[Inverse product rule](../methods/arcprod-rule.md). Also known as *arcprod*.
 
 
 ## IQR
 
 > *It’s really, really hard to spot the inverse quotient rule in this integral.
 
-Inverse quotient rule.
+Inverse quotient rule. Also known as *arcquot*.
 
 ### Notes
 Famously not the [inter-quartile range<sup>↗</sup>](https://wikipedia.org/wiki/Interquartile_range).
