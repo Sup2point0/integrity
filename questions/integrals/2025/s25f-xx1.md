@@ -9,7 +9,6 @@ tags:
   - ln
 methods:
   - spot
-  - arcprod
 ---
 
 
