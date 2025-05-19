@@ -1,6 +1,6 @@
 ---
 topic: integrals
-title: apropos
+title: honest work
 desc: 
 date: 2025 May 15
 tags:
