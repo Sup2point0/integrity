@@ -5,7 +5,8 @@
 
   "paths / site": "site/",
   "paths / sources": [
-    "faq.md",
+    "./",
+    ".squarkdown/content/",
     "docs/",
     "guides/",
     "challenges/"
