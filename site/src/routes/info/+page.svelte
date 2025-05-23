@@ -26,7 +26,7 @@ import Meta from "#parts/page/meta.svelte";
   <Card title="FAQ" intern="info/faq" />
   <Card title="decoded" intern="info/decoded" />
   <Card title="Privacy" intern="info/privacy" />
-  <Card title="License" intern="info/license" />
+  <Card title="Licence" intern="info/licence" />
 </div>
 
 

@@ -57,9 +57,11 @@ import { base } from "$app/paths";
   <section>
     <h3> Docs </h3>
     <div class="links">
+      <Link text="Questions" intern="docs/questions" />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
       <Link text="Speedrun" intern="docs/speedrun" disabled={true} />
+      <Link text="Fun Facts" intern="docs/fun-facts" />
     </div>
   </section>
 
@@ -79,7 +81,7 @@ import { base } from "$app/paths";
       <Link text="FAQ" intern="info/faq" />
       <Link text="decoded" intern="info/decoded" />
       <Link text="Privacy" intern="info/privacy" />
-      <Link text="License" intern="info/license" />
+      <Link text="Licence" intern="info/licence" />
     </div>
   </section>
 </div>

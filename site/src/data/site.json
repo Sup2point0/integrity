@@ -1,35 +1,15 @@
 {
   "meta": {
-    "exported": "2025-05-12",
-    "file_count": 28,
+    "exported": "2025-05-23",
+    "file_count": 32,
     "page_count": 28
   },
   "index": {
-    "docs": {
+    "info": {
       "route": null,
       "pages": [
-        "docs/integrals.md"
-      ]
-    },
-    "integrals": {
-      "route": null,
-      "pages": [
-        "docs/integrals.md",
-        "guides/integrals/adventures/neat-trick.md",
-        "guides/integrals/antiderivatives/ln.md",
-        "guides/integrals/antiderivatives/power-rule.md",
-        "guides/integrals/antiderivatives/sec-3.md",
-        "guides/integrals/collections/epic-errors.md",
-        "guides/integrals/collections/everything-anything.md",
-        "guides/integrals/collections/int-int.md",
-        "guides/integrals/collections/once.md",
-        "guides/integrals/collections/standard-integrals.md",
-        "guides/integrals/how.md",
-        "guides/integrals/methods/partials.md",
-        "guides/integrals/methods/power-partials.md",
-        "guides/integrals/methods/sub.md",
-        "guides/integrals/why-hard.md",
-        "guides/integrals/why.md"
+        "faq.md",
+        ".squarkdown/content/~licence.md"
       ]
     },
     "guides": {
@@ -59,6 +39,26 @@
         "guides/complete-square/why.md"
       ]
     },
+    "integrals": {
+      "route": null,
+      "pages": [
+        "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/antiderivatives/ln.md",
+        "guides/integrals/antiderivatives/power-rule.md",
+        "guides/integrals/antiderivatives/sec-3.md",
+        "guides/integrals/collections/epic-errors.md",
+        "guides/integrals/collections/everything-anything.md",
+        "guides/integrals/collections/int-int.md",
+        "guides/integrals/collections/once.md",
+        "guides/integrals/collections/standard-integrals.md",
+        "guides/integrals/how.md",
+        "guides/integrals/methods/partials.md",
+        "guides/integrals/methods/power-partials.md",
+        "guides/integrals/methods/sub.md",
+        "guides/integrals/why-hard.md",
+        "guides/integrals/why.md"
+      ]
+    },
     "collections": {
       "route": null,
       "pages": [
@@ -84,26 +84,9 @@
     }
   },
   "tags": {
-    "docs": [
-      "docs/integrals.md"
-    ],
-    "integrals": [
-      "docs/integrals.md",
-      "guides/integrals/adventures/neat-trick.md",
-      "guides/integrals/antiderivatives/ln.md",
-      "guides/integrals/antiderivatives/power-rule.md",
-      "guides/integrals/antiderivatives/sec-3.md",
-      "guides/integrals/collections/epic-errors.md",
-      "guides/integrals/collections/everything-anything.md",
-      "guides/integrals/collections/int-int.md",
-      "guides/integrals/collections/once.md",
-      "guides/integrals/collections/standard-integrals.md",
-      "guides/integrals/how.md",
-      "guides/integrals/methods/partials.md",
-      "guides/integrals/methods/power-partials.md",
-      "guides/integrals/methods/sub.md",
-      "guides/integrals/why-hard.md",
-      "guides/integrals/why.md"
+    "info": [
+      "faq.md",
+      ".squarkdown/content/~licence.md"
     ],
     "guides": [
       "guides/complete-square/why.md",
@@ -126,6 +109,23 @@
     "complete-square": [
       "guides/complete-square/why.md"
     ],
+    "integrals": [
+      "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/antiderivatives/ln.md",
+      "guides/integrals/antiderivatives/power-rule.md",
+      "guides/integrals/antiderivatives/sec-3.md",
+      "guides/integrals/collections/epic-errors.md",
+      "guides/integrals/collections/everything-anything.md",
+      "guides/integrals/collections/int-int.md",
+      "guides/integrals/collections/once.md",
+      "guides/integrals/collections/standard-integrals.md",
+      "guides/integrals/how.md",
+      "guides/integrals/methods/partials.md",
+      "guides/integrals/methods/power-partials.md",
+      "guides/integrals/methods/sub.md",
+      "guides/integrals/why-hard.md",
+      "guides/integrals/why.md"
+    ],
     "collections": [
       "guides/integrals/adventures/neat-trick.md",
       "guides/integrals/collections/standard-integrals.md"
@@ -142,6 +142,52 @@
     ]
   },
   "pages": {
+    "faq.md": {
+      "path": "faq.md",
+      "last_deploy": "2025-04-07 21:00:58 +0100",
+      "slocs": 96,
+      "chars": 5737,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "info/faq",
+      "title": "FAQ",
+      "head": "FAQ",
+      "capt": "Frequently Asked Questions",
+      "desc": "Frequently asked questions about Integrity",
+      "index": [
+        "info"
+      ],
+      "tags": [
+        "info"
+      ],
+      "date": null,
+      "date_display": null
+    },
+    ".squarkdown/content/~licence.md": {
+      "path": ".squarkdown/content/~licence.md",
+      "last_deploy": "2025-05-23 16:01:30 +0100",
+      "slocs": 12,
+      "chars": 813,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "info/licence",
+      "title": "Licence",
+      "head": "Licence",
+      "capt": "Usage of content from Integrity",
+      "desc": "Usage of content from Integrity",
+      "index": [
+        "info"
+      ],
+      "tags": [
+        "info"
+      ],
+      "date": null,
+      "date_display": null
+    },
     "docs/fun-facts.md": {
       "path": "docs/fun-facts.md",
       "last_deploy": "2025-05-08 18:23:26 +0100",
@@ -161,36 +207,30 @@
       "date": null,
       "date_display": null
     },
-    "docs/integrals.md": {
-      "path": "docs/integrals.md",
-      "last_deploy": "2025-04-22 16:54:38 +0100",
-      "slocs": 8,
-      "chars": 113,
+    "docs/questions.md": {
+      "path": "docs/questions.md",
+      "last_deploy": "2025-05-23 16:00:59 +0100",
+      "slocs": 62,
+      "chars": 3298,
       "isIndex": false,
       "flags": [
         "live"
       ],
-      "dest": "docs/integrals",
-      "title": "Integrals on *Integrity*",
-      "head": "Integrals on *Integrity*",
-      "capt": "",
-      "desc": "",
-      "index": [
-        "docs",
-        "integrals"
-      ],
-      "tags": [
-        "docs",
-        "integrals"
-      ],
-      "date": null,
-      "date_display": null
+      "dest": "docs/questions",
+      "title": "About Questions on Integrity",
+      "head": "About Questions on Integrity",
+      "capt": null,
+      "desc": null,
+      "index": [],
+      "tags": [],
+      "date": "2025-05-20",
+      "date_display": "2025 May 20"
     },
     "docs/shard.md": {
       "path": "docs/shard.md",
-      "last_deploy": "2024-12-22 14:21:58 +0000",
+      "last_deploy": "2025-05-23 15:52:34 +0100",
       "slocs": 62,
-      "chars": 1733,
+      "chars": 1737,
       "isIndex": false,
       "flags": [
         "live"
@@ -200,25 +240,6 @@
       "head": "Shards",
       "capt": "Question Identifier Codes",
       "desc": "Explaining the question identifier codes used throughout Integrity",
-      "index": [],
-      "tags": [],
-      "date": null,
-      "date_display": null
-    },
-    "guides/README.md": {
-      "path": "guides/README.md",
-      "last_deploy": "2025-04-22 16:59:44 +0100",
-      "slocs": 10,
-      "chars": 792,
-      "isIndex": false,
-      "flags": [
-        "live"
-      ],
-      "dest": "guides",
-      "title": "Guides",
-      "head": "Guides",
-      "capt": null,
-      "desc": null,
       "index": [],
       "tags": [],
       "date": null,
@@ -380,25 +401,6 @@
       "date": null,
       "date_display": null
     },
-    "guides/integrals/collections/anti-recs.md": {
-      "path": "guides/integrals/collections/anti-recs.md",
-      "last_deploy": "2025-04-17 16:09:05 +0100",
-      "slocs": 11,
-      "chars": 262,
-      "isIndex": false,
-      "flags": [
-        "live"
-      ],
-      "dest": "",
-      "title": "",
-      "head": "",
-      "capt": "Things I wouldn’t do when integrating",
-      "desc": "Things I wouldn’t do when integrating",
-      "index": [],
-      "tags": [],
-      "date": null,
-      "date_display": null
-    },
     "guides/integrals/collections/epic-errors.md": {
       "path": "guides/integrals/collections/epic-errors.md",
       "last_deploy": "2025-04-05 09:21:00 +0100",
@@ -427,9 +429,9 @@
     },
     "guides/integrals/collections/everything-anything.md": {
       "path": "guides/integrals/collections/everything-anything.md",
-      "last_deploy": "2025-04-17 11:42:45 +0100",
-      "slocs": 424,
-      "chars": 10252,
+      "last_deploy": "2025-05-17 10:01:35 +0100",
+      "slocs": 451,
+      "chars": 10870,
       "isIndex": false,
       "flags": [
         "live",
@@ -456,9 +458,9 @@
     },
     "guides/integrals/collections/int-int.md": {
       "path": "guides/integrals/collections/int-int.md",
-      "last_deploy": "2025-04-16 10:05:05 +0100",
+      "last_deploy": "2025-05-19 12:27:39 +0100",
       "slocs": 231,
-      "chars": 6797,
+      "chars": 6870,
       "isIndex": false,
       "flags": [
         "live",
@@ -479,8 +481,8 @@
         "guides",
         "integrals"
       ],
-      "date": "2025-04-16",
-      "date_display": "2025 April 16"
+      "date": "2025-05-19",
+      "date_display": "2025 May 19"
     },
     "guides/integrals/collections/once.md": {
       "path": "guides/integrals/collections/once.md",
@@ -539,9 +541,9 @@
     },
     "guides/integrals/how.md": {
       "path": "guides/integrals/how.md",
-      "last_deploy": "2025-04-22 17:05:22 +0100",
-      "slocs": 139,
-      "chars": 7024,
+      "last_deploy": "2025-05-19 07:44:10 +0100",
+      "slocs": 134,
+      "chars": 6937,
       "isIndex": false,
       "flags": [
         "live",

@@ -12,8 +12,8 @@
   <img height="36px" alt="docs" src="assets/links/docs.png"></a>
 <a title="decoded" href="edu.md">
   <img height="36px" alt="decoded" src="assets/links/decoded.png"></a>
-<a title="license" href="https://sup2point0.github.io/integrity/info/license">
-  <img height="36px" alt="license" src="assets/links/license.png"></a>
+<a title="licence" href="https://sup2point0.github.io/integrity/info/licence">
+  <img height="36px" alt="licence" src="assets/links/license.png"></a>
 
 </div>
 

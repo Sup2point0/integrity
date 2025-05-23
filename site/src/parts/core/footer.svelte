@@ -23,7 +23,7 @@ import { base } from "$app/paths";
           <Link text="Docs" intern="docs" />
           <Link text="Guides" intern="guides" />
           <Link text="Privacy" intern="info/privacy" />
-          <Link text="License" intern="info/license" />
+          <Link text="Licence" intern="info/licence" />
         </div>
     </div>
   

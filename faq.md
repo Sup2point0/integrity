@@ -55,7 +55,7 @@ Hello!! Congratulations on solving so many, and tysm for using *Integrity*!
 I’m regularly adding more questions (because I can’t seem to stop writing more), so just check back in a bit and there’ll almost certainly be more waiting for you.
 
 ### Can I use these questions?
-Absolutely, you’re more than welcome to! For more details, see [License](README.md#License).
+Absolutely, you’re more than welcome to! For more details, see [Licence](https://sup2point0.github.io/integrity/info/licence).
 
 ### Why would I want to practise integration?
 See [Why Integrate?](guides/integrals/why.md)
