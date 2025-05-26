@@ -16,7 +16,7 @@ methods:
 ```math
 \int
   \left(
-    \sin{x} + x\cos{x} - x\sin{x}\tan{x}
+    \sin{x} + x\cos{x} + x\sin{x}\tan{x}
   \right)
   \left(
     \sec{x}
@@ -76,7 +76,7 @@ Notice
 \end{align*}
 ```
 
-### Reshape
+### Solve
 ```math
 \begin{align*}
   &\ fg-\int f'g\ dx
