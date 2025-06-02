@@ -24,10 +24,10 @@ const data = Site.pages[page];
   href="{base}/{data?.dest}"
 >
   <div class="info">
-    <h4> {data?.head ?? "Page Unavailable"} </h4>
+    <h4> {@html data?.head ?? "Page Unavailable"} </h4>
     
     {#if data?.capt}
-      <p> {data.capt} </p>
+      <p> {@html data.capt} </p>
     {/if}
   </div>
 </a>

@@ -15,7 +15,7 @@ import Header from "#parts/core/header.svelte";
 
 <Breadcrumbs levels={[
   { text: "Info", intern: "info" },
-  { text: "FAQ" },
+  { text: page.title },
 ]} />
 
 <Header title={page.head} capt={page.capt} />

@@ -1,21 +1,24 @@
 <script>
 
-import Content from "../../../../../synopsis.md";
+import Content from "./~content.svx";
+import { metadata as page } from "./~content.svx";
 
-import Header from "#parts/core/header.svelte";
 import Meta from "#parts/page/meta.svelte";
+import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
+import Header from "#parts/core/header.svelte";
 
 </script>
 
 
-<Meta title="Synopsis"
-  desc="Learnings, challenges and discoveries from developing Integrity"
-/>
+<Meta title={page.title} desc={page.desc} />
 
 
-<Header title="Synopsis"
-  capt="All about Integrity"
-/>
+<Breadcrumbs levels={[
+  { text: "Info", intern: "info" },
+  { text: page.title },
+]} />
+
+<Header title={page.head} capt={page.capt} />
 
 <article>
   <Content />

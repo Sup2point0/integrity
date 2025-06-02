@@ -11,6 +11,7 @@ export const questions = process_questions(questions_data);
 
 import pages_data from "../data/site.json" assert { type: "json" };
 export const pages = pages_data.pages;
+export const index = pages_data.index;
 export const guides = find_guides(pages);
 
 

@@ -1,4 +1,11 @@
 # *decoded*: Integrity
+<!-- #SQUARK live!
+| dest = info/decoded
+| title = decoded: Integrity
+| head = <em>decoded</em>: Integrity
+| capt = Learnings, challenges and discoveries from writing my own maths questions
+| index = info
+-->
 
 > [!Note]
 > This is part of my [*decoded*](https://github.com/Sup2point0/Assort/blob/origin/~dev/decoded.md) series, a collection of lessons learnt from each major project I’ve undertaken.

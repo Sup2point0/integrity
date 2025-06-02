@@ -8993,7 +8993,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int  \\left(    \\sin{x} + x\\cos{x} - x\\sin{x}\\tan{x}  \\right)  \\left(    \\sec{x}  \\right)  \\left(    \\ln{x}  \\right)\\ dx"
+          "content": "\\int  \\left(    \\sin{x} + x\\cos{x} + x\\sin{x}\\tan{x}  \\right)  \\left(    \\sec{x}  \\right)  \\left(    \\ln{x}  \\right)\\ dx"
         }
       ],
       "hints": {
@@ -9026,13 +9026,27 @@
         "reshape": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dx  \\\\ =&\\ \\left(\\ln x\\right)\\left(x\\tan x\\right)-\\int \\frac{1}{x}\\left(x\\tan x\\right)\\ dx  \\\\ =&\\ x\\left(\\ln x\\right)\\left(\\tan x\\right)-\\int \\tan x\\ dx  \\\\ =&\\ x\\left(\\ln x\\right)\\left(\\tan x\\right)+\\ln\\left(\\cos x\\right)-c\\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int \\left(\\sin x+x\\cos x+x\\sin x\\tan x\\right)\\left(\\sec x\\right)\\left(\\ln x\\right)\\ dx  \\\\ =&\\ \\int \\left(\\frac{\\sin x+x\\cos x+x\\sin x\\tan x}{\\cos x}\\right)\\left(\\ln x\\right)\\ dx  \\\\ =&\\ \\int \\left(\\tan x+x+x\\tan^{2}x\\right)\\left(\\ln x\\right)\\ dx  \\\\ =&\\ \\int \\left(\\tan x+x+x\\left(\\sec^{2}x-1\\right)\\right)\\left(\\ln x\\right)\\ dx  \\\\ =&\\ \\int \\left(\\tan x+x\\sec^{2}x\\right)\\left(\\ln x\\right)\\ dx\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Notice"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{d}{dx}\\left(x\\tan x\\right) &= 1\\cdot\\tan x+x\\cdot\\sec^{2}x  \\\\ &= \\tan x+x\\sec^{2}x\\end{align*}"
           }
         ],
         "parts": [
           {
             "kind": "latex",
             "content": "\\begin{align*}      f &= \\ln x \\quad&\\quad g' &= \\tan x+x\\sec^{2}x  \\\\ f' &= \\frac{1}{x} \\quad&\\quad g &= x\\tan x\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dx  \\\\ =&\\ \\left(\\ln x\\right)\\left(x\\tan x\\right)-\\int \\frac{1}{x}\\left(x\\tan x\\right)\\ dx  \\\\ =&\\ x\\left(\\ln x\\right)\\left(\\tan x\\right)-\\int \\tan x\\ dx  \\\\ =&\\ x\\left(\\ln x\\right)\\left(\\tan x\\right)+\\ln\\left(\\cos x\\right)-c\\end{align*}"
           }
         ]
       }

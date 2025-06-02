@@ -1,11 +1,11 @@
 <script lang="ts">
 
-import Card from "#parts/ui/card.svelte";
-
 import Site from "#src/scripts/site";
+
+import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
-import Meta from "#parts/page/meta.svelte";
+import ArticleArray from "#parts/page/article-array.svelte";
 
 </script>
 
@@ -22,23 +22,21 @@ import Meta from "#parts/page/meta.svelte";
 
 
 <div class="content">
-  <Card title="Synopsis" intern="info/synopsis" />
-  <Card title="FAQ" intern="info/faq" />
-  <Card title="decoded" intern="info/decoded" />
-  <Card title="Privacy" intern="info/privacy" />
-  <Card title="Licence" intern="info/licence" />
+  <ArticleArray
+    paths={[
+      "synopsis.md",
+      "faq.md",
+      "edu.md",
+      ".squarkdown/content/privacy.md",
+      ".squarkdown/content/~licence.md",
+    ]}
+  />
 </div>
 
 
 <style lang="scss">
 
 .content {
-  margin: 1rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 1rem;
-  text-align: center;
 }
 
 </style>

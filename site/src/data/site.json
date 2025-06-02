@@ -1,14 +1,17 @@
 {
   "meta": {
-    "exported": "2025-05-23",
-    "file_count": 32,
-    "page_count": 28
+    "exported": "2025-06-02",
+    "file_count": 33,
+    "page_count": 31
   },
   "index": {
     "info": {
       "route": null,
       "pages": [
+        "edu.md",
         "faq.md",
+        "synopsis.md",
+        ".squarkdown/content/privacy.md",
         ".squarkdown/content/~licence.md"
       ]
     },
@@ -85,7 +88,10 @@
   },
   "tags": {
     "info": [
+      "edu.md",
       "faq.md",
+      "synopsis.md",
+      ".squarkdown/content/privacy.md",
       ".squarkdown/content/~licence.md"
     ],
     "guides": [
@@ -142,11 +148,34 @@
     ]
   },
   "pages": {
+    "edu.md": {
+      "path": "edu.md",
+      "last_deploy": "2025-05-23 21:08:22 +0100",
+      "slocs": 49,
+      "chars": 2067,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "info/decoded",
+      "title": "decoded: Integrity",
+      "head": "<em>decoded</em>: Integrity",
+      "capt": "Learnings, challenges and discoveries from writing my own maths questions",
+      "desc": "Learnings, challenges and discoveries from writing my own maths questions",
+      "index": [
+        "info"
+      ],
+      "tags": [
+        "info"
+      ],
+      "date": null,
+      "date_display": null
+    },
     "faq.md": {
       "path": "faq.md",
-      "last_deploy": "2025-04-07 21:00:58 +0100",
+      "last_deploy": "2025-05-23 16:02:59 +0100",
       "slocs": 96,
-      "chars": 5737,
+      "chars": 5771,
       "isIndex": false,
       "flags": [
         "live"
@@ -156,6 +185,52 @@
       "head": "FAQ",
       "capt": "Frequently Asked Questions",
       "desc": "Frequently asked questions about Integrity",
+      "index": [
+        "info"
+      ],
+      "tags": [
+        "info"
+      ],
+      "date": null,
+      "date_display": null
+    },
+    "synopsis.md": {
+      "path": "synopsis.md",
+      "last_deploy": "2025-06-02 19:16:01 +0100",
+      "slocs": 39,
+      "chars": 1655,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "info/synopsis",
+      "title": "Synopsis",
+      "head": "Synopsis",
+      "capt": "All about <em>Integrity</em>",
+      "desc": "Integrity is a collection of integrals, graph-drawing, completing-the-square and all sorts of other maths questions written by Sup#2.0",
+      "index": [
+        "info"
+      ],
+      "tags": [
+        "info"
+      ],
+      "date": null,
+      "date_display": null
+    },
+    ".squarkdown/content/privacy.md": {
+      "path": ".squarkdown/content/privacy.md",
+      "last_deploy": "2025-05-23 21:05:31 +0100",
+      "slocs": 12,
+      "chars": 928,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "info/privacy",
+      "title": "Privacy",
+      "head": "Privacy",
+      "capt": "About your data on Integrity",
+      "desc": "About your data on Integrity",
       "index": [
         "info"
       ],
@@ -209,9 +284,9 @@
     },
     "docs/questions.md": {
       "path": "docs/questions.md",
-      "last_deploy": "2025-05-23 16:00:59 +0100",
+      "last_deploy": "2025-05-23 21:01:59 +0100",
       "slocs": 62,
-      "chars": 3298,
+      "chars": 3304,
       "isIndex": false,
       "flags": [
         "live"

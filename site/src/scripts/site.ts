@@ -1,4 +1,4 @@
-import { questions, pages, guides } from "./data";
+import { questions, pages, index, guides } from "./data";
 import type { Question, QuestionsData } from "#scripts/types";
 
 
@@ -7,6 +7,7 @@ interface SiteData {
   root: string;
 
   pages: Record<string, object>;
+  index: Record<string, object>;
   questions: QuestionsData;
 
   get_questions_of_topic: (topic: string) => Question[];
@@ -27,6 +28,7 @@ const Site: SiteData = {
   root: "https://sup2point0.github.io/integrity/",
 
   pages,
+  index,
   questions,
   guides,
 
