@@ -9,7 +9,7 @@
 
 Each question I devise is designated its own unique identifier deemed a *shard*. They look like this:
 
-```
+```ruby
 i24f-hr1
 s25cu-dq4
 ```
