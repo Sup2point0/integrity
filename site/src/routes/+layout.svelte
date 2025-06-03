@@ -44,7 +44,9 @@ function count_visits()
   if ($userprefs) $userprefs.visits++;  
 
   if (page.url.hostname !== "localhost") {
-    fetch("https://sup2point0.npkn.net/integrity/");
+    fetch("https://sup2point0.npkn.net/integrity", {
+      method: "POST"
+    });
   }
 }
 
