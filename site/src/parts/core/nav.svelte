@@ -28,10 +28,10 @@ import { base } from "$app/paths";
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
       <Link text="Addvent" intern="questions/addvent" />
       <Link text="Special" intern="questions/special" />
+      <Link text="All" intern="questions/all" />
     </NavLink>
 
     <NavLink text="Explore" intern="explore">
-      <Link text="All Questions" intern="questions/all" />
       <Link text="Random Question" action={() => {
         window.location.href = `${base}/question/${pick_random_question()}`;
       }} />
@@ -40,6 +40,7 @@ import { base } from "$app/paths";
       }} />
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
+      <Link text="Trails" intern="trails" />
       <Link text="Data" intern="data" />
     </NavLink>
 
