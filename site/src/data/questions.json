@@ -6220,6 +6220,59 @@
         ]
       }
     },
+    "s25f-ao1": {
+      "topic": "integrals",
+      "title": "apropos",
+      "desc": null,
+      "date": "2025 May 20",
+      "tags": [
+        "exp",
+        "ln"
+      ],
+      "methods": [
+        "spot",
+        "layer cake"
+      ],
+      "shard": "s25f-ao1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { 1 + x\\ln{x} + 2xe^x }    { xe^x + x\\ln{x} }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "The coefficient of $2$ in front of $xe^x$ means you can split it in two."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How can you factorise the denominator?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How can you get the denominator in the numerator?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "x+\\ln\\left(e^{x}+\\ln x\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{1+x\\ln x+2xe^{x}}{xe^{x}+x\\ln x}\\ dx  \\\\ =&\\ \\int \\frac{1+x\\ln x+2xe^{x}}{x\\left(e^{x}+\\ln x\\right)}\\ dx  \\\\ =&\\ \\int \\frac{x\\ln x+xe^{x}}{x\\left(e^{x}+\\ln x\\right)}+\\frac{1+xe^{x}}{x\\left(e^{x}+\\ln x\\right)}\\ dx  \\\\ =&\\ \\int 1+\\frac{e^{x}+1/x}{e^{x}+\\ln x}\\ dx  \\\\ =&\\ x+\\ln\\left(e^{x}+\\ln x\\right)-c\\end{align*}"
+        }
+      ]
+    },
     "s25f-at1": {
       "topic": "integrals",
       "title": "attention is all you need",
@@ -16353,6 +16406,78 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{\\cos x}{\\cos x+1}\\ dx  \\\\ &= \\int \\frac{\\cos x+1}{\\cos x+1}-\\frac{1}{\\cos x+1}\\ dx  \\\\ &= \\int dx-\\int \\frac{1}{1+\\cos x}\\ dx  \\\\ &= x-\\int \\frac{1-\\cos x}{\\left(1+\\cos x\\right)\\left(1-\\cos x\\right)}\\ dx  \\\\ &= x-\\int \\frac{1-\\cos x}{1-\\cos^{2}x}\\ dx  \\\\ &= x-\\int \\frac{1-\\cos x}{\\sin^{2}x}\\ dx  \\\\ &= x-\\int \\frac{1}{\\sin^{2}x}\\ dx+\\int \\frac{\\cos}{\\sin^{2}x}\\ dx  \\\\ &= x-\\int \\csc^{2}x\\ dx+\\int \\frac{\\cos x}{\\sin x}\\cdot\\frac{1}{\\sin x}\\ dx  \\\\ &= x+\\int -\\csc^{2}x\\ dx-\\int -\\cot x\\csc x\\ dx  \\\\ &= x+\\cot x-\\csc x-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ui1": {
+      "topic": "integrals",
+      "title": "unpaid intern",
+      "desc": null,
+      "date": "2025 May 15",
+      "tags": [
+        "sqrt",
+        "trig"
+      ],
+      "methods": [
+        "sub"
+      ],
+      "shard": "s25f-ui1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\tan x}{\\sqrt{\\sec x+1}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "The derivative of $\\sec(x)$ includes $\\tan(x)$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You can substitute $\\sec(x)$."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Let $\\sec(x) + 1 = t$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-2\\tanh^{-1}\\left(\\sqrt{\\sec x+1}\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\sec x+1 &= t  \\\\ \\sec x &= t-1  \\\\ \\sec x\\tan x\\ dx &= dt  \\\\ \\tan x\\ dx &= \\frac{1}{t-1}\\ dt\\end{align*}"
+          }
+        ],
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\tan x}{\\sqrt{\\sec x+1}}\\ dx  \\\\ =&\\ \\int \\frac{1}{\\sqrt{t}}\\cdot\\frac{1}{t-1}\\ dt  \\\\ =&\\ \\int \\frac{1}{\\sqrt{t}\\left(t-1\\right)}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{t} &= v  \\\\ t &= v^{2}  \\\\ dt &= 2v\\ dv\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1}{v\\left(v^{2}-1\\right)}\\cdot2v\\ dv  \\\\ &= -2\\int \\frac{1}{1-v^{2}}\\ dv  \\\\ &= -2\\tanh^{-1}v  \\\\ &= -2\\tanh^{-1}\\left(\\sqrt{t}\\right)  \\\\ &= -2\\tanh^{-1}\\left(\\sqrt{\\sec x+1}\\right)-c\\end{align*}"
           }
         ]
       }
