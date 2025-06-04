@@ -7,7 +7,7 @@ Tags to indicate what sort of question you’re facing.
 
 |             | general | integrals | guess the graph |
 | :---------- | :------ | :-------- | :-------------- |
-| conditions  |  | `definite` |
+| conditions  |  | `definite`<br>`improper` |
 | descriptors | `funny`<br>`horror`<br>`scare`<br>`dread` |
 | topics      | `algebra`<br>`combinatorics`<br>`complex`<br>`infinite`<br>`numbers`<br>`sequences`<br>`series` | `frac`<br>`poly`<br>`sqrt`<br>`trig`<br>`exp`<br>`ln`<br>`inverse trig`<br>`hyp trig` | `implicit`<br>`parametric` |
 | cameos      | `pi`<br>`e` |
