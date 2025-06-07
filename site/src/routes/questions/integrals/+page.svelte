@@ -31,7 +31,7 @@ onMount(() => {
 
 
 <Meta title="Integrals"
-  desc="200+ handcrafted high-difficulty integrals for avid integrators and maths fans"
+  desc="250+ handcrafted high-difficulty integrals for avid integrators and maths fans looking to hone integration prowess."
 />
 
 
