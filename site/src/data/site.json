@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-06-03",
-    "file_count": 33,
-    "page_count": 31
+    "exported": "2025-06-10",
+    "file_count": 35,
+    "page_count": 33
   },
   "index": {
     "info": {
@@ -19,7 +19,9 @@
       "route": null,
       "pages": [
         "guides/complete-square/why.md",
+        "guides/integrals/adventures/artanh.md",
         "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/antiderivatives/123-horror.md",
         "guides/integrals/antiderivatives/ln.md",
         "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md",
@@ -45,7 +47,9 @@
     "integrals": {
       "route": null,
       "pages": [
+        "guides/integrals/adventures/artanh.md",
         "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/antiderivatives/123-horror.md",
         "guides/integrals/antiderivatives/ln.md",
         "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md",
@@ -62,19 +66,26 @@
         "guides/integrals/why.md"
       ]
     },
-    "collections": {
+    "adventures": {
       "route": null,
       "pages": [
-        "guides/integrals/adventures/neat-trick.md",
-        "guides/integrals/collections/standard-integrals.md"
+        "guides/integrals/adventures/artanh.md",
+        "guides/integrals/adventures/neat-trick.md"
       ]
     },
     "antiderivatives": {
       "route": null,
       "pages": [
+        "guides/integrals/antiderivatives/123-horror.md",
         "guides/integrals/antiderivatives/ln.md",
         "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md"
+      ]
+    },
+    "collections": {
+      "route": null,
+      "pages": [
+        "guides/integrals/collections/standard-integrals.md"
       ]
     },
     "methods": {
@@ -96,7 +107,9 @@
     ],
     "guides": [
       "guides/complete-square/why.md",
+      "guides/integrals/adventures/artanh.md",
       "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/antiderivatives/123-horror.md",
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md",
@@ -116,7 +129,9 @@
       "guides/complete-square/why.md"
     ],
     "integrals": [
+      "guides/integrals/adventures/artanh.md",
       "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/antiderivatives/123-horror.md",
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md",
@@ -132,14 +147,18 @@
       "guides/integrals/why-hard.md",
       "guides/integrals/why.md"
     ],
-    "collections": [
-      "guides/integrals/adventures/neat-trick.md",
-      "guides/integrals/collections/standard-integrals.md"
+    "adventures": [
+      "guides/integrals/adventures/artanh.md",
+      "guides/integrals/adventures/neat-trick.md"
     ],
     "antiderivatives": [
+      "guides/integrals/antiderivatives/123-horror.md",
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md"
+    ],
+    "collections": [
+      "guides/integrals/collections/standard-integrals.md"
     ],
     "methods": [
       "guides/integrals/methods/partials.md",
@@ -365,11 +384,38 @@
       "date": null,
       "date_display": null
     },
+    "guides/integrals/adventures/artanh.md": {
+      "path": "guides/integrals/adventures/artanh.md",
+      "last_deploy": "2025-06-10 19:03:53 +0100",
+      "slocs": 129,
+      "chars": 4218,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/integrals/adventures/artanh",
+      "title": "A Fun Way of Finding the Artanh Integral",
+      "head": "A Fun Way of Finding the Artanh Integral",
+      "capt": "When hoping for the best works out",
+      "desc": "When hoping for the best works out",
+      "index": [
+        "guides",
+        "integrals",
+        "adventures"
+      ],
+      "tags": [
+        "guides",
+        "integrals",
+        "adventures"
+      ],
+      "date": "2025-06-10",
+      "date_display": "2025 June 10"
+    },
     "guides/integrals/adventures/neat-trick.md": {
       "path": "guides/integrals/adventures/neat-trick.md",
-      "last_deploy": "2025-04-05 09:23:05 +0100",
+      "last_deploy": "2025-06-10 18:24:15 +0100",
       "slocs": 91,
-      "chars": 3681,
+      "chars": 3680,
       "isIndex": false,
       "flags": [
         "live"
@@ -382,15 +428,42 @@
       "index": [
         "guides",
         "integrals",
-        "collections"
+        "adventures"
       ],
       "tags": [
         "guides",
         "integrals",
-        "collections"
+        "adventures"
       ],
       "date": "2025-01-15",
       "date_display": "2025 January 15"
+    },
+    "guides/integrals/antiderivatives/123-horror.md": {
+      "path": "guides/integrals/antiderivatives/123-horror.md",
+      "last_deploy": "2025-06-10 18:33:11 +0100",
+      "slocs": 70,
+      "chars": 1854,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/integrals/adventures/123-horror",
+      "title": "1, 2, 3, Horror",
+      "head": "1, 2, 3, Horror",
+      "capt": null,
+      "desc": null,
+      "index": [
+        "guides",
+        "integrals",
+        "antiderivatives"
+      ],
+      "tags": [
+        "guides",
+        "integrals",
+        "antiderivatives"
+      ],
+      "date": "2025-06-05",
+      "date_display": "2025 June 5"
     },
     "guides/integrals/antiderivatives/ln.md": {
       "path": "guides/integrals/antiderivatives/ln.md",
