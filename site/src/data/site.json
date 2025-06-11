@@ -1,6 +1,6 @@
 {
   "meta": {
-    "exported": "2025-06-10",
+    "exported": "2025-06-11",
     "file_count": 35,
     "page_count": 33
   },
@@ -386,9 +386,9 @@
     },
     "guides/integrals/adventures/artanh.md": {
       "path": "guides/integrals/adventures/artanh.md",
-      "last_deploy": "2025-06-10 19:03:53 +0100",
+      "last_deploy": "2025-06-10 19:05:38 +0100",
       "slocs": 129,
-      "chars": 4218,
+      "chars": 4230,
       "isIndex": false,
       "flags": [
         "live"
@@ -929,9 +929,9 @@
     },
     "challenges/year/2025.md": {
       "path": "challenges/year/2025.md",
-      "last_deploy": "2025-04-08 11:56:54 +0100",
-      "slocs": 124,
-      "chars": 4442,
+      "last_deploy": "2025-06-11 09:05:41 +0100",
+      "slocs": 175,
+      "chars": 7898,
       "isIndex": false,
       "flags": [
         "live"
@@ -948,9 +948,9 @@
     },
     "challenges/year/README.md": {
       "path": "challenges/year/README.md",
-      "last_deploy": "2025-04-08 12:27:36 +0100",
+      "last_deploy": "2025-06-11 08:57:37 +0100",
       "slocs": 37,
-      "chars": 2124,
+      "chars": 2266,
       "isIndex": false,
       "flags": [
         "live"
