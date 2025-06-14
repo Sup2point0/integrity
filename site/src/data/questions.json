@@ -4000,19 +4000,19 @@
       "desc": null,
       "date": "2024 December 9",
       "tags": [
-        "horror",
-        "long"
+        "scare",
+        "long",
+        "sqrt",
+        "ln"
       ],
       "methods": [
         "spot",
         "sub",
         "trig sub"
       ],
-      "has": [
-        "guide"
-      ],
       "flags": [
-        "feat"
+        "feat",
+        "guide"
       ],
       "shard": "s24f-lnt1",
       "question": [
@@ -4589,11 +4589,11 @@
     "s24f-tm1": {
       "topic": "integrals",
       "title": "polymorphism",
-      "desc": null,
+      "desc": "does anyone even read these?",
       "date": "2024 December 23",
       "tags": [
-        "trig",
-        "horror"
+        "scare",
+        "trig"
       ],
       "methods": [
         "factorise"
@@ -5102,7 +5102,7 @@
             "content": "\\begin{align*}  \\sin x &= t  \\\\ \\cos x\\ dx &= dt\\end{align*}"
           }
         ],
-        "solve": [
+        "simplify": [
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int 2025^{t}\\cdot t\\ dt  \\\\ &= \\int te^{\\left(\\ln2025\\right)t}\\end{align*}"
@@ -5170,7 +5170,7 @@
     "s25c-rm1": {
       "topic": "integrals",
       "title": "partial pain",
-      "desc": null,
+      "desc": "certified toughie!",
       "date": "2025 March 17",
       "tags": [
         "poly",
@@ -5218,7 +5218,7 @@
         "5": [
           {
             "kind": "text",
-            "content": "What does $\\frac{1}{2\\pi x - 1}$ integrate to?"
+            "content": "What does $\\displaystyle \\frac{1}{(2\\pi x - 1)^2}$ integrate to?"
           }
         ]
       },
@@ -9065,11 +9065,10 @@
     "s25f-ft1": {
       "topic": "integrals",
       "title": "sabotage",
-      "desc": null,
+      "desc": "one of my favourite integrals to give people just about familiar enough with trig.",
       "date": "2025 January 12",
       "tags": [
-        "trig",
-        "frac"
+        "trig"
       ],
       "methods": [
         "spot"
@@ -9110,14 +9109,12 @@
           "content": "\\tan{x} + \\sec{x} - c"
         }
       ],
-      "solution": {
-        "solve": [
-          {
-            "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int \\frac{\\sec x}{\\sec x-\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\sec x\\right)\\left(\\sec x+\\tan x\\right)}{\\left(\\sec x-\\tan x\\right)\\left(\\sec x+\\tan x\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\sec x\\tan x}{\\sec^{2}x-\\tan^{2}x}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\sec x\\tan x}{1}\\ dx  \\\\ =&\\ \\int \\sec^{2}x\\ dx+\\int \\sec x\\tan x\\ dx  \\\\ =&\\ \\tan x+\\sec x-c\\end{align*}"
-          }
-        ]
-      }
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{\\sec x}{\\sec x-\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\sec x\\right)\\left(\\sec x+\\tan x\\right)}{\\left(\\sec x-\\tan x\\right)\\left(\\sec x+\\tan x\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\sec x\\tan x}{\\sec^{2}x-\\tan^{2}x}\\ dx  \\\\ =&\\ \\int \\frac{\\sec^{2}x+\\sec x\\tan x}{1}\\ dx  \\\\ =&\\ \\int \\sec^{2}x\\ dx+\\int \\sec x\\tan x\\ dx  \\\\ =&\\ \\tan x+\\sec x-c\\end{align*}"
+        }
+      ]
     },
     "s25f-fv1": {
       "topic": "integrals",
@@ -9480,7 +9477,7 @@
     "s25f-hd1": {
       "topic": "integrals",
       "title": "heads up, incoming",
-      "desc": null,
+      "desc": "heads down, pray for me",
       "date": "2025 March 13",
       "tags": [
         "exp"
@@ -9957,16 +9954,19 @@
         "complex"
       ],
       "methods": [
+        "long",
+        "work",
         "spot"
       ],
       "flags": [
-        "feat"
+        "feat",
+        "guide"
       ],
       "shard": "s25f-hr1",
       "question": [
         {
           "kind": "latex",
-          "content": "\\int  \\frac    {2\\ \\operatorname{sign}(x)}    {\\sqrt{2-x^2}}  \\sqrt{\\frac    { \\sin^{-1}\\left(-x^2 - i^2 \\right) - i^2 }    { \\sin^{-1}\\left(x^2 - i^2 \\right) - i^2 }  }\\ dx"
+          "content": "\\int  \\frac    {2\\, \\operatorname{sign}(x)}    {\\sqrt{2-x^2}}  \\sqrt{\\frac    { \\sin^{-1}\\left(-x^2 - i^2 \\right) - i^2 }    { \\sin^{-1}\\left(x^2 - i^2 \\right) - i^2 }  }\\ dx"
         }
       ],
       "hints": {
@@ -10007,7 +10007,7 @@
           },
           {
             "kind": "text",
-            "content": "$\\sin^{-1}(x)$ is in fact odd, meaning we can pull out the $-$ sign:"
+            "content": "$\\sin^{-1}(x)$ is odd, meaning we can pull out the $-$ sign:"
           },
           {
             "kind": "latex",
@@ -10053,7 +10053,7 @@
           },
           {
             "kind": "text",
-            "content": "It hopefully shouldn’t be too hard to convince yourself this is true. Now, rearranging the latter equation we obtain"
+            "content": "Hopefully it shouldn’t be too hard to convince yourself this is true. Now, rearranging the latter equation we obtain"
           },
           {
             "kind": "latex",
@@ -10105,6 +10105,16 @@
           }
         ],
         "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sin^{-1}t &= v  \\\\ \\frac{1}{\\sqrt{1-t^{2}}}\\ dt &= dv\\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\sqrt{\\frac{1-v}{1+v}}\\ dv  \\\\ &= \\int \\frac{\\sqrt{1-v}}{\\sqrt{1+v}}\\cdot\\frac{\\sqrt{1-v}}{\\sqrt{1-v}}\\ dv  \\\\ &= \\int \\frac{1-v}{\\sqrt{\\left(1+v\\right)\\left(1-v\\right)}}\\ dv  \\\\ &= \\int \\frac{1-v}{\\sqrt{1-v^{2}}}\\ dv\\end{align*}"
+          }
+        ],
+        "substitute (3)": [
           {
             "kind": "latex",
             "content": "\\begin{align*}  v &= \\sin w  \\\\ dv &= \\cos w\\ dw\\end{align*}"
@@ -10510,7 +10520,7 @@
     "s25f-ip1": {
       "topic": "integrals",
       "title": "melatonin",
-      "desc": null,
+      "desc": "doesn’t look like one that can integrated, innit.",
       "date": "2025 May 12",
       "tags": [
         "trig",
@@ -10711,7 +10721,7 @@
     "s25f-iv1": {
       "topic": "integrals",
       "title": "treasure hunting",
-      "desc": null,
+      "desc": "X marks the spot, except when it doesn’t.",
       "date": "2025 January 12",
       "tags": [
         "horror",
@@ -10735,7 +10745,7 @@
         "1": [
           {
             "kind": "text",
-            "content": "What’s $sec^2{x} - 1$?"
+            "content": "What’s $\\sec^2{x} - 1$?"
           }
         ],
         "2": [
@@ -11701,7 +11711,8 @@
         "sub"
       ],
       "flags": [
-        "feat"
+        "feat",
+        "guide"
       ],
       "shard": "s25f-lv3",
       "question": [
@@ -12590,7 +12601,7 @@
     "s25f-nx1": {
       "topic": "integrals",
       "title": "neurotic",
-      "desc": "This might be my favourite integral I’ve created (yet).",
+      "desc": "At the time, this was one of the favourite integrals. Looking back, it’s not that nice lol.",
       "date": "2025 January 9",
       "tags": [
         "horror",
@@ -14002,7 +14013,7 @@
     "s25f-qt2": {
       "topic": "integrals",
       "title": "architechnica",
-      "desc": null,
+      "desc": "Long road ahead.",
       "date": "2025 February 1",
       "tags": [
         "dread",
@@ -17542,7 +17553,7 @@
     "s25f-xf1": {
       "topic": "integrals",
       "title": "hyperformant",
-      "desc": null,
+      "desc": "Messy much",
       "date": "2025 January 23",
       "tags": [
         "horror",
