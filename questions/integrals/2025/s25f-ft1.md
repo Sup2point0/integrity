@@ -1,11 +1,10 @@
 ---
 topic: integrals
 title: sabotage
-desc: 
+desc: one of my favourite integrals to give people just about familiar enough with trig.
 date: 2025 January 12
 tags:
   - trig
-  - frac
 methods:
   - spot
 flags:
@@ -41,7 +40,6 @@ Think difference of 2 squares.
 
 ## Solution
 
-### Solve
 ```math
 \begin{align*}
   &\ \int \frac{\sec x}{\sec x-\tan x}\ dx

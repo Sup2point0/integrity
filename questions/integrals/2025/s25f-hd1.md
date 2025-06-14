@@ -1,7 +1,7 @@
 ---
 topic: integrals
 title: heads up, incoming
-desc: 
+desc: heads down, pray for me
 date: 2025 March 13
 tags:
   - exp

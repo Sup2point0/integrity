@@ -1,11 +1,11 @@
 ---
 topic: integrals
 title: polymorphism
-desc: 
+desc: does anyone even read these?
 date: 2024 December 23
 tags:
+  - scare
   - trig
-  - horror
 methods:
   - factorise
 flags:

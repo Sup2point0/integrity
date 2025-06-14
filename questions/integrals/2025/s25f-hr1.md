@@ -9,9 +9,12 @@ tags:
   - inverse trig
   - complex
 methods:
+  - long
+  - work
   - spot
 flags:
   - feat
+  - guide
 ---
 
 
@@ -19,7 +22,7 @@ flags:
 ```math
 \int
   \frac
-    {2\ \operatorname{sign}(x)}
+    {2\, \operatorname{sign}(x)}
     {\sqrt{2-x^2}}
   \sqrt{\frac
     { \sin^{-1}\left(-x^2 - i^2 \right) - i^2 }
@@ -61,7 +64,7 @@ Okayyy, one step at a time. When faced with something like this, always start wi
 \end{align*}
 ```
 
-$\sin^{-1}(x)$ is in fact odd, meaning we can pull out the $-$ sign:
+$\sin^{-1}(x)$ is odd, meaning we can pull out the $-$ sign:
 
 ```math
 = \int \frac{2\operatorname{sign}\left(x\right)}{\sqrt{2-x^{2}}}\sqrt{\frac{1-\sin^{-1}\left(x^{2}-1\right)}{1+\sin^{-1}\left(x^{2}-1\right)}}\ dx
@@ -102,7 +105,7 @@ Or equivalently,
 \operatorname{sign}(x) = \frac{x}{\left|x\right|}
 ```
 
-It hopefully shouldn’t be too hard to convince yourself this is true. Now, rearranging the latter equation we obtain
+Hopefully it shouldn’t be too hard to convince yourself this is true. Now, rearranging the latter equation we obtain
 
 ```math
 \left|x\right|\operatorname{sign}(x) = x
@@ -170,7 +173,7 @@ And now, we’re all set for our substitutions!
 \end{align*}
 ```
 
-### Substitute (2)
+### Substitute (3)
 ```math
 \begin{align*}
   v &= \sin w

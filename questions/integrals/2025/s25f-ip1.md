@@ -1,7 +1,7 @@
 ---
 topic: integrals
 title: melatonin
-desc: 
+desc: doesn’t look like one that can integrated, innit.
 date: 2025 May 12
 tags:
   - trig

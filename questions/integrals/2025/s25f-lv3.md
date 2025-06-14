@@ -12,6 +12,7 @@ methods:
   - sub
 flags:
   - feat
+  - guide
 ---
 
 

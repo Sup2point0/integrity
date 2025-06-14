@@ -1,7 +1,7 @@
 ---
 topic: integrals
 title: partial pain
-desc: 
+desc: certified toughie!
 date: 2025 March 17
 tags:
   - poly
@@ -39,7 +39,7 @@ How could you turn the antiderivative into the derivative?
 Substitution works here, but there’s a faster method.
 
 ### 5
-What does $\frac{1}{2\pi x - 1}$ integrate to?
+What does $\displaystyle \frac{1}{(2\pi x - 1)^2}$ integrate to?
 
 
 ## Answer

@@ -1,7 +1,7 @@
 ---
 topic: integrals
 title: architechnica
-desc: 
+desc: Long road ahead.
 date: 2025 February 1
 tags:
   - dread

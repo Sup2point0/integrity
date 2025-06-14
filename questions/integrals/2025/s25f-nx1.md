@@ -1,7 +1,7 @@
 ---
 topic: integrals
 title: neurotic
-desc: This might be my favourite integral I’ve created (yet).
+desc: At the time, this was one of the favourite integrals. Looking back, it’s not that nice lol.
 date: 2025 January 9
 tags:
   - horror

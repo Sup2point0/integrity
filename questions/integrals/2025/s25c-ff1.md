@@ -70,7 +70,7 @@ Write the integral like
 \end{align*}
 ```
 
-### Solve
+### Simplify
 ```math
 \begin{align*}
   &= \int 2025^{t}\cdot t\ dt

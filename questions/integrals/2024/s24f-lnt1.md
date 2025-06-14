@@ -4,16 +4,17 @@ title: lawful evil
 desc: 
 date: 2024 December 9
 tags:
-  - horror
+  - scare
   - long
+  - sqrt
+  - ln
 methods:
   - spot
   - sub
   - trig sub
-has:
-  - guide
 flags:
   - feat
+  - guide
 ---
 
 

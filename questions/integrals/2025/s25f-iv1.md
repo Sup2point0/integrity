@@ -1,7 +1,7 @@
 ---
 topic: integrals
 title: treasure hunting
-desc: 
+desc: X marks the spot, except when it doesn’t.
 date: 2025 January 12
 tags:
   - horror
@@ -27,7 +27,7 @@ flags:
 ## Hints
 
 ### 1
-What’s $sec^2{x} - 1$?
+What’s $\sec^2{x} - 1$?
 
 ### 2
 What substitution might you make?
