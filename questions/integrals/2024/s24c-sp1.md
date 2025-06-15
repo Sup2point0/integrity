@@ -7,7 +7,7 @@ tags:
   - scare
   - poly
 methods:
-  - 
+  - speed
 ---
 
 

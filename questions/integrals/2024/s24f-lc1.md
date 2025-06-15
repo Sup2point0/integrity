@@ -6,7 +6,6 @@ date: 2024 December 9
 tags:
   - horror
   - trig
-  - frac
 methods:
   - layer cake
 ---

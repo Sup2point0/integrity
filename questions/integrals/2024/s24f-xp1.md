@@ -5,9 +5,8 @@ desc:
 date: 2024 December 17
 tags:
   - exp
-  - frac
 methods:
-  - exp sub
+  - work
 ---
 
 

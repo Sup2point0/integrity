@@ -5,7 +5,7 @@ desc:
 date: 2024 November
 tags:
   - dread
-  - inverse trig
+  - arctrig
 methods:
   - sub
   - parts
@@ -50,7 +50,7 @@ Split it as $\frac{1}{\sin{x}} \cdot \frac{\cos{x}}{\sin{x}}$.
 \end{align*}
 ```
 
-### Solve (1)
+### Simplify
 ```math
 \begin{align*}
   &\ \int \frac{\sin^{-1}x}{x^{2}}\ dx
@@ -68,7 +68,7 @@ Split it as $\frac{1}{\sin{x}} \cdot \frac{\cos{x}}{\sin{x}}$.
 \end{align*}
 ```
 
-### Solve (2)
+### Solve
 ```math
 \begin{align*}
   &\ -\left(fg-\int f'g\ dt\right)

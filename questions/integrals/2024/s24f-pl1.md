@@ -5,7 +5,6 @@ desc:
 date: 2024 December
 tags:
   - poly
-  - frac
 methods:
   - work
 ---

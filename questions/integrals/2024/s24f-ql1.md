@@ -7,7 +7,6 @@ tags:
   - sqrt
 methods:
   - speed
-  - sub
 ---
 
 

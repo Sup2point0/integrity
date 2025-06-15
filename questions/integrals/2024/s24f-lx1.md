@@ -5,8 +5,8 @@ desc:
 date: 2024 December 28
 tags:
   - fun
-  - sqrt
   - poly
+  - sqrt
   - ln
 methods:
   - speed

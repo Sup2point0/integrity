@@ -9,6 +9,7 @@ tags:
 methods:
   - speed
   - sub
+  - fun
 ---
 
 

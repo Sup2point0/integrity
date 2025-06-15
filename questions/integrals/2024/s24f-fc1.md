@@ -5,7 +5,6 @@ desc:
 date: 2024 December
 tags:
   - poly
-  - frac
 methods:
   - work
   - partials
@@ -21,8 +20,10 @@ methods:
 ## Hints
 
 ### 1
+Focus on the denominator.
 
 ### 2
+What if you write $x^2$ as $y$?
 
 ### 3
 

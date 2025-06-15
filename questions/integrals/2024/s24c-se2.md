@@ -8,6 +8,7 @@ tags:
   - sqrt
   - trig
 methods:
+  - troll
   - spot
 ---
 

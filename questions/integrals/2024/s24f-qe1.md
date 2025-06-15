@@ -44,12 +44,14 @@ Start with $1 + e^x = t$.
 ### Substitute (1)
 ```math
 \begin{align*}
-  1+e^{x} &=  \quad\to\quad ^{x}=t-1
-  \\ e^{x}\ dx &= d \quad\to\quad x=\frac{dt}{t-1}
+  1+e^{x} &= t
+  \\ e^{x} &= t-1
+  \\ e^{x}\ dx &= dt
+  \\ dx &= \frac{dt}{t-1}
 \end{align*}
 ```
 
-### Solve (1)
+### Simplify (1)
 ```math
 \begin{align*}
   &= \int \sqrt{1+\sqrt{t}}\cdot\frac{1}{t-1}\ dt
@@ -66,7 +68,7 @@ Start with $1 + e^x = t$.
 \end{align*}
 ```
 
-### Solve (2)
+### Simplify (2)
 ```math
 \begin{align*}
   &= \int \frac{\sqrt{v}}{\left(v-1\right)^{2}-1}\cdot2\left(v-1\right)\ dv
@@ -84,7 +86,7 @@ Start with $1 + e^x = t$.
 \end{align*}
 ```
 
-### Solve (3)
+### Simplify (3)
 ```math
 \begin{align*}
   &= 2\int \frac{r^{2}-1}{r\left(r^{2}-2\right)}\cdot2r\ dr
@@ -121,7 +123,7 @@ Put $r = -\sqrt{2}$:
 \end{align*}
 ```
 
-### Solve (4)
+### Solve
 ```math
 \begin{align*}
   &= 4r+4\int \frac{\sqrt{2}}{4\left(r-\sqrt{2}\right)}-\frac{\sqrt{2}}{4\left(r+\sqrt{2}\right)}\ dr

@@ -6,7 +6,6 @@ date: 2024 December 10
 tags:
   - poly
   - ln
-  - frac
 methods:
   - layer cake
 ---

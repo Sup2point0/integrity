@@ -4,8 +4,8 @@ title: flyby
 desc: 
 date: 2024 December 24
 tags:
-  - exp
   - poly
+  - exp
 methods:
   - spot
   - work

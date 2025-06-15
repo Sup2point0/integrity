@@ -8,7 +8,6 @@ tags:
   - trig
 methods:
   - speed
-  - sub
   - parts
 ---
 

@@ -4,11 +4,11 @@ title: workable
 desc: 'Warning: this is long.'
 date: 2024 December 13
 tags:
-  - poly
   - dread
+  - poly
 methods:
   - work
-  - split
+  - long
   - partials
 ---
 

@@ -6,7 +6,7 @@ date: 2024 September
 tags:
   - trig
 methods:
-  - sub
+  - speed
 ---
 
 

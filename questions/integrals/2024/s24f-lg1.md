@@ -5,11 +5,8 @@ desc:
 date: 2024 December 24
 tags:
   - poly
-  - frac
 methods:
   - work
-  - poly div
-  - arctan
 ---
 
 

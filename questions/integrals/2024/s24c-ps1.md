@@ -8,7 +8,7 @@ tags:
   - exp
 methods:
   - spot
-  - inverse product
+  - arcprod
 ---
 
 
