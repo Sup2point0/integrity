@@ -4,7 +4,6 @@
 | title = decoded: Integrity
 | head = <em>decoded</em>: Integrity
 | capt = Learnings, challenges and discoveries from writing my own maths questions
-| index = info
 -->
 
 > [!Note]

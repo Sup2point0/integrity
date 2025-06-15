@@ -2,7 +2,6 @@
 <!-- #SQUARK live!
 | dest = info/privacy
 | capt = About your data on Integrity
-| index = info
 -->
 
 By popular request, *Integrity* now counts visits – but apart from that, no data is collected, no analytics are used, no cookies are stored.

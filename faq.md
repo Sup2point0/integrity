@@ -3,7 +3,6 @@
 | dest = info/faq
 | capt = Frequently Asked Questions
 | desc = Frequently asked questions about Integrity
-| index = info
 -->
 
 ### What’s *Integrity* for?

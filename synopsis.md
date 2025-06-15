@@ -3,7 +3,6 @@
 | dest = info/synopsis
 | capt = All about <em>Integrity</em>
 | desc = Integrity is a collection of integrals, graph-drawing, completing-the-square and all sorts of other maths questions written by Sup#2.0
-| index = info
 -->
 
 I’ve come to really enjoy writing my own maths questions, particularly integrals. So, much like [*Assort*](https://github.com/Sup2point0/Assort) is a repository of all my creations, *Integrity* is a collection of all my maths questions. I started writing these for maths competitions I was helping run at school, but now I just write them for fun.
