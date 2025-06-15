@@ -141,83 +141,83 @@ onMount(() => {
         </tr>
       {/if}
 
-      {#if $userprefs["search-exp"]}
-        <tr transition:fade={{ duration: 200 }}>
-          <th> Include Only </th>
+      <tr transition:fade={{ duration: 200 }}>
+        <th> Include Only </th>
 
-          <td class="flex">
-            {#each Object.entries(search.include) as [prop, state]}
-              <Toggle text={prop.toUpperCase()}
-                value={state}
-                toggle={() => {
-                  search.include[prop] = !search.include[prop];
-                  if (search.include[prop]) {
-                    search.exclude[prop] = false;
-                  }
-                }}
-              />
-            {/each}
-          </td>
-          
-          <td>
-            <Toggle text="ALL"
-              value={!unchecked_include}
+        <td class="flex">
+          {#each Object.entries(search.include) as [prop, state]}
+            <Toggle text={prop.toUpperCase()}
+              value={state}
               toggle={() => {
+                search.include[prop] = !search.include[prop];
+                if (search.include[prop]) {
+                  search.exclude[prop] = false;
+                }
+              }}
+            />
+          {/each}
+        </td>
+        
+        <td>
+          <Toggle text="ALL"
+            value={!unchecked_include}
+            toggle={() => {
+              search.include = Object.fromEntries(
+                Object.entries(search.include).map(
+                  ([prop, state]) => [prop, unchecked_include]
+                )
+              );
+              if (!unchecked_include) {
+                search.exclude = Object.fromEntries(
+                  Object.entries(search.exclude).map(
+                    ([prop, state]) => [prop, false]
+                  )
+                );
+              }
+            }}
+          />
+        </td>
+      </tr>
+
+      <tr transition:fade={{ duration: 200 }}>
+        <th> Exclude </th>
+
+        <td class="flex">
+          {#each Object.entries(search.exclude) as [prop, state]}
+            <Toggle text={prop.toUpperCase()}
+              value={state}
+              toggle={() => {
+                search.exclude[prop] = !search.exclude[prop];
+                if (search.exclude[prop]) {
+                  search.include[prop] = false;
+                }
+              }}
+            />
+          {/each}
+        </td>
+        
+        <td>
+          <Toggle text="ALL"
+            value={!unchecked_exclude}
+            toggle={() => {
+              search.exclude = Object.fromEntries(
+                Object.entries(search.include).map(
+                  ([prop, state]) => [prop, unchecked_exclude]
+                )
+              );
+              if (!unchecked_exclude) {
                 search.include = Object.fromEntries(
                   Object.entries(search.include).map(
-                    ([prop, state]) => [prop, unchecked_include]
+                    ([prop, state]) => [prop, false]
                   )
                 );
-                if (!unchecked_include) {
-                  search.exclude = Object.fromEntries(
-                    Object.entries(search.exclude).map(
-                      ([prop, state]) => [prop, false]
-                    )
-                  );
-                }
-              }}
-            />
-          </td>
-        </tr>
-
-        <tr transition:fade={{ duration: 200 }}>
-          <th> Exclude </th>
-
-          <td class="flex">
-            {#each Object.entries(search.exclude) as [prop, state]}
-              <Toggle text={prop.toUpperCase()}
-                value={state}
-                toggle={() => {
-                  search.exclude[prop] = !search.exclude[prop];
-                  if (search.exclude[prop]) {
-                    search.include[prop] = false;
-                  }
-                }}
-              />
-            {/each}
-          </td>
-          
-          <td>
-            <Toggle text="ALL"
-              value={!unchecked_exclude}
-              toggle={() => {
-                search.exclude = Object.fromEntries(
-                  Object.entries(search.include).map(
-                    ([prop, state]) => [prop, unchecked_exclude]
-                  )
-                );
-                if (!unchecked_exclude) {
-                  search.include = Object.fromEntries(
-                    Object.entries(search.include).map(
-                      ([prop, state]) => [prop, false]
-                    )
-                  );
-                }
-              }}
-            />
-          </td>
-        </tr>
+              }
+            }}
+          />
+        </td>
+      </tr>
       
+      {#if $userprefs["search-exp"]}
         <tr transition:fade={{ duration: 200 }}>
           <th> Show </th>
 
@@ -269,42 +269,42 @@ onMount(() => {
             />
           </td>
         </tr>
+
+        <tr>
+          <th> View </th>
+          <td>
+            <Select bind:value={$userprefs["search-view"]}
+              options={{"GRID": "grid", "LIST": "list"}}
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <th> Sort </th>
+          <td class="flex">
+            <Select bind:value={$userprefs["search-sort"]}
+              options={{
+                "RELEVANCE": null,
+                "DATE": "date",
+                "NAME": "name",
+                "RANDOM": "rand",
+              }}
+            />
+            {#if $userprefs["search-sort"] === "rand"}
+              <Clicky text="SHUFFLE" action={() => {
+                $userprefs["search-sort"] = null;
+                $userprefs["search-sort"] = "rand";
+              }} />
+            {/if}
+          </td>
+          <td>
+            <Toggle text="REVERSE"
+              value={search.reverse}
+              toggle={() => { search.reverse = !search.reverse; }}
+            />
+          </td>
+        </tr>
       {/if}
-
-      <tr>
-        <th> View </th>
-        <td>
-          <Select bind:value={$userprefs["search-view"]}
-            options={{"GRID": "grid", "LIST": "list"}}
-          />
-        </td>
-      </tr>
-
-      <tr>
-        <th> Sort </th>
-        <td class="flex">
-          <Select bind:value={$userprefs["search-sort"]}
-            options={{
-              "RELEVANCE": null,
-              "DATE": "date",
-              "NAME": "name",
-              "RANDOM": "rand",
-            }}
-          />
-          {#if $userprefs["search-sort"] === "rand"}
-            <Clicky text="SHUFFLE" action={() => {
-              $userprefs["search-sort"] = null;
-              $userprefs["search-sort"] = "rand";
-            }} />
-          {/if}
-        </td>
-        <td>
-          <Toggle text="REVERSE"
-            value={search.reverse}
-            toggle={() => { search.reverse = !search.reverse; }}
-          />
-        </td>
-      </tr>
     </tbody></table>
 
     <div class="buttons">      
