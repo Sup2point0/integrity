@@ -2,7 +2,7 @@
 <!-- #SQUARK live! feat! c! devx! dev!
 | dest = guides/integrals/collections/everything-anything
 | capt = The prime integrator’s standard arsenal
-| index = guides / integrals
+| index = guides / integrals / collections
 | date = 2025 April 17
 -->
 

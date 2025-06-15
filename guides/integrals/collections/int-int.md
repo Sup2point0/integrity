@@ -2,7 +2,7 @@
 <!-- #SQUARK live! feat! opin! devx!
 | dest = guides/integrals/collections/int-int
 | capt = Glossary of the integration homies
-| index = guides / integrals
+| index = guides / integrals / collections
 | date = 2025 May 19
 -->
 

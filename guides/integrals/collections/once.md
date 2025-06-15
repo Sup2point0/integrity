@@ -2,7 +2,7 @@
 <!-- #SQUARK live! opin! devx! dev!
 | dest = guides/integrals/collections/once
 | capt = Landmarks on the expedition of integration
-| index = guides / integrals
+| index = guides / integrals / collections
 -->
 
 There are easy integrals. There are hard integrals. There are simple integrals, nice integrals, ugly integrals, and horror integrals. But there are also integrals so *exquisitely* beautiful, that you can only experience their beauty once in your lifetime. Like a firework they come, a burst of colour and vibrance, dazzling, yet ephemeral.

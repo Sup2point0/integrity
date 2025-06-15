@@ -2,7 +2,7 @@
 <!-- #SQUARK live! dev!
 | dest = guides/integrals/collections/epic-errors
 | capt = Surprisingly unrare pitfalls in integration
-| index = guides / integrals
+| index = guides / integrals / collections
 | date = 2025 January 21
 -->
 

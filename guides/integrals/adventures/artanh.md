@@ -1,5 +1,5 @@
 # A Fun Way of Finding the Artanh Integral
-<!-- #SQUARK live!
+<!-- #SQUARK live! archive!
 | dest = guides/integrals/adventures/artanh
 | capt = When hoping for the best works out
 | index = guides / integrals / adventures
