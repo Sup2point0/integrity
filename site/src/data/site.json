@@ -1,16 +1,18 @@
 {
   "meta": {
     "exported": "2025-06-15",
-    "file_count": 35,
-    "page_count": 33
+    "file_count": 36,
+    "page_count": 34
   },
   "index": {
     "guides": {
       "route": null,
       "pages": [
         "guides/complete-square/why.md",
+        "guides/integrals/adventures/-c.md",
         "guides/integrals/adventures/artanh.md",
         "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/adventures/trig-sub.md",
         "guides/integrals/antiderivatives/123-horror.md",
         "guides/integrals/antiderivatives/ln.md",
         "guides/integrals/antiderivatives/power-rule.md",
@@ -37,8 +39,10 @@
     "integrals": {
       "route": null,
       "pages": [
+        "guides/integrals/adventures/-c.md",
         "guides/integrals/adventures/artanh.md",
         "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/adventures/trig-sub.md",
         "guides/integrals/antiderivatives/123-horror.md",
         "guides/integrals/antiderivatives/ln.md",
         "guides/integrals/antiderivatives/power-rule.md",
@@ -59,8 +63,10 @@
     "adventures": {
       "route": null,
       "pages": [
+        "guides/integrals/adventures/-c.md",
         "guides/integrals/adventures/artanh.md",
-        "guides/integrals/adventures/neat-trick.md"
+        "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/adventures/trig-sub.md"
       ]
     },
     "antiderivatives": {
@@ -75,6 +81,10 @@
     "collections": {
       "route": null,
       "pages": [
+        "guides/integrals/collections/epic-errors.md",
+        "guides/integrals/collections/everything-anything.md",
+        "guides/integrals/collections/int-int.md",
+        "guides/integrals/collections/once.md",
         "guides/integrals/collections/standard-integrals.md"
       ]
     },
@@ -90,8 +100,10 @@
   "tags": {
     "guides": [
       "guides/complete-square/why.md",
+      "guides/integrals/adventures/-c.md",
       "guides/integrals/adventures/artanh.md",
       "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/adventures/trig-sub.md",
       "guides/integrals/antiderivatives/123-horror.md",
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
@@ -112,8 +124,10 @@
       "guides/complete-square/why.md"
     ],
     "integrals": [
+      "guides/integrals/adventures/-c.md",
       "guides/integrals/adventures/artanh.md",
       "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/adventures/trig-sub.md",
       "guides/integrals/antiderivatives/123-horror.md",
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
@@ -131,8 +145,10 @@
       "guides/integrals/why.md"
     ],
     "adventures": [
+      "guides/integrals/adventures/-c.md",
       "guides/integrals/adventures/artanh.md",
-      "guides/integrals/adventures/neat-trick.md"
+      "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/adventures/trig-sub.md"
     ],
     "antiderivatives": [
       "guides/integrals/antiderivatives/123-horror.md",
@@ -141,6 +157,10 @@
       "guides/integrals/antiderivatives/sec-3.md"
     ],
     "collections": [
+      "guides/integrals/collections/epic-errors.md",
+      "guides/integrals/collections/everything-anything.md",
+      "guides/integrals/collections/int-int.md",
+      "guides/integrals/collections/once.md",
       "guides/integrals/collections/standard-integrals.md"
     ],
     "methods": [
@@ -330,9 +350,9 @@
     },
     "guides/integrals/adventures/-c.md": {
       "path": "guides/integrals/adventures/-c.md",
-      "last_deploy": "2025-04-05 09:20:51 +0100",
-      "slocs": 16,
-      "chars": 283,
+      "last_deploy": "2025-06-15 11:57:47 +0100",
+      "slocs": 17,
+      "chars": 325,
       "isIndex": false,
       "flags": [
         "live"
@@ -342,8 +362,16 @@
       "head": "Why -c?",
       "capt": null,
       "desc": null,
-      "index": [],
-      "tags": [],
+      "index": [
+        "guides",
+        "integrals",
+        "adventures"
+      ],
+      "tags": [
+        "guides",
+        "integrals",
+        "adventures"
+      ],
       "date": null,
       "date_display": null
     },
@@ -401,6 +429,33 @@
       ],
       "date": "2025-01-15",
       "date_display": "2025 January 15"
+    },
+    "guides/integrals/adventures/trig-sub.md": {
+      "path": "guides/integrals/adventures/trig-sub.md",
+      "last_deploy": "2025-06-15 11:46:49 +0100",
+      "slocs": 73,
+      "chars": 2582,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/adventures/trig-sub",
+      "title": "Why Does Trig Substitution Work?",
+      "head": "Why Does Trig Substitution Work?",
+      "capt": null,
+      "desc": null,
+      "index": [
+        "guides",
+        "integrals",
+        "adventures"
+      ],
+      "tags": [
+        "guides",
+        "integrals",
+        "adventures"
+      ],
+      "date": "2025-06-15",
+      "date_display": "2025 June 15"
     },
     "guides/integrals/antiderivatives/123-horror.md": {
       "path": "guides/integrals/antiderivatives/123-horror.md",
@@ -515,9 +570,9 @@
     },
     "guides/integrals/collections/epic-errors.md": {
       "path": "guides/integrals/collections/epic-errors.md",
-      "last_deploy": "2025-04-05 09:21:00 +0100",
+      "last_deploy": "2025-06-15 11:58:16 +0100",
       "slocs": 69,
-      "chars": 1986,
+      "chars": 2000,
       "isIndex": false,
       "flags": [
         "live",
@@ -530,20 +585,22 @@
       "desc": "Surprisingly unrare pitfalls in integration",
       "index": [
         "guides",
-        "integrals"
+        "integrals",
+        "collections"
       ],
       "tags": [
         "guides",
-        "integrals"
+        "integrals",
+        "collections"
       ],
       "date": "2025-01-21",
       "date_display": "2025 January 21"
     },
     "guides/integrals/collections/everything-anything.md": {
       "path": "guides/integrals/collections/everything-anything.md",
-      "last_deploy": "2025-05-17 10:01:35 +0100",
+      "last_deploy": "2025-06-15 11:58:05 +0100",
       "slocs": 451,
-      "chars": 10870,
+      "chars": 10884,
       "isIndex": false,
       "flags": [
         "live",
@@ -559,20 +616,22 @@
       "desc": "The prime integrator’s standard arsenal",
       "index": [
         "guides",
-        "integrals"
+        "integrals",
+        "collections"
       ],
       "tags": [
         "guides",
-        "integrals"
+        "integrals",
+        "collections"
       ],
       "date": "2025-04-17",
       "date_display": "2025 April 17"
     },
     "guides/integrals/collections/int-int.md": {
       "path": "guides/integrals/collections/int-int.md",
-      "last_deploy": "2025-05-19 12:27:39 +0100",
+      "last_deploy": "2025-06-15 11:58:08 +0100",
       "slocs": 231,
-      "chars": 6870,
+      "chars": 6884,
       "isIndex": false,
       "flags": [
         "live",
@@ -587,20 +646,22 @@
       "desc": "Glossary of the integration homies",
       "index": [
         "guides",
-        "integrals"
+        "integrals",
+        "collections"
       ],
       "tags": [
         "guides",
-        "integrals"
+        "integrals",
+        "collections"
       ],
       "date": "2025-05-19",
       "date_display": "2025 May 19"
     },
     "guides/integrals/collections/once.md": {
       "path": "guides/integrals/collections/once.md",
-      "last_deploy": "2025-04-05 09:21:26 +0100",
+      "last_deploy": "2025-06-15 11:58:11 +0100",
       "slocs": 44,
-      "chars": 1753,
+      "chars": 1767,
       "isIndex": false,
       "flags": [
         "live",
@@ -615,11 +676,13 @@
       "desc": "Landmarks on the expedition of integration",
       "index": [
         "guides",
-        "integrals"
+        "integrals",
+        "collections"
       ],
       "tags": [
         "guides",
-        "integrals"
+        "integrals",
+        "collections"
       ],
       "date": null,
       "date_display": null

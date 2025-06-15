@@ -95,6 +95,7 @@ import { base } from "$app/paths";
         window.location.href = `${base}/${pick_random_guide()}`;
       }} />
       <Link text="S-I+G-N Errors" intern="guides/sign" />
+      <Link text="Signing Off Inequalities" intern="guides/inequalities" />
     </div>
   </section>
 
@@ -105,9 +106,6 @@ import { base } from "$app/paths";
       <Link text="Why Is Integration Difficult?" intern="guides/integrals/why-hard" />
       <Link text="How Do We Integrate?" intern="guides/integrals/how" />
       <Link text="What Do I Do?" intern="guides/integrals/what" />
-      <Link text="Standard Arsenal" intern="guides/integrals/everything-anything" />
-      <Link text="Integrals You Can Only Experience Once" intern="guides/integrals/once" />
-      <Link text="Epic Errors" intern="guides/integrals/epic-errors" />
     </div>
   </section>
 
@@ -161,10 +159,12 @@ import { base } from "$app/paths";
     <div class="links">
       <Link text="How Do I Write Integrals?" intern="" disabled={true} />
       <Link text="What Makes a Good Integral?" intern="" disabled={true} />
-      <Link text="A Neat Little Integration Trick" intern="guides/integrals/adventures/neat-trick" />
       <Link text="Integration Is Like Organic Chemistry" intern="" disabled={true} />
-      <Link text="Why Absolute Value the Logarithm?" intern="" disabled={true} />
       <Link text="Why -c?" intern="guides/integrals/adventures/-c" />
+      <Link text="Why Absolute Value the Logarithm?" intern="" disabled={true} />
+      <Link text="Why Does Trig Substitution Work?" intern="" />
+      <Link text="A Fun Way of Finding the Artanh Integral" intern="guides/integrals/adventures/artanh" />
+      <Link text="A Neat Little Integration Trick" intern="guides/integrals/adventures/neat-trick" />
       <Link text="What’s This?" intern="integrity/integrity" disabled={true} />
     </div>
   </section>

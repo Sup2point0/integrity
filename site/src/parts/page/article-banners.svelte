@@ -14,6 +14,12 @@ let { page } = $props();
 
 
 <section class="banners">
+  {#if page.flags?.includes("archive")}
+    <Banner title="Imaginary Axis">
+      This article is deprecated and is left here for archival purposes.
+    </Banner>
+  {/if}
+
   {#if page.flags?.includes("dev")}
     <Banner title="Unerased Construction Lines">
       This page is currently a <strong>work in progress</strong>, so some parts may be incomplete or unpresentable. Advance at your own peril...

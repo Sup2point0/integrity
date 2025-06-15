@@ -5992,6 +5992,45 @@
         }
       ]
     },
+    "s25f-ac1": {
+      "topic": "integrals",
+      "title": "asterism",
+      "desc": null,
+      "date": "2025 June 7",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-ac1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{1+\\cos x}{1-\\cos x}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How would you cancel out the denominator?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-x-2\\csc x-2\\cot x-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{1+\\cos x}{1-\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{1+\\cos x}{1-\\cos x}\\cdot\\frac{1+\\cos x}{1+\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(1+\\cos x\\right)^{2}}{1-\\cos^{2}x}\\ dx  \\\\ =&\\ \\int \\frac{\\cos x^{2}+2\\cos x+1}{\\sin^{2}x}\\ dx  \\\\ =&\\ \\int \\cot^{2}x+2\\csc x\\cot x+\\csc^{2}x\\ dx  \\\\ =&\\ \\int \\csc^{2}x-1+\\csc^{2}x\\ dx+2\\int \\csc x\\cot x\\ dx  \\\\ =&\\ -\\int 1-2\\csc^{2}x\\ dx-2\\int -\\csc x\\cot x\\ dx  \\\\ =&\\ -\\left(x+2\\cot x\\right)-2\\csc x  \\\\ =&\\ -x-2\\csc x-2\\cot x-c\\end{align*}"
+        }
+      ]
+    },
     "s25f-ae1": {
       "topic": "integrals",
       "title": "ambidextrous",
@@ -7594,6 +7633,74 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{t}{1+t}\\cdot-\\frac{1}{3}\\ dt  \\\\ &= -\\frac{1}{3}\\int \\frac{t+1}{t+1}-\\frac{1}{t+1}\\ dt  \\\\ &= -\\frac{1}{3}t+\\frac{1}{3}\\ln\\left(t+1\\right)  \\\\ &= -\\frac{1}{3x^{3}}+\\frac{1}{3}\\ln\\left(\\frac{1}{x^{3}}+1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-dp2": {
+      "topic": "integrals",
+      "title": "downpour",
+      "desc": null,
+      "date": "2025 May 24",
+      "tags": [
+        "scare",
+        "sqrt",
+        "ln"
+      ],
+      "methods": [
+        "spot",
+        "sub"
+      ],
+      "shard": "s25f-dp2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  x^{\\sqrt{3}}  \\left( \\ln{x} \\right)^{\\sqrt{3}}  \\left( \\ln{x} + 1 \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Can you combine some of the terms?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What does the combined term suggest?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What if you write $\\left( \\ln{x} + 1 \\right)$ as $\\left( \\ln{x} + x/x \\right)$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{\\sqrt{3}+1}\\left(x\\ln x\\right)^{1+\\sqrt{3}}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int x^{\\sqrt{3}}\\left(\\ln x\\right)^{\\sqrt{3}}\\left(\\ln x+1\\right)\\ dx  \\\\ =&\\ \\int \\left(x\\ln x\\right)^{\\sqrt{3}}\\left(\\ln x+1\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x\\ln x &= t  \\\\ \\left(1\\cdot\\ln x+x\\cdot\\frac{1}{x}\\right)\\ dx &= dt  \\\\ \\left(\\ln x+1\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int t^{\\sqrt{3}}\\ dt  \\\\ &= \\frac{1}{\\sqrt{3}+1}t^{\\sqrt{3}+1}  \\\\ &= \\frac{1}{\\sqrt{3}+1}\\left(x\\ln x\\right)^{1+\\sqrt{3}}-c\\end{align*}"
           }
         ]
       }
@@ -10318,6 +10425,86 @@
         ]
       }
     },
+    "s25f-if1": {
+      "topic": "integrals",
+      "title": "Interplanetarypurplythorny Fractal",
+      "desc": null,
+      "date": "2025 April 17",
+      "tags": [
+        "definite",
+        "improper",
+        "poly",
+        "ln"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-if1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{1}^{\\infty}\\frac{\\ln\\left(x-1\\right)}{x^{2}-2x+2}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What does $x-1$ suggest?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Complete the square in the denominator."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How can you split $\\ln(\\tan{x})$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$0$"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{1}^{\\infty}\\frac{\\ln\\left(x-1\\right)}{x^{2}-2x+2}\\ dx  \\\\ =&\\ \\int_{1}^{\\infty}\\frac{\\ln\\left(x-1\\right)}{\\left(x-1\\right)^{2}-1+2}\\ dx  \\\\ =&\\ \\int_{1}^{\\infty}\\frac{\\ln\\left(x-1\\right)}{\\left(x-1\\right)^{2}+1}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x-1 &= \\tan t  \\\\ \\tan^{-1}\\left(x-1\\right) &= t  \\\\ \\frac{1}{\\left(x-1\\right)^{2}+1}\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{\\tan^{-1}\\left(1-1\\right)}^{\\tan^{-1}\\left(\\infty-1\\right)}\\ln\\left(\\tan t\\right)\\ dt  \\\\ &= \\int_{0}^{\\pi/2}\\ln\\left(\\tan t\\right)\\ dt  \\\\ &= \\int_{0}^{\\pi/2}\\ln\\left(\\sin t\\right)-\\ln\\left(\\cos t\\right)\\ dt  \\\\ &= \\int_{0}^{\\pi/2}\\ln\\left(\\sin t\\right)dt-\\int_{0}^{\\pi/2}\\ln\\left(\\cos t\\right)\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  t &= \\frac{\\pi}{2}-v  \\\\ v &= \\frac{\\pi}{2}-t  \\\\ dv &= -dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{0}^{\\pi/2}\\ln\\left(\\sin t\\right)dt-\\int_{\\pi/2}^{0}\\ln\\left(\\cos\\left(\\frac{\\pi}{2}-v\\right)\\right)\\cdot-dt  \\\\ &= \\int_{0}^{\\pi/2}\\ln\\left(\\sin t\\right)dt-\\int_{0}^{\\pi/2}\\ln\\left(\\sin v\\right)\\ dt  \\\\ &= I-I  \\\\ &= 0\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-ih1": {
       "topic": "integrals",
       "title": "runaway",
@@ -10417,6 +10604,113 @@
           }
         ]
       }
+    },
+    "s25f-ii1": {
+      "topic": "integrals",
+      "title": "you can’t integrate like this",
+      "desc": "please use the intended method hehe",
+      "date": "2025 June 11",
+      "tags": [
+        "exp",
+        "trig"
+      ],
+      "methods": [
+        "parts"
+      ],
+      "flags": [
+        "feat"
+      ],
+      "shard": "s25f-ii1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left( \\sin{x} \\right)^3 e^{-\\cos{x}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Parts."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Parts!"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Parts!!!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-e^{-\\cos x}\\left(\\cos x+1\\right)^{2}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(\\sin x\\right)^{3}e^{-\\cos x}\\ dx  \\\\ =&\\ \\int \\left(\\sin x\\right)^{2}\\left(\\sin x\\right)e^{-\\cos x}\\ dx\\end{align*}"
+          }
+        ],
+        "parts (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      f &= \\left(\\sin x\\right)^{2} \\quad&\\quad g' &= \\left(\\sin x\\right)e^{-\\cos x}  \\\\ f' &= 2\\sin x\\cos x \\quad&\\quad g &= e^{-\\cos x}\\end{align*}"
+          }
+        ],
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dx  \\\\ =&\\ \\left(\\sin x\\right)^{2}e^{-\\cos x}-\\int 2\\left(\\sin x\\right)\\left(\\cos x\\right)e^{-\\cos x}\\ dx  \\\\ =&\\ \\left(\\sin x\\right)^{2}e^{-\\cos x}-2\\int \\left(\\cos x\\right)\\left(\\sin x\\right)e^{-\\cos x}\\ dx\\end{align*}"
+          }
+        ],
+        "parts (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      p &= \\cos x \\quad&\\quad q' &= \\left(\\sin x\\right)e^{-\\cos x}  \\\\ p' &= -\\sin x \\quad&\\quad q &= e^{-\\cos x}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\left(\\sin x\\right)^{2}e^{-\\cos x}-2\\left(pq-\\int p'q\\ dx\\right)  \\\\ &= \\left(\\sin x\\right)^{2}e^{-\\cos x}-2\\left(\\left(\\cos x\\right)e^{-\\cos x}-\\int \\left(-\\sin x\\right)e^{-\\cos x}\\ dx\\right)  \\\\ &= \\left(\\sin x\\right)^{2}e^{-\\cos x}-2\\left(\\cos x\\right)e^{-\\cos x}-2\\int \\left(\\sin x\\right)e^{-\\cos x}\\ dx  \\\\ &= \\left(\\sin x\\right)^{2}e^{-\\cos x}-2\\left(\\cos x\\right)e^{-\\cos x}-2e^{-\\cos x}-c  \\\\ &= e^{-\\cos x}\\left[1-\\cos^{2}x-2\\cos x-2\\right]-c  \\\\ &= -e^{-\\cos x}\\left[\\cos^{2}x+2\\cos x+1\\right]-c  \\\\ &= -e^{-\\cos x}\\left(\\cos x+1\\right)^{2}-c\\end{align*}"
+          }
+        ]
+      },
+      "alternates": [
+        {
+          "kind": "text",
+          "content": "The repeated parts is way cooler, but you can also substitute at the start."
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\left(\\sin x\\right)^{3}e^{-\\cos x}\\ dx  \\\\ =&\\ \\int \\left(\\sin x\\right)\\left(1-\\cos^{2}x\\right)e^{-\\cos x}\\ dx  \\\\ =&\\ \\int \\left(\\sin x\\right)\\left(1-\\left(-\\cos x\\right)^{2}\\right)e^{-\\cos x}\\ dx\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "Substitute:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  -\\cos x &= t  \\\\ \\sin x\\ dx &= dt\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "Which gives:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &= \\int \\left(1-t^{2}\\right)e^{t}\\ dt  \\\\ &= \\left(1-t^{2}\\right)e^{t}-\\int -2te^{t}\\ dt  \\\\ &= \\left(1-t^{2}\\right)e^{t}+2\\int te^{t}\\ dt  \\\\ &= \\left(1-t^{2}\\right)e^{t}+2e^{t}\\left(t-1\\right)  \\\\ &= e^{t}\\left[1-t^{2}+2\\left(t-1\\right)\\right]  \\\\ &= e^{t}\\left[1-t^{2}+2t-2\\right]  \\\\ &= -e^{t}\\left[t^{2}-2t+1\\right]  \\\\ &= -e^{t}\\left(t-1\\right)^{2}  \\\\ &= -e^{-\\cos x}\\left(\\cos x+1\\right)^{2}-c\\end{align*}"
+        }
+      ]
     },
     "s25f-ik1": {
       "topic": "integrals",
@@ -12597,6 +12891,57 @@
           }
         ]
       }
+    },
+    "s25f-nw1": {
+      "topic": "integrals",
+      "title": "networking",
+      "desc": "256 integrals on <em>Integrity</em>!",
+      "date": "2025 April 28",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "fun"
+      ],
+      "shard": "s25f-nw1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\tan x}{\\tan^{2}x-1}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Write $\\tan(x)$ as $\\sin(x)$ and $\\cos(x)$ primitives."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Cancel out the mini denominators."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How can you combine $\\cos^2{x} - \\sin^2{x}$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{4}\\ln\\left(\\cos2x\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{\\tan x}{\\tan^{2}x-1}\\ dx  \\\\ =&\\ \\int \\frac{\\frac{\\sin x}{\\cos x}}{\\frac{\\sin^{2}x}{\\cos^{2}x}-1}\\ dx  \\\\ =&\\ \\int \\frac{\\frac{\\sin x}{\\cos x}}{\\frac{\\sin^{2}x}{\\cos^{2}x}-1}\\cdot\\frac{\\cos^{2}x}{\\cos^{2}x}\\ dx  \\\\ =&\\ \\int \\frac{\\sin x\\cos x}{\\sin^{2}x-\\cos^{2}x}\\ dx  \\\\ =&\\ -\\frac{1}{2}\\int \\frac{2\\sin x\\cos x}{\\cos^{2}x-\\sin^{2}x}\\ dx  \\\\ =&\\ -\\frac{1}{2}\\int \\frac{\\sin2x}{\\cos2x}\\ dx  \\\\ =&\\ \\frac{1}{4}\\int \\frac{-2\\sin2x}{\\cos2x}\\ dx  \\\\ =&\\ \\frac{1}{4}\\ln\\left(\\cos2x\\right)-c\\end{align*}"
+        }
+      ]
     },
     "s25f-nx1": {
       "topic": "integrals",
@@ -14973,6 +15318,129 @@
         }
       ]
     },
+    "s25f-sd2": {
+      "topic": "integrals",
+      "title": "slaughtered",
+      "desc": null,
+      "date": "2025 June 9",
+      "tags": [
+        "ln"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-sd2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\ln\\left(x\\right)+1}{x\\ln\\left(x\\right)^{2}+x\\left(\\ln x\\right)\\ln\\left(\\ln x\\right)}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Starts with “f” and rhymes with <em>tractorise</em>."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You can combine $\\ln(p) + \\ln(q)$."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What’s the derivative of $x\\ln(x)$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\ln\\left(\\ln\\left(x\\ln x\\right)\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\ln\\left(x\\right)+1}{x\\ln\\left(x\\right)^{2}+x\\left(\\ln x\\right)\\ln\\left(\\ln x\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\ln x+1}{\\left(x\\ln x\\right)\\left(\\ln x+\\ln\\left(\\ln x\\right)\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\ln x+1}{\\left(x\\ln x\\right)\\left(\\ln\\left(x\\ln x\\right)\\right)}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x\\ln x &= t  \\\\ \\left(\\ln x+1\\right)\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1}{t\\ln t}\\ dt  \\\\ &= \\ln\\left(\\ln t\\right)  \\\\ &= \\ln\\left(\\ln\\left(x\\ln x\\right)\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-sg1": {
+      "topic": "integrals",
+      "title": "resolver",
+      "desc": null,
+      "date": "2025 June 12",
+      "tags": [
+        "scare",
+        "trig"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-sg1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\cos(x) \\csc(x-\\pi) \\cot(x) }    { \\sin(x-\\pi) \\sec(x) \\operatorname{sign}(x)}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Simplify, simplify, simplify!"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "All trig functions have periods $2\\pi$."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "What’s the relationship between $\\operatorname{sign}(x)$ and $\\displaystyle \\frac{1}{\\operatorname{sign}(x)}$?"
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "What does $\\operatorname{sign}(x)$ integrate to?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\operatorname{sign}x\\left[\\frac{1}{2}\\left(\\cot x\\right)^{2}+\\ln\\left(\\sin x\\right)\\right]-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{\\cos\\left(x\\right)\\csc\\left(x-\\pi\\right)\\cot\\left(x\\right)}{\\sin\\left(x-\\pi\\right)\\sec\\left(x\\right)\\operatorname{sign}\\left(x\\right)}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\cos x\\right)\\left(-\\csc x\\right)\\left(\\cot x\\right)}{\\left(-\\sin x\\right)\\left(\\sec x\\right)}\\cdot\\frac{1}{\\operatorname{sign}x}\\ dx  \\\\ =&\\ \\int \\cot x\\cdot\\cot x\\cdot\\cot x\\cdot\\operatorname{sign}x\\ dx  \\\\ =&\\ \\operatorname{sign}x\\int \\left(\\cot x\\right)\\left(\\csc^{2}x-1\\right)\\ dx  \\\\ =&\\ \\operatorname{sign}x\\int \\left(\\cot x\\right)\\left(\\csc^{2}x\\right)-\\left(\\cot x\\right)\\ dx  \\\\ =&\\ -\\operatorname{sign}x\\int \\left(\\cot x\\right)\\left(-\\csc^{2}x\\right)+\\left(\\cot x\\right)\\ dx  \\\\ =&\\ -\\operatorname{sign}x\\left[\\frac{1}{2}\\left(\\cot x\\right)^{2}+\\ln\\left(\\sin x\\right)\\right]-c\\end{align*}"
+        }
+      ]
+    },
     "s25f-sh1": {
       "topic": "integrals",
       "title": "jaywalking",
@@ -15680,6 +16148,95 @@
           }
         ]
       }
+    },
+    "s25f-st2": {
+      "topic": "integrals",
+      "title": "sTaTiSTiCs",
+      "desc": null,
+      "date": "2025 June 6",
+      "tags": [
+        "definite",
+        "improper",
+        "elite",
+        "horror",
+        "pi"
+      ],
+      "methods": [
+        "spot",
+        "acc"
+      ],
+      "flags": [
+        "guide"
+      ],
+      "shard": "s25f-st2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{0}^{\\infin}  \\frac    { \\pi^{\\lfloor x \\rfloor} e^{1-\\pi} }    { {\\lceil x-1 \\rceil}! }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "What’s the relationship between $\\lfloor x \\rfloor$ and $\\lceil x \\rceil$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How can you turn one into the other?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "If your integral has only $\\lfloor x \\rfloor$ or $\\lceil x \\rceil$, you can turn it into a summation."
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "You’ll need the Poisson distribution for this."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$e$"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{0}^{\\infty}\\frac{\\pi^{\\lfloor x \\rfloor}e^{1-\\pi}}{\\lceil x-1 \\rceil!}\\ dx  \\\\ =&\\ \\int_{0}^{\\infty}\\frac{\\pi^{\\lfloor x \\rfloor}e^{1}e^{-\\pi}}{\\lceil x-1 \\rceil!}\\ dx  \\\\ =&\\ e\\int_{0}^{\\infty}\\frac{\\pi^{\\lfloor x \\rfloor}e^{-\\pi}}{\\lceil x-1 \\rceil!}\\ dx\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "Rounding up a number to $p$ is the same as adding $1$ and rounding down to $p$. So"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  \\lceil x \\rceil &= \\lfloor{x+1}\\rfloor  \\\\ \\lceil x-1 \\rceil &= \\lfloor x \\rfloor\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "Which gives"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &= e\\int_{0}^{\\infty}\\frac{\\pi^{\\lfloor x \\rfloor}e^{-\\pi}}{\\lfloor x \\rfloor!}\\ dx  \\\\ &= e\\sum_{n=0}^{\\infty}\\frac{\\pi^{x}e^{-\\pi}}{x!}  \\\\ &= e\\sum_{n=0}^{\\infty}\\frac{\\lambda^{x}}{x!}e^{-\\lambda} \\vert_{\\lambda=\\pi}\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "This is the probability density function of a Poisson distribution $\\text{Po}(\\pi)$. A pdf integrated over the domain of the random variable must equal $1$. Since a Poisson distribution takes values over $x \\in \\mathbb{N}$, this means the infinite sum converges to $1$."
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &= e\\cdot1  \\\\ &= e\\end{align*}"
+        }
+      ]
     },
     "s25f-sv1": {
       "topic": "integrals",
@@ -17020,6 +17577,65 @@
         ]
       }
     },
+    "s25f-tw1": {
+      "topic": "integrals",
+      "title": "Monday workout",
+      "desc": null,
+      "date": "2025 June 9",
+      "tags": [
+        "arctrig"
+      ],
+      "methods": [
+        "work"
+      ],
+      "shard": "s25f-tw1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\tan^{-1} \\left(    \\frac      { x }      { x + 1 }  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You know how to differentiate $\\tan^{-1}(x)$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You may want to simplify the stuff inside first."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\frac{1}{4}\\ln\\left(x^{2}+x+1/2\\right)+\\frac{1}{2}\\tan^{-1}\\left(2x+1\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\tan^{-1}\\left(\\frac{x}{x+1}\\right)\\ dx  \\\\ =&\\ \\int \\tan^{-1}\\left(\\frac{x+1}{x+1}-\\frac{1}{x+1}\\right)\\ dx  \\\\ =&\\ \\int \\tan^{-1}\\left(1-\\frac{1}{x+1}\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      f &= \\tan^{-1}\\left(1-\\frac{1}{x+1}\\right) \\quad&\\quad g' &= 1  \\\\ f' &= \\frac{1}{\\left(\\frac{x}{x+1}\\right)^{2}+1}\\cdot\\frac{1}{\\left(x+1\\right)^{2}} \\quad&\\quad g &= x  \\\\ &= \\frac{1}{x^{2}+\\left(x+1\\right)^{2}}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dx  \\\\ =&\\ x\\tan^{-1}\\left(1-\\frac{1}{x+1}\\right)-\\int \\frac{x}{x^{2}+\\left(x+1\\right)^{2}}\\ dx  \\\\ =&\\ x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\int \\frac{x}{x^{2}+x^{2}+2x+1}\\ dx  \\\\ =&\\ x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\int \\frac{x}{2x^{2}+2x+1}\\ dx  \\\\ =&\\ x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\frac{1}{4}\\int \\frac{2x}{x^{2}+x+1/2}\\ dx  \\\\ =&\\ x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\frac{1}{4}\\int \\frac{2x+1-1}{x^{2}+x+1/2}\\ dx  \\\\ =&\\ x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\frac{1}{4}\\int \\frac{2x+1}{x^{2}+x+1/2}\\ dx+\\frac{1}{4}\\int \\frac{1}{x^{2}+x+1/2}\\ dx  \\\\ =&\\ x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\frac{1}{4}\\ln\\left(x^{2}+x+1/2\\right)+\\frac{1}{4}\\int \\frac{1}{\\left(x+1/2\\right)^{2}-1/4+1/2}\\ dx  \\\\ =&\\ x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\frac{1}{4}\\ln\\left(x^{2}+x+1/2\\right)+\\frac{1}{4}\\int \\frac{1}{\\left(x+1/2\\right)^{2}+1/4}\\ dx  \\\\ =&\\ x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\frac{1}{4}\\ln\\left(x^{2}+x+1/2\\right)+\\frac{1}{4}\\cdot\\sqrt{4}\\tan^{-1}\\left(\\sqrt{4}\\left(x+\\frac{1}{2}\\right)\\right)  \\\\ =&\\ x\\tan^{-1}\\left(\\frac{x}{x+1}\\right)-\\frac{1}{4}\\ln\\left(x^{2}+x+1/2\\right)+\\frac{1}{2}\\tan^{-1}\\left(2x+1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-tz1": {
       "topic": "integrals",
       "title": "secanthropic",
@@ -17448,6 +18064,53 @@
           }
         ]
       }
+    },
+    "s25f-wd1": {
+      "topic": "integrals",
+      "title": "waiting for your wind",
+      "desc": null,
+      "date": "2025 June 11",
+      "tags": [
+        "definite",
+        "improper",
+        "poly"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-wd1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{0}^{\\infin}  \\frac{1}    { x^2 + 4x + 8 }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You can handle the indefinite integral first."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Complete the square!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{\\pi}{8}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{0}^{\\infty}\\frac{1}{x^{2}+4x+8}\\ dx  \\\\ =&\\ \\int_{0}^{\\infty}\\frac{1}{\\left(x+2\\right)^{2}-2^{2}+8}\\ dx  \\\\ =&\\ \\int_{0}^{\\infty}\\frac{1}{\\left(x+2\\right)^{2}+4}\\ dx  \\\\ =&\\ \\left[\\frac{1}{2}\\tan^{-1}\\left(\\frac{1}{2}\\left(x+2\\right)\\right)\\right]_{0}^{\\infty}  \\\\ =&\\ \\frac{1}{2}\\left[\\tan^{-1}\\left(\\infty\\right)-\\tan^{-1}\\left(1\\right)\\right]  \\\\ =&\\ \\frac{1}{2}\\left(\\frac{\\pi}{2}-\\frac{\\pi}{4}\\right)  \\\\ =&\\ \\frac{\\pi}{8}\\end{align*}"
+        }
+      ]
     },
     "s25f-wk1": {
       "topic": "integrals",
