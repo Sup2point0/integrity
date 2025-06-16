@@ -5,7 +5,7 @@ desc:
 date: 2025 March 24
 tags:
   - trig
-  - inverse trig
+  - arctrig
 methods:
   - fun
 ---

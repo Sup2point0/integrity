@@ -5,7 +5,7 @@ desc:
 date: 2025 April 24
 tags:
   - definite
-  - inverse trig
+  - arctrig
 methods:
   - speed
 ---

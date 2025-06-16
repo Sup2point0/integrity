@@ -6,7 +6,7 @@ date: 2025 March 18
 tags:
   - horror
   - exp
-  - inverse trig
+  - arctrig
   - complex
 methods:
   - sub

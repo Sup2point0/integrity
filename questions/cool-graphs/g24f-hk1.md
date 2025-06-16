@@ -4,7 +4,7 @@ title: hook
 desc: 
 date: 2024 October
 tags:
-  - inverse trig
+  - arctrig
   - trig
 graph-bounds: 4
 ---

@@ -6,7 +6,7 @@ date: 2025 February 26
 tags:
   - poly
   - sqrt
-  - inverse trig
+  - arctrig
 methods:
   - sub
 ---

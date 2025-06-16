@@ -5,7 +5,7 @@ desc:
 date: 2025 April 3
 tags:
   - sqrt
-  - inverse trig
+  - arctrig
 methods:
   - parts
 ---

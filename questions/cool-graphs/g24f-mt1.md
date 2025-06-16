@@ -5,7 +5,7 @@ desc:
 date: 2024 October
 tags:
   - derivative
-  - inverse trig
+  - arctrig
   - poly
   - sqrt
 graph-bounds: 2.5

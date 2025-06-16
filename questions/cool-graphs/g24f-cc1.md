@@ -5,7 +5,7 @@ desc:
 date: 2024 September
 tags:
   - implicit
-  - inverse trig
+  - arctrig
 graph-bounds: 2
 ---
 

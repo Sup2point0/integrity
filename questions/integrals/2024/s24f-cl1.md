@@ -4,7 +4,7 @@ title: skylight
 desc: 
 date: 2024 December 22
 tags:
-  - inverse trig
+  - arctrig
 methods:
   - parts
   - inverse chain rule

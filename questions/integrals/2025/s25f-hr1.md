@@ -6,7 +6,7 @@ date:
 tags:
   - horror
   - sqrt
-  - inverse trig
+  - arctrig
   - complex
 methods:
   - long

@@ -5,7 +5,7 @@ desc:
 date: 2025 January 12
 tags:
   - horror
-  - inverse trig
+  - arctrig
   - frac
 methods:
   - spot

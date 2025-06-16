@@ -5,7 +5,7 @@ desc:
 date: 2025 March 27
 tags:
   - trig
-  - inverse trig
+  - arctrig
 methods:
   - tough
   - trig sub

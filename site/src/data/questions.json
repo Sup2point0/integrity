@@ -987,7 +987,7 @@
       "date": "2024 September",
       "tags": [
         "implicit",
-        "inverse trig"
+        "arctrig"
       ],
       "graph-bounds": 2,
       "shard": "g24f-cc1",
@@ -1290,7 +1290,7 @@
       "desc": null,
       "date": "2024 October",
       "tags": [
-        "inverse trig",
+        "arctrig",
         "trig"
       ],
       "graph-bounds": 4,
@@ -1418,7 +1418,7 @@
       "date": "2024 October",
       "tags": [
         "derivative",
-        "inverse trig",
+        "arctrig",
         "poly",
         "sqrt"
       ],
@@ -3264,7 +3264,7 @@
       "desc": null,
       "date": "2024 December 22",
       "tags": [
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "parts",
@@ -5512,7 +5512,7 @@
       "tags": [
         "horror",
         "exp",
-        "inverse trig",
+        "arctrig",
         "complex"
       ],
       "methods": [
@@ -5618,7 +5618,7 @@
       "date": "2025 March 25",
       "tags": [
         "sqrt",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "sub"
@@ -6184,7 +6184,7 @@
       "tags": [
         "exp",
         "ln",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "troll"
@@ -6792,7 +6792,7 @@
       "date": "2025 March 31",
       "tags": [
         "sqrt",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "sub"
@@ -6918,7 +6918,7 @@
       "date": "2025 March 24",
       "tags": [
         "trig",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "fun"
@@ -6992,7 +6992,7 @@
       "date": "2025 March 27",
       "tags": [
         "trig",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "tough",
@@ -7222,7 +7222,7 @@
       "desc": null,
       "date": "2025 March 8",
       "tags": [
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "spot"
@@ -9350,7 +9350,7 @@
       "tags": [
         "poly",
         "sqrt",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "sub"
@@ -10071,7 +10071,7 @@
       "tags": [
         "horror",
         "sqrt",
-        "inverse trig",
+        "arctrig",
         "complex"
       ],
       "methods": [
@@ -10786,7 +10786,7 @@
       "date": "2025 April 3",
       "tags": [
         "sqrt",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "parts"
@@ -10915,7 +10915,7 @@
       "tags": [
         "scare",
         "trig",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         null
@@ -10975,7 +10975,7 @@
       "date": "2025 April 24",
       "tags": [
         "definite",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "speed"
@@ -16361,7 +16361,7 @@
       "date": "2025 April 1",
       "tags": [
         "dread",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "acc"
@@ -16961,7 +16961,7 @@
       "tags": [
         "dread",
         "trig",
-        "inverse trig"
+        "arctrig"
       ],
       "methods": [
         "spot"
@@ -18917,7 +18917,7 @@
       "date": "2025 January 12",
       "tags": [
         "horror",
-        "inverse trig",
+        "arctrig",
         "frac"
       ],
       "methods": [

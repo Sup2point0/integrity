@@ -4,7 +4,7 @@ title: Integrity’s Finest
 desc: 
 date: 2025 March 8
 tags:
-  - inverse trig
+  - arctrig
 methods:
   - spot
 ---

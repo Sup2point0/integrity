@@ -6,7 +6,7 @@ date: 2025 January 26
 tags:
   - dread
   - trig
-  - inverse trig
+  - arctrig
 methods:
   - spot
 ---

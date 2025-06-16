@@ -5,7 +5,7 @@ desc:
 date: 2025 April 1
 tags:
   - dread
-  - inverse trig
+  - arctrig
 methods:
   - acc
 ---

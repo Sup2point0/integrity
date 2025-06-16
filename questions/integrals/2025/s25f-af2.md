@@ -6,7 +6,7 @@ date: 2025 April 1
 tags:
   - exp
   - ln
-  - inverse trig
+  - arctrig
 methods:
   - troll
 ---
