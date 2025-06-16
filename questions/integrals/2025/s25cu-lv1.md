@@ -6,7 +6,7 @@ date: 2025 March 20
 tags:
   - trig
 methods:
-  - inverse chain
+  - archain
 ---
 
 

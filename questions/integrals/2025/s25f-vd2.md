@@ -9,7 +9,7 @@ tags:
 methods:
   - tough
   - spot
-  - inverse product
+  - arcprod
 ---
 
 

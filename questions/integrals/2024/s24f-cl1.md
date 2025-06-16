@@ -7,7 +7,7 @@ tags:
   - arctrig
 methods:
   - parts
-  - inverse chain rule
+  - archain
 ---
 
 

@@ -3268,7 +3268,7 @@
       ],
       "methods": [
         "parts",
-        "inverse chain rule"
+        "archain"
       ],
       "shard": "s24f-cl1",
       "question": [
@@ -5870,7 +5870,7 @@
         "trig"
       ],
       "methods": [
-        "inverse chain"
+        "archain"
       ],
       "shard": "s25cu-lv1",
       "question": [
@@ -8103,6 +8103,66 @@
         }
       ]
     },
+    "s25f-en1": {
+      "topic": "integrals",
+      "title": "enough will be enough",
+      "desc": null,
+      "date": "2025 June 7",
+      "tags": [
+        "poly",
+        "sqrt"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-en1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{1}{x^9}  \\sqrt{    \\frac{1}{x^4} + 1  }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How can you split $x^9$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You’re looking to substitute $\\frac{1}{x^4}$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{30}\\left(\\frac{1}{x^{4}}+1\\right)^{3/2}\\left(2-\\frac{3}{x^{4}}\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{x^{9}}\\sqrt{\\frac{1}{x^{4}}+1}\\ dx  \\\\ =&\\ -\\frac{1}{4}\\int -\\frac{4}{x^{5}}\\cdot\\frac{1}{x^{4}}\\sqrt{\\frac{1}{x^{4}}+1}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{1}{x^{4}}+1 &= t  \\\\ \\frac{1}{x^{4}} &= t-1  \\\\ -\\frac{4}{x^{5}}\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\frac{1}{4}\\int \\left(t-1\\right)\\sqrt{t}\\ dt  \\\\ &= -\\frac{1}{4}\\int t^{3/2}-t^{1/2}\\ dt  \\\\ &= \\frac{1}{4}\\int t^{1/2}-t^{3/2}\\ dt  \\\\ &= \\frac{1}{4}\\left(\\frac{2}{3}t^{3/2}-\\frac{2}{5}t^{5/2}\\right)  \\\\ &= \\frac{2}{60}\\left(5t^{3/2}-3t^{5/2}\\right)  \\\\ &= \\frac{1}{30}t^{3/2}\\left(5-3t\\right)  \\\\ &= \\frac{1}{30}\\left(\\frac{1}{x^{4}}+1\\right)^{3/2}\\left(5-3\\left(\\frac{1}{x^{4}}+1\\right)\\right)  \\\\ &= \\frac{1}{30}\\left(\\frac{1}{x^{4}}+1\\right)^{3/2}\\left(2-\\frac{3}{x^{4}}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-eo1": {
       "topic": "integrals",
       "title": "cooked, calmly",
@@ -8588,6 +8648,72 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= -\\int e^{-v}\\ dv  \\\\ &= e^{-v}  \\\\ &= e^{-t\\ln t}  \\\\ &= t^{-t}  \\\\ &= \\left(-x\\right)^{x}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ev3": {
+      "topic": "integrals",
+      "title": "evolver",
+      "desc": null,
+      "date": "2025 June 12",
+      "tags": [
+        "funny",
+        "ln"
+      ],
+      "methods": [
+        "parts"
+      ],
+      "shard": "s25f-ev3",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\left( \\ln{x} \\right)  \\left(    \\frac{d^{\\,2}}{dx^2} \\,      x(\\ln{x})^2  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "The antiderivative of a derivative is the original expression."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "If you use parts, you don’t need to carry out the differentation."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "You know how to differentiate $\\ln(x)$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\left(\\ln x\\right)^{2}\\left(\\frac{2}{3}\\ln x+1\\right)-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(\\ln x\\right)\\left(\\frac{d^{2}}{dx^{2}} \\, x\\left(\\ln x\\right)^{2}\\right)\\ dx  \\\\ =&\\ \\int \\left(\\ln x\\right)\\frac{d}{dx}\\left(\\frac{d}{dx} \\, x\\left(\\ln x\\right)^{2}\\right)\\ dx  \\\\ =&\\ \\int \\left(\\ln x\\right)\\frac{d}{dx}\\left(\\left(\\ln x\\right)^{2}+x\\cdot\\frac{2\\left(\\ln x\\right)}{x}\\right)\\ dx  \\\\ =&\\ \\int \\left(\\ln x\\right)\\frac{d}{dx}\\left(\\left(\\ln x\\right)^{2}+2\\ln x\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      f &= \\ln x \\quad&\\quad g' &= \\frac{d}{dx}\\left(\\left(\\ln x\\right)^{2}+2\\ln x\\right)  \\\\ f' &= \\frac{1}{x} \\quad&\\quad g &= \\left(\\ln x\\right)^{2}+2\\ln x\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dx  \\\\ =&\\ \\left(\\ln x\\right)\\left(\\left(\\ln x\\right)^{2}+2\\ln x\\right)-\\int \\frac{1}{x}\\left(\\left(\\ln x\\right)^{2}+2\\ln x\\right)\\ dx  \\\\ =&\\ \\left(\\ln x\\right)\\left(\\left(\\ln x\\right)^{2}+2\\ln x\\right)-\\int \\frac{\\left(\\ln x\\right)^{2}}{x}dx-\\int \\frac{2\\ln x}{x}\\ dx  \\\\ =&\\ \\left(\\ln x\\right)\\left(\\left(\\ln x\\right)^{2}+2\\ln x\\right)-\\frac{1}{3}\\left(\\ln x\\right)^{3}-\\left(\\ln x\\right)^{2}-c  \\\\ =&\\ \\left(\\ln x\\right)\\left(\\left(\\left(\\ln x\\right)^{2}+2\\ln x\\right)-\\frac{1}{3}\\left(\\ln x\\right)^{2}-\\left(\\ln x\\right)\\right)  \\\\ =&\\ \\left(\\ln x\\right)^{2}\\left(\\ln x+2-\\frac{1}{3}\\ln x-1\\right)  \\\\ =&\\ \\left(\\ln x\\right)^{2}\\left(\\frac{2}{3}\\ln x+1\\right)-c\\end{align*}"
           }
         ]
       }
@@ -11186,6 +11312,105 @@
         }
       ]
     },
+    "s25f-jh1": {
+      "topic": "integrals",
+      "title": "pernicious spearhead",
+      "desc": "This is honestly not a good integral, but props if you manage to solve it.",
+      "date": "2025 May 12",
+      "tags": [
+        "definite",
+        "horror",
+        "trig",
+        "pi"
+      ],
+      "methods": [
+        "tough",
+        "spot"
+      ],
+      "shard": "s25f-jh1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{1}^{\\pi+1}\\frac{1+\\sin\\left(x-1\\right)-\\cos\\left(x-1\\right)-x\\sin\\left(x-1\\right)}{\\cos\\left(x-1\\right)^{2}-2x\\cos\\left(x-1\\right)+x^{2}}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Start by factorising the denominator."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Can you find the same thing in the numerator?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Yes, $(x-1)$ is certainly involved."
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "But so is $x$(!)"
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "Add $+ x - x$."
+          }
+        ],
+        "6": [
+          {
+            "kind": "text",
+            "content": "What’s the derivative of $x - \\cos(x-1)$?"
+          }
+        ],
+        "7": [
+          {
+            "kind": "text",
+            "content": "Look for inverse quotient rule."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-\\frac{2}{\\pi+2}"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{1}^{\\pi+1}\\frac{1+\\sin\\left(x-1\\right)-\\cos\\left(x-1\\right)-x\\sin\\left(x-1\\right)}{\\cos\\left(x-1\\right)^{2}-2x\\cos\\left(x-1\\right)+x^{2}}\\ dx  \\\\ =&\\ \\int_{1}^{\\pi+1}\\frac{1+\\sin\\left(x-1\\right)-\\cos\\left(x-1\\right)-x\\sin\\left(x-1\\right)}{\\left(x-\\cos\\left(x-1\\right)\\right)^{2}}\\ dx  \\\\ =&\\ \\int_{1}^{\\pi+1}\\frac{1+\\sin\\left(x-1\\right)-\\cos\\left(x-1\\right)-x\\sin\\left(x-1\\right)+x-x}{\\left(x-\\cos\\left(x-1\\right)\\right)^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "factorise": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int_{1}^{\\pi+1}\\frac{x-\\cos\\left(x-1\\right)+1+\\sin\\left(x-1\\right)-x-x\\sin\\left(x-1\\right)}{\\left(x-\\cos\\left(x-1\\right)\\right)^{2}}\\ dx  \\\\ &= \\int_{1}^{\\pi+1}\\frac{\\left(x-\\cos\\left(x-1\\right)\\right)+\\left(1+\\sin\\left(x-1\\right)\\right)-x\\left(1+\\sin\\left(x-1\\right)\\right)}{\\left(x-\\cos\\left(x-1\\right)\\right)^{2}}\\ dx  \\\\ &= \\int_{1}^{\\pi+1}\\frac{\\left(x-\\cos\\left(x-1\\right)\\right)+\\left(1-x\\right)\\left(1+\\sin\\left(x-1\\right)\\right)}{\\left(x-\\cos\\left(x-1\\right)\\right)^{2}}\\ dx  \\\\ &= \\int_{1}^{\\pi+1}\\frac{\\left(x-\\cos\\left(x-1\\right)\\right)-\\left(x-1\\right)\\left(1+\\sin\\left(x-1\\right)\\right)}{\\left(x-\\cos\\left(x-1\\right)\\right)^{2}}\\ dx\\end{align*}"
+          }
+        ],
+        "inverse quotient rule": [
+          {
+            "kind": "latex",
+            "content": "\\frac{d}{dx}\\left[\\frac{x-1}{x-\\cos\\left(x-1\\right)}\\right]  = \\frac{\\left(x-\\cos\\left(x-1\\right)\\right)-\\left(x-1\\right)\\left(1+\\sin\\left(x-1\\right)\\right)}{\\left(x-\\cos\\left(x-1\\right)\\right)^{2}}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{1}^{\\pi+1}\\frac{\\left(x-\\cos\\left(x-1\\right)\\right)-\\left(x-1\\right)\\left(1+\\sin\\left(x-1\\right)\\right)}{\\left(x-\\cos\\left(x-1\\right)\\right)^{2}}\\ dx  \\\\ =&\\ \\left[\\frac{x-1}{x-\\cos\\left(x-1\\right)}\\right]_{1}^{\\pi+1}  \\\\ =&\\ \\left[\\frac{\\pi+1-1}{\\pi+1-\\cos\\left(\\pi+1-1\\right)}\\right]-lim\\left[x\\to1\\right]\\left[\\frac{x-1}{x-\\cos\\left(x-1\\right)}\\right]  \\\\ =&\\ \\frac{\\pi}{1+\\pi-\\cos\\left(\\pi\\right)}-lim\\left[x\\to1\\right]\\left[\\frac{1}{1+\\sin\\left(x-1\\right)}\\right]  \\\\ =&\\ \\frac{\\pi}{1+\\pi-\\left(-1\\right)}-\\frac{1}{1+\\sin\\left(0\\right)}  \\\\ =&\\ \\frac{\\pi}{1+\\pi+1}-\\frac{1}{1}  \\\\ =&\\ \\frac{\\pi}{2+\\pi}-1  \\\\ =&\\ \\frac{\\pi}{2+\\pi}-\\frac{2+\\pi}{2+\\pi}  \\\\ =&\\ -\\frac{2}{\\pi+2}\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-jm1": {
       "topic": "integrals",
       "title": "JMWCQ",
@@ -11340,6 +11565,100 @@
           "content": "\\begin{align*}  &\\ \\int \\frac{1}{1-\\tan x}\\ dx  \\\\ =&\\ \\int \\frac{1}{1-\\tan x}\\cdot\\frac{\\cos x}{\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{\\cos x}{\\cos x-\\sin x}\\ dx  \\\\ =&\\ \\frac{1}{2}\\int \\frac{2\\cos x}{\\cos x-\\sin x}\\ dx  \\\\ =&\\ \\frac{1}{2}\\int \\frac{2\\cos x+\\sin x-\\sin x}{\\cos x-\\sin x}\\ dx  \\\\ =&\\ \\frac{1}{2}\\left(\\int \\frac{\\cos x-\\sin x}{\\cos x-\\sin x}\\ dx+\\int \\frac{\\cos x+\\sin x}{\\cos x-\\sin x}\\ dx\\right)  \\\\ =&\\ \\frac{1}{2}\\int \\ dx-\\frac{1}{2}\\int \\frac{\\cos x+\\sin x}{\\sin x-\\cos x}\\ dx  \\\\ =&\\ \\frac{1}{2}x-\\frac{1}{2}\\ln\\left(\\sin x-\\cos x\\right)-c\\end{align*}"
         }
       ]
+    },
+    "s25f-kp1": {
+      "topic": "integrals",
+      "title": "kōgeki",
+      "desc": null,
+      "date": "2025 June 7",
+      "tags": [
+        "poly",
+        "sqrt"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-kp1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { x }    { x^2 + 2x\\sqrt{2+\\sqrt{3}}+ 2\\sqrt{3} }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "It may help to un-surdify $2\\sqrt{3}$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You can express $\\sqrt{2 + \\sqrt{3}}$ as a sum of 2 individual surds."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Complete the square on $\\sqrt{2 + \\sqrt{3}}$."
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "Starts with “f” and rhymes with <em>tractorise</em>."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\left(\\frac{\\sqrt{2}}{\\sqrt{2}-\\sqrt{6}}\\right)\\ln\\left(x+\\sqrt{2}\\right)+\\left(\\frac{\\sqrt{6}}{\\sqrt{6}-\\sqrt{2}}\\right)\\ln\\left(x+\\sqrt{6}\\right)-c"
+        }
+      ],
+      "solution": {
+        "factorise": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ x^{2}+2x\\sqrt{2+\\sqrt{3}}+2\\sqrt{3}  \\\\ =&\\ x^{2}+2x\\sqrt{\\left(2+\\sqrt{3}\\right)\\cdot\\frac{2}{2}}+2\\sqrt{3}  \\\\ =&\\ x^{2}+2x\\sqrt{\\frac{3+2\\sqrt{3}+1}{2}}+2\\sqrt{3}  \\\\ =&\\ x^{2}+x\\frac{2}{\\sqrt{2}}\\sqrt{\\left(\\sqrt{3}+1\\right)^{2}}+2\\sqrt{3}  \\\\ =&\\ x^{2}+x\\sqrt{2}\\left(\\sqrt{3}+1\\right)+\\sqrt{12}  \\\\ =&\\ x^{2}+x\\left(\\sqrt{6}+\\sqrt{2}\\right)+\\sqrt{6}\\sqrt{2}  \\\\ =&\\ \\left(x+\\sqrt{2}\\right)\\left(x+\\sqrt{6}\\right)\\end{align*}"
+          }
+        ],
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x}{x^{2}+2x\\sqrt{2+\\sqrt{3}}+2\\sqrt{3}}\\ dx  \\\\ =&\\ \\int \\frac{x}{\\left(x+\\sqrt{2}\\right)\\left(x+\\sqrt{6}\\right)}\\ dx\\end{align*}"
+          }
+        ],
+        "partial fractions": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{x}{\\left(x+\\sqrt{2}\\right)\\left(x+\\sqrt{6}\\right)} &= \\frac{p}{x+\\sqrt{2}}+\\frac{q}{x+\\sqrt{6}}  \\\\ x &= p\\left(x+\\sqrt{6}\\right)+q\\left(x+\\sqrt{2}\\right)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $x = -\\sqrt{2}$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  -\\sqrt{2} &= p\\left(-\\sqrt{2}+\\sqrt{6}\\right)+0  \\\\ p &= \\frac{\\sqrt{2}}{\\sqrt{2}-\\sqrt{6}}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $x = -\\sqrt{6}$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  -\\sqrt{6} &= 0+q\\left(-\\sqrt{6}+\\sqrt{2}\\right)  \\\\ q &= \\frac{\\sqrt{6}}{\\sqrt{6}-\\sqrt{2}}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x}{\\left(x+\\sqrt{2}\\right)\\left(x+\\sqrt{6}\\right)}\\ dx  \\\\ =&\\ \\int \\left(\\frac{\\sqrt{2}}{\\sqrt{2}-\\sqrt{6}}\\right)\\frac{1}{x+\\sqrt{2}}+\\left(\\frac{\\sqrt{6}}{\\sqrt{6}-\\sqrt{2}}\\right)\\frac{1}{x+\\sqrt{6}}\\ dx  \\\\ =&\\ \\left(\\frac{\\sqrt{2}}{\\sqrt{2}-\\sqrt{6}}\\right)\\ln\\left(x+\\sqrt{2}\\right)+\\left(\\frac{\\sqrt{6}}{\\sqrt{6}-\\sqrt{2}}\\right)\\ln\\left(x+\\sqrt{6}\\right)-c\\end{align*}"
+          }
+        ]
+      }
     },
     "s25f-lc1": {
       "topic": "integrals",
@@ -11660,6 +11979,52 @@
         {
           "kind": "latex",
           "content": "\\begin{align*}  &= -\\int_{1+1}^{1+0}\\frac{1}{t^{2}}\\ dt  \\\\ &= \\int_{2}^{1}-\\frac{1}{t^{2}}\\ dt  \\\\ &= \\left[\\frac{1}{t}\\right]_{2}^{1}  \\\\ &= \\frac{1}{1}-\\frac{1}{2}  \\\\ &= \\frac{1}{2}\\end{align*}"
+        }
+      ]
+    },
+    "s25f-lh2": {
+      "topic": "integrals",
+      "title": "chillout",
+      "desc": null,
+      "date": "2025 June 12",
+      "tags": [
+        "ln"
+      ],
+      "methods": [
+        "fun",
+        "speed"
+      ],
+      "shard": "s25f-lh2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{1}    { \\log_{x}(2) }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How do you change the base of a logarithm?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Use the fact that $\\displaystyle \\log_b(x) = \\frac{\\log{x}}{\\log{b}}$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{\\ln2}\\left(x\\ln x-x\\right)-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{1}{\\log_{x}\\left(2\\right)}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\left(\\frac{\\ln2}{\\ln x}\\right)^{-1}\\ dx  \\\\ =&\\ \\frac{1}{\\ln2}\\int_{\\ }^{\\ }\\ln x\\ dx  \\\\ =&\\ \\frac{1}{\\ln2}\\left(x\\ln x-x\\right)-c\\end{align*}"
         }
       ]
     },
@@ -13127,6 +13492,71 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= x\\ln\\left(1+\\sqrt{x}+x\\right)-\\frac{1}{2}\\int \\frac{t+2t^{2}}{1+t+t^{2}}\\cdot2t\\ dt  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-\\int \\frac{t^{2}+2t^{3}}{1+t+t^{2}}\\ dt  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-\\int \\frac{\\left(1+t+t^{2}\\right)\\left(2t-1\\right)-t+1}{1+t+t^{2}}\\ dt  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-\\int \\frac{\\left(1+t+t^{2}\\right)\\left(2t-1\\right)}{1+t+t^{2}}+\\frac{-t+1}{1+t+t^{2}}\\ dt  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-\\int 2t-1-\\frac{t-1}{t^{2}+t+1}\\ dt  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-t^{2}+t+\\int \\frac{t-1}{t^{2}+t+1}\\ dt  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-t^{2}+t+\\frac{1}{2}\\int \\frac{2t-2}{t^{2}+t+1}\\ dt  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-t^{2}+t+\\frac{1}{2}\\int \\frac{2t+1}{t^{2}+t+1}-\\frac{3}{t^{2}+t+1}\\ dt  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-t^{2}+t+\\frac{1}{2}\\ln\\left(t^{2}+t+1\\right)-\\frac{3}{2}\\int \\frac{1}{\\left(t+1/2\\right)^{2}+3/4}\\ dt  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-t^{2}+t+\\frac{1}{2}\\ln\\left(t^{2}+t+1\\right)-\\frac{3}{2}\\sqrt{\\frac{4}{3}}\\tan^{-1}\\left(\\sqrt{\\frac{4}{3}}\\left(t+\\frac{1}{2}\\right)\\right)  \\\\ &= x\\ln\\left(1+\\sqrt{x}+x\\right)-x+\\sqrt{x}+\\frac{1}{2}\\ln\\left(x+\\sqrt{x}+1\\right)-\\sqrt{3}\\tan^{-1}\\left(\\frac{2\\sqrt{3}}{3}\\left(\\sqrt{x}+\\frac{1}{2}\\right)\\right)  \\\\ &= \\left(x+\\frac{1}{2}\\right)\\ln\\left(1+\\sqrt{x}+x\\right)-x+\\sqrt{x}-\\sqrt{3}\\tan^{-1}\\left(\\frac{2\\sqrt{3}}{3}\\left(\\sqrt{x}+\\frac{1}{2}\\right)\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-oe1": {
+      "topic": "integrals",
+      "title": "on edge",
+      "desc": null,
+      "date": "2025 June 7",
+      "tags": [
+        "sqrt"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-oe1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac   { \\sqrt{1 + \\sqrt{x}} }    { x }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Substitute $\\sqrt{x}$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Substitute the $\\sqrt{}$ after that as well."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "4\\sqrt{1+\\sqrt{x}}-4\\tanh^{-1}\\sqrt{1+\\sqrt{x}}-c"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1+\\sqrt{x} &= t  \\\\ \\sqrt{x} &= t-1  \\\\ x &= \\left(t-1\\right)^{2}  \\\\ dx &= 2\\left(t-1\\right)\\ dt\\end{align*}"
+          }
+        ],
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }\\frac{\\sqrt{1+\\sqrt{x}}}{x}\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }\\frac{\\sqrt{t}}{\\left(t-1\\right)^{2}}\\cdot2\\left(t-1\\right)\\ dt  \\\\ =&\\ 2\\int_{\\ }^{\\ }\\frac{\\sqrt{t}}{t-1}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{t} &= v  \\\\ t &= v^{2}  \\\\ dt &= 2v\\ dv\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 2\\int_{\\ }^{\\ }\\frac{v}{v^{2}-1}\\cdot2v\\ dv  \\\\ &= 4\\int_{\\ }^{\\ }\\frac{v^{2}}{v^{2}-1}\\ dv  \\\\ &= 4\\int_{\\ }^{\\ }\\frac{v^{2}-1}{v^{2}-1}+\\frac{1}{v^{2}-1}\\ dv  \\\\ &= 4v-4\\int_{\\ }^{\\ }\\frac{1}{1-v^{2}}\\ dv  \\\\ &= 4v-4\\tanh^{-1}v  \\\\ &= 4\\sqrt{t}-4\\tanh^{-1}\\sqrt{t}  \\\\ &= 4\\sqrt{1+\\sqrt{x}}-4\\tanh^{-1}\\sqrt{1+\\sqrt{x}}-c\\end{align*}"
           }
         ]
       }
@@ -15969,6 +16399,59 @@
         }
       ]
     },
+    "s25f-sq3": {
+      "topic": "integrals",
+      "title": "squeakeasy",
+      "desc": null,
+      "date": "2025 May 24",
+      "tags": [
+        "arctrig"
+      ],
+      "methods": [
+        "parts"
+      ],
+      "shard": "s25f-sq3",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\operatorname{arccot}(x^3) }    { x^4 }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You know how to differentiate $\\cot^{-1}(x)$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Parts!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{6}\\ln\\left(x^{6}+1\\right)-\\ln x-\\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{3x^{3}}-c"
+        }
+      ],
+      "solution": {
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      f &= \\operatorname{arccot}\\left(x^{3}\\right) \\quad&\\quad g' &= \\frac{1}{x^{4}}  \\\\ f' &= -\\frac{1}{\\left(x^{3}\\right)^{2}+1}\\cdot3x^{2} \\quad&\\quad g &= -\\frac{1}{3x^{3}}  \\\\ &= -\\frac{3x^{2}}{x^{6}+1}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{x^{4}}\\ dx  \\\\ =&\\ \\operatorname{arccot}\\left(x^{3}\\right)\\cdot-\\frac{1}{3x^{3}}-\\int -\\frac{3x^{2}}{x^{6}+1}\\cdot-\\frac{1}{3x^{3}}\\ dx  \\\\ =&\\ -\\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{3x^{3}}-\\int \\frac{1}{x\\left(x^{6}+1\\right)}\\ dx  \\\\ =&\\ -\\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{3x^{3}}-\\int \\frac{1}{x\\left(x^{6}+1\\right)}\\cdot\\frac{x^{-7}}{x^{-7}}\\ dx  \\\\ =&\\ -\\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{3x^{3}}-\\int \\frac{x^{-7}}{1+x^{-6}}\\ dx  \\\\ =&\\ -\\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{3x^{3}}+\\frac{1}{6}\\int \\frac{-6x^{-7}}{1+x^{-6}}\\ dx  \\\\ =&\\ -\\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{3x^{3}}+\\frac{1}{6}\\ln\\left(1+x^{-6}\\right)-c  \\\\ =&\\ -\\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{3x^{3}}+\\frac{1}{6}\\ln\\left(\\frac{x^{6}+1}{x^{6}}\\right)-c  \\\\ =&\\ -\\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{3x^{3}}+\\frac{1}{6}\\ln\\left(x^{6}+1\\right)-\\ln x-c  \\\\ =&\\ \\frac{1}{6}\\ln\\left(x^{6}+1\\right)-\\ln x-\\frac{\\operatorname{arccot}\\left(x^{3}\\right)}{3x^{3}}-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-ss1": {
       "topic": "integrals",
       "title": "steamroller",
@@ -17233,6 +17716,57 @@
         ]
       }
     },
+    "s25f-tn1": {
+      "topic": "integrals",
+      "title": "claps",
+      "desc": null,
+      "date": "2025 June 12",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-tn1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\sin{4x} }    { 4\\sin{x} }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How can you expand $\\sin(4x)$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How can you expand $\\sin(2x)$?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How can you expand $\\cos(2x)$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\sin x-\\frac{2}{3}\\left(\\sin x\\right)^{3}-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{\\sin4x}{4\\sin x}\\ dx  \\\\ =&\\ \\int \\frac{2\\sin2x\\cos2x}{4\\sin x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(2\\sin x\\cos x\\right)\\left(\\cos^{2}x-\\sin^{2}x\\right)}{2\\sin x}\\ dx  \\\\ =&\\ \\int \\left(\\cos x\\right)\\left(1-2\\sin^{2}x\\right)\\ dx  \\\\ =&\\ \\int \\cos x-2\\sin^{2}x\\cos x\\ dx  \\\\ =&\\ \\sin x-\\frac{2}{3}\\left(\\sin x\\right)^{3}-c\\end{align*}"
+        }
+      ]
+    },
     "s25f-tp1": {
       "topic": "integrals",
       "title": "cirrus",
@@ -17907,7 +18441,7 @@
       "methods": [
         "tough",
         "spot",
-        "inverse product"
+        "arcprod"
       ],
       "shard": "s25f-vd2",
       "question": [
