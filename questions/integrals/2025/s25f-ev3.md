@@ -73,3 +73,47 @@ You know how to differentiate $\ln(x)$.
   \\ =&\ \left(\ln x\right)^{2}\left(\frac{2}{3}\ln x+1\right)-c
 \end{align*}
 ```
+
+
+## Alternates
+
+You can also save the differentiation for later by using parts twice.
+
+```math
+\begin{align*}
+      f &= \ln x \quad&\quad g' &= \frac{d^{2}}{dx^{2}}x\left(\ln x\right)^{2}
+  \\ f' &= \frac{1}{x} \quad&\quad g &= \frac{d}{dx}x\left(\ln x\right)^{2}
+\end{align*}
+```
+
+Which gives:
+
+```math
+\begin{align*}
+  &\ fg-\int f'g\ dx
+  \\ =&\ \left(\ln x\right)\frac{d}{dx}x\left(\ln x\right)^{2}-\int \frac{1}{x}\cdot\frac{d}{dx}x\left(\ln x\right)^{2}\ dx
+\end{align*}
+```
+
+Then:
+
+```math
+\begin{align*}
+      p &= \frac{1}{x} \quad&\quad q' &= \frac{d}{dx}x\left(\ln x\right)^{2}
+  \\ p' &= -\frac{1}{x^{2}} \quad&\quad q &= x\left(\ln x\right)^{2}
+\end{align*}
+```
+
+Hence:
+
+```math
+\begin{align*}
+  &\ \left(\ln x\right)\frac{d}{dx}x\left(\ln x\right)^{2}-\left(pq-\int p'q\ dx\right)
+  \\ =&\ \left(\ln x\right)\frac{d}{dx}x\left(\ln x\right)^{2}-\frac{1}{x}\cdot x\left(\ln x\right)^{2}+\int -\frac{1}{x^{2}}\cdot x\left(\ln x\right)^{2}\ dx
+  \\ =&\ \left(\ln x\right)\frac{d}{dx}x\left(\ln x\right)^{2}-\left(\ln x\right)^{2}-\int \frac{\left(\ln x\right)^{2}}{x}\ dx
+  \\ =&\ \left(\ln x\right)\frac{d}{dx}x\left(\ln x\right)^{2}-\left(\ln x\right)^{2}-\frac{1}{3}\left(\ln x\right)^{3}
+  \\ =&\ \left(\ln x\right)\left(\left(\ln x\right)^{2}+2\ln x\right)-\left(\ln x\right)^{2}-\frac{1}{3}\left(\ln x\right)^{3}
+  \\ =&\ \left(\ln x\right)^{3}+2\left(\ln x\right)^{2}-\left(\ln x\right)^{2}-\frac{1}{3}\left(\ln x\right)^{3}
+  \\ =&\ \left(\ln x\right)^{2}\left(\frac{2}{3}\ln x+1\right)-c
+\end{align*}
+```
