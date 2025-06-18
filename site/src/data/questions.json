@@ -15469,6 +15469,51 @@
         }
       ]
     },
+    "s25f-rr2": {
+      "topic": "integrals",
+      "title": "rubic reference",
+      "desc": null,
+      "date": "2025 April 1",
+      "tags": [
+        null
+      ],
+      "methods": [
+        null
+      ],
+      "shard": "s25f-rr2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\int    \\int      \\frac        { \\operatorname{hav}( \\vartheta-\\varphi ) }        { \\operatorname{exsec}^{-1}( 0 ) }      +      \\frac        {          \\cos(\\vartheta) \\cos(\\varphi)          \\operatorname{vers}( \\lambda )        }        {          \\operatorname{crd}( \\pi )          \\operatorname{covers}( \\tau/2 )        }    \\ d \\vartheta  \\ d\\varphi\\ d\\lambda"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\   \\\\ =&\\ \\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      f &=  \\quad&\\quad g' &=   \\\\ f' &=  \\quad&\\quad g &= \\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-rv1": {
       "topic": "integrals",
       "title": "luck of the draw",
@@ -15826,6 +15871,85 @@
           }
         ]
       }
+    },
+    "s25f-se1": {
+      "topic": "integrals",
+      "title": "lineup",
+      "desc": null,
+      "date": "2025 April 19",
+      "tags": [
+        "arctrig"
+      ],
+      "methods": [
+        "speed"
+      ],
+      "shard": "s25f-se1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\sec^{-1}x}{x^{2}}\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\sec^{-1}x}{x^{2}}\\ dx  \\\\ =&\\ \\int \\frac{1}{x^{2}}\\cos^{-1}\\left(\\frac{1}{x}\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{1}{x} &= t  \\\\ -\\frac{1}{x^{2}}\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= -\\int \\cos^{-1}t\\ dt  \\\\ &= -t\\cos^{-1}t+\\int -\\frac{t}{\\sqrt{1-t^{2}}}\\ dx  \\\\ &= -t\\cos^{-1}t+\\int \\frac{-2t}{2\\sqrt{1-t^{2}}}\\ dx  \\\\ &= -t\\cos^{-1}t+\\sqrt{1-t^{2}}-c  \\\\ &= \\sqrt{1-\\frac{1}{x^{2}}}-\\frac{1}{x}\\cos^{-1}\\left(\\frac{1}{x}\\right)-c  \\\\ &= \\frac{1}{\\left|x\\right|}\\sqrt{x^{2}-1}-\\frac{1}{x}\\sec^{-1}\\left(x\\right)-c\\end{align*}"
+          }
+        ]
+      },
+      "alternates": [
+        {
+          "kind": "text",
+          "content": "Substitute:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  \\sec^{-1}x &= t  \\\\ x &= \\sec t  \\\\ dx &= \\sec t\\tan t\\ dt\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "Which gives:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\frac{\\sec^{-1}x}{x^{2}}\\ dx  \\\\ =&\\ \\int \\frac{t}{\\sec^{2}t}\\cdot\\sec t\\tan t\\ dt  \\\\ =&\\ \\int t\\frac{\\tan t}{\\sec t}\\ dt  \\\\ =&\\ \\int t\\sin t\\ dt\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "Parts:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}      f &= t \\quad&\\quad g' &= \\sin t  \\\\ f' &= 1 \\quad&\\quad g &= -\\cos t\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "To give:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dt  \\\\ =&\\ -t\\cos t+\\int \\cos t\\ dt  \\\\ =&\\ -t\\cos t+\\sin t  \\\\ =&\\ -\\frac{\\sec^{-1}x}{x}+\\frac{\\sqrt{x^{2}-1}}{\\left|x\\right|}-c\\end{align*}"
+        }
+      ]
     },
     "s25f-sg1": {
       "topic": "integrals",
@@ -19247,6 +19371,65 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &\\ -\\frac{1}{4}\\left(fg-\\int f'g\\ dt\\right)  \\\\ =&\\ -\\frac{1}{4}\\left(t\\cdot\\frac{1}{\\ln2580}e^{\\left(\\ln2580\\right)t}-\\int \\frac{1}{\\ln2580}e^{\\left(\\ln2580\\right)t}\\ dt\\right)  \\\\ =&\\ -\\frac{1}{4}\\left(\\frac{t}{\\ln2580}e^{\\left(\\ln2580\\right)t}-\\frac{1}{\\left(\\ln2580\\right)^{2}}e^{\\left(\\ln2580\\right)t}\\right)  \\\\ =&\\ -\\frac{t}{4\\ln2580}2580^{t}+\\frac{1}{4\\left(\\ln2580\\right)^{2}}2580^{t}  \\\\ =&\\ \\frac{2580^{t}}{4\\left(\\ln2580\\right)^{2}}\\left(1-t\\ln2580\\right)  \\\\ =&\\ \\frac{2580^{\\sqrt{2\\tan x+2\\cot x}}}{4\\left(\\ln2580\\right)^{2}}\\left(1-\\ln\\left(2580\\right)\\sqrt{2\\tan x+2\\cot x}\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-yl1": {
+      "topic": "integrals",
+      "title": "依赖",
+      "desc": null,
+      "date": "2025 April 3",
+      "tags": [
+        "poly"
+      ],
+      "methods": [
+        "work"
+      ],
+      "shard": "s25f-yl1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { x^{1/3} }    { 1 + x^{1/3} }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Substitute $x^{1/3} = t$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\left(x^{1/3}+1\\right)^{3}-\\frac{9}{2}\\left(x^{1/3}+1\\right)^{2}+9x^{1/3}-3\\ln\\left(x^{1/3}+1\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{1/3} &= t  \\\\ x &= t^{3}  \\\\ dx &= 3t^{2}\\ dt\\end{align*}"
+          }
+        ],
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{x^{1/3}}{1+x^{1/3}}\\ dx  \\\\ =&\\ \\int \\frac{t}{1+t}\\cdot3t^{2}\\ dt  \\\\ =&\\ 3\\int \\frac{t^{3}}{1+t}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1+t &= v  \\\\ t &= v-1  \\\\ dt &= dv\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 3\\int \\frac{\\left(v-1\\right)^{3}}{v}\\ dv  \\\\ &= 3\\int v^{2}-3v+3-\\frac{1}{v}\\ dv  \\\\ &= v^{3}-\\frac{9}{2}v^{2}+9v-3\\ln v  \\\\ &= \\left(1+t\\right)^{3}-\\frac{9}{2}\\left(1+t\\right)^{2}+9\\left(1+t\\right)-3\\ln\\left(1+t\\right)  \\\\ &= \\left(x^{1/3}+1\\right)^{3}-\\frac{9}{2}\\left(x^{1/3}+1\\right)^{2}+9\\left(x^{1/3}+1\\right)-3\\ln\\left(x^{1/3}+1\\right)-c  \\\\ &= \\left(x^{1/3}+1\\right)^{3}-\\frac{9}{2}\\left(x^{1/3}+1\\right)^{2}+9x^{1/3}-3\\ln\\left(x^{1/3}+1\\right)-c\\end{align*}"
           }
         ]
       }
