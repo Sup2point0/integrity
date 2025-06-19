@@ -34,12 +34,18 @@ let history = $derived(Object.entries(data.history[year] || {}));
 
 let integrals: {
   title_words: Record<number, number>,
+  title_chars: Record<number | string, number>,
   question_chars: Record<number | string, number>,
   tags_counts: Record<number, number>,
+  hints_counts: Record<number, number>,
+  parts_counts: Record<number, number>,
 } = {
   title_words: {},
+  title_chars: {},
   question_chars: {},
   tags_counts: {},
+  hints_counts: {},
+  parts_counts: {},
 };
 
 for (let q of Site.get_questions_of_topic("integrals")) {
@@ -50,6 +56,14 @@ for (let q of Site.get_questions_of_topic("integrals")) {
       integrals.title_words[count]++;
     } else {
       integrals.title_words[count] = 1;
+    }
+
+    count = q.title.length;
+
+    if (integrals.title_chars[count]) {
+      integrals.title_chars[count]++;
+    } else {
+      integrals.title_chars[count] = 1;
     }
   }
 
@@ -74,6 +88,29 @@ for (let q of Site.get_questions_of_topic("integrals")) {
       integrals.tags_counts[count]++;
     } else {
       integrals.tags_counts[count] = 1;
+    }
+  }
+
+  if (q.hints) {
+    let count = Object.keys(q.hints).length;
+
+    if (integrals.hints_counts[count]) {
+      integrals.hints_counts[count]++;
+    } else {
+      integrals.hints_counts[count] = 1;
+    }
+  }
+
+  if (q.solution) {
+    let count = Object.keys(q.solution).length;
+    if (Array.isArray(q.solution)) {
+      count = 1;
+    }
+
+    if (integrals.parts_counts[count]) {
+      integrals.parts_counts[count]++;
+    } else {
+      integrals.parts_counts[count] = 1;
     }
   }
 }
@@ -166,7 +203,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
 </Section>
 
 <Section title="Integrals" closed={false}>
-  <h2> Number of Words in Title </h2>
+  <h2> Words in Name </h2>
 
   {#if integrals.title_words}
     {@const highest = Math.max(...Object.values(integrals.title_words))}
@@ -181,6 +218,28 @@ for (let q of Site.get_questions_of_topic("integrals")) {
           <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
 
           <div class="class-label">
+            {count}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  <h2> Characters in Name </h2>
+
+  {#if integrals.title_chars}
+    {@const highest = Math.max(...Object.values(integrals.title_chars))}
+
+    <div class="chart">
+      {#each Object.entries(integrals.title_chars) as [count, freq]}
+        <div class="column">
+          <div class="freq-label">
+            {freq ?? "No data"}
+          </div>
+
+          <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
+
+          <div class="class-label" style:font-size="75%">
             {count}
           </div>
         </div>
@@ -221,6 +280,50 @@ for (let q of Site.get_questions_of_topic("integrals")) {
 
     <div class="chart">
       {#each Object.entries(integrals.tags_counts) as [count, freq]}
+        <div class="column">
+          <div class="freq-label">
+            {freq ?? "No data"}
+          </div>
+
+          <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
+
+          <div class="class-label">
+            {count}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  <h2> Number of Hints </h2>
+
+  {#if integrals.hints_counts}
+    {@const highest = Math.max(...Object.values(integrals.hints_counts))}
+
+    <div class="chart">
+      {#each Object.entries(integrals.hints_counts) as [count, freq]}
+        <div class="column">
+          <div class="freq-label">
+            {freq ?? "No data"}
+          </div>
+
+          <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
+
+          <div class="class-label">
+            {count}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  <h2> Parts in Solution </h2>
+
+  {#if integrals.parts_counts}
+    {@const highest = Math.max(...Object.values(integrals.parts_counts))}
+
+    <div class="chart">
+      {#each Object.entries(integrals.parts_counts) as [count, freq]}
         <div class="column">
           <div class="freq-label">
             {freq ?? "No data"}
