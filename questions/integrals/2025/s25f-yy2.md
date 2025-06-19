@@ -8,6 +8,7 @@ tags:
   - dread
   - elite
   - exp
+  - ln
   - hyp trig
 methods:
   - tough
