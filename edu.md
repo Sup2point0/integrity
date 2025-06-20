@@ -1,7 +1,7 @@
 # *decoded*: Integrity
 <!-- #SQUARK live!
 | dest = info/decoded
-| title = decoded: Integrity
+| title = decoded
 | head = <em>decoded</em>: Integrity
 | capt = Learnings, challenges and discoveries from writing my own maths questions
 | date = 2025 July 20
