@@ -76,12 +76,12 @@ function fix_integrity()
 {
   // yesh yesh very smart integrity fixing
   $userprefs.seen.delete(null);
-  $userprefs.seen.delete(null);
-  $userprefs.solved.delete(undefined);
+  $userprefs.seen.delete(undefined);
+  $userprefs.solved.delete(null);
   $userprefs.solved.delete(undefined);
   $userprefs.flagged.delete(null);
-  $userprefs.flagged.delete(null);
-  $userprefs.starred.delete(undefined);
+  $userprefs.flagged.delete(undefined);
+  $userprefs.starred.delete(null);
   $userprefs.starred.delete(undefined);
 
   $userprefs = $userprefs;
@@ -90,18 +90,18 @@ function fix_integrity()
 </script>
 
 
-<Meta title="Data"
+<Meta title="Stats"
   desc="Your personal statistics on Integrity"
 />
 
 
 <Breadcrumbs levels={[
   { text: "Integrity", link: Site.root },
-  { text: "Data" },
+  { text: "Stats" },
 ]} />
 
 
-<Header title="Data" capt="Your personal statistics on <em>Integrity</em>" />
+<Header title="Your Stats" capt="Your personal statistics on <em>Integrity</em>" />
 
 <div class="data">
   <section>
