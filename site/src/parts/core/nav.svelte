@@ -40,7 +40,7 @@ import { base } from "$app/paths";
       }} />
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
-      <Link text="Trails" intern="trails" />
+      <Link text="Trails" intern="trails" hot={true} />
       <Link text="Data" intern="data" />
     </NavLink>
 
@@ -48,7 +48,7 @@ import { base } from "$app/paths";
       <Link text="Questions" intern="docs/questions" />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
-      <Link text="Fun Facts" intern="docs/fun-facts" />
+      <Link text="Fun Facts" intern="docs/fun-facts" hot={true} />
     </NavLink>
 
     <NavLink text="Guides" intern="guides">

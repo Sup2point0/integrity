@@ -13,25 +13,35 @@ interface Props {
   intern?: string;
   action?: () => void;
   disabled?: boolean;
+  hot?: boolean;
 }
 
-let { text, link, intern, action, disabled = false }: Props = $props();
+let { text, link, intern, action, disabled = false, hot = false }: Props = $props();
 
 </script>
+
+
+{#snippet content()}
+  {text}
+
+  {#if hot}
+    <span class="hot">NEW</span>
+  {/if}
+{/snippet}
 
 
 {#if action}
   <button class="link" class:disabled
     onclick={action}
   >
-    {text}
+    {@render content()}
   </button>
 
 {:else}
   <a class="link" class:disabled
     href="{link || `${base}/${intern}`}"
   >
-    {text}
+    {@render content()}
   </a>
 
 {/if}
@@ -42,6 +52,7 @@ let { text, link, intern, action, disabled = false }: Props = $props();
 .link {
   padding: 0.5em;
   display: block;
+  position: relative;
 
   @include font-ui;
   font-weight: 300;
@@ -60,11 +71,20 @@ let { text, link, intern, action, disabled = false }: Props = $props();
   &.disabled {
     opacity: 0.2;
   }
-
 }
 
 button.link {
   width: 100%;
+}
+
+.hot {
+  width: max-content;
+  padding: 0.2em 0.4em;
+  margin-left: 0.5em;
+  color: white;
+  font-size: 75%;
+  background: $col-deut;
+  border-radius: 0.5em;
 }
 
 </style>
