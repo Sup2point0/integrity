@@ -4,6 +4,7 @@
 | title = decoded: Integrity
 | head = <em>decoded</em>: Integrity
 | capt = Learnings, challenges and discoveries from writing my own maths questions
+| date = 2025 July 20
 -->
 
 > [!Note]
@@ -22,6 +23,8 @@
 - Nice UIs aren’t *that* difficult to build if you prototype and think through things properly.
 - A lot of projects can end up wayyy larger than you expected or intended.
   - Yes, this happened with *Integrity*.
+- Maintaining a project long-term can be fun.
+  - Looking back, it’s kinda crazy how much the site has grown from what it was originally.
 - Fuzzy string matching for searching is incomparably better than raw string matching.[^fuzzy]
 
 [^fuszy]: tbf, this is kind of a given. Also I’m talking purely results here, not speed.
@@ -37,7 +40,8 @@
   - I settled on writing each question in its Markdown file, using YAML frontmatter for metadata and then writing a small parsing engine in Ruby to extract the text blocks.
   - Organising by files is pretty nice, since it makes finding a particular question and tracking its version history much easier.
   - I decided against using Squarkdown to export to `.svx` files, since questions needed more fine-tuned formatting and different treatment depending on their topic.
-- Writing LaTeX manually is *long*. Luckily, we can type mathematical expressions in Desmos and ctrl+CV, which directly copies the raw LaTeX!
+- Writing LaTeX manually is *long*. Luckily, we can type mathematical expressions in Desmos and `ctrl`+`C``V`, which directly copies the raw LaTeX!
+  - In fact, you don’t even need to `ctrl`+`A` to select the whole row in Desmos, `ctrl`+`C` while you have nothing selected automatically copies the entire block!
 
 
 <br>
