@@ -17,12 +17,13 @@ interface Props {
     extern?: string;
   collapse?: boolean;
   disabled?: boolean;
+  hot?: boolean;
   children?: any;
 }
 
 let {
   text, pict, svg, link, intern, extern,
-  collapse = false, disabled = false,
+  collapse = false, disabled = false, hot = false,
   children,
 }: Props = $props();
 
@@ -43,6 +44,10 @@ let {
 
     {#if text}
       <p> {text} </p>
+
+      {#if hot}
+        <span class="hot">NEW</span>
+      {/if}
     {/if}
   </a>
 
@@ -94,6 +99,16 @@ a {
 
   img ~ p, .svg ~ p {
     margin-left: 0.5em;
+  }
+
+  .hot {
+    width: max-content;
+    padding: 0.2em 0.4em;
+    margin-left: 0.5em;
+    color: white;
+    font-size: 75%;
+    background: $col-deut;
+    border-radius: 0.5em;
   }
 }
 

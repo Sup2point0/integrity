@@ -31,7 +31,7 @@ import { base } from "$app/paths";
       <Link text="All" intern="questions/all" />
     </NavLink>
 
-    <NavLink text="Explore" intern="explore">
+    <NavLink text="Explore" intern="explore" hot={true}>
       <Link text="Random Question" action={() => {
         window.location.href = `${base}/question/${pick_random_question()}`;
       }} />

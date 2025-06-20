@@ -172,22 +172,22 @@
   "pages": {
     "edu.md": {
       "path": "edu.md",
-      "last_deploy": "2025-06-15 11:31:29 +0100",
-      "slocs": 48,
-      "chars": 2052,
+      "last_deploy": "2025-06-20 21:25:31 +0100",
+      "slocs": 52,
+      "chars": 2371,
       "isIndex": false,
       "flags": [
         "live"
       ],
       "dest": "info/decoded",
-      "title": "decoded: Integrity",
+      "title": "decoded",
       "head": "<em>decoded</em>: Integrity",
       "capt": "Learnings, challenges and discoveries from writing my own maths questions",
       "desc": "Learnings, challenges and discoveries from writing my own maths questions",
       "index": [],
       "tags": [],
-      "date": null,
-      "date_display": null
+      "date": "2025-07-20",
+      "date_display": "2025 July 20"
     },
     "faq.md": {
       "path": "faq.md",
@@ -918,9 +918,9 @@
     },
     "challenges/unsw-ib/2022.md": {
       "path": "challenges/unsw-ib/2022.md",
-      "last_deploy": "2025-04-15 10:37:14 +0100",
+      "last_deploy": "2025-06-20 16:38:08 +0100",
       "slocs": 141,
-      "chars": 3883,
+      "chars": 3895,
       "isIndex": false,
       "flags": [
         "live"
