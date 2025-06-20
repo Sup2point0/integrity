@@ -10,7 +10,9 @@ import Meta from "#parts/page/meta.svelte";
 </script>
 
 
-<Meta title="Challenges" />
+<Meta title="Challenges"
+  desc="My solutions to various mathematical challenges"
+/>
 
 
 <Breadcrumbs levels={[
@@ -18,13 +20,24 @@ import Meta from "#parts/page/meta.svelte";
   { text: "Challenges" },
 ]} />
 
-<Header title="Challenges" />
+<Header title="Challenges"
+  capt="My solutions to various mathematical challenges"
+/>
 
 
 <div class="content">
-  <Card title="MIT Integration Bee" intern="challenges/mit-ib" />
-  <Card title="UNSW Integration Bee" intern="challenges/unsw-ib" />
-  <Card title="0–100 Year Challenge" intern="challenges/year" />
+  <Card title="MIT Integration Bee"
+    intern="challenges/mit-ib"
+    latex={String.raw`\int \frac {\sin{x}}{2e^x + \sin{x} + \cos{x}} \ dx`}
+  />
+  <Card title="UNSW Integration Bee"
+    intern="challenges/unsw-ib"
+    latex={String.raw`\int_{0}^{\infin} \frac{1}{\left( x+1/x \right)^2} \ dx`}
+  />
+  <Card title="0–100 Year Challenge"
+    intern="challenges/year"
+    latex={String.raw`2^{(0!+2)! + 5}`}
+  />
 </div>
 
 
