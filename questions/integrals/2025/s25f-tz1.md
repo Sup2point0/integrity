@@ -6,10 +6,8 @@ date: 2025 January 9
 tags:
   - horror
   - trig
-  - frac
 methods:
   - spot
-  - algebra
 ---
 
 

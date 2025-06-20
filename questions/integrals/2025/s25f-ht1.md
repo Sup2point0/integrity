@@ -4,9 +4,8 @@ title: hyperactive
 desc: 
 date: 2025 January 11
 tags:
-  - hyp trig
   - sqrt
-  - frac
+  - hyp trig
 methods:
   - spot
 ---

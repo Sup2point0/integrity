@@ -5,7 +5,6 @@ desc:
 date: 2025 January 10
 tags:
   - poly
-  - frac
 methods:
   - spot
   - sub

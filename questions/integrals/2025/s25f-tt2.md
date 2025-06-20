@@ -6,7 +6,6 @@ date: 2025 January 30
 tags:
   - scare
   - trig
-  - frac
 methods:
   - spot
 ---

@@ -5,7 +5,6 @@ desc:
 date: 2025 January 11
 tags:
   - trig
-  - frac
 methods:
   - spot
 ---

@@ -5,7 +5,6 @@ desc:
 date: 2025 January 12
 tags:
   - ln
-  - frac
 methods:
   - spot
   - sub

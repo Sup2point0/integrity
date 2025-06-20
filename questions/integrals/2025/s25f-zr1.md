@@ -6,7 +6,6 @@ date: 2025 January 12
 tags:
   - horror
   - arctrig
-  - frac
 methods:
   - spot
   - tough

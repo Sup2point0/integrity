@@ -5,7 +5,6 @@ desc:
 date: 2025 January 11
 tags:
   - sqrt
-  - frac
 methods:
   - work
 ---

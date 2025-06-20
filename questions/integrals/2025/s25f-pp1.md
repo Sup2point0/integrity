@@ -5,7 +5,6 @@ desc:
 date: 2025 January 21
 tags:
   - poly
-  - frac
 methods:
   - long
   - work

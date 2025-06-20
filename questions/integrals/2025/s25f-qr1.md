@@ -6,7 +6,6 @@ date: 2025 January 18
 tags:
   - horror
   - sqrt
-  - frac
 methods:
   - work
   - acc

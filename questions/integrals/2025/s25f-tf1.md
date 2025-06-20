@@ -8,10 +8,8 @@ tags:
   - trig
   - exp
   - ln
-  - frac
 methods:
   - work
-  - algebra
 ---
 
 

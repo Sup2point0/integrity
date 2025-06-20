@@ -4,7 +4,7 @@ title: evaporation
 desc: 
 date: 2025 February 13
 tags:
-  - frac
+  - poly
 methods:
   - spot
 ---

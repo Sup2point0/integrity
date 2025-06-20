@@ -5,7 +5,6 @@ desc:
 date: 2025 February 1
 tags:
   - poly
-  - frac
 methods:
   - work
 ---

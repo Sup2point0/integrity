@@ -6562,11 +6562,13 @@
       "tags": [
         "horror",
         "trig",
-        "hyp trig",
-        "frac"
+        "hyp trig"
       ],
       "methods": [
-        null
+        "work"
+      ],
+      "flags": [
+        "guide"
       ],
       "shard": "s25f-cc1",
       "question": [
@@ -8415,8 +8417,7 @@
       "date": "2025 January 21",
       "tags": [
         "trig",
-        "exp",
-        "frac"
+        "exp"
       ],
       "methods": [
         "spot"
@@ -8527,7 +8528,7 @@
       "desc": null,
       "date": "2025 February 13",
       "tags": [
-        "frac"
+        "poly"
       ],
       "methods": [
         "spot"
@@ -9245,8 +9246,7 @@
       "desc": null,
       "date": "2025 February 1",
       "tags": [
-        "poly",
-        "frac"
+        "poly"
       ],
       "methods": [
         "work"
@@ -10472,9 +10472,8 @@
       "desc": null,
       "date": "2025 January 11",
       "tags": [
-        "hyp trig",
         "sqrt",
-        "frac"
+        "hyp trig"
       ],
       "methods": [
         "spot"
@@ -11700,8 +11699,7 @@
       "desc": null,
       "date": "2025 January 25",
       "tags": [
-        "trig",
-        "frac"
+        "trig"
       ],
       "methods": [
         "layer cake"
@@ -12200,8 +12198,7 @@
       "desc": null,
       "date": "2025 January 12",
       "tags": [
-        "ln",
-        "frac"
+        "ln"
       ],
       "methods": [
         "spot",
@@ -13364,15 +13361,11 @@
       "tags": [
         "horror",
         "trig",
-        "ln",
-        "frac"
+        "ln"
       ],
       "methods": [
         "spot",
         "sub"
-      ],
-      "flags": [
-        "feat"
       ],
       "shard": "s25f-nx1",
       "question": [
@@ -13601,8 +13594,7 @@
       "desc": null,
       "date": "2025 January 10",
       "tags": [
-        "poly",
-        "frac"
+        "poly"
       ],
       "methods": [
         "spot",
@@ -13753,8 +13745,7 @@
       "desc": null,
       "date": "2025 January 21",
       "tags": [
-        "poly",
-        "frac"
+        "poly"
       ],
       "methods": [
         "long",
@@ -14256,11 +14247,11 @@
       "desc": null,
       "date": "2025 January 9",
       "tags": [
-        "poly",
-        "frac"
+        "poly"
       ],
       "methods": [
-        "work"
+        "work",
+        "partials"
       ],
       "shard": "s25f-pt1",
       "question": [
@@ -14748,8 +14739,7 @@
       "date": "2025 January 18",
       "tags": [
         "horror",
-        "sqrt",
-        "frac"
+        "sqrt"
       ],
       "methods": [
         "work",
@@ -14799,8 +14789,7 @@
       "desc": null,
       "date": "2025 January 11",
       "tags": [
-        "sqrt",
-        "frac"
+        "sqrt"
       ],
       "methods": [
         "work"
@@ -15685,8 +15674,7 @@
       "desc": null,
       "date": "2025 February 9",
       "tags": [
-        "trig",
-        "frac"
+        "trig"
       ],
       "methods": [
         "spot"
@@ -15785,11 +15773,10 @@
       "desc": null,
       "date": "2025 January 9",
       "tags": [
-        "poly",
-        "frac"
+        "poly"
       ],
       "methods": [
-        "poly div"
+        "speed"
       ],
       "shard": "s25f-sd1",
       "question": [
@@ -17309,8 +17296,7 @@
       "desc": null,
       "date": "2025 January 11",
       "tags": [
-        "trig",
-        "frac"
+        "trig"
       ],
       "methods": [
         "spot"
@@ -17443,12 +17429,10 @@
         "horror",
         "trig",
         "exp",
-        "ln",
-        "frac"
+        "ln"
       ],
       "methods": [
-        "work",
-        "algebra"
+        "work"
       ],
       "shard": "s25f-tf1",
       "question": [
@@ -17498,8 +17482,7 @@
       "desc": null,
       "date": "2025 January 10",
       "tags": [
-        "trig",
-        "frac"
+        "trig"
       ],
       "methods": [
         "spot"
@@ -17540,8 +17523,7 @@
       "desc": null,
       "date": "2025 January 15",
       "tags": [
-        "trig",
-        "frac"
+        "trig"
       ],
       "methods": [
         "spot"
@@ -18247,8 +18229,7 @@
       "date": "2025 January 30",
       "tags": [
         "scare",
-        "trig",
-        "frac"
+        "trig"
       ],
       "methods": [
         "spot"
@@ -18349,12 +18330,10 @@
       "date": "2025 January 9",
       "tags": [
         "horror",
-        "trig",
-        "frac"
+        "trig"
       ],
       "methods": [
-        "spot",
-        "algebra"
+        "spot"
       ],
       "shard": "s25f-tz1",
       "question": [
@@ -18485,8 +18464,7 @@
       "date": "2025 January 21",
       "tags": [
         "scare",
-        "poly",
-        "frac"
+        "poly"
       ],
       "methods": [
         "trig sub"
@@ -19669,8 +19647,7 @@
       "date": "2025 January 12",
       "tags": [
         "horror",
-        "arctrig",
-        "frac"
+        "arctrig"
       ],
       "methods": [
         "spot",

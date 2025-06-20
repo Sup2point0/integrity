@@ -5,9 +5,8 @@ desc:
 date: 2025 January 9
 tags:
   - poly
-  - frac
 methods:
-  - poly div
+  - speed
 ---
 
 

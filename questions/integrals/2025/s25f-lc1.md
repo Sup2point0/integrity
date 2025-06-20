@@ -5,7 +5,6 @@ desc:
 date: 2025 January 25
 tags:
   - trig
-  - frac
 methods:
   - layer cake
 ---

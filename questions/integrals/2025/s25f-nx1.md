@@ -7,12 +7,9 @@ tags:
   - horror
   - trig
   - ln
-  - frac
 methods:
   - spot
   - sub
-flags:
-  - feat
 ---
 
 

@@ -6,7 +6,6 @@ date: 2025 January 21
 tags:
   - scare
   - poly
-  - frac
 methods:
   - trig sub
 ---

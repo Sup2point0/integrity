@@ -7,9 +7,10 @@ tags:
   - horror
   - trig
   - hyp trig
-  - frac
 methods:
-  - 
+  - work
+flags:
+  - guide
 ---
 
 
