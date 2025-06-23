@@ -1,5 +1,7 @@
 <script lang="ts">
 
+import sample from "@stdlib/random-sample";
+
 import { speedrun } from "#scripts/stores";
 import { derivatives } from "#src/data/speedrun-questions";
 
@@ -15,7 +17,9 @@ import AnswerCards from "#parts/ui/answer-cards.svelte";
 $speedrun.run.running = false;
 
 // TODO filter
-const questions = derivatives;
+const questions = (
+  sample(derivatives.based, { size: derivatives.based.length, replace: false})
+);
 
 let question: Partial<Question> | null = $state(null);
 
@@ -29,8 +33,7 @@ function start_speedrun()
 
 function next_question()
 {
-  let idx = Math.floor(Math.random() * questions.length);
-  question = questions.splice(idx, 1)[0];
+  question = questions.splice(0, 1)[0];
   // @ts-ignore
   question.options = question.options?.map((latex, index) => ({ index, latex }));
 }
