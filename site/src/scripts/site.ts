@@ -1,13 +1,13 @@
 import { questions, pages, index, guides } from "./data";
-import type { Question, QuestionsData } from "#scripts/types";
+import type { Question, QuestionsData, Page } from "#scripts/types";
 
 
 interface SiteData {
   /** The base URL of the site. */
   root: string;
 
-  pages: Record<string, object>;
-  index: Record<string, object>;
+  pages: Record<string, Page>;
+  index: Record<string, Page>;
   questions: QuestionsData;
 
   get_questions_of_topic: (topic: string) => Question[];
@@ -16,11 +16,11 @@ interface SiteData {
   get_featured_questions: () => Question[];
   get_all_tags: () => string[];
   get_all_methods: () => string[];
-  get_list_of_all_guides: () => object[];
-  get_featured_guides: () => object[];
+  get_list_of_all_guides: () => Page[];
+  get_featured_guides: () => Page[];
 
   guides: {
-    [topic: string]: object[];
+    [topic: string]: Page[];
   }
 }
 

@@ -6,16 +6,19 @@ A card for selecting an article. -->
 
 import Site from "#scripts/site";
 
+import type { Page } from "#scripts/types";
+
 import { base } from "$app/paths";
 
 
 interface Props {
-  page: string;
+  path?: string;
+  page?: Page;
 }
 
-let { page }: Props = $props();
+let { path, page }: Props = $props();
 
-const data = Site.pages[page];
+const data: Page = page ?? Site.pages[path!];
 
 </script>
 

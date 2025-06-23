@@ -198,12 +198,13 @@ a.question-card {
 .text {
   h4 {
     display: inline-block;
-    margin-bottom: 0.2em;
+    margin: 0 0 0.2em;
     font-size: 125%;
     font-weight: 450;
   }
 
   p.date {
+    margin: 0;
     color: $col-text-deut;
     font-size: 100%;
     font-weight: 250;

@@ -7,27 +7,43 @@ Displays a list of question cards.
 
 import Site from "#scripts/site";
 
+import type { Question } from "#src/scripts/types";
+
 import QuestionCard from "#parts/ui/card.question.svelte";
 
 
 interface Props {
-  shards: string[];
+  shards?: string[];
+  questions?: Question[];
 }
 
-let { shards }: Props = $props();
+let { shards, questions }: Props = $props();
 
 </script>
 
 
 <ul>
-  {#each shards as shard}
-    {@const question = Site.questions.integrals.questions[shard]}
+  {#if questions}
+    {#each questions as question}
+      <QuestionCard {question}
+        latex={question.question.content}
+        style="row"
+      />
+    {/each}
+  
+  {:else if shards}
+    {#each shards as shard}
+      {@const question = Site.questions.integrals.questions[shard]}
 
-    <QuestionCard {question}
-      latex={question.question.content}
-      style="row"
-    />
-  {/each}
+      <QuestionCard {question}
+        latex={question.question.content}
+        style="row"
+      />
+    {/each}
+
+  {:else}
+  
+  {/if}
 </ul>
 
 
@@ -35,7 +51,8 @@ let { shards }: Props = $props();
 
 ul {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
+  justify-content: center;
   gap: 1rem;
 }
 

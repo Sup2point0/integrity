@@ -5,22 +5,35 @@ Displays a list of article cards.
 
 <script lang="ts">
 
+import type { Page } from "#scripts/types";
+
 import ArticleCard from "#parts/ui/card.article.svelte";
 
 
 interface Props {
-  paths: string[];
+  paths?: string[];
+  pages?: Page[];
 }
 
-let { paths }: Props = $props();
+let { paths, pages }: Props = $props();
 
 </script>
 
 
 <ul>
-  {#each paths as path}
-    <ArticleCard page={path} />
-  {/each}
+  {#if pages}
+    {#each pages as page}
+      <ArticleCard {page} />
+    {/each}
+  
+  {:else if paths}
+    {#each paths as path}
+      <ArticleCard {path} />
+    {/each}
+
+  {:else}
+  
+  {/if}
 </ul>
 
 

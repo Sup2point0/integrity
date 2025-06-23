@@ -1,5 +1,7 @@
 export type * from "./root";
 
+export type { Page } from "./page";
+
 export { Question } from "./question";
 export type * from "./question";
 

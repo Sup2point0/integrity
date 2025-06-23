@@ -8,8 +8,8 @@ import Link from "#parts/ui/link.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
 import Line from "#parts/page/line.svelte";
 import Card from "#parts/ui/card.svelte";
-import QuestionCard from "#parts/ui/card.question.svelte";
-import ArticleCard from "#parts/ui/card.article.svelte";
+import QuestionArray from "#parts/page/question-array.svelte";
+import ArticleArray from "#src/parts/page/article-array.svelte";
 
 import Header from "#parts/core/header.svelte";
 
@@ -72,14 +72,7 @@ onMount(() => {
 <section class="featured">
   <Header title="Featured" />
   
-  <div class="questions">
-    {#each featured_questions as question}
-      <QuestionCard {question}
-        latex={question.question.kind === "latex" ? question.question.content : ""}
-        style="row"
-      />
-    {/each}
-  </div>
+  <QuestionArray questions={featured_questions} />
   
   <div class="centre">
     <Clicky text="View All" intern="questions/all" />
@@ -89,11 +82,7 @@ onMount(() => {
 <section class="featured">
   <Header title="Guides" />
 
-  <div class="guides">
-    {#each featured_guides as article}
-      <ArticleCard page={article.path} />
-    {/each}
-  </div>
+  <ArticleArray pages={featured_guides} />
   
   <div class="centre">
     <Clicky text="View All" intern="guides" />
@@ -132,7 +121,7 @@ section {
 }
 
 .featured {
-  .questions, .guides {
+  .guides {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
