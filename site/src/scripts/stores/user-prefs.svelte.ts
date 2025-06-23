@@ -38,6 +38,7 @@ export class UserPrefs
       solved: Array.from(this.solved),
       flagged: Array.from(this.flagged),
       starred: Array.from(this.starred),
+      
       "desmos-preset": this["desmos-preset"],
     }
   }
@@ -52,6 +53,7 @@ export class UserPrefs
     this.solved = new Set(data.solved ?? this.solved);
     this.flagged = new Set(data.flagged ?? this.flagged);
     this.starred = new Set(data.starred ?? this.starred);
+
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
 
     return this;

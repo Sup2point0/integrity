@@ -10,7 +10,7 @@ import { persisted, type Serializer } from "svelte-persisted-store";
 import { get } from "svelte/store";
 
 import { userprefs } from "./user-prefs.svelte.ts";
-import type { Question } from "#scripts/types";
+import type { UserPrefs, Question } from "#scripts/types";
 
 
 interface States {
@@ -69,6 +69,10 @@ export class SearchPrefs
       exclude: this.exclude,
       show: this.show,
       buttons: this.buttons,
+      view: this.view,
+      sort: this.sort,
+      reverse: this.reverse,
+      expanded: this.expanded,
     }
   }
 
@@ -79,6 +83,11 @@ export class SearchPrefs
     this.exclude = data.exclude ?? this.exclude;
     this.show = data.show ?? this.show;
     this.buttons = data.buttons ?? this.buttons;
+    
+    this.view = data.view ?? this.view;
+    this.sort = data.sort ?? this.sort;
+    this.reverse = data.reverse ?? this.reverse;
+    this.expanded = data.expanded ?? this.expanded;
 
     return this;
   }
@@ -96,6 +105,8 @@ export class SearchPrefs
   ): Question[]
   {
     let out: Question[] = [...questions];
+
+    let data = get(userprefs);
   
     // Filter
     /* we could optimise the order of applying filters so those that cut out the greatest proportion are applied first (thereby speeding up later filters), but this doesn't really impact performance enough to warrant that lmao */
@@ -118,21 +129,21 @@ export class SearchPrefs
     }
 
     if (this.include.solved) {
-      out = out.filter(question => get(userprefs).solved.has(question.shard));
+      out = out.filter(question => data.solved.has(question.shard));
     } else if (this.exclude.solved) {
-      out = out.filter(question => !get(userprefs).solved.has(question.shard));
+      out = out.filter(question => !data.solved.has(question.shard));
     }
 
     if (this.include.flagged) {
-      out = out.filter(question => get(userprefs).flagged.has(question.shard));
+      out = out.filter(question => data.flagged.has(question.shard));
     } else if (this.exclude.solved) {
-      out = out.filter(question => !get(userprefs).flagged.has(question.shard));
+      out = out.filter(question => !data.flagged.has(question.shard));
     }
 
     if (this.include.starred) {
-      out = out.filter(question => get(userprefs).starred.has(question.shard));
+      out = out.filter(question => data.starred.has(question.shard));
     } else if (this.exclude.solved) {
-      out = out.filter(question => !get(userprefs).starred.has(question.shard));
+      out = out.filter(question => !data.starred.has(question.shard));
     }
 
     if (this.include.featured) {
@@ -170,12 +181,10 @@ export class SearchPrefs
     }
   
     // Sort
-    let sort_by = get(userprefs)["search-sort"];
-
-    if (sort_by) {
-      switch (sort_by) {
+    if (this.sort) {
+      switch (this.sort) {
         case "rel":
-          out = this.sort_rel(out);
+          out = this.sort_rel(out, data);
           break;
         
         case "date":
@@ -191,7 +200,7 @@ export class SearchPrefs
       }
     }
     else if (!this.query) {
-      out = this.sort_rel(out);
+      out = this.sort_rel(out, data);
     }
   
     if (this.reverse) {
@@ -201,10 +210,10 @@ export class SearchPrefs
     return out;
   }
 
-  sort_rel(source: Question[]) {
+  sort_rel(source: Question[], data: UserPrefs) {
     if (typeof Object.groupBy === "undefined") return this.sort_date(source);
     
-    let categories = Object.groupBy(source, question => this.categorise_rel(question));
+    let categories = Object.groupBy(source, question => this.categorise_rel(question, data));
 
     for (let category of Object.values(categories)) {
       // @ts-ignore
@@ -214,11 +223,11 @@ export class SearchPrefs
     return Object.values(categories).flatMap(category => category);
   }
 
-  categorise_rel(question: Question)
+  categorise_rel(question: Question, data: UserPrefs)
   {
-    if (get(userprefs).flagged.has(question.shard)) return 5;
-    if (get(userprefs).starred.has(question.shard)) return 40;
-    if (get(userprefs).solved.has(question.shard)) return 50;
+    if (data.flagged.has(question.shard)) return 5;
+    if (data.starred.has(question.shard)) return 40;
+    if (data.solved.has(question.shard)) return 50;
     return 10;
   }
 
