@@ -4,6 +4,7 @@ import katex from "katex";
 
 import Site from "#scripts/site";
 
+import GraphBar from "./graph-bar.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
 
 import Meta from "#parts/page/meta.svelte";
@@ -145,13 +146,9 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     {@const highest = Math.max(...history.map(([_, count]) => count ?? 0))}
 
     <div class="chart">
-      {#each history as [month, count]}
+      {#each history as [month, count], idx}
         <div class="column">
-          <div class="freq-label">
-            {count ?? "No data"}
-          </div>
-
-          <div class="bar" style:--frac={(count ?? 0) / highest}></div>
+          <GraphBar {idx} freq={count} frac={(count ?? 0) / highest} />
 
           <div class="class-label">
             {month}
@@ -209,13 +206,9 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     {@const highest = Math.max(...Object.values(integrals.title_words))}
 
     <div class="chart">
-      {#each Object.entries(integrals.title_words) as [count, freq]}
+      {#each Object.entries(integrals.title_words) as [count, freq], idx}
         <div class="column">
-          <div class="freq-label">
-            {freq ?? "No data"}
-          </div>
-
-          <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label">
             {count}
@@ -231,13 +224,9 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     {@const highest = Math.max(...Object.values(integrals.title_chars))}
 
     <div class="chart">
-      {#each Object.entries(integrals.title_chars) as [count, freq]}
+      {#each Object.entries(integrals.title_chars) as [count, freq], idx}
         <div class="column">
-          <div class="freq-label">
-            {freq ?? "No data"}
-          </div>
-
-          <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label" style:font-size="75%">
             {count}
@@ -253,13 +242,9 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     {@const highest = Math.max(...Object.values(integrals.question_chars))}
 
     <div class="chart">
-      {#each Object.entries(integrals.question_chars) as [count, freq]}
+      {#each Object.entries(integrals.question_chars) as [count, freq], idx}
         <div class="column">
-          <div class="freq-label">
-            {freq ?? "No data"}
-          </div>
-
-          <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label" style:font-size="75%">
             {#if count.endsWith("+")}
@@ -279,13 +264,9 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     {@const highest = Math.max(...Object.values(integrals.tags_counts))}
 
     <div class="chart">
-      {#each Object.entries(integrals.tags_counts) as [count, freq]}
+      {#each Object.entries(integrals.tags_counts) as [count, freq], idx}
         <div class="column">
-          <div class="freq-label">
-            {freq ?? "No data"}
-          </div>
-
-          <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label">
             {count}
@@ -301,13 +282,9 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     {@const highest = Math.max(...Object.values(integrals.hints_counts))}
 
     <div class="chart">
-      {#each Object.entries(integrals.hints_counts) as [count, freq]}
+      {#each Object.entries(integrals.hints_counts) as [count, freq], idx}
         <div class="column">
-          <div class="freq-label">
-            {freq ?? "No data"}
-          </div>
-
-          <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label">
             {count}
@@ -323,13 +300,9 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     {@const highest = Math.max(...Object.values(integrals.parts_counts))}
 
     <div class="chart">
-      {#each Object.entries(integrals.parts_counts) as [count, freq]}
+      {#each Object.entries(integrals.parts_counts) as [count, freq], idx}
         <div class="column">
-          <div class="freq-label">
-            {freq ?? "No data"}
-          </div>
-
-          <div class="bar" style:--frac={(freq ?? 0) / highest}></div>
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label">
             {count}
@@ -382,14 +355,6 @@ nav {
     transition: color 0.12s ease-out, transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-  .bar {
-    height: calc(var(--frac) * 100%);
-    background: linear-gradient(to bottom in oklch, $col-deut, $col-yay 75%);
-    background-size: 100% calc(100% * 1 / var(--frac));
-    transform: scaleY(-1);
-    transition: all 0.12s ease-out;
-  }
-
   .class-label {
     position: absolute;
     left: 50%;
@@ -402,12 +367,12 @@ nav {
 }
 
 .column:hover {
-  .freq-label {
+  :global(.freq-label) {
     color: $col-text;
     transform: scale(1.25);
   }
 
-  .bar {
+  :global(.graph-bar) {
     filter: brightness(1.03);
   }
 
