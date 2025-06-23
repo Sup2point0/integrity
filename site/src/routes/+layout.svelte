@@ -53,7 +53,9 @@ function count_visits()
 </script>
 
 
-<Nav />
+{#if !page.url.pathname.endsWith("/run")}
+  <Nav />
+{/if}
 
 <div class="layout">
   <main class:wide={

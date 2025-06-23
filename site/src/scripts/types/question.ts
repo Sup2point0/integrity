@@ -19,15 +19,20 @@ export class Question
   flags: string[] = [];
 
   /** The question line. */
-  question: Block;
+  question: Block | string;
 
   /** Extra notes for clarification. */
   notes?: Block;
 
-  /** A hint. */
-  hints?: { [idx: string]: Block[] };
+  /** Answers to choose from for multiple-choice questions. */
+  options?: Block[] | string[];
 
-  /** The short displayed answer. */
+  /** A hint. */
+  hints?: {
+    [idx: string]: Block[]
+  };
+
+  /** The short displayed answer. For a multiple-choice question, this defaults to the 1st option. */
   answer?: Block;
 
   /** The intended solution. */
@@ -41,6 +46,7 @@ export class Question
 
   /** Bounds of the viewport for a graph question. */
   "graph-bounds"?: number;
+
 
   constructor(data: any)
   {
