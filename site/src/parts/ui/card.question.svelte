@@ -108,7 +108,7 @@ a.question-card {
   align-items: stretch;
 
   &.block {
-    max-width: max(20vw, 20rem);
+    max-width: max(20vw, 24rem);
     flex-flow: column;
   }
   &.row {
@@ -146,7 +146,7 @@ a.question-card {
   text-align: center;
   font-size: 80%;
   a.question-card.row & { font-size: 100%; }
-  overflow-x: auto;
+  overflow-x: hidden;
   scrollbar-width: thin;
 }
 

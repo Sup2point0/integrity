@@ -47,7 +47,7 @@ onMount(() => {
   {#each filtered as question (question.shard)}
     <QuestionCard {question}
       latex={$search.show.question ? question.question.content : undefined}
-      style={$search.view === "grid" ? "block" : "row"}
+      style={$search.view === "list" ? "row" : "block"}
     />
   {/each}
 </div>
@@ -76,13 +76,19 @@ onMount(() => {
 
   &.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, max(16rem, 30%));
+    grid-template-columns: repeat(auto-fit, clamp(16rem, 30%, 24rem));
     justify-content: center;
   }
 
   &.list {
     flex-flow: column;
     align-items: stretch;
+  }
+
+  &.grid-wide {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    justify-content: center;
   }
 }
 

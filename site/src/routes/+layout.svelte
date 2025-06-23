@@ -4,15 +4,15 @@ import "#styles/essence.scss";
 import "#styles/article.scss";
 import "#styles/a11y.scss";
 
-import { userprefs } from "#scripts/stores";
+import { search, userprefs } from "#scripts/stores";
 
 import Nav from "#parts/core/nav.svelte";
 import Footer from "#parts/core/footer.svelte";
 
+import { page } from "$app/state";
 import { fade } from "svelte/transition";
 import { quadIn } from "svelte/easing";
 import { onMount } from "svelte";
-import { page } from "$app/state";
 
 
 let { children } = $props();
@@ -56,7 +56,9 @@ function count_visits()
 <Nav />
 
 <div class="layout">
-  <main>
+  <main class:wide={
+    page.url.pathname.includes("questions") && $search.view === "grid-wide"
+  }>
     {#if children}
       {@render children()}
     {:else}
@@ -99,6 +101,10 @@ main {
   width: min(80%, 64rem);
   max-width: 100vw;
   min-height: 75vh;
+
+  &.wide {
+    width: 90%;
+  }
 }
 
 aside.overlay {

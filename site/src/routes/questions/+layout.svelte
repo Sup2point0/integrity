@@ -36,7 +36,6 @@ onMount(() => {
 <style lang="scss">
 
 .up {
-  // display: none;
   position: fixed;
   right: 1rem;
   bottom: 1rem;
