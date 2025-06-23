@@ -3,6 +3,7 @@
 | dest = guides/integrals/methods/power-partials
 | capt = Substitution without substitution
 | index = guides / integrals / methods
+| date = 2025 June 23
 -->
 
 When we see
@@ -26,7 +27,7 @@ Something strange is going on here...
 
 Recall that partial fractions is not an integration technique, but an algebraic manipulation, just like trigonometric identities or logarithm laws. Rewriting the integrand with partial fractions produces a mathematically identical expression.
 
-This means we can perform a substitution, but without needing to worry about changing the $dx$ or bounds of integration. It’s not a calculus substitution which changes the nature of the expression, but only a visually abstraction to make stuff simpler to manage.
+This means we can perform a substitution, but without needing to worry about changing the $dx$ or bounds of integration. It’s not a calculus substitution which changes the nature of the expression, but only a visual abstraction to make stuff simpler to manage.
 
 So going back to that integral, let’s just pluck out the integrand and consider that on its own:
 
@@ -61,7 +62,7 @@ This is exactly the same result that we derived before, but we simplified things
 
 This can feel a little unintuitive at first, especially if you’ve been integrating for a while – we’ve been trained to consider derivatives when substituting. But this is a more classic kind of ‘symbolic’ substitution than the involved process of substitution in calculus.
 
-It’s important to recognise where this works. It certaiy does not mean you don’t ever need to consider lower powers of $x$. This:
+It’s important to recognise where this works. It certainly does not mean you don’t ever need to consider lower powers of $x$. This:
 
 ```math
 \frac{1}{x^3(x^2+1)}
