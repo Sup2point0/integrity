@@ -17,12 +17,12 @@ const questions = Site.get_questions_of_topic("complete-square");
 const tags = Site.questions["complete-square"].tags;
 const methods = Site.questions["complete-square"].methods;
 
-let filtered = $derived(search.filter_questions(questions));
+let filtered = $derived($search.filter_questions(questions));
 
 
 onMount(() => {
-  search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
-  search.methods = Object.fromEntries(methods.map(method => [method, false]));
+  $search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+  $search.methods = Object.fromEntries(methods.map(method => [method, false]));
 })
 
 </script>

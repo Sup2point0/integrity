@@ -16,12 +16,12 @@ import { onMount } from "svelte";
 const questions = Site.get_questions_of_topic("special");
 const tags = Site.questions["special"].tags;
 
-let filtered = $derived(search.filter_questions(questions));
+let filtered = $derived($search.filter_questions(questions));
 
 
 onMount(() => {
-  search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
-  search.methods = {};
+  $search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+  $search.methods = {};
 })
 
 </script>
@@ -43,7 +43,7 @@ onMount(() => {
 <div class="content">
   {#each filtered as question (question.shard)}
     <QuestionCard {question}
-      latex={search.show.question ? question.question.content : undefined}
+      latex={$search.show.question ? question.question.content : undefined}
       style="row"
     />
   {/each}

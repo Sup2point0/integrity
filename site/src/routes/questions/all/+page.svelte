@@ -17,12 +17,12 @@ const questions = Site.get_list_of_all_questions();
 const tags = Site.get_all_tags();
 const methods = Site.get_all_methods();
 
-let filtered = $derived(search.filter_questions(questions));
+let filtered = $derived($search.filter_questions(questions));
 
 
 onMount(() => {
-  search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
-  search.methods = Object.fromEntries(methods.map(method => [method, false]));
+  $search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+  $search.methods = Object.fromEntries(methods.map(method => [method, false]));
 })
 
 </script>

@@ -37,7 +37,7 @@ function check_valid(data: Array<any>): boolean
 <a class="question-card {style}"
   href="{base}/question/{question.topic}?shard={question.shard}"
 >
-  {#if search.show.question}
+  {#if $search.show.question}
     <div class="question" transition:fade={{ duration: 250 }}>
       {#if latex}
         <Katex text={latex} inline={false} client_render={true} />
@@ -54,7 +54,7 @@ function check_valid(data: Array<any>): boolean
       <div class="row">
         <div class="upper">
           <div class="text">
-            {#if search.show.shard}
+            {#if $search.show.shard}
               <p class="shard" transition:slide={{ duration: 500 }}>
                 {question.shard}
               </p>
@@ -62,7 +62,7 @@ function check_valid(data: Array<any>): boolean
 
             {#if question.title} <h4 class="name"> {question.title} </h4> {/if}
             
-            {#if search.show.dates && question.date}
+            {#if $search.show.dates && question.date}
               <p class="date" transition:slide={{ duration: 500 }}>
                 {question.date_display}
               </p>
@@ -71,7 +71,7 @@ function check_valid(data: Array<any>): boolean
         </div>
 
         <div class="lower">
-          {#if check_valid(question.tags) && search.show.tags}
+          {#if check_valid(question.tags) && $search.show.tags}
             <span class="tags" transition:fade={{ duration: 250 }}>
               {#each question.tags as tag}
                 <Tag {tag} margin={"0.25em"} />
@@ -79,7 +79,7 @@ function check_valid(data: Array<any>): boolean
             </span>
           {/if}
 
-          {#if check_valid(question.methods) && search.show.methods}
+          {#if check_valid(question.methods) && $search.show.methods}
             <span class="tags" transition:fade={{ duration: 250 }}>
               {#each question.methods as method}
                 <Tag tag={method} kind="deut" margin={"0.25em"} />

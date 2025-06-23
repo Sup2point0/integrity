@@ -17,12 +17,12 @@ const questions = Site.get_questions_of_topic("cool-graphs");
 const tags = Site.questions["cool-graphs"].tags;
 const methods = Site.questions["cool-graphs"].methods;
 
-let filtered = $derived(search.filter_questions(questions));
+let filtered = $derived($search.filter_questions(questions));
 
 
 onMount(() => {
-  search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
-  search.methods = Object.fromEntries(methods.map(method => [method, false]));
+  $search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+  $search.methods = Object.fromEntries(methods.map(method => [method, false]));
 })
 
 </script>
@@ -46,7 +46,7 @@ onMount(() => {
 <div class="content {$userprefs["search-view"]}">
   {#each filtered as question (question.shard)}
     <QuestionCard {question}
-      desmos={search.show.question ? question.desmos : undefined}
+      desmos={$search.show.question ? question.desmos : undefined}
       style={$userprefs["search-view"] === "grid" ? "block" : "row"}
     />
   {/each}

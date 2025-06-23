@@ -19,12 +19,12 @@ const tags = Site.questions["integrals"].tags;
 const methods = Site.questions["integrals"].methods;
 
 let limit = $state(60);
-let filtered = $derived(search.filter_questions(questions).slice(0, limit));
+let filtered = $derived($search.filter_questions(questions).slice(0, limit));
 
 
 onMount(() => {
-  search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
-  search.methods = Object.fromEntries(methods.map(method => [method, false]));
+  $search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+  $search.methods = Object.fromEntries(methods.map(method => [method, false]));
 })
 
 </script>
@@ -46,7 +46,7 @@ onMount(() => {
 <div class="content {$userprefs["search-view"]}">
   {#each filtered as question (question.shard)}
     <QuestionCard {question}
-      latex={search.show.question ? question.question.content : undefined}
+      latex={$search.show.question ? question.question.content : undefined}
       style={$userprefs["search-view"] === "grid" ? "block" : "row"}
     />
   {/each}

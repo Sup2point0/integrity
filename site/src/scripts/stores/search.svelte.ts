@@ -1,9 +1,11 @@
 /**
- * Exposes the `search` object and associated `SearchData` class for storing search this. This does not persist between pages.
+ * Exposes the `search` object and associated `SearchPrefs` class for storing search preferences and filters.
  */
 
 import sample from "@stdlib/random-sample";
 import * as fuzz from "fuzzball";
+
+import { persisted, type Serializer } from "svelte-persisted-store";
 
 import { get } from "svelte/store";
 
@@ -15,7 +17,7 @@ interface States {
   [key: string]: boolean;
 }
 
-export class SearchData
+export class SearchPrefs
 {
   query: string = $state("");
 
@@ -51,6 +53,29 @@ export class SearchData
     star: true,
   });
   reverse: boolean = $state(false);
+
+
+  /** Expose attributes for syncing to localStorage. */
+  to_json(): object
+  {
+    return {
+      include: this.include,
+      exclude: this.exclude,
+      show: this.show,
+      buttons: this.buttons,
+    }
+  }
+
+  /** Load attributes from `localStorage` JSON. */
+  set_from_json(data: Partial<SearchPrefs>): SearchPrefs
+  {
+    this.include = data.include ?? this.include;
+    this.exclude = data.exclude ?? this.exclude;
+    this.show = data.show ?? this.show;
+    this.buttons = data.buttons ?? this.buttons;
+
+    return this;
+  }
 
 
   /** Reset all search options to their defaults. */
@@ -197,5 +222,22 @@ export class SearchData
   }
 }
 
+
+class SearchPrefsSerializer implements Serializer<SearchPrefs>
+{
+  parse(data: string): SearchPrefs
+  {
+    return new SearchPrefs().set_from_json(JSON.parse(data));
+  }
+
+  stringify(data: SearchPrefs): string
+  {
+    return JSON.stringify(data.to_json());
+  }
+}
+
 /** Search options for the current page. */
-export const search = new SearchData();
+export const search = persisted("integrity.search", new SearchPrefs(), {
+  serializer: new SearchPrefsSerializer(),
+  syncTabs: true,
+});

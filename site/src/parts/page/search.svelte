@@ -30,9 +30,9 @@ onMount(() => {
       tags_expanded = true;
       setTimeout(() => {
         for (let tag of search_tags) {
-          search.tags[tag] = true;
+          $search.tags[tag] = true;
         }
-        search.tags = search.tags;
+        // $search.tags = $search.tags;
       }, 0);
     }
     
@@ -41,9 +41,9 @@ onMount(() => {
       methods_expanded = true;
       setTimeout(() => {
         for (let method of search_methods) {
-          search.methods[method] = true;
+          $search.methods[method] = true;
         }
-        search.methods = search.methods;
+        // $search.methods = $search.methods;
       }, 0);
     }
   }
@@ -56,7 +56,7 @@ onMount(() => {
   <div class="search-bar">
     <input type="search"
       placeholder="search"
-      bind:value={search.query}
+      bind:value={$search.query}
     />
 
     <Clicky action={() => { open = !open; }}>
@@ -67,26 +67,26 @@ onMount(() => {
   </div>
 
   {#if open}
-    {@const unchecked_tag = Object.values(search.tags).some(tag => !tag)}
-    {@const unchecked_method = Object.values(search.methods).some(method => !method)}
-    {@const unchecked_include = Object.values(search.include).some(state => !state)}
-    {@const unchecked_exclude = Object.values(search.exclude).some(state => !state)}
-    {@const unchecked_show = Object.values(search.show).some(state => !state)}
-    {@const unchecked_buttons = Object.values(search.buttons).some(state => !state)}
+    {@const unchecked_tag = Object.values($search.tags).some(tag => !tag)}
+    {@const unchecked_method = Object.values($search.methods).some(method => !method)}
+    {@const unchecked_include = Object.values($search.include).some(state => !state)}
+    {@const unchecked_exclude = Object.values($search.exclude).some(state => !state)}
+    {@const unchecked_show = Object.values($search.show).some(state => !state)}
+    {@const unchecked_buttons = Object.values($search.buttons).some(state => !state)}
 
     <table class="search-filters"
       transition:fade={{ duration: 200 }}
     ><tbody>
-      {#if Object.keys(search.tags).length}
+      {#if Object.keys($search.tags).length}
         <tr>
           <th> Topics </th>
 
           <td class="flex" style:font-size="92%">
             {#if tags_expanded}
-              {#each Object.entries(search.tags) as [tag, state]}
+              {#each Object.entries($search.tags) as [tag, state]}
                 <Toggle text={tag.toUpperCase()}
                   value={state}
-                  toggle={() => { search.tags[tag] = !state; }}
+                  toggle={() => { $search.tags[tag] = !state; }}
                 />
               {/each}
             {/if}
@@ -100,8 +100,8 @@ onMount(() => {
             <Toggle text="ALL"
               value={!unchecked_tag}
               toggle={() => {
-                for (let tag in search.tags) {
-                  search.tags[tag] = unchecked_tag;
+                for (let tag in $search.tags) {
+                  $search.tags[tag] = unchecked_tag;
                 }
               }}
             />
@@ -109,16 +109,16 @@ onMount(() => {
         </tr>
       {/if}
       
-      {#if Object.keys(search.methods).length}
+      {#if Object.keys($search.methods).length}
         <tr>
           <th> Methods </th>
 
           <td class="flex" style:font-size="92%">
             {#if methods_expanded}
-              {#each Object.entries(search.methods) as [method, state]}
+              {#each Object.entries($search.methods) as [method, state]}
                 <Toggle text={method.toUpperCase()}
                   value={state}
-                  toggle={() => { search.methods[method] = !state; }}
+                  toggle={() => { $search.methods[method] = !state; }}
                 />
               {/each}
             {/if}
@@ -132,8 +132,8 @@ onMount(() => {
             <Toggle text="ALL"
               value={!unchecked_method}
               toggle={() => {
-                for (let method in search.methods) {
-                  search.methods[method] = unchecked_method;
+                for (let method in $search.methods) {
+                  $search.methods[method] = unchecked_method;
                 }
               }}
             />
@@ -145,13 +145,13 @@ onMount(() => {
         <th> Include Only </th>
 
         <td class="flex">
-          {#each Object.entries(search.include) as [prop, state]}
+          {#each Object.entries($search.include) as [prop, state]}
             <Toggle text={prop.toUpperCase()}
               value={state}
               toggle={() => {
-                search.include[prop] = !search.include[prop];
-                if (search.include[prop]) {
-                  search.exclude[prop] = false;
+                $search.include[prop] = !$search.include[prop];
+                if ($search.include[prop]) {
+                  $search.exclude[prop] = false;
                 }
               }}
             />
@@ -162,14 +162,14 @@ onMount(() => {
           <Toggle text="ALL"
             value={!unchecked_include}
             toggle={() => {
-              search.include = Object.fromEntries(
-                Object.entries(search.include).map(
+              $search.include = Object.fromEntries(
+                Object.entries($search.include).map(
                   ([prop, state]) => [prop, unchecked_include]
                 )
               );
               if (!unchecked_include) {
-                search.exclude = Object.fromEntries(
-                  Object.entries(search.exclude).map(
+                $search.exclude = Object.fromEntries(
+                  Object.entries($search.exclude).map(
                     ([prop, state]) => [prop, false]
                   )
                 );
@@ -183,13 +183,13 @@ onMount(() => {
         <th> Exclude </th>
 
         <td class="flex">
-          {#each Object.entries(search.exclude) as [prop, state]}
+          {#each Object.entries($search.exclude) as [prop, state]}
             <Toggle text={prop.toUpperCase()}
               value={state}
               toggle={() => {
-                search.exclude[prop] = !search.exclude[prop];
-                if (search.exclude[prop]) {
-                  search.include[prop] = false;
+                $search.exclude[prop] = !$search.exclude[prop];
+                if ($search.exclude[prop]) {
+                  $search.include[prop] = false;
                 }
               }}
             />
@@ -200,14 +200,14 @@ onMount(() => {
           <Toggle text="ALL"
             value={!unchecked_exclude}
             toggle={() => {
-              search.exclude = Object.fromEntries(
-                Object.entries(search.include).map(
+              $search.exclude = Object.fromEntries(
+                Object.entries($search.include).map(
                   ([prop, state]) => [prop, unchecked_exclude]
                 )
               );
               if (!unchecked_exclude) {
-                search.include = Object.fromEntries(
-                  Object.entries(search.include).map(
+                $search.include = Object.fromEntries(
+                  Object.entries($search.include).map(
                     ([prop, state]) => [prop, false]
                   )
                 );
@@ -222,10 +222,10 @@ onMount(() => {
           <th> Show </th>
 
           <td class="flex">
-            {#each Object.entries(search.show) as [prop, state]}
+            {#each Object.entries($search.show) as [prop, state]}
               <Toggle text={prop.toUpperCase()}
                 value={state}
-                toggle={() => { search.show[prop] = !search.show[prop]; }}
+                toggle={() => { $search.show[prop] = !$search.show[prop]; }}
               />
             {/each}
           </td>
@@ -234,8 +234,8 @@ onMount(() => {
             <Toggle text="ALL"
               value={!unchecked_show}
               toggle={() => {
-                search.show = Object.fromEntries(
-                  Object.entries(search.show).map(
+                $search.show = Object.fromEntries(
+                  Object.entries($search.show).map(
                     ([prop, state]) => [prop, unchecked_show]
                   )
                 );
@@ -248,10 +248,10 @@ onMount(() => {
           <th> Buttons </th>
 
           <td class="flex">
-            {#each Object.entries(search.buttons) as [prop, state]}
+            {#each Object.entries($search.buttons) as [prop, state]}
               <Toggle text={prop.toUpperCase()}
                 value={state}
-                toggle={() => { search.buttons[prop] = !search.buttons[prop]; }}
+                toggle={() => { $search.buttons[prop] = !$search.buttons[prop]; }}
               />
             {/each}
           </td>
@@ -260,8 +260,8 @@ onMount(() => {
             <Toggle text="ALL"
               value={!unchecked_buttons}
               toggle={() => {
-                search.buttons = Object.fromEntries(
-                  Object.entries(search.buttons).map(
+                $search.buttons = Object.fromEntries(
+                  Object.entries($search.buttons).map(
                     ([prop, state]) => [prop, unchecked_buttons]
                   )
                 );
@@ -299,8 +299,8 @@ onMount(() => {
           </td>
           <td>
             <Toggle text="REVERSE"
-              value={search.reverse}
-              toggle={() => { search.reverse = !search.reverse; }}
+              value={$search.reverse}
+              toggle={() => { $search.reverse = !$search.reverse; }}
             />
           </td>
         </tr>
@@ -313,7 +313,7 @@ onMount(() => {
       />
 
       <!-- <Clicky text="Reset to Defaults"
-        action={() => { window.confirm("Clear search filters?") && search.reset_defaults(); }}
+        action={() => { window.confirm("Clear search filters?") && $search.reset_defaults(); }}
       /> -->
     </div>
   {/if}
