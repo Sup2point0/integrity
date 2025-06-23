@@ -51,6 +51,7 @@ export class Question
   constructor(data: any)
   {
     Object.assign(this, data);
+
     this.question = data.question && data.question[0];
     this.date_display = data.date;
     try {
@@ -60,7 +61,9 @@ export class Question
     }
     this.answer = Array.isArray(data.answer) ? data.answer[0] : data.answer;
 
+    // @ts-ignore
     this._match = [
+      // @ts-ignore
       this.shard.toLowerCase(),
       this.title?.toLowerCase(),
       ...(this.tags ?? []),
