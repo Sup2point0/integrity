@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import Site from "#scripts/site";
-import { search, userprefs } from "#scripts/stores";
+import { search } from "#scripts/stores";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
@@ -41,11 +41,11 @@ onMount(() => {
 <Header title="Completing the Square" />
 <Search />
 
-<div class="content {$userprefs["search-view"]}">
+<div class="content {$search.view}">
   {#each filtered as question}
     <QuestionCard {question}
       latex={question.question.content}
-      style={$userprefs["search-view"] === "grid" ? "block" : "row"}
+      style={$search.view === "grid" ? "block" : "row"}
     />
   {/each}
 </div>

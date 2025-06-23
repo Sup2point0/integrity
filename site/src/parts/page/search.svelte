@@ -5,7 +5,7 @@ A search bar which expands to show filters.
 
 <script lang="ts">
 
-import { search, userprefs } from "#scripts/stores";
+import { search } from "#scripts/stores";
 
 import Clicky from "#parts/ui/clicky.svelte";
 import Toggle from "#parts/ui/toggle.svelte";
@@ -217,7 +217,7 @@ onMount(() => {
         </td>
       </tr>
       
-      {#if $userprefs["search-exp"]}
+      {#if $search.expanded}
         <tr transition:fade={{ duration: 200 }}>
           <th> Show </th>
 
@@ -273,8 +273,12 @@ onMount(() => {
         <tr>
           <th> View </th>
           <td>
-            <Select bind:value={$userprefs["search-view"]}
-              options={{"GRID": "grid", "LIST": "list"}}
+            <Select bind:value={$search.view}
+              options={{
+                "GRID": "grid",
+                "LIST": "list",
+                "WIDE GRID": "grid-wide",
+              }}
             />
           </td>
         </tr>
@@ -282,7 +286,7 @@ onMount(() => {
         <tr>
           <th> Sort </th>
           <td class="flex">
-            <Select bind:value={$userprefs["search-sort"]}
+            <Select bind:value={$search.sort}
               options={{
                 "RELEVANCE": null,
                 "DATE": "date",
@@ -290,10 +294,10 @@ onMount(() => {
                 "RANDOM": "rand",
               }}
             />
-            {#if $userprefs["search-sort"] === "rand"}
+            {#if $search.sort === "rand"}
               <Clicky text="SHUFFLE" action={() => {
-                $userprefs["search-sort"] = null;
-                $userprefs["search-sort"] = "rand";
+                $search.sort = null;
+                $search.sort = "rand";
               }} />
             {/if}
           </td>
@@ -308,8 +312,8 @@ onMount(() => {
     </tbody></table>
 
     <div class="buttons">      
-      <Clicky text={$userprefs["search-exp"] ? "Show Less" : "Show More"}
-        action={() => { $userprefs["search-exp"] = !$userprefs["search-exp"]; }}
+      <Clicky text={$search.expanded ? "Show Less" : "Show More"}
+        action={() => { $search.expanded = !$search.expanded; }}
       />
 
       <!-- <Clicky text="Reset to Defaults"

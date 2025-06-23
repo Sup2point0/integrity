@@ -52,7 +52,13 @@ export class SearchPrefs
     flag: true,
     star: true,
   });
+
+  view: "grid" | "list" | "grid-wide" = $state("grid");
+  sort: "date" | "name" | "rel" | "rand" | null = $state(null);
   reverse: boolean = $state(false);
+
+  /** Whether search filters should be expanded. */
+  expanded = $state(true);
 
 
   /** Expose attributes for syncing to localStorage. */

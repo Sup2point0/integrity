@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import Site from "#scripts/site";
-import { search, userprefs } from "#scripts/stores";
+import { search } from "#scripts/stores";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
@@ -43,11 +43,11 @@ onMount(() => {
 <Header title="Integrals" />
 <Search />
 
-<div class="content {$userprefs["search-view"]}">
+<div class="content {$search.view}">
   {#each filtered as question (question.shard)}
     <QuestionCard {question}
       latex={$search.show.question ? question.question.content : undefined}
-      style={$userprefs["search-view"] === "grid" ? "block" : "row"}
+      style={$search.view === "grid" ? "block" : "row"}
     />
   {/each}
 </div>
