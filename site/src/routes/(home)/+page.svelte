@@ -4,14 +4,15 @@ import sample from "@stdlib/random-sample";
 
 import Site from "#scripts/site";
 
+import Changes from "./changes.svx";
+
+import Header from "#parts/core/header.svelte";
+import Line from "#parts/page/line.svelte";
 import Link from "#parts/ui/link.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
-import Line from "#parts/page/line.svelte";
 import Card from "#parts/ui/card.svelte";
 import QuestionArray from "#parts/page/question-array.svelte";
 import ArticleArray from "#src/parts/page/article-array.svelte";
-
-import Header from "#parts/core/header.svelte";
 
 import { onMount } from "svelte";
 
@@ -67,6 +68,14 @@ onMount(() => {
   <div class="centre">
     <Clicky text="View More" intern="questions" />
   </div>
+</section>
+
+<section class="whats-new">
+  <Header title="What’s New" />
+
+  <article style:text-align="left">
+    <Changes />
+  </article>
 </section>
 
 <section class="featured">
@@ -132,6 +141,12 @@ section {
 .centre {
   width: max-content;
   margin: 2rem auto 0;
+}
+
+:global(article strong em) {
+  display: block;
+  color: $col-deut;
+  font-style: normal;
 }
 
 </style>
