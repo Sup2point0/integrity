@@ -39,9 +39,9 @@ Use the fact that $\displaystyle \log_b(x) = \frac{\log{x}}{\log{b}}$.
 
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\frac{1}{\log_{x}\left(2\right)}\ dx
-  \\ =&\ \int_{\ }^{\ }\left(\frac{\ln2}{\ln x}\right)^{-1}\ dx
-  \\ =&\ \frac{1}{\ln2}\int_{\ }^{\ }\ln x\ dx
+  &\ \int \frac{1}{\log_{x}\left(2\right)}\ dx
+  \\ =&\ \int \left(\frac{\ln2}{\ln x}\right)^{-1}\ dx
+  \\ =&\ \frac{1}{\ln2}\int \ln x\ dx
   \\ =&\ \frac{1}{\ln2}\left(x\ln x-x\right)-c
 \end{align*}
 ```
