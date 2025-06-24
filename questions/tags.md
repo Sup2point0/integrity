@@ -19,5 +19,5 @@ These do not display by default, but can be searched.
 
 |             | general | integrals |
 | :---------- | :------ | :-------- |
-| descriptors | `free`<br>`fun`<br>`long`<br>`tough`<br>`acc`<br>`troll` |
+| descriptors | `free`<br>`fun`<br>`long`<br>`tough`<br>`acc`<br>`trap`<br>`troll` |
 | topics      | `speed`<br>`work`<br>`spot`<br>`draw` | `sub`<br>`parts`<br>`partials`<br>`xx` (integral of $x^x$) |
