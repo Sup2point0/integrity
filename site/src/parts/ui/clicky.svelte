@@ -11,10 +11,11 @@ interface Props {
   link?: string;
   intern?: string;
   action?: () => void;
+  disabled?: boolean;
   children?: any;
 }
 
-let { text, pict, link, intern, action, children }: Props = $props();
+let { text, pict, link, intern, action, disabled, children }: Props = $props();
 
 </script>
 
@@ -32,6 +33,7 @@ let { text, pict, link, intern, action, children }: Props = $props();
 
 {#if action}
   <button class="clicky"
+    disabled={disabled || undefined}
     onclick={action}
   >
     {@render content()}
@@ -65,6 +67,11 @@ let { text, pict, link, intern, action, children }: Props = $props();
     $t: 0.12,
   );
   @include focus-outline;
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 20%;
+  }
 }
 
 img {
