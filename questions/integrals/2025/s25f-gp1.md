@@ -84,6 +84,7 @@ Either order works.
 
 ## Alternates
 
+### _
 You can also substitute first!
 
 ```math
