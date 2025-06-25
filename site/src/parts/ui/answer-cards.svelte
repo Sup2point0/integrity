@@ -7,6 +7,8 @@ Cards for selecting the answer to a multiple-choice question.
 
 import sample from "@stdlib/random-sample";
 
+import { speedrun } from "#src/scripts/stores";
+
 import type { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
@@ -14,27 +16,31 @@ import Katex from "#parts/katex.svelte";
 
 interface Props {
   question: Question | Partial<Question>;
-  submit: (idx: number) => void;
 }
 
-let { question, submit }: Props = $props();
+let { question }: Props = $props();
 
 
 let options = $derived(
   question.options
-    ? sample(question.options, { size: question.options.length, replace: false })
+    ? sample(question.options, { size: Object.keys(question.options).length, replace: false })
     : []
 );
-
-$inspect(options);
 
 </script>
 
 
 <div class="answer-cards">
   {#each options as option}
-    <button class="answer-card"
-      onclick={() => submit(option.index)}
+    <button
+      class={{
+        correct: ($speedrun.run.state === "correct" && option.index === 0),
+        incorrect: ($speedrun.run.state !== "correct" && $speedrun.run.answers.has(option.index))
+      }}
+      onclick={() => $speedrun.submit_answer(option.index)}
+      disabled={
+        ($speedrun.run.state === "correct" && option.index !== 0) || undefined
+      }
     >
       <Katex text={option.latex} inline={false} />
     </button>
@@ -50,9 +56,9 @@ $inspect(options);
   gap: 1rem;
 }
 
-button.answer-card {
+button {
   min-width: 16em;
-  min-height: 8em;
+  min-height: 6em;
   padding: 0.75em;
   display: flex;
   justify-content: center;
@@ -74,6 +80,20 @@ button.answer-card {
     $t: 0.16,
   );
   @include focus-outline;
+
+  &.incorrect, &.correct {
+    pointer-events: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  &.incorrect { background: color-mix(in oklch, $col-no, transparent 80%); }
+  &.correct { background: color-mix(in oklch, $col-yes, transparent 75%); }
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 20%;
+  }
 }
 
 </style>

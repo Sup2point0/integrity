@@ -2,7 +2,7 @@
 
 
 @mixin interact($hover: $col-hover, $click: $col-click, $t: 0.1) {
-  transition: background #{$t}s ease-out;
+  transition: background #{$t}s ease-out, opacity #{$t}s ease-out;
   
   &:hover {
     cursor: pointer;

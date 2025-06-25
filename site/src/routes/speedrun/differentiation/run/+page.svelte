@@ -2,111 +2,143 @@
 
 import sample from "@stdlib/random-sample";
 
+import Site from "#scripts/site";
 import { speedrun } from "#scripts/stores";
-import { derivatives } from "#src/data/speedrun-questions";
 
-import type { Question } from "#scripts/types";
+import { display_time } from "#scripts/utils";
 
-import Clicky from "#parts/ui/clicky.svelte";
+import Meta from "#parts/page/meta.svelte";
 import Line from "#parts/page/line.svelte";
 import Katex from "#parts/katex.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
 import AnswerCards from "#parts/ui/answer-cards.svelte";
+
+import { fade } from "svelte/transition";
+import { onMount } from "svelte";
 
 
 /* pause by default for if the user reloads or reopens the tab */
 $speedrun.run.running = false;
 
-// TODO filter
-const questions = (
-  sample(derivatives.based, { size: derivatives.based.length, replace: false})
-);
 
-let question: Partial<Question> | null = $state(null);
+onMount(() => {
+  console.log("speedrun =", $state.snapshot($speedrun));
+  console.log("run =", $state.snapshot($speedrun.run));
+  
+  if ($speedrun.run.question_pool?.length) return;
 
+  let questions = Object.keys(Site.questions.derivatives.questions);
 
-function start_speedrun()
-{
-  next_question();
-  $speedrun.run.started = true;
-  $speedrun.run.running = true;
-}
-
-function next_question()
-{
-  question = questions.splice(0, 1)[0];
-  // @ts-ignore
-  question.options = question.options?.map((latex, index) => ({ index, latex }));
-}
-
-function check_answer(idx: number)
-{
-  $speedrun.run.state = "check";
-}
-
-function pause_speedrun()
-{}
-
-function unpause_speedrun()
-{
-  if (question === null) {
-    // question = $speedrun.run.questions_hist.at(-1);
-    next_question();  // TEMP
-  }
-}
-
-function quit_speedrun()
-{}
+  $speedrun.run.question_pool = sample(
+    questions,
+    { size: questions.length, replace: false}
+  );
+  // TODO filter
+});
 
 </script>
 
 
-<nav class:live={$speedrun.run.started}>
+<Meta title="{display_time($speedrun.run.elapsed)} · Speedrun" />
+
+<svelte:window onblur={() => $speedrun.prefs.pause_onblur && $speedrun.pause()} />
+
+
+<nav>
   <section class="left">
-    <Clicky text="End" action={quit_speedrun} />
+    <Clicky text="Finish"
+      action={() => $speedrun.finish()}
+      disabled={!$speedrun.run.started}
+    />
   </section>
 
   <section class="centre">
-    <Clicky text="Pause" action={pause_speedrun} />
+    <Clicky text="Pause"
+      action={() => $speedrun.pause()}
+      disabled={!$speedrun.run.started || !$speedrun.run.running}
+    />
   </section>
 
   <section class="right">
-    <Clicky text="Next" action={next_question} />
+    <Clicky text={$speedrun.run.state === "correct" ? "Next" : "Skip"}
+      action={() => $speedrun.next_question()}
+      disabled={!$speedrun.run.started}
+    />
   </section>
 </nav>
 
-{#if $speedrun.run.started}
-  {#if $speedrun.run.running}
-    <div class="question">
-      <Katex text={question.question} />
-
-      <Line />
+<div class="container">
+  {#if !$speedrun.run.started}
+    <div class="cover"
+      style:height="90vh"
+      transition:fade={{ duration: 250 }}
+    >
+      <Clicky text="Start" action={() => $speedrun.start()} />
     </div>
 
-    <AnswerCards {question} submit={check_answer} />
-  
   {:else}
-    <div style="
-      height: 90vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    ">
-      <Clicky text="Resume" action={unpause_speedrun} />
-    </div>
+    {#if $speedrun.run.running}
+      <div in:fade={{ duration: 250, delay: 250 }}>
+        {#if $speedrun.run.question}
+          {@const question = $speedrun.run.question}
+          
+          <div class="question">
+            <Katex text="{
+              String.raw`\frac{d}{dx} \ `}{
+              question.question as string
+            }" />
+
+            <Line />
+          </div>
+
+          <AnswerCards {question} />
+        
+        {:else}
+          <p> Um, we seem to be out of questions? </p>
+        
+        {/if}
+      </div>
+    
+    {:else}
+      <div class="cover"
+        style:height="75vh"
+        transition:fade={{ duration: 250 }}
+      >
+        <Clicky text="Resume" action={() => $speedrun.unpause()} />
+      </div>
+
+    {/if}
 
   {/if}
+</div>
 
-{:else}
-  <div style="
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  ">
-    <Clicky text="Start" action={start_speedrun} />
+{#if $speedrun.run.started}
+  <div class="info">
+    <section class="left">
+      <p class="question-number">
+        Question {$speedrun.run.question_hist.length}
+      </p>
+    </section>
+
+    <section class="centre">
+      <p class="timer"
+        class:paused={!$speedrun.run.running}
+      >
+        {display_time($speedrun.run.elapsed)}
+      </p>
+    </section>
+
+    <section class="right">
+      <p class="score">
+        <span>{$speedrun.run.question_hist.filter(q => q.correct).length}</span>
+        /
+        {$speedrun.run.question_hist.length}
+      </p>
+    </section>
   </div>
-
 {/if}
+
+<div style:height="4rem"></div>
 
 
 <style lang="scss">
@@ -117,9 +149,10 @@ nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: stretch;
+  font-size: 125%;
 
   section {
-    flex-grow: 1;
+    flex: 1 1 0;
     display: flex;
     flex-flow: row wrap;
 
@@ -127,16 +160,65 @@ nav {
     &.right { justify-content: end; }
     &.centre { justify-content: center; }
   }
+}
 
-  &:not(.live) {
-    pointer-events: none;
-    opacity: 20%;
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 125%;
+}
+
+.container {
+  display: grid;
+
+  > div {
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
 }
 
 .question {
   padding: 2rem 0 0;
-  font-size: 400%;
+  font-size: 300%;
+}
+
+.info {
+  width: 100%;
+  padding-top: 4rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: stretch;
+  align-items: center;
+
+  section {
+    flex: 1 1 0;
+  }
+
+  .question-number {
+    color: $col-text-deut;
+    font-size: 150%;
+  }
+
+  .timer {
+    font-size: 300%;
+    text-align: center;
+    transition: color 0.12s ease-out;
+
+    &.paused {
+      color: $col-deut;
+    }
+  }
+
+  .score {
+    color: $col-text-deut;
+    font-size: 150%;
+    text-align: right;
+
+    span {
+      color: $col-prot;
+    }
+  }
 }
 
 </style>

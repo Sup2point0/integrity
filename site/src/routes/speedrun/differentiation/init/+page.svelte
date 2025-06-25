@@ -18,7 +18,7 @@ onMount(() => {
 </script>
 
 
-<Meta title="Differentiation · Speedrun"
+<Meta title="Create · Speedrun"
   desc="Create a differentiation speedrun session."
 />
 
@@ -35,4 +35,4 @@ onMount(() => {
 />
 
 
-<Clicky text="Create" intern="speedrun/differentiation/run" />
+<Clicky text="Create Speedrun" intern="speedrun/differentiation/run" />
