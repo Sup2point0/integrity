@@ -5,13 +5,13 @@ export interface Page
 
   flags?: string[];
 
-  title?: string;
-  desc?: string;
+  title?: string | null;
+  desc?: string | null;
 
-  head?: string;
-  capt?: string;
+  head?: string | null;
+  capt?: string | null;
 
   index?: string[];
   
-  date_display?: string;
+  date_display?: string | null;
 }

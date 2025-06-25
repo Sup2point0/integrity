@@ -9851,10 +9851,30 @@
           "content": "\\int  x \\arcsin \\left(    x^{2/3}  \\right)\\ dx"
         }
       ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You’ll defo need parts at some point."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You’ll also defo need a substitution at some point."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Either order works."
+          }
+        ]
+      },
       "answer": [
         {
           "kind": "latex",
-          "content": ""
+          "content": "\\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{1-x^{4/3}}-\\frac{1}{6}\\left(1-x^{4/3}\\right)^{3/2}-c"
         }
       ],
       "solution": {
@@ -9864,16 +9884,52 @@
             "content": "\\begin{align*}      f &= \\arcsin\\left(x^{2/3}\\right) \\quad&\\quad g' &= x  \\\\ f' &= \\frac{1}{\\sqrt{1-\\left(x^{2/3}\\right)^{2}}}\\cdot\\frac{2}{3}x^{-1/3} \\quad&\\quad g &= \\frac{1}{2}x^{2}  \\\\ &= \\frac{2}{3x^{1/3}\\sqrt{1-x^{4/3}}}\\end{align*}"
           }
         ],
-        "reshape": [
+        "simplify": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\   \\\\ =&\\ \\end{align*}"
+            "content": "\\begin{align*}  &\\ fg-\\int_{\\ }^{\\ }f'g\\ dx  \\\\ =&\\ \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\int_{\\ }^{\\ }\\frac{1}{2}x^{2}\\cdot\\frac{2}{3x^{1/3}\\sqrt{1-x^{4/3}}}\\ dx  \\\\ =&\\ \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\frac{1}{3}\\int_{\\ }^{\\ }\\frac{x^{5/3}}{\\sqrt{1-x^{4/3}}}\\ dx  \\\\ =&\\ \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\frac{1}{3}\\int_{\\ }^{\\ }\\frac{x^{4/3}\\cdot x^{1/3}}{\\sqrt{1-x^{4/3}}}\\ dx\\end{align*}"
           }
         ],
         "substitute": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+            "content": "\\begin{align*}  1-x^{4/3} &= t  \\\\ x^{4/3} &= 1-t  \\\\ \\frac{4}{3}x^{1/3}\\ dx &= -dt  \\\\ x^{1/3}\\ dx &= -\\frac{3}{4}\\ dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\frac{1}{3}\\int_{\\ }^{\\ }\\frac{1-t}{\\sqrt{t}}\\cdot-\\frac{3}{4}\\ dx  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{1-t}{\\sqrt{t}}\\ dx  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{1}{\\sqrt{t}}-\\sqrt{t}\\ dx  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{t}-\\frac{1}{4}\\cdot\\frac{2}{3}t^{3/2}  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{1-x^{4/3}}-\\frac{1}{6}\\left(1-x^{4/3}\\right)^{3/2}-c\\end{align*}"
+          }
+        ]
+      },
+      "alternates": {
+        "_": [
+          {
+            "kind": "text",
+            "content": "You can also substitute first!"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  x^{2/3} &= t  \\\\ x &= t^{3/2}  \\\\ dx &= \\frac{3}{2}t^{1/2}\\ dt\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }x\\arcsin\\left(x^{2/3}\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }t^{3/2}\\arcsin\\left(t\\right)\\cdot\\frac{3}{2}t^{1/2}\\ dt  \\\\ =&\\ \\frac{3}{2}\\int_{\\ }^{\\ }t^{2}\\arcsin t\\ dt  \\\\ =&\\ \\frac{3}{2}\\left[\\frac{1}{3}t^{3}\\arcsin t-\\int_{\\ }^{\\ }\\frac{1}{3}t^{3}\\cdot\\frac{1}{\\sqrt{1-t^{2}}}\\ dt\\right]  \\\\ =&\\ \\frac{1}{2}t^{3}\\arcsin t-\\frac{1}{2}\\int_{\\ }^{\\ }\\frac{t^{3}}{\\sqrt{1-t^{2}}}\\ dt  \\\\ =&\\ \\frac{1}{2}t^{3}\\arcsin t-\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{t^{2}\\cdot2t}{\\sqrt{1-t^{2}}}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1-t^{2} &= v  \\\\ t^{2} &= 1-v  \\\\ 2t\\ dt &= -dv\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{2}t^{3}\\arcsin t-\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{1-v}{\\sqrt{v}}\\cdot-dv  \\\\ &= \\frac{1}{2}t^{3}\\arcsin t+\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{1}{\\sqrt{v}}-\\sqrt{v}\\ dv  \\\\ &= \\frac{1}{2}t^{3}\\arcsin t+\\frac{1}{2}\\sqrt{v}-\\frac{1}{4}\\cdot\\frac{2}{3}v^{3/2}  \\\\ &= \\frac{1}{2}t^{3}\\arcsin t+\\frac{1}{2}\\sqrt{1-t^{2}}-\\frac{1}{6}\\left(1-t^{2}\\right)^{3/2}  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{1-x^{4/3}}-\\frac{1}{6}\\left(1-x^{4/3}\\right)^{3/2}-c\\end{align*}"
           }
         ]
       }
@@ -12454,6 +12510,94 @@
           "content": "\\begin{align*}  &\\ \\int \\frac{1}{\\log_{x}\\left(2\\right)}\\ dx  \\\\ =&\\ \\int \\left(\\frac{\\ln2}{\\ln x}\\right)^{-1}\\ dx  \\\\ =&\\ \\frac{1}{\\ln2}\\int \\ln x\\ dx  \\\\ =&\\ \\frac{1}{\\ln2}\\left(x\\ln x-x\\right)-c\\end{align*}"
         }
       ]
+    },
+    "s25f-li1": {
+      "topic": "integrals",
+      "title": "fire in the wire",
+      "desc": null,
+      "date": "2025 April 20",
+      "tags": [
+        "definite",
+        "improper",
+        "sqrt",
+        "ln"
+      ],
+      "methods": [
+        "fun"
+      ],
+      "shard": "s25f-li1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{0}^{\\infty}\\frac{\\ln x}{\\sqrt{x}\\left(1+x\\right)}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Start by substituting $\\sqrt{x} = t$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "What do you suspect the integral might be equal to?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How would you prove this?"
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "What’s the solution to $x = -x$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$0$"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\sqrt{x} &= t  \\\\ x &= t^{2}  \\\\ dx &= 2t\\ dt\\end{align*}"
+          }
+        ],
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{0}^{\\infty}\\frac{\\ln x}{\\sqrt{x}\\left(1+x\\right)}\\ dx  \\\\ =&\\ \\int_{\\sqrt{0}}^{\\sqrt{\\infty}}\\frac{\\ln\\left(t^{2}\\right)}{t\\left(1+t^{2}\\right)}\\cdot2t\\ dt  \\\\ =&\\ 4\\int_{0}^{\\infty}\\frac{\\ln t}{1+t^{2}}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  t &= \\frac{1}{v}  \\\\ dt &= -\\frac{1}{v^{2}}\\ dv\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 4\\int_{1/0}^{1/\\infty}\\frac{\\ln\\left(1/v\\right)}{1+1/v^{2}}\\cdot-\\frac{1}{v^{2}}\\ dv  \\\\ &= -4\\int_{\\infty}^{0}\\frac{-\\ln v}{v^{2}+1}\\ dv  \\\\ &= -4\\int_{0}^{\\infty}\\frac{\\ln v}{v^{2}+1}\\ dv\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Hence"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  4\\int_{0}^{\\infty}\\frac{\\ln t}{1+t^{2}}\\ dt    &= -4\\int_{0}^{\\infty}\\frac{\\ln v}{v^{2}+1}\\ dv  \\\\ 4\\int_{0}^{\\infty}\\frac{\\ln t}{1+t^{2}}\\ dt &= 0  \\\\ \\int_{0}^{\\infty}\\frac{\\ln x}{\\sqrt{x}\\left(1+x\\right)}\\ dx &= 0\\end{align*}"
+          }
+        ]
+      }
     },
     "s25f-lk1": {
       "topic": "integrals",

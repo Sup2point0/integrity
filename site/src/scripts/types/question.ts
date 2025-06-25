@@ -8,6 +8,7 @@ export class Question
 
   shard: Shard;
   topic: string;
+  difficulty?: "based" | "incline" | "manifold" | "chaos";
 
   title?: string;
   desc?: string;
@@ -25,7 +26,10 @@ export class Question
   notes?: Block;
 
   /** Answers to choose from for multiple-choice questions. */
-  options?: Block[] | string[];
+  options?: {
+    index: number,
+    latex: Block[] | string[],
+  };
 
   /** A hint. */
   hints?: {
@@ -48,9 +52,11 @@ export class Question
   "graph-bounds"?: number;
 
 
-  constructor(data: any)
+  constructor(data: any, process = true)
   {
     Object.assign(this, data);
+
+    if (!process) return;
 
     this.question = data.question && data.question[0];
     this.date_display = data.date;
@@ -122,13 +128,13 @@ export interface QuestionDictionary
 /** A collection of questions from a single topic, along with their tags and methods. */
 export interface QuestionCollection
 {
-  tags: string[];
-  methods: string[];
   questions: QuestionDictionary;
+  tags?: string[];
+  methods?: string[];
 }
 
 /** The entire collection of question in Integrity. */
 export interface QuestionsData
 {
-  [shard: Shard]: QuestionCollection;
+  [topic: string]: QuestionCollection;
 }

@@ -2,14 +2,16 @@
  * Handles loading question data.
  */
 
+import { derivatives } from "#src/data/speedrun-questions";
+
 import { Question } from "#scripts/types";
-import type { QuestionsData, QuestionCollection } from "#scripts/types";
+import type { QuestionsData, QuestionCollection, Page } from "#scripts/types";
 
 
-import questions_data from "../data/questions.json" assert { type: "json" };
+import questions_data from "../data/questions.json";
 export const questions = process_questions(questions_data);
 
-import pages_data from "../data/site.json" assert { type: "json" };
+import pages_data from "../data/site.json";
 export const pages = pages_data.pages;
 export const index = pages_data.index;
 export const guides = find_guides(pages);
@@ -20,9 +22,15 @@ function process_questions(raw: any)
   let out: QuestionsData = {};
   let collection: QuestionCollection;
 
-  for (let [kind, questions] of Object.entries(raw)) {
+  for (let [topic, questions] of Object.entries(raw)) {
     collection = construct_collection(questions)
-    out[kind] = collection;
+    out[topic] = collection;
+  }
+
+  out["derivatives"] = {
+    questions: Object.fromEntries(
+      derivatives.map(q => [q.shard, new Question(q, false)])
+    )
   }
 
   return out;
@@ -62,11 +70,15 @@ function construct_collection(raw: any): QuestionCollection
 
 function find_guides(raw: any)
 {
-  let out = {};
+  let out: {
+    [topic: string]: Page[]
+  } = {};
 
-  for (let page of Object.values(raw)) {
-    if (page.index.includes("guides")) {
-      let topic = page.index[1];
+  for (let p of Object.values(raw)) {
+    let page = p as Page;
+
+    if (page.index?.includes("guides")) {
+      let topic: string = page.index[1];
 
       if (out[topic] == null) {
         out[topic] = [];
