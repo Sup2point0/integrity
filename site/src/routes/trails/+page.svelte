@@ -36,17 +36,21 @@ let history = $derived(Object.entries(data.history[year] || {}));
 let integrals: {
   title_words: Record<number, number>,
   title_chars: Record<number | string, number>,
+  title_letters: Record<string, number>,
   question_chars: Record<number | string, number>,
   tags_counts: Record<number, number>,
   hints_counts: Record<number, number>,
   parts_counts: Record<number, number>,
+  days: Record<string, number>,
 } = {
   title_words: {},
   title_chars: {},
+  title_letters: {},
   question_chars: {},
   tags_counts: {},
   hints_counts: {},
   parts_counts: {},
+  days: {},
 };
 
 for (let q of Site.get_questions_of_topic("integrals")) {
@@ -65,6 +69,14 @@ for (let q of Site.get_questions_of_topic("integrals")) {
       integrals.title_chars[count]++;
     } else {
       integrals.title_chars[count] = 1;
+    }
+
+    for (let letter of q.title) {
+      if (integrals.title_letters[letter]) {
+        integrals.title_letters[letter]++;
+      } else {
+        integrals.title_letters[letter] = 1;
+      }
     }
   }
 
@@ -112,6 +124,21 @@ for (let q of Site.get_questions_of_topic("integrals")) {
       integrals.parts_counts[count]++;
     } else {
       integrals.parts_counts[count] = 1;
+    }
+  }
+
+  /* Ignoring integrals dated only to a month without a specific day */
+  if (q.date && q.date_display && q.date_display.split(" ").length > 2) {
+    let d = new Intl.DateTimeFormat("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "2-digit"
+    }).format(q.date);
+
+    if (integrals.days[d]) {
+      integrals.days[d]++;
+    } else {
+      integrals.days[d] = 1;
     }
   }
 }
@@ -236,6 +263,29 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     </div>
   {/if}
 
+  <h2> Unique Characters in Name </h2>
+
+  {#if integrals.title_letters}
+    {@const letters = (
+      Object.entries(integrals.title_letters)
+        .sort((prot, deut) => deut[1] - prot[1])
+        .slice(0, 16)
+    )}
+    {@const highest = Math.max(...letters.map(each => each[1]))}
+
+    <div class="chart">
+      {#each letters as [letter, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label" style:font-size="75%">
+            {letter}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
   <h2> Characters in Question LaTeX </h2>
 
   {#if integrals.question_chars}
@@ -306,6 +356,33 @@ for (let q of Site.get_questions_of_topic("integrals")) {
 
           <div class="class-label">
             {count}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  <h2> Integrals Written in a Day </h2>
+
+  {#if integrals.days}
+    {@const days = (
+      Object.entries(integrals.days)
+        .sort((prot, deut) => deut[1] - prot[1])
+        .slice(0, 10)
+    )}
+    {@const highest = Math.max(...days.map(each => each[1]))}
+
+    <div class="chart">
+      {#each days as [day, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label" style="
+            width: max-content;
+            font-size: 100%;
+            transform: rotate(-30deg) translateX(-6em) translateY(2em);
+          ">
+            {day}
           </div>
         </div>
       {/each}
