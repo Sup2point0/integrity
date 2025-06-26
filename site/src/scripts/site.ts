@@ -7,7 +7,9 @@ interface SiteData {
   root: string;
 
   pages: Record<string, Page>;
-  index: Record<string, object>;
+  index: Record<string, {
+    [key: string]: string[];
+  }>;
   questions: QuestionsData;
 
   get_questions_of_topic: (topic: string) => Question[];

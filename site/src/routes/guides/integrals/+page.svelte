@@ -32,6 +32,16 @@ import Line from "#parts/page/line.svelte";
 <Line />
 
 <section>
+  <ArticleArray paths={Site.index.integrals.pages.filter(path => !(
+       Site.index.antiderivatives.pages.includes(path)
+    || Site.index.methods.pages.includes(path)
+    // || Site.index.strategies.pages.includes(path)
+    || Site.index.collections.pages.includes(path)
+    || Site.index.adventures.pages.includes(path)
+  ))} />
+</section>
+
+<section>
   <h2> Antiderivatives </h2>
   <ArticleArray paths={Site.index.antiderivatives.pages} />
 </section>
