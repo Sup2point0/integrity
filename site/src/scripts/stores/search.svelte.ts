@@ -9,7 +9,7 @@ import { persisted, type Serializer } from "svelte-persisted-store";
 
 import { get } from "svelte/store";
 
-import { userprefs } from "./user-prefs.svelte.ts";
+import userprefs from "./user-prefs.svelte.ts";
 import type { UserPrefs, Question } from "#scripts/types";
 
 
