@@ -19246,45 +19246,77 @@
     },
     "s25f-ts3": {
       "topic": "integrals",
-      "title": null,
+      "title": "tenosynovitis",
       "desc": null,
-      "date": null,
+      "date": "2025 June 19",
       "tags": [
-        null
+        "scare"
       ],
       "methods": [
-        null
+        "parts"
       ],
       "shard": "s25f-ts3",
       "question": [
         {
           "kind": "latex",
-          "content": ""
+          "content": "\\int  x^2 \\left(    \\frac{1}{      x+0.00001    }  \\right)^{100000}\\ dx"
         }
       ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Expanding might not be of help here."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "$x^2$ can be easily differentiated."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "$\\left(\\frac{1}{x+0.00001}\\right)^{100000}$ can also be integrated."
+          }
+        ]
+      },
       "answer": [
         {
           "kind": "latex",
-          "content": ""
+          "content": "-\\frac{x^{2}}{99999\\left(x+10^{-5}\\right)^{99999}}-\\frac{2x}{99999\\cdot99998\\left(x+10^{-5}\\right)^{99998}}-\\frac{2}{99999\\cdot99998\\cdot99997\\left(x+10^{-5}\\right)^{99997}}-c"
         }
       ],
       "solution": {
         "reshape": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\   \\\\ =&\\ \\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int x^{2}\\left(\\frac{1}{x+0.00001}\\right)^{100000}\\ dx  \\\\ =&\\ \\int x^{2}\\left(x+10^{-5}\\right)^{-100000}\\ dx\\end{align*}"
           }
         ],
-        "substitute": [
+        "parts (1)": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+            "content": "\\begin{align*}      f &= x^{2} \\quad&\\quad g' &= \\left(x+10^{-5}\\right)^{-100000}  \\\\ f' &= 2x \\quad&\\quad g &= -\\frac{1}{99999}\\left(x+10^{-5}\\right)^{-99999}\\end{align*}"
           }
         ],
-        "parts": [
+        "simplify": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}      f &=  \\quad&\\quad g' &=   \\\\ f' &=  \\quad&\\quad g &= \\end{align*}"
+            "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dx  \\\\ =&\\ x^{2}\\cdot-\\frac{1}{99999}\\left(x+10^{-5}\\right)^{-99999}-\\int 2x\\cdot-\\frac{1}{99999}\\left(x+10^{-5}\\right)^{-99999}\\ dx  \\\\ =&\\ -\\frac{x^{2}}{99999\\left(x+10^{-5}\\right)^{99999}}+\\frac{2}{99999}\\int x\\left(x+10^{-5}\\right)^{-99999}\\ dx\\end{align*}"
+          }
+        ],
+        "parts (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      p &= x \\quad&\\quad q' &= \\left(x+10^{-5}\\right)^{-99999}  \\\\ p' &= 1 \\quad&\\quad q &= -\\frac{1}{99998}\\left(x+10^{-5}\\right)^{-99998}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ -\\frac{x^{2}}{99999\\left(x+10^{-5}\\right)^{99999}}+\\frac{2}{99999}\\left[pq-\\int p'q\\ dx\\right]  \\\\ =&\\ -\\frac{x^{2}}{99999\\left(x+10^{-5}\\right)^{99999}}+\\frac{2}{99999}\\left[x\\cdot-\\frac{1}{99998}\\left(x+10^{-5}\\right)^{-99998}-\\int -\\frac{1}{99998}\\left(x+10^{-5}\\right)^{-99998}\\ dx\\right]  \\\\ =&\\ -\\frac{x^{2}}{99999\\left(x+10^{-5}\\right)^{99999}}+\\frac{2}{99999}\\left[-\\frac{x}{99998}\\left(x+10^{-5}\\right)^{-99998}+\\frac{1}{99998}\\int \\left(x+10^{-5}\\right)^{-99998}\\ dx\\right]  \\\\ =&\\ -\\frac{x^{2}}{99999\\left(x+10^{-5}\\right)^{99999}}+\\frac{2}{99999}\\left[-\\frac{x}{99998}\\left(x+10^{-5}\\right)^{-99998}-\\frac{1}{99998\\cdot99997}\\left(x+10^{-5}\\right)^{-99997}\\right]  \\\\ =&\\ -\\frac{x^{2}}{99999\\left(x+10^{-5}\\right)^{99999}}-\\frac{2x}{99999\\cdot99998\\left(x+10^{-5}\\right)^{99998}}-\\frac{2}{99999\\cdot99998\\cdot99997\\left(x+10^{-5}\\right)^{99997}}-c\\end{align*}"
           }
         ]
       }

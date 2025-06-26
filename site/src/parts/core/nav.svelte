@@ -41,7 +41,7 @@ import { base } from "$app/paths";
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
       <Link text="Trails" intern="trails" hot={true} />
-      <Link text="Your Stats" intern="data" />
+      <Link text="Your Data" intern="data" hot={true} />
     </NavLink>
 
     <NavLink text="Docs" intern="docs" collapse={true}>

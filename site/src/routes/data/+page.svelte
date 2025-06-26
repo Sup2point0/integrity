@@ -90,18 +90,18 @@ function fix_integrity()
 </script>
 
 
-<Meta title="Stats"
+<Meta title="Your Data"
   desc="Your personal statistics on Integrity"
 />
 
 
 <Breadcrumbs levels={[
   { text: "Integrity", link: Site.root },
-  { text: "Stats" },
+  { text: "Your Data" },
 ]} />
 
 
-<Header title="Your Stats" capt="Your personal statistics on <em>Integrity</em>" />
+<Header title="Your Data" capt="Your personal statistics on <em>Integrity</em>" />
 
 <div class="data">
   <section>
@@ -163,11 +163,19 @@ function fix_integrity()
         <p class="count"> <span>{$userprefs.visits ?? "0"}</span> </p>
       </div>
     </section>
+    
+    <section>
+      <div class="row">
+        <p class="label"> Secrets Found </p>
+        <p class="count"> <span>{$userprefs.q?.size ?? 0}</span> of ? </p>
+      </div>
+      <ProgressBar value={($userprefs.q?.size ?? 0) / 1} />
+    </section>
   </div>
 
   <section>
     <Clicky text="Export Data" action={export_prefs} />
-    <p class="caption"> Save your preferences and data as a JSON file. </p>
+    <p class="caption"> Save your preferences and data as a JSON file. Since localStorage may spontaneously erase, you may want to do this from time to time. </p>
     {#if $userprefs.saved}
       <p class="caption"> Last saved: <span>{time_ago.format(new Date($userprefs.saved))}</span> </p>
     {/if}

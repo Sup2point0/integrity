@@ -49,8 +49,9 @@ import { base } from "$app/paths";
     <h3> Tools </h3>
     <div class="links">
       <Link text="Workspace" intern="workspace" />
-      <Link text="Speedrun" intern="speedrun" />
-      <Link text="Data" intern="data" />
+      <Link text="Speedrun" intern="speedrun" hot={true} />
+      <Link text="Trails" intern="trails" hot={true} />
+      <Link text="Your Data" intern="data" hot={true} />
     </div>
   </section>
 
@@ -95,7 +96,7 @@ import { base } from "$app/paths";
         window.location.href = `${base}/${pick_random_guide()}`;
       }} />
       <Link text="S-I+G-N Errors" intern="guides/sign" />
-      <Link text="Signing Off Inequalities" intern="guides/inequalities" />
+      <Link text="Signing Off Inequalities" intern="guides/inequalities" hot={true} disabled={true} />
     </div>
   </section>
 
