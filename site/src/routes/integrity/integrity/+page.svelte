@@ -1,6 +1,15 @@
 <script>
 
+import Site from "#scripts/utils/site";
+
 import Katex from "#src/parts/katex.svelte";
+
+import { onMount } from "svelte";
+
+
+onMount(() => {  
+  $Site.questions.add("l");
+});
 
 </script>
 

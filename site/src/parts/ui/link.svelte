@@ -31,14 +31,16 @@ let { text, link, intern, action, disabled = false, hot = false }: Props = $prop
 
 
 {#if action}
-  <button class="link" class:disabled
+  <button class="link"
     onclick={action}
+    disabled={disabled ?? undefined}
   >
     {@render content()}
   </button>
 
 {:else}
-  <a class="link" class:disabled
+  <a class="link"
+    class:disabled
     href="{link || `${base}/${intern}`}"
   >
     {@render content()}
@@ -68,7 +70,8 @@ let { text, link, intern, action, disabled = false, hot = false }: Props = $prop
   @include interact();
   @include focus-outline;
 
-  &.disabled {
+  &.disabled, &[disabled] {
+    pointer-events: none;
     opacity: 0.2;
   }
 }
