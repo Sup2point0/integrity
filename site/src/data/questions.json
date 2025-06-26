@@ -3136,6 +3136,53 @@
         }
       ]
     },
+    "s24c-xy1": {
+      "topic": "integrals",
+      "title": "first love",
+      "desc": "This was the first integral I ever wrote!",
+      "date": "2024 September",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "speed",
+        "acc",
+        "parts"
+      ],
+      "shard": "s24c-xy1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int 9x\\sin9x\\ dx"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-x\\cos9x+\\frac{1}{9}\\sin9x-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int 9x\\sin9x\\ dx  \\\\ =&\\ \\frac{1}{9}\\int 9x\\sin9x\\cdot9\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  9x &= t  \\\\ 9\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\frac{1}{9}\\int t\\sin t\\ dt  \\\\ &= \\frac{1}{9}\\left(t\\cdot-\\cos t-\\int -\\cos t\\ dt\\right)  \\\\ &= \\frac{1}{9}\\left(-t\\cos t+\\sin t\\right)  \\\\ &= -x\\cos9x+\\frac{1}{9}\\sin9x-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s24cu-dx1": {
       "topic": "integrals",
       "title": "dreams of integrity",
@@ -6421,6 +6468,116 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &\\ \\int \\frac{\\cos\\left(0\\right)-\\sin\\left(x\\right)-\\cos\\left(\\pi\\right)}{\\sin\\left(\\pi\\right)-\\cos\\left(x\\right)-\\sin\\left(0\\right)}\\ dx  \\\\ =&\\ \\int \\frac{1-\\sin x-\\left(-1\\right)}{0-\\cos x-0}\\ dx  \\\\ =&\\ \\int \\frac{2-\\sin x}{-\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{\\sin x-2}{\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{\\sin x}{\\cos x}-\\frac{2}{\\cos x}\\ dx  \\\\ =&\\ -\\int \\frac{-\\sin x}{\\cos x}-2\\int \\sec x\\ dx  \\\\ =&\\ -\\ln\\left(\\cos x\\right)-2\\ln\\left(\\sec x+\\tan x\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-bb1": {
+      "topic": "integrals",
+      "title": "mate, are you havin’ a bubble bath?",
+      "desc": null,
+      "date": "2025 June 12",
+      "tags": [
+        "exp"
+      ],
+      "methods": [
+        "work",
+        "partials"
+      ],
+      "shard": "s25f-bb1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac{1}    { e^{3x} - e^{2x} + e^x - 1 }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "You can substitute $e^x$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "You can factorise."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "You can partials."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "-x+\\frac{1}{2}\\ln\\left(e^{x}-1\\right)+\\frac{1}{4}\\ln\\left(e^{2x}+1\\right)-\\frac{1}{2}\\tan^{-1}\\left(e^{x}\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  e^{x} &= t  \\\\ x &= \\ln t  \\\\ dx &= \\frac{1}{t}\\ dt\\end{align*}"
+          }
+        ],
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{e^{3x}-e^{2x}+e^{x}-1}\\ dx  \\\\ =&\\ \\int \\frac{1}{t\\left(t^{3}-t^{2}+t-1\\right)}\\ dt\\end{align*}"
+          }
+        ],
+        "factor theorem": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  t^{3}-t^{2}+t-1 \\ \\rvert_{t=1} &= 1-1+1-1  \\\\ &= 0  \\\\ \\Rightarrow t^{3}-t^{2}+t-1    &= \\left(t-1\\right)\\left(t^{2}+1\\right)\\end{align*}"
+          }
+        ],
+        "partials": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{1}{t\\left(t^{3}-t^{2}+t-1\\right)}    &= \\frac{1}{t\\left(t-1\\right)\\left(t^{2}+1\\right)}  \\\\ \\frac{1}{t\\left(t-1\\right)\\left(t^{2}+1\\right)}    &= \\frac{p}{t}+\\frac{q}{t-1}+\\frac{rt+s}{t^{2}+1}  \\\\ 1 &= p\\left(t-1\\right)\\left(t^{2}+1\\right)+qt\\left(t^{2}+1\\right)+rt^{2}\\left(t-1\\right)+st\\left(t-1\\right)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $t = 0$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1 &= p\\left(0-1\\right)\\left(0+1\\right)+0+0+0  \\\\ -p &= 1  \\\\ p &= -1\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $t = 1$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1 &= 0+q\\left(1\\right)\\left(1+1\\right)+0+0  \\\\ 2q &= 1  \\\\ q &= \\frac{1}{2}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Equate coefficients of $t^3$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  0 &= p+q+r  \\\\ r &= -p-q  \\\\ &= 1-\\frac{1}{2}  \\\\ &= \\frac{1}{2}\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Equate coefficients of $t^2$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  0 &= -p-r+s  \\\\ s &= p+r  \\\\ &= -1+\\frac{1}{2}  \\\\ &= -\\frac{1}{2}\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{t\\left(t^{3}-t^{2}+t-1\\right)}\\ dt  \\\\ =&\\ \\int \\frac{1}{t\\left(t-1\\right)\\left(t^{2}+1\\right)}\\ dt  \\\\ =&\\ \\int -\\frac{1}{t}+\\frac{1}{2\\left(t-1\\right)}+\\frac{1}{2}\\left(\\frac{t-1}{t^{2}+1}\\right)\\ dt  \\\\ =&\\ -\\ln t+\\frac{1}{2}\\ln\\left(t-1\\right)+\\frac{1}{2}\\int \\frac{t-1}{t^{2}+1}\\ dt  \\\\ =&\\ -\\ln t+\\frac{1}{2}\\ln\\left(t-1\\right)+\\frac{1}{4}\\int \\frac{2t}{t^{2}+1}-\\frac{2}{t^{2}+1}\\ dt  \\\\ =&\\ -\\ln t+\\frac{1}{2}\\ln\\left(t-1\\right)+\\frac{1}{4}\\ln\\left(t^{2}+1\\right)-\\frac{1}{2}\\tan^{-1}t  \\\\ =&\\ -x+\\frac{1}{2}\\ln\\left(e^{x}-1\\right)+\\frac{1}{4}\\ln\\left(e^{2x}+1\\right)-\\frac{1}{2}\\tan^{-1}\\left(e^{x}\\right)-c\\end{align*}"
           }
         ]
       }
@@ -14273,6 +14430,72 @@
         ]
       }
     },
+    "s25f-op1": {
+      "topic": "integrals",
+      "title": "over pressure",
+      "desc": null,
+      "date": "2025 June 12",
+      "tags": [
+        "trig",
+        "ln"
+      ],
+      "methods": [
+        null
+      ],
+      "shard": "s25f-op1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\ln(\\sin^2{x}) + \\ln(\\cos^2{x}) }    { \\csc{4x} }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "How can you expand $\\csc(4x)$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How can you combine the logs?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "How can morph every trig function’s argument to $2x$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\left(\\sin2x\\right)^{2}\\ln\\left(\\frac{\\sin2x}{2}\\right)-\\frac{1}{2}\\left(\\sin2x\\right)^{2}-c"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\ln\\left(\\sin^{2}x\\right)+\\ln\\left(\\cos^{2}x\\right)}{\\csc4x}\\ dx  \\\\ =&\\ \\int \\left(\\sin4x\\right)\\ln\\left(\\left(\\sin x\\cos x\\right)^{2}\\right)\\ dx  \\\\ =&\\ \\int \\left(2\\sin2x\\cos2x\\right)\\left(2\\ln\\left(\\frac{\\sin2x}{2}\\right)\\right)\\ dx  \\\\ =&\\ 8\\int \\frac{\\sin2x}{2}\\ln\\left(\\frac{\\sin2x}{2}\\right)\\cdot\\cos2x\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{\\sin2x}{2} &= t  \\\\ \\cos2x\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= 8\\int t\\ln t\\ dt  \\\\ &= 8\\left[\\frac{1}{2}t^{2}\\ln t-\\int \\frac{1}{2}t^{2}\\cdot\\frac{1}{t}\\ dt\\right]  \\\\ &= 4t^{2}\\ln t-4\\int t\\ dt  \\\\ &= 4t^{2}\\ln t-2t^{2}  \\\\ &= 4\\left(\\frac{\\sin2x}{2}\\right)^{2}\\ln\\left(\\frac{\\sin2x}{2}\\right)-2\\left(\\frac{\\sin2x}{2}\\right)^{2}  \\\\ &= \\left(\\sin2x\\right)^{2}\\ln\\left(\\frac{\\sin2x}{2}\\right)-\\frac{1}{2}\\left(\\sin2x\\right)^{2}-c\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-pf1": {
       "topic": "integrals",
       "title": "premonition",
@@ -19021,6 +19244,51 @@
         }
       ]
     },
+    "s25f-ts3": {
+      "topic": "integrals",
+      "title": null,
+      "desc": null,
+      "date": null,
+      "tags": [
+        null
+      ],
+      "methods": [
+        null
+      ],
+      "shard": "s25f-ts3",
+      "question": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": ""
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\   \\\\ =&\\ \\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &=   \\\\ &= \\end{align*}"
+          }
+        ],
+        "parts": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}      f &=  \\quad&\\quad g' &=   \\\\ f' &=  \\quad&\\quad g &= \\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-tt1": {
       "topic": "integrals",
       "title": "palisade",
@@ -19735,6 +20003,71 @@
           }
         ]
       }
+    },
+    "s25f-ww1": {
+      "topic": "integrals",
+      "title": "??",
+      "desc": "allow \"fysiks\" oe",
+      "date": "2025 April 1",
+      "tags": [
+        "funny",
+        "horror"
+      ],
+      "methods": [
+        "trap",
+        "troll"
+      ],
+      "shard": "s25f-ww1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\epsilon_{0}}^{\\mu_{0}}\\ 6\\pi\\eta rv\\rho g\\hbar\\Phi^{-1}\\left(\\frac{\\pi}{\\tau}\\right)e^{-\\lambda t\\sin\\left(t+\\varphi\\right)}\\sin\\left(\\lambda t+\\varphi\\right)\\ d\\varphi"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "A hint, a hint, more hints for me~"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Welcome to the hint-er-net~"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Take a hint, take a hint~"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$0$"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Inverse normal:"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  \\Phi^{-1}\\left(\\frac{\\pi}{\\tau}\\right)    &= \\Phi^{-1}\\left(\\frac{\\pi}{2\\pi}\\right)  \\\\ &= \\Phi^{-1}\\left(\\frac{1}{2}\\right)  \\\\ &= 0\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "Hence"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{\\epsilon_{0}}^{\\mu_{0}}\\ 6\\pi\\eta rv\\rho g\\hbar\\Phi^{-1}\\left(\\frac{\\pi}{\\tau}\\right)e^{-\\lambda t\\sin\\left(t+\\varphi\\right)}\\sin\\left(\\lambda t+\\varphi\\right)\\ d\\varphi  \\\\ =&\\ \\int_{\\epsilon_{0}}^{\\mu_{0}}0\\ d\\varphi  \\\\ =&\\ 0\\end{align*}"
+        }
+      ]
     },
     "s25f-xf1": {
       "topic": "integrals",
