@@ -1,7 +1,8 @@
 # S-I+G-N Errors
 <!-- #SQUARK live! feat!
-| dest = guides/sign
+| dest = guides/general/sign
 | capt = The “semicolon missing” of Mathematics
+| index = guides / general
 -->
 
 What’s $1 \times 1$? $1$, right?

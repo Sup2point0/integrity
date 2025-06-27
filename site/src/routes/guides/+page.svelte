@@ -5,11 +5,12 @@ import Site from "#scripts/site";
 import Content from "../../../../guides/README.md";
 
 import Card from "#parts/ui/card.svelte";
-import Line from "#parts/page/line.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
+import Line from "#parts/page/line.svelte";
+import ArticleArray from "#parts/page/article-array.svelte";
 
 </script>
 
@@ -32,15 +33,12 @@ import Header from "#parts/core/header.svelte";
 <Line />
 
 <section>
-  <h2> Featured </h2>
+  <h2> General </h2>
 
-  <div class="browse">
-    <Card title="S-I+G-N Errors"
-      capt="The “semicolon missing” of Mathematics"
-      intern="guides/sign"
-      style="row"
-    />
-  </div>
+  <ArticleArray paths={[
+    "guides/general/sign.md",
+    "guides/general/inequalities.md",
+  ]} />
 </section>
 
 <section>

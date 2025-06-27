@@ -1,14 +1,16 @@
 {
   "meta": {
     "exported": "2025-06-27",
-    "file_count": 34,
-    "page_count": 32
+    "file_count": 35,
+    "page_count": 33
   },
   "index": {
     "guides": {
       "route": null,
       "pages": [
         "guides/complete-square/why.md",
+        "guides/general/inequalities.md",
+        "guides/general/sign.md",
         "guides/integrals/adventures/-c.md",
         "guides/integrals/adventures/artanh.md",
         "guides/integrals/adventures/neat-trick.md",
@@ -32,6 +34,13 @@
       "route": null,
       "pages": [
         "guides/complete-square/why.md"
+      ]
+    },
+    "general": {
+      "route": null,
+      "pages": [
+        "guides/general/inequalities.md",
+        "guides/general/sign.md"
       ]
     },
     "integrals": {
@@ -94,6 +103,8 @@
   "tags": {
     "guides": [
       "guides/complete-square/why.md",
+      "guides/general/inequalities.md",
+      "guides/general/sign.md",
       "guides/integrals/adventures/-c.md",
       "guides/integrals/adventures/artanh.md",
       "guides/integrals/adventures/neat-trick.md",
@@ -114,6 +125,10 @@
     ],
     "complete-square": [
       "guides/complete-square/why.md"
+    ],
+    "general": [
+      "guides/general/inequalities.md",
+      "guides/general/sign.md"
     ],
     "integrals": [
       "guides/integrals/adventures/-c.md",
@@ -336,6 +351,57 @@
       "date": null,
       "date_display": null
     },
+    "guides/general/inequalities.md": {
+      "path": "guides/general/inequalities.md",
+      "last_deploy": "2025-06-27 11:43:33 +0100",
+      "slocs": 118,
+      "chars": 3830,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/general/inequalities",
+      "title": "Signing Off Inequalities",
+      "head": "Signing Off Inequalities",
+      "capt": null,
+      "desc": null,
+      "index": [
+        "guides",
+        "general"
+      ],
+      "tags": [
+        "guides",
+        "general"
+      ],
+      "date": "2025-06-05",
+      "date_display": "2025 June 5"
+    },
+    "guides/general/sign.md": {
+      "path": "guides/general/sign.md",
+      "last_deploy": "2025-06-27 11:43:36 +0100",
+      "slocs": 80,
+      "chars": 4187,
+      "isIndex": false,
+      "flags": [
+        "live",
+        "feat"
+      ],
+      "dest": "guides/general/sign",
+      "title": "S-I+G-N Errors",
+      "head": "S-I+G-N Errors",
+      "capt": "The “semicolon missing” of Mathematics",
+      "desc": "The “semicolon missing” of Mathematics",
+      "index": [
+        "guides",
+        "general"
+      ],
+      "tags": [
+        "guides",
+        "general"
+      ],
+      "date": null,
+      "date_display": null
+    },
     "guides/integrals/adventures/-c.md": {
       "path": "guides/integrals/adventures/-c.md",
       "last_deploy": "2025-06-15 11:57:47 +0100",
@@ -393,9 +459,9 @@
     },
     "guides/integrals/adventures/neat-trick.md": {
       "path": "guides/integrals/adventures/neat-trick.md",
-      "last_deploy": "2025-06-10 18:24:15 +0100",
+      "last_deploy": "2025-06-27 11:37:55 +0100",
       "slocs": 91,
-      "chars": 3680,
+      "chars": 3688,
       "isIndex": false,
       "flags": [
         "live"
@@ -504,9 +570,9 @@
     },
     "guides/integrals/collections/epic-errors.md": {
       "path": "guides/integrals/collections/epic-errors.md",
-      "last_deploy": "2025-06-15 11:58:16 +0100",
+      "last_deploy": "2025-06-27 11:37:51 +0100",
       "slocs": 69,
-      "chars": 2000,
+      "chars": 2008,
       "isIndex": false,
       "flags": [
         "live",
@@ -810,26 +876,6 @@
       ],
       "date": "2025-04-17",
       "date_display": "2025 April 17"
-    },
-    "guides/sign.md": {
-      "path": "guides/sign.md",
-      "last_deploy": "2025-03-20 09:59:59 +0000",
-      "slocs": 79,
-      "chars": 4152,
-      "isIndex": false,
-      "flags": [
-        "live",
-        "feat"
-      ],
-      "dest": "guides/sign",
-      "title": "S-I+G-N Errors",
-      "head": "S-I+G-N Errors",
-      "capt": "The “semicolon missing” of Mathematics",
-      "desc": "The “semicolon missing” of Mathematics",
-      "index": [],
-      "tags": [],
-      "date": null,
-      "date_display": null
     },
     "challenges/mit-ib/2023.md": {
       "path": "challenges/mit-ib/2023.md",

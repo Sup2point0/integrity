@@ -65,7 +65,7 @@ We’ll use $f$ and $g$ to denote 2 arbitrary functions $f(x)$ and $g(x)$, dropp
 \end{align*}
 ```
 
-We’ll expand out and split the integral... (remembering not to make an [S-I+G-N error](../sign.md)!)
+We’ll expand out and split the integral... (remembering not to make an [S-I+G-N error](../general/sign.md)!)
 
 ```math
 \begin{align*}

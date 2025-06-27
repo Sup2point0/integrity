@@ -52,7 +52,7 @@ import { base } from "$app/paths";
     </NavLink>
 
     <NavLink text="Guides" intern="guides">
-      <Link text="S-I+G-N Errors" intern="guides/sign" />
+      <Link text="General" intern="guides/general" hot={true} />
       <Link text="Integration" intern="guides/integrals" />
       <Link text="Graph Drawing" intern="graph-drawing" disabled={true} />
       <Link text="Completing the Square" intern="guides/complete-square" />

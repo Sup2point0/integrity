@@ -23,7 +23,7 @@ Nuff said.
 k \int f(x) + g(x) \ dx &\neq k F(x) + G(x) + c
 k \int f(x) + g(x) \ dx &= k F(x) + k G(x) + c
 
-Looks unlikely with $f(x)$ and $g(x)$, but when your functions are fractions and exponents and trigonometric functions, plus you’re worrying about [S-I+G-N errors](../sign.md), it’s way too easy to neglect properly multiplying out the leading coefficient.
+Looks unlikely with $f(x)$ and $g(x)$, but when your functions are fractions and exponents and trigonometric functions, plus you’re worrying about [S-I+G-N errors](../general/sign.md), it’s way too easy to neglect properly multiplying out the leading coefficient.
 
 ### Memorise your standard derivatives and antiderivatives
 

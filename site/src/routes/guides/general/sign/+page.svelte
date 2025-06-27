@@ -5,19 +5,27 @@ import { metadata as page } from "./~content.svx";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
-import ArticleBanners from "#parts/page/article-banners.svelte";
+import ArticleArray from "#parts/page/article-array.svelte";
 
 </script>
 
 
 <Breadcrumbs levels={[
   { text: "Guides", intern: "guides" },
+  { text: "General", intern: "guides/general" },
   { text: "S-I+G-N Errors" }
 ]} />
 
 <Header title={page.title} capt={page.capt} />
-<ArticleBanners {page} />
 
 <article>
   <Content />
+
+  <aside>
+    <h2> Continue Reading </h2>
+    
+    <ArticleArray paths={[
+      "guides/inequalities.md",
+    ]} />
+  </aside>
 </article>

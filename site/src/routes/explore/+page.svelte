@@ -95,8 +95,8 @@ import { base } from "$app/paths";
       <Link text="Random" action={() => {
         window.location.href = `${base}/${pick_random_guide()}`;
       }} />
-      <Link text="S-I+G-N Errors" intern="guides/sign" />
-      <Link text="Signing Off Inequalities" intern="guides/inequalities" hot={true} disabled={true} />
+      <Link text="S-I+G-N Errors" intern="guides/general/sign" />
+      <Link text="Signing Off Inequalities" intern="guides/general/inequalities" hot={true} />
     </div>
   </section>
 
