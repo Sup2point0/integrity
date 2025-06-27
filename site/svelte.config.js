@@ -2,6 +2,7 @@ import adapter from "@sveltejs/adapter-static";
 import { sveltePreprocess } from "svelte-preprocess";
 
 import { mdsvex } from "mdsvex";
+import rehypeSlug from "rehype-slug";
 import remarkFootnotes from "remark-footnotes";
 import remarkIndexFootnotes from "remark-numbered-footnote-labels";
 import remarkMath from "remark-math";
@@ -47,6 +48,7 @@ const config = {
         render_katex_blocks
       ],
       rehypePlugins: [
+        rehypeSlug,
         correct_hast_tree,
         rehypeKatex,
       ],
@@ -58,7 +60,7 @@ const config = {
   ],
   
   onwarn: (warning, handler) => {
-    if (warning.code === "css-unused-selector") {
+    if (warning.code === "css_unused_selector") {
       return;
     }
     handler(warning);
