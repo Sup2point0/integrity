@@ -93,7 +93,7 @@ Thanks to my friend <a target="_blank" href="https://github.com/itechnicals">iTe
 ### Substitute (1)
 ```math
 \begin{align*}
-  1-x &-= t \quad\to\quad x = 1-t
+  1-x &= t \quad\to\quad x = 1-t
   \\ -dx &= dt
 \end{align*}
 ```
