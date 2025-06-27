@@ -3,6 +3,7 @@
 | dest = info/faq
 | capt = Frequently Asked Questions
 | desc = Frequently asked questions about Integrity
+| date = 2025 June 26
 -->
 
 ### What’s *Integrity* for?
@@ -48,6 +49,11 @@ Okayy, can’t fault you for being too good at maths! The integrals are definite
 
 And [Addvent](questions/addvent/) was for Addvent, there’s a reason the questions were accessible.
 
+### Why do questions have no difficulty indicator?
+Assigning difficulties to maths questions is painfully nontrivial, so I adopted the approach of “I’m just not even gonna try.”
+
+Update: This may change. See [Docs / Difficulties](https://sup2point0.github.io/integrity/docs/difficulties).
+
 ### I’ve finished all the questions, do you have any more?
 Hello!! Congratulations on solving so many, and tysm for using *Integrity*!
 
@@ -55,6 +61,11 @@ I’m regularly adding more questions (because I can’t seem to stop writing mo
 
 ### Can I use these questions?
 Absolutely, you’re more than welcome to! For more details, see [Licence](https://sup2point0.github.io/integrity/info/licence).
+
+### Why are the guides so empty?
+It’s a work in progress lmao. I really don’t write fast, and I have way too many other projects I’m working on simultaneously. Also, I’d much rather release complete, polished and actually useful articles than vapid filler to make it look like I’ve done a lot.[^lot] Yes, it’s very unlikely I’ll get round to writing all the articles you can see I have planned in [Explore](https://sup2point0.github.io/integrity/explore). Such is life ¯\\_(ツ)_/¯
+
+[^lot]: The exception are the [Collections](../guides/integrals/collections), which are eternally works in progress. Also I’m just lazy.
 
 ### Why would I want to practise integration?
 See [Why Integrate?](guides/integrals/why.md)

@@ -19,6 +19,13 @@ Don’t we love our integration slang.
 [Multiplying through](../strategies/multiply.md) (or [dividing by](../strategies/divide.md)) a factor when integrating a fraction. Reference to [Integration is Like Organic Chemistry](../adventures/chem.md).
 
 
+## cheese press
+
+> *use the cheese press check.*
+
+The range of a function.
+
+
 ## conjugate
 
 > *I’ll try multiplying through by the conjugate and see what happens.*
@@ -73,26 +80,26 @@ We pair the trigonometric functions in this way because their derivatives match 
 
 > *e<sup>&thinsp;x</sup> is famously both the derivative and antiderivative of e<sup>&thinsp;x</sup>.*
 
-Well-known, well-established.
+Well-known, well-established. Unironically.
 
 
 ## ICR
 
-> *If you multiply through by $2$, it’s easier to spot the inverse chain rule.*
+> *If you multiply through by $2$, it’s easier to spot the ICR.*
 
 [Inverse chain rule](../method/archain-rule.md). Also known as *archain*.
 
 
 ## IPR
 
-> *You can skip too the solution much faster here by spotting the inverse product rule.*
+> *You can skip to the solution much faster here by spotting the IPR.*
 
 [Inverse product rule](../methods/arcprod-rule.md). Also known as *arcprod*.
 
 
 ## IQR
 
-> *It’s really, really hard to spot the inverse quotient rule in this integral.
+> *It’s really, really hard to spot the IQR in this integral.
 
 Inverse quotient rule. Also known as *arcquot*.
 
@@ -175,7 +182,7 @@ Alias for [integration by parts](../methods/parts.md). Reference to the fact tha
 
 > *Yo, it’s just straight-up inverse product rule!*
 
-Often used as a shorthand for [straight-up layer cake](#straight-up-layer-cake). Refers more generally to an integrand where one method can be applied exactly.
+Often used as a shorthand for [straight-up layer cake](#straight-up-layer-cake). More generally, it refers to an integrand where one method can be applied exactly.
 
 For instance, “straight-up inverse chain rule”:
 
@@ -190,7 +197,7 @@ Without the coefficient of $10$ it’s not “straight-up”; the $10x^9$ signpo
 
 > *That’s straight-up layer cake, mate.*
 
-A degenerate case of [layer cake](#layer-cake) where the numerator is the exact derivative of the denominator, in which case
+The simplest case of [layer cake](#layer-cake) where the numerator is the exact derivative of the denominator, in which case
 
 ```math
 \int \frac{f'(x)}{f(x)} \ dx = \ln\left( f(x) \right) + c
@@ -229,3 +236,10 @@ As is the case in the rest of mathematics, what one perceives as “trivial” i
 ```
 
 37 times before this is not a hard integral, but for someone who has only just started encountering integrals with $\ln(x)$ this could be very nontrivial to spot indeed.
+
+
+## twin-signed
+
+> $\ln(x)$ is a twin-signed function, so this expression could be positive or negative.
+
+(of a function or value) Able to be both positive or negative.
