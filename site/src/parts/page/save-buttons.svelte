@@ -40,7 +40,7 @@ function safe_exec(func: () => any)
 
 {#if solved}
   <Checkbox
-    cols={{ "off": "#dededede", "on": "oklch(70.74% 0.1702 53.41)" }}
+    cols={{ off: "#dededede", on: "oklch(70.74% 0.1702 53.41)" }}
     value={() => $userprefs.solved.has(shard)}
     enable={safe_exec(() => {
       $userprefs.solved.add(shard);
@@ -57,7 +57,7 @@ function safe_exec(func: () => any)
 
 {#if flag}
   <Checkbox
-    cols={{ "off": "#ededed", "on": "oklch(64.09% 0.1702 150.09)" }}
+    cols={{ off: "#ededed", on: "oklch(64.09% 0.1702 150.09)" }}
     value={() => $userprefs.flagged.has(shard)}
     enable={safe_exec(() => {
       $userprefs.flagged.add(shard);
@@ -74,7 +74,7 @@ function safe_exec(func: () => any)
 
 {#if star}
   <Checkbox
-    cols={{ "off": "#ededed", "on": "oklch(81.02% 0.1702 85.48)" }}
+    cols={{ off: "#ededed", on: "oklch(81.02% 0.1702 85.48)" }}
     value={() => $userprefs.starred.has(shard)}
     enable={safe_exec(() => {
       $userprefs.starred.add(shard);

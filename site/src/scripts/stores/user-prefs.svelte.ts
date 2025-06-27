@@ -28,6 +28,8 @@ export class UserPrefs
   /** Preset of the Workspace Desmos window. */
   "desmos-preset": "integrals" | "complete-square" | null = $state("integrals");
 
+  nav: boolean = $state(true);
+
   q: Set<string> = new Set();
 
 
@@ -42,6 +44,7 @@ export class UserPrefs
       flagged: Array.from(this.flagged),
       starred: Array.from(this.starred),
       
+      nav: this.nav,
       "desmos-preset": this["desmos-preset"],
       q: Array.from(this.q),
     }
@@ -58,6 +61,7 @@ export class UserPrefs
     this.flagged = new Set(data.flagged ?? this.flagged);
     this.starred = new Set(data.starred ?? this.starred);
 
+    this.nav = data.nav ?? this.nav;
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
     this.q = new Set(data.q ?? this.q);
 

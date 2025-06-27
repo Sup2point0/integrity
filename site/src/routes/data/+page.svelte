@@ -8,6 +8,7 @@ import { userprefs } from "#scripts/stores";
 
 import ProgressBar from "./progress-bar.svelte";
 import Clicky from "#src/parts/ui/clicky.svelte";
+import Checkbox from "#parts/ui/checkbox.svelte";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
@@ -15,7 +16,7 @@ import Meta from "#parts/page/meta.svelte";
 
 
 let checking = $state(false);
-let checks = 0;
+let checks = $state(0);
 
 const total_questions = Site.get_list_of_all_questions().length;
 const total_integrals = Site.get_questions_of_topic("integrals").length;
@@ -51,11 +52,11 @@ function export_prefs()
 function check_integrity()
 {
   checks++;
-  let errors = false;
-
-  if ([...$userprefs.solved].some(q => [null, undefined].includes(q))) {
-    errors = true;
-  }
+  let errors = (
+    [...$userprefs.solved].some(
+      q => (q === null || q === undefined)
+    )
+  );
 
   if (errors) {
     if (confirm("Errors found! Would you like them to be automatically fixed?")) {
@@ -169,7 +170,7 @@ function fix_integrity()
         <p class="label"> Secrets Found </p>
         <p class="count"> <span>{$userprefs.q?.size ?? 0}</span> of ? </p>
       </div>
-      <ProgressBar value={($userprefs.q?.size ?? 0) / 1} />
+      <ProgressBar value={($userprefs.q?.size ?? 0) / 2} />
     </section>
   </div>
 
@@ -182,15 +183,41 @@ function fix_integrity()
   </section>
 
   <section>
-    <Clicky text={checking ? "Checking..." : "Check Integrity"} action={() => {
-      checking = true;
-      setTimeout(check_integrity, 0);
-    }} />
+    <div style="display: flex; gap: 1rem;">
+      <Clicky text={checking ? "Checking..." : "Check Integrity"} action={() => {
+        checking = true;
+        setTimeout(check_integrity, 0);
+      }} />
+    
+      {#if checks > 0}
+        <Checkbox
+          cols={{ off: "#f2f2f2", on: "oklch(0.6677 0.1834 360)" }}
+          value={() => $userprefs.nav}
+          enable={() => {
+            $userprefs["q"].add("n");
+            $userprefs.nav = true;
+            return true;
+          }}
+          disable={() => {
+            $userprefs.nav = false;
+            return true;
+          }}
+        >
+          {#if checks > 10}
+            ??
+          {:else}
+            ?
+          {/if}
+        </Checkbox>
+      {/if}
+    </div>
+
     <p class="caption"> See something questionable about your stats? Check your data for errors such as null values or invalid question shards. </p>
   </section>
 
   <section>
     <p> Want to flex your stats? Just drop me a message on <a target="_blank" href="https://discordapp.com/users/752972078579449888">Disc</a> ;) </p>
+    <p> &ensp; </p>
   </section>
 </div>
 
