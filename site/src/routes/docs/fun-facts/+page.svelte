@@ -23,3 +23,16 @@ import Header from "#parts/core/header.svelte";
 <article>
   <Content />
 </article>
+
+
+<style lang="scss">
+
+:global(a:has(.highlight), a:has(.highlight):is(:hover, :focus-visible, :active)) {
+  color: inherit;
+}
+
+:global(a:has(.highlight)::after) {
+  display: none;
+}
+
+</style>
