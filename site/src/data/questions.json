@@ -3859,7 +3859,7 @@
         "substitute": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  \\frac{1}{x}= \\quad\\to\\quad  &= \\frac{1}{t}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
+            "content": "\\begin{align*}  \\frac{1}{x} = t \\quad\\to\\quad x &= \\frac{1}{t}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
           }
         ],
         "solve": [
@@ -13238,7 +13238,7 @@
           },
           {
             "kind": "latex",
-            "content": "\\begin{align*}  x &= \\frac{1}{t} \\quad\\to\\quad =\\frac{1}{x}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
+            "content": "\\begin{align*}  x &= \\frac{1}{t} \\quad\\to\\quad t=\\frac{1}{x}  \\\\ dx &= -\\frac{1}{t^{2}}\\ dt\\end{align*}"
           },
           {
             "kind": "text",
@@ -14590,6 +14590,65 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= \\int \\frac{x^{5}}{t^{3}+t}\\ dx  \\\\ &= \\frac{1}{2}\\int \\frac{x^{4}}{t^{3}+t}\\cdot2x\\ dx  \\\\ &= \\frac{1}{2}\\int \\frac{\\left(t+1\\right)^{2}}{t^{3}+t}\\ dt  \\\\ &= \\frac{1}{2}\\int \\frac{t^{2}+2t+1}{t\\left(t^{2}+1\\right)}  \\\\ &= \\frac{1}{2}\\int \\frac{t^{2}+1}{t\\left(t^{2}+1\\right)}+\\frac{2t}{t\\left(t^{2}+1\\right)}\\ dt  \\\\ &= \\frac{1}{2}\\int \\frac{1}{t}\\ dt+\\int \\frac{1}{t^{2}+1}\\ dt  \\\\ &= \\frac{1}{2}\\ln\\left|t\\right|+\\tan^{-1}\\left(t\\right)  \\\\ &= \\frac{1}{2}\\ln\\left|x^{2}-1\\right|+\\tan^{-1}\\left(x^{2}-1\\right)-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-pi1": {
+      "topic": "integrals",
+      "title": "migraine",
+      "desc": "my head hurts help",
+      "date": "2025 June 20",
+      "tags": [
+        "ln"
+      ],
+      "methods": [
+        "parts"
+      ],
+      "shard": "s25f-pi1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\left(\\frac{\\ln x}{x}\\right)^{2}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Often with $\\ln(x)$, you can just substitute."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\frac{1}{x}\\left(-\\left(\\ln x\\right)^{2}-2\\ln x-2\\right)-c"
+        }
+      ],
+      "solution": {
+        "substitute (1)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\ln x &= t\\ \\quad\\to\\quad x = e^{t}  \\\\ \\frac{1}{x}\\ dx &= dt\\end{align*}"
+          }
+        ],
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\left(\\frac{\\ln x}{x}\\right)^{2}\\ dx  \\\\ =&\\ \\int \\frac{t^{2}}{e^{t}}\\ dt  \\\\ =&\\ \\int t^{2}e^{-t}\\ dt\\end{align*}"
+          }
+        ],
+        "substitute (2)": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  -t &= v  \\\\ t &= -v  \\\\ dt &= -dv\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\left(-v\\right)^{2}e^{v}\\cdot-dv  \\\\ &= -\\int v^{2}e^{v}\\ dv  \\\\ &= -\\left[v^{2}e^{v}-\\int 2ve^{v}\\ dv\\right]  \\\\ &= -\\left[v^{2}e^{v}-2\\left[ve^{v}-\\int e^{v}\\ dv\\right]\\right]  \\\\ &= -\\left[v^{2}e^{v}-2e^{v}\\left(v-1\\right)\\right]  \\\\ &= -v^{2}e^{v}+2e^{v}\\left(v-1\\right)  \\\\ &= e^{v}\\left(-v^{2}+2v-2\\right)  \\\\ &= e^{-t}\\left(-t^{2}-2t-2\\right)  \\\\ &= \\frac{1}{x}\\left(-\\left(\\ln x\\right)^{2}-2\\ln x-2\\right)-c\\end{align*}"
           }
         ]
       }
@@ -19681,7 +19740,7 @@
         "substitute (1)": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  1-x &-= t \\quad\\to\\quad x = 1-t  \\\\ -dx &= dt\\end{align*}"
+            "content": "\\begin{align*}  1-x &= t \\quad\\to\\quad x = 1-t  \\\\ -dx &= dt\\end{align*}"
           }
         ],
         "solve (1)": [
