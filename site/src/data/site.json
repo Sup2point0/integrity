@@ -1,10 +1,16 @@
 {
   "meta": {
     "exported": "2025-06-27",
-    "file_count": 35,
-    "page_count": 33
+    "file_count": 37,
+    "page_count": 35
   },
   "index": {
+    "docs": {
+      "route": null,
+      "pages": [
+        "docs/difficulties.md"
+      ]
+    },
     "guides": {
       "route": null,
       "pages": [
@@ -101,6 +107,9 @@
     }
   },
   "tags": {
+    "docs": [
+      "docs/difficulties.md"
+    ],
     "guides": [
       "guides/complete-square/why.md",
       "guides/general/inequalities.md",
@@ -194,9 +203,9 @@
     },
     "faq.md": {
       "path": "faq.md",
-      "last_deploy": "2025-06-15 11:31:32 +0100",
-      "slocs": 95,
-      "chars": 5756,
+      "last_deploy": "2025-06-27 16:40:32 +0100",
+      "slocs": 106,
+      "chars": 6687,
       "isIndex": false,
       "flags": [
         "live"
@@ -208,8 +217,8 @@
       "desc": "Frequently asked questions about Integrity",
       "index": [],
       "tags": [],
-      "date": null,
-      "date_display": null
+      "date": "2025-06-26",
+      "date_display": "2025 June 26"
     },
     "synopsis.md": {
       "path": "synopsis.md",
@@ -267,6 +276,29 @@
       "tags": [],
       "date": null,
       "date_display": null
+    },
+    "docs/difficulties.md": {
+      "path": "docs/difficulties.md",
+      "last_deploy": "2025-06-27 16:51:38 +0100",
+      "slocs": 49,
+      "chars": 3202,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "docs/difficulties",
+      "title": "Difficulties",
+      "head": "Difficulties",
+      "capt": null,
+      "desc": null,
+      "index": [
+        "docs"
+      ],
+      "tags": [
+        "docs"
+      ],
+      "date": "2025-06-23",
+      "date_display": "2025 June 23"
     },
     "docs/fun-facts.md": {
       "path": "docs/fun-facts.md",
@@ -353,9 +385,9 @@
     },
     "guides/general/inequalities.md": {
       "path": "guides/general/inequalities.md",
-      "last_deploy": "2025-06-27 11:43:33 +0100",
-      "slocs": 118,
-      "chars": 3830,
+      "last_deploy": "2025-06-27 12:06:37 +0100",
+      "slocs": 179,
+      "chars": 5337,
       "isIndex": false,
       "flags": [
         "live"
@@ -363,8 +395,8 @@
       "dest": "guides/general/inequalities",
       "title": "Signing Off Inequalities",
       "head": "Signing Off Inequalities",
-      "capt": null,
-      "desc": null,
+      "capt": "Solving inequalities with twin-signed terms",
+      "desc": "Solving inequalities with twin-signed terms",
       "index": [
         "guides",
         "general"
@@ -373,8 +405,8 @@
         "guides",
         "general"
       ],
-      "date": "2025-06-05",
-      "date_display": "2025 June 5"
+      "date": "2025-06-27",
+      "date_display": "2025 June 27"
     },
     "guides/general/sign.md": {
       "path": "guides/general/sign.md",
@@ -428,6 +460,25 @@
       ],
       "date": null,
       "date_display": null
+    },
+    "guides/integrals/adventures/300.md": {
+      "path": "guides/integrals/adventures/300.md",
+      "last_deploy": "2025-06-27 16:51:32 +0100",
+      "slocs": 18,
+      "chars": 1351,
+      "isIndex": false,
+      "flags": [
+        "live"
+      ],
+      "dest": "guides/integrals/adventures",
+      "title": "300 Integrals Later",
+      "head": "300 Integrals Later",
+      "capt": null,
+      "desc": null,
+      "index": [],
+      "tags": [],
+      "date": "2025-06-26",
+      "date_display": "2025 June 26"
     },
     "guides/integrals/adventures/artanh.md": {
       "path": "guides/integrals/adventures/artanh.md",
@@ -629,9 +680,9 @@
     },
     "guides/integrals/collections/int-int.md": {
       "path": "guides/integrals/collections/int-int.md",
-      "last_deploy": "2025-06-15 11:58:08 +0100",
-      "slocs": 231,
-      "chars": 6884,
+      "last_deploy": "2025-06-27 16:47:17 +0100",
+      "slocs": 245,
+      "chars": 7098,
       "isIndex": false,
       "flags": [
         "live",

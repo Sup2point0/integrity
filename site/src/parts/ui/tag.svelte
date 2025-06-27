@@ -7,7 +7,7 @@ import { base } from "$app/paths";
 
 interface Props {
   tag: string;
-  kind?: "prot" | "deut";
+  kind?: "prot" | "deut" | "based" | "incline" | "manifold" | "chaos";
   margin?: string;
 }
 
@@ -36,15 +36,28 @@ button.tag {
   font-size: 90%;
   background: $col-prot-fallback;
 
-  &.prot{ background: $col-prot; }
+  &.prot { background: $col-prot; }
   &.deut { background: $col-deut; }
+  &.based { background: $col-based; }
+  &.incline { background: $col-incline; }
+  &.manifold { background: $col-manifold; }
+  &.chaos { background: $col-chaos; }
+
   border: none;
   border-radius: 0.5em;
 
-  @include interact(
-    $hover: color-mix(in oklch, $col-prot, black 8%),
-    $click: color-mix(in oklch, $col-prot, black 16%),
-  );
+  &.prot {
+    @include interact(
+      $hover: color-mix(in oklch, $col-prot, black 8%),
+      $click: color-mix(in oklch, $col-prot, black 16%),
+    );
+  }
+  &.deut {
+    @include interact(
+      $hover: color-mix(in oklch, $col-deut, black 8%),
+      $click: color-mix(in oklch, $col-deut, black 16%),
+    );
+  }
   @include focus-outline;
 }
 

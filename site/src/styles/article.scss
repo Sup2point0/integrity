@@ -65,7 +65,9 @@ article {
     border-radius: 0.4em;
   }
 
-  p > a, ul li > a {
+  p > a,
+  ul li > a,
+  ol li > a {
     @include underline-link;
   }
 
@@ -80,7 +82,7 @@ article {
     border-left: 2px solid $col-deut;
   }
 
-  ul {
+  ul, ol {
     font-weight: 250;
     list-style-type: double-arrows;
 
@@ -92,6 +94,11 @@ article {
         list-style-type: single-arrows;
       }
     }
+  }
+
+  ol {
+    padding-left: 1em;
+    list-style-type: ordinal;
   }
 
   img {

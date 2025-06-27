@@ -44,11 +44,12 @@ import { base } from "$app/paths";
       <Link text="Your Data" intern="data" hot={true} />
     </NavLink>
 
-    <NavLink text="Docs" intern="docs" collapse={true}>
+    <NavLink text="Docs" intern="docs" collapse={true} hot={true}>
       <Link text="Questions" intern="docs/questions" />
+      <Link text="Difficulties" intern="docs/difficulties" hot={true} />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
-      <Link text="Fun Facts" intern="docs/fun-facts" hot={true} />
+      <Link text="Fun Facts" intern="docs/fun-facts" />
     </NavLink>
 
     <NavLink text="Guides" intern="guides">
