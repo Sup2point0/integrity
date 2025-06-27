@@ -4,6 +4,8 @@
 
 import { persisted, type Serializer } from "svelte-persisted-store";
 
+import { SvelteSet } from "svelte/reactivity";
+
 
 export class UserPrefs
 {
@@ -30,7 +32,8 @@ export class UserPrefs
 
   nav: boolean = $state(true);
 
-  q: Set<string> = new Set();
+  q: SvelteSet<string> = new SvelteSet();
+  Q: SvelteSet<string> = new SvelteSet();
 
 
   /** Expose attributes for syncing to localStorage. */
@@ -47,6 +50,7 @@ export class UserPrefs
       nav: this.nav,
       "desmos-preset": this["desmos-preset"],
       q: Array.from(this.q),
+      Q: Array.from(this.Q),
     }
   }
 
@@ -63,13 +67,18 @@ export class UserPrefs
 
     this.nav = data.nav ?? this.nav;
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
-    this.q = new Set(data.q ?? this.q);
+    this.q = new SvelteSet(data.q ?? this.q);
+    this.Q = new SvelteSet(data.Q ?? this.Q);
 
     return this;
   }
 
   get questions() {    
     return this.q;
+  }
+
+  get question() {
+    return this.Q;
   }
 }
 

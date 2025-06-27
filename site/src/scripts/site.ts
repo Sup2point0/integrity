@@ -54,20 +54,14 @@ const Site: SiteData = {
 
   get_all_tags: () => {
     return Array.from(
-      new Set(
-        Object.values(Site.questions)
-        .flatMap(topic => topic.tags)
-      )
-    ).sort();
+      new Set(Object.values(Site.questions).flatMap(topic => topic.tags))
+    ).filter(method => method !== undefined).sort();
   },
 
   get_all_methods: () => {
     return Array.from(
-      new Set(
-        Object.values(Site.questions)
-        .flatMap(topic => topic.methods)
-      )
-    ).sort();
+      new Set(Object.values(Site.questions).flatMap(topic => topic.methods))
+    ).filter(method => method !== undefined).sort();
   },
 
   get_list_of_all_guides: () => {
