@@ -4,7 +4,7 @@ import Site from "#scripts/site";
 /** Randomly pick a question and return its URL params. */
 export function pick_random_question(): string
 {
-  let topic = Object.keys(Site.questions);
+  let topic = Object.keys(Site.questions).filter(topic => topic !== "derivatives");
   let random_topic = topic[Math.floor(Math.random() * topic.length)];
 
   let questions = Site.get_questions_of_topic(random_topic);

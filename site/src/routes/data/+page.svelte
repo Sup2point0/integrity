@@ -192,14 +192,14 @@ function fix_integrity()
       {#if checks > 0}
         <Checkbox
           cols={{ off: "#f2f2f2", on: "oklch(0.6677 0.1834 360)" }}
-          value={() => $userprefs.nav}
+          value={() => !$userprefs.nav}
           enable={() => {
             $userprefs["q"].add("n");
-            $userprefs.nav = true;
+            $userprefs.nav = false;
             return true;
           }}
           disable={() => {
-            $userprefs.nav = false;
+            $userprefs.nav = true;
             return true;
           }}
         >

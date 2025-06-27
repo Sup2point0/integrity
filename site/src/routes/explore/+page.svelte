@@ -10,6 +10,7 @@ import Header from "#parts/core/header.svelte";
 import Meta from "#parts/page/meta.svelte";
 
 import { base } from "$app/paths";
+import { goto } from "$app/navigation";
 
 </script>
 
@@ -93,7 +94,7 @@ import { base } from "$app/paths";
     <h3> Guides </h3>
     <div class="links">
       <Link text="Random" action={() => {
-        window.location.href = `${base}/${pick_random_guide()}`;
+        goto(`/${pick_random_guide()}`);
       }} />
       <Link text="S-I+G-N Errors" intern="guides/general/sign" />
       <Link text="Signing Off Inequalities" intern="guides/general/inequalities" hot={true} />

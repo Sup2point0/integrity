@@ -11,11 +11,12 @@ import Link from "#parts/ui/link.svelte";
 import GithubIcon from "#parts/svg/github-icon.svelte";
 
 import { base } from "$app/paths";
+import { goto } from "$app/navigation";
 
 </script>
 
 
-<nav class:nav={$userprefs.nav}>
+<nav class:nav={$userprefs.nav === false}>
   <section class="left">
     <NavLink pict="integrity-title.png"
       link="https://sup2point0.github.io/integrity" />
@@ -35,10 +36,11 @@ import { base } from "$app/paths";
 
     <NavLink text="Explore" intern="explore" hot={true}>
       <Link text="Random Question" action={() => {
+        /* `goto()` here uses undesirable Svelte-y surgical updates which don't load the question page correctly */
         window.location.href = `${base}/question/${pick_random_question()}`;
       }} />
       <Link text="Random Guide" action={() => {
-        window.location.href = `${base}/${pick_random_guide()}`;
+        goto(`/${pick_random_guide()}`);
       }} />
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
