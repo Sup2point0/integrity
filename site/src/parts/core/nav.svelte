@@ -2,6 +2,8 @@
 
 <script lang="ts">
 
+import { userprefs } from "#scripts/stores";
+
 import { pick_random_question, pick_random_guide } from "#scripts/utils";
 
 import NavLink from "#parts/core/nav.link.svelte";
@@ -13,7 +15,7 @@ import { base } from "$app/paths";
 </script>
 
 
-<nav>
+<nav class:nav={$userprefs.nav}>
   <section class="left">
     <NavLink pict="integrity-title.png"
       link="https://sup2point0.github.io/integrity" />
@@ -87,6 +89,20 @@ import { base } from "$app/paths";
 
 <style lang="scss">
 
+@use 'sass:color';
+
+
+@property --col-left {
+  syntax: '<color>';
+  initial-value: $col-nav;
+  inherits: false;
+}
+@property --col-right {
+  syntax: '<color>';
+  initial-value: $col-nav;
+  inherits: false;
+}
+
 nav {
   width: 100%;
   margin-bottom: 1rem;
@@ -102,10 +118,13 @@ nav {
 
   background: $col-nav-fallback;
   background: $col-nav;
+  background: linear-gradient(to right in oklch, var(--col-left), var(--col-right));
+  background-size: 100%;
   border-bottom: 1px solid $col-line-fallback;
   border-bottom: 1px solid $col-line;
   box-shadow: 0 2px 2px -1px $col-line-fallback;
   box-shadow: 0 2px 2px -1px $col-line;
+  transition: --col-left 0.25s ease-out, --col-right 0.25s ease-out;
 
   &::before {
     content: '';
@@ -114,8 +133,8 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    backdrop-filter: blur(12px);
     z-index: -1;
+    backdrop-filter: blur(12px);
   }
 }
 
@@ -133,6 +152,15 @@ section {
 @media (max-width: 40rem) {
   nav {
     padding: 0 1rem;
+  }
+}
+
+nav.nav {
+  --col-left: #{color.change($col-yay, $alpha: 90%)};
+  --col-right: #{color.change($col-manifold, $alpha: 90%)};
+
+  :global(.nav-link p) {
+    color: white;
   }
 }
 

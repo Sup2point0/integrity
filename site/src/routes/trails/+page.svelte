@@ -17,6 +17,9 @@ import Section from "#src/parts/page/section.svelte";
 // temporary static data until we can get the endpoint working
 let data = {
   history: {
+    2024: {
+      December: null,
+    },
     2025: {
       January: null,
       February: null,
@@ -30,7 +33,8 @@ let data = {
   },
 };
 
-let year: 2025 = $state(2025);
+
+let year = $state("2025");
 let history = $derived(Object.entries(data.history[year] || {}));
 
 let integrals: {
@@ -38,15 +42,17 @@ let integrals: {
   title_chars: Record<number | string, number>,
   title_letters: Record<string, number>,
   question_chars: Record<number | string, number>,
+  question_letters: Record<string, number>
   tags_counts: Record<number, number>,
   hints_counts: Record<number, number>,
   parts_counts: Record<number, number>,
   days: Record<string, number>,
 } = {
   title_words: {},
-  title_chars: {},
+  title_chars: {0: 1},
   title_letters: {},
   question_chars: {},
+  question_letters: {},
   tags_counts: {},
   hints_counts: {},
   parts_counts: {},
@@ -81,7 +87,9 @@ for (let q of Site.get_questions_of_topic("integrals")) {
   }
 
   if (q.question) {
-    let raw = q.question.content.length;
+    let content = (q.question instanceof String) ? q.question : q.question.content;
+
+    let raw = content.length;
     let count = Math.round(raw / 5) * 5;
     if (count > 200) {
       count = "200+";
@@ -91,6 +99,14 @@ for (let q of Site.get_questions_of_topic("integrals")) {
       integrals.question_chars[count]++;
     } else {
       integrals.question_chars[count] = 1;
+    }
+
+    for (let letter of content) {      
+      if (integrals.question_letters[letter]) {
+        integrals.question_letters[letter]++;
+      } else {
+        integrals.question_letters[letter] = 1;
+      }
     }
   }
 
@@ -166,7 +182,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
 
   <nav>
     <small> View Year </small>
-    <Select bind:value={year} options={[ 2025 ]} />
+    <Select bind:value={year} options={Object.keys(data.history)} />
   </nav>
 
   {#if data}
@@ -269,7 +285,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     {@const letters = (
       Object.entries(integrals.title_letters)
         .sort((prot, deut) => deut[1] - prot[1])
-        .slice(0, 16)
+        .slice(0, 20)
     )}
     {@const highest = Math.max(...letters.map(each => each[1]))}
 
@@ -278,7 +294,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
         <div class="column">
           <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
-          <div class="class-label" style:font-size="75%">
+          <div class="class-label">
             {letter}
           </div>
         </div>
@@ -302,6 +318,29 @@ for (let q of Site.get_questions_of_topic("integrals")) {
             {:else}
               &lt;{count}
             {/if}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  <h2> Unique Characters in Question LaTeX </h2>
+
+  {#if integrals.question_letters}
+    {@const letters = (
+      Object.entries(integrals.question_letters)
+        .sort((prot, deut) => deut[1] - prot[1])
+        .slice(0, 20)
+    )}
+    {@const highest = Math.max(...letters.map(each => each[1]))}
+
+    <div class="chart">
+      {#each letters as [letter, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label">
+            {letter}
           </div>
         </div>
       {/each}
