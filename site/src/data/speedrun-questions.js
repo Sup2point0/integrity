@@ -230,7 +230,101 @@ export const derivatives = [
       String.raw`\frac{x}{\left(1-x\right)^{2}}`,
       String.raw`\frac{1+x}{\left(1-x\right)^{2}}`,
     ]
-  }
+  },
+
+  {
+    shard: "d25i-ic1",
+    difficulty: "incline",
+    question: String.raw`\sec\left(\sec x\right)`,
+    options: [
+      String.raw`\sec\left(\sec x\right)\left(\tan x\right)\tan\left(\sec x\right)\left(\sec x\right)`,
+      String.raw`\sec\left(\sec x\tan x\right)`,
+      String.raw`\sec\left(\sec x\right)\tan\left(\sec x\right)`,
+      String.raw`\tan^{2}\left(\sec x\right)\left(\sec x\right)\left(\tan x\right)`
+    ]
+  }, {
+    shard: "d25i-ic2",
+    difficulty: "incline",
+    question: String.raw`\sin\left(\tan^{-1}x\right)`,
+    options: [
+      String.raw`\frac{\cos\left(\tan^{-1}x\right)}{x^{2}+1}`,
+      String.raw`-\frac{\cos\left(\tan^{-1}x\right)}{1+x^{2}}`,
+      String.raw`\sin\left(\tan^{-1}x\right)\sec^{2}x`,
+      String.raw`\frac{1}{2}\sin\left(\tan^{-1}x\right)^{2}`
+    ]
+  }, {
+    shard: "d25i-ic3",
+    difficulty: "incline",
+    question: String.raw`\frac{x+1}{x-1}`,
+    options: [
+      String.raw`-\frac{2}{\left(1-x\right)^{2}}`,
+      String.raw`\frac{2}{\left(x-1\right)^{2}}`,
+      String.raw`\frac{x+1}{\left(x-1\right)^{2}}`,
+      String.raw`\frac{x}{\left(1-x\right)^{2}}`
+    ]
+  }, {
+    shard: "d25i-ic4",
+    difficulty: "incline",
+    question: String.raw`\sqrt{x^{2}}`,
+    options: [
+      String.raw`\operatorname{sign}\left(x\right)`,
+      String.raw`-\left|x\right|`,
+      String.raw`1`,
+      String.raw`\frac{1}{\sqrt{x^{2}}}`
+    ]
+  }, {
+    shard: "d25i-ic5",
+    difficulty: "incline",
+    question: String.raw`\frac{d}{dx}\sec\left(x\right)\tan\left(x\right)`,
+    options: [
+      String.raw`\left(\sec x\right)\left(\tan^{2}x+\sec^{2}x\right)`,
+      String.raw`\left(\sec x\right)^{2}\left(\tan x\right)^{2}`,
+      String.raw`\left(\sec x\right)\left(\tan x\right)^{3}`,
+      String.raw`\left(\tan x\right)\left(\sec x+\tan x\right)`
+    ]
+  }, {
+    shard: "d25i-ic6",
+    difficulty: "incline",
+    question: String.raw`\tanh^{-1}\left(\sin x\right)`,
+    options: [
+      String.raw`\sec x`,
+      String.raw`\sec^{2}x`,
+      String.raw`\sin x`,
+      String.raw`\tan x`
+    ]
+  }, {
+    shard: "d25i-ic7",
+    difficulty: "incline",
+    question: String.raw`\ln\left(x\tan x\right)`,
+    options: [
+      String.raw`\frac{1}{x}+\frac{\sec x}{\sin x}`,
+      String.raw`\frac{1}{x\tan x}`,
+      String.raw`\frac{\sec^{2}x}{x\tan x}`,
+      String.raw`\frac{x\tan x-x\sec^{2}x}{\tan x}`
+    ]
+  },
+
+  {
+    shard: "d25i-mf1",
+    difficulty: "manifold",
+    question: String.raw`x^{\left(x+1\right)}`,
+    options: [
+      String.raw`x^{\left(x+1\right)}\left(1+\ln x+\frac{1}{x}\right)`,
+      String.raw`x^{\left(x+1\right)}\left(1+\frac{\ln x}{x}\right)`,
+      String.raw`x^{\left(x+1\right)}\left(\ln x\right)\left(x+1\right)`,
+      String.raw`x^{\left(x+1\right)}\left(1+x+\ln x\right)`
+    ]
+  }, {
+    shard: "d25i-mf2",
+    difficulty: "manifold",
+    question: String.raw`\sin\left(x\right)\sin\left(2x\right)`,
+    options: [
+      String.raw`2\left(\left(\sin x\right)\left(\cos2x\right)+\left(\cos x\right)^{2}\left(\sin x\right)\right)`,
+      String.raw`2\cos\left(x\right)\cos\left(2x\right)`,
+      String.raw`\cos\left(x\right)\sin\left(2x\right)+\sin\left(x\right)\cos\left(2x\right)`,
+      String.raw`2\left(\sin x\right)\left(\cos^{2}x-\sin^{2}x\right)`
+    ]
+  },
 ].map(q => {
   q.options = q.options.map((latex, index) => ({ index, latex }));
   return q;

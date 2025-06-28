@@ -8,9 +8,9 @@ import { onMount } from "svelte";
 
 
 onMount(() => {  
-  $Site.questions.add("l");
+  $Site["q"].add("l");
   setTimeout(() => {
-    $Site.question.add("L");
+    $Site["Q"].add("L");
   }, 3000);
 });
 

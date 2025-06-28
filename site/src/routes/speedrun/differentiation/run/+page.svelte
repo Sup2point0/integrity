@@ -7,11 +7,13 @@ import { speedrun } from "#scripts/stores";
 
 import { display_time } from "#scripts/utils";
 
-import Meta from "#parts/page/meta.svelte";
-import Line from "#parts/page/line.svelte";
 import Katex from "#parts/katex.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
+import Tag from "#parts/ui/tag.svelte";
 import AnswerCards from "#parts/ui/answer-cards.svelte";
+
+import Meta from "#parts/page/meta.svelte";
+import Line from "#parts/page/line.svelte";
 
 import { fade } from "svelte/transition";
 import { onMount } from "svelte";
@@ -94,7 +96,9 @@ onMount(() => {
           <AnswerCards {question} />
         
         {:else}
-          <p> Um, we seem to be out of questions? </p>
+          <div class="cover" style:height="75vh">
+            <p> Um, we seem to be out of questions? </p>
+          </div>
         
         {/if}
       </div>
@@ -113,11 +117,18 @@ onMount(() => {
 </div>
 
 {#if $speedrun.run.started}
-  <div class="info">
+  <div class="info"
+    transition:fade={{ duration: 250 }}
+  >
     <section class="left">
       <p class="question-number">
         Question {$speedrun.run.question_hist.length}
       </p>
+
+      <Tag
+        kind={$speedrun.run.question?.difficulty}
+        tag={$speedrun.run.question?.difficulty}
+      />
     </section>
 
     <section class="centre">
@@ -195,9 +206,14 @@ nav {
     flex: 1 1 0;
   }
 
-  .question-number {
-    color: $col-text-deut;
-    font-size: 150%;
+  .left {
+    font-size: 120%;
+    
+    .question-number {
+      padding-bottom: 0.4em;
+      color: $col-text-deut;
+      font-size: 1.5rem;
+    }
   }
 
   .timer {
