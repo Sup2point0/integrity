@@ -49,7 +49,10 @@ import ArticleArray from "#parts/page/article-array.svelte";
       intern="guides/integrals"
       latex={"\\int f(x) \\, dx"}
     />
-    <Card title="Completing the Square" intern="guides/complete-square" />
+    <Card title="Completing the Square"
+      intern="guides/complete-square"
+      latex={"a(x-p)^2 + q"}
+    />
   </div>
 </section>
 
