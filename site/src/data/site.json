@@ -1,8 +1,8 @@
 {
   "meta": {
-    "exported": "2025-06-27",
-    "file_count": 37,
-    "page_count": 35
+    "exported": "2025-06-28",
+    "file_count": 38,
+    "page_count": 36
   },
   "index": {
     "docs": {
@@ -20,6 +20,7 @@
         "guides/integrals/adventures/-c.md",
         "guides/integrals/adventures/artanh.md",
         "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/adventures/what-good.md",
         "guides/integrals/antiderivatives/ln.md",
         "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md",
@@ -55,6 +56,7 @@
         "guides/integrals/adventures/-c.md",
         "guides/integrals/adventures/artanh.md",
         "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/adventures/what-good.md",
         "guides/integrals/antiderivatives/ln.md",
         "guides/integrals/antiderivatives/power-rule.md",
         "guides/integrals/antiderivatives/sec-3.md",
@@ -76,7 +78,8 @@
       "pages": [
         "guides/integrals/adventures/-c.md",
         "guides/integrals/adventures/artanh.md",
-        "guides/integrals/adventures/neat-trick.md"
+        "guides/integrals/adventures/neat-trick.md",
+        "guides/integrals/adventures/what-good.md"
       ]
     },
     "antiderivatives": {
@@ -117,6 +120,7 @@
       "guides/integrals/adventures/-c.md",
       "guides/integrals/adventures/artanh.md",
       "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/adventures/what-good.md",
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md",
@@ -143,6 +147,7 @@
       "guides/integrals/adventures/-c.md",
       "guides/integrals/adventures/artanh.md",
       "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/adventures/what-good.md",
       "guides/integrals/antiderivatives/ln.md",
       "guides/integrals/antiderivatives/power-rule.md",
       "guides/integrals/antiderivatives/sec-3.md",
@@ -161,7 +166,8 @@
     "adventures": [
       "guides/integrals/adventures/-c.md",
       "guides/integrals/adventures/artanh.md",
-      "guides/integrals/adventures/neat-trick.md"
+      "guides/integrals/adventures/neat-trick.md",
+      "guides/integrals/adventures/what-good.md"
     ],
     "antiderivatives": [
       "guides/integrals/antiderivatives/ln.md",
@@ -534,6 +540,34 @@
       ],
       "date": "2025-01-15",
       "date_display": "2025 January 15"
+    },
+    "guides/integrals/adventures/what-good.md": {
+      "path": "guides/integrals/adventures/what-good.md",
+      "last_deploy": "2025-06-28 17:23:00 +0100",
+      "slocs": 109,
+      "chars": 6663,
+      "isIndex": false,
+      "flags": [
+        "live",
+        "opin"
+      ],
+      "dest": "guides/integrals/adventures/what-good",
+      "title": "What Makes a Good Integral?",
+      "head": "What Makes a Good Integral?",
+      "capt": "On the beauty of integration",
+      "desc": "On the beauty of integration",
+      "index": [
+        "guides",
+        "integrals",
+        "adventures"
+      ],
+      "tags": [
+        "guides",
+        "integrals",
+        "adventures"
+      ],
+      "date": "2025-06-27",
+      "date_display": "2025 June 27"
     },
     "guides/integrals/antiderivatives/ln.md": {
       "path": "guides/integrals/antiderivatives/ln.md",

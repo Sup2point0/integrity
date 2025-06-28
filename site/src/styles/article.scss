@@ -67,7 +67,7 @@ article {
 
   p > a,
   ul li > a,
-  ol li > a {
+  > ol li > a {
     @include underline-link;
   }
 

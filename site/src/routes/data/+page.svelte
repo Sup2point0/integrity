@@ -174,7 +174,7 @@ function fix_integrity()
         <p class="label"> Secrets Found </p>
         <p class="count"> <span>{$userprefs.q?.size ?? 0}</span> of ? </p>
       </div>
-      <ProgressBar value={($userprefs.q?.size ?? 0) / 5} />
+      <ProgressBar value={($userprefs.q?.size ?? 0) / 9} />
     </section>
     
     <section>
@@ -182,7 +182,7 @@ function fix_integrity()
         <p class="label"> Secrets Solved </p>
         <p class="count"> <span>{$userprefs.Q?.size ?? 0}</span> of ? </p>
       </div>
-      <ProgressBar value={($userprefs.Q?.size ?? 0) / 5} />
+      <ProgressBar value={($userprefs.Q?.size ?? 0) / 9} />
     </section>
   </div>
 

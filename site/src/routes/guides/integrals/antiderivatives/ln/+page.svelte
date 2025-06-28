@@ -18,7 +18,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
 <Breadcrumbs levels={[
   { text: "Guides", intern: "guides" },
   { text: "Integration", intern: "guides/integrals" },
-  { text: "Antiderivatives", intern: "guides/integrals/antiderivatives" },
+  { text: "Antiderivatives", intern: "guides/integrals#antiderivatives" },
   { text: page.title },
 ]} />
 

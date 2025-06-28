@@ -55,7 +55,6 @@ let { page } = $props();
 <style lang="scss">
 
 section.banners {
-  margin: 2rem 0;
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;

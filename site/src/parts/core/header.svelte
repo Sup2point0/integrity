@@ -19,10 +19,17 @@ let { title, capt, page }: Props = $props();
 <header>
   <div class="info">
     <h1> {@html title ?? page?.head ?? "Untitled Page"} </h1>
-    <p> {@html capt ?? page?.capt ?? ""} </p>
+    <p class="capt"> {@html capt ?? page?.capt ?? ""} </p>
   </div>
 
   {#if page}
+    {#if page.date_display}
+      <p class="date"> Last updated <span>{page.date_display}</span> </p>
+      <div style:height="1rem"></div>
+    {:else}
+      <div style:height="2rem"></div>
+    {/if}
+
     <ArticleBanners {page} />
   {/if}
 </header>
@@ -52,6 +59,14 @@ p {
   @include font-ui;
   color: $col-text-deut;
   font-weight: 200;
+
+  &.date {
+    text-align: right;
+
+    span {
+      color: $col-deut;
+    }
+  }
 }
 
 </style>

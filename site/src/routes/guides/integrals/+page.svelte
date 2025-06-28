@@ -42,27 +42,27 @@ import Line from "#parts/page/line.svelte";
 </section>
 
 <section>
-  <h2> Antiderivatives </h2>
+  <h2 id="antiderivatives"> Antiderivatives </h2>
   <ArticleArray paths={Site.index.antiderivatives.pages} />
 </section>
 
 <section>
-  <h2> Methods </h2>
+  <h2 id="methods"> Methods </h2>
   <ArticleArray paths={Site.index.methods.pages} />
 </section>
 
 <!-- <section>
-  <h2> Strategies </h2>
+  <h2 id="strategies"> Strategies </h2>
   <ArticleArray paths={Site.index.strategies.pages} />
 </section> -->
 
 <section>
-  <h2> Collections </h2>
+  <h2 id="collections"> Collections </h2>
   <ArticleArray paths={Site.index.collections.pages} />
 </section>
 
 <section>
-  <h2> Adventures </h2>
+  <h2 id="adventures"> Adventures </h2>
   <ArticleArray paths={Site.index.adventures.pages} />
 </section>
 
