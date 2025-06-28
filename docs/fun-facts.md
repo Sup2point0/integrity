@@ -10,3 +10,4 @@ Here are some cool details about Integrity. Spoiler alert!
 - In the [question browser](https://sup2point0.github.io/integrity/questions/all), sorting by relevance moves solved questions to the end and flagged questions to the start.
 - In [Workspace](https://sup2point0.github.io/integrity/workspace), when loading questions the LaTeX is sanitised so that it’s compatible with Desmos.
   - For instance, $\sin^3{x}$ is converted to $\sin(x)^3$.
+- There are easter eggs <a href="fun-facts/alt"><span class="highlight">hidden</span></a> throughout *Integrity*.

@@ -33,10 +33,10 @@ onMount(() => {
 
 
 {#if live}
-    <p style="font-family: Gloria Hallelujah; font-size: 150%">
-      <br><br> {T.split("").map(c => String.fromCharCode(c.charCodeAt()-4)).join("")}
-      <br><br> {R.split("").map(c => String.fromCharCode(c.charCodeAt()+4)).join("")}
-    </p>
+  <p style="font-family: Gloria Hallelujah; font-size: 150%">
+    <br><br> {T.split("").map(c => String.fromCharCode(c.charCodeAt()-4)).join("")}
+    <br><br> {R.split("").map(c => String.fromCharCode(c.charCodeAt()+4)).join("")}
+  </p>
 
 {:else}
   <div class="grid">
