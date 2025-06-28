@@ -65,6 +65,7 @@ a.card {
   @include focus-outline;
 
   &.invalid {
+    pointer-events: none;
     opacity: 50%;
   }
 }
