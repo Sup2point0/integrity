@@ -7,7 +7,7 @@ export type Latex = string;
 /** A block of text, could be HTML or LaTeX. */
 export interface Block
 {
-  kind: "text" | "latex";
+  kind: "text" | "latex" | "desmos";
   content: string;
 }
 

@@ -10,6 +10,7 @@ import katex from "katex";
 import type { Block } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
+import Desmos from "#parts/desmos.svelte";
 
 
 interface Props {
@@ -24,6 +25,20 @@ let { source }: Props = $props();
 {#snippet block(source: Block)}
   {#if source.kind === "latex"}
     <Katex text={source.content} />
+
+  {:else if source.kind === "desmos"}
+    <div style:padding="2rem 0">
+      <Desmos
+        blocks={
+          source.content.split("\\\\")
+          .map(line => ({
+            kind: "desmos",
+            content: line,
+          }))
+        }
+        ratio={2 / 1}
+      />
+    </div>
 
   {:else}
     {@const chunks = source.content.split(/(\$[^$]+\$)/).map(

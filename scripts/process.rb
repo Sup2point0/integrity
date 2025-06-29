@@ -72,9 +72,9 @@ def extract_blocks(lines)
   ctx = nil
 
   lines.each do |line|
-    if ctx == "latex" and line.end_with?("```")
+    if (ctx == "latex" or ctx == "desmos") and line.end_with?("```")
       out.push({
-        "kind" => "latex",
+        "kind" => ctx,
         "content" => clean_breaks(load),
       })
       ctx = nil
@@ -91,6 +91,9 @@ def extract_blocks(lines)
 
     if line.start_with?("```math")
       ctx = "latex"
+      load = ""
+    elsif line.start_with?("```desmos")
+      ctx = "desmos"
       load = ""
     elsif ctx.nil? and not line.strip.empty?
       ctx = "text"

@@ -10,7 +10,7 @@ import type { Latex, Block, Question } from "#scripts/types";
 import SaveButtons from "#parts/page/save-buttons.svelte";
 import Tag from "#parts/ui/tag.svelte";
 import Katex from "#parts/katex.svelte";
-import DesmosPreview from "#parts/desmos-preview.svelte";
+import Desmos from "#parts/desmos.svelte";
 
 import { fade, slide } from "svelte/transition";
 import { base } from "$app/paths";
@@ -44,7 +44,7 @@ function check_valid(data: Array<any>): boolean
       {/if}
 
       {#if desmos}
-        <DesmosPreview blocks={desmos} bounds={question["graph-bounds"]} />
+        <Desmos blocks={desmos} bounds={question["graph-bounds"]} controls={false} />
       {/if}
     </div>
   {/if}

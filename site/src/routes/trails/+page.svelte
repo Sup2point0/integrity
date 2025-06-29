@@ -12,6 +12,7 @@ import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Banner from "#parts/page/banner.svelte";
 import Section from "#src/parts/page/section.svelte";
+    import { base } from "$app/paths";
 
 
 // temporary static data until we can get the endpoint working
@@ -194,7 +195,11 @@ for (let q of Site.get_questions_of_topic("integrals")) {
           <GraphBar {idx} freq={count} frac={(count ?? 0) / highest} />
 
           <div class="class-label">
-            {month}
+            {#if year === "2024"}
+              <a href="{base}/trails/integrity">Integrity</a>
+            {:else}
+              {month}
+            {/if}
           </div>
         </div>
       {/each}

@@ -38,9 +38,13 @@ let sections: [string, Block][] = $derived(
 </Header>
 
 {#if question?.desc}
-  <p>
-    {question.desc}
-  </p>
+  <article>
+    {#each question.desc as chunk}
+      <p>
+        {@html chunk}
+      </p>
+    {/each}
+  </article>
 {/if}
 
 {#each sections as [section, content]}

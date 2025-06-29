@@ -51,6 +51,11 @@ function load_question()
 </script>
 
 
+<svelte:head>
+  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</svelte:head>
+
+
 {#if children}
   {@render children()}
 {:else}

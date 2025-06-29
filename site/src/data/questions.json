@@ -7211,12 +7211,12 @@
       "desc": null,
       "date": "2025 April 17",
       "tags": [
-        "trig",
-        "poly angle"
+        "trig"
       ],
       "methods": [
         "fun",
-        "spot"
+        "spot",
+        "poly angle"
       ],
       "shard": "s25f-ct2",
       "question": [
@@ -8425,6 +8425,94 @@
           }
         ]
       }
+    },
+    "s25f-el2": {
+      "topic": "integrals",
+      "title": "meet and keet",
+      "desc": null,
+      "date": "2025 April 29",
+      "tags": [
+        "wack"
+      ],
+      "methods": [
+        "fun"
+      ],
+      "flags": [
+        "guide"
+      ],
+      "shard": "s25f-el2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\max(3, x)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Think about how you would integrate $\\max(0, x)$."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Applying translations may help."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "$\\max(0, x)$ is $0$ on the left. So is its integral!"
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "You can avoid anything piecewise with a little leverage of $\\max(0, x)$."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "3x+\\frac{1}{2}\\max\\left(0,\\ x-3\\right)^{2}-c"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "The graph of the integrand looks like this:"
+        },
+        {
+          "kind": "desmos",
+          "content": "\\max\\left(3,\\ x\\right)"
+        },
+        {
+          "kind": "text",
+          "content": "So the area grows linearly until $x = 3$, then quadratically for $x > 3$. If we split the graph into a rectangle and a triangle, then it looks like a translated activation function (ReLU) added to a constant:"
+        },
+        {
+          "kind": "desmos",
+          "content": "f\\left(x\\right)=3 \\\\g\\left(x\\right)=\\max\\left(0,\\ x\\right) \\\\f\\left(x\\right)+g\\left(x-3\\right) \\\\"
+        },
+        {
+          "kind": "text",
+          "content": "Hence"
+        },
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int \\max\\left(3,\\ x\\right)\\ dx  \\\\ =&\\ \\int 3+\\max\\left(0,\\ x-3\\right)\\ dx  \\\\ =&\\ 3\\int dx+\\int \\max\\left(0,\\ x-3\\right)\\ dx\\end{align*}"
+        },
+        {
+          "kind": "text",
+          "content": "Integrating the ReLU becomes essentially another activation – on the left it’s $0$, on the right it’s a quadratic. We can achieve this by feeding the ReLU itself to the quadratic."
+        },
+        {
+          "kind": "latex",
+          "content": "= 3x+\\frac{1}{2}\\max\\left(0,\\ x-3\\right)^{2}-c"
+        }
+      ]
     },
     "s25f-em1": {
       "topic": "integrals",
@@ -10044,7 +10132,7 @@
         "simplify": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ fg-\\int_{\\ }^{\\ }f'g\\ dx  \\\\ =&\\ \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\int_{\\ }^{\\ }\\frac{1}{2}x^{2}\\cdot\\frac{2}{3x^{1/3}\\sqrt{1-x^{4/3}}}\\ dx  \\\\ =&\\ \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\frac{1}{3}\\int_{\\ }^{\\ }\\frac{x^{5/3}}{\\sqrt{1-x^{4/3}}}\\ dx  \\\\ =&\\ \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\frac{1}{3}\\int_{\\ }^{\\ }\\frac{x^{4/3}\\cdot x^{1/3}}{\\sqrt{1-x^{4/3}}}\\ dx\\end{align*}"
+            "content": "\\begin{align*}  &\\ fg-\\int f'g\\ dx  \\\\ =&\\ \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\int \\frac{1}{2}x^{2}\\cdot\\frac{2}{3x^{1/3}\\sqrt{1-x^{4/3}}}\\ dx  \\\\ =&\\ \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\frac{1}{3}\\int \\frac{x^{5/3}}{\\sqrt{1-x^{4/3}}}\\ dx  \\\\ =&\\ \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\frac{1}{3}\\int \\frac{x^{4/3}\\cdot x^{1/3}}{\\sqrt{1-x^{4/3}}}\\ dx\\end{align*}"
           }
         ],
         "substitute": [
@@ -10056,7 +10144,7 @@
         "solve": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\frac{1}{3}\\int_{\\ }^{\\ }\\frac{1-t}{\\sqrt{t}}\\cdot-\\frac{3}{4}\\ dx  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{1-t}{\\sqrt{t}}\\ dx  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{1}{\\sqrt{t}}-\\sqrt{t}\\ dx  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{t}-\\frac{1}{4}\\cdot\\frac{2}{3}t^{3/2}  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{1-x^{4/3}}-\\frac{1}{6}\\left(1-x^{4/3}\\right)^{3/2}-c\\end{align*}"
+            "content": "\\begin{align*}  &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)-\\frac{1}{3}\\int \\frac{1-t}{\\sqrt{t}}\\cdot-\\frac{3}{4}\\ dx  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{4}\\int \\frac{1-t}{\\sqrt{t}}\\ dx  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{4}\\int \\frac{1}{\\sqrt{t}}-\\sqrt{t}\\ dx  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{t}-\\frac{1}{4}\\cdot\\frac{2}{3}t^{3/2}  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{1-x^{4/3}}-\\frac{1}{6}\\left(1-x^{4/3}\\right)^{3/2}-c\\end{align*}"
           }
         ]
       },
@@ -10074,7 +10162,7 @@
         "parts": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &\\ \\int_{\\ }^{\\ }x\\arcsin\\left(x^{2/3}\\right)\\ dx  \\\\ =&\\ \\int_{\\ }^{\\ }t^{3/2}\\arcsin\\left(t\\right)\\cdot\\frac{3}{2}t^{1/2}\\ dt  \\\\ =&\\ \\frac{3}{2}\\int_{\\ }^{\\ }t^{2}\\arcsin t\\ dt  \\\\ =&\\ \\frac{3}{2}\\left[\\frac{1}{3}t^{3}\\arcsin t-\\int_{\\ }^{\\ }\\frac{1}{3}t^{3}\\cdot\\frac{1}{\\sqrt{1-t^{2}}}\\ dt\\right]  \\\\ =&\\ \\frac{1}{2}t^{3}\\arcsin t-\\frac{1}{2}\\int_{\\ }^{\\ }\\frac{t^{3}}{\\sqrt{1-t^{2}}}\\ dt  \\\\ =&\\ \\frac{1}{2}t^{3}\\arcsin t-\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{t^{2}\\cdot2t}{\\sqrt{1-t^{2}}}\\ dt\\end{align*}"
+            "content": "\\begin{align*}  &\\ \\int x\\arcsin\\left(x^{2/3}\\right)\\ dx  \\\\ =&\\ \\int t^{3/2}\\arcsin\\left(t\\right)\\cdot\\frac{3}{2}t^{1/2}\\ dt  \\\\ =&\\ \\frac{3}{2}\\int t^{2}\\arcsin t\\ dt  \\\\ =&\\ \\frac{3}{2}\\left[\\frac{1}{3}t^{3}\\arcsin t-\\int \\frac{1}{3}t^{3}\\cdot\\frac{1}{\\sqrt{1-t^{2}}}\\ dt\\right]  \\\\ =&\\ \\frac{1}{2}t^{3}\\arcsin t-\\frac{1}{2}\\int \\frac{t^{3}}{\\sqrt{1-t^{2}}}\\ dt  \\\\ =&\\ \\frac{1}{2}t^{3}\\arcsin t-\\frac{1}{4}\\int \\frac{t^{2}\\cdot2t}{\\sqrt{1-t^{2}}}\\ dt\\end{align*}"
           }
         ],
         "substitute": [
@@ -10086,7 +10174,7 @@
         "solve": [
           {
             "kind": "latex",
-            "content": "\\begin{align*}  &= \\frac{1}{2}t^{3}\\arcsin t-\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{1-v}{\\sqrt{v}}\\cdot-dv  \\\\ &= \\frac{1}{2}t^{3}\\arcsin t+\\frac{1}{4}\\int_{\\ }^{\\ }\\frac{1}{\\sqrt{v}}-\\sqrt{v}\\ dv  \\\\ &= \\frac{1}{2}t^{3}\\arcsin t+\\frac{1}{2}\\sqrt{v}-\\frac{1}{4}\\cdot\\frac{2}{3}v^{3/2}  \\\\ &= \\frac{1}{2}t^{3}\\arcsin t+\\frac{1}{2}\\sqrt{1-t^{2}}-\\frac{1}{6}\\left(1-t^{2}\\right)^{3/2}  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{1-x^{4/3}}-\\frac{1}{6}\\left(1-x^{4/3}\\right)^{3/2}-c\\end{align*}"
+            "content": "\\begin{align*}  &= \\frac{1}{2}t^{3}\\arcsin t-\\frac{1}{4}\\int \\frac{1-v}{\\sqrt{v}}\\cdot-dv  \\\\ &= \\frac{1}{2}t^{3}\\arcsin t+\\frac{1}{4}\\int \\frac{1}{\\sqrt{v}}-\\sqrt{v}\\ dv  \\\\ &= \\frac{1}{2}t^{3}\\arcsin t+\\frac{1}{2}\\sqrt{v}-\\frac{1}{4}\\cdot\\frac{2}{3}v^{3/2}  \\\\ &= \\frac{1}{2}t^{3}\\arcsin t+\\frac{1}{2}\\sqrt{1-t^{2}}-\\frac{1}{6}\\left(1-t^{2}\\right)^{3/2}  \\\\ &= \\frac{1}{2}x^{2}\\arcsin\\left(x^{2/3}\\right)+\\frac{1}{2}\\sqrt{1-x^{4/3}}-\\frac{1}{6}\\left(1-x^{4/3}\\right)^{3/2}-c\\end{align*}"
           }
         ]
       }
@@ -11008,6 +11096,122 @@
         ]
       }
     },
+    "s25f-hr3": {
+      "topic": "integrals",
+      "title": "absolute horror.",
+      "desc": null,
+      "date": "2025 June 9",
+      "tags": [
+        "horror",
+        "trig",
+        "ln"
+      ],
+      "methods": [
+        "tough",
+        "spot"
+      ],
+      "shard": "s25f-hr3",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int  \\frac    { \\tan{x} + \\left( x\\ln{x} \\right)^{-1} }    {      \\left( \\ln{x}\\tan{x} \\right)^2 +      \\left( \\ln{x} + 1 \\right)^2 -      \\ln( x^2 )    }\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Start by simplifying the denominator."
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Use the fact that $\\tan(x)^2 + 1 = \\sec(x)^2$."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Try getting the denominator into a form involving only $\\ln(x)\\sec(x)$."
+          }
+        ],
+        "4": [
+          {
+            "kind": "text",
+            "content": "Now substitute!"
+          }
+        ],
+        "5": [
+          {
+            "kind": "text",
+            "content": "The rest is partial fractions."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\ln\\left(\\ln x\\sec x\\right)-\\frac{1}{2}\\ln\\left(\\left(\\ln x\\sec x\\right)^{2}+1\\right)"
+        }
+      ],
+      "solution": {
+        "factorise": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\frac{\\tan x+\\left(x\\ln x\\right)^{-1}}{\\left(\\ln x\\tan x\\right)^{2}+\\left(\\ln x+1\\right)^{2}-\\ln\\left(x^{2}\\right)}  \\\\ =&\\ \\int \\frac{\\tan x+\\left(x\\ln x\\right)^{-1}}{\\left(\\ln x\\right)^{2}\\left(\\tan x\\right)^{2}+\\left(\\ln x\\right)^{2}+2\\ln x+1-2\\ln x}\\ dx  \\\\ =&\\ \\int \\frac{\\tan x+\\left(x\\ln x\\right)^{-1}}{\\left(\\ln x\\right)^{2}\\left(\\tan^{2}x+1\\right)+1}\\ dx  \\\\ =&\\ \\int \\frac{\\tan x+\\left(x\\ln x\\right)^{-1}}{\\left(\\ln x\\right)^{2}\\left(\\sec^{2}x\\right)+1}\\ dx  \\\\ =&\\ \\int \\frac{\\tan x+\\left(x\\ln x\\right)^{-1}}{\\left(\\ln x\\sec x\\right)^{2}+1}\\ dx\\end{align*}"
+          }
+        ],
+        "substitute": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\ln x\\sec x &= t  \\\\ \\left(\\frac{1}{x}\\sec x+\\ln x\\sec x\\tan x\\right)\\ dx &= dt  \\\\ \\left(\\frac{1}{x\\ln x}\\left(\\ln x\\sec x\\right)+\\left(\\ln x\\sec x\\right)\\left(\\tan x\\right)\\right)\\ dx &= dt  \\\\ \\left(\\ln x\\sec x\\right)\\left(\\left(x\\ln x\\right)^{-1}+\\tan x\\right)\\ dx &= dt  \\\\ \\left(\\tan x+\\left(x\\ln x\\right)^{-1}\\right)\\ dx &= \\frac{1}{t}\\ dt\\end{align*}"
+          }
+        ],
+        "simplify": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &= \\int \\frac{1}{t^{2}+1}\\cdot\\frac{1}{t}\\ dt  \\\\ &= \\int \\frac{1}{t\\left(t^{2}+1\\right)}\\ dt\\end{align*}"
+          }
+        ],
+        "partial fractions": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\frac{1}{t\\left(t^{2}+1\\right)} &= \\frac{p}{t}+\\frac{qt+r}{t^{2}+1}  \\\\ 1 &= p\\left(t^{2}+1\\right)+qt^{2}+rt\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Let $t = 0$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  1 &= p\\left(0+1\\right)+0+0  \\\\ p &= 1\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Equate coefficients of $t^2$:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  0 &= p+q  \\\\ q &= -p  \\\\   &= -1\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Equate coefficients of $t$:"
+          },
+          {
+            "kind": "latex",
+            "content": "0 = r"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{1}{t\\left(t^{2}+1\\right)}\\ dt  \\\\ =&\\ \\int \\frac{1}{t}-\\frac{t}{t^{2}+1}\\ dt  \\\\ =&\\ \\ln t-\\frac{1}{2}\\ln\\left(t^{2}+1\\right)  \\\\ =&\\ \\ln\\left(\\ln x\\sec x\\right)-\\frac{1}{2}\\ln\\left(\\left(\\ln x\\sec x\\right)^{2}+1\\right)\\end{align*}"
+          }
+        ]
+      }
+    },
     "s25f-ht1": {
       "topic": "integrals",
       "title": "hyperactive",
@@ -11849,6 +12053,126 @@
           "content": "You can also multiply through by $\\sec{x} - \\tan{x}$ straight from the start, it’s just doing the above in 1 step."
         }
       ]
+    },
+    "s25f-iv3": {
+      "topic": "integrals",
+      "title": "inductive hypothesis",
+      "desc": null,
+      "date": "2025 May 12",
+      "tags": [
+        "definite",
+        "scare",
+        "trig",
+        "elite"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-iv3",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{-\\pi/4}^{\\pi/4}  \\left(    \\prod_{n=1}^{      \\operatorname{round}(10^7 \\pi)    } \\frac      { d^n }      { dx^n }    \\, x \\tan{x}  \\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Yes, it’s odd. How do you prove that?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Consider the parities of the derivatives."
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Consider how you could show the parity of the product."
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$0$"
+        }
+      ],
+      "solution": {
+        "parity of differentiation": [
+          {
+            "kind": "text",
+            "content": "We can show the derivative of an odd function is even:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  f\\left(x\\right) &= -f\\left(-x\\right)  \\\\ f'\\left(x\\right) &= -f'\\left(-x\\right)\\cdot-1  \\\\ f'\\left(x\\right) &= f'\\left(-x\\right)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "And we can show the derivative of an even function is odd:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  g\\left(x\\right) &= g\\left(-x\\right)  \\\\ g'\\left(x\\right) &= g'\\left(-x\\right)\\cdot-1  \\\\ g'\\left(x\\right) &= -g'\\left(-x\\right)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Since $\\tan(x)$ is odd, this means its first derivative is even, its second derivative is odd, and so on – the parity will alternate with each derivative we take. If $n$ is even, then the $n$-th derivative is odd, and vice versa."
+          }
+        ],
+        "parity of multiplication": [
+          {
+            "kind": "text",
+            "content": "Multiplying an odd and even function produces an odd function:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  p\\left(x\\right) &= f\\left(x\\right)g\\left(x\\right)  \\\\ p\\left(-x\\right) &= f\\left(-x\\right)g\\left(-x\\right)  \\\\   &= -f\\left(x\\right)g\\left(x\\right)  \\\\ p\\left(x\\right) &= -p\\left(-x\\right)\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Multiplying 2 odd functions produces an even function:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  q\\left(x\\right) &= f\\left(x\\right)f\\left(x\\right)  \\\\ q\\left(-x\\right) &= f\\left(-x\\right)f\\left(-x\\right)  \\\\   &= \\left(-f\\left(x\\right)\\right)\\left(-f\\left(x\\right)\\right)  \\\\   &= f\\left(x\\right)f\\left(x\\right)  \\\\ q\\left(x\\right) &= q\\left(-x\\right)\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "text",
+            "content": "The bounds of the integral are symmetric, meaning if the integrand is odd, then the areas will cancel. Yes, you can probably guess that they do – but how do we prove that?<br><br>Consider how many terms the product has:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\operatorname{round}\\left(10^{7}\\pi\\right) &= \\operatorname{round}\\left(3.14159265...\\times10^{7}\\right)  \\\\   &= \\operatorname{round}\\left(31415926.5...\\right)  \\\\   &= 31415927\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "Since this is odd, the $31415927$-th derivative is even. So our product of derivatives starts and ends with even functions:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\text{even} \\times \\text{odd} \\times \\text{even} \\times...\\times \\text{even} \\times \\text{odd} \\times \\text{even}"
+          },
+          {
+            "kind": "text",
+            "content": "Taking off 1 even at the end, this means half of the derivatives are odd:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\frac{31415927-1}{2} = 15707963"
+          },
+          {
+            "kind": "text",
+            "content": "Remember that multiplying 2 odd functions produces an even function, so $15707962$ of those derivatives will pair up to form even functions, leaving exactly 1 leftover odd derivative. (In other words, multiplying an odd number of functions produces an odd function.)<br><br>This means our overall integrand is indeed odd. Finally for a domain check, $\\displaystyle \\left[ \\frac{-\\pi}{4}, \\frac{\\pi}{4} \\right]$ is well within $\\displaystyle \\left( \\frac{-\\pi}{2}, \\frac{\\pi}{2} \\right)$, so $\\tan(x)$ and its derivatives will all be defined and continuous. Hence our positive and negative areas cancel out to give $0$."
+          }
+        ]
+      }
     },
     "s25f-jc1": {
       "topic": "integrals",
@@ -14492,6 +14816,103 @@
           {
             "kind": "latex",
             "content": "\\begin{align*}  &= 8\\int t\\ln t\\ dt  \\\\ &= 8\\left[\\frac{1}{2}t^{2}\\ln t-\\int \\frac{1}{2}t^{2}\\cdot\\frac{1}{t}\\ dt\\right]  \\\\ &= 4t^{2}\\ln t-4\\int t\\ dt  \\\\ &= 4t^{2}\\ln t-2t^{2}  \\\\ &= 4\\left(\\frac{\\sin2x}{2}\\right)^{2}\\ln\\left(\\frac{\\sin2x}{2}\\right)-2\\left(\\frac{\\sin2x}{2}\\right)^{2}  \\\\ &= \\left(\\sin2x\\right)^{2}\\ln\\left(\\frac{\\sin2x}{2}\\right)-\\frac{1}{2}\\left(\\sin2x\\right)^{2}-c\\end{align*}"
+          }
+        ]
+      }
+    },
+    "s25f-ot1": {
+      "topic": "integrals",
+      "title": "ostentatious",
+      "desc": null,
+      "date": "2025 June 1",
+      "tags": [
+        "definite",
+        "poly",
+        "pi"
+      ],
+      "methods": [
+        "spot"
+      ],
+      "shard": "s25f-ot1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{\\pi}^{2e-\\pi}  ( x - e)  ( x - \\pi )  ( x - 2e + \\pi )\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "When would a cubic’s integral cancel out to $0$?"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "How could you show that?"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "When does a $\\sin(x)$ wave’s area cancel out to $0$?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$0$"
+        }
+      ],
+      "solution": {
+        "reshape": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int_{\\pi}^{2e-\\pi}\\left(x-e\\right)\\left(x-\\pi\\right)\\left(x-2e+\\pi\\right)\\ dx  \\\\ =&\\ \\int_{\\pi}^{2e-\\pi}\\left(x-e\\right)\\left(x-\\pi\\right)\\left(x-\\left(2e-\\pi\\right)\\right)\\ dx\\end{align*}"
+          }
+        ],
+        "root order": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  e &< \\pi  \\\\ e-\\pi &< 0  \\\\ e-\\pi+e &< e  \\\\ 2e-\\pi &< e\\end{align*}"
+          },
+          {
+            "kind": "text",
+            "content": "So the cubic has, in ascending order, roots:"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\alpha &= 2e-\\pi  \\\\ \\beta &= e  \\\\ \\gamma &= \\pi\\end{align*}"
+          }
+        ],
+        "root spacing": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\Delta_{1} &= \\beta-\\alpha  \\\\   &= e-\\left(2e-\\pi\\right)  \\\\   &= e-2e+\\pi  \\\\   &= \\pi-e\\end{align*}"
+          },
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  \\Delta_{2} &= \\gamma-\\beta  \\\\   &= \\pi-e\\end{align*}"
+          }
+        ],
+        "solve": [
+          {
+            "kind": "text",
+            "content": "Since $\\Delta_1 = \\Delta_2$, the cubic is symmetric in the $x$-axis."
+          },
+          {
+            "kind": "desmos",
+            "content": "\\left(x-e\\right)\\left(x-\\pi\\right)\\left(x-\\left(2e-\\pi\\right)\\right)"
+          },
+          {
+            "kind": "text",
+            "content": "Since the bounds are $\\alpha$ and $\\gamma$, the positive and negative areas are identical and cancel out to 0."
+          },
+          {
+            "kind": "latex",
+            "content": "\\int_{\\pi}^{2e-\\pi}\\left(x-e\\right)\\left(x-\\pi\\right)\\left(x-\\left(2e-\\pi\\right)\\right)\\ dx = 0"
           }
         ]
       }
@@ -18597,6 +19018,46 @@
         ]
       }
     },
+    "s25f-tf2": {
+      "topic": "integrals",
+      "title": "together forever",
+      "desc": "nothing to see here",
+      "date": "2025 April 1",
+      "tags": [
+        "definite"
+      ],
+      "methods": [
+        "spot",
+        "troll"
+      ],
+      "shard": "s25f-tf2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{0}^{1}\\frac{x\\left(2-3x\\right)}{3}+\\tan\\left(x-\\frac{1}{2}\\right)\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Odd question, isn’t it?"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "text",
+          "content": "$0$"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "latex",
+          "content": "\\begin{align*}  &\\ \\int_{0}^{1}\\frac{x\\left(2-3x\\right)}{3}+\\tan\\left(x-\\frac{1}{2}\\right)\\ dx  \\\\ =&\\ \\int_{0}^{1}\\frac{2x\\left(1-\\frac{3}{2}x\\right)}{3}+\\tan\\left(x-\\frac{1}{2}\\right)\\ dx  \\\\ =&\\ 0\\end{align*}"
+        }
+      ]
+    },
     "s25f-th1": {
       "topic": "integrals",
       "title": "catalyst",
@@ -21298,13 +21759,72 @@
           }
         ]
       }
+    },
+    "s25p-ct1": {
+      "topic": "integrals",
+      "title": "cortisol",
+      "desc": "writing integrals is cope for stress fr fr",
+      "date": "2025 June 9",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "fun",
+        "speed",
+        "poly angle"
+      ],
+      "shard": "s25p-ct1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int \\frac{\\left(\\sec x\\right)^{2}\\left(\\csc x\\right)^{2}}{\\tan x-\\cot x}\\ dx"
+        }
+      ],
+      "hints": {
+        "1": [
+          {
+            "kind": "text",
+            "content": "Reduce to primitives!"
+          }
+        ],
+        "2": [
+          {
+            "kind": "text",
+            "content": "Multiply through!"
+          }
+        ],
+        "3": [
+          {
+            "kind": "text",
+            "content": "Collapse, collapse, collapse!"
+          }
+        ]
+      },
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\ln\\left(\\csc4x+\\cot4x\\right)-c"
+        }
+      ],
+      "solution": {
+        "compound angles": [
+          {
+            "kind": "latex",
+            "content": "\\begin{align*}  &\\ \\int \\frac{\\left(\\sec x\\right)^{2}\\left(\\csc x\\right)^{2}}{\\tan x-\\cot x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\sec x\\right)^{2}\\left(\\csc x\\right)^{2}}{\\tan x-\\cot x}\\cdot\\frac{\\sin x\\cos x}{\\sin x\\cos x}\\ dx  \\\\ =&\\ \\int \\frac{\\left(\\sec x\\right)\\left(\\csc x\\right)}{\\left(\\sin x\\right)^{2}-\\left(\\cos x\\right)^{2}}\\ dx  \\\\ =&\\ -\\int \\frac{1}{\\left(\\sin x\\cos x\\right)\\left(\\cos^{2}x-\\sin^{2}x\\right)}\\ dx  \\\\ =&\\ -2\\int \\frac{1}{\\sin2x\\cos2x}\\ dx  \\\\ =&\\ -4\\int \\frac{1}{\\sin4x}\\ dx  \\\\ =&\\ -\\int 4\\csc4x\\ dx  \\\\ =&\\ \\ln\\left(\\csc4x+\\cot4x\\right)-c\\end{align*}"
+          }
+        ]
+      }
     }
   },
   "special": {
     "f24ps-ox1": {
       "topic": "special",
       "title": "A Graph Drawing Interview Question",
-      "desc": "This is an Oxbridge-style interview question I wrote for my friends. I’m quite proud of it since it builds up very naturally (heh), tests a lot of graph drawing skills, and links to many graph-related topics.\n\nAs is standard in problem-solving-based interviews, you’re given guidance and nudges in the right direction throughout. Of course in a real interview the interviewer can vary their help based on what you’ve done, but for a webpage this is a much harder task.\n\nAs such, you may find that some hints are irrelevant to you, in which case you can just ignore them. I would recommend revealing all the hints before checking the final answer, so that you can catch a mistake if you’ve made one and give the question another try.\n",
+      "desc": [
+        "This is an Oxbridge-style interview question I wrote for my friends. I’m quite proud of it since it builds up very naturally (heh), tests a lot of graph drawing skills, and links to many graph-related topics.",
+        "As is standard in problem-solving-based interviews, you’re given guidance and nudges in the right direction throughout. Of course in a real interview the interviewer can vary their help based on what you’ve done, but for a webpage this is a much harder task.",
+        "As such, you may find that some hints are irrelevant to you, in which case you can just ignore them. I would recommend revealing all the hints before checking the final answer, so that you can catch a mistake if you’ve made one and give the question another try."
+      ],
       "date": "2024 November 27",
       "tags": [
         "graph drawing",
@@ -21352,12 +21872,8 @@
             "content": "Your graph should look like this:"
           },
           {
-            "kind": "text",
-            "content": "```desmos"
-          },
-          {
-            "kind": "text",
-            "content": "```"
+            "kind": "desmos",
+            "content": "y = \\ln\\left( \\frac{1}{x^2} \\right)"
           }
         ],
         "solution": [
@@ -21379,15 +21895,11 @@
           },
           {
             "kind": "text",
-            "content": "> [!Note]> We could also use a complex-valued logarithm, but this is unrealistic to draw.<br><br>This is simply a flipped $\\ln(x)$ graph, which is also reflected in the $y$ axis:"
+            "content": "This is simply a flipped $\\ln(x)$ graph, which is also reflected in the $y$ axis:"
           },
           {
-            "kind": "text",
-            "content": "```desmos"
-          },
-          {
-            "kind": "text",
-            "content": "```"
+            "kind": "desmos",
+            "content": "y = \\ln\\left( \\frac{1}{x^2} \\right)"
           }
         ]
       },
@@ -21438,12 +21950,8 @@
             "content": "Your graph should look like this:"
           },
           {
-            "kind": "text",
-            "content": "```desmos"
-          },
-          {
-            "kind": "text",
-            "content": "```"
+            "kind": "desmos",
+            "content": "y = e^{\\left(1/x\\right)}"
           }
         ]
       },
@@ -21544,12 +22052,8 @@
             "content": "Your graph should look like this:"
           },
           {
-            "kind": "text",
-            "content": "```desmos"
-          },
-          {
-            "kind": "text",
-            "content": "```"
+            "kind": "desmos",
+            "content": "y = \\frac{\\ln\\left( \\frac{1}{x^2} \\right)}{e^{\\left(1/x\\right)}}"
           }
         ]
       },
@@ -21598,12 +22102,8 @@
             "content": "Your graph should look like this:"
           },
           {
-            "kind": "text",
-            "content": "```desmos"
-          },
-          {
-            "kind": "text",
-            "content": "```"
+            "kind": "desmos",
+            "content": "y = \\ln\\left( \\frac{1}{x^2} \\right) \\cdot e^{\\left(1/x\\right)}"
           }
         ],
         "thought": [

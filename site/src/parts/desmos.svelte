@@ -1,4 +1,4 @@
-<!-- @component DesmosPreview
+<!-- @component Desmos
 
 A graph rendered by Desmos.
 -->
@@ -11,10 +11,12 @@ import { onMount } from "svelte";
 
 interface Props {
   blocks: Block | Block[];
+  controls?: boolean;
+  ratio?: number;
   bounds?: number;
 }
 
-let { blocks, bounds = 2 }: Props = $props();
+let { blocks, controls = true, ratio = 1, bounds = controls ? undefined : 2 }: Props = $props();
 
 
 let desmos: any | false | null = $state(null);
@@ -31,6 +33,8 @@ onMount(() => {
   });
 
   observer.observe(self);
+
+  console.info("sup guys, don’t worry, I have seen this notice – when I originally emailed Desmos asking for a production key, they told me I could just use the prototype key, so it’s all good o7");
 });
 
 function try_load_desmos()
@@ -43,17 +47,20 @@ function try_load_desmos()
   }
 
   desmos = Desmos.GraphingCalculator(self, {
-    expressions: false, keypad: false,
-    graphPaper: false, showGrid: false,
-    settingsMenu: false,
-    lockViewport: true, zoomButtons: false,
-    showXAxis: false, showYAxis: false,
-    xAxisNumbers: false, yAxisNumbers: false,
+    expressions: controls, keypad: false,
+    graphPaper: false, showGrid: controls,
+    settingsMenu: controls,
+    lockViewport: !controls, zoomButtons: controls,
+    showXAxis: controls, showYAxis: controls,
+    xAxisNumbers: controls, yAxisNumbers: controls,
   });
-  desmos.setMathBounds({
-    left: -bounds, right: bounds,
-    bottom: -bounds, top: bounds,
-  });
+
+  if (bounds) {
+    desmos.setMathBounds({
+      left: -bounds, right: bounds,
+      bottom: -bounds, top: bounds,
+    });
+  }
 
   if (Array.isArray(blocks)) {
     desmos.setExpressions(
@@ -80,8 +87,9 @@ function pick_col()
 </script>
 
 
-<div class="desmos-preview"
+<div class="desmos"
   bind:this={self}
+  style:aspect-ratio={ratio}
 >
   {#if desmos === false}
     Error loading Desmos preview =(
@@ -93,11 +101,10 @@ function pick_col()
 
 <style lang="scss">
 
-.desmos-preview {
+.desmos {
   width: 100%;
   min-width: 12rem;
   max-width: 100%;
-  aspect-ratio: 1;
 }
 
 </style>

@@ -31,8 +31,6 @@ let last_reset: number = Date.now();
 
 onMount(() => {
   try_load_desmos();
-  console.info("sup guys, don’t worry, I have seen this notice – when I originally emailed Desmos asking for a production key, they told me I could just use the prototype key, so it’s all good o7");
-  
 });
 
 /** Try load the question from the shard provided in the URL params. */
