@@ -53,10 +53,10 @@ Either order works.
 ### Simplify
 ```math
 \begin{align*}
-  &\ fg-\int_{\ }^{\ }f'g\ dx
-  \\ =&\ \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)-\int_{\ }^{\ }\frac{1}{2}x^{2}\cdot\frac{2}{3x^{1/3}\sqrt{1-x^{4/3}}}\ dx
-  \\ =&\ \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)-\frac{1}{3}\int_{\ }^{\ }\frac{x^{5/3}}{\sqrt{1-x^{4/3}}}\ dx
-  \\ =&\ \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)-\frac{1}{3}\int_{\ }^{\ }\frac{x^{4/3}\cdot x^{1/3}}{\sqrt{1-x^{4/3}}}\ dx
+  &\ fg-\int f'g\ dx
+  \\ =&\ \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)-\int \frac{1}{2}x^{2}\cdot\frac{2}{3x^{1/3}\sqrt{1-x^{4/3}}}\ dx
+  \\ =&\ \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)-\frac{1}{3}\int \frac{x^{5/3}}{\sqrt{1-x^{4/3}}}\ dx
+  \\ =&\ \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)-\frac{1}{3}\int \frac{x^{4/3}\cdot x^{1/3}}{\sqrt{1-x^{4/3}}}\ dx
 \end{align*}
 ```
 
@@ -73,9 +73,9 @@ Either order works.
 ### Solve
 ```math
 \begin{align*}
-  &= \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)-\frac{1}{3}\int_{\ }^{\ }\frac{1-t}{\sqrt{t}}\cdot-\frac{3}{4}\ dx
-  \\ &= \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)+\frac{1}{4}\int_{\ }^{\ }\frac{1-t}{\sqrt{t}}\ dx
-  \\ &= \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)+\frac{1}{4}\int_{\ }^{\ }\frac{1}{\sqrt{t}}-\sqrt{t}\ dx
+  &= \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)-\frac{1}{3}\int \frac{1-t}{\sqrt{t}}\cdot-\frac{3}{4}\ dx
+  \\ &= \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)+\frac{1}{4}\int \frac{1-t}{\sqrt{t}}\ dx
+  \\ &= \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)+\frac{1}{4}\int \frac{1}{\sqrt{t}}-\sqrt{t}\ dx
   \\ &= \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)+\frac{1}{2}\sqrt{t}-\frac{1}{4}\cdot\frac{2}{3}t^{3/2}
   \\ &= \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)+\frac{1}{2}\sqrt{1-x^{4/3}}-\frac{1}{6}\left(1-x^{4/3}\right)^{3/2}-c
 \end{align*}
@@ -98,12 +98,12 @@ You can also substitute first!
 ### Parts
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }x\arcsin\left(x^{2/3}\right)\ dx
-  \\ =&\ \int_{\ }^{\ }t^{3/2}\arcsin\left(t\right)\cdot\frac{3}{2}t^{1/2}\ dt
-  \\ =&\ \frac{3}{2}\int_{\ }^{\ }t^{2}\arcsin t\ dt
-  \\ =&\ \frac{3}{2}\left[\frac{1}{3}t^{3}\arcsin t-\int_{\ }^{\ }\frac{1}{3}t^{3}\cdot\frac{1}{\sqrt{1-t^{2}}}\ dt\right]
-  \\ =&\ \frac{1}{2}t^{3}\arcsin t-\frac{1}{2}\int_{\ }^{\ }\frac{t^{3}}{\sqrt{1-t^{2}}}\ dt
-  \\ =&\ \frac{1}{2}t^{3}\arcsin t-\frac{1}{4}\int_{\ }^{\ }\frac{t^{2}\cdot2t}{\sqrt{1-t^{2}}}\ dt
+  &\ \int x\arcsin\left(x^{2/3}\right)\ dx
+  \\ =&\ \int t^{3/2}\arcsin\left(t\right)\cdot\frac{3}{2}t^{1/2}\ dt
+  \\ =&\ \frac{3}{2}\int t^{2}\arcsin t\ dt
+  \\ =&\ \frac{3}{2}\left[\frac{1}{3}t^{3}\arcsin t-\int \frac{1}{3}t^{3}\cdot\frac{1}{\sqrt{1-t^{2}}}\ dt\right]
+  \\ =&\ \frac{1}{2}t^{3}\arcsin t-\frac{1}{2}\int \frac{t^{3}}{\sqrt{1-t^{2}}}\ dt
+  \\ =&\ \frac{1}{2}t^{3}\arcsin t-\frac{1}{4}\int \frac{t^{2}\cdot2t}{\sqrt{1-t^{2}}}\ dt
 \end{align*}
 ```
 
@@ -119,8 +119,8 @@ You can also substitute first!
 ### Solve
 ```math
 \begin{align*}
-  &= \frac{1}{2}t^{3}\arcsin t-\frac{1}{4}\int_{\ }^{\ }\frac{1-v}{\sqrt{v}}\cdot-dv
-  \\ &= \frac{1}{2}t^{3}\arcsin t+\frac{1}{4}\int_{\ }^{\ }\frac{1}{\sqrt{v}}-\sqrt{v}\ dv
+  &= \frac{1}{2}t^{3}\arcsin t-\frac{1}{4}\int \frac{1-v}{\sqrt{v}}\cdot-dv
+  \\ &= \frac{1}{2}t^{3}\arcsin t+\frac{1}{4}\int \frac{1}{\sqrt{v}}-\sqrt{v}\ dv
   \\ &= \frac{1}{2}t^{3}\arcsin t+\frac{1}{2}\sqrt{v}-\frac{1}{4}\cdot\frac{2}{3}v^{3/2}
   \\ &= \frac{1}{2}t^{3}\arcsin t+\frac{1}{2}\sqrt{1-t^{2}}-\frac{1}{6}\left(1-t^{2}\right)^{3/2}
   \\ &= \frac{1}{2}x^{2}\arcsin\left(x^{2/3}\right)+\frac{1}{2}\sqrt{1-x^{4/3}}-\frac{1}{6}\left(1-x^{4/3}\right)^{3/2}-c

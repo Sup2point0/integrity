@@ -52,18 +52,18 @@ The graph of the integrand looks like this:
 So the area grows linearly until $x = 3$, then quadratically for $x > 3$. If we split the graph into a rectangle and a triangle, then it looks like a translated activation function (ReLU) added to a constant:
 
 ```desmos
-f\left(x\right)=3
-g\left(x\right)=\max\left(0,\ x\right)
-f\left(x\right)+g\left(x-3\right)
+f\left(x\right)=3 \\
+g\left(x\right)=\max\left(0,\ x\right) \\
+f\left(x\right)+g\left(x-3\right) \\
 ```
 
 Hence
 
 ```math
 \begin{align*}
-  &\ \int_{\ }^{\ }\max\left(3,\ x\right)\ dx
-  \\ =&\ \int_{\ }^{\ }3+\max\left(0,\ x-3\right)\ dx
-  \\ =&\ 3\int_{\ }^{\ }dx+\int_{\ }^{\ }\max\left(0,\ x-3\right)\ dx
+  &\ \int \max\left(3,\ x\right)\ dx
+  \\ =&\ \int 3+\max\left(0,\ x-3\right)\ dx
+  \\ =&\ 3\int dx+\int \max\left(0,\ x-3\right)\ dx
 \end{align*}
 ```
 

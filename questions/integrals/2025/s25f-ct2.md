@@ -5,10 +5,10 @@ desc:
 date: 2025 April 17
 tags:
   - trig
-  - poly angle
 methods:
   - fun
   - spot
+  - poly angle
 ---
 
 

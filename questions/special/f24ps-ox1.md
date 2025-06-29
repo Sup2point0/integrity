@@ -1,12 +1,10 @@
 ---
 topic: special
 title: A Graph Drawing Interview Question
-desc: |
-  This is an Oxbridge-style interview question I wrote for my friends. I’m quite proud of it since it builds up very naturally (heh), tests a lot of graph drawing skills, and links to many graph-related topics.
-
-  As is standard in problem-solving-based interviews, you’re given guidance and nudges in the right direction throughout. Of course in a real interview the interviewer can vary their help based on what you’ve done, but for a webpage this is a much harder task.
-
-  As such, you may find that some hints are irrelevant to you, in which case you can just ignore them. I would recommend revealing all the hints before checking the final answer, so that you can catch a mistake if you’ve made one and give the question another try.
+desc:
+  - This is an Oxbridge-style interview question I wrote for my friends. I’m quite proud of it since it builds up very naturally (heh), tests a lot of graph drawing skills, and links to many graph-related topics.
+  - As is standard in problem-solving-based interviews, you’re given guidance and nudges in the right direction throughout. Of course in a real interview the interviewer can vary their help based on what you’ve done, but for a webpage this is a much harder task.
+  - As such, you may find that some hints are irrelevant to you, in which case you can just ignore them. I would recommend revealing all the hints before checking the final answer, so that you can catch a mistake if you’ve made one and give the question another try.
 date: 2024 November 27
 tags:
   - graph drawing
@@ -44,6 +42,7 @@ If you’ve only drawn a graph for positive $x$, think carefully about the domai
 Your graph should look like this:
 
 ```desmos
+y = \ln\left( \frac{1}{x^2} \right)
 ```
 
 ### Solution
@@ -65,12 +64,10 @@ So, we also need to include negative values of $x$ in our graph. This means we�
 y = -2 \ln|x|
 ```
 
-> [!Note]
-> We could also use a complex-valued logarithm, but this is unrealistic to draw.
-
 This is simply a flipped $\ln(x)$ graph, which is also reflected in the $y$ axis:
 
 ```desmos
+y = \ln\left( \frac{1}{x^2} \right)
 ```
 
 
@@ -102,6 +99,7 @@ Would you expect the graph to be symmetric?
 Your graph should look like this:
 
 ```desmos
+y = e^{\left(1/x\right)}
 ```
 
 ### Solution
@@ -181,6 +179,7 @@ Draw out $y = \ln(x)$ and $y = -x$ (!)
 Your graph should look like this:
 
 ```desmos
+y = \frac{\ln\left( \frac{1}{x^2} \right)}{e^{\left(1/x\right)}}
 ```
 
 ### Solution
@@ -215,6 +214,7 @@ What would $f(-x) \cdot g(-x)$ look like?
 Your graph should look like this:
 
 ```desmos
+y = \ln\left( \frac{1}{x^2} \right) \cdot e^{\left(1/x\right)}
 ```
 
 ### Thought
