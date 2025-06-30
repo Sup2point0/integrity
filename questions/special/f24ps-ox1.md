@@ -64,7 +64,7 @@ So, we also need to include negative values of $x$ in our graph. This means we�
 y = -2 \ln|x|
 ```
 
-This is simply a flipped $\ln(x)$ graph, which is also reflected in the $y$ axis:
+That’s simply a flipped $\ln(x)$ graph, which is also reflected in the $y$ axis:
 
 ```desmos
 y = \ln\left( \frac{1}{x^2} \right)
@@ -103,6 +103,71 @@ y = e^{\left(1/x\right)}
 ```
 
 ### Solution
+We have a chain here where the function $t = 1/x$ is an input to $e^t$. The best way to approach this is probably to consider what notable things happen to the input, then map those correspondingly to the output.
+
+```desmos
+y = \frac{1}{x}
+```
+
+At the extremes, as $x \to \pm \infin$, $\frac{1}{x} \to 0$ for both $+\infin$ and $-\infin$. Then $e^{1/x} \to 1$, so we know our graph approaches $y = 1$ for small and large $x$.
+
+```desmos
+\asympt : y = 1\ \left\{x<-2,\ x>2\right\}
+```
+
+Now let’s deal with the positive side first. $\frac{1}{x}$ is positive and decreasing, so we’re raising $e$ to an increasingly small positive number. That means the graph is decreasing, and so will tend to $1$ from above.
+
+```desmos
+\asympt : y = 1\ \left\{x>2\right\}
+e^{1/x}\ \left\{5<x\right\}
+```
+
+Then coming in to the $y$-axis, as $x \to 0^{+}$, we have (intuitively)
+
+```math
+e^{\frac{1}{+0}} \approx e^{\infin} \approx \infin
+```
+
+More rigorously, $\frac{1}{x}$ is shooting off to $+\infin$, and $e$ raised to a really large exponent is an even larger number, so
+
+```math
+\lim_{x \to 0^{+}} e^{1/x} = \infin
+```
+
+This grows more steeply than $\frac{1}{x}$, in fact, so it’s a bit further from the $y$-axis.
+
+```desmos
+e^{1/x}\ \left\{0<x\right\}
+```
+
+Now on the left, as we decrease towards $-\infin$, $\frac{1}{x}$ is negative and increasing, so we’re raising $e$ to a negative number increasingly close to $0$. Remembering that $e^0 = 1$, this implies we approach the asymptote from below.
+
+```desmos
+\asympt : y = 1\ \left\{x<-2,\ x>2\right\}
+e^{1/x}\ \left\{x<-5,\ 0<x\right\}
+```
+
+Finally, as we come in to $x \to 0^{-}$, this time it’s a little different. Intuitively, we’re raising $e$ to an increasingly negative number, so
+
+```math
+e^{\frac{1}{-0}} \approx e^{-\infin} \approx \frac{1}{e^{\infin}} \approx 0
+```
+
+More rigorously,
+
+```math
+\lim_{x \to 0^{-}} e^{1/x} = 0
+```
+
+So interestingly, the graph tends to $1$ on both sides, but at the $y$-axis it goes to $\infin$ on the right, and $0$ on the left.
+
+```desmos
+e^{1/x}
+```
+
+If you look carefully there’s also a point of inflection, which is actually kind of expected given the 2 parallel asymptotes ($y = 1$, $y = 0$), but it’s not easy to see where that would occur without some differentiation.
+
+### Extension – Deriving the Inflection Point
 
 
 ## Part 3:

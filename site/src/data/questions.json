@@ -21895,7 +21895,7 @@
           },
           {
             "kind": "text",
-            "content": "This is simply a flipped $\\ln(x)$ graph, which is also reflected in the $y$ axis:"
+            "content": "That’s simply a flipped $\\ln(x)$ graph, which is also reflected in the $y$ axis:"
           },
           {
             "kind": "desmos",
@@ -21952,6 +21952,88 @@
           {
             "kind": "desmos",
             "content": "y = e^{\\left(1/x\\right)}"
+          }
+        ],
+        "solution": [
+          {
+            "kind": "text",
+            "content": "We have a chain here where the function $t = 1/x$ is an input to $e^t$. The best way to approach this is probably to consider what notable things happen to the input, then map those correspondingly to the output."
+          },
+          {
+            "kind": "desmos",
+            "content": "y = \\frac{1}{x}"
+          },
+          {
+            "kind": "text",
+            "content": "At the extremes, as $x \\to \\pm \\infin$, $\\frac{1}{x} \\to 0$ for both $+\\infin$ and $-\\infin$. Then $e^{1/x} \\to 1$, so we know our graph approaches $y = 1$ for small and large $x$."
+          },
+          {
+            "kind": "desmos",
+            "content": "\\asympt : y = 1\\ \\left\\{x<-2,\\ x>2\\right\\}"
+          },
+          {
+            "kind": "text",
+            "content": "Now let’s deal with the positive side first. $\\frac{1}{x}$ is positive and decreasing, so we’re raising $e$ to an increasingly small positive number. That means the graph is decreasing, and so will tend to $1$ from above."
+          },
+          {
+            "kind": "desmos",
+            "content": "\\asympt : y = 1\\ \\left\\{x>2\\right\\}<br><br>e^{1/x}\\ \\left\\{5<x\\right\\}"
+          },
+          {
+            "kind": "text",
+            "content": "Then coming in to the $y$-axis, as $x \\to 0^{+}$, we have (intuitively)"
+          },
+          {
+            "kind": "latex",
+            "content": "e^{\\frac{1}{+0}} \\approx e^{\\infin} \\approx \\infin"
+          },
+          {
+            "kind": "text",
+            "content": "More rigorously, $\\frac{1}{x}$ is shooting off to $+\\infin$, and $e$ raised to a really large exponent is an even larger number, so"
+          },
+          {
+            "kind": "latex",
+            "content": "\\lim_{x \\to 0^{+}} e^{1/x} = \\infin"
+          },
+          {
+            "kind": "text",
+            "content": "This grows more steeply than $\\frac{1}{x}$, in fact, so it’s a bit further from the $y$-axis."
+          },
+          {
+            "kind": "desmos",
+            "content": "e^{1/x}\\ \\left\\{0<x\\right\\}"
+          },
+          {
+            "kind": "text",
+            "content": "Now on the left, as we decrease towards $-\\infin$, $\\frac{1}{x}$ is negative and increasing, so we’re raising $e$ to a negative number increasingly close to $0$. Remembering that $e^0 = 1$, this implies we approach the asymptote from below."
+          },
+          {
+            "kind": "desmos",
+            "content": "e^{1/x}\\ \\left\\{x<-5,\\ 0<x\\right\\}"
+          },
+          {
+            "kind": "text",
+            "content": "Finally, as we come in to $x \\to 0^{-}$, this time it’s a little different. Intuitively, we have"
+          },
+          {
+            "kind": "latex",
+            "content": "e^{\\frac{1}{-0}} \\approx e^{-\\infin} \\approx \\frac{1}{e^{\\infin}} \\approx 0"
+          },
+          {
+            "kind": "text",
+            "content": "Since we’re raising $e$ to an increasingly negative number. More rigorously,"
+          },
+          {
+            "kind": "latex",
+            "content": "\\lim_{x \\to 0^{-}} e^{1/x} = 0"
+          },
+          {
+            "kind": "text",
+            "content": "So interestingly, the graph tends to $1$ on both sides, but at the $y$-axis it goes to $\\infin$ on the right, and $0$ on the left."
+          },
+          {
+            "kind": "desmos",
+            "content": "e^{1/x}"
           }
         ]
       },

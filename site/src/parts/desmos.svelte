@@ -96,8 +96,10 @@ function try_load_desmos()
       blocks.map((block, i) => ({
         id: `graph-${i}`,
         latex: block.content.split(" : ").at(-1),
-        color: cols.next().value,
+        color: block.content.includes("\\asympt") ? Desmos.Colors.BLACK : cols.next().value,
         hidden: block.content.includes("\\hidden"),
+        lineOpacity: block.content.includes("\\asympt") ? 0.4 : undefined,
+        lineStyle: (block.content.includes("\\dashed") || block.content.includes("\\asympt")) ? Desmos.Styles.DASHED : Desmos.Styles.SOLID,
       }))
     );
   } else {
