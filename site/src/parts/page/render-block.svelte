@@ -30,7 +30,7 @@ let { source }: Props = $props();
     <div style:padding="2rem 0">
       <Desmos
         blocks={
-          source.content.split("\\\\")
+          source.content.split("<br><br>")
           .map(line => ({
             kind: "desmos",
             content: line,

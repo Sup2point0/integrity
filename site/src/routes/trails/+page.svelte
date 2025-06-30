@@ -171,7 +171,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
   { text: "Trails" },
 ]} />
 
-<Header title="Trails" capt="Statistics of Integrity" />
+<Header title="Trails" capt="Statistics of <em>Integrity</em>" />
 
 
 <Section title="Visits" closed={false}>

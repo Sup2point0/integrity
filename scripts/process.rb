@@ -86,6 +86,9 @@ def extract_blocks(lines)
       })
       ctx = nil
     else
+      if ctx == "desmos"
+        load.concat("\n")
+      end
       load.concat(line)
     end
 

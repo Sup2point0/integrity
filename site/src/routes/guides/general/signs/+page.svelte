@@ -9,7 +9,7 @@ import Toggle from "#parts/ui/toggle.svelte";
 import { onMount, untrack } from "svelte";
 
 
-let live = $state(false);
+let sol = $state(false);
 
 const source = Array.from({ length: 1679 }, () => Math.round(Math.random() * 9).toString() + (Math.random() > 0.5 ? "+" : "-")).join("") + Math.round(Math.random() * 9).toString();
 const check = eval(source).toString().split("");
@@ -28,7 +28,7 @@ $effect(() => {
 
   untrack(() => {
     $Site.question.add("S");
-    live = true;
+    sol = true;
   });
 })
 
@@ -45,7 +45,7 @@ const splice = graphs[Math.floor(Math.random() * graphs.length)];
 </script>
 
 
-{#if live}
+{#if sol}
   <div class="grid">
     {#each { length: 30 } as _, y}
       {#each { length: 50 } as _, x}

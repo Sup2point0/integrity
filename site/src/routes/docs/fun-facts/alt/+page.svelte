@@ -33,7 +33,7 @@ onMount(() => {
 
 
 {#if live}
-  <p style="font-family: Gloria Hallelujah; font-size: 150%">
+  <p>
     <br><br> {T.split("").map(c => String.fromCharCode(c.charCodeAt()-4)).join("")}
     <br><br> {R.split("").map(c => String.fromCharCode(c.charCodeAt()+4)).join("")}
   </p>
@@ -79,6 +79,11 @@ onMount(() => {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   gap: 1rem;
+  font-size: 150%;
+}
+
+p {
+  font-family: 'Gloria Hallelujah';
   font-size: 150%;
 }
 

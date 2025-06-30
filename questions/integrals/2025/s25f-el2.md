@@ -52,9 +52,9 @@ The graph of the integrand looks like this:
 So the area grows linearly until $x = 3$, then quadratically for $x > 3$. If we split the graph into a rectangle and a triangle, then it looks like a translated activation function (ReLU) added to a constant:
 
 ```desmos
-f\left(x\right)=3 \\
-g\left(x\right)=\max\left(0,\ x\right) \\
-f\left(x\right)+g\left(x-3\right) \\
+\hidden : f\left(x\right)=3
+\hidden : g\left(x\right)=\max\left(0,\ x\right)
+f\left(x\right)+g\left(x-3\right)
 ```
 
 Hence

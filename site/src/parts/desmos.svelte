@@ -16,12 +16,20 @@ interface Props {
   bounds?: number;
 }
 
-let { blocks, controls = true, ratio = 1, bounds = controls ? undefined : 2 }: Props = $props();
+let {
+  blocks,
+  controls = true,
+  ratio = 1,
+  bounds = controls ? undefined : 2
+}: Props = $props();
 
 
 let desmos: any | false | null = $state(null);
 let live = $state(false);
 let self: HTMLElement;
+
+const cols = col_picker();
+
 
 onMount(() => {
   let observer = new IntersectionObserver(entries => {
@@ -36,6 +44,27 @@ onMount(() => {
 
   console.info("sup guys, don’t worry, I have seen this notice – when I originally emailed Desmos asking for a production key, they told me I could just use the prototype key, so it’s all good o7");
 });
+
+function* col_picker()
+{
+  const colours = Object.values(Desmos.Colors);
+
+  let idx: number;
+  let out: any;
+  let last: any;
+
+  while (true) {
+    idx = Math.floor(Math.random() * colours.length);
+    out = colours[idx];
+    
+    if (out === last) {
+      continue
+    } else {
+      last = out;
+      yield out;
+    }
+  }
+}
 
 function try_load_desmos()
 {
@@ -66,22 +95,18 @@ function try_load_desmos()
     desmos.setExpressions(
       blocks.map((block, i) => ({
         id: `graph-${i}`,
-        latex: block.content,
-        color: pick_col()
+        latex: block.content.split(" : ").at(-1),
+        color: cols.next().value,
+        hidden: block.content.includes("\\hidden"),
       }))
     );
   } else {
     desmos.setExpressions([
-      { id: "graph", latex: blocks.content, color: pick_col() }
+      { id: "graph", latex: blocks.content, color: cols.next().value }
     ]);
   }
 
   return true;
-}
-
-function pick_col()
-{
-  return Object.values(Desmos.Colors).sort(() => Math.random() - 0.5)[0];
 }
 
 </script>

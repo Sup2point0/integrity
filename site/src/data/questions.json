@@ -8494,7 +8494,7 @@
         },
         {
           "kind": "desmos",
-          "content": "f\\left(x\\right)=3 \\\\g\\left(x\\right)=\\max\\left(0,\\ x\\right) \\\\f\\left(x\\right)+g\\left(x-3\\right) \\\\"
+          "content": "\\hidden : f\\left(x\\right)=3<br><br>\\hidden : g\\left(x\\right)=\\max\\left(0,\\ x\\right)<br><br>f\\left(x\\right)+g\\left(x-3\\right)"
         },
         {
           "kind": "text",

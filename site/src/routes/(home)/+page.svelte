@@ -98,6 +98,20 @@ onMount(() => {
   </div>
 </section>
 
+<section class="featured">
+  <Header title="Places to Visit" />
+
+  <ArticleArray pages={[
+    Site.pages["docs/fun-facts.md"],
+    { dest: "trails", head: "Trails", capt: "Statistics of <em>Integrity</em>" },
+    { dest: "data", head: "Your Data", capt: "Your personal statistics on <em>Integrity</em>" },
+  ]} />
+  
+  <div class="centre">
+    <Clicky text="Explore More" intern="explore" />
+  </div>
+</section>
+
 <Line />
 
 <section>

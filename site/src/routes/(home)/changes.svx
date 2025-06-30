@@ -1,4 +1,6 @@
-***2025 June 23*** An expanded grid view has been added, so you can view all of the questions on *Integrity* in all their glory! Access it via the search filters.
+***June 30*** Desmos has now been integrated into solutions, so all the integrals involving graph drawing will soon be added!
 
-***2025 June 21*** You can now view Integrity’s statistics over in [Trails](https://sup2point0.github.io/integrity/trails), including monthly visit counts and question distributions!
+***June 23*** An expanded grid view has been added, so you can view all of the questions on *Integrity* in all their glory! Access it via the search filters.
+
+***June 21*** You can now view Integrity’s statistics over in [Trails](https://sup2point0.github.io/integrity/trails), including monthly visit counts and question distributions.
 
