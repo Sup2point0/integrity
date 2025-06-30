@@ -3,6 +3,7 @@ topic: integrals
 title: counting
 desc: 
 date: 2024 December
+difficulty: incline
 tags:
   - poly
 methods:

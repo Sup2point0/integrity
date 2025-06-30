@@ -3,6 +3,7 @@ topic: integrals
 title: classic
 desc: 
 date: 2024 September
+difficulty: based
 tags:
   - sqrt
 methods:

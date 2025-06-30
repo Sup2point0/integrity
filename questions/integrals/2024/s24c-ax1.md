@@ -3,6 +3,7 @@ topic: integrals
 title: probably
 desc: 
 date: 2024 November
+difficulty: based
 tags:
   - dread
   - arctrig

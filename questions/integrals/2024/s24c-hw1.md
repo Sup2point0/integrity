@@ -3,6 +3,7 @@ topic: integrals
 title: trick or treat
 desc: 
 date: 2024 December 13
+difficulty: based
 tags:
   - ln
   - exp

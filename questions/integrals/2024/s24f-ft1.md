@@ -3,6 +3,7 @@ topic: integrals
 title: tension
 desc: 
 date: 2024 December 27
+difficulty: incline
 tags:
   - dread
   - poly

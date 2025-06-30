@@ -3,6 +3,7 @@ topic: integrals
 title: dreams of integrity
 desc: The integral that came to me in a dream.
 date: 2024 October 22
+difficulty: incline
 tags:
   - trig
 methods:

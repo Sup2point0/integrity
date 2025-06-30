@@ -3,6 +3,7 @@ topic: integrals
 title: drawn and quartered
 desc: 
 date: 2024 September
+difficulty: incline
 tags:
   - scare
   - poly

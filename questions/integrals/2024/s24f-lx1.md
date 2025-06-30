@@ -3,6 +3,7 @@ topic: integrals
 title: in my heart
 desc: 
 date: 2024 December 28
+difficulty: incline
 tags:
   - fun
   - poly
@@ -15,7 +16,7 @@ methods:
 
 ## Question
 ```math
-\int \ln\left(\sqrt{x\sqrt{x^{2}+4x-21}}\right)\ dx
+\int \ln\sqrt{x\sqrt{x^{2}+4x-21}}\ dx
 ```
 
 

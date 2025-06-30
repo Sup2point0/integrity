@@ -3,6 +3,7 @@ topic: integrals
 title: polymorphism
 desc: does anyone even read these?
 date: 2024 December 23
+difficulty: manifold
 tags:
   - scare
   - trig

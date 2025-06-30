@@ -3,6 +3,7 @@ topic: integrals
 title: simp
 desc: 
 date: 2024 September
+difficulty: incline
 tags:
   - trig
 methods:

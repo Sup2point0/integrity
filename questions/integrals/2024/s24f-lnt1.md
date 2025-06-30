@@ -3,12 +3,13 @@ topic: integrals
 title: lawful evil
 desc: 
 date: 2024 December 9
+difficulty: manifold
 tags:
   - scare
-  - long
   - sqrt
   - ln
 methods:
+  - long
   - spot
   - sub
   - trig sub

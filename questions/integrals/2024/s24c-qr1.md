@@ -3,6 +3,7 @@ topic: integrals
 title: don’t overcomplicate
 desc: 
 date: 2024 September
+difficulty: 
 tags:
   - sqrt
 methods:

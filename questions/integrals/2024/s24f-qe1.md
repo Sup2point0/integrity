@@ -3,6 +3,7 @@ topic: integrals
 title: monster
 desc: Have fun!
 date: 2024 December
+difficulty: incline
 tags:
   - dread
   - long

@@ -3,6 +3,7 @@ topic: integrals
 title: happy new year
 desc: 
 date: 2024 December 31
+difficulty: incline
 tags:
   - poly
   - ln

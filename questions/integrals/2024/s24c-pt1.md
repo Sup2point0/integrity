@@ -3,6 +3,7 @@ topic: integrals
 title: part-trap
 desc: 
 date: 2024 November
+difficulty: based
 tags:
   - trig
   - exp

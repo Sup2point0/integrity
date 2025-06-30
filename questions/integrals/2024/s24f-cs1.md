@@ -3,6 +3,7 @@ topic: integrals
 title: bleugh
 desc: 
 date: 2024 December 8
+difficulty: manifold
 tags:
   - horror
   - trig

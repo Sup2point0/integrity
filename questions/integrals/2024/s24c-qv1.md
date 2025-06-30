@@ -3,6 +3,7 @@ topic: integrals
 title: tractorisation
 desc: 
 date: 2024 September
+difficulty: incline
 tags:
   - sqrt
 methods:

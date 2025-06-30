@@ -3,6 +3,7 @@ topic: integrals
 title: lacking
 desc: 
 date: 2024 December
+difficulty: incline
 tags:
   - poly
 methods:

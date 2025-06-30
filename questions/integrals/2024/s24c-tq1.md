@@ -3,6 +3,7 @@ topic: integrals
 title: doable
 desc: 
 date: 2024 September
+difficulty: based
 tags:
   - sqrt
   - trig

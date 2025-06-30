@@ -3,6 +3,7 @@ topic: integrals
 title: init
 desc: 
 date: 2024 September
+difficulty: based
 tags:
   - poly
 methods:

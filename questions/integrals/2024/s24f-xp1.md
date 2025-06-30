@@ -3,6 +3,7 @@ topic: integrals
 title: expletive
 desc: 
 date: 2024 December 17
+difficulty: incline
 tags:
   - exp
 methods:

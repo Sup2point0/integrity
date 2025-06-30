@@ -3,6 +3,7 @@ topic: integrals
 title: spotted
 desc: 
 date: 2024 October
+difficulty: incline
 tags:
   - trig
   - exp

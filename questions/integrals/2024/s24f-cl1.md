@@ -3,6 +3,7 @@ topic: integrals
 title: skylight
 desc: 
 date: 2024 December 22
+difficulty: based
 tags:
   - arctrig
 methods:

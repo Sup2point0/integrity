@@ -3,6 +3,7 @@ topic: integrals
 title: secret
 desc: 
 date: 2024 October
+difficulty: incline
 tags:
   - definite
   - sqrt

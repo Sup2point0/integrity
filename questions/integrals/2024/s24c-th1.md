@@ -3,6 +3,7 @@ topic: integrals
 title: hidey
 desc: 
 date: 2024 October
+difficulty: incline
 tags:
   - trig
 methods:

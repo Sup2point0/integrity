@@ -3,6 +3,7 @@ topic: integrals
 title: abode
 desc: 
 date: 2024 December
+difficulty: incline
 tags:
   - poly
   - ln

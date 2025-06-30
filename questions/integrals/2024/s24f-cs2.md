@@ -3,6 +3,7 @@ topic: integrals
 title: likeable
 desc: 
 date: 2024 December 10
+difficulty: based
 tags:
   - poly
   - trig

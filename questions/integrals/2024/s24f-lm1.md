@@ -3,6 +3,7 @@ topic: integrals
 title: pathological
 desc: 
 date: 2024 December 10
+difficulty: manifold
 tags:
   - horror
   - trig

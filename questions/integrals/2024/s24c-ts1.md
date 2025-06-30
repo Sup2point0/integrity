@@ -3,6 +3,7 @@ topic: integrals
 title: pulsar
 desc: 
 date: 2024 September
+difficulty: based
 tags:
   - trig
 methods:

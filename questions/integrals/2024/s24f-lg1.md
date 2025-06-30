@@ -3,6 +3,7 @@ topic: integrals
 title: polytypical
 desc: 
 date: 2024 December 24
+difficulty: incline
 tags:
   - poly
 methods:

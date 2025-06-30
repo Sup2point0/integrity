@@ -3,6 +3,7 @@ topic: integrals
 title: scenic
 desc: 
 date: 2024 October
+difficulty: based
 tags:
   - poly
   - exp

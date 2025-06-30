@@ -3,6 +3,7 @@ topic: integrals
 title: simplify
 desc: 
 date: 2024 September
+difficulty: incline
 tags:
   - horror
   - sqrt

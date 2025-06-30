@@ -3,6 +3,7 @@ topic: integrals
 title: experience
 desc: 
 date: 2024 September
+difficulty: incline
 tags:
   - exp
 methods:

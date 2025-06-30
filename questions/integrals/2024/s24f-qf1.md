@@ -3,6 +3,7 @@ topic: integrals
 title: déjà vu
 desc: Oh nope, there is no respite here.
 date: 2024 December 13
+difficulty: incline
 tags:
   - dread
   - sqrt

@@ -3,6 +3,7 @@ topic: integrals
 title: quotable
 desc: 
 date: 2024 December 10
+difficulty: incline
 tags:
   - poly
   - ln

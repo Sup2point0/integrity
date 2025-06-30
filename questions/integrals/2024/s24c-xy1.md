@@ -3,6 +3,7 @@ topic: integrals
 title: first love
 desc: This was the first integral I ever wrote!
 date: 2024 September
+difficulty: based
 tags:
   - trig
 methods:

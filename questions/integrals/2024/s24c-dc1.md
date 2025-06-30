@@ -3,6 +3,7 @@ topic: integrals
 title: simply devastating
 desc: 
 date: 2024 September
+difficulty: based
 tags:
   - trig
 methods:

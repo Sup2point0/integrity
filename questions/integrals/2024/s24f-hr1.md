@@ -3,6 +3,7 @@ topic: integrals
 title: workable
 desc: 'Warning: this is long.'
 date: 2024 December 13
+difficulty: incline
 tags:
   - dread
   - poly

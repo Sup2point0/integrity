@@ -3,6 +3,7 @@ topic: integrals
 title: straight-up
 desc: 
 date: 2024 September
+difficulty: incline
 tags:
   - exp
 methods:

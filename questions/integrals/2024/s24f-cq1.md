@@ -3,6 +3,7 @@ topic: integrals
 title: divide and conquer
 desc: A nice exercise in algebra ;)
 date: 2024 December 27
+difficulty: incline
 tags:
   - exp
 methods:

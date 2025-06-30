@@ -3,6 +3,7 @@ topic: integrals
 title: isomorphism
 desc: 
 date: 2024 December 24
+difficulty: based
 tags:
   - trig
 methods:

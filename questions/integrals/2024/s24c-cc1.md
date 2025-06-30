@@ -3,6 +3,7 @@ topic: integrals
 title: connection
 desc: 
 date: 2024 November
+difficulty: based
 tags:
   - poly
 methods:

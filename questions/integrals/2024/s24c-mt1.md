@@ -3,6 +3,7 @@ topic: integrals
 title: quick maths
 desc: 
 date: 2024 September
+difficulty: based
 tags:
   - poly
 methods:

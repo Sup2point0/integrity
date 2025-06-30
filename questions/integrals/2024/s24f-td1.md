@@ -3,6 +3,7 @@ topic: integrals
 title: linked
 desc: 
 date: 2024 November
+difficulty: incline
 tags:
   - trig
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: again, again
 desc: 
 date: 2024 December 10
+difficulty: incline
 tags:
   - sqrt
 methods:
