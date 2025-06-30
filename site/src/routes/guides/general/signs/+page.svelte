@@ -4,6 +4,8 @@ import katex from "katex";
 
 import Site from "#scripts/utils/site"
 
+import { sync } from "#scripts/utils/sync";
+
 import Toggle from "#parts/ui/toggle.svelte";
 
 import { onMount, untrack } from "svelte";
@@ -17,7 +19,8 @@ const d = $state(Array.from({ length: 12 }, () => false));
 
 
 onMount(() => {
-  $Site.questions.add("s");
+  $Site.question.add("s");
+  sync();
 });
 
 $effect(() => {
@@ -27,7 +30,8 @@ $effect(() => {
   }
 
   untrack(() => {
-    $Site.question.add("S");
+    $Site.questions.add("S");
+    sync();
     sol = true;
   });
 })

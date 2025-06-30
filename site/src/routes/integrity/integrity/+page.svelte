@@ -2,15 +2,20 @@
 
 import Site from "#scripts/utils/site";
 
+import { sync } from "#scripts/utils/sync";
+
 import Katex from "#src/parts/katex.svelte";
 
 import { onMount } from "svelte";
 
 
 onMount(() => {  
-  $Site["q"].add("l");
+  $Site["question"].add("l");
+  sync();
+
   setTimeout(() => {
-    $Site["Q"].add("L");
+    $Site["questions"].add("L");
+    sync();
   }, 3000);
 });
 

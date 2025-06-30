@@ -2,6 +2,8 @@
 
 import Site from "#scripts/utils/site";
 
+import { sync } from "#scripts/utils/sync";
+
 import Toggle from "#parts/ui/toggle.svelte";
 
 import { onMount } from "svelte";
@@ -41,7 +43,8 @@ const W = "?SP\vLYNTPY_\vNS]ZYTNWP^\v^[ZVP\vZQ\vYZY\x180`NWTOPLY\vPWO]T_NS\vSZ]]
 
 
 onMount(() => {
-  $Site.questions.add("p");
+  $Site.question.add("p");
+  sync();
 });
 
 </script>
@@ -68,8 +71,9 @@ onMount(() => {
             toggle={() => {
               lattice[x+1][y] = !lattice[x+1][y];
               if (s()) {
+                $Site.questions.add("P");
+                sync();
                 comp = true;
-                $Site.question.add("P");
               }
             }}
           />

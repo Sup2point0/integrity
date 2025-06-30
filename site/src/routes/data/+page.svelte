@@ -64,9 +64,11 @@ function check_integrity()
     }
   } else {
     if (checks > 3 && Math.random() > 0.9) {
-      $userprefs.q.add("b");
+      $userprefs.skipped.add("b");
+      $userprefs.skipped = $userprefs.skipped;
       confirm("Mate, are you having a bubble bath?");
-      $userprefs.Q.add("B");
+      $userprefs.marked.add("B");
+      $userprefs.marked = $userprefs.marked;
     } else {
       confirm("No errors found, looking good!");
     }
@@ -172,17 +174,17 @@ function fix_integrity()
     <section>
       <div class="row">
         <p class="label"> Secrets Found </p>
-        <p class="count"> <span>{$userprefs.q?.size ?? 0}</span> of ? </p>
+        <p class="count"> <span>{$userprefs.skipped?.size ?? 0}</span> of ? </p>
       </div>
-      <ProgressBar value={($userprefs.q?.size ?? 0) / 9} />
+      <ProgressBar value={($userprefs.skipped?.size ?? 0) / 9} />
     </section>
     
     <section>
       <div class="row">
         <p class="label"> Secrets Solved </p>
-        <p class="count"> <span>{$userprefs.Q?.size ?? 0}</span> of ? </p>
+        <p class="count"> <span>{$userprefs.marked?.size ?? 0}</span> of ? </p>
       </div>
-      <ProgressBar value={($userprefs.Q?.size ?? 0) / 9} />
+      <ProgressBar value={($userprefs.marked?.size ?? 0) / 9} />
     </section>
   </div>
 
@@ -205,7 +207,7 @@ function fix_integrity()
         <Checkbox
           cols={{ off: "#f2f2f2", on: "oklch(0.6677 0.1834 360)" }}
           value={() => !$userprefs.nav}
-          enable={() => { $userprefs.q.add("n"); $userprefs.Q.add("N"); $userprefs.nav = false; return true; }}
+          enable={() => { $userprefs.skipped.add("n"); $userprefs.marked.add("N"); $userprefs.nav = false; return true; }}
           disable={() => { $userprefs.nav = true; return true; }}
         >
           {#if checks > 10} ?? {:else} ? {/if}

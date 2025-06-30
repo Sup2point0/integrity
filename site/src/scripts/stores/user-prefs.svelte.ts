@@ -49,8 +49,8 @@ export class UserPrefs
       
       nav: this.nav,
       "desmos-preset": this["desmos-preset"],
-      question: Array.from(this.skipped),
-      questions: Array.from(this.marked),
+      skipped: Array.from(this.skipped),
+      marked: Array.from(this.marked),
     }
   }
 
@@ -71,6 +71,14 @@ export class UserPrefs
     this.marked = new SvelteSet(data.marked ?? this.marked);
 
     return this;
+  }
+
+  get question() {
+    return this.skipped;
+  }
+  
+  get questions() {
+    return this.marked;
   }
 }
 

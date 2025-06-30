@@ -2,6 +2,8 @@
 
 import Site from "#scripts/utils/site";
 
+import { sync } from "#scripts/utils/sync";
+
 import Clicky from "#parts/ui/clicky.svelte";
 
 import { fade } from "svelte/transition";
@@ -20,7 +22,8 @@ const R = "Dana―o\x1C]\x1Cbqj\x1Cb]_p(\x1CE\x1Ckj_a\x1Ciap\x1CPkiNk_goI]pdo\x1
 
 
 onMount(() => {
-  $Site.questions.add("g");
+  $Site.question.add("g");
+  sync();
   live = false;
 });
 
@@ -45,7 +48,7 @@ onMount(() => {
         {#if x === X && y === Y}
           {#if live !== null}
             <div transition:fade={{ duration: 3000, delay: (x+y) * 100, easing: expoIn }}>
-              <Clicky text="&ensp;" action={() => { live = true; $Site.question.add("G"); }} />
+              <Clicky text="&ensp;" action={() => { live = true; $Site.questions.add("G"); sync() }} />
             </div>
           {/if}
         {:else}
@@ -59,7 +62,6 @@ onMount(() => {
                 if (t[x][y] === null) { t[x][y] = ["↑", "←", "↓", "→"][Math.floor(Math.random() * 4)]; }
               }}>
                 <code> {@html t[x][y] ?? '<span style="opacity: 0">↓</span>'} </code>
-                <!-- {x}-{y} -->
               </Clicky>
             </div>
           {/if}
