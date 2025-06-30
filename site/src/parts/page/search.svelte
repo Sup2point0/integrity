@@ -291,6 +291,7 @@ onMount(() => {
                 "RELEVANCE": null,
                 "DATE": "date",
                 "NAME": "name",
+                "DIFFICULTY": "diff",
                 "RANDOM": "rand",
               }}
             />

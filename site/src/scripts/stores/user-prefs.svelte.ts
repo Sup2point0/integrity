@@ -16,24 +16,24 @@ export class UserPrefs
   visits: number = $state(0);
 
   /** Shards of questions whose pages have been visited before. */
-  seen: Set<string> = $state(new Set());
+  seen: Set<string> = new Set();
 
   /** Shards of questions marked as solved. */
-  solved: Set<string> = $state(new Set());
+  solved: Set<string> = new Set();
 
   /** shards of flagged questions. */
-  flagged: Set<string> = $state(new Set());
+  flagged: Set<string> = new Set();
 
   /** Shards of starred questions. */
-  starred: Set<string> = $state(new Set());
+  starred: Set<string> = new Set();
+
+  skipped: SvelteSet<string> = $state(new SvelteSet());
+  marked: SvelteSet<string> = $state(new SvelteSet());
 
   /** Preset of the Workspace Desmos window. */
   "desmos-preset": "integrals" | "complete-square" | null = $state("integrals");
 
   nav: boolean = $state(true);
-
-  q: SvelteSet<string> = new SvelteSet();
-  Q: SvelteSet<string> = new SvelteSet();
 
 
   /** Expose attributes for syncing to localStorage. */
@@ -49,8 +49,8 @@ export class UserPrefs
       
       nav: this.nav,
       "desmos-preset": this["desmos-preset"],
-      q: Array.from(this.q),
-      Q: Array.from(this.Q),
+      question: Array.from(this.skipped),
+      questions: Array.from(this.marked),
     }
   }
 
@@ -67,18 +67,10 @@ export class UserPrefs
 
     this.nav = data.nav ?? this.nav;
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
-    this.q = new SvelteSet(data.q ?? this.q);
-    this.Q = new SvelteSet(data.Q ?? this.Q);
+    this.skipped = new SvelteSet(data.skipped ?? this.skipped);
+    this.marked = new SvelteSet(data.marked ?? this.marked);
 
     return this;
-  }
-
-  get questions() {    
-    return this.q;
-  }
-
-  get question() {
-    return this.Q;
   }
 }
 

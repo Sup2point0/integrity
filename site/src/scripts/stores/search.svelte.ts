@@ -37,7 +37,7 @@ export class SearchPrefs
     starred: false,
     featured: false,
     "has hints": false,
-  })
+  });
 
   show: States = $state({
     question: true,
@@ -45,6 +45,7 @@ export class SearchPrefs
     dates: true,
     tags: true,
     methods: false,
+    difficulties: false,
   });
 
   buttons: States = $state({
@@ -54,7 +55,7 @@ export class SearchPrefs
   });
 
   view: "grid" | "list" | "grid-wide" = $state("grid");
-  sort: "date" | "name" | "rel" | "rand" | null = $state(null);
+  sort: "rel" | "date" | "name" | "diff" | "rand" | null = $state(null);
   reverse: boolean = $state(false);
 
   /** Whether search filters should be expanded. */
@@ -81,7 +82,7 @@ export class SearchPrefs
   {
     this.include = data.include ?? this.include;
     this.exclude = data.exclude ?? this.exclude;
-    this.show = data.show ?? this.show;
+    if (data.show) Object.assign(this.show, data.show);
     this.buttons = data.buttons ?? this.buttons;
     
     this.view = data.view ?? this.view;
@@ -195,6 +196,10 @@ export class SearchPrefs
           out.sort((prot, deut) => (prot.title && deut.title) ? prot.title.localeCompare(deut.title) : -1);
           break;
 
+        case "diff":
+          out = this.sort_rel(out, data, true);
+          break;
+
         case "rand":
           out = sample(out, { replace: false });
       }
@@ -210,10 +215,10 @@ export class SearchPrefs
     return out;
   }
 
-  sort_rel(source: Question[], data: UserPrefs) {
+  sort_rel(source: Question[], data: UserPrefs, difficulty = false) {
     if (typeof Object.groupBy === "undefined") return this.sort_date(source);
     
-    let categories = Object.groupBy(source, question => this.categorise_rel(question, data));
+    let categories = Object.groupBy(source, question => this.categorise_rel(question, data, difficulty));
 
     for (let category of Object.values(categories)) {
       // @ts-ignore
@@ -223,11 +228,21 @@ export class SearchPrefs
     return Object.values(categories).flatMap(category => category);
   }
 
-  categorise_rel(question: Question, data: UserPrefs)
+  categorise_rel(question: Question, data: UserPrefs, difficulty = false)
   {
     if (data.flagged.has(question.shard)) return 5;
     if (data.starred.has(question.shard)) return 40;
     if (data.solved.has(question.shard)) return 50;
+    
+    if (difficulty && question.difficulty) {
+      switch (question.difficulty) {
+        case "chaos": return 12;
+        case "manifold": return 14;
+        case "incline": return 16;
+        case "based": return 18;
+      }
+    }
+    
     return 10;
   }
 
