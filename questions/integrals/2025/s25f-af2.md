@@ -3,6 +3,7 @@ topic: integrals
 title: never gonna
 desc: 
 date: 2025 April 1
+difficulty: null
 tags:
   - exp
   - ln

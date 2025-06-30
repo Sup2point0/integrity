@@ -3,6 +3,7 @@ topic: integrals
 title: food for thought
 desc: 
 date: 2025 April 1
+difficulty: incline
 tags:
   - exp
 methods:

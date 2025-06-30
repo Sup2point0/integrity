@@ -3,6 +3,7 @@ topic: integrals
 title: '??'
 desc: allow "fysiks" oe
 date: 2025 April 1
+difficulty: chaos
 tags:
   - funny
   - horror

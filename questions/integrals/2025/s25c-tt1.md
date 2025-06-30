@@ -3,6 +3,7 @@ topic: integrals
 title: unstable concoction
 desc: 
 date: 2025 April 1
+difficulty: incline
 tags:
   - trig
 methods:

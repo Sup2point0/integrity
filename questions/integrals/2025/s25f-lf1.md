@@ -3,6 +3,7 @@ topic: integrals
 title: lm fao
 desc: 
 date: 2025 April 1
+difficulty: null
 tags:
   - funny
 methods:

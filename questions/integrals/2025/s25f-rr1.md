@@ -3,6 +3,7 @@ topic: integrals
 title: let you down
 desc: Is it as easy as it looks?
 date: 2025 April 1
+difficulty: null
 tags:
   - 
 methods:
