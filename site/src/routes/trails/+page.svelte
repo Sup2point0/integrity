@@ -38,7 +38,14 @@ let data = {
 let year = $state("2025");
 let history = $derived(Object.entries(data.history[year] || {}));
 
+let general: {
+  difficulties: Record<string, number>,
+} = {
+  difficulties: { based: 0, incline: 0, manifold: 0, chaos: 0, null: 0 },
+};
+
 let integrals: {
+  difficulties: Record<string, number>,
   title_words: Record<number, number>,
   title_chars: Record<number | string, number>,
   title_letters: Record<string, number>,
@@ -49,6 +56,7 @@ let integrals: {
   parts_counts: Record<number, number>,
   days: Record<string, number>,
 } = {
+  difficulties: { based: 0, incline: 0, manifold: 0, chaos: 0, null: 0 },
   title_words: {},
   title_chars: {0: 1},
   title_letters: {},
@@ -60,7 +68,21 @@ let integrals: {
   days: {},
 };
 
+for (let q of Site.get_list_of_all_questions()) {
+  if (q.difficulty) {
+    general.difficulties[q.difficulty]++;
+  } else if (q.difficulty === null) {
+    general.difficulties.null++;
+  }
+}
+
 for (let q of Site.get_questions_of_topic("integrals")) {
+  if (q.difficulty) {
+    integrals.difficulties[q.difficulty]++;
+  } else if (q.difficulty === null) {
+    integrals.difficulties.null++;
+  }
+
   if (q.title) {
     let count = q.title.split(" ").length;
 
@@ -174,7 +196,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
 <Header title="Trails" capt="Statistics of <em>Integrity</em>" />
 
 
-<Section title="Visits" closed={false}>
+<Section title="Integrity" closed={false}>
   <h2> Visits to <em>Integrity</em> </h2>
   
   <Banner title="Mysterious Beginnings">
@@ -245,9 +267,46 @@ for (let q of Site.get_questions_of_topic("integrals")) {
       {/if}
     </Section>
   {/if}
+
+  <h2> Questions by Difficulty </h2>
+
+  {#if general.difficulties}
+    {@const highest = Math.max(...Object.values(general.difficulties))}
+
+    <div class="chart">
+      {#each Object.entries(general.difficulties) as [diff, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label">
+            {diff === "null" ? "–" : diff.toUpperCase()}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
 </Section>
 
 <Section title="Integrals" closed={false}>
+
+  <h2> Integrals by Difficulty </h2>
+
+  {#if integrals.difficulties}
+    {@const highest = Math.max(...Object.values(integrals.difficulties))}
+
+    <div class="chart">
+      {#each Object.entries(integrals.difficulties) as [diff, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label">
+            {diff === "null" ? "–" : diff.toUpperCase()}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+  
   <h2> Words in Name </h2>
 
   {#if integrals.title_words}
@@ -307,7 +366,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     </div>
   {/if}
 
-  <h2> Characters in Question LaTeX </h2>
+  <h2> Characters in Integral LaTeX </h2>
 
   {#if integrals.question_chars}
     {@const highest = Math.max(...Object.values(integrals.question_chars))}
@@ -329,7 +388,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     </div>
   {/if}
 
-  <h2> Unique Characters in Question LaTeX </h2>
+  <h2> Unique Characters in Integral LaTeX </h2>
 
   {#if integrals.question_letters}
     {@const letters = (
@@ -503,6 +562,7 @@ nav {
 }
 
 h2 {
+  padding-top: 2em;
   @include font-serif;
   font-weight: 400;
   font-size: 175%;

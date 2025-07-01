@@ -36,12 +36,12 @@ button.tag {
   font-size: 90%;
   background: $col-prot-fallback;
 
-  &.prot { background: $col-prot; }
-  &.deut { background: $col-deut; }
-  &.based { background: $col-based; }
-  &.incline { background: $col-incline; }
+  &.prot     { background: $col-prot; }
+  &.deut     { background: $col-deut; }
+  &.based    { background: $col-based; }
+  &.incline  { background: $col-incline; }
   &.manifold { background: $col-manifold; }
-  &.chaos { background: $col-chaos; }
+  &.chaos    { background: $col-chaos; }
 
   border: none;
   border-radius: 0.5em;

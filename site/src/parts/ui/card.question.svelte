@@ -39,6 +39,16 @@ function check_valid(data: Array<any>): boolean
 >
   {#if $search.show.question}
     <div class="question" transition:fade={{ duration: 250 }}>
+      {#if $search.show.difficulties && question.difficulty}
+        <div class="difficulty-indicator {question.difficulty}"
+          title={question.difficulty.toUpperCase()}
+        >
+          {#if style === "row"}
+            {question.difficulty.toUpperCase()}
+          {/if}
+        </div>
+      {/if}
+
       {#if latex}
         <Katex text={latex} inline={false} client_render={true} />
       {/if}
@@ -143,11 +153,36 @@ a.question-card {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  position: relative;
+
   font-size: 80%;
   a.question-card.row & { font-size: 100%; }
+  text-align: center;
   overflow-x: hidden;
-  scrollbar-width: thin;
+
+  .difficulty-indicator {
+    $size: 0.65rem;
+    height: $size;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 0.15rem;
+    right: 0.1rem;
+    border-radius: $size / 2;
+
+    &.based    { background: $col-based; }
+    &.incline  { background: $col-incline; }
+    &.manifold { background: $col-manifold; }
+    &.chaos    { background: $col-chaos; }
+
+    a.question-card.row & {
+      height: unset;
+      aspect-ratio: unset;
+      padding: 0.2em 0.5em;
+      color: white;
+      font-size: 90%;
+      border-radius: 0.4rem;
+    }
+  }
 }
 
 .info {
@@ -217,7 +252,6 @@ p.shard {
   margin: 0 0 1em;
   white-space: nowrap;
   @include font-code;
-  // color: $col-deut;
   font-size: 80%;
   background: $col-hover;
   border-radius: 0.5em;

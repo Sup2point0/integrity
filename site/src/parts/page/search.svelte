@@ -69,6 +69,7 @@ onMount(() => {
   {#if open}
     {@const unchecked_tag = Object.values($search.tags).some(tag => !tag)}
     {@const unchecked_method = Object.values($search.methods).some(method => !method)}
+    {@const unchecked_difficulty = Object.values($search.difficulties).some(diff => !diff)}
     {@const unchecked_include = Object.values($search.include).some(state => !state)}
     {@const unchecked_exclude = Object.values($search.exclude).some(state => !state)}
     {@const unchecked_show = Object.values($search.show).some(state => !state)}
@@ -100,8 +101,9 @@ onMount(() => {
             <Toggle text="ALL"
               value={!unchecked_tag}
               toggle={() => {
+                let repl = unchecked_tag;
                 for (let tag in $search.tags) {
-                  $search.tags[tag] = unchecked_tag;
+                  $search.tags[tag] = repl;
                 }
               }}
             />
@@ -132,14 +134,41 @@ onMount(() => {
             <Toggle text="ALL"
               value={!unchecked_method}
               toggle={() => {
+                let repl = unchecked_method;
                 for (let method in $search.methods) {
-                  $search.methods[method] = unchecked_method;
+                  $search.methods[method] = repl;
                 }
               }}
             />
           </td>
         </tr>
       {/if}
+
+      <tr>
+        <th> Difficulties </th>
+
+        <td class="flex" style:font-size="92%">
+          {#each Object.entries($search.difficulties) as [diff, state]}
+            <Toggle text={diff.toUpperCase()}
+              value={state}
+              kind={diff}
+              toggle={() => { $search.difficulties[diff] = !state; }}
+            />
+          {/each}
+        </td>
+
+        <td>
+          <Toggle text="ALL"
+            value={!unchecked_difficulty}
+            toggle={() => {
+              let repl = unchecked_difficulty;
+              for (let diff in $search.difficulties) {
+                $search.difficulties[diff] = repl;
+              }
+            }}
+          />
+        </td>
+      </tr>
 
       <tr transition:fade={{ duration: 200 }}>
         <th> Include Only </th>
@@ -401,11 +430,11 @@ td {
   font-size: 95%;
 
   &.flex {
+    flex: 1 1 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: start;
     gap: 0.25em;
-    flex: 1 1 auto;
   }
 }
 

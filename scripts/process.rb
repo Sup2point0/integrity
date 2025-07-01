@@ -75,14 +75,14 @@ def extract_blocks(lines)
     if (ctx == "latex" or ctx == "desmos") and line.end_with?("```")
       out.push({
         "kind" => ctx,
-        "content" => clean_breaks(load),
+        "content" => clean(load),
       })
       ctx = nil
       next
     elsif ctx == "text" and line.start_with?("```")
       out.push({
         "kind" => "text",
-        "content" => clean_breaks(load),
+        "content" => clean(load),
       })
       ctx = nil
     else
@@ -107,7 +107,7 @@ def extract_blocks(lines)
   if not ctx.nil?
     out.push({
       "kind" => "text",
-      "content" => clean_breaks(load),
+      "content" => clean(load),
     })
   end
 
@@ -115,6 +115,6 @@ def extract_blocks(lines)
 end
 
 
-def clean_breaks(text)
-  return text.strip.gsub(/[\n]+/, "<br><br>")
+def clean(text)
+  return text.strip.gsub(/[ ]+/, " ").gsub(/[\n]+/, "<br><br>")
 end
