@@ -1,8 +1,9 @@
 <script lang="ts">
 
 import Site from "#scripts/site";
+import { speedrun } from "#scripts/stores";
 
-import Card from "#parts/ui/card.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -26,16 +27,19 @@ import Header from "#parts/core/header.svelte";
 />
 
 
-<div class="content">
-  <Card title="Differentiation"
-    intern="speedrun/differentiation"
-    latex={String.raw`\frac{d}{dx}\ e^x`}
-  />
-  <Card title="Integration"
-    intern="speedrun/integration"
-    latex={String.raw`\int f(x)\ dx `}
-  />
-</div>
+<Clicky
+  text="Continue Speedrun"
+  intern="speedrun/run"
+  disabled={$speedrun.run && (
+    !$speedrun.run.started ||
+    ($speedrun.run.started && $speedrun.run.finished)
+  )}
+/>
+<div style:height="1rem"></div>
+<Clicky
+  text="Create a New Speedrun"
+  intern="speedrun/init"
+/>
 
 
 <style lang="scss">

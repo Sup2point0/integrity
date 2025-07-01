@@ -5,7 +5,7 @@ import { goto } from "$app/navigation";
 
 import Site from "#scripts/site";
 
-import type { Shard, Question } from "#scripts/types";
+import type { Shard, Question, States, InternalError } from "#scripts/types";
 
 
 type Topic = "integrals" | "derivatives";
@@ -16,18 +16,27 @@ export class SpeedrunData
 {
   topic: Topic | null = null;
 
-  prefs = {
-    pause_onblur: false,
-    pause_timer_onsubmit: true,
-    reveal_answer_onsubmit: true,
-  }
+  difficulties: States = {
+    based: false,
+    inclined: false,
+    manifold: false,
+    chaos: false,
+    null: false,
+  };
 
-  include = {
+  include: States = {
     seen: true,
     solved: true,
   };
 
+  prefs: States = {
+    pause_onblur: false,
+    pause_timer_onsubmit: "when-correct",
+    reveal_answer_onsubmit: "always",
+  };
+
   run = $state(new RunData());
+  created = $state(false);
 
 
   /** Expose attributes for syncing to localStorage. */
@@ -45,10 +54,10 @@ export class SpeedrunData
   set_from_json(data: Partial<SpeedrunData>): SpeedrunData
   {
     this.topic = data.topic ?? this.topic;
-    this.prefs = data.prefs ?? this.prefs;
-    this.include = data.include ?? this.include;
+    if (data.prefs) Object.assign(this.prefs, data.prefs);
+    if (data.include) Object.assign(this.include, data.include);
 
-    Object.assign(this.run, data.run);
+    if (data.run) Object.assign(this.run, data.run);
     if (typeof this.run.question === "string") {
       this.run.question = Site.questions[this.topic!].questions[this.run.question];
     }
@@ -58,10 +67,32 @@ export class SpeedrunData
 
 
   /** Create a new run. */
-  new_run(topic: Topic)
+  new_run()
   {
-    this.topic = topic;
     this.run = new RunData();
+  }
+
+  /** Check the run configurations are all valid. Returns an Array of errors, if empty then no errors were found. */
+  check_errors(): InternalError[]
+  {
+    let out = [];
+
+    if (!this.topic) {
+      out.push({ code: "TOPIC", message: "No question topic(s) have been selected."});
+    }
+
+    if (Object.values(this.difficulties).every(diff => !diff)) {
+      out.push({ code: "DIFF", message: "No question difficulties have been selected."});
+    }
+
+    if (!(
+      this.run
+      || this.include
+    )) {
+      out.push({ code: "500", message: "Internal error, something went wrong..."});
+    }
+
+    return out;
   }
 
   /** Start the currently created run. */
@@ -77,7 +108,6 @@ export class SpeedrunData
   submit_answer(index: number): boolean
   {
     this.run.answers.add(index);
-    console.log("answers =", this.run.answers);
     
     let current = this.run.question_hist.at(-1)!;
     current.answered = true;

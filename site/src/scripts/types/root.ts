@@ -17,3 +17,14 @@ export interface TextBlock
   title: string;
   body: (string | Latex)[];
 }
+
+
+export interface States {
+  [key: string]: boolean;
+}
+
+
+export interface InternalError {
+  code: number | string;
+  message?: string;
+}

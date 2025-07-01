@@ -52,8 +52,10 @@ onMount(() => {
 <style lang="scss">
 
 button {
-  width: 2.5em;
-  height: 2.5em;
+  width: 100%;
+  max-width: 2.5em;
+  // height: 2.5em;
+  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,6 +74,11 @@ button {
 
   &:hover, &:active {
     color: var(--col-on, $col-deut);
+  }
+
+  &:active {
+    filter: brightness(88%);
+    transform: scale(92%);
   }
 }
 

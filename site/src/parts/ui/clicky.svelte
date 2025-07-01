@@ -40,7 +40,10 @@ let { text, pict, link, intern, action, disabled, children }: Props = $props();
   </button>
 
 {:else}
-  <a class="clicky" href={link || `${base}/${intern}`}>
+  <a class="clicky"
+    class:disabled
+    href={link || `${base}/${intern}`}
+  >
     {@render content()}
   </a>
 
@@ -68,7 +71,7 @@ let { text, pict, link, intern, action, disabled, children }: Props = $props();
   );
   @include focus-outline;
 
-  &[disabled] {
+  &[disabled], &.disabled {
     pointer-events: none;
     opacity: 20%;
   }

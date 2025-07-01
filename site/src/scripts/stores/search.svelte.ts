@@ -10,12 +10,7 @@ import { persisted, type Serializer } from "svelte-persisted-store";
 import { get } from "svelte/store";
 
 import userprefs from "./user-prefs.svelte.ts";
-import type { UserPrefs, Question } from "#scripts/types";
-
-
-interface States {
-  [key: string]: boolean;
-}
+import type { UserPrefs, Question, States } from "#scripts/types";
 
 export class SearchPrefs
 {
@@ -23,6 +18,13 @@ export class SearchPrefs
 
   tags: States = $state({});
   methods: States = $state({});
+  difficulties: States = $state({
+    based: true,
+    incline: true,
+    manifold: true,
+    chaos: true,
+    null: true,
+  });
 
   include: States = $state({
     solved: false,
@@ -125,6 +127,18 @@ export class SearchPrefs
       out = out.filter(
         question => Object.keys(this.methods).some(method =>
           this.methods[method] && question.methods.includes(method)
+        )
+      );
+    }
+
+    if (Object.values(this.difficulties).includes(true)) {
+      out = out.filter(
+        question => Object.keys(this.difficulties).some(diff =>
+          this.difficulties[diff] && (
+              diff === "unassigned"
+            ? question.difficulty === null || question.difficulty === undefined
+            : question.difficulty?.includes(diff)
+          )
         )
       );
     }
