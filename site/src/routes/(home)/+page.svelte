@@ -51,17 +51,13 @@ onMount(() => {
       intern="questions/integrals"
       latex={String.raw`\int f(x)\ dx`}
     />
-    <!-- <Card title="Graph Drawing"
+    <Card title="Graph Drawing"
       intern="questions/graph-drawing"
       pict="previews/graph-drawing.png"
-    /> -->
-    <Card title="Completing the Square"
-      intern="questions/complete-square"
-      latex={"a(x-p)^2 + q"}
     />
     <Card title="Cool Graphs"
       intern="questions/cool-graphs"
-      pict="previews/guess-graph.png"
+      pict="previews/cool-graphs.png"
     />
   </div>
 

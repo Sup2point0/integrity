@@ -1774,7 +1774,7 @@
       "topic": "graph-drawing",
       "title": "trololol",
       "desc": null,
-      "date": null,
+      "date": 2024,
       "tags": [
         "ln"
       ],
@@ -1856,6 +1856,38 @@
         {
           "kind": "desmos",
           "content": "y = \\ln\\left(\\ln{x}\\right)<br><br>(e,\\ 0)"
+        }
+      ]
+    },
+    "f25p-ms1": {
+      "topic": "graph-drawing",
+      "title": "breakheart",
+      "desc": null,
+      "date": 2025,
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        null
+      ],
+      "graph-bounds": 5,
+      "shard": "f25p-ms1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\max\\left(\\sin x,\\ \\cos x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\max\\left(\\sin x,\\ \\cos x\\right)<br><br>\\max\\left(\\sin x,\\ -\\cos x\\right)<br><br>\\max\\left(\\sin x,\\ -\\sin x\\right)<br><br>\\max\\left(\\cos x,\\ -\\cos x\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
         }
       ]
     }
