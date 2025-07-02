@@ -50,7 +50,7 @@ let options = $derived(
             options={{ showXAxis: true, showYAxis: true }}
             controls={false}
             bounds={question["graph-bounds"]}
-            ratio={3 / 2}
+            height="25vh"
           />
         {/key}
 

@@ -77,7 +77,7 @@ let question: Question | null = $derived(page_data.question);
 
 <Section title="Answer">
   <Desmos
-    blocks={question?.question}
+    blocks={question?.answer ?? question?.question}
     bounds={question?.["graph-bounds"]}
   />
 </Section>
