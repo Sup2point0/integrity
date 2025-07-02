@@ -36,7 +36,7 @@ let { source }: Props = $props();
             content: line,
           }))
         }
-        ratio={2 / 1}
+        height="70vh"
       />
     </div>
 

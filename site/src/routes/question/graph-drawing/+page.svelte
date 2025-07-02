@@ -4,8 +4,8 @@ import { page_data } from "../page-data.svelte.ts";
 import { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
+import Desmos from "#parts/desmos.svelte";
 import Tag from "#parts/ui/tag.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
 import CopyClicky from "#parts/page/copy-clicky.svelte";
 
 import Meta from "#parts/page/meta.svelte";
@@ -17,24 +17,17 @@ import Line from "#parts/page/line.svelte";
 
 let question: Question | null = $derived(page_data.question);
 
-
-function display_title(text: string): string
-{
-  if (text.endsWith(")")) {
-    return text.slice(0, text.lastIndexOf("(")).toUpperCase();
-  } else {
-    return text.toUpperCase();
-  }
-}
-
 </script>
 
 
-<Meta title="{question?.shard ?? '?'} · Integrals" />
+<Meta title="{question?.shard ?? '?'} · Graph Drawing">
+  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</Meta>
+
 
 <Breadcrumbs levels={[
   { text: "Questions", intern: "questions" },
-  { text: "Integrals", intern: "questions/integrals" },
+  { text: "Graph Drawing", intern: "questions/graph-drawing" },
   { text: question?.shard ?? "?" },
 ]} copy={true} shard={question?.shard} />
 
@@ -49,10 +42,6 @@ function display_title(text: string): string
   </div>
 
   <Line width="80%" margin="1rem auto" />
-
-  <div class="utils lower">
-    <Clicky text="Open in Workspace" intern="workspace?shard={question?.shard}" />
-  </div>
 </section>
 
 <Section title="Info">
@@ -86,15 +75,12 @@ function display_title(text: string): string
   </Section>
 {/if}
 
-{#if question?.answer}
-  <Section title="Answer">
-    <RenderBlock source={question.answer} />
-
-    <span style="position: absolute; right: 0; transform: translateY(-3rem);">
-      <CopyClicky value={Question.sanitise(question?.answer.content)} />
-    </span>
-  </Section>
-{/if}
+<Section title="Answer">
+  <Desmos
+    blocks={question?.question}
+    bounds={question?.["graph-bounds"]}
+  />
+</Section>
 
 {#if question?.solution}
   <Section title="Solution">
@@ -108,44 +94,12 @@ function display_title(text: string): string
         {#if step === "_"}
           <RenderBlock {source} />
         {:else}
-          <Section ctx="inner" closed={false} title={display_title(step)}>
+          <Section ctx="inner" closed={false} title={step.toUpperCase()}>
             <RenderBlock {source} />
           </Section>
         {/if}
       {/each}
 
-    {/if}
-
-    <div class="utils solution">
-      <Clicky text="Check a Different Solution"
-        intern="workspace?shard={question.shard}"
-      />
-
-      <Clicky text="Report Error in Solution"
-        link="https://github.com/Sup2point0/integrity/issues"
-      />
-    </div>
-  </Section>
-{/if}
-
-{#if question?.alternates}
-  <Section title="Alternatives">
-    {#if Array.isArray(question.alternates)}
-      {#each question.alternates as source}
-        <RenderBlock {source} />
-      {/each}
-    
-    {:else}
-      {#each Object.entries(question.alternates) as [step, source]}
-        {#if step === "_"}
-          <RenderBlock {source} />
-        {:else}
-          <Section ctx="inner" closed={true} title={display_title(step)}>
-            <RenderBlock {source} />
-          </Section>
-        {/if}
-      {/each}
-    
     {/if}
   </Section>
 {/if}
@@ -163,7 +117,7 @@ section.question {
 }
 
 .utils {
-  &.upper, &.solution {
+  &.upper {
     display: flex;
     flex-flow: row wrap;
     justify-content: end;
@@ -172,15 +126,6 @@ section.question {
   
   &.upper {
     padding-right: 10%;
-  }
-
-  &.lower {
-    display: flex;
-    justify-content: center;
-  }
-
-  &.solution {
-    padding-top: 2rem;
   }
 }
 
@@ -219,6 +164,12 @@ section.question {
     row-gap: 0.2em;
     font-size: 125%;
   }
+}
+
+#desmos-window {
+  margin: 1rem 0;
+  width: 100%;
+  height: 80vh;
 }
 
 </style>

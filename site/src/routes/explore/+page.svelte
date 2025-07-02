@@ -60,6 +60,7 @@ import { goto } from "$app/navigation";
     <h3> Docs </h3>
     <div class="links">
       <Link text="Questions" intern="docs/questions" />
+      <Link text="Difficulties" intern="docs/difficulties" hot={true} />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
       <Link text="Speedrun" intern="docs/speedrun" disabled={true} />

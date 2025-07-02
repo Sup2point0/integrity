@@ -400,6 +400,10 @@ input[type='search'] {
   &:focus, &:active {
     outline: none;
   }
+
+  &::placeholder {
+    color: $col-text-deut;
+  }
 }
 
 img.arrow {

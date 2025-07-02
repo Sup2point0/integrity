@@ -25,7 +25,7 @@ import { goto } from "$app/navigation";
   <section class="centre">
     <NavLink text="Questions" intern="questions">
       <Link text="Integrals" intern="questions/integrals" />
-      <Link text="Graph Drawing" intern="questions/graph-drawing" disabled={true} />
+      <Link text="Graph Drawing" intern="questions/graph-drawing" />
       <Link text="Completing the Square" intern="questions/complete-square" />
       <Link text="Guess the Graph" intern="questions/guess-graph" disabled={true} />
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
@@ -160,6 +160,9 @@ section {
 nav.nav {
   --col-left: #{color.change($col-yay, $alpha: 90%)};
   --col-right: #{color.change($col-manifold, $alpha: 90%)};
+
+  border-bottom: none;
+  box-shadow: none;
 
   :global(.nav-link p) {
     color: white;

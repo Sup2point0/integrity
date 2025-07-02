@@ -5,10 +5,10 @@ import { search } from "#scripts/stores";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
+import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/page/search.svelte";
-import Meta from "#parts/page/meta.svelte";
 
 import { onMount } from "svelte";
 
@@ -23,13 +23,13 @@ let filtered = $derived($search.filter_questions(questions));
 onMount(() => {
   $search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
   $search.methods = Object.fromEntries(methods.map(method => [method, false]));
-})
+});
 
 </script>
 
 
 <Meta title="Cool Graphs"
-  desc="A collection of cool graphs I’ve discovered!"
+  desc="A collection of cool graphs I’ve found!"
 >
   <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 </Meta>
@@ -47,7 +47,7 @@ onMount(() => {
   {#each filtered as question (question.shard)}
     <QuestionCard {question}
       desmos={$search.show.question ? question.desmos : undefined}
-      style={$search.view === "grid" ? "block" : "row"}
+      style={$search.view === "list" ? "row" : "block"}
     />
   {/each}
 </div>
@@ -67,7 +67,7 @@ onMount(() => {
   display: flex;
   gap: 1rem;
 
-  &.grid {
+  &.grid, &.grid-wide {
     display: grid;
     grid-template-columns: repeat(auto-fit, max(16rem, 30%));
     justify-content: center;

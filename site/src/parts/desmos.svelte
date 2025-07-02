@@ -11,17 +11,35 @@ import { onMount } from "svelte";
 
 interface Props {
   blocks: Block | Block[];
+  options?: object;
   controls?: boolean;
+  height?: string;
   ratio?: number;
-  bounds?: number;
+  bounds?: number | {
+    left?: number, right?: number, bottom?: number, top?: number,
+  };
 }
 
 let {
   blocks,
+  options = {},
   controls = true,
+  height = undefined,
   ratio = 1,
-  bounds = controls ? undefined : 2
+  bounds = controls ? undefined : 2,
 }: Props = $props();
+
+
+let config = {
+  expressions: controls, expressionsCollapsed: true,
+  graphPaper: false, showGrid: controls,
+  keypad: false, settingsMenu: controls,
+  lockViewport: !controls, zoomButtons: controls,
+  showXAxis: controls, showYAxis: controls,
+  xAxisNumbers: controls, yAxisNumbers: controls,
+};
+
+Object.assign(config, options);
 
 
 let desmos: any | false | null = $state(null);
@@ -32,15 +50,13 @@ const cols = col_picker();
 
 
 onMount(() => {
-  let observer = new IntersectionObserver(entries => {
+  new IntersectionObserver(entries => {
     for (let entry of entries) {
       if (entry.isIntersecting && !live) {
         live = try_load_desmos();
       }
     }
-  });
-
-  observer.observe(self);
+  }).observe(self);
 
   console.info("sup guys, don’t worry, I have seen this notice – when I originally emailed Desmos asking for a production key, they told me I could just use the prototype key, so it’s all good o7");
 });
@@ -75,40 +91,50 @@ function try_load_desmos()
     return false;
   }
 
-  desmos = Desmos.GraphingCalculator(self, {
-    expressions: controls, keypad: false,
-    graphPaper: false, showGrid: controls,
-    settingsMenu: controls,
-    lockViewport: !controls, zoomButtons: controls,
-    showXAxis: controls, showYAxis: controls,
-    xAxisNumbers: controls, yAxisNumbers: controls,
-  });
+  desmos = Desmos.GraphingCalculator(self, config);
 
-  if (bounds) {
+  if (typeof bounds === "number") {
     desmos.setMathBounds({
       left: -bounds, right: bounds,
       bottom: -bounds, top: bounds,
     });
+  } else if (bounds) {
+    desmos.setMathBounds(bounds);
   }
 
   if (Array.isArray(blocks)) {
-    desmos.setExpressions(
-      blocks.map((block, i) => ({
-        id: `graph-${i}`,
-        latex: block.content.split(" : ").at(-1),
-        color: block.content.includes("\\asympt") ? Desmos.Colors.BLACK : cols.next().value,
-        hidden: block.content.includes("\\hidden"),
-        lineOpacity: block.content.includes("\\asympt") ? 0.4 : undefined,
-        lineStyle: (block.content.includes("\\dashed") || block.content.includes("\\asympt")) ? Desmos.Styles.DASHED : Desmos.Styles.SOLID,
-      }))
-    );
+    desmos.setExpressions(blocks.map((block, i) => parse_block(block, i)));
   } else {
-    desmos.setExpressions([
-      { id: "graph", latex: blocks.content, color: cols.next().value }
-    ]);
+    desmos.setExpressions(parse_block(blocks, 0));
   }
 
   return true;
+}
+
+function parse_block(block: Block, index: number): object | undefined
+{
+  let parts = block.content?.split(" : ");
+  let control = parts.at(0)!;
+  let content = parts.at(-1);
+
+  if (control.includes("\\viewport")) {    
+    let bounds = control.match(/(?<=\\viewport\{)\{.+\}(?=\})/)?.at(0);
+    bounds = bounds?.replaceAll(/([a-zA-Z]+):/, '"1":');
+    console.log("bounds =", bounds);
+    
+    desmos.setMathBounds(JSON.parse(bounds));
+  }
+  
+  if (parts.length === 0 || content === "") return undefined;
+
+  return {
+    id: `graph-${index}`,
+    latex: content,
+    color: control.includes("\\asympt") ? Desmos.Colors.BLACK : cols.next().value,
+    hidden: control.includes("\\hidden"),
+    lineOpacity: control.includes("\\asympt") ? 0.4 : undefined,
+    lineStyle: (control.includes("\\dashed") || control.includes("\\asympt")) ? Desmos.Styles.DASHED : Desmos.Styles.SOLID,
+  };
 }
 
 </script>
@@ -116,6 +142,7 @@ function try_load_desmos()
 
 <div class="desmos"
   bind:this={self}
+  style:height={height}
   style:aspect-ratio={ratio}
 >
   {#if desmos === false}
