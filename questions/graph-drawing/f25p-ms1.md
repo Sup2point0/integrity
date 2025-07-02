@@ -3,6 +3,7 @@ topic: graph-drawing
 title: breakheart
 desc: 
 date: 2025
+difficulty: incline
 tags:
   - trig
 methods:
@@ -13,7 +14,7 @@ graph-bounds: 5
 
 ## Question
 ```math
-\max\left(\sin x,\ \cos x\right)
+y = \max\left(\sin x,\ \cos x\right)
 ```
 
 

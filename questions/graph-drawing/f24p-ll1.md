@@ -3,6 +3,7 @@ topic: graph-drawing
 title: trololol
 desc: 
 date: 2024
+difficulty: incline
 tags:
   - ln
 methods:
