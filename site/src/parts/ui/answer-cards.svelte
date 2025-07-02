@@ -35,7 +35,9 @@ let options = $derived(
   {#each options as option}
     <button
       class={{
-        correct: ($speedrun.run.state === "correct" && option.index === 0),
+        correct: (
+          $speedrun.run.state === "correct" && option.index === 0
+        ),
         incorrect: ($speedrun.run.state !== "correct" && $speedrun.run.answers.has(option.index))
       }}
       onclick={() => $speedrun.submit_answer(option.index)}

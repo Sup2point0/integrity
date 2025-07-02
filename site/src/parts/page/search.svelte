@@ -301,7 +301,7 @@ onMount(() => {
 
         <tr>
           <th> View </th>
-          <td>
+          <td class="flex">
             <Select bind:value={$search.view}
               options={{
                 "GRID": "grid",
@@ -309,6 +309,12 @@ onMount(() => {
                 "WIDE GRID": "grid-wide",
               }}
             />
+            {#if $search.effects !== null}
+              <Toggle text="EFFECTS"
+                value={$search.effects}
+                toggle={() => { $search.effects = !$search.effects }}
+              />
+            {/if}
           </td>
         </tr>
 

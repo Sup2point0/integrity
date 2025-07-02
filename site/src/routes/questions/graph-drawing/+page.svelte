@@ -30,9 +30,7 @@ onMount(() => {
 
 <Meta title="Graph Drawing"
   desc="Questions for practising graph drawing"
->
-  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-</Meta>
+/>
 
 
 <Breadcrumbs levels={[

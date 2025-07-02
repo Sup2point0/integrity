@@ -36,6 +36,7 @@ onMount(() => {
 <style lang="scss">
 
 .up {
+  pointer-events: none;
   position: fixed;
   right: 1rem;
   bottom: 1rem;
@@ -44,6 +45,7 @@ onMount(() => {
   transition: all 0.12s cubic-bezier(0.6, 0.04, 0.98, 0.335);  // ease-in circ
 
   &.live {
+    pointer-events: all;
     display: block;
     opacity: 100%;
     transform: none;
