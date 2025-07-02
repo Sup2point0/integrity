@@ -5,12 +5,12 @@ desc:
 date: 2025
 difficulty: manifold
 tags:
-  - wack
   - trig
   - arctrig
+  - integral
 methods:
   - 
-graph-bounds: 12
+graph-bounds: 15
 ---
 
 

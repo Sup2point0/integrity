@@ -1938,6 +1938,39 @@
         }
       ]
     },
+    "f24p-ss1": {
+      "topic": "graph-drawing",
+      "title": "synchro summon",
+      "desc": null,
+      "date": 2024,
+      "difficulty": "incline",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "prod"
+      ],
+      "graph-bounds": 6,
+      "shard": "f24p-ss1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\sin\\left(x\\right)\\sin\\left(2x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\sin\\left(x\\right)\\sin\\left(2x\\right)<br><br>\\sin\\left(x-\\frac{3\\pi}{4}\\right)\\cos\\left(2\\left(x-\\frac{3\\pi}{4}\\right)\\right)<br><br>\\sin\\left(x\\right)^{3}<br><br>\\cos\\left(x\\right)\\cos\\left(2x\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
     "f25p-al1": {
       "topic": "graph-drawing",
       "title": "aluminite",
@@ -1963,6 +1996,41 @@
         {
           "kind": "desmos",
           "content": "\\sin^{-1}\\left(x\\right)\\ln\\left(x\\right)<br><br>x\\left(x-1\\right)\\ \\left\\{0<x<1\\right\\}<br><br>-\\sin^{-1}\\left(x\\right)\\ln\\left(x\\right)<br><br>-x\\left(x-1\\right)\\left(x-2\\right)\\ \\left\\{0<x<2\\right\\}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-ci1": {
+      "topic": "graph-drawing",
+      "title": "cilia",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "manifold",
+      "tags": [
+        "trig",
+        "arctrig",
+        "integral"
+      ],
+      "methods": [
+        null
+      ],
+      "graph-bounds": 15,
+      "shard": "f25p-ci1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{0}^{x}\\sin^{-1}\\left(\\sin t\\right)\\ dt"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\int_{0}^{x}\\sin^{-1}\\left(\\sin t\\right)\\ dt<br><br>\\int_{0}^{x}\\cos^{-1}\\left(\\cos t\\right)\\ dt<br><br>\\int_{0}^{x}\\sin^{-1}\\left(\\cos t\\right)\\ dt<br><br>\\left(\\arcsin\\left(\\sin\\left(\\frac{x}{2}\\right)\\right)\\right)^{2}"
         }
       ],
       "solution": [
@@ -2005,6 +2073,46 @@
         }
       ]
     },
+    "f25p-os1": {
+      "topic": "graph-drawing",
+      "title": "hyponitrooscillation",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "manifold",
+      "tags": [
+        "trig",
+        "exp",
+        "integral"
+      ],
+      "methods": [
+        null
+      ],
+      "graph-bounds": {
+        "left": -20,
+        "right": 20,
+        "bottom": -10,
+        "top": 10
+      },
+      "shard": "f25p-os1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\int_{0}^{x}\\sin\\left(e^{t}\\right)\\ dt"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\int_{0}^{x}\\sin\\left(e^{t}\\right)\\ dt<br><br>\\int_{0.5}^{x}\\sin\\left(e^{t}\\right)\\ dt<br><br>0.69-e^{-1-x}\\sin\\left(e^{x+1}\\right)<br><br>0.5-e^{-x}\\cos\\left(e^{x}\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
     "f25p-tx1": {
       "topic": "graph-drawing",
       "title": "quadrat",
@@ -2018,7 +2126,7 @@
       "methods": [
         null
       ],
-      "graph-bounds": 4,
+      "graph-bounds": 8,
       "shard": "f25p-tx1",
       "question": [
         {
@@ -2052,17 +2160,50 @@
       "methods": [
         "limit"
       ],
+      "graph-bounds": 10,
       "shard": "f25p-xs1",
       "question": [
         {
           "kind": "latex",
-          "content": "\\frac{x-\\sin x}{x+\\sin x}"
+          "content": "y = \\frac{x-\\sin x}{x+\\sin x}"
         }
       ],
       "options": [
         {
           "kind": "desmos",
           "content": "\\frac{x-\\sin x}{x+\\sin x}<br><br>\\frac{x}{x+\\sin x}<br><br>\\frac{x+\\sin x}{x-\\sin x}<br><br>\\left|x\\right|\\sin^{2}x"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-yg1": {
+      "topic": "graph-drawing",
+      "title": "Young’s modulus",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "chaos",
+      "tags": [
+        "wack"
+      ],
+      "methods": [
+        "intuit"
+      ],
+      "shard": "f25p-yg1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\int_{0}^{x}\\frac{\\sin t}{t}\\ dt"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\int_{0}^{x}\\frac{\\sin t}{t}\\ dt<br><br>\\int_{0}^{x}\\frac{\\sin^{2}t}{t^{2}}\\ dt<br><br>e^{-\\left(0.2\\left|x\\right|\\right)}\\sin\\left(\\left|x\\right|\\right)\\operatorname{sign}\\left(x\\right)<br><br>-\\operatorname{sign}\\left(x\\right)\\int_{1}^{\\left|x\\right|}\\frac{\\cos t}{t}\\ dt"
         }
       ],
       "solution": [

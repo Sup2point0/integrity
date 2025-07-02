@@ -13,7 +13,7 @@ methods:
 
 ## Question
 ```math
-\int_{0}^{x}\frac{\sin t}{t}\ dt
+y = \int_{0}^{x}\frac{\sin t}{t}\ dt
 ```
 
 

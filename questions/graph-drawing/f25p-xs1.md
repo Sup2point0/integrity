@@ -9,12 +9,13 @@ tags:
   - trig
 methods:
   - limit
+graph-bounds: 10
 ---
 
 
 ## Question
 ```math
-\frac{x-\sin x}{x+\sin x}
+y = \frac{x-\sin x}{x+\sin x}
 ```
 
 
