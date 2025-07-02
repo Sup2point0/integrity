@@ -31,7 +31,7 @@ export class SpeedrunData
 
   prefs: States = {
     pause_onblur: false,
-    pause_timer_onsubmit: "when-correct",
+    pause_onsubmit: "when-correct",
     reveal_answer_onsubmit: "always",
   };
 
@@ -118,13 +118,19 @@ export class SpeedrunData
     current.answered = true;
 
     if (index === 0) {
+      this.run.state = "correct";
       current.correct = true;
       current.time = this.run.elapsed - current.time;
-      this.run.state = "correct";
+      if (["always", "when-correct"].includes(this.prefs.pause_onsubmit)) {
+        this._clear_interval_();
+      }
       return true;
     }
     else {
       this.run.state = "incorrect";
+      if (this.prefs.pause_onsubmit === "always") {
+        this._clear_interval_();
+      }
       return false;
     }
   }
@@ -146,6 +152,7 @@ export class SpeedrunData
     });
 
     this.run.state = "solving";
+    this._set_interval_();
   }
 
   /** Pause the current run. */
@@ -167,17 +174,20 @@ export class SpeedrunData
     this._clear_interval_();
     this.run.running = false;
     this.run.finished = true;
-    goto("/speedrun/finish");
+    goto("finish");
   }
 
 
+  /** Set a new timer interval, clearing the existing interval if it exists. */
   _set_interval_()
   {
+    this._clear_interval_();
     this.run.interval = setInterval(() => {
       this.run.elapsed += 250;
     }, 250);
   }
 
+  /** Clear the current interval if it exists. */
   _clear_interval_()
   {
     if (this.run.interval) {
