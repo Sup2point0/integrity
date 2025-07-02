@@ -9,7 +9,7 @@ tags:
   - arctrig
 methods:
   - prod
-graph-bounds: 1
+graph-bounds: 2
 ---
 
 
