@@ -52,10 +52,8 @@ onMount(() => {
 <style lang="scss">
 
 button {
-  width: 100%;
-  max-width: 2.5em;
-  // height: 2.5em;
-  aspect-ratio: 1;
+  width: 2.5em;
+  height: 2.5em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,25 +63,24 @@ button {
   border-radius: 50%;
 
   @include interact(
+    $col-clicky-hover,
     $col-clicky-click,
-    $col-card-click,
   );
   @include focus-outline;
 
   transition: all 0.1s ease-out;
 
-  &:hover, &:active {
-    color: var(--col-on, $col-deut);
-  }
-
   &:active {
-    filter: brightness(88%);
     transform: scale(92%);
+
+    .content {
+      filter: brightness(88%);
+    }
   }
 }
 
 button.active {
-  color: var(--col-on, $col-deut)
+  color: var(--col-on, $col-deut);
 }
 
 .content {
