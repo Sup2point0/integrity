@@ -23,7 +23,7 @@ export class SearchPrefs
     incline: true,
     manifold: true,
     chaos: true,
-    null: true,
+    unassigned: true,
   });
 
   include: States = $state({
