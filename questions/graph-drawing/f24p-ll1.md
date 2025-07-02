@@ -2,7 +2,7 @@
 topic: graph-drawing
 title: trololol
 desc: 
-date: 
+date: 2024
 tags:
   - ln
 methods:
