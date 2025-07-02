@@ -4,7 +4,7 @@ A card for selecting a question. -->
 
 <script lang="ts">
 
-import { search } from "#scripts/stores";
+import { userprefs, search } from "#scripts/stores";
 import type { Latex, Block, Question } from "#scripts/types";
 
 import SaveButtons from "#parts/page/save-buttons.svelte";
@@ -34,20 +34,26 @@ function check_valid(data: Array<any>): boolean
 </script>
 
 
-<a class="question-card {style}"
+<a class={["question-card", style, {
+    effects: $search.effects,
+    special: $search.show.difficulties && question.difficulty === "chaos",
+    solved: $userprefs.solved.has(question.shard),
+  }]}
   href="{base}/question/{question.topic}?shard={question.shard}"
 >
+  {#if $search.show.difficulties && question.difficulty}
+    <div class="difficulty-indicator {question.difficulty}"
+      title={question.difficulty.toUpperCase()}
+      transition:fade={{ duration: 250 }}
+    >
+      {#if style === "row"}
+        {question.difficulty.toUpperCase()}
+      {/if}
+    </div>
+  {/if}
+
   {#if $search.show.question}
     <div class="question" transition:fade={{ duration: 250 }}>
-      {#if $search.show.difficulties && question.difficulty}
-        <div class="difficulty-indicator {question.difficulty}"
-          title={question.difficulty.toUpperCase()}
-        >
-          {#if style === "row"}
-            {question.difficulty.toUpperCase()}
-          {/if}
-        </div>
-      {/if}
 
       {#if latex}
         <Katex text={latex} inline={false} client_render={true} />
@@ -109,10 +115,14 @@ function check_valid(data: Array<any>): boolean
 
 <style lang="scss">
 
+@use 'sass:color';
+
+
 a.question-card {
+  flex: 1 0 auto;
   min-width: 12em;
   padding: 0.75em;
-  flex: 1 0 auto;
+  position: relative;
   display: flex;
   justify-content: stretch;
   align-items: stretch;
@@ -131,7 +141,7 @@ a.question-card {
   color: $col-text-fallback;
   color: $col-text;
   text-decoration: none;
-  background: auto;
+  background: light-dark(white, black);
   border: 1px solid $col-line-fallback;
   border: 1px solid $col-line;
   border-radius: 0.5em;
@@ -145,6 +155,83 @@ a.question-card {
   @include focus-outline;
 }
 
+a.question-card.effects {
+  transition: all 0.12s ease-out;
+
+  &:hover {
+    transform: scale(103%);
+  }
+  &.row:hover {
+    transform: scale(101.5%);
+  }
+
+  &.special:not(.solved) {
+    position: relative;
+    border: none;
+    border-radius: 0.4em;
+    box-shadow: none;
+    transform-style: preserve-3d;
+
+    &::before {
+      content: '';
+      margin: -1.5px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(130deg in oklch, $col-manifold, $col-chaos) 0 0 / 100% no-repeat;
+      border-radius: 0.5em;
+      transform: translateZ(-1px);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(130deg in oklch, $col-manifold, $col-chaos);
+      filter: blur(4px);
+      transform: translateZ(-2px);
+      transition: inset 0.12s ease-out;
+    }
+
+    &:hover::after {
+      inset: -3px;
+    }
+  }
+}
+
+.difficulty-indicator {
+  $size: 0.65rem;
+  height: $size;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0.57rem;
+  right: 0.6rem;
+  z-index: 10;
+  border-radius: calc($size / 2);
+  transition: all 0.12s ease-out;
+
+  &.based    { background: $col-based; }
+  &.incline  { background: $col-incline; }
+  &.manifold { background: $col-manifold; }
+  &.chaos    { background: $col-chaos; }
+
+  .question-card.row & {
+    height: unset;
+    aspect-ratio: unset;
+    padding: 0.2em 0.5em;
+    color: white;
+    font-size: 90%;
+    border-radius: 0.4rem;
+  }
+
+  .question-card:not(.row):hover & {
+    border-radius: 0;
+    transform: rotate(45deg);
+  }
+}
+
 .question {
   min-height: 4rem;
   padding: 1rem;
@@ -153,48 +240,23 @@ a.question-card {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 
   font-size: 80%;
   a.question-card.row & { font-size: 100%; }
   text-align: center;
   overflow-x: hidden;
-
-  .difficulty-indicator {
-    $size: 0.65rem;
-    height: $size;
-    aspect-ratio: 1;
-    position: absolute;
-    top: 0.15rem;
-    right: 0.1rem;
-    border-radius: $size / 2;
-
-    &.based    { background: $col-based; }
-    &.incline  { background: $col-incline; }
-    &.manifold { background: $col-manifold; }
-    &.chaos    { background: $col-chaos; }
-
-    a.question-card.row & {
-      height: unset;
-      aspect-ratio: unset;
-      padding: 0.2em 0.5em;
-      color: white;
-      font-size: 90%;
-      border-radius: 0.4rem;
-    }
-  }
 }
 
 .info {
   padding: 1em 0.4em 0.4em;
   text-align: left;
 
-  a.question-card.block & {
+  .question-card.block & {
     border-top: 1px solid $col-line-fallback;
     border-top: 1px solid $col-line;
   }
 
-  a.question-card.row & {
+  .question-card.row & {
     min-width: 40%;
     flex: 0 1 auto;
     border-right: 1px solid $col-line-fallback;
