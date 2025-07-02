@@ -47,9 +47,8 @@ onMount(() => {
 
 
 <Breadcrumbs levels={[
-  { text: "Integrity", link: Site.root },
   { text: "Speedrun", intern: "speedrun" },
-  { text: "Create" },
+  { text: "Setup" },
 ]} />
 
 <Header title="Setup Speedrun" />
@@ -64,7 +63,7 @@ onMount(() => {
       </th>
       <td>
         <SelectDropdown bind:value={$speedrun.topic} options={{
-          "Differentation": "derivatives",
+          "Differentiation": "derivatives",
         }} />
       </td>
     </tr>
@@ -244,7 +243,7 @@ table {
 }
 
 nav.end {
-  margin-top: 4rem;
+  margin: 2rem 0;
   width: 100%;
   display: flex;
   flex-flow: row wrap;

@@ -22,9 +22,7 @@ import Header from "#parts/core/header.svelte";
   { text: "Speedrun" },
 ]} />
 
-<Header title="Speedrun"
-  capt="Coming Soon!"
-/>
+<Header title="Speedrun" />
 
 
 <Clicky
