@@ -64,6 +64,8 @@ onMount(() => {
       <td>
         <SelectDropdown bind:value={$speedrun.topic} options={{
           "Differentiation": "derivatives",
+          "Integrals": "integrals",
+          "Graph Drawing": "graph-drawing",
         }} />
       </td>
     </tr>

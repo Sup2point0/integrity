@@ -54,11 +54,14 @@ function create_question_pool()
 </script>
 
 
-<Meta title="{$speedrun.run.started ? display_time($speedrun.run.elapsed) + ' · ' : ''}Speedrun" />
+<Meta title="{$speedrun.run.started ? display_time($speedrun.run.elapsed) + ' · ' : ''}Speedrun">
+  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</Meta>
 
 <svelte:window onblur={() => $speedrun.prefs.pause_onblur && $speedrun.pause()} />
 
 
+<!-- UPPER CONTROLS -->
 <nav>
   <section class="left">
     <Clicky text="Finish"
@@ -84,6 +87,7 @@ function create_question_pool()
 
 
 {#if errors.length}
+  <!-- ERROR SCREEN -->
   <div class="cover" style:padding-top="4rem">
     <article>
       {#if errors[0].code === "NULL"}
@@ -109,7 +113,7 @@ function create_question_pool()
     </article>
   </div>
 
-{:else}  
+{:else}
   <div class="container">
     {#if !$speedrun.run.started}
       <div class="cover"
@@ -123,13 +127,22 @@ function create_question_pool()
       {#if $speedrun.run.running}
         <div in:fade={{ duration: 250, delay: 250 }}>
           {#if $speedrun.run.question}
+            <!-- QUESTION CONTENT -->
             {@const question = $speedrun.run.question}
             
             <div class="question">
-              <Katex text="{
-                String.raw`\frac{d}{dx} \ `}{
-                question.question as string
-              }" />
+              {#if question.topic === "derivatives"}
+                <Katex text="{
+                  String.raw`\frac{d}{dx} \ `}{
+                  question.question as string
+                }" />
+              {:else if question.topic === "integrals"}
+                <Katex text={question.question.content} />
+              {:else if question.topic === "graph-drawing"}
+                <Katex text={question.question.content} />
+              {:else}
+                <Katex text={typeof question.question === "string" ? question.question : question.question.content} />
+              {/if}
   
               <Line />
             </div>
@@ -158,6 +171,7 @@ function create_question_pool()
   </div>
   
   {#if $speedrun.run.started}
+    <!-- LOWER CONTROLS -->
     <div class="info"
       transition:fade={{ duration: 250 }}
     >
@@ -166,10 +180,10 @@ function create_question_pool()
           Question {$speedrun.run.question_hist.length}
         </p>
   
-        <Tag
-          kind={$speedrun.run.question?.difficulty}
-          tag={$speedrun.run.question?.difficulty}
-        />
+        {#if $speedrun.run.question?.difficulty}
+          {@const diff = $speedrun.run.question.difficulty}
+          <Tag kind={diff} tag={diff} />
+        {/if}
       </section>
   
       <section class="centre">

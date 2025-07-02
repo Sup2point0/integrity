@@ -12,6 +12,7 @@ import { speedrun } from "#src/scripts/stores";
 import type { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
+import Desmos from "#parts/desmos.svelte";
 
 
 interface Props {
@@ -42,7 +43,21 @@ let options = $derived(
         ($speedrun.run.state === "correct" && option.index !== 0) || undefined
       }
     >
-      <Katex text={option.latex} inline={false} />
+      {#if question.topic === "graph-drawing"}
+        {#key question.shard}
+          <Desmos
+            blocks={{ kind: "desmos", content: option.latex }}
+            options={{ showXAxis: true, showYAxis: true }}
+            controls={false}
+            bounds={question["graph-bounds"]}
+            ratio={3 / 2}
+          />
+        {/key}
+
+      {:else}
+        <Katex text={option.latex} inline={false} />
+
+      {/if}
     </button>
   {/each}
 </div>

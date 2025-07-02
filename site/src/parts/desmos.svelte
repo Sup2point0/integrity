@@ -105,7 +105,7 @@ function try_load_desmos()
   if (Array.isArray(blocks)) {
     desmos.setExpressions(blocks.map((block, i) => parse_block(block, i)));
   } else {
-    desmos.setExpressions(parse_block(blocks, 0));
+    desmos.setExpressions([parse_block(blocks, 0)]);
   }
 
   return true;
@@ -141,6 +141,7 @@ function parse_block(block: Block, index: number): object | undefined
 
 
 <div class="desmos"
+  class:live
   bind:this={self}
   style:height={height}
   style:aspect-ratio={ratio}
@@ -159,6 +160,12 @@ function parse_block(block: Block, index: number): object | undefined
   width: 100%;
   min-width: 12rem;
   max-width: 100%;
+  opacity: 0;
+  transition: opacity 0.24s ease-out 0.05s;
+
+  &.live {
+    opacity: 1;
+  }
 }
 
 </style>

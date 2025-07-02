@@ -74,7 +74,13 @@ export class Question
       this.title?.toLowerCase(),
       ...(this.tags ?? []),
       ...(this.methods ?? []),
-    ].filter(each => each);
+    ].filter(Boolean);
+
+    if (this.topic === "graph-drawing") {
+      this.options = data.options[0].content.split("<br><br>").map(
+        (latex, index) => ({ index, latex })
+      );
+    }
 
     if (typeof this.question?.content === "string") {      
       this.question.content = this.question.content.replaceAll(/\s\s+/g, " ");

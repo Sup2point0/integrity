@@ -8,7 +8,7 @@ import Site from "#scripts/site";
 import type { Shard, Question, States, InternalError } from "#scripts/types";
 
 
-type Topic = "integrals" | "derivatives";
+type Topic = "integrals" | "derivatives" | "graph-drawing";
 
 
 /** Speedrun configurations. Data for the current run is stored in `.run` attribute. */
@@ -18,7 +18,7 @@ export class SpeedrunData
 
   difficulties: States = {
     based: false,
-    inclined: false,
+    incline: false,
     manifold: false,
     chaos: false,
     null: false,
@@ -44,9 +44,11 @@ export class SpeedrunData
   {
     return {
       topic: this.topic,
+      difficulties: this.difficulties,
       prefs: this.prefs,
       include: this.include,
       run: this.run.to_json(),
+      created: this.created,
     };
   }
 
@@ -54,6 +56,7 @@ export class SpeedrunData
   set_from_json(data: Partial<SpeedrunData>): SpeedrunData
   {
     this.topic = data.topic ?? this.topic;
+    if (data.difficulties) Object.assign(this.difficulties, data.difficulties);
     if (data.prefs) Object.assign(this.prefs, data.prefs);
     if (data.include) Object.assign(this.include, data.include);
 
@@ -61,6 +64,8 @@ export class SpeedrunData
     if (typeof this.run.question === "string") {
       this.run.question = Site.questions[this.topic!].questions[this.run.question];
     }
+
+    this.created = data.created ?? this.created;
 
     return this;
   }

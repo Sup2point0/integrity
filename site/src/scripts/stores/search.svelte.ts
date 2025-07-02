@@ -181,9 +181,11 @@ export class SearchPrefs
   
       let matches = fuzz.extract(query, questions, {
         scorer: (query, question) => (
+          question._match ? 
           Math.max(...question._match.map(
             each => fuzz.ratio(each, query)
           ))
+          : 0
         ),
         limit,
       });

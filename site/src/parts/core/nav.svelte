@@ -126,7 +126,7 @@ nav {
   border-bottom: 1px solid $col-line;
   box-shadow: 0 2px 2px -1px $col-line-fallback;
   box-shadow: 0 2px 2px -1px $col-line;
-  transition: --col-left 0.25s ease-out, --col-right 0.25s ease-out;
+  transition: --col-left 0.24s ease-out, --col-right 0.24s ease-out;
 
   &::before {
     content: '';

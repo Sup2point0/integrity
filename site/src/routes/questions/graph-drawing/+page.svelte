@@ -77,6 +77,10 @@ onMount(() => {
     flex-flow: column;
     align-items: stretch;
   }
+
+  :global(.katex) {
+    font-size: 150%;
+  }
 }
 
 aside {
