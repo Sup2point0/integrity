@@ -1775,6 +1775,7 @@
       "title": "trololol",
       "desc": null,
       "date": 2024,
+      "difficulty": "incline",
       "tags": [
         "ln"
       ],
@@ -1859,11 +1860,124 @@
         }
       ]
     },
+    "f24p-ll2": {
+      "topic": "graph-drawing",
+      "title": "liquidity",
+      "desc": null,
+      "date": 2024,
+      "difficulty": "manifold",
+      "tags": [
+        "ln"
+      ],
+      "methods": [
+        "prod"
+      ],
+      "shard": "f24p-ll2",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\ln\\left(x\\right)\\ln\\left(2x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\ln\\left(x\\right)\\ln\\left(2x\\right)<br><br>\\ln\\left(x\\right)\\ln\\left(2x\\right)\\ln\\left(3x\\right)\\ln\\left(4x\\right)<br><br>-\\ln x<br><br>\\ln\\left(x\\right)^{2}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f24p-os1": {
+      "topic": "graph-drawing",
+      "title": "ocean monument",
+      "desc": null,
+      "date": 2024,
+      "difficulty": "based",
+      "tags": [
+        "sqrt",
+        "trig"
+      ],
+      "methods": [
+        "prod",
+        "chain"
+      ],
+      "graph-bounds": {
+        "left": -10,
+        "right": 50,
+        "bottom": -10,
+        "top": 10
+      },
+      "shard": "f24p-os1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y=\\sqrt{x}\\sin\\sqrt{x}"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\sqrt{x}\\sin\\left(\\sqrt{x}\\right)<br><br>x\\sin\\left(\\sqrt{x}\\right)<br><br>\\sqrt{x}\\sin\\left(x\\right)<br><br>x\\sin x"
+        }
+      ],
+      "answer": [
+        {
+          "kind": "latex",
+          "content": "\\sqrt{x}\\sin\\left(\\sqrt{x}\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-al1": {
+      "topic": "graph-drawing",
+      "title": "aluminite",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "manifold",
+      "tags": [
+        "ln",
+        "arctrig"
+      ],
+      "methods": [
+        "prod"
+      ],
+      "graph-bounds": 1,
+      "shard": "f25p-al1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\arcsin\\left(x\\right)\\ln\\left(x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\sin^{-1}\\left(x\\right)\\ln\\left(x\\right)<br><br>x\\left(x-1\\right)\\ \\left\\{0<x<1\\right\\}<br><br>-\\sin^{-1}\\left(x\\right)\\ln\\left(x\\right)<br><br>-x\\left(x-1\\right)\\left(x-2\\right)\\ \\left\\{0<x<2\\right\\}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
     "f25p-ms1": {
       "topic": "graph-drawing",
       "title": "breakheart",
       "desc": null,
       "date": 2025,
+      "difficulty": "incline",
       "tags": [
         "trig"
       ],
@@ -1875,13 +1989,80 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\max\\left(\\sin x,\\ \\cos x\\right)"
+          "content": "y = \\max\\left(\\sin x,\\ \\cos x\\right)"
         }
       ],
       "options": [
         {
           "kind": "desmos",
           "content": "\\max\\left(\\sin x,\\ \\cos x\\right)<br><br>\\max\\left(\\sin x,\\ -\\cos x\\right)<br><br>\\max\\left(\\sin x,\\ -\\sin x\\right)<br><br>\\max\\left(\\cos x,\\ -\\cos x\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-tx1": {
+      "topic": "graph-drawing",
+      "title": "quadrat",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "chaos",
+      "tags": [
+        "implicit",
+        "poly"
+      ],
+      "methods": [
+        null
+      ],
+      "graph-bounds": 4,
+      "shard": "f25p-tx1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "x^{2}+y^{2}=x^{2}y^{2}"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "x^{2}+y^{2}=x^{2}y^{2}<br><br>x^{2}-y^{2}=x^{2}y^{2}<br><br>x^{2}-y^{2}=xy<br><br>x^{2}-y^{2}=x^{2}y"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-xs1": {
+      "topic": "graph-drawing",
+      "title": "xs conc hcl",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "manifold",
+      "tags": [
+        "tough",
+        "trig"
+      ],
+      "methods": [
+        "limit"
+      ],
+      "shard": "f25p-xs1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "\\frac{x-\\sin x}{x+\\sin x}"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\frac{x-\\sin x}{x+\\sin x}<br><br>\\frac{x}{x+\\sin x}<br><br>\\frac{x+\\sin x}{x-\\sin x}<br><br>\\left|x\\right|\\sin^{2}x"
         }
       ],
       "solution": [

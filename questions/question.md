@@ -3,6 +3,7 @@ topic:
 title: 
 desc: 
 date: 
+difficulty: 
 tags:
   - 
 methods:
