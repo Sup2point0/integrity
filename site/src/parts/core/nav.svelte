@@ -106,6 +106,8 @@ import { goto } from "$app/navigation";
 }
 
 nav {
+  --col-left: #{$col-nav};
+  --col-right: #{$col-nav};
   width: 100%;
   margin-bottom: 1rem;
   padding: 0 5rem;
