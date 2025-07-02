@@ -39,8 +39,14 @@ let year = $state("2025");
 let history = $derived(Object.entries(data.history[year] || {}));
 
 let general: {
+  topics: Record<string, number>,
   difficulties: Record<string, number>,
 } = {
+  topics: Object.fromEntries(
+    Object.entries(Site.questions).map(
+      ([topic, data]) => [topic, Object.keys(data.questions).length]
+    )
+  ),
   difficulties: { based: 0, incline: 0, manifold: 0, chaos: 0, null: 0 },
 };
 
@@ -266,6 +272,30 @@ for (let q of Site.get_questions_of_topic("integrals")) {
         )}
       {/if}
     </Section>
+  {/if}
+
+  <h2> Questions by Topic </h2>
+
+  {#if general.topics}
+    {@const topics = (
+      Object.entries(general.topics)
+        .sort((prot, deut) => deut[1] - prot[1])
+    )}
+    {@const highest = Math.max(...Object.values(general.topics))}
+
+    <div class="chart">
+      {#each topics as [topic, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label">
+            <div style:transform="translateY(1rem)">
+              {topic}
+            </div>
+          </div>
+        </div>
+      {/each}
+    </div>
   {/if}
 
   <h2> Questions by Difficulty </h2>
