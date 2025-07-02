@@ -57,6 +57,7 @@ export class SearchPrefs
   });
 
   view: "grid" | "list" | "grid-wide" = $state("grid");
+  effects: boolean | null = $state(null);
   sort: "rel" | "date" | "name" | "diff" | "rand" | null = $state(null);
   reverse: boolean = $state(false);
 
@@ -73,6 +74,7 @@ export class SearchPrefs
       show: this.show,
       buttons: this.buttons,
       view: this.view,
+      effects: this.effects,
       sort: this.sort,
       reverse: this.reverse,
       expanded: this.expanded,
@@ -88,6 +90,7 @@ export class SearchPrefs
     this.buttons = data.buttons ?? this.buttons;
     
     this.view = data.view ?? this.view;
+    this.effects = data.effects ?? this.effects;
     this.sort = data.sort ?? this.sort;
     this.reverse = data.reverse ?? this.reverse;
     this.expanded = data.expanded ?? this.expanded;

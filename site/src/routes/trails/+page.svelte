@@ -12,43 +12,30 @@ import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Banner from "#parts/page/banner.svelte";
 import Section from "#src/parts/page/section.svelte";
-    import { base } from "$app/paths";
 
-
-// temporary static data until we can get the endpoint working
-let data = {
-  history: {
-    2024: {
-      December: null,
-    },
-    2025: {
-      January: null,
-      February: null,
-      March: null,
-      April: 183,
-      May: 58,
-      June: 80,
-      July: 0,
-      August: 0,
-    },
-  },
-};
+import { onMount } from "svelte";
+import { base } from "$app/paths";
 
 
 let year = $state("2025");
-let history = $derived(Object.entries(data.history[year] || {}));
+
 
 let general: {
+  visits: Record<string, Record<string, number | null>>,
   topics: Record<string, number>,
   difficulties: Record<string, number>,
-} = {
+} = $state({
+  visits: {
+    "2024": { December: null },
+    "2025": { January: null, February: null, March: null, April: null, May: null, June: null, July: null, August: null, September: null }
+  },
   topics: Object.fromEntries(
     Object.entries(Site.questions).map(
       ([topic, data]) => [topic, Object.keys(data.questions).length]
     )
   ),
   difficulties: { based: 0, incline: 0, manifold: 0, chaos: 0, null: 0 },
-};
+});
 
 let integrals: {
   difficulties: Record<string, number>,
@@ -73,6 +60,33 @@ let integrals: {
   parts_counts: {},
   days: {},
 };
+
+
+onMount(try_load_data);
+
+async function try_load_data(i: number = 0)
+{
+  if (i > 3) {
+    return;
+  }
+
+  try {
+    let load = await fetch("https://sup2point0.npkn.net/integrity");
+    let data = await load.json();
+    
+    if (data.history) {
+      for (let year in data.history) {
+        Object.assign(general.visits[year], data.history[year]);
+      }
+    }
+  } catch {
+    setTimeout(
+      async () => await try_load_data(i+1),
+      1000 + i*i * 500,
+    );
+  }
+}
+
 
 for (let q of Site.get_list_of_all_questions()) {
   if (q.difficulty) {
@@ -211,14 +225,19 @@ for (let q of Site.get_questions_of_topic("integrals")) {
 
   <nav>
     <small> View Year </small>
-    <Select bind:value={year} options={Object.keys(data.history)} />
+    <Select bind:value={year} options={Object.keys(general.visits)} />
   </nav>
 
-  {#if data}
-    {@const highest = Math.max(...history.map(([_, count]) => count ?? 0))}
+  {#if general.visits}
+    {@const data = (
+      Object.entries(general.visits[year]).sort(
+        (prot, deut) => new Date(`${prot[0]} 2020`) - new Date(`${deut[0]} 2020`)
+      )
+    )}
+    {@const highest = Math.max(...data.map(([_, count]) => count ?? 0))}
 
     <div class="chart">
-      {#each history as [month, count], idx}
+      {#each data as [month, count], idx}
         <div class="column">
           <GraphBar {idx} freq={count} frac={(count ?? 0) / highest} />
 
@@ -234,43 +253,41 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     </div>
 
     <Section title="Stats" closed={true}>
-      {#if data}
-        <!-- heh, who doesn't love statistics. Even Timothee Chalamet loves sTaTiSTiCs -->
-        {@const   n = history.reduce((t, [_, count])    => t + (count ? 1 : 0),             0)}
-        {@const nfx = history.reduce((t, [_, count], i) => t + (count ? (i+1) : 0),         0)}
-        {@const  sx = history.reduce((t, [_, count], i) => t + (count ? i+1 : 0),           0)}
-        {@const sxs = history.reduce((t, [_, count], i) => t + (count ? (i+1)**2 : 0),      0)}
-        {@const  sf = history.reduce((t, [_, count])    => t + (count ?? 0),                0)}
-        {@const sfs = history.reduce((t, [_, count])    => t + (count ? count**2 : 0),      0)}
-        {@const sfx = history.reduce((t, [_, count], i) => t + (count ? (i+1) * count : 0), 0)}
+      <!-- heh, who doesn't love statistics. Even Timothee Chalamet loves sTaTiSTiCs -->
+      {@const   n = data.reduce((t, [_, count])    => t + (count ? 1 : 0),             0)}
+      {@const nfx = data.reduce((t, [_, count], i) => t + (count ? (i+1) : 0),         0)}
+      {@const  sx = data.reduce((t, [_, count], i) => t + (count ? i+1 : 0),           0)}
+      {@const sxs = data.reduce((t, [_, count], i) => t + (count ? (i+1)**2 : 0),      0)}
+      {@const  sf = data.reduce((t, [_, count])    => t + (count ?? 0),                0)}
+      {@const sfs = data.reduce((t, [_, count])    => t + (count ? count**2 : 0),      0)}
+      {@const sfx = data.reduce((t, [_, count], i) => t + (count ? (i+1) * count : 0), 0)}
 
-        <!-- NOTE: I apologise for your eyes. Offsetting this way so that the LaTeX structure is still visible. Couldn't find a cleaner way to do the string interpolation... -->
-        {@html katex.renderToString(
-            String.raw`
-                        \begin{align*}
-                          && n &= ` + n.toString()
-          + String.raw`
-                          \\[1em] \sum x &= ` + sx.toString()
-          + String.raw`
-                            \quad&\quad \sum f &= ` + sf.toString()
-          + String.raw`
-                            \quad&\quad \sum fx &= ` + sfx.toString()
-          + String.raw`
-                          \\[1em] \sum x^2 &= ` + sxs.toString()
-          + String.raw`
-                            \quad&\quad  \sum f^2 &= ` + sfs.toString()
-          + String.raw`
-                          \\[2em] \bar{x} &= \frac{\sum fx}{\sum x} = ` + (sfx / sf).toFixed(2)
-          + String.raw`
-                            \quad&\quad \bar{f} &= \frac{1}{n}\sum f = ` + (sf / n).toFixed(2)
-          + String.raw`
-                            \quad&\quad \sigma^2_f &= \text{Var}(F) = ` + (sfs / n - (sf / n)**2).toFixed(2)
-          + String.raw`
-                        \end{align*}
-          `,
-          { displayMode: true, throwOnError: false }
-        )}
-      {/if}
+      <!-- NOTE: I apologise for your eyes. Offsetting this way so that the LaTeX structure is still visible. Couldn't find a cleaner way to do the string interpolation... -->
+      {@html katex.renderToString(
+          String.raw`
+                      \begin{align*}
+                        && n &= ` + n.toString()
+        + String.raw`
+                        \\[1em] \sum x &= ` + sx.toString()
+        + String.raw`
+                          \quad&\quad \sum f &= ` + sf.toString()
+        + String.raw`
+                          \quad&\quad \sum fx &= ` + sfx.toString()
+        + String.raw`
+                        \\[1em] \sum x^2 &= ` + sxs.toString()
+        + String.raw`
+                          \quad&\quad  \sum f^2 &= ` + sfs.toString()
+        + String.raw`
+                        \\[2em] \bar{x} &= \frac{\sum fx}{\sum x} = ` + (sfx / sf).toFixed(2)
+        + String.raw`
+                          \quad&\quad \bar{f} &= \frac{1}{n}\sum f = ` + (sf / n).toFixed(2)
+        + String.raw`
+                          \quad&\quad \sigma^2_f &= \text{Var}(F) = ` + (sfs / n - (sf / n)**2).toFixed(2)
+        + String.raw`
+                      \end{align*}
+        `,
+        { displayMode: true, throwOnError: false }
+      )}
     </Section>
   {/if}
 
