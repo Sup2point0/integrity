@@ -13,7 +13,7 @@ methods:
 
 ## Question
 ```math
-\ln\left(x\right)\ln\left(2x\right)
+y = \ln\left(x\right)\ln\left(2x\right)
 ```
 
 

@@ -7,7 +7,7 @@ difficulty: incline
 tags:
   - ln
 methods:
-  - chain
+  - nest
 graph-bounds:
   left: -2
   right: 8

@@ -9,12 +9,12 @@ tags:
   - trig
 methods:
   - prod
-  - chain
+  - nest
 graph-bounds:
   left: -10
   right: 50
-  bottom: -10
-  top: 10
+  bottom: -20
+  top: 20
 ---
 
 

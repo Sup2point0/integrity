@@ -16,7 +16,7 @@ graph-bounds: 15
 
 ## Question
 ```math
-\int_{0}^{x}\sin^{-1}\left(\sin t\right)\ dt
+y = \int_{0}^{x}\sin^{-1}\left(\sin t\right)\ dt
 ```
 
 

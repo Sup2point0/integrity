@@ -15,7 +15,7 @@ graph-bounds: 2
 
 ## Question
 ```math
-\arcsin\left(x\right)\ln\left(x\right)
+y = \arcsin\left(x\right)\ln\left(x\right)
 ```
 
 

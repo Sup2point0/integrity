@@ -10,17 +10,13 @@ tags:
   - integral
 methods:
   - 
-graph-bounds:
-  left: -20
-  right: 20
-  bottom: -10
-  top: 10
+graph-bounds: 5
 ---
 
 
 ## Question
 ```math
-\int_{0}^{x}\sin\left(e^{t}\right)\ dt
+y = \int_{0}^{x}\sin\left(e^{t}\right)\ dt
 ```
 
 

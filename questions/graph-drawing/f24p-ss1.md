@@ -14,7 +14,7 @@ graph-bounds: 6
 
 ## Question
 ```math
-\sin\left(x\right)\sin\left(2x\right)
+y = \sin\left(x\right)\sin\left(2x\right)
 ```
 
 

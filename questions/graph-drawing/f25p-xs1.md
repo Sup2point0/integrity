@@ -3,7 +3,7 @@ topic: graph-drawing
 title: xs conc hcl
 desc: 
 date: 2025
-difficulty: manifold
+difficulty: incline
 tags:
   - tough
   - trig

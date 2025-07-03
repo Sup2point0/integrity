@@ -14,7 +14,7 @@ tags:
 
 ## Question
 ```math
-\frac
+y = \frac
   { \ln\left( 1/x^2 \right) }
   { e^{(1/x)} }
 ```

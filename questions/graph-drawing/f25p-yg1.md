@@ -8,6 +8,7 @@ tags:
   - wack
 methods:
   - intuit
+graph-bounds: 10
 ---
 
 

@@ -1780,7 +1780,7 @@
         "ln"
       ],
       "methods": [
-        "chain"
+        "nest"
       ],
       "graph-bounds": {
         "left": -2,
@@ -1876,7 +1876,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\ln\\left(x\\right)\\ln\\left(2x\\right)"
+          "content": "y = \\ln\\left(x\\right)\\ln\\left(2x\\right)"
         }
       ],
       "options": [
@@ -1904,7 +1904,7 @@
       ],
       "methods": [
         "prod",
-        "chain"
+        "nest"
       ],
       "graph-bounds": {
         "left": -10,
@@ -1955,13 +1955,46 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\sin\\left(x\\right)\\sin\\left(2x\\right)"
+          "content": "y = \\sin\\left(x\\right)\\sin\\left(2x\\right)"
         }
       ],
       "options": [
         {
           "kind": "desmos",
           "content": "\\sin\\left(x\\right)\\sin\\left(2x\\right)<br><br>\\sin\\left(x-\\frac{3\\pi}{4}\\right)\\cos\\left(2\\left(x-\\frac{3\\pi}{4}\\right)\\right)<br><br>\\sin\\left(x\\right)^{3}<br><br>\\cos\\left(x\\right)\\cos\\left(2x\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-ac1": {
+      "topic": "graph-drawing",
+      "title": "aquariids",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "incline",
+      "tags": [
+        "arctrig"
+      ],
+      "methods": [
+        "nest"
+      ],
+      "graph-bounds": 3,
+      "shard": "f25p-ac1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\cos^{-1}\\left(\\sin^{-1}x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\cos^{-1}\\left(\\sin^{-1}x\\right)<br><br>\\cos^{-1}x<br><br>\\cos^{-1}\\left(\\sin x\\right)\\ \\left\\{-\\frac{\\pi}{2}<x<\\frac{\\pi}{2}\\right\\}<br><br>\\cos^{-1}\\left(-\\sin^{-1}x\\right)"
         }
       ],
       "solution": [
@@ -1989,7 +2022,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\arcsin\\left(x\\right)\\ln\\left(x\\right)"
+          "content": "y = \\arcsin\\left(x\\right)\\ln\\left(x\\right)"
         }
       ],
       "options": [
@@ -2024,7 +2057,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\int_{0}^{x}\\sin^{-1}\\left(\\sin t\\right)\\ dt"
+          "content": "y = \\int_{0}^{x}\\sin^{-1}\\left(\\sin t\\right)\\ dt"
         }
       ],
       "options": [
@@ -2087,23 +2120,86 @@
       "methods": [
         null
       ],
-      "graph-bounds": {
-        "left": -20,
-        "right": 20,
-        "bottom": -10,
-        "top": 10
-      },
+      "graph-bounds": 5,
       "shard": "f25p-os1",
       "question": [
         {
           "kind": "latex",
-          "content": "\\int_{0}^{x}\\sin\\left(e^{t}\\right)\\ dt"
+          "content": "y = \\int_{0}^{x}\\sin\\left(e^{t}\\right)\\ dt"
         }
       ],
       "options": [
         {
           "kind": "desmos",
           "content": "\\int_{0}^{x}\\sin\\left(e^{t}\\right)\\ dt<br><br>\\int_{0.5}^{x}\\sin\\left(e^{t}\\right)\\ dt<br><br>0.69-e^{-1-x}\\sin\\left(e^{x+1}\\right)<br><br>0.5-e^{-x}\\cos\\left(e^{x}\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-pz1": {
+      "topic": "graph-drawing",
+      "title": "zen garden",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "incline",
+      "tags": [
+        "trig",
+        "arctrig"
+      ],
+      "methods": [
+        null
+      ],
+      "graph-bounds": 12,
+      "shard": "f25p-pz1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\sin^{-1}\\left(\\sin^{-1}\\left(\\sin x\\right)\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\sin^{-1}\\left(\\sin^{-1}\\left(\\sin x\\right)\\right)<br><br>\\cos^{-1}\\left(\\sin^{-1}\\left(\\sin x\\right)\\right)<br><br>\\sin^{-1}\\left(\\sin^{-1}\\left(\\sin\\left(\\left|x\\right|\\right)\\right)\\right)<br><br>-\\sin^{-1}\\left(\\sin^{-1}\\left(\\sin x\\right)\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-tt1": {
+      "topic": "graph-drawing",
+      "title": "activated linear rectification unit",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "manifold",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "prod",
+        "nest"
+      ],
+      "graph-bounds": 10,
+      "shard": "f25p-tt1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\sin\\left(\\cos x\\right)\\cos\\left(\\sin x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\sin\\left(\\cos x\\right)\\cos\\left(\\sin x\\right)<br><br>\\cos\\left(\\cos x\\right)\\sin\\left(\\sin x\\right)<br><br>\\sin\\left(\\sin x\\right)\\cos\\left(\\sin x\\right)<br><br>-\\sin\\left(\\cos x\\right)\\cos\\left(\\sin x\\right)"
         }
       ],
       "solution": [
@@ -2147,12 +2243,46 @@
         }
       ]
     },
+    "f25p-vt1": {
+      "topic": "graph-drawing",
+      "title": "velociraptor’s nest",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "incline",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "nest",
+        "recurse"
+      ],
+      "graph-bounds": 12,
+      "shard": "f25p-vt1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\sin\\left(\\sin\\left(\\sin\\left(\\sin\\left(\\sin\\left(\\sin x\\right)\\right)\\right)\\right)\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\sin\\left(\\sin\\left(\\sin\\left(\\sin\\left(\\sin\\left(\\sin x\\right)\\right)\\right)\\right)\\right)<br><br>\\sin\\left(\\cos x\\right)<br><br>-\\sin\\left(\\sin\\left(\\sin x\\right)\\right)<br><br>\\frac{d}{dx}\\sin\\left(\\sin\\left(\\sin\\left(\\sin\\left(\\sin\\left(\\sin x\\right)\\right)\\right)\\right)\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
     "f25p-xs1": {
       "topic": "graph-drawing",
       "title": "xs conc hcl",
       "desc": null,
       "date": 2025,
-      "difficulty": "manifold",
+      "difficulty": "incline",
       "tags": [
         "tough",
         "trig"
@@ -2193,6 +2323,7 @@
       "methods": [
         "intuit"
       ],
+      "graph-bounds": 10,
       "shard": "f25p-yg1",
       "question": [
         {
@@ -22367,7 +22498,7 @@
       "question": [
         {
           "kind": "latex",
-          "content": "\\frac { \\ln\\left( 1/x^2 \\right) } { e^{(1/x)} }"
+          "content": "y = \\frac { \\ln\\left( 1/x^2 \\right) } { e^{(1/x)} }"
         }
       ],
       "part 1:": {
