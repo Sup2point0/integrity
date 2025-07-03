@@ -3,7 +3,7 @@ topic: graph-drawing
 title: aluminite
 desc: 
 date: 2025
-difficulty: manifold
+difficulty: incline
 tags:
   - ln
   - arctrig

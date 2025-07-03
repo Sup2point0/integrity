@@ -1770,6 +1770,73 @@
     }
   },
   "graph-drawing": {
+    "f24p-bf1": {
+      "topic": "graph-drawing",
+      "title": "bidentate",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "based",
+      "tags": [
+        "poly"
+      ],
+      "methods": [
+        null
+      ],
+      "graph-bounds": 8,
+      "shard": "f24p-bf1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\frac{x^{2}}{x^{2}+1}"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\frac{x^{2}}{x^{2}+1}<br><br>\\frac{x^{2}+1}{x^{2}}<br><br>\\frac{x}{x^{2}+1}<br><br>\\frac{x^{2}+2}{x^{2}+1}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f24p-hw1": {
+      "topic": "graph-drawing",
+      "title": "humpback whale",
+      "desc": null,
+      "date": 2024,
+      "difficulty": "based",
+      "tags": [
+        "ln",
+        "trig"
+      ],
+      "methods": [
+        "nest"
+      ],
+      "graph-bounds": 15,
+      "shard": "f24p-hw1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\tan\\left(\\ln x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\tan\\left(\\ln x\\right)<br><br>\\tan\\left(x\\right)\\ln\\left(x\\right)<br><br>\\tan\\left(\\frac{1}{x}\\right)<br><br>\\tan\\left(-\\ln x\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
     "f24p-ll1": {
       "topic": "graph-drawing",
       "title": "trololol",
@@ -1909,8 +1976,8 @@
       "graph-bounds": {
         "left": -10,
         "right": 50,
-        "bottom": -10,
-        "top": 10
+        "bottom": -20,
+        "top": 20
       },
       "shard": "f24p-os1",
       "question": [
@@ -1929,6 +1996,39 @@
         {
           "kind": "latex",
           "content": "\\sqrt{x}\\sin\\left(\\sqrt{x}\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f24p-pl1": {
+      "topic": "graph-drawing",
+      "title": "washing line",
+      "desc": null,
+      "date": 2024,
+      "difficulty": "based",
+      "tags": [
+        "poly"
+      ],
+      "methods": [
+        "add"
+      ],
+      "graph-bounds": 12,
+      "shard": "f24p-pl1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = x^{2}+\\frac{1}{x}"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "x^{2}+\\frac{1}{x}<br><br>x+\\frac{1}{x}<br><br>x^{2}-\\frac{1}{x}<br><br>\\frac{1}{x}-x^{2}"
         }
       ],
       "solution": [
@@ -2073,6 +2173,40 @@
         }
       ]
     },
+    "f25p-hw1": {
+      "topic": "graph-drawing",
+      "title": "beluga whale",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "incline",
+      "tags": [
+        "ln",
+        "arctrig"
+      ],
+      "methods": [
+        "nest"
+      ],
+      "graph-bounds": 8,
+      "shard": "f25p-hw1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\tan^{-1}\\left(\\ln x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\tan^{-1}\\left(\\ln x\\right)<br><br>\\tan^{-1}\\left(\\ln x+1\\right)<br><br>\\tan^{-1}\\left(\\operatorname{sign}\\left(x\\right)\\ln\\left(\\left|x\\right|\\right)\\right)<br><br>\\tan^{-1}\\left(\\ln\\left(x+1\\right)\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
     "f25p-ms1": {
       "topic": "graph-drawing",
       "title": "breakheart",
@@ -2175,6 +2309,140 @@
         }
       ]
     },
+    "f25p-sl1": {
+      "topic": "graph-drawing",
+      "title": "cliffhanger",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "incline",
+      "tags": [
+        "sqrt",
+        "ln"
+      ],
+      "methods": [
+        "composite"
+      ],
+      "graph-bounds": 10,
+      "shard": "f25p-sl1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\sqrt{x\\ln x}"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\sqrt{x\\ln x}<br><br>x\\ln x\\ \\left\\{1<x\\right\\}<br><br>\\ln\\left(x\\ln x\\right)<br><br>\\sqrt{\\left|x\\ln x\\right|}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-te1": {
+      "topic": "graph-drawing",
+      "title": "tree on the hill",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "manifold",
+      "tags": [
+        "exp"
+      ],
+      "methods": [
+        "composite"
+      ],
+      "graph-bounds": 8,
+      "shard": "f25p-te1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\frac{3e^{x}-e^{-x}}{e^{x}+e^{-x}}"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\frac{3e^{x}-e^{-x}}{e^{x}+e^{-x}}<br><br>1-\\frac{1}{e^{x}+1}<br><br>\\frac{e^{x}-e^{-x}}{20}<br><br>\\frac{e^{-x}-e^{x}}{e^{x}+e^{-x}}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-tp1": {
+      "topic": "graph-drawing",
+      "title": "valley of disintegrated membranes",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "incline",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "prod"
+      ],
+      "graph-bounds": 10,
+      "shard": "f25p-tp1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\tan\\left(x\\right)\\cot\\left(2x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\tan\\left(x\\right)\\cot\\left(2x\\right)<br><br>\\tan\\left(x\\right)\\tan\\left(2x\\right)<br><br>\\tan\\left(x\\right)\\cot\\left(3x\\right)<br><br>\\tan\\left(x\\right)\\sin\\left(x\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-tq1": {
+      "topic": "graph-drawing",
+      "title": "extra link",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "incline",
+      "tags": [
+        "sqrt",
+        "trig"
+      ],
+      "methods": [
+        "composite"
+      ],
+      "graph-bounds": 10,
+      "shard": "f25p-tq1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\frac{1}{\\sqrt{\\tan x+1}}"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\frac{1}{\\sqrt{\\tan x+1}}<br><br>\\frac{1}{\\sqrt{\\tan x}}<br><br>\\left|\\frac{1}{1-\\tan x}\\right|<br><br>\\frac{1}{\\sqrt{-\\tan x}}"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
     "f25p-tt1": {
       "topic": "graph-drawing",
       "title": "activated linear rectification unit",
@@ -2200,6 +2468,39 @@
         {
           "kind": "desmos",
           "content": "\\sin\\left(\\cos x\\right)\\cos\\left(\\sin x\\right)<br><br>\\cos\\left(\\cos x\\right)\\sin\\left(\\sin x\\right)<br><br>\\sin\\left(\\sin x\\right)\\cos\\left(\\sin x\\right)<br><br>-\\sin\\left(\\cos x\\right)\\cos\\left(\\sin x\\right)"
+        }
+      ],
+      "solution": [
+        {
+          "kind": "text",
+          "content": "Coming soon!"
+        }
+      ]
+    },
+    "f25p-tw1": {
+      "topic": "graph-drawing",
+      "title": "twirly-woo",
+      "desc": null,
+      "date": 2025,
+      "difficulty": "incline",
+      "tags": [
+        "trig"
+      ],
+      "methods": [
+        "prod"
+      ],
+      "graph-bounds": 10,
+      "shard": "f25p-tw1",
+      "question": [
+        {
+          "kind": "latex",
+          "content": "y = \\tan\\left(2x\\right)\\cot\\left(x\\right)"
+        }
+      ],
+      "options": [
+        {
+          "kind": "desmos",
+          "content": "\\tan\\left(2x\\right)\\cot\\left(x\\right)<br><br>\\tan\\left(2x\\right)\\cot\\left(x\\right)-1<br><br>\\tan\\left(2x\\right)\\cot\\left(x\\right)-2<br><br>-\\tan\\left(2x\\right)\\cot\\left(x\\right)"
         }
       ],
       "solution": [
