@@ -3,6 +3,7 @@ topic: integrals
 title: what is this
 desc: 
 date: 2025 March 25
+difficulty: manifold
 tags:
   - dread
   - sqrt

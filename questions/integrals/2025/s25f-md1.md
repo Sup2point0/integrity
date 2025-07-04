@@ -3,6 +3,7 @@ topic: integrals
 title: models
 desc: 
 date: 2025 May 1
+difficulty: incline
 tags:
   - sqrt
   - ln

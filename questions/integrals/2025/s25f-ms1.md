@@ -3,6 +3,7 @@ topic: integrals
 title: mushroom soup
 desc: It’s possible, trust.
 date: 2025 May 9
+difficulty: chaos
 tags:
   - horror
   - dread

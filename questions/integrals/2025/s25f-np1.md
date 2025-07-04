@@ -3,6 +3,7 @@ topic: integrals
 title: intensity
 desc: 
 date: 2025 March 22
+difficulty: chaos
 tags:
   - dread
   - poly

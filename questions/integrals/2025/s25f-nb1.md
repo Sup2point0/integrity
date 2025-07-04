@@ -3,6 +3,7 @@ topic: integrals
 title: kurtosis
 desc: 
 date: 2025 January 10
+difficulty: incline
 tags:
   - poly
   - sqrt

@@ -3,6 +3,7 @@ topic: integrals
 title: instincts
 desc: 
 date: 2025 April 18
+difficulty: incline
 tags:
   - trig
   - ln

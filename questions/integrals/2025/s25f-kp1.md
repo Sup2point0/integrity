@@ -3,6 +3,7 @@ topic: integrals
 title: kōgeki
 desc: 
 date: 2025 June 7
+difficulty: incline
 tags:
   - poly
   - sqrt

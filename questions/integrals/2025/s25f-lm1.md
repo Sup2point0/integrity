@@ -3,6 +3,7 @@ topic: integrals
 title: last mourn
 desc: 
 date: 2025 May 8
+difficulty: chaos
 tags:
   - horror
   - poly

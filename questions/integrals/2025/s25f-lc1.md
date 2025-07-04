@@ -3,6 +3,7 @@ topic: integrals
 title: kindred
 desc: 
 date: 2025 January 25
+difficulty: manifold
 tags:
   - trig
 methods:

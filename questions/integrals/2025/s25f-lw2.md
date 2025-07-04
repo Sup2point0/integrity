@@ -3,6 +3,7 @@ topic: integrals
 title: covert operations
 desc: 
 date: 2025 April 15
+difficulty: incline
 tags:
   - sqrt
   - poly

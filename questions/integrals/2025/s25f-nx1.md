@@ -3,6 +3,7 @@ topic: integrals
 title: neurotic
 desc: At the time, this was one of the favourite integrals. Looking back, it’s not that nice lol.
 date: 2025 January 9
+difficulty: chaos
 tags:
   - horror
   - trig

@@ -3,6 +3,7 @@ topic: integrals
 title: lockin
 desc: 
 date: 2025 June 19
+difficulty: based
 tags:
   - ln
   - trig

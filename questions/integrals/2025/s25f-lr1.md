@@ -3,6 +3,7 @@ topic: integrals
 title: this reminds me of
 desc: 
 date: 2025 May 26
+difficulty: based
 tags:
   - exp
   - ln

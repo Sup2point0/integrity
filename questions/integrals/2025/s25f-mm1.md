@@ -3,6 +3,7 @@ topic: integrals
 title: metaphoric malapropism
 desc: 
 date: 2025 May 13
+difficulty: manifold
 tags:
   - definite
   - combinatorics

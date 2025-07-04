@@ -3,6 +3,7 @@ topic: integrals
 title: neogenesis
 desc: 
 date: 2025 April 5
+difficulty: incline
 tags:
   - poly
   - ln
@@ -46,7 +47,7 @@ methods:
 \begin{align*}
   \ln\left(x^{2}-1\right)+\ln\left(x^{2}+1\right) &= t
   \\ \left(-\frac{2x}{x^{2}-1}+\frac{2x}{x^{2}+1}\right)\ dx &= dt
-  \\ \left(\frac{x}{x^{2}+1}-\frac{x}{x^{2}-1}\right)\ dx &= \frac{1}{2}dt
+  \\ \left(\frac{x}{x^{2}+1}-\frac{x}{1-x^{2}}\right)\ dx &= \frac{1}{2}dt
 \end{align*}
 ```
 

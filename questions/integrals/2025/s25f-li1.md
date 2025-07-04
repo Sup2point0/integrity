@@ -3,6 +3,7 @@ topic: integrals
 title: fire in the wire
 desc: 
 date: 2025 April 20
+difficulty: incline
 tags:
   - definite
   - improper

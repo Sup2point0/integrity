@@ -3,6 +3,7 @@ topic: integrals
 title: reminiscence
 desc: 
 date: 2025 March 24
+difficulty: manifold
 tags:
   - trig
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: overcharge
 desc: 
 date: 2025 April 16
+difficulty: incline
 tags:
   - sqrt
   - ln

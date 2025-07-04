@@ -3,6 +3,7 @@ topic: integrals
 title: origami
 desc: 
 date: 2025 January 12
+difficulty: incline
 tags:
   - ln
 methods:

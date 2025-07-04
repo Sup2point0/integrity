@@ -3,6 +3,7 @@ topic: integrals
 title: chillout
 desc: 
 date: 2025 June 12
+difficulty: based
 tags:
   - ln
 methods:

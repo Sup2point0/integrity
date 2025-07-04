@@ -3,6 +3,7 @@ topic: integrals
 title: networking
 desc: 256 integrals on <em>Integrity</em>!
 date: 2025 April 28
+difficulty: incline
 tags:
   - trig
 methods:

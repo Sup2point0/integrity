@@ -3,6 +3,7 @@ topic: integrals
 title: mash equilibrium
 desc: This is the first lost integral on Integrity. The original integral was erased due to a faulty document save, and is now lost in the dreamscape...
 date: 2025 June 9
+difficulty: manifold
 tags:
   - sqrt
   - trig

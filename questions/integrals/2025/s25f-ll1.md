@@ -3,6 +3,7 @@ topic: integrals
 title: bad reaction
 desc: 
 date: 2025 April 18
+difficulty: incline
 tags:
   - scare
   - ln

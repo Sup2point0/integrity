@@ -3,6 +3,7 @@ topic: integrals
 title: what do you mean you don’t want to integrate
 desc: Happy Valentine’s day!
 date: 2025 February 14
+difficulty: chaos
 tags:
   - horror
   - poly
