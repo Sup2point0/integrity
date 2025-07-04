@@ -3,6 +3,7 @@ topic: integrals
 title: PSYCHO+CONNECTION
 desc: 
 date: 2025 May 16
+difficulty: chaos
 tags:
   - horror
   - dread

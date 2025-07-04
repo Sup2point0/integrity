@@ -1,8 +1,9 @@
 ---
 topic: integrals
-title: chrome
+title: chroma
 desc: 
 date: 2025 January 30
+difficulty: incline
 tags:
   - exp
   - ln

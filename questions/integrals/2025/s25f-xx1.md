@@ -3,6 +3,7 @@ topic: integrals
 title: legacy
 desc: 
 date: 2025 March 27
+difficulty: chaos
 tags:
   - horror
   - exp

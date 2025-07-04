@@ -3,6 +3,7 @@ topic: integrals
 title: Elite Varkolyn Vanguard Special Combat Assault Rifle
 desc: 
 date: 2025 April 3
+difficulty: manifold
 tags:
   - horror
   - trig

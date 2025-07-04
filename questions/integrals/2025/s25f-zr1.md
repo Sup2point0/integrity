@@ -3,6 +3,7 @@ topic: integrals
 title: deadlock
 desc: 
 date: 2025 January 12
+difficulty: incline
 tags:
   - horror
   - arctrig
@@ -76,4 +77,37 @@ Finally, we have inverse chain rule on the right, since $\frac{1}{x^2 + 1}$ is t
 
 ```math
 =\frac{x\tan^{-1}x}{x^{2}+1}-\frac{1}{2}\left(\tan^{-1}x\right)^{2}-c
+```
+
+
+## Alternates
+
+Or more easily, just substitute and solve.
+
+```math
+\begin{align*}
+  x &= \tan t
+  \\ \tan^{-1}x &= t
+  \\ \frac{1}{x^{2}+1}\ dx &= dt
+\end{align*}
+```
+
+Which gives
+
+```math
+\begin{align*}
+  &\ \int_{\ }^{\ }\frac{x-2x^{2}\tan^{-1}x}{\left(x^{2}+1\right)^{2}}\ dx
+  \\ =&\ \int_{\ }^{\ }\frac{x-2\left(\tan^{-1}x\right)x^{2}}{x^{2}+1}\cdot\frac{1}{x^{2}+1}\ dx
+  \\ =&\ \int_{\ }^{\ }\frac{\tan t-2t\left(\tan t\right)^{2}}{\tan^{2}t+1}\ dt
+  \\ =&\ \int_{\ }^{\ }\frac{\tan t-2t\left(\tan t\right)^{2}}{\sec^{2}t}\ dt
+  \\ =&\ \int_{\ }^{\ }\sin t\cos t-2t\sin^{2}t\ dt
+  \\ =&\ \frac{1}{2}\sin^{2}t-\int_{\ }^{\ }t\left(1-\cos2t\right)\ dt
+  \\ =&\ \frac{1}{2}\sin^{2}t-\int_{\ }^{\ }t\ dt+\int_{\ }^{\ }t\cos2t\ dt
+  \\ =&\ \frac{1}{2}\sin^{2}t-\frac{1}{2}t^{2}+\left[t\cdot\frac{1}{2}\sin2t-\int_{\ }^{\ }\frac{1}{2}\sin2t\ dt\right]
+  \\ =&\ \frac{1}{2}\sin^{2}t-\frac{1}{2}t^{2}+\frac{1}{2}t\sin2t+\frac{1}{4}\cos2t
+  \\ =&\ \frac{1}{2}\sin^{2}t-\frac{1}{2}t^{2}+t\sin t\cos t+\frac{1}{4}\left(\cos^{2}t-\sin^{2}t\right)
+  \\ =&\ t\sin t\cos t-\frac{1}{2}t^{2}+\frac{1}{4}\cos^{2}t+\frac{1}{4}\sin^{2}t
+  \\ =&\ \left(\tan^{-1}x\right)\cdot\frac{x}{\sqrt{x^{2}+1}}\cdot\frac{1}{\sqrt{x^{2}+1}}-\frac{1}{2}\left(\tan^{-1}x\right)^{2}+1
+  \\ =&\ \frac{x\tan^{-1}x}{x^{2}+1}-\frac{1}{2}\left(\tan^{-1}x\right)^{2}-c
+\end{align*}
 ```

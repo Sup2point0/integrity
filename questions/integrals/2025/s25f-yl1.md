@@ -3,6 +3,7 @@ topic: integrals
 title: 依赖
 desc: 
 date: 2025 April 3
+difficulty: based
 tags:
   - poly
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: asks
 desc: 
 date: 2025 May 9
+difficulty: manifold
 tags:
   - definite
   - scare

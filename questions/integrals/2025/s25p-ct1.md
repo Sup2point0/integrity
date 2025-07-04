@@ -3,6 +3,7 @@ topic: integrals
 title: cortisol
 desc: writing integrals is cope for stress fr fr
 date: 2025 June 9
+difficulty: incline
 tags:
   - trig
 methods:

@@ -6,7 +6,7 @@ date: 2025 April 16
 tags:
   - horror
   - poly
-  - inverse hyp trig
+  - hyp arctrig
 methods:
   - fun
   - spot

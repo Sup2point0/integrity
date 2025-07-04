@@ -3,6 +3,7 @@ topic: integrals
 title: morphling
 desc: 
 date: 2025 January 30
+difficulty: incline
 tags:
   - trig
 methods:
