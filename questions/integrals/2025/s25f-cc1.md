@@ -3,6 +3,7 @@ topic: integrals
 title: dreadnought
 desc: 
 date: 2025 January 12
+difficulty: manifold
 tags:
   - horror
   - trig

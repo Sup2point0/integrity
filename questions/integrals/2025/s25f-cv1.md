@@ -3,6 +3,7 @@ topic: integrals
 title: Integrity’s Finest
 desc: 
 date: 2025 March 8
+difficulty: incline
 tags:
   - arctrig
 methods:

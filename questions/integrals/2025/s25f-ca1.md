@@ -3,6 +3,7 @@ topic: integrals
 title: fits
 desc: 
 date: 2025 January 29
+difficulty: incline
 tags:
   - trig
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: humour
 desc: 
 date: 2025 February 6
+difficulty: incline
 tags:
   - definite
   - ln

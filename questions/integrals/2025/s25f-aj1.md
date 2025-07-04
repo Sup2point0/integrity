@@ -3,6 +3,7 @@ topic: integrals
 title: mathematical adjective
 desc: 
 date: 2025 April 16
+difficulty: manifold
 tags:
   - horror
   - ln

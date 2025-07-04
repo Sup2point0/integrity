@@ -3,6 +3,7 @@ topic: integrals
 title: afterthought
 desc: 
 date: 2025 February 14
+difficulty: manifold
 tags:
   - trig
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: day by day
 desc: 
 date: 2025 June 14
+difficulty: manifold
 tags:
   - horror
   - poly

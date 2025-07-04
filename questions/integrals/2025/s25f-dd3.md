@@ -3,6 +3,7 @@ topic: integrals
 title: disastrous distribution
 desc: 
 date: 2025 May 24
+difficulty: manifold
 tags:
   - definite
   - improper

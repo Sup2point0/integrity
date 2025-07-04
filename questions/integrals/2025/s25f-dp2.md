@@ -3,6 +3,7 @@ topic: integrals
 title: downpour
 desc: 
 date: 2025 May 24
+difficulty: incline
 tags:
   - scare
   - sqrt

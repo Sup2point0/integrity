@@ -3,6 +3,7 @@ topic: integrals
 title: sentimental showerthoughts
 desc: 
 date: 2025 May 18
+difficulty: manifold
 tags:
   - scare
   - exp

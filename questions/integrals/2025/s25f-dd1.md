@@ -3,6 +3,7 @@ topic: integrals
 title: candid
 desc: 
 date: 2025 February 18
+difficulty: based
 tags:
   - dread
   - sqrt

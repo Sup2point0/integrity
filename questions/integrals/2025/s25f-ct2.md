@@ -3,6 +3,7 @@ topic: integrals
 title: slacking
 desc: 
 date: 2025 April 17
+difficulty: manifold
 tags:
   - trig
 methods:

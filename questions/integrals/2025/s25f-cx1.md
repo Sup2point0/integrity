@@ -3,6 +3,7 @@ topic: integrals
 title: blursed
 desc: 
 date: 2025 January 12
+difficulty: chaos
 tags:
   - horror
   - exp

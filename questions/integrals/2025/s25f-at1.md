@@ -3,6 +3,7 @@ topic: integrals
 title: attention is all you need
 desc: 
 date: 2025 March 8
+difficulty: based
 tags:
   - trig
 methods:

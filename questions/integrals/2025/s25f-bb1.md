@@ -3,6 +3,7 @@ topic: integrals
 title: mate, are you havin’ a bubble bath?
 desc: 
 date: 2025 June 12
+difficulty: incline
 tags:
   - exp
 methods:

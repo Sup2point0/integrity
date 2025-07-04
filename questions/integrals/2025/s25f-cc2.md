@@ -3,6 +3,7 @@ topic: integrals
 title: integration is a cycle
 desc: 
 date: 2025 March 27
+difficulty: manifold
 tags:
   - dread
   - trig

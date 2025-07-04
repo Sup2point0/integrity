@@ -3,6 +3,7 @@ topic: integrals
 title: delayed delivery
 desc: 
 date: 2025 May 15
+difficulty: incline
 tags:
   - trig
 methods:

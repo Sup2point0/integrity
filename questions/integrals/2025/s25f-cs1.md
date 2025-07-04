@@ -3,6 +3,7 @@ topic: integrals
 title: cos why not
 desc: 
 date: 2025 March 24
+difficulty: manifold
 tags:
   - trig
   - arctrig

@@ -3,6 +3,7 @@ topic: integrals
 title: dropout
 desc: 
 date: 2025 April 2
+difficulty: incline
 tags:
   - poly
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: asterism
 desc: 
 date: 2025 June 7
+difficulty: based
 tags:
   - trig
 methods:

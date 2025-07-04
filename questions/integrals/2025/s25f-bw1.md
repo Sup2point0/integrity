@@ -3,6 +3,7 @@ topic: integrals
 title: ammunition
 desc: 
 date: 2025 January 4
+difficulty: incline
 tags:
   - trig
   - exp

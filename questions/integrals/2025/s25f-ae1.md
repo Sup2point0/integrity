@@ -3,6 +3,7 @@ topic: integrals
 title: ambidextrous
 desc: 
 date: 2025 June 1
+difficulty: incline
 tags:
   - exp
   - hyp trig

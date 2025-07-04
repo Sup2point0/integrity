@@ -3,6 +3,7 @@ topic: integrals
 title: apropos
 desc: 
 date: 2025 May 20
+difficulty: incline
 tags:
   - exp
   - ln

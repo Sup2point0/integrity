@@ -3,6 +3,7 @@ topic: integrals
 title: digit diversity
 desc: 
 date: 2025 May 20
+difficulty: incline
 tags:
   - trig
 methods:

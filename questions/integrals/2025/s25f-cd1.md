@@ -3,6 +3,7 @@ topic: integrals
 title: priorities
 desc: 
 date: 2025 March 31
+difficulty: incline
 tags:
   - sqrt
   - arctrig

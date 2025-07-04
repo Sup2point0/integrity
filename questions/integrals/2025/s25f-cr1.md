@@ -3,6 +3,7 @@ topic: integrals
 title: cope
 desc: 
 date: 2025 January 30
+difficulty: incline
 tags:
   - trig
   - ln

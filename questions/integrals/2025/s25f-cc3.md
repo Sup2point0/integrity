@@ -3,6 +3,7 @@ topic: integrals
 title: drastic illumination
 desc: 
 date: 2025 April 4
+difficulty: incline
 tags:
   - trig
 methods:

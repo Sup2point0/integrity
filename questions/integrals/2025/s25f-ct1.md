@@ -3,6 +3,7 @@ topic: integrals
 title: curse me
 desc: 
 date: 2025 March 27
+difficulty: manifold
 tags:
   - trig
   - arctrig

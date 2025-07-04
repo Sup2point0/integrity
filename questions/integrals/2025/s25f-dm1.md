@@ -3,6 +3,7 @@ topic: integrals
 title: ragebait
 desc: 
 date: 2025 June 12
+difficulty: incline
 tags:
   - definite
   - trig

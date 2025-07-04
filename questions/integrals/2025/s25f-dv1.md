@@ -1,8 +1,9 @@
 ---
 topic: integrals
-title: runaway
+title: crash course
 desc: 
 date: 2025 February 15
+difficulty: incline
 tags:
   - poly
 methods:
