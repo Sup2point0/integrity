@@ -3,6 +3,7 @@ topic: integrals
 title: oh look, constants!
 desc: 
 date: 2025 January 19
+difficulty: incline
 tags:
   - wack
   - series

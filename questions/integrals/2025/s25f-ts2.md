@@ -3,6 +3,7 @@ topic: integrals
 title: quippy love
 desc: 
 date: 2025 May 26
+difficulty: incline
 tags:
   - trig
 methods:

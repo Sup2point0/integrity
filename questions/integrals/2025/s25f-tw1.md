@@ -3,6 +3,7 @@ topic: integrals
 title: Monday workout
 desc: 
 date: 2025 June 9
+difficulty: incline
 tags:
   - arctrig
 methods:

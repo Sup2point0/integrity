@@ -3,6 +3,7 @@ topic: integrals
 title: tenosynovitis
 desc: 
 date: 2025 June 19
+difficulty: incline
 tags:
   - scare
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: V.D.U.
 desc: 
 date: 2025 April 16
+difficulty: manifold
 tags:
   - exp
   - trig

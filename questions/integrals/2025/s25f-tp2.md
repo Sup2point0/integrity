@@ -3,6 +3,7 @@ topic: integrals
 title: certified banger
 desc: 
 date: 2025 April 18
+difficulty: incline
 tags:
   - trig
 methods:

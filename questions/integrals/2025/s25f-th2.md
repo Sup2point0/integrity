@@ -3,6 +3,7 @@ topic: integrals
 title: peroxide
 desc: 
 date: 2025 January 15
+difficulty: manifold
 tags:
   - trig
 methods:

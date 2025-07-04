@@ -3,6 +3,7 @@ topic: integrals
 title: catalyst
 desc: 
 date: 2025 January 10
+difficulty: manifold
 tags:
   - trig
 methods:

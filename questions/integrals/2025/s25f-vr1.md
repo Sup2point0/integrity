@@ -3,6 +3,7 @@ topic: integrals
 title: superlative
 desc: 
 date: 2025 March 24
+difficulty: manifold
 tags:
   - definite
   - horror

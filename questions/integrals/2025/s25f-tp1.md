@@ -3,6 +3,7 @@ topic: integrals
 title: cirrus
 desc: 
 date: 2025 March 8
+difficulty: manifold
 tags:
   - trig
   - exp

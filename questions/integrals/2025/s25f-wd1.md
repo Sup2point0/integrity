@@ -3,6 +3,7 @@ topic: integrals
 title: waiting for your wind
 desc: 
 date: 2025 June 11
+difficulty: based
 tags:
   - definite
   - improper

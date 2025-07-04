@@ -3,6 +3,7 @@ topic: integrals
 title: target practice
 desc: 
 date: 2025 January 19
+difficulty: incline
 tags:
   - fun
   - exp

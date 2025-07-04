@@ -3,6 +3,7 @@ topic: integrals
 title: automata
 desc: 
 date: 2025 April 18
+difficulty: manifold
 tags:
   - sqrt
   - poly

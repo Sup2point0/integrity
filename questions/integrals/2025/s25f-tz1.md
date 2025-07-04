@@ -3,6 +3,7 @@ topic: integrals
 title: secanthropic
 desc: 
 date: 2025 January 9
+difficulty: chaos
 tags:
   - horror
   - trig

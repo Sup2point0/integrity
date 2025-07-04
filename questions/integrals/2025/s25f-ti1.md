@@ -3,6 +3,7 @@ topic: integrals
 title: export
 desc: 
 date: 2025 January 26
+difficulty: incline
 tags:
   - dread
   - trig

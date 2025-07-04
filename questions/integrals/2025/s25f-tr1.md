@@ -3,6 +3,7 @@ topic: integrals
 title: laughable
 desc: 
 date: 2025 February 1
+difficulty: incline
 tags:
   - sqrt
 methods:

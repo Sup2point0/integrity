@@ -3,6 +3,7 @@ topic: integrals
 title: hearth
 desc: 
 date: 2025 January 13
+difficulty: manifold
 tags:
   - scare
   - exp

@@ -3,6 +3,7 @@ topic: integrals
 title: together forever
 desc: nothing to see here
 date: 2025 April 1
+difficulty: based
 tags:
   - definite
 methods:

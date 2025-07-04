@@ -3,6 +3,7 @@ topic: integrals
 title: claps
 desc: 
 date: 2025 June 12
+difficulty: based
 tags:
   - trig
 methods:

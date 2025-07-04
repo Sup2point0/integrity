@@ -3,6 +3,7 @@ topic: integrals
 title: calling
 desc: 
 date: 2025 January 30
+difficulty: based
 tags:
   - trig
 methods:
