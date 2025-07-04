@@ -3,6 +3,7 @@ topic: integrals
 title: migraine
 desc: my head hurts help
 date: 2025 June 20
+difficulty: based
 tags:
   - ln
 methods:

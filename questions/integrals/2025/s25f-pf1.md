@@ -3,6 +3,7 @@ topic: integrals
 title: premonition
 desc: 
 date: 2025 June 9
+difficulty: incline
 tags:
   - horror
   - poly

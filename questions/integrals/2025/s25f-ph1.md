@@ -3,6 +3,7 @@ topic: integrals
 title: bureaucracy
 desc: 
 date: 2025 January 10
+difficulty: manifold
 tags:
   - poly
 methods:

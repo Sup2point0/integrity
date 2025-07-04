@@ -3,6 +3,7 @@ topic: integrals
 title: malignance
 desc: 
 date: 2025 May 29
+difficulty: chaos
 tags:
   - horror
   - poly

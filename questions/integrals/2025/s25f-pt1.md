@@ -3,6 +3,7 @@ topic: integrals
 title: mechanism
 desc: 
 date: 2025 January 9
+difficulty: incline
 tags:
   - poly
 methods:

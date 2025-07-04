@@ -3,6 +3,7 @@ topic: integrals
 title: sprout
 desc: 
 date: 2025 March 25
+difficulty: incline
 tags:
   - poly
 methods:

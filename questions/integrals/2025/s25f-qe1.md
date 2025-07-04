@@ -3,6 +3,7 @@ topic: integrals
 title: anticonjugate
 desc: 
 date: 2025 January 23
+difficulty: manifold
 tags:
   - exp
   - sqrt

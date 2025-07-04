@@ -3,6 +3,7 @@ topic: integrals
 title: prenascent
 desc: 
 date: 2025 June 17
+difficulty: incline
 tags:
   - ln
   - trig

@@ -3,6 +3,7 @@ topic: integrals
 title: quality of life
 desc: 
 date: 2025 April 10
+difficulty: incline
 tags:
   - sqrt
   - poly

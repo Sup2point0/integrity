@@ -3,6 +3,7 @@ topic: integrals
 title: honest work
 desc: 
 date: 2025 May 15
+difficulty: based
 tags:
   - sqrt
   - arctrig

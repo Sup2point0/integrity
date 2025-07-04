@@ -3,6 +3,7 @@ topic: integrals
 title: pyrotechnics
 desc: 
 date: 2025 May 12
+difficulty: incline
 tags:
   - exp
 methods:

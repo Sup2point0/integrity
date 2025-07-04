@@ -3,6 +3,7 @@ topic: integrals
 title: rejoice
 desc: IT’s FINALLY OVER
 date: 2025 January 7
+difficulty: incline
 tags:
   - trig
   - fun

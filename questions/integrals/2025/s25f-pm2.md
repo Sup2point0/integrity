@@ -3,6 +3,7 @@ topic: integrals
 title: postmortem
 desc: 
 date: 2025 April 3
+difficulty: manifold
 tags:
   - trig
   - ln

@@ -3,6 +3,7 @@ topic: integrals
 title: one of the most integral I’ve ever seen
 desc: 
 date: 2025 May 15
+difficulty: incline
 tags:
   - elite
 methods:

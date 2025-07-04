@@ -3,6 +3,7 @@ topic: integrals
 title: improv
 desc: 
 date: 2025 May 18
+difficulty: incline
 tags:
   - poly
   - sqrt

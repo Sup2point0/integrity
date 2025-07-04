@@ -3,6 +3,7 @@ topic: integrals
 title: fallenrect
 desc: 
 date: 2025 January 30
+difficulty: based
 tags:
   - trig
   - sqrt

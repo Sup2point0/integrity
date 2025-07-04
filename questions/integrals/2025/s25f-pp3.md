@@ -3,6 +3,7 @@ topic: integrals
 title: RECONNECTION
 desc: 
 date: 2025 March 8
+difficulty: incline
 tags:
   - trig
   - exp

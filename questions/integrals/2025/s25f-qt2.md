@@ -3,6 +3,7 @@ topic: integrals
 title: architechnica
 desc: Long road ahead.
 date: 2025 February 1
+difficulty: chaos
 tags:
   - dread
   - sqrt

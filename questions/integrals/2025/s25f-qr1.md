@@ -3,6 +3,7 @@ topic: integrals
 title: gridded
 desc: 
 date: 2025 January 18
+difficulty: manifold
 tags:
   - horror
   - sqrt

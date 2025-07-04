@@ -3,6 +3,7 @@ topic: integrals
 title: ostentatious
 desc: 
 date: 2025 June 1
+difficulty: incline
 tags:
   - definite
   - poly

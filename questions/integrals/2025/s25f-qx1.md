@@ -3,6 +3,7 @@ topic: integrals
 title: pretend like it’s the first time
 desc: 
 date: 2025 March 27
+difficulty: based
 tags:
   - scare
   - sqrt

@@ -3,6 +3,7 @@ topic: integrals
 title: rigidity
 desc: 
 date: 2025 April 15
+difficulty: incline
 tags:
   - dread
   - sqrt

@@ -3,6 +3,7 @@ topic: integrals
 title: vanquish
 desc: 
 date: 2025 March 25
+difficulty: manifold
 tags:
   - trig
 methods:

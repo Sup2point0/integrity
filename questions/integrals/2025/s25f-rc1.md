@@ -3,6 +3,7 @@ topic: integrals
 title: relinquish
 desc: 
 date: 2025 March 20
+difficulty: manifold
 tags:
   - exp
   - infinite
