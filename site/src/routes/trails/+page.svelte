@@ -6,6 +6,7 @@ import Site from "#scripts/site";
 
 import GraphBar from "./graph-bar.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
+import Tag from "#parts/ui/tag.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -91,7 +92,7 @@ async function try_load_data(i: number = 0)
 for (let q of Site.get_list_of_all_questions()) {
   if (q.difficulty) {
     general.difficulties[q.difficulty]++;
-  } else if (q.difficulty === null) {
+  } else if (q.difficulty === null || q.difficulty === undefined) {
     general.difficulties.null++;
   }
 }
@@ -99,7 +100,7 @@ for (let q of Site.get_list_of_all_questions()) {
 for (let q of Site.get_questions_of_topic("integrals")) {
   if (q.difficulty) {
     integrals.difficulties[q.difficulty]++;
-  } else if (q.difficulty === null) {
+  } else if (q.difficulty === null || q.difficulty === undefined) {
     integrals.difficulties.null++;
   }
 
@@ -186,7 +187,6 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     }
   }
 
-  /* Ignoring integrals dated only to a month without a specific day */
   if (q.date && q.date_display && q.date_display.split(" ").length > 2) {
     let d = new Intl.DateTimeFormat("en-GB", {
       day: "2-digit",
@@ -326,7 +326,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
           <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label">
-            {diff === "null" ? "–" : diff.toUpperCase()}
+            <Tag kind={diff} tag={diff === "null" ? "UNASSIGNED" : diff.toUpperCase()} />
           </div>
         </div>
       {/each}
@@ -347,7 +347,7 @@ for (let q of Site.get_questions_of_topic("integrals")) {
           <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label">
-            {diff === "null" ? "–" : diff.toUpperCase()}
+            <Tag kind={diff} tag={diff === "null" ? "UNASSIGNED" : diff.toUpperCase()} />
           </div>
         </div>
       {/each}

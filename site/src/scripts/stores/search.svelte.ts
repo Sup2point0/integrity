@@ -255,10 +255,10 @@ export class SearchPrefs
     
     if (difficulty && question.difficulty) {
       switch (question.difficulty) {
-        case "chaos": return 12;
-        case "manifold": return 14;
-        case "incline": return 16;
-        case "based": return 18;
+        case "chaos": return 6;
+        case "manifold": return 7;
+        case "incline": return 8;
+        case "based": return 9;
       }
     }
     
