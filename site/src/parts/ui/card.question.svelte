@@ -118,6 +118,17 @@ function check_valid(data: Array<any>): boolean
 @use 'sass:color';
 
 
+@property --col-left {
+  syntax: '<color>';
+  initial-value: $col-manifold;
+  inherits: false;
+}
+@property --col-right {
+  syntax: '<color>';
+  initial-value: $col-chaos;
+  inherits: false;
+}
+
 a.question-card {
   flex: 1 0 auto;
   min-width: 12em;
@@ -156,6 +167,8 @@ a.question-card {
 }
 
 a.question-card.effects {
+  --col-left: #{$col-manifold};
+  --col-right: #{$col-chaos};
   transition: all 0.12s ease-out;
 
   &:hover {
@@ -165,13 +178,13 @@ a.question-card.effects {
     transform: scale(101.5%);
   }
 
-  &.special:not(.solved) {
+  &.special {
     position: relative;
     border: none;
     border-radius: 0.4em;
     box-shadow: none;
     transform-style: preserve-3d;
-
+    
     &::before {
       content: '';
       margin: -1.5px;
@@ -180,19 +193,32 @@ a.question-card.effects {
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(130deg in oklch, $col-manifold, $col-chaos) 0 0 / 100% no-repeat;
+      background: linear-gradient(130deg in oklch, var(--col-left), var(--col-right)) 0 0 / 100% no-repeat;
       border-radius: 0.5em;
       transform: translateZ(-1px);
+      transition: --col-left 0.24s ease-out, --col-right 0.24s ease-out
     }
-
+    
     &::after {
       content: '';
       position: absolute;
       inset: -1px;
-      background: linear-gradient(130deg in oklch, $col-manifold, $col-chaos);
+      background: linear-gradient(130deg in oklch, var(--col-left), var(--col-right));
+      opacity: 1;
       filter: blur(4px);
       transform: translateZ(-2px);
-      transition: inset 0.12s ease-out;
+      transition: opacity 0.12s ease-out, inset 0.12s ease-out, --col-left 0.24s ease-out, --col-right 0.24s ease-out;
+    }
+  }
+
+  &.special.solved::after {
+    opacity: 0;
+  }
+
+  &.special:not(.solved) {
+    &:hover::before, &:hover::after {
+      --col-left: #{$col-chaos};
+      --col-right: #{$col-based};
     }
 
     &:hover::after {

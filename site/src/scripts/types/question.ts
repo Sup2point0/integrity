@@ -59,7 +59,7 @@ export class Question
     if (!process) return;
 
     this.question = data.question && data.question[0];
-    this.date_display = data.date;
+    this.date_display = data.date.toString();
     try {
       this.date = new Date(data.date);
     } catch {
