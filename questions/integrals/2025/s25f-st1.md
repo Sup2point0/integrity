@@ -3,6 +3,7 @@ topic: integrals
 title: creativity is running out
 desc: 
 date: 2025 April 18
+difficulty: incline
 tags:
   - sqrt
   - trig

@@ -3,6 +3,7 @@ topic: integrals
 title: ascension
 desc: 
 date: 2025 January 11
+difficulty: incline
 tags:
   - horror
   - trig

@@ -3,6 +3,7 @@ topic: integrals
 title: slice and dice
 desc: 
 date: 2025 January 9
+difficulty: based
 tags:
   - poly
 methods:

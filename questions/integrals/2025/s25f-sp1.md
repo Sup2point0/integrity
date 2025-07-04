@@ -3,6 +3,7 @@ topic: integrals
 title: spare parts
 desc: 
 date: 2025 March 13
+difficulty: incline
 tags:
   - scare
   - poly

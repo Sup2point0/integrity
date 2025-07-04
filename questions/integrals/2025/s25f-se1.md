@@ -3,6 +3,7 @@ topic: integrals
 title: lineup
 desc: 
 date: 2025 April 19
+difficulty: incline
 tags:
   - arctrig
 methods:

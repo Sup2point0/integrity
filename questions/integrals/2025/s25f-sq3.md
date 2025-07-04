@@ -3,6 +3,7 @@ topic: integrals
 title: squeakeasy
 desc: 
 date: 2025 May 24
+difficulty: incline
 tags:
   - arctrig
 methods:

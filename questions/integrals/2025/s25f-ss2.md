@@ -3,6 +3,7 @@ topic: integrals
 title: recirculation
 desc: 
 date: 2025 April 7
+difficulty: manifold
 tags:
   - trig
 methods:

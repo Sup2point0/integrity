@@ -3,6 +3,7 @@ topic: integrals
 title: resolver
 desc: 
 date: 2025 June 12
+difficulty: incline
 tags:
   - scare
   - trig

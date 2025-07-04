@@ -3,6 +3,7 @@ topic: integrals
 title: subtext
 desc: 
 date: 2025 April 1
+difficulty: incline
 tags:
   - dread
   - arctrig

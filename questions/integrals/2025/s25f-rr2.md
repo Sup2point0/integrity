@@ -1,7 +1,7 @@
 ---
 topic: integrals
 title: rubic reference
-desc: 
+desc: RUBIC HEXECUTION
 date: 2025 April 1
 difficulty: chaos
 tags:

@@ -3,6 +3,7 @@ topic: integrals
 title: epinephrine
 desc: 
 date: 2025 May 26
+difficulty: incline
 tags:
   - trig
 methods:

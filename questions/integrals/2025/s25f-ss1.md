@@ -3,6 +3,7 @@ topic: integrals
 title: steamroller
 desc: 
 date: 2025 January 18
+difficulty: incline
 tags:
   - horror
   - trig

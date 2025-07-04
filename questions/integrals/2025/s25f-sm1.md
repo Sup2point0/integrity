@@ -3,6 +3,7 @@ topic: integrals
 title: shimmer
 desc: 
 date: 2025 February 26
+difficulty: manifold
 tags:
   - trig
 methods:

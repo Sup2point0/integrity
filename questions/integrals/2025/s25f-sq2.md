@@ -3,6 +3,7 @@ topic: integrals
 title: as is
 desc: 
 date: 2025 March 27
+difficulty: based
 tags:
   - sqrt
 methods:

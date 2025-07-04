@@ -3,6 +3,7 @@ topic: integrals
 title: slaughtered
 desc: 
 date: 2025 June 9
+difficulty: manifold
 tags:
   - ln
 methods:

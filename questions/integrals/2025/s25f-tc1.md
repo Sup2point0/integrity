@@ -3,6 +3,7 @@ topic: integrals
 title: brittle
 desc: 
 date: 2025 January 24
+difficulty: incline
 tags:
   - trig
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: luck of the draw
 desc: 
 date: 2025 March 27
+difficulty: manifold
 tags:
   - scare
   - trig

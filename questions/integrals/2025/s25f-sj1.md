@@ -3,6 +3,7 @@ topic: integrals
 title: dindles
 desc: Nah, I don’t really know what “dindles” are meant to be either.
 date: 2025 June 17
+difficulty: manifold
 tags:
   - ln
 methods:

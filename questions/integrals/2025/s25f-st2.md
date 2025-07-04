@@ -3,6 +3,7 @@ topic: integrals
 title: sTaTiSTiCs
 desc: 
 date: 2025 June 6
+difficulty: manifold
 tags:
   - definite
   - improper

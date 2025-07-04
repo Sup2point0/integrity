@@ -3,6 +3,7 @@ topic: integrals
 title: duality
 desc: Celebrating 200 integrals on <em>Integrity</em>!!
 date: 2025 April 15
+difficulty: incline
 tags:
   - scare
   - exp

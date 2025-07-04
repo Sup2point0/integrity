@@ -3,6 +3,7 @@ topic: integrals
 title: sayonara
 desc: This is a wild ride.
 date: 2025 February 9
+difficulty: chaos
 tags:
   - dread
   - sqrt

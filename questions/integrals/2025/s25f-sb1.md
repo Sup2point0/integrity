@@ -3,6 +3,7 @@ topic: integrals
 title: sub base
 desc: 
 date: 2025 January 4
+difficulty: based
 tags:
   - poly
 methods:

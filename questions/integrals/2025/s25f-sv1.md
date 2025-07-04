@@ -3,6 +3,7 @@ topic: integrals
 title: what is this
 desc: 
 date: 2025 April 15
+difficulty: manifold
 tags:
   - trig
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: splendid
 desc: 
 date: 2025 February 5
+difficulty: incline
 tags:
   - ln
 methods:

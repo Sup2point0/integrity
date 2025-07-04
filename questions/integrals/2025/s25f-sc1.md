@@ -3,6 +3,7 @@ topic: integrals
 title: fantastically bananas
 desc: 
 date: 2025 February 9
+difficulty: manifold
 tags:
   - trig
 methods:

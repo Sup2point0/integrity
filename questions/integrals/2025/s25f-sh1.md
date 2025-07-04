@@ -3,6 +3,7 @@ topic: integrals
 title: jaywalking
 desc: 
 date: 2025 May 11
+difficulty: chaos
 tags:
   - horror
   - sqrt
