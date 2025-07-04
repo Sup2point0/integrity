@@ -3,6 +3,7 @@ topic: integrals
 title: you can’t integrate like this
 desc: please use the intended method hehe
 date: 2025 June 11
+difficulty: incline
 tags:
   - exp
   - trig

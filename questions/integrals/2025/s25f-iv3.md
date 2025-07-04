@@ -3,6 +3,7 @@ topic: integrals
 title: inductive hypothesis
 desc: 
 date: 2025 May 12
+difficulty: manifold
 tags:
   - definite
   - scare

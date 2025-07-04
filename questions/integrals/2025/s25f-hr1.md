@@ -2,7 +2,8 @@
 topic: integrals
 title: machina
 desc: 
-date: 
+date: 2025
+difficulty: chaos
 tags:
   - horror
   - sqrt

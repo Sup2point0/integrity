@@ -3,6 +3,7 @@ topic: integrals
 title: hallucinations
 desc: 
 date: 2025 March 27
+difficulty: incline
 tags:
   - sqrt
 methods:

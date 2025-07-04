@@ -3,6 +3,7 @@ topic: integrals
 title: jelly
 desc: 
 date: 2025 February 2
+difficulty: incline
 tags:
   - definite
   - sqrt

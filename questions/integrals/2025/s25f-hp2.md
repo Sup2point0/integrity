@@ -3,6 +3,7 @@ topic: integrals
 title: hope for the best
 desc: 
 date: 2025 March 27
+difficulty: manifold
 tags:
   - scare
   - exp

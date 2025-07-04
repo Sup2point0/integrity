@@ -3,6 +3,7 @@ topic: integrals
 title: JMWCQ
 desc: 
 date: 2025 April 16
+difficulty: manifold
 tags:
   - sqrt
   - trig

@@ -3,6 +3,7 @@ topic: integrals
 title: new gen
 desc: 
 date: 2025 April 3
+difficulty: based
 tags:
   - sqrt
   - arctrig

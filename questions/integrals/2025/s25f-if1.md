@@ -3,6 +3,7 @@ topic: integrals
 title: Interplanetarypurplythorny Fractal
 desc: 
 date: 2025 April 17
+difficulty: incline
 tags:
   - definite
   - improper

@@ -3,6 +3,7 @@ topic: integrals
 title: counting words
 desc: 
 date: 2025 April 19
+difficulty: manifold
 tags:
   - sqrt
 methods:

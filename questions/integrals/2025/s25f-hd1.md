@@ -3,6 +3,7 @@ topic: integrals
 title: heads up, incoming
 desc: heads down, pray for me
 date: 2025 March 13
+difficulty: manifold
 tags:
   - exp
 methods:

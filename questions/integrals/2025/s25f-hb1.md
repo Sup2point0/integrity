@@ -3,6 +3,7 @@ topic: integrals
 title: seven
 desc: 
 date: 2025 May 9
+difficulty: manifold
 tags:
   - scare
   - trig

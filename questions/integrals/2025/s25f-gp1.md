@@ -3,6 +3,7 @@ topic: integrals
 title: magpie
 desc: 
 date: 2025 June 12
+difficulty: incline
 tags:
   - arctrig
 methods:

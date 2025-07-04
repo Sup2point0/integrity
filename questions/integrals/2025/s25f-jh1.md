@@ -3,6 +3,7 @@ topic: integrals
 title: pernicious spearhead
 desc: This is honestly not a good integral, but props if you manage to solve it.
 date: 2025 May 12
+difficulty: chaos
 tags:
   - definite
   - horror

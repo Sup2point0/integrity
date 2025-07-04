@@ -3,6 +3,7 @@ topic: integrals
 title: melatonin
 desc: doesn’t look like one that can integrated, innit.
 date: 2025 May 12
+difficulty: incline
 tags:
   - trig
   - hyp trig

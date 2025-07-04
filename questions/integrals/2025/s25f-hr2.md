@@ -3,6 +3,7 @@ topic: integrals
 title: like it or not
 desc: 
 date: 2025 February 27
+difficulty: incline
 tags:
   - trig
 methods:

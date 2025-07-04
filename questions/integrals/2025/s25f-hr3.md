@@ -3,6 +3,7 @@ topic: integrals
 title: absolute horror.
 desc: 
 date: 2025 June 9
+difficulty: chaos
 tags:
   - horror
   - trig

@@ -3,6 +3,7 @@ topic: integrals
 title: heavy is the chain
 desc: 
 date: 2025 March 13
+difficulty: incline
 tags:
   - poly
 methods:

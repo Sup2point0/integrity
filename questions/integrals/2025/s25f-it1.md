@@ -3,6 +3,7 @@ topic: integrals
 title: introspection
 desc: 
 date: 2025 January 30
+difficulty: incline
 tags:
   - scare
   - trig

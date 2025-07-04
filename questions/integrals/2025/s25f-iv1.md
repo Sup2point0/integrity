@@ -3,6 +3,7 @@ topic: integrals
 title: treasure hunting
 desc: X marks the spot, except when it doesn’t.
 date: 2025 January 12
+difficulty: chaos
 tags:
   - horror
   - trig

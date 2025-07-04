@@ -3,6 +3,7 @@ topic: integrals
 title: hold on
 desc: 
 date: 2025 June 19
+difficulty: incline
 tags:
   - trig
 methods:

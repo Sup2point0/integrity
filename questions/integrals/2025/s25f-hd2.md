@@ -3,6 +3,7 @@ topic: integrals
 title: azimuth
 desc: 
 date: 2025 March 9
+difficulty: incline
 tags:
   - definite
   - poly

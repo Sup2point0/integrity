@@ -3,6 +3,7 @@ topic: integrals
 title: hyperactive
 desc: 
 date: 2025 January 11
+difficulty: incline
 tags:
   - sqrt
   - hyp trig

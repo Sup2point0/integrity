@@ -3,6 +3,7 @@ topic: integrals
 title: acrid
 desc: 
 date: 2025 January 31
+difficulty: manifold
 tags:
   - series
   - poly

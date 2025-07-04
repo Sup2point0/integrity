@@ -3,6 +3,7 @@ topic: integrals
 title: intcore
 desc: 
 date: 2025 January 30
+difficulty: incline
 tags:
   - funny
 methods:

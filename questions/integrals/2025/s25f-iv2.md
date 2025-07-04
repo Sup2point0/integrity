@@ -3,6 +3,7 @@ topic: integrals
 title: everything will be alright
 desc: 
 date: 2025 March 27
+difficulty: incline
 tags:
   - trig
 methods:

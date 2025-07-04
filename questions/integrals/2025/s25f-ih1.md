@@ -3,6 +3,7 @@ topic: integrals
 title: runaway
 desc: 
 date: 2025 March 23
+difficulty: incline
 tags:
   - poly
   - sqrt
