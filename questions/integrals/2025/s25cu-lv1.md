@@ -3,6 +3,7 @@ topic: integrals
 title: leverage
 desc: 
 date: 2025 March 20
+difficulty: incline
 tags:
   - trig
 methods:

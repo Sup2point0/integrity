@@ -3,6 +3,7 @@ topic: integrals
 title: partial pain
 desc: certified toughie!
 date: 2025 March 17
+difficulty: chaos
 tags:
   - poly
   - pi

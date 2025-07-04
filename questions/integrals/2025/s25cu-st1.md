@@ -3,6 +3,7 @@ topic: integrals
 title: carrier
 desc: 
 date: 2025 April 2
+difficulty: incline
 tags:
   - trig
 methods:

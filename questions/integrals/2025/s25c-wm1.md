@@ -3,6 +3,7 @@ topic: integrals
 title: perfectus
 desc: 
 date: 2025 March 17
+difficulty: manifold
 tags:
   - exp
   - hyp trig

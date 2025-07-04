@@ -3,6 +3,7 @@ topic: integrals
 title: crossnaut
 desc: 
 date: 2025 March 17
+difficulty: incline
 tags:
   - trig
 methods:

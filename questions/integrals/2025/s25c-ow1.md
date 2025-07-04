@@ -3,6 +3,7 @@ topic: integrals
 title: welcome to the arena
 desc: 
 date: 2025 March 17
+difficulty: manifold
 tags:
   - poly
 methods:

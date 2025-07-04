@@ -3,6 +3,7 @@ topic: integrals
 title: exposition
 desc: 
 date: 2025 March 30
+difficulty: incline
 tags:
   - exp
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: VRAM
 desc: 
 date: 2025 March 13
+difficulty: manifold
 tags:
   - trig
   - ln

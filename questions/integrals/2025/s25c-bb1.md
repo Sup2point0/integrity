@@ -3,6 +3,7 @@ topic: integrals
 title: "b(r[a{ck}e]t)s"
 desc: 
 date: 2025 March 17
+difficulty: manifold
 tags:
   - scare
   - ln

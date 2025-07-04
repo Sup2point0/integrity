@@ -3,6 +3,7 @@ topic: integrals
 title: finality
 desc: 
 date: 2025 March 16
+difficulty: manifold
 tags:
   - exp
   - trig

@@ -3,6 +3,7 @@ topic: integrals
 title: akaka
 desc: I’m quite proud of coming up with this one in a vacuum, even if it is actually a well-known integral.
 date: 2025 March 17
+difficulty: chaos
 tags:
   - definite
   - dread

@@ -3,6 +3,7 @@ topic: integrals
 title: INVERSION
 desc: 
 date: 2025 March 25
+difficulty: incline
 tags:
   - sqrt
   - arctrig

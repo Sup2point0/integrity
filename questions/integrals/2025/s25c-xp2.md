@@ -3,6 +3,7 @@ topic: integrals
 title: dragonometry
 desc: 
 date: 2025 March 18
+difficulty: chaos
 tags:
   - horror
   - exp

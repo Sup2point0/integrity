@@ -3,6 +3,7 @@ topic: integrals
 title: STRAIGHT DOWN
 desc: 
 date: 2025 March 20
+difficulty: chaos
 tags:
   - trig
   - exp
