@@ -3,6 +3,7 @@ topic: integrals
 title: sanguine applause
 desc: 
 date: 2025 April 19
+difficulty: incline
 tags:
   - poly
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: sabotage
 desc: one of my favourite integrals to give people just about familiar enough with trig.
 date: 2025 January 12
+difficulty: based
 tags:
   - trig
 methods:

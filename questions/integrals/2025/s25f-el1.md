@@ -3,6 +3,7 @@ topic: integrals
 title: futures
 desc: 
 date: 2025 March 27
+difficulty: incline
 tags:
   - exp
   - ln

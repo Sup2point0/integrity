@@ -3,6 +3,7 @@ topic: integrals
 title: meet and keet
 desc: 
 date: 2025 April 29
+difficulty: manifold
 tags:
   - wack
 methods:

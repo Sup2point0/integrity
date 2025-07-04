@@ -3,6 +3,7 @@ topic: integrals
 title: envy
 desc: 
 date: 2025 March 28
+difficulty: incline
 tags:
   - exp
   - ln

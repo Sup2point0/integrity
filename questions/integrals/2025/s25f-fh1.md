@@ -3,6 +3,7 @@ topic: integrals
 title: fractured hearted
 desc: 
 date: 2025 April 7
+difficulty: incline
 tags:
   - trig
 methods:

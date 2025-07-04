@@ -3,6 +3,7 @@ topic: integrals
 title: evaporation
 desc: 
 date: 2025 February 13
+difficulty: manifold
 tags:
   - poly
 methods:

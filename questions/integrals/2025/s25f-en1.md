@@ -3,6 +3,7 @@ topic: integrals
 title: enough will be enough
 desc: 
 date: 2025 June 7
+difficulty: based
 tags:
   - poly
   - sqrt

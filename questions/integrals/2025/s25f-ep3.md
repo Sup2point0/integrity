@@ -3,6 +3,7 @@ topic: integrals
 title: epilogue
 desc: 
 date: 2025 May 1
+difficulty: manifold
 tags:
   - scare
   - sum

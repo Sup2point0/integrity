@@ -3,6 +3,7 @@ topic: integrals
 title: abnormal
 desc: 
 date: 2025 January 27
+difficulty: incline
 tags:
   - exp
 methods:

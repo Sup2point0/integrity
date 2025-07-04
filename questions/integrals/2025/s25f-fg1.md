@@ -3,6 +3,7 @@ topic: integrals
 title: frigate
 desc: 
 date: 2025 January 7
+difficulty: manifold
 tags:
   - trig
   - ln

@@ -3,6 +3,7 @@ topic: integrals
 title: foreshadowing
 desc: 
 date: 2025 March 8
+difficulty: incline
 tags:
   - poly
   - sqrt

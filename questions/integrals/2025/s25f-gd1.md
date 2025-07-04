@@ -3,6 +3,7 @@ topic: integrals
 title: wishes
 desc: 
 date: 2025 February 26
+difficulty: manifold
 tags:
   - poly
   - sqrt

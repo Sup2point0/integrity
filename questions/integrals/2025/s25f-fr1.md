@@ -3,6 +3,7 @@ topic: integrals
 title: cavity
 desc: 
 date: 2025 February 1
+difficulty: incline
 tags:
   - poly
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: lighthouse
 desc: 
 date: 2025 January 21
+difficulty: manifold
 tags:
   - trig
   - exp

@@ -3,6 +3,7 @@ topic: integrals
 title: hydraulic
 desc: 
 date: 2025 February 8
+difficulty: incline
 tags:
   - sqrt
   - exp

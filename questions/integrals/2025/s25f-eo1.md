@@ -3,6 +3,7 @@ topic: integrals
 title: cooked, calmly
 desc: 
 date: 2025 January 13
+difficulty: manifold
 tags:
   - definite
   - scare

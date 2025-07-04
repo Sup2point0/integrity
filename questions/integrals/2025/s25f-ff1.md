@@ -3,6 +3,7 @@ topic: integrals
 title: fiver
 desc: 
 date: 2025 February 14
+difficulty: incline
 tags:
   - poly
 methods:

@@ -3,6 +3,7 @@ topic: integrals
 title: unfazed
 desc: 
 date: 2025 January 18
+difficulty: based
 tags:
   - scare
   - exp

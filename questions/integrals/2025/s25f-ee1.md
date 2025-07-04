@@ -3,6 +3,7 @@ topic: integrals
 title: ELECTRO:CONNECTION
 desc: 
 date: 2025 May 15
+difficulty: manifold
 tags:
   - dread
   - trig

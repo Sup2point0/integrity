@@ -3,6 +3,7 @@ topic: integrals
 title: envoy of the end
 desc: 
 date: 2025 June 19
+difficulty: based
 tags:
   - trig
 methods:

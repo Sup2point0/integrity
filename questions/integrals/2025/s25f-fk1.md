@@ -3,6 +3,7 @@ topic: integrals
 title: forklift
 desc: 
 date: 2025 April 15
+difficulty: based
 tags:
   - scare
   - funny

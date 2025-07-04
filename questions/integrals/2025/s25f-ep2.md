@@ -3,6 +3,7 @@ topic: integrals
 title: wistful ephemerality
 desc: 
 date: 2025 May 24
+difficulty: manifold
 tags:
   - elite
   - trig
