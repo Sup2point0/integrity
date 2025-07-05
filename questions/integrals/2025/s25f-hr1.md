@@ -2,7 +2,7 @@
 topic: integrals
 title: machina
 desc: 
-date: 2025
+date: 2025 January
 difficulty: chaos
 tags:
   - horror
