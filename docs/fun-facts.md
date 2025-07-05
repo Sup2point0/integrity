@@ -2,6 +2,7 @@
 <!-- #SQUARK live!
 | dest = docs/fun-facts
 | desc = Some cool little details you may not have noticed about Integrity!
+| index = docs
 -->
 
 Here are some cool details about *Integrity*. Spoiler alert!

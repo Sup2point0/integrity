@@ -37,7 +37,7 @@ import { goto } from "$app/navigation";
         window.location.href = `${base}/question/${pick_random_question()}`;
       }} />
       <Link text="Integrals" intern="questions/integrals" />
-      <Link text="Graph Drawing" intern="questions/graph-drawing" disabled={true} />
+      <Link text="Graph Drawing" intern="questions/graph-drawing" hot={true} />
       <Link text="Completing the Square" intern="questions/complete-square" />
       <Link text="Guess the Graph" intern="questions/guess-graph" disabled={true} />
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
@@ -63,7 +63,7 @@ import { goto } from "$app/navigation";
       <Link text="Difficulties" intern="docs/difficulties" hot={true} />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
-      <Link text="Speedrun" intern="docs/speedrun" disabled={true} />
+      <Link text="Speedrun" intern="docs/speedrun" hot={true} />
       <Link text="Fun Facts" intern="docs/fun-facts" />
     </div>
   </section>

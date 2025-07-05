@@ -53,6 +53,7 @@ import { goto } from "$app/navigation";
       <Link text="Difficulties" intern="docs/difficulties" hot={true} />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
+      <Link text="Speedrun" intern="docs/speedrun" hot={true} />
       <Link text="Fun Facts" intern="docs/fun-facts" />
     </NavLink>
 

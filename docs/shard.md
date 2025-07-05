@@ -5,6 +5,7 @@
 | desc = Explaining the question identifier codes used throughout Integrity
 | head = Shards
 | capt = Question Identifier Codes
+| index = docs
 -->
 
 Each question I devise is designated its own unique identifier deemed a *shard*. They look like this:

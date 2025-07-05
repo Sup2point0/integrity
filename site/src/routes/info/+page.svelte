@@ -21,22 +21,12 @@ import ArticleArray from "#parts/page/article-array.svelte";
 <Header title="Info" />
 
 
-<div class="content">
-  <ArticleArray
-    paths={[
-      "synopsis.md",
-      "faq.md",
-      "edu.md",
-      ".squarkdown/content/privacy.md",
-      ".squarkdown/content/~licence.md",
-    ]}
-  />
-</div>
-
-
-<style lang="scss">
-
-.content {
-}
-
-</style>
+<ArticleArray
+  paths={[
+    "synopsis.md",
+    "faq.md",
+    "edu.md",
+    ".squarkdown/content/privacy.md",
+    ".squarkdown/content/~licence.md",
+  ]}
+/>

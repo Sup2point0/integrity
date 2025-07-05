@@ -1,6 +1,7 @@
 # About Questions on Integrity
 <!-- #SQUARK live!
 | dest = docs/questions
+| index = docs
 | date = 2025 May 20
 | clean = line-breaks
 -->
