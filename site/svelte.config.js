@@ -34,7 +34,13 @@ const config = {
     },
     prerender: {
       handleHttpError: "warn",
-      handleMissingId: "warn",
+      handleMissingId: "ignore",
+      entries: [
+        "/",
+        "/speedrun/finish",
+        "/trails/integrity",
+        "/scriptures/desmos/gamedev/prerequisites/graphs",
+      ]
     },
   },
 
@@ -60,7 +66,10 @@ const config = {
   ],
   
   onwarn: (warning, handler) => {
-    if (warning.code === "css_unused_selector") {
+    if (
+      warning.code === "css_unused_selector" ||
+      warning.code === "component_name_lowercase"
+    ) {
       return;
     }
     handler(warning);
