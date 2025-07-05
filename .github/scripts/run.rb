@@ -1,15 +1,15 @@
-require_relative "../.stranger-quarkdown/squarkdown/utils/log"
-
+require_relative "../../.stranger-quarkdown/squarkdown/utils/log"
 log "exporting questions..."
 
 require "json"
+require "pathname"
 
 require_relative "process"
 
 ## find
 log "finding question files..."
 
-ROOT = Pathname(__dir__).parent
+ROOT = Pathname(__dir__).parent.parent
 
 SOURCE = ROOT / "questions"
 files = SOURCE.glob("**/*-*.md")

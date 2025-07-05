@@ -1,7 +1,5 @@
 require "front_matter_parser"
 
-require "pathname"
-
 
 def process(shard:, file:)
   parsed = FrontMatterParser::Parser.parse_file(file)

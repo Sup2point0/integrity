@@ -1,0 +1,6 @@
+task default: :export
+
+
+task :export do
+  ruby "run.rb"
+end
