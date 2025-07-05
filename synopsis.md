@@ -7,7 +7,7 @@
 
 I’ve come to really enjoy writing my own maths questions, particularly integrals. So, much like [*Assort*](https://github.com/Sup2point0/Assort) is a repository of all my creations, *Integrity* is a collection of all my maths questions. I started writing these for maths competitions I was helping run at school, but now I just write them for fun.
 
-In addition to questions you’ll also find [guides](https://sup2point0.github.io/integrity/guides) covering mathematical topics (currently only integration in significant depth), and other tools for practising maths.
+In addition to questions you’ll also find [scriptures](https://sup2point0.github.io/integrity/scriptures) covering mathematical topics (currently only integration in significant depth), and other tools for practising maths.
 
 
 <br>

@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import Site from "#src/scripts/site";
-import { pick_random_question, pick_random_guide } from "#scripts/utils";
+import { pick_random_question, pick_random_scripture } from "#scripts/utils";
 
 import Link from "#parts/ui/link.svelte";
 
@@ -89,71 +89,71 @@ import { goto } from "$app/navigation";
   </section>
 </div>
 
-<h2> Guides </h2>
+<h2> Scriptures </h2>
 <div class="content">
   <section>
-    <h3> Guides </h3>
+    <h3> Scriptures </h3>
     <div class="links">
       <Link text="Random" action={() => {
-        goto(`/${pick_random_guide()}`);
+        goto(`/${pick_random_scripture()}`);
       }} />
-      <Link text="S-I+G-N Errors" intern="guides/general/sign" />
-      <Link text="Signing Off Inequalities" intern="guides/general/inequalities" hot={true} />
+      <Link text="S-I+G-N Errors" intern="scriptures/general/sign" />
+      <Link text="Signing Off Inequalities" intern="scriptures/general/inequalities" hot={true} />
     </div>
   </section>
 
   <section>
     <h3> Integration </h3>
     <div class="links">
-      <Link text="Why Integrate?" intern="guides/integrals/why" />
-      <Link text="Why Is Integration Difficult?" intern="guides/integrals/why-hard" />
-      <Link text="How Do We Integrate?" intern="guides/integrals/how" />
-      <Link text="What Do I Do?" intern="guides/integrals/what" />
+      <Link text="Why Integrate?" intern="scriptures/integrals/why" />
+      <Link text="Why Is Integration Difficult?" intern="scriptures/integrals/why-hard" />
+      <Link text="How Do We Integrate?" intern="scriptures/integrals/how" />
+      <Link text="What Do I Do?" intern="scriptures/integrals/what" />
     </div>
   </section>
 
   <section>
     <h3> Antiderivatives </h3>
     <div class="links">
-      <Link text="Integrating the Logarithm" intern="guides/integrals/antiderivatives/ln" />
-      <Link text="Integrating the Secant Cubed" intern="guides/integrals/antiderivatives/sec-3" />
+      <Link text="Integrating the Logarithm" intern="scriptures/integrals/antiderivatives/ln" />
+      <Link text="Integrating the Secant Cubed" intern="scriptures/integrals/antiderivatives/sec-3" />
     </div>
   </section>
 
   <section>
     <h3> Methods </h3>
     <div class="links">
-      <Link text="Substitution" intern="guides/integrals/methods/sub" />
-      <Link text="Parts" intern="guides/integrals/methods/parts" />
-      <Link text="Partial Fractions" intern="guides/integrals/methods/partials" />
-      <Link text="Power Partials" intern="guides/integrals/methods/power-partials" />
-      <Link text="Polynomial Division" intern="guides/integrals/methods/poly-div" disabled={true} />
-      <Link text="Arctan" intern="guides/integrals/methods/arctan" disabled={true} />
-      <Link text="Arcsin" intern="guides/integrals/methods/arcsin" disabled={true} />
+      <Link text="Substitution" intern="scriptures/integrals/methods/sub" />
+      <Link text="Parts" intern="scriptures/integrals/methods/parts" />
+      <Link text="Partial Fractions" intern="scriptures/integrals/methods/partials" />
+      <Link text="Power Partials" intern="scriptures/integrals/methods/power-partials" />
+      <Link text="Polynomial Division" intern="scriptures/integrals/methods/poly-div" disabled={true} />
+      <Link text="Arctan" intern="scriptures/integrals/methods/arctan" disabled={true} />
+      <Link text="Arcsin" intern="scriptures/integrals/methods/arcsin" disabled={true} />
     </div>
   </section>
 
   <section>
     <h3> Strategies </h3>
     <div class="links">
-      <Link text="Power Moves" intern="guides/integrals/strategies/power-moves" disabled={true} />
-      <Link text="Split" intern="guides/integrals/strategies/split" disabled={true} />
-      <Link text="Multiply" intern="guides/integrals/strategies/multiply" disabled={true} />
-      <Link text="Divide" intern="guides/integrals/strategies/divide" disabled={true} />
-      <Link text="Conjugate" intern="guides/integrals/strategies/conjugate" disabled={true} />
-      <Link text="Spotting the Substitution" intern="guides/integrals/strategies/spot-sub" disabled={true} />
+      <Link text="Power Moves" intern="scriptures/integrals/strategies/power-moves" disabled={true} />
+      <Link text="Split" intern="scriptures/integrals/strategies/split" disabled={true} />
+      <Link text="Multiply" intern="scriptures/integrals/strategies/multiply" disabled={true} />
+      <Link text="Divide" intern="scriptures/integrals/strategies/divide" disabled={true} />
+      <Link text="Conjugate" intern="scriptures/integrals/strategies/conjugate" disabled={true} />
+      <Link text="Spotting the Substitution" intern="scriptures/integrals/strategies/spot-sub" disabled={true} />
     </div>
   </section>
 
   <section>
     <h3> Collections </h3>
     <div class="links">
-      <Link text="Standard Integrals" intern="guides/integrals/collections/standard-integrals" />
-      <Link text="Matricks" intern="guides/integrals/collections/matricks" disabled={true} />
-      <Link text="Epic Errors" intern="guides/integrals/collections/epic-errors" />
-      <Link text="Everything & Anything" intern="guides/integrals/collections/everything-anything" />
-      <Link text="Integrating into Integration" intern="guides/integrals/collections/int-int" />
-      <Link text="Integrals You Can Only Experience Once" intern="guides/integrals/collections/once" />
+      <Link text="Standard Integrals" intern="scriptures/integrals/collections/standard-integrals" />
+      <Link text="Matricks" intern="scriptures/integrals/collections/matricks" disabled={true} />
+      <Link text="Epic Errors" intern="scriptures/integrals/collections/epic-errors" />
+      <Link text="Everything & Anything" intern="scriptures/integrals/collections/everything-anything" />
+      <Link text="Integrating into Integration" intern="scriptures/integrals/collections/int-int" />
+      <Link text="Integrals You Can Only Experience Once" intern="scriptures/integrals/collections/once" />
     </div>
   </section>
 
@@ -163,11 +163,11 @@ import { goto } from "$app/navigation";
       <Link text="How Do I Write Integrals?" intern="" disabled={true} />
       <Link text="What Makes a Good Integral?" intern="" disabled={true} />
       <Link text="Integration Is Like Organic Chemistry" intern="" disabled={true} />
-      <Link text="Why -c?" intern="guides/integrals/adventures/-c" />
+      <Link text="Why -c?" intern="scriptures/integrals/adventures/-c" />
       <Link text="Why Absolute Value the Logarithm?" intern="" disabled={true} />
       <Link text="Why Does Trig Substitution Work?" intern="" />
-      <Link text="A Fun Way of Finding the Artanh Integral" intern="guides/integrals/adventures/artanh" />
-      <Link text="A Neat Little Integration Trick" intern="guides/integrals/adventures/neat-trick" />
+      <Link text="A Fun Way of Finding the Artanh Integral" intern="scriptures/integrals/adventures/artanh" />
+      <Link text="A Neat Little Integration Trick" intern="scriptures/integrals/adventures/neat-trick" />
       <Link text="What’s This?" intern="integrity/integrity" disabled={true} />
     </div>
   </section>
@@ -175,21 +175,21 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Graph Drawing </h3>
     <div class="links">
-      <Link text="Why Draw Graphs?" intern="guides/graph-drawing" disabled={true} />
+      <Link text="Why Draw Graphs?" intern="scriptures/graph-drawing" disabled={true} />
     </div>
   </section>
 
   <section>
     <h3> Completing the Square </h3>
     <div class="links">
-      <Link text="Why Complete the Square?" intern="guides/complete-square/why" />
+      <Link text="Why Complete the Square?" intern="scriptures/complete-square/why" />
     </div>
   </section>
 
   <section>
     <h3> Desmos </h3>
     <div class="links">
-      <Link text="Why Desmos?" intern="guides/desmos/why" disabled={true} />
+      <Link text="Why Desmos?" intern="scriptures/desmos/why" disabled={true} />
     </div>
   </section>
 </div>

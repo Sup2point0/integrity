@@ -102,7 +102,7 @@ Reduce to primitives to spot eliminations:
 ```
 
 ### Solve (2)
-Integral of $\ln{v}$ is quotable, see [Antiderivatives/Logarithms](../../../guides/integrals/antiderivatives/ln.md)
+Integral of $\ln{v}$ is quotable, see [Antiderivatives/Logarithms](../../../scriptures/integrals/antiderivatives/ln.md)
 
 ```math
 =2v\left(\ln v-1\right)

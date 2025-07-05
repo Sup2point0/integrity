@@ -4,7 +4,7 @@
 
 import { userprefs } from "#scripts/stores";
 
-import { pick_random_question, pick_random_guide } from "#scripts/utils";
+import { pick_random_question, pick_random_scripture } from "#scripts/utils";
 
 import NavLink from "#parts/core/nav.link.svelte";
 import Link from "#parts/ui/link.svelte";
@@ -39,8 +39,8 @@ import { goto } from "$app/navigation";
         /* `goto()` here uses undesirable Svelte-y surgical updates which don't load the question page correctly */
         window.location.href = `${base}/question/${pick_random_question()}`;
       }} />
-      <Link text="Random Guide" action={() => {
-        goto(`/${pick_random_guide()}`);
+      <Link text="Random Scripture" action={() => {
+        goto(`/${pick_random_scripture()}`);
       }} />
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
@@ -57,12 +57,12 @@ import { goto } from "$app/navigation";
       <Link text="Fun Facts" intern="docs/fun-facts" />
     </NavLink>
 
-    <NavLink text="Guides" intern="guides">
-      <Link text="General" intern="guides/general" hot={true} />
-      <Link text="Integration" intern="guides/integrals" />
+    <NavLink text="Scriptures" intern="scriptures">
+      <Link text="General" intern="scriptures/general" hot={true} />
+      <Link text="Integration" intern="scriptures/integrals" />
       <Link text="Graph Drawing" intern="graph-drawing" disabled={true} />
-      <Link text="Completing the Square" intern="guides/complete-square" />
-      <Link text="Desmos" intern="guides/desmos" disabled={true} />
+      <Link text="Completing the Square" intern="scriptures/complete-square" />
+      <Link text="Desmos" intern="scriptures/desmos" disabled={true} />
     </NavLink>
 
     <NavLink text="Challenges" intern="challenges" collapse={true}>

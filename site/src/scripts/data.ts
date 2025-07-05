@@ -14,7 +14,7 @@ export const questions = process_questions(questions_data);
 import pages_data from "../data/site.json";
 export const pages = pages_data.pages;
 export const index = pages_data.index;
-export const guides = find_guides(pages);
+export const scriptures = find_scriptures(pages);
 
 
 function process_questions(raw: any)
@@ -68,7 +68,7 @@ function construct_collection(raw: any): QuestionCollection
 }
 
 
-function find_guides(raw: any)
+function find_scriptures(raw: any)
 {
   let out: {
     [topic: string]: Page[]
@@ -77,7 +77,7 @@ function find_guides(raw: any)
   for (let p of Object.values(raw)) {
     let page = p as Page;
 
-    if (page.index?.includes("guides")) {
+    if (page.index?.includes("scriptures")) {
       let topic: string = page.index[1];
 
       if (out[topic] == null) {

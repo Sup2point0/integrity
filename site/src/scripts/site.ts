@@ -1,4 +1,4 @@
-import { questions, pages, index, guides } from "./data";
+import { questions, pages, index, scriptures } from "./data";
 import type { Question, QuestionsData, Page } from "#scripts/types";
 
 
@@ -18,10 +18,10 @@ interface SiteData {
   get_featured_questions: () => Question[];
   get_all_tags: () => string[];
   get_all_methods: () => string[];
-  get_list_of_all_guides: () => Page[];
-  get_featured_guides: () => Page[];
+  get_list_of_all_scriptures: () => Page[];
+  get_featured_scriptures: () => Page[];
 
-  guides: {
+  scriptures: {
     [topic: string]: Page[];
   }
 }
@@ -32,7 +32,7 @@ const Site: SiteData = {
   pages,
   index,
   questions,
-  guides,
+  scriptures,
 
   get_questions_of_topic: (topic) => {
     return Object.values(Site.questions[topic]?.questions ?? {});
@@ -64,12 +64,12 @@ const Site: SiteData = {
     ).filter(method => method !== undefined).sort();
   },
 
-  get_list_of_all_guides: () => {
-    return Object.values(Site.guides).flatMap(topic => Object.values(topic));
+  get_list_of_all_scriptures: () => {
+    return Object.values(Site.scriptures).flatMap(topic => Object.values(topic));
   },
 
-  get_featured_guides: () => {
-    return Site.get_list_of_all_guides().filter(guide => guide.flags?.includes("feat"));
+  get_featured_scriptures: () => {
+    return Site.get_list_of_all_scriptures().filter(page => page.flags?.includes("feat"));
   },
 };
 

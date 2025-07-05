@@ -7,7 +7,7 @@
 -->
 
 ### What’s *Integrity* for?
-It’s a home for all the [maths questions](questions/) I’ve created, [guides](guides/) I’ve written, and various other mathematical adventures. You can find out more in [Synopsis](synopsis.md).
+It’s a home for all the [maths questions](questions/) I’ve created, [scriptures](scriptures/) I’ve written, and various other mathematical adventures. You can find out more in [Synopsis](synopsis.md).
 
 ### Who wrote these questions?
 Me!
@@ -62,19 +62,19 @@ I’m regularly adding more questions (because I can’t seem to stop writing mo
 ### Can I use these questions?
 Absolutely, you’re more than welcome to! For more details, see [Licence](https://sup2point0.github.io/integrity/info/licence).
 
-### Why are the guides so empty?
+### Why are the scriptures so empty?
 It’s a work in progress lmao. I really don’t write fast, and I have way too many other projects I’m working on simultaneously. Also, I’d much rather release complete, polished and actually useful articles than vapid filler to make it look like I’ve done a lot.[^lot] Yes, it’s very unlikely I’ll get round to writing all the articles you can see I have planned in [Explore](https://sup2point0.github.io/integrity/explore). Such is life ¯\\_(ツ)_/¯
 
-[^lot]: The exception are the [Collections](../guides/integrals/collections), which are eternally works in progress. Also I’m just lazy.
+[^lot]: The exception are the [Collections](../scriptures/integrals/collections), which are eternally works in progress. Also I’m just lazy.
 
 ### Why would I want to practise integration?
-See [Why Integrate?](guides/integrals/why.md)
+See [Why Integrate?](scriptures/integrals/why.md)
 
 ### Why would I want to practise graph drawing?
-See [Why Draw Graphs?](guides/graph-drawing/why.md)
+See [Why Draw Graphs?](scriptures/graph-drawing/why.md)
 
 ### Why would I want to practise completing the square?
-See [Why Complete the Square?](guides/complete-square/why.md)
+See [Why Complete the Square?](scriptures/complete-square/why.md)
 
 ### How was the site built?
 See [Synopsis](synopsis.md).

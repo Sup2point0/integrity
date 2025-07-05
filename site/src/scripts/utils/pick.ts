@@ -13,10 +13,10 @@ export function pick_random_question(): string
 }
 
 
-/** Randomly pick a guide and return its internal URL. */
-export function pick_random_guide(): string
+/** Randomly pick a scripture page and return its internal URL. */
+export function pick_random_scripture(): string
 {
-  let pages = Site.get_list_of_all_guides();
+  let pages = Site.get_list_of_all_scriptures();
   let page = pages[Math.floor(Math.random() * pages.length)];
   return page.dest;
 }

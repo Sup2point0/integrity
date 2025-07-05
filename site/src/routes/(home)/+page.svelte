@@ -18,20 +18,20 @@ import { onMount } from "svelte";
 
 
 const all_featured_questions = Site.get_featured_questions();
-const all_featured_guides = Site.get_featured_guides();
+const all_featured_scriptures = Site.get_featured_scriptures();
 
 // start with 1 featured on server side
 let featured_questions = [
   all_featured_questions[Math.floor(Math.random() * all_featured_questions.length)]
 ];
-let featured_guides = [
-  all_featured_guides[Math.floor(Math.random() * all_featured_guides.length)]
+let featured_scriptures = [
+  all_featured_scriptures[Math.floor(Math.random() * all_featured_scriptures.length)]
 ];
 
 // fill in more randomly on client side
 onMount(() => {
   featured_questions = sample(all_featured_questions, { size: 3, replace: false });
-  featured_guides = sample(all_featured_guides, { size: 3, replace: false });
+  featured_scriptures = sample(all_featured_scriptures, { size: 3, replace: false });
 });
 
 </script>
@@ -85,12 +85,12 @@ onMount(() => {
 </section>
 
 <section class="featured">
-  <Header title="Guides" />
+  <Header title="Scriptures" />
 
-  <ArticleArray pages={featured_guides} />
+  <ArticleArray pages={featured_scriptures} />
   
   <div class="centre">
-    <Clicky text="View All" intern="guides" />
+    <Clicky text="View All" intern="scriptures" />
   </div>
 </section>
 
@@ -140,7 +140,7 @@ section {
 }
 
 .featured {
-  .guides {
+  .scriptures {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

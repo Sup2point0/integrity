@@ -25,7 +25,7 @@
 
 - Dozens of hand-crafted maths questions
 - Question browser with hints and solutions
-- Hand-crafted guides on mathematical topics
+- Hand-crafted scriptures on mathematical topics
 - Processing engine to extract questions from Markdown files
 
 ### Topics
