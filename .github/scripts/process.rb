@@ -3,9 +3,11 @@ require "front_matter_parser"
 
 def process(shard:, file:)
   parsed = FrontMatterParser::Parser.parse_file(file)
-  data = parsed.front_matter
-  data["shard"] = shard
 
+  data = {
+    "shard": shard,
+    **parsed.front_matter,
+  }
   lines = parsed.content.split "\n"
 
   section = nil
@@ -17,7 +19,17 @@ def process(shard:, file:)
     if line.start_with?("##")
       if load and not load.empty?
         if subsection
-          if data[section].nil? then data[section] = {} end
+          if data[section].nil?
+            data[section] = {}
+          end
+          if data[section][subsection]
+            i = 1
+            while data[section]["#{subsection} (#{i})"]
+              i += 1
+            end
+            subsection = "#{subsection} (#{i})"
+          end
+
           data[section][subsection] = extract_blocks(load)
         elsif section
           data[section] = extract_blocks(load)
@@ -27,21 +39,21 @@ def process(shard:, file:)
     else
       # if in a section, add to load
       if ( (section and not line.strip.empty?) ||
-      # if ( ((section or not section.empty?) and not line.strip.empty?) ||
+      #if ( ((section or not section.empty?) and not line.strip.empty?) ||
         (section and not load.empty?)
       )
         load.push(line.strip.empty? ? "\n" : line)
       end
     end
 
-    # start new section
+    # if heading is h2, start new section
     if line.start_with?("## ")
       _, _, section = line.downcase.partition("## ")
       subsection = nil
       load = []
     end
 
-    # start new subsection
+    # if heading is h3, start new subsection
     if line.start_with?("### ")
       if section
         _, _, subsection = line.downcase.partition("### ")
@@ -53,7 +65,17 @@ def process(shard:, file:)
   # save last line
   if load and not load.empty?
     if subsection
-      if data[section].nil? then data[section] = {} end
+      if data[section].nil?
+        data[section] = {}
+      end
+      if data[section][subsection]
+        i = 1
+        while data[section]["#{subsection} (#{i})"]
+          i += 1
+        end
+        subsection = "#{subsection} (#{i})"
+      end
+
       data[section][subsection] = extract_blocks(load)
     elsif section
       data[section] = extract_blocks(load)
