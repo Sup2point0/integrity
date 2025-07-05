@@ -32,6 +32,7 @@ export class SearchPrefs
     starred: false,
     featured: false,
     "has hints": false,
+    guided: false,
   });
   exclude: States = $state({
     solved: false,
@@ -39,6 +40,7 @@ export class SearchPrefs
     starred: false,
     featured: false,
     "has hints": false,
+    guided: false,
   });
 
   show: States = $state({
@@ -84,10 +86,10 @@ export class SearchPrefs
   /** Load attributes from `localStorage` JSON. */
   set_from_json(data: Partial<SearchPrefs>): SearchPrefs
   {
-    this.include = data.include ?? this.include;
-    this.exclude = data.exclude ?? this.exclude;
+    if (data.include) Object.assign(this.include, data.include);
+    if (data.exclude) Object.assign(this.exclude, data.exclude);
     if (data.show) Object.assign(this.show, data.show);
-    this.buttons = data.buttons ?? this.buttons;
+    if (data.buttons) Object.assign(this.buttons, data.buttons);
     
     this.view = data.view ?? this.view;
     this.effects = data.effects ?? this.effects;
@@ -120,60 +122,66 @@ export class SearchPrefs
     
     if (Object.values(this.tags).includes(true)) {
       out = out.filter(
-        question => Object.keys(this.tags).some(tag =>
-          this.tags[tag] && question.tags.includes(tag)
+        q => Object.keys(this.tags).some(tag =>
+          this.tags[tag] && q.tags.includes(tag)
         )
       );
     }
 
     if (Object.values(this.methods).includes(true)) {
       out = out.filter(
-        question => Object.keys(this.methods).some(method =>
-          this.methods[method] && question.methods.includes(method)
+        q => Object.keys(this.methods).some(method =>
+          this.methods[method] && q.methods.includes(method)
         )
       );
     }
 
     if (Object.values(this.difficulties).includes(true)) {
       out = out.filter(
-        question => Object.keys(this.difficulties).some(diff =>
+        q => Object.keys(this.difficulties).some(diff =>
           this.difficulties[diff] && (
               diff === "unassigned"
-            ? question.difficulty === null || question.difficulty === undefined
-            : question.difficulty?.includes(diff)
+            ? q.difficulty === null || q.difficulty === undefined
+            : q.difficulty?.includes(diff)
           )
         )
       );
     }
 
     if (this.include.solved) {
-      out = out.filter(question => data.solved.has(question.shard));
+      out = out.filter(q => data.solved.has(q.shard));
     } else if (this.exclude.solved) {
-      out = out.filter(question => !data.solved.has(question.shard));
+      out = out.filter(q => !data.solved.has(q.shard));
     }
 
     if (this.include.flagged) {
-      out = out.filter(question => data.flagged.has(question.shard));
+      out = out.filter(q => data.flagged.has(q.shard));
     } else if (this.exclude.solved) {
-      out = out.filter(question => !data.flagged.has(question.shard));
+      out = out.filter(q => !data.flagged.has(q.shard));
     }
 
     if (this.include.starred) {
-      out = out.filter(question => data.starred.has(question.shard));
+      out = out.filter(q => data.starred.has(q.shard));
     } else if (this.exclude.solved) {
-      out = out.filter(question => !data.starred.has(question.shard));
+      out = out.filter(q => !data.starred.has(q.shard));
     }
 
     if (this.include.featured) {
-      out = out.filter(question => question.flags?.includes("feat"));
+      out = out.filter(q => q.flags?.includes("feat"));
     } else if (this.exclude.featured) {
-      out = out.filter(question => !(question.flags?.includes("feat")));
+      out = out.filter(q => !q.flags?.includes("feat"));
     }
   
     if (this.include.hints) {
-      out = out.filter(question => question.hints?.length);
+      out = out.filter(q => q.hints?.length);
     } else if (this.exclude.hints) {
-      out = out.filter(question => !(question.hints?.length));
+      out = out.filter(q => !q.hints?.length);
+    }
+
+    if (this.include.guided) {
+      out = out.filter(q => q.flags.includes("guide"));
+    } else if (this.exclude.guided) {
+      out = out.filter(q => !q.flags.includes("guide"));
     }
   
     // Search
@@ -183,9 +191,9 @@ export class SearchPrefs
       let limit = Math.max(Math.round((1.44 ** -query.length) * questions.length), 2);
   
       let matches = fuzz.extract(query, questions, {
-        scorer: (query, question) => (
-          question._match ? 
-          Math.max(...question._match.map(
+        scorer: (query, q) => (
+          q._match ? 
+          Math.max(...q._match.map(
             each => fuzz.ratio(each, query)
           ))
           : 0
@@ -237,7 +245,7 @@ export class SearchPrefs
   sort_rel(source: Question[], data: UserPrefs, difficulty = false) {
     if (typeof Object.groupBy === "undefined") return this.sort_date(source);
     
-    let categories = Object.groupBy(source, question => this.categorise_rel(question, data, difficulty));
+    let categories = Object.groupBy(source, q => this.categorise_rel(q, data, difficulty));
 
     for (let category of Object.values(categories)) {
       // @ts-ignore
