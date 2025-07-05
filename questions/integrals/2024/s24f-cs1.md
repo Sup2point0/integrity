@@ -11,7 +11,7 @@ methods:
   - spot
   - work
 flags:
-  - guides
+  - guide
 ---
 
 
