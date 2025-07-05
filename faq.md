@@ -7,7 +7,7 @@
 -->
 
 ### What’s *Integrity* for?
-It’s a home for all the [maths questions](questions/) I’ve created, [scriptures](scriptures/) I’ve written, and various other mathematical adventures. You can find out more in [Synopsis](synopsis.md).
+It’s a home for all the [maths questions](https://sup2point0.github.io/integrity/questions) I’ve created, [scriptures](https://sup2point0.github.io/integrity/scriptures) I’ve written, and various other mathematical adventures. You can find out more in [Synopsis](synopsis.md).
 
 ### Who wrote these questions?
 Me!
@@ -15,7 +15,7 @@ Me!
 All of these questions were hand-crafted from scratch. A few will no doubt have been inspired by ideas or tricks from other questions I’ve seen before. And of course, this is maths, so there’s no such thing as an ‘original question’ anyway.
 
 ### What are these questions for?
-Some, such as the [Addvent](questions/addvent/) questions, I created for events and competitions at school.
+Some, such as the [Addvent](https://sup2point0.github.io/integrity/questions/addvent) questions, I created for events and competitions at school.
 
 The rest I just come up with for fun, whether to experiment myself or challenge my friends.
 
@@ -42,12 +42,12 @@ Well, the vast majority of integrals on *Integrity* are made to be nontrivial. I
 
 Some questions are only tough because they have a very specific and obscure trick.
 
-This is less true for the [Completing the Square](questions/complete-square/) questions, but how hard can completing the square get...
+This is less true for the [Completing the Square](https://sup2point0.github.io/integrity/questions/complete-square) questions, but how hard can completing the square get...
 
 ### Why are the questions so easy?
 Okayy, can’t fault you for being too good at maths! The integrals are definitely above A-level level, but I wouldn’t say anything above A-level Further Maths knowledge. (Can confirm: my A-level maths friends could solve most of them.)
 
-And [Addvent](questions/addvent/) was for Addvent, there’s a reason the questions were accessible.
+And [Addvent](https://sup2point0.github.io/integrity/questions/addvent) was for Addvent, there’s a reason the questions were accessible.
 
 ### Why do questions have no difficulty indicator?
 Assigning difficulties to maths questions is painfully nontrivial, so I adopted the approach of “I’m just not even gonna try.”
@@ -65,25 +65,25 @@ Absolutely, you’re more than welcome to! For more details, see [Licence](https
 ### Why are the scriptures so empty?
 It’s a work in progress lmao. I really don’t write fast, and I have way too many other projects I’m working on simultaneously. Also, I’d much rather release complete, polished and actually useful articles than vapid filler to make it look like I’ve done a lot.[^lot] Yes, it’s very unlikely I’ll get round to writing all the articles you can see I have planned in [Explore](https://sup2point0.github.io/integrity/explore). Such is life ¯\\_(ツ)_/¯
 
-[^lot]: The exception are the [Collections](../scriptures/integrals/collections), which are eternally works in progress. Also I’m just lazy.
+[^lot]: The exception are the [Collections](https://sup2point0.github.io/integrity/scriptures/integrals/collections), which are eternally works in progress. Also I’m just lazy.
 
 ### Why would I want to practise integration?
-See [Why Integrate?](scriptures/integrals/why.md)
+See [Why Integrate?](https://sup2point0.github.io/integrity/scriptures/integrals/why)
 
 ### Why would I want to practise graph drawing?
-See [Why Draw Graphs?](scriptures/graph-drawing/why.md)
+See [Why Draw Graphs?](https://sup2point0.github.io/integrity/scriptures/graph-drawing/why)
 
 ### Why would I want to practise completing the square?
-See [Why Complete the Square?](scriptures/complete-square/why.md)
+See [Why Complete the Square?](https://sup2point0.github.io/integrity/scriptures/complete-square/why)
 
 ### How was the site built?
-See [Synopsis](synopsis.md).
+See [Synopsis](https://sup2point0.github.io/integrity/info/synopsis).
 
 ### How are the questions stored?
-See [decoded](edu.md).
+See [decoded](https://sup2point0.github.io/integrity/info/decoded).
 
 ### What are the question codes?
-They’re unique identifiers for each question which encode its topic, purpose, year etc. You can find out more in [Docs](docs/shards.md).
+They’re unique identifiers for each question which encode its topic, purpose, year etc. You can find out more in [Docs / Shards](https://sup2point0.github.io/integrity/docs/shards).
 
 ### Is dark mode available?
 Yep! The site is synced with your local system’s theme, so just enable dark mode on your device.
