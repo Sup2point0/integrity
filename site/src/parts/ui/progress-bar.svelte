@@ -1,4 +1,7 @@
-<!-- @component ProgressBar -->
+<!-- @component ProgressBar
+ 
+A bar for displaying progress.
+-->
 
 <script lang="ts">
   

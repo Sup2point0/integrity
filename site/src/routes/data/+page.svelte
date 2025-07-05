@@ -6,9 +6,9 @@ import en from "javascript-time-ago/locale/en";
 import Site from "#src/scripts/site";
 import { userprefs } from "#scripts/stores";
 
-import ProgressBar from "./progress-bar.svelte";
 import Clicky from "#src/parts/ui/clicky.svelte";
 import Checkbox from "#parts/ui/checkbox.svelte";
+import ProgressBar from "#parts/ui/progress-bar.svelte";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";

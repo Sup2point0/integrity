@@ -33,6 +33,7 @@ export class SpeedrunData
     pause_onblur: false,
     pause_onsubmit: "when-correct",
     reveal_answer_onsubmit: "always",
+    flag_incorrect_questions: false,
   };
 
   run = $state(new RunData());
@@ -245,8 +246,8 @@ class RunData
 
 interface QuestionData {
   shard: Shard;
-  answered: boolean;
   correct: boolean | null;
+  attempts: number | null;
   time: number;
 }
 

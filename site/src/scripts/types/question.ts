@@ -8,7 +8,7 @@ export class Question
 
   shard: Shard;
   topic: string;
-  difficulty?: "based" | "incline" | "manifold" | "chaos";
+  difficulty: "based" | "incline" | "manifold" | "chaos" | null = null;
 
   title?: string;
   desc?: string;
