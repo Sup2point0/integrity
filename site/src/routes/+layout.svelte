@@ -59,7 +59,7 @@ function count_visits()
 
 <div class="layout">
   <main class:wide={
-    page.url.pathname.includes("questions") && $search.view === "grid-wide"
+    page.url.pathname.includes("questions/") && $search.view === "grid-wide"
   }>
     {#if children}
       {@render children()}
