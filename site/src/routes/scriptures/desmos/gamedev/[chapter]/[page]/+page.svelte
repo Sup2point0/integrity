@@ -12,6 +12,8 @@ import Header from "#parts/core/header.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
 
 import { untrack } from "svelte";
+import { slide } from "svelte/transition";
+import { expoOut } from "svelte/easing";
 import { page } from "$app/state";
 
 
@@ -20,7 +22,7 @@ let sections_list = $derived(Object.values(data.sections));
 
 
 let current_section = $state(1);
-let current_subsection = $state(0);
+let current_subsection = $state(2);
 
 let shown_subsections = $derived(
   Object.values(data.sections)[current_section]
@@ -37,6 +39,17 @@ $effect(() => {
     // desmos_blocks = ;
   });
 });
+
+
+function next_subsection()
+{
+  if (sections_list[current_section].subsections.length === current_subsection +1) {
+    current_section++;
+    current_subsection = 0;
+  } else {
+    current_subsection++;
+  }
+}
 
 </script>
 
@@ -84,45 +97,45 @@ $effect(() => {
   <div class="half">
     <article>
       {#each shown_subsections as subsection, idx}
-        {#each subsection as source}
-          {#if source.kind === "text" || source.kind === "latex"}
-            <div class:live={idx === shown_subsections.length -1}>
-              <RenderBlock {source} />
-            </div>
-          {/if}
-        {/each}
+        <div class="padding-container"
+          transition:slide={{ duration: 500, easing: expoOut }}
+        >
+          <!-- yes, it is a tad confusing to use <section> for each subsection, but... -->
+          <section class="sub"
+            class:live={idx === shown_subsections.length -1}
+          >
+            {#each subsection as source (source)}
+              {#if source.kind === "text" || source.kind === "latex"}
+                <RenderBlock {source} />
+              {/if}
+            {/each}
+          </section>
+        </div>
       {/each}
     </article>
+    
+    <nav class="lower">
+      <Clicky text="Previous"
+        action={() => {
+          if (current_subsection === 0) {
+            current_section--;
+            current_subsection = sections_list[current_section].subsections.length -1;
+          } else {
+            current_subsection--;
+          }
+        }}
+        disabled={current_section === 0 && current_subsection === 0}
+      />
+      <Clicky text="Next"
+        action={next_subsection}
+        disabled={current_section === sections_list.length -1 && current_subsection === sections_list.at(-1)!.subsections.length -1}
+      />
+    </nav>
   </div>
   <div class="half">
     <Desmos blocks={desmos_blocks} options={{ expressionsCollapsed: false }} height="70vh" />
   </div>
 </div>
-
-<nav class="lower">
-  <Clicky text="Previous"
-    action={() => {
-      if (current_subsection === 0) {
-        current_section--;
-        current_subsection = sections_list[current_section].subsections.length -1;
-      } else {
-        current_subsection--;
-      }
-    }}
-    disabled={current_section === 0 && current_subsection === 0}
-  />
-  <Clicky text="Next"
-    action={() => {
-      if (sections_list[current_section].subsections.length === current_subsection +1) {
-        current_section++;
-        current_subsection = 0;
-      } else {
-        current_subsection++;
-      }
-    }}
-    disabled={current_section === sections_list.length -1 && current_subsection === sections_list.at(-1)!.subsections.length -1}
-  />
-</nav>
 
 
 <style lang="scss">
@@ -183,10 +196,37 @@ nav.upper {
 .layout {
   display: flex;
   flex-flow: row nowrap;
-  gap: 1rem;
+  gap: 3rem;
 
   .half {
     width: 50%;
+  }
+}
+
+article {
+  display: flex;
+  flex-flow: column nowrap;
+
+  .padding-container {
+    padding-bottom: 1rem;  // instead of `gap:`, to ensure `slide` transition is smooth
+  }
+}
+
+section {
+  padding: 1em 1.5em;
+  border-radius: 0.5em;
+  transition: all 0.12s ease-out;
+
+  &:not(.live) {
+    color: $col-text-deut;
+    background: $col-click;
+    opacity: 50%;
+  }
+  
+  &.live {
+    background: white;
+    box-shadow: 0 0 4px $col-line;
+    opacity: 100%;
   }
 }
 
