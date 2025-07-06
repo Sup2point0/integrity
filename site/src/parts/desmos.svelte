@@ -57,8 +57,6 @@ onMount(() => {
       }
     }
   }).observe(self);
-
-  console.info("sup guys, don’t worry, I have seen this notice – when I originally emailed Desmos asking for a production key, they told me I could just use the prototype key, so it’s all good o7");
 });
 
 function* col_picker()
