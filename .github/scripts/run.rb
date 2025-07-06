@@ -42,6 +42,6 @@ questions = (ROOT/"questions").glob("**/*-*.md")
 log success: "found #{questions.length} question files!"
 execute(questions, ROOT/"site/src/data/questions.json")
 
-scriptures = (ROOT/"scriptures/desmos/gamedev").glob("**/**.md")
+scriptures = (ROOT/"scriptures/desmos/gamedev").glob("**/[!~]**.md")
 log success: "found #{scriptures.length} scripture files!"
 execute(scriptures, ROOT/"site/src/data/scriptures.json")
