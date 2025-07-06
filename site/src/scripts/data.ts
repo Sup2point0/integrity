@@ -4,7 +4,7 @@
 
 import { derivatives } from "#src/data/speedrun-questions";
 
-import { Question } from "#scripts/types";
+import { Question, DynamicScripture } from "#scripts/types";
 import type { QuestionsData, QuestionCollection, Page } from "#scripts/types";
 
 
@@ -15,6 +15,10 @@ import pages_data from "../data/site.json";
 export const pages = pages_data.pages;
 export const index = pages_data.index;
 export const scriptures = find_scriptures(pages);
+
+import dyna_scriptures_data from "../data/scriptures.json";
+export const dyna_scriptures = process_dyna_scriptures(dyna_scriptures_data);
+console.log("graphs =", dyna_scriptures.prerequisites.graphs)
 
 
 function process_questions(raw: any)
@@ -87,5 +91,25 @@ function find_scriptures(raw: any)
     }
   }
   
+  return out;
+}
+
+
+function process_dyna_scriptures(raw: any)
+{
+  let out: {
+    [chapter: string]: {
+      [page: string]: DynamicScripture;
+    }
+  } = {};
+
+  for (let [chapter, pages] of Object.entries(raw)) {
+    out[chapter] = {};
+
+    for (let [page, data] of Object.entries(pages)) {
+      out[chapter][page] = new DynamicScripture(data);
+    }
+  }
+
   return out;
 }

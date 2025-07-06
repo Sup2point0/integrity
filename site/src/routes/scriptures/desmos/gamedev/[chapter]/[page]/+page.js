@@ -1,11 +1,11 @@
-import desmos_gamedev_scriptures from "#src/data/scriptures.json";
+import { dyna_scriptures } from "#scripts/data";
 
 import { error } from "@sveltejs/kit";
 
 
 export function load({ params })
 {
-  let chapter = desmos_gamedev_scriptures[params.chapter];
+  let chapter = dyna_scriptures[params.chapter];
   if (chapter === undefined) {
     error(404);
   }
@@ -15,7 +15,8 @@ export function load({ params })
     error(404);
   }
 
+  // @ts-ignore
   page.wide = true;
 
-  return page;
+  return {...page};
 }

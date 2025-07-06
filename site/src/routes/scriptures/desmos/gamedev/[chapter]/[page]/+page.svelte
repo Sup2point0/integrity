@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import type { Block } from "#scripts/types";
+import type { DynamicScripture } from "#scripts/types";
 
 import Desmos from "#parts/desmos.svelte";
 import DesmosAPI from "#parts/desmos-api.svelte";
@@ -15,32 +15,17 @@ import { untrack } from "svelte";
 import { page } from "$app/state";
 
 
-let data = $derived(page.data);
-let capt = $derived(data.topic.charAt(0).toUpperCase() + data.topic.slice(1));
-
-/* NOTE section and subsections have the same structure - [title, content]. Use index [0] to fetch the title text, [1] to fetch the content. */
-let sections: Section[] = $derived(
-  Object.entries(page.data)
-  .filter(([title, _]) => title.startsWith("//"))
-  .map(([title, subsection]) => [title, Object.entries(subsection)])
-);
-
-type Section = [string, Subsection[]];
-type Subsection = [string, Block[]];
+let data: DynamicScripture = $derived(page.data as DynamicScripture);
+let sections_list = $derived(Object.values(data.sections));
 
 
 let current_section = $state(1);
 let current_subsection = $state(0);
 
-let shown_blocks = $derived(
-  sections[current_section][1]  // array of subsections
-  .slice(0, current_subsection +1)  // shown subsections
-  .map(s => s[1])  // reduce to content
-  .map(s => Array.isArray(s) ? s.slice(1) : [s])
-  /* Some sections only have a single block, but we need to force an array for rendering */
+let shown_subsections = $derived(
+  Object.values(data.sections)[current_section]
+  .subsections.slice(0, current_subsection +1)
 );
-$inspect("sections =", JSON.stringify(sections, undefined, 2))
-$inspect("shown-blocks =", JSON.stringify(shown_blocks, undefined, 2))
 let desmos_blocks = $state([]);
 
 $effect(() => {
@@ -48,7 +33,7 @@ $effect(() => {
   current_subsection;
 
   untrack(() => {
-    if (sections[current_section]) {}
+    // if (sections[current_section]) {}
     // desmos_blocks = ;
   });
 });
@@ -64,16 +49,16 @@ $effect(() => {
   { text: "Scriptures", intern: "scriptures" },
   { text: "Desmos", intern: "scriptures/desmos" },
   { text: "Game Development", intern: "scriptures/desmos/gamedev" },
-  { text: capt, intern: "scriptures/desmos/gamedev" },
+  { text: data.topic, intern: "scriptures/desmos/gamedev" },
   { text: data.title },
 ]} />
 
-<Header title={data.title} {capt} />
+<Header title={data.title} capt={data.topic} />
 
 
 <nav class="upper">
-  {#each sections as [section, subsections], I}
-    {#each subsections as _, i}
+  {#each data.sections as section, I}
+    {#each section.subsections as _, i}
       <div class={["subsection", {
         live: current_section === I && current_subsection === i,
         done: current_section > I || (current_section === I && current_subsection > i),
@@ -87,7 +72,7 @@ $effect(() => {
         
         {#if i === 0}
           <div class="section-label">
-            {section.slice(2).toUpperCase()}
+            {section.title}
           </div>
         {/if}
       </div>
@@ -98,10 +83,10 @@ $effect(() => {
 <div class="layout">
   <div class="half">
     <article>
-      {#each shown_blocks as block, idx}
-        {#each block as source}
+      {#each shown_subsections as subsection, idx}
+        {#each subsection as source}
           {#if source.kind === "text" || source.kind === "latex"}
-            <div class:live={idx === shown_blocks.length -1}>
+            <div class:live={idx === shown_subsections.length -1}>
               <RenderBlock {source} />
             </div>
           {/if}
@@ -119,7 +104,7 @@ $effect(() => {
     action={() => {
       if (current_subsection === 0) {
         current_section--;
-        current_subsection = sections[current_section][1].length -1;
+        current_subsection = sections_list[current_section].subsections.length -1;
       } else {
         current_subsection--;
       }
@@ -128,14 +113,14 @@ $effect(() => {
   />
   <Clicky text="Next"
     action={() => {
-      if (sections[current_section][1].length === current_subsection +1) {
+      if (sections_list[current_section].subsections.length === current_subsection +1) {
         current_section++;
         current_subsection = 0;
       } else {
         current_subsection++;
       }
     }}
-    disabled={current_section === sections.length -1 && current_subsection === sections.at(-1)!.length -1}
+    disabled={current_section === sections_list.length -1 && current_subsection === sections_list.at(-1)!.subsections.length -1}
   />
 </nav>
 
