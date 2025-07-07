@@ -62,9 +62,9 @@ If you’re serious about timing yourself you’ll of course want to avoid all t
 
 | key     | action |
 | :------ | :----- |
-| `Space` | pause speedrun timer |
+| `shift`+`space` | pause speedrun timer |
 | `1`     | select upper-left option |
 | `2`     | select upper-right option |
 | `3`     | select lower-left option |
 | `4`     | select lower-right option |
-| `Enter` | next question / skip question |
+| `shift`+`enter` | next question / skip question |
