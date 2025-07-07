@@ -10,7 +10,7 @@ import type { Block } from "#scripts/types";
 import { onMount } from "svelte";
 
 interface Props {
-  blocks: Block | Block[];
+  blocks: Block | Block[] | null;
   options?: object;
   controls?: boolean;
   height?: string;
@@ -21,11 +21,11 @@ interface Props {
 }
 
 let {
-  blocks,
+  blocks = null,
   options = {},
   controls = true,
-  height = undefined,
-  ratio = 1,
+  height,
+  ratio,
   bounds = controls ? undefined : 2,
 }: Props = $props();
 
@@ -100,10 +100,12 @@ function try_load_desmos()
     desmos.setMathBounds(bounds);
   }
 
-  if (Array.isArray(blocks)) {
-    desmos.setExpressions(blocks.map((block, i) => parse_block(block, i)));
-  } else {
-    desmos.setExpressions([parse_block(blocks, 0)]);
+  if (blocks) {
+    if (Array.isArray(blocks)) {
+      desmos.setExpressions(blocks.map((block, i) => parse_block(block, i)));
+    } else {
+      desmos.setExpressions([parse_block(blocks, 0)]);
+    }
   }
 
   return true;

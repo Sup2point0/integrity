@@ -63,6 +63,7 @@ import { goto } from "$app/navigation";
       <Link text="Graph Drawing" intern="graph-drawing" disabled={true} />
       <Link text="Completing the Square" intern="scriptures/complete-square" />
       <Link text="Desmos" intern="scriptures/desmos" disabled={true} />
+      <Link text="Gamedev in Desmos" intern="scriptures/desmos/gamedev/prerequisites/graphs" hot={true} />
     </NavLink>
 
     <NavLink text="Challenges" intern="challenges" collapse={true}>

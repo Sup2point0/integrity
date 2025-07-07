@@ -1,5 +1,6 @@
 <script lang="ts">
-
+  
+import { dyna_scriptures } from "#scripts/data";
 import type { Block, DynamicScripture } from "#scripts/types";
 
 import Desmos from "#parts/desmos.svelte";
@@ -12,7 +13,7 @@ import Header from "#parts/core/header.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
 
 import { untrack } from "svelte";
-import { slide } from "svelte/transition";
+import { slide, fade } from "svelte/transition";
 import { expoOut } from "svelte/easing";
 import { page } from "$app/state";
 
@@ -24,27 +25,42 @@ let sections_list = $derived(Object.values(data.sections));
 let current_section = $state(0);
 let current_subsection = $state(0);
 
+let next_disabled = $derived(
+  current_section === sections_list.length -1 &&
+  current_subsection === sections_list.at(-1)!.subsections.length -1
+);
+
 let shown_subsections = $derived(
   sections_list[current_section]
   .subsections.slice(0, current_subsection +1)
 );
-let desmos_blocks: Block[] = $state([]);
+let desmos_blocks: Block[] | null = $state(null);
+
+let article_viewport: HTMLElement | null = null;
+
 
 $effect(() => {
-  console.log("changing desmos")
   current_section;
   current_subsection;
 
   untrack(() => {
     let subsection = sections_list[current_section].subsections[current_subsection];
-    console.log("subsection =", subsection)
     if (subsection[0].kind === "desmos") {
-      desmos_blocks = subsection[0].content.split("\n").map(
+      desmos_blocks = subsection[0].content.split("<br><br>").map(
         line => ({
           kind: "desmos",
           content: line,
         })
-      );
+      );   
+    } else {
+      if (current_subsection === 0) {
+        desmos_blocks = null;
+      }
+    }
+
+    if (article_viewport) {
+      // article_viewport.scrollTo(0, article_viewport.scrollHeight);
+      article_viewport.scrollTo({ top: article_viewport.scrollHeight, behavior: "smooth" });
     }
   });
 });
@@ -52,6 +68,8 @@ $effect(() => {
 
 function next_subsection()
 {
+  if (next_disabled) return;
+
   if (sections_list[current_section].subsections.length === current_subsection +1) {
     current_section++;
     current_subsection = 0;
@@ -65,6 +83,12 @@ function next_subsection()
 
 <Meta title={data.title} />
 <DesmosAPI />
+
+<svelte:window onkeydown={e => {
+  if (e.key === "Enter" && e.shiftKey) {
+    next_subsection();
+  }
+}} />
 
 
 <Breadcrumbs levels={[
@@ -103,17 +127,18 @@ function next_subsection()
 </nav>
 
 <div class="layout">
-  <div class="half">
-    <article>
-      {#each shown_subsections as subsection, idx}
+  <div class="half left">
+    <article bind:this={article_viewport}>
+      {#each shown_subsections as subsection, idx (subsection)}
         <div class="padding-container"
-          transition:slide={{ duration: 500, easing: expoOut }}
+          in:fade={{ duration: 250 }}
+          out:slide={{ duration: 500, easing: expoOut }}
         >
           <!-- yes, it is a tad confusing to use <section> for each subsection, but... -->
           <section class="sub"
             class:live={idx === shown_subsections.length -1}
           >
-            {#each subsection as source (source)}
+            {#each subsection as source}
               {#if source.kind === "text" || source.kind === "latex"}
                 <RenderBlock {source} />
               {/if}
@@ -135,13 +160,21 @@ function next_subsection()
         }}
         disabled={current_section === 0 && current_subsection === 0}
       />
-      <Clicky text="Next"
-        action={next_subsection}
-        disabled={current_section === sections_list.length -1 && current_subsection === sections_list.at(-1)!.subsections.length -1}
-      />
+
+      {#if next_disabled}
+        <Clicky text="Next Up: {dyna_scriptures[data.topic][data.next].title}"
+          intern="scriptures/desmos/gamedev/{data.topic}/{data.next}"
+        />
+      {:else}
+        <Clicky text="Next"
+          action={next_subsection}
+          disabled={next_disabled}
+        />
+      {/if}
     </nav>
   </div>
-  <div class="half">
+
+  <div class="half right">
     {#key desmos_blocks}
       <Desmos blocks={desmos_blocks} options={{ expressionsCollapsed: false }} height="70vh" />
     {/key}
@@ -150,6 +183,9 @@ function next_subsection()
 
 
 <style lang="scss">
+
+@use 'sass:color';
+
 
 nav {
   width: 100%;
@@ -187,8 +223,18 @@ nav.upper {
       @include focus-outline;
     }
 
-    &.done .juice { background: $col-prot; }
-    &.live .juice { background: $col-deut; }
+    &.live .juice {
+      background: $col-deut;
+    }
+
+    &.done .juice {
+      background: $col-prot;
+
+      @include interact(
+        $hover: color-mix(in oklch, $col-prot, black 8%),
+        $click: color-mix(in oklch, $col-prot, black 16%),
+      );
+    }
 
     &.edge {
       padding-left: 1rem;
@@ -211,12 +257,17 @@ nav.upper {
 
   .half {
     width: 50%;
+    height: 70vh;
   }
 }
 
 article {
+  max-height: 70vh;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-flow: column nowrap;
+  overflow-y: scroll;
 
   .padding-container {
     padding-bottom: 1rem;  // instead of `gap:`, to ensure `slide` transition is smooth
@@ -230,19 +281,23 @@ section {
 
   &:not(.live) {
     color: $col-text-deut;
-    background: $col-click;
+    background: $col-hover;
     opacity: 50%;
   }
   
   &.live {
-    background: white;
-    box-shadow: 0 0 4px $col-line;
     opacity: 100%;
+    box-shadow: 0 1px 4px $col-line;
   }
 }
 
+:global(section:has(aside)) {
+  color: color.change($col-yes, $lightness: 40%);
+  background: color.change($col-yes, $alpha: 12%);
+}
+
 nav.lower {
-  padding-top: 2rem;
+  padding-top: 1rem;
   justify-content: space-between;
 }
 

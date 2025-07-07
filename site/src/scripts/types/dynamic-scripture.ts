@@ -9,6 +9,7 @@ export class DynamicScripture implements Page
 
   title: string;
   topic: string;
+  next: string | null;
   update: Date | null;
   sections: Section[] = [];
 
