@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import type { DynamicScripture } from "#scripts/types";
+import type { Block, DynamicScripture } from "#scripts/types";
 
 import Desmos from "#parts/desmos.svelte";
 import DesmosAPI from "#parts/desmos-api.svelte";
@@ -21,22 +21,31 @@ let data: DynamicScripture = $derived(page.data as DynamicScripture);
 let sections_list = $derived(Object.values(data.sections));
 
 
-let current_section = $state(1);
-let current_subsection = $state(2);
+let current_section = $state(0);
+let current_subsection = $state(0);
 
 let shown_subsections = $derived(
-  Object.values(data.sections)[current_section]
+  sections_list[current_section]
   .subsections.slice(0, current_subsection +1)
 );
-let desmos_blocks = $state([]);
+let desmos_blocks: Block[] = $state([]);
 
 $effect(() => {
+  console.log("changing desmos")
   current_section;
   current_subsection;
 
   untrack(() => {
-    // if (sections[current_section]) {}
-    // desmos_blocks = ;
+    let subsection = sections_list[current_section].subsections[current_subsection];
+    console.log("subsection =", subsection)
+    if (subsection[0].kind === "desmos") {
+      desmos_blocks = subsection[0].content.split("\n").map(
+        line => ({
+          kind: "desmos",
+          content: line,
+        })
+      );
+    }
   });
 });
 
@@ -133,7 +142,9 @@ function next_subsection()
     </nav>
   </div>
   <div class="half">
-    <Desmos blocks={desmos_blocks} options={{ expressionsCollapsed: false }} height="70vh" />
+    {#key desmos_blocks}
+      <Desmos blocks={desmos_blocks} options={{ expressionsCollapsed: false }} height="70vh" />
+    {/key}
   </div>
 </div>
 
