@@ -95,11 +95,11 @@ function next_subsection()
   { text: "Scriptures", intern: "scriptures" },
   { text: "Desmos", intern: "scriptures/desmos" },
   { text: "Game Development", intern: "scriptures/desmos/gamedev" },
-  { text: data.topic, intern: "scriptures/desmos/gamedev" },
+  { text: data.chapter, intern: `scriptures/desmos/gamedev/${data.chapter.toLowerCase()}` },
   { text: data.title },
 ]} />
 
-<Header title={data.title} capt={data.topic} />
+<Header title={data.title} capt={data.chapter} />
 
 
 <nav class="upper">
@@ -162,8 +162,8 @@ function next_subsection()
       />
 
       {#if next_disabled}
-        <Clicky text="Next Up: {dyna_scriptures[data.topic][data.next].title}"
-          intern="scriptures/desmos/gamedev/{data.topic}/{data.next}"
+        <Clicky text="Next Up: {dyna_scriptures[data.chapter.toLowerCase()][data.next].title}"
+          intern="scriptures/desmos/gamedev/{data.chapter.toLowerCase()}/{data.next}"
         />
       {:else}
         <Clicky text="Next"

@@ -8,7 +8,7 @@ export class DynamicScripture implements Page
   dest: string;
 
   title: string;
-  topic: string;
+  chapter: string;
   next: string | null;
   update: Date | null;
   sections: Section[] = [];
@@ -19,7 +19,7 @@ export class DynamicScripture implements Page
     this.dest = data.dest;
 
     this.title = data.title;
-    this.topic = data.topic && (data.topic.charAt(0).toUpperCase() + data.topic.slice(1));
+    this.chapter = data.topic;
     try {
       this.update = new Date(data.update);
     } catch {

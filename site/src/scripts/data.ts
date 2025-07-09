@@ -18,7 +18,6 @@ export const scriptures = find_scriptures(pages);
 
 import dyna_scriptures_data from "../data/scriptures.json";
 export const dyna_scriptures = process_dyna_scriptures(dyna_scriptures_data);
-console.log("graphs =", dyna_scriptures.prerequisites.graphs)
 
 
 function process_questions(raw: any)
@@ -104,6 +103,8 @@ function process_dyna_scriptures(raw: any)
   } = {};
 
   for (let [chapter, pages] of Object.entries(raw)) {
+    chapter = chapter.toLowerCase();
+
     out[chapter] = {};
 
     for (let [page, data] of Object.entries(pages)) {
