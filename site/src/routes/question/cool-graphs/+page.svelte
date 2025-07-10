@@ -3,6 +3,7 @@
 import { page_data } from "../page-data.svelte.ts";
 import type { Question } from "#scripts/types";
 
+import DesmosAPI from "#parts/desmos-api.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
 
 import Meta from "#parts/page/meta.svelte";
@@ -70,9 +71,8 @@ function pick_col()
 </script>
 
 
-<Meta title="Cool Graphs">
-  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-</Meta>
+<Meta title="Cool Graphs" />
+<DesmosAPI />
 
 
 <Breadcrumbs levels={[

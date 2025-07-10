@@ -3,6 +3,7 @@
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 
+import DesmosAPI from "#parts/desmos-api.svelte";
 import QuestionCard from "#parts/ui/card.question.svelte";
 
 import Meta from "#parts/page/meta.svelte";
@@ -30,9 +31,8 @@ onMount(() => {
 
 <Meta title="Cool Graphs"
   desc="A collection of cool graphs I’ve found!"
->
-  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-</Meta>
+/>
+<DesmosAPI />
 
 
 <Breadcrumbs levels={[
