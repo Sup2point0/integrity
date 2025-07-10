@@ -6,6 +6,7 @@
 | head = Shards
 | capt = Question Identifier Codes
 | index = docs
+| update = 2025 July 10
 -->
 
 Each question I devise is designated its own unique identifier deemed a *shard*. They look like this:
@@ -46,7 +47,7 @@ Each shard is generally assigned a single topic.
 | `n` | number theory / sequences | |
 | `p` | combinatorics / probability | |
 | `q` | completing the square / quadratic | |
-| `r` | geometry | Needs to be ASCII-safe so can’t use `π` :P |
+| `r` | geometry | Needs to be ASCII-safe so can’t use $π$ :P |
 | `s` | integration | `i` was taken by complex numbers, unfortunately. |
 | `t` |  |  |
 | `w` |  |  |
