@@ -1,7 +1,6 @@
 ---
 title: Graphs
 topic: Prerequisites
-dest: scriptures/desmos/gamedev/prerequisites/graphs
 next: functions
 update: 2025 July 2
 ---
