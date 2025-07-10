@@ -60,7 +60,7 @@ function check_valid(data: Array<any>): boolean
       {/if}
 
       {#if desmos}
-        <Desmos blocks={desmos} bounds={question["graph-bounds"]} controls={false} />
+        <Desmos blocks={desmos} bounds={question["graph-bounds"]} controls={false} ratio={1} />
       {/if}
     </div>
   {/if}

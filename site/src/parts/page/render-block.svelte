@@ -49,9 +49,13 @@ let { source }: Props = $props();
             throwOnError: false,
           })
         : (chunk
-          .replaceAll(/(?<=^|[ \n\(])\*{3}(.+?)\*{3}($|[ \n,\.\)])/g, `<strong><em>$1</em></strong>$2`)
-          .replaceAll(/(?<=^|[ \n\(])\*{2}(.+?)\*{2}($|[ \n,\.\)])/g, `<strong>$1</strong>$2`)
-          .replaceAll(/(?<=^|[ \n\(])\*(.+?)\*($|[ \n,\.\)])/g, `<em>$1</em>$2`)
+          // bold, italic
+          .replaceAll(/(?<=^|[ \n\(])\*{3}(.+?)\*{3}(?=$|[ \n,\.\)])/g, "<strong><em>$1</em></strong>")
+          .replaceAll(/(?<=^|[ \n\(])\*{2}(.+?)\*{2}(?=$|[ \n,\.\)])/g, "<strong>$1</strong>")
+          .replaceAll(/(?<=^|[ \n\(])\*(.+?)\*(?=$|[ \n,\.\)])/g, "<em>$1</em>")
+          // code
+          .replaceAll(/(?<=^|[ \n\(])`/g, "<code>")
+          .replaceAll(/`(?=$|[ \n,\.\)])/g, "</code>")
         )
       )
     )}

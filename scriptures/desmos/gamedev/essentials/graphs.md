@@ -1,6 +1,6 @@
 ---
 title: Graphs
-topic: Prerequisites
+topic: Essentials
 next: functions
 update: 2025 July 2
 ---
