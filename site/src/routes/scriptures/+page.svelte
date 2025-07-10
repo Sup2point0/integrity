@@ -47,11 +47,15 @@ import ArticleArray from "#parts/page/article-array.svelte";
   <div class="browse">
     <Card title="Integration"
       intern="scriptures/integrals"
-      latex={"\\int f(x) \\, dx"}
+      latex={String.raw`\int f(x) \, dx`}
     />
     <Card title="Completing the Square"
       intern="scriptures/complete-square"
-      latex={"a(x-p)^2 + q"}
+      latex={String.raw`a(x-p)^2 + q`}
+    />
+    <Card title="Game Development in Desmos"
+      intern="scriptures/desmos/gamedev"
+      latex={String.raw`g_{state} \to 1 - g_{state}`}
     />
   </div>
 </section>

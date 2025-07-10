@@ -45,25 +45,25 @@ import { goto } from "$app/navigation";
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
       <Link text="Trails" intern="trails" hot={true} />
-      <Link text="Your Data" intern="data" hot={true} />
+      <Link text="Your Data" intern="data" />
     </NavLink>
 
-    <NavLink text="Docs" intern="docs" collapse={true} hot={true}>
+    <NavLink text="Docs" intern="docs" collapse={true}>
       <Link text="Questions" intern="docs/questions" />
-      <Link text="Difficulties" intern="docs/difficulties" hot={true} />
+      <Link text="Difficulties" intern="docs/difficulties" />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
       <Link text="Speedrun" intern="docs/speedrun" hot={true} />
       <Link text="Fun Facts" intern="docs/fun-facts" />
     </NavLink>
 
-    <NavLink text="Scriptures" intern="scriptures">
-      <Link text="General" intern="scriptures/general" hot={true} />
+    <NavLink text="Scriptures" intern="scriptures" hot={true}>
+      <Link text="General" intern="scriptures/general" />
       <Link text="Integration" intern="scriptures/integrals" />
       <Link text="Graph Drawing" intern="graph-drawing" disabled={true} />
       <Link text="Completing the Square" intern="scriptures/complete-square" />
       <Link text="Desmos" intern="scriptures/desmos" disabled={true} />
-      <Link text="Gamedev in Desmos" intern="scriptures/desmos/gamedev/prerequisites/graphs" hot={true} />
+      <Link text="Gamedev in Desmos" intern="scriptures/desmos/gamedev" hot={true} />
     </NavLink>
 
     <NavLink text="Challenges" intern="challenges" collapse={true}>
