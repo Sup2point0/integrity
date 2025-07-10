@@ -9,10 +9,15 @@ export class DynamicScripture implements Page
 
   /** The exact displayed title of the page. Use `toLowerCase()` for caseless processing. */
   title: string;
+
+  desc?: Block | Block[];
+
   /** The exact displayed name of the chapter the page falls under. Use `toLowerCase()` for caseless processing. Referred to as `topic` for ease of internal preprocessing. */
   chapter: string;
+
   /** The caseless title of the next page in the walkthrough. */
   next: string | null;
+
   update: Date | null;
   sections: Section[] = [];
 
@@ -22,6 +27,7 @@ export class DynamicScripture implements Page
     this.dest = data.dest;
 
     this.title = data.title;
+    this.desc = data.description;
     this.chapter = data.topic;
     this.next = data.next;
     try {

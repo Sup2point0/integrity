@@ -6,6 +6,11 @@ update: 2025 July 2
 ---
 
 
+## Description
+
+Graphs are the heart and soul of Desmos. In this scripture, we’ll look at some of the different ways Desmos can plot graphs.
+
+
 ## // The Graphing Calculator
 
 ### _

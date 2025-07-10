@@ -22,6 +22,7 @@ let data: DynamicScripture = $derived(page.data as DynamicScripture);
 let sections_list = $derived(Object.values(data.sections));
 
 
+let started = $state(false);
 let current_section = $state(0);
 let current_subsection = $state(0);
 
@@ -99,87 +100,109 @@ function next_subsection()
   { text: data.title },
 ]} />
 
-<Header title={data.title} capt={data.chapter} />
 
+{#if started}
+  <div in:fade={{ duration: 250, delay: 250 }}>
+    <Header title={data.title} capt={data.chapter} />
 
-<nav class="upper">
-  {#each data.sections as section, I}
-    {#each section.subsections as _, i}
-      <div class={["subsection", {
-        live: current_section === I && current_subsection === i,
-        done: current_section > I || (current_section === I && current_subsection > i),
-        edge: i === 0,
-      }]}>
-        <button class="juice" onclick={() => {
-          current_section = I;
-          current_subsection = i;
-        }}>
-        </button>
-        
-        {#if i === 0}
-          <div class="section-label">
-            {section.title}
+    <nav class="upper">
+      {#each data.sections as section, I}
+        {#each section.subsections as _, i}
+          <div class={["subsection", {
+            live: current_section === I && current_subsection === i,
+            done: current_section > I || (current_section === I && current_subsection > i),
+            edge: i === 0,
+          }]}>
+            <button class="juice" onclick={() => {
+              current_section = I;
+              current_subsection = i;
+            }}>
+            </button>
+            
+            {#if i === 0}
+              <div class="section-label">
+                {section.title}
+              </div>
+            {/if}
           </div>
-        {/if}
-      </div>
-    {/each}
-  {/each}
-</nav>
-
-<div class="layout">
-  <div class="half left">
-    <article bind:this={article_viewport}>
-      {#each shown_subsections as subsection, idx (subsection)}
-        <div class="padding-container"
-          in:fade={{ duration: 250 }}
-          out:slide={{ duration: 500, easing: expoOut }}
-        >
-          <!-- yes, it is a tad confusing to use <section> for each subsection, but... -->
-          <section class="sub"
-            class:live={idx === shown_subsections.length -1}
-          >
-            {#each subsection as source}
-              {#if source.kind === "text" || source.kind === "latex"}
-                <RenderBlock {source} />
-              {/if}
-            {/each}
-          </section>
-        </div>
+        {/each}
       {/each}
-    </article>
-    
-    <nav class="lower">
-      <Clicky text="Previous"
-        action={() => {
-          if (current_subsection === 0) {
-            current_section--;
-            current_subsection = sections_list[current_section].subsections.length -1;
-          } else {
-            current_subsection--;
-          }
-        }}
-        disabled={current_section === 0 && current_subsection === 0}
-      />
-
-      {#if next_disabled}
-        <Clicky text="Next Up: {dyna_scriptures[data.chapter.toLowerCase()][data.next].title}"
-          intern="scriptures/desmos/gamedev/{data.chapter.toLowerCase()}/{data.next}"
-        />
-      {:else}
-        <Clicky text="Next"
-          action={next_subsection}
-          disabled={next_disabled}
-        />
-      {/if}
     </nav>
+
+    <div class="layout">
+      <div class="half left">
+        <article bind:this={article_viewport}>
+          {#each shown_subsections as subsection, idx (subsection)}
+            <div class="padding-container"
+              in:fade={{ duration: 250 }}
+              out:slide={{ duration: 500, easing: expoOut }}
+            >
+              <!-- yes, it is a tad confusing to use <section> for each subsection, but... -->
+              <section class="sub"
+                class:live={idx === shown_subsections.length -1}
+              >
+                {#each subsection as source}
+                  {#if source.kind === "text" || source.kind === "latex"}
+                    <RenderBlock {source} />
+                  {/if}
+                {/each}
+              </section>
+            </div>
+          {/each}
+        </article>
+        
+        <nav class="lower">
+          <Clicky text="Previous"
+            action={() => {
+              if (current_subsection === 0) {
+                current_section--;
+                current_subsection = sections_list[current_section].subsections.length -1;
+              } else {
+                current_subsection--;
+              }
+            }}
+            disabled={current_section === 0 && current_subsection === 0}
+          />
+
+          {#if next_disabled}
+            <Clicky text="Next Up: {dyna_scriptures[data.chapter.toLowerCase()][data.next].title}"
+              intern="scriptures/desmos/gamedev/{data.chapter.toLowerCase()}/{data.next}"
+            />
+          {:else}
+            <Clicky text="Next"
+              action={next_subsection}
+              disabled={next_disabled}
+            />
+          {/if}
+        </nav>
+      </div>
+
+      <div class="half right">
+        {#key desmos_blocks}
+          <Desmos blocks={desmos_blocks} options={{ expressionsCollapsed: false }} height="70vh" />
+        {/key}
+      </div>
+    </div>
   </div>
 
-  <div class="half right">
-    {#key desmos_blocks}
-      <Desmos blocks={desmos_blocks} options={{ expressionsCollapsed: false }} height="70vh" />
-    {/key}
-  </div>
-</div>
+{:else}
+  <aside class="overlay" out:fade={{ duration: 250 }}>
+    <header>
+      <h1> {data.title} </h1>
+
+      {#if data.desc}
+        <div class="desc">
+          <RenderBlock source={data.desc} />
+        </div>
+      {/if}
+    </header>
+
+    <nav class="lower">
+      <Clicky text="Start" action={() => { started = true; }} />
+    </nav>
+  </aside>
+
+{/if}
 
 
 <style lang="scss">
@@ -298,7 +321,34 @@ section {
 
 nav.lower {
   padding-top: 1rem;
+  flex-flow: row-reverse nowrap;
   justify-content: space-between;
+}
+
+
+aside.overlay {
+  padding: 3rem 5rem;
+  margin-top: 3rem;
+  height: 70vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border-radius: 1em;
+  box-shadow: 0 1px 4px $col-line;
+
+  h1 {
+    padding-bottom: 1em;
+    @include font-serif;
+    font-size: 400%;
+  }
+
+  .desc {
+    font-size: 125%;
+  }
+
+  nav.lower {
+    font-size: 150%;
+  }
 }
 
 </style>

@@ -76,7 +76,7 @@ onMount(() => {
     {@const unchecked_buttons = Object.values($search.buttons).some(state => !state)}
 
     <table class="search-filters"
-      transition:fade={{ duration: 200 }}
+      transition:fade={{ duration: 250 }}
     ><tbody>
       {#if Object.keys($search.tags).length}
         <tr>
@@ -170,7 +170,7 @@ onMount(() => {
         </td>
       </tr>
 
-      <tr transition:fade={{ duration: 200 }}>
+      <tr transition:fade={{ duration: 250 }}>
         <th> Include Only </th>
 
         <td class="flex">
@@ -208,7 +208,7 @@ onMount(() => {
         </td>
       </tr>
 
-      <tr transition:fade={{ duration: 200 }}>
+      <tr transition:fade={{ duration: 250 }}>
         <th> Exclude </th>
 
         <td class="flex">
@@ -247,7 +247,7 @@ onMount(() => {
       </tr>
       
       {#if $search.expanded}
-        <tr transition:fade={{ duration: 200 }}>
+        <tr transition:fade={{ duration: 250 }}>
           <th> Show </th>
 
           <td class="flex">
@@ -273,7 +273,7 @@ onMount(() => {
           </td>
         </tr>
 
-        <tr transition:fade={{ duration: 200 }}>
+        <tr transition:fade={{ duration: 250 }}>
           <th> Buttons </th>
 
           <td class="flex">
