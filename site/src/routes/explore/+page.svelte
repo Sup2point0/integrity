@@ -37,7 +37,7 @@ import { goto } from "$app/navigation";
         window.location.href = `${base}/question/${pick_random_question()}`;
       }} />
       <Link text="Integrals" intern="questions/integrals" />
-      <Link text="Graph Drawing" intern="questions/graph-drawing" hot={true} />
+      <Link text="Graph Drawing" intern="questions/graph-drawing" />
       <Link text="Completing the Square" intern="questions/complete-square" />
       <Link text="Guess the Graph" intern="questions/guess-graph" disabled={true} />
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
@@ -51,8 +51,8 @@ import { goto } from "$app/navigation";
     <div class="links">
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" hot={true} />
-      <Link text="Trails" intern="trails" hot={true} />
-      <Link text="Your Data" intern="data" hot={true} />
+      <Link text="Trails" intern="trails" />
+      <Link text="Your Data" intern="data" />
     </div>
   </section>
 
@@ -60,7 +60,7 @@ import { goto } from "$app/navigation";
     <h3> Docs </h3>
     <div class="links">
       <Link text="Questions" intern="docs/questions" />
-      <Link text="Difficulties" intern="docs/difficulties" hot={true} />
+      <Link text="Difficulties" intern="docs/difficulties" />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
       <Link text="Speedrun" intern="docs/speedrun" hot={true} />
@@ -98,7 +98,7 @@ import { goto } from "$app/navigation";
         goto(`/${pick_random_scripture()}`);
       }} />
       <Link text="S-I+G-N Errors" intern="scriptures/general/sign" />
-      <Link text="Signing Off Inequalities" intern="scriptures/general/inequalities" hot={true} />
+      <Link text="Signing Off Inequalities" intern="scriptures/general/inequalities" />
     </div>
   </section>
 
@@ -190,6 +190,20 @@ import { goto } from "$app/navigation";
     <h3> Desmos </h3>
     <div class="links">
       <Link text="Why Desmos?" intern="scriptures/desmos/why" disabled={true} />
+    </div>
+  </section>
+
+  <section>
+    <h3> Game Development in Desmos </h3>
+    <div class="links">
+      <Link text="Polymap" intern="scriptures/desmos/gamedev/polymap" hot={true} />
+      <Link text="Essentials" intern="scriptures/desmos/gamedev/essentials" />
+      <Link text="Supplementals" intern="scriptures/desmos/gamedev/supplementals" />
+      <Link text="Core" intern="scriptures/desmos/gamedev/core" />
+      <Link text="Architecture" intern="scriptures/desmos/gamedev/architecture" disabled={true} />
+      <Link text="Advanced" intern="scriptures/desmos/gamedev/advanced" disabled={true} />
+      <Link text="Extras" intern="scriptures/desmos/gamedev/extras" disabled={true} />
+      <Link text="Examples" intern="scriptures/desmos/gamedev/examples" disabled={true} />
     </div>
   </section>
 </div>

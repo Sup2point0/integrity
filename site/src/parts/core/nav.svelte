@@ -44,7 +44,7 @@ import { goto } from "$app/navigation";
       }} />
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" />
-      <Link text="Trails" intern="trails" hot={true} />
+      <Link text="Trails" intern="trails" />
       <Link text="Your Data" intern="data" />
     </NavLink>
 

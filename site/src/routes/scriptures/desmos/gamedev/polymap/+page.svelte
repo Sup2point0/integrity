@@ -76,7 +76,7 @@ import Line from "#parts/page/line.svelte";
     <li class="card">
       <div class="info">
         <h3> Core </h3>
-        <p> Coming soon! </p>
+        <p> The foundations of game development in Desmos. </p>
       </div>
 
       <Line width="80%" margin="1.5rem 0.5rem" />
@@ -92,7 +92,7 @@ import Line from "#parts/page/line.svelte";
     <li class="card">
       <div class="info">
         <h3> Architecture </h3>
-        <p> Coming soon! </p>
+        <p> Constructing the game to be modular, robust and flexible. </p>
       </div>
 
       <Line width="80%" margin="1.5rem 0.5rem" />
