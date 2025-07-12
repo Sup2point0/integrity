@@ -46,17 +46,7 @@ onMount(() => {
   {#each filtered as question (question.shard)}
     <QuestionCard {question}
       style={$search.view === "list" ? "row" : "block"}
-    >
-      {#if $search.show.question}
-        <Desmos
-          blocks={question.desmos}
-          options={{ showXAxis: true, showYAxis: true }}
-          controls={false}
-          bounds={question["graph-bounds"]}
-          ratio={1}
-        />
-      {/if}
-    </QuestionCard>
+    />
   {/each}
 </div>
 

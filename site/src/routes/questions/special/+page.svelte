@@ -49,10 +49,7 @@ onMount(() => {
 
 <div class="content">
   {#each filtered as question (question.shard)}
-    <QuestionCard {question}
-      latex={$search.show.question ? question.question.content : undefined}
-      style="row"
-    />
+    <QuestionCard {question} style="row" />
   {/each}
 </div>
 

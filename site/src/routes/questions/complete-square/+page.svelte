@@ -44,7 +44,6 @@ onMount(() => {
 <div class="content {$search.view}">
   {#each filtered as question}
     <QuestionCard {question}
-      latex={question.question.content}
       style={$search.view === "list" ? "row" : "block"}
     />
   {/each}

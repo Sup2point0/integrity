@@ -13,7 +13,7 @@ import { onMount } from "svelte";
 
 
 interface Props {
-  text?: Latex;
+  text: Latex | undefined;
   inline?: boolean;
   client_render?: boolean;
 }

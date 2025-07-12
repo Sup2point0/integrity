@@ -1,6 +1,10 @@
 import type { Shard, Latex, Block } from "./root";
 
-/** Represents a generic question. */
+/**
+ * Represents a question.
+ * 
+ * The question content is either stored in `.question`, in which case it is rendered as LaTeX, or `.desmos`, in which case it is displayed with a Desmos embed.
+ */
 export class Question
 {
   /** A collection of the question's key information for use in fuzzy searching. */
@@ -20,7 +24,10 @@ export class Question
   flags: string[] = [];
 
   /** The question line. */
-  question: Block | string;
+  question?: Block;
+
+  /** Expressions to show in a Desmos graph. */
+  desmos?: Block;
 
   /** Extra notes for clarification. */
   notes?: Block;
@@ -44,9 +51,6 @@ export class Question
 
   /** Alternate solutions. */
   alternates?: Block[];
-
-  /** Expressions to show in a Desmos graph. */
-  desmos?: Block | Block[];
 
   /** Bounds of the viewport for a graph question. */
   "graph-bounds"?: number;

@@ -64,7 +64,27 @@ function check_valid(data: Array<any>): boolean
         <Desmos blocks={desmos} bounds={question["graph-bounds"]} controls={false} ratio={1} />
       {/if}
 
-      {@render children?.()}
+
+      {#if question.topic === "guess-graph"}
+        <Desmos
+          blocks={question.desmos}
+          options={{ showXAxis: true, showYAxis: true }}
+          controls={false}
+          bounds={question["graph-bounds"]}
+          ratio={1}
+        />
+      {:else if question.topic === "cool-graphs"}
+        <Desmos
+          blocks={question.desmos}
+          controls={false}
+          bounds={question["graph-bounds"]}
+          ratio={1}
+        />
+      {:else if question.topic === "addvent"}
+        <!-- TODO decide what to show -->
+      {:else}
+        <Katex text={question.question?.content} inline={false} client_render={true} />
+      {/if}
     </div>
   {/if}
 

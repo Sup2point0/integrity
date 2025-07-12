@@ -3,6 +3,7 @@
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 
+import Desmos from "#parts/desmos.svelte";
 import QuestionCard from "#parts/ui/card.question.svelte";
 
 import Meta from "#parts/page/meta.svelte";
@@ -44,8 +45,6 @@ onMount(() => {
 <div class="content {$search.view}">
   {#each filtered as question}
     <QuestionCard {question}
-      latex={question.question?.kind === "latex" ? question.question.content : undefined}
-      desmos={question.desmos}
       style={$search.view === "list" ? "row" : "block"}
     />
   {/each}

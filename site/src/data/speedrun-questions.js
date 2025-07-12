@@ -326,6 +326,7 @@ export const derivatives = [
     ]
   },
 ].map(q => {
+  q.question = { kind: "latex", content: q.question };
   q.options = q.options.map((latex, index) => ({ index, latex }));
   return q;
 });
