@@ -43,6 +43,7 @@ Each shard is generally assigned a single topic.
 | `a` | arithmetic / algebra | |
 | `e` | exponentials / logarithms | |
 | `f` | graph drawing | |
+| `g` | graph guessing | |
 | `i` | complex numbers | |
 | `n` | number theory / sequences | |
 | `p` | combinatorics / probability | |
