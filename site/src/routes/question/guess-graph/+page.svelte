@@ -4,11 +4,12 @@ import { page_data } from "../page-data.svelte.ts";
 import type { Question } from "#scripts/types";
 
 import DesmosAPI from "#parts/desmos-api.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
+import Section from "#parts/page/section.svelte";
+import RenderBlock from "#parts/page/render-block.svelte";
 
 import { onMount } from "svelte";
 
@@ -39,14 +40,14 @@ function try_load_desmos(i: number = 0)
     if (Array.isArray(question.desmos)) {
       desmos.setExpressions(
         question.desmos.map((block, i) => ({
-          id: `cool-graph-${i}`,
+          id: `guess-graph-${i}`,
           latex: block.content,
           color: pick_col()
         }))
       );
     } else {
       desmos.setExpressions([
-        { id: "cool-graph", latex: question.desmos!.content, color: pick_col() }
+        { id: "guess-graph", latex: question.question!.content, color: pick_col() }
       ]);
     }
   }
@@ -72,13 +73,13 @@ function pick_col()
 </script>
 
 
-<Meta title="Cool Graphs" />
+<Meta title="Guess the Graph" />
 <DesmosAPI />
 
 
 <Breadcrumbs levels={[
   { text: "Questions", intern: "questions" },
-  { text: "Cool Graphs", intern: "questions/cool-graphs" },
+  { text: "Guess the Graph", intern: "questions/guess-graph" },
   { text: question?.shard ?? "?" },
 ]} copy={true} shard={question?.shard} />
 
@@ -95,9 +96,15 @@ function pick_col()
   {/if}
 </div>
 
-<Clicky text="Reload Graph" action={reload_desmos} />
-<!-- TEMP -->
-<p class="caption"> Currently trying to fix an issue with the page loading the wrong graph, bear with me! </p>
+{#if question?.hints}
+  <Section title="Hints">
+    {#each Object.entries(question.hints) as [hint, source]}
+      <Section ctx="inner" title={hint}>
+        <RenderBlock {source} />
+      </Section>
+    {/each}
+  </Section>
+{/if}
 
 
 <style lang="scss">

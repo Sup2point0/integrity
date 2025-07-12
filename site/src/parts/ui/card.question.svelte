@@ -21,9 +21,10 @@ interface Props {
   latex?: Latex;
   desmos?: Block | Block[];
   style?: "block" | "row";
+  children?: any;
 }
 
-let { question, latex, desmos, style = "block" }: Props = $props();
+let { question, latex, desmos, style = "block", children }: Props = $props();
 
 
 function check_valid(data: Array<any>): boolean
@@ -62,6 +63,8 @@ function check_valid(data: Array<any>): boolean
       {#if desmos}
         <Desmos blocks={desmos} bounds={question["graph-bounds"]} controls={false} ratio={1} />
       {/if}
+
+      {@render children?.()}
     </div>
   {/if}
 

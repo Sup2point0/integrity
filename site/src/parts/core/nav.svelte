@@ -26,9 +26,9 @@ import { goto } from "$app/navigation";
     <NavLink text="Questions" intern="questions">
       <Link text="Integrals" intern="questions/integrals" />
       <Link text="Graph Drawing" intern="questions/graph-drawing" />
-      <Link text="Completing the Square" intern="questions/complete-square" />
-      <Link text="Guess the Graph" intern="questions/guess-graph" disabled={true} />
+      <Link text="Guess the Graph" intern="questions/guess-graph" />
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
+      <Link text="Completing the Square" intern="questions/complete-square" />
       <Link text="Addvent" intern="questions/addvent" />
       <Link text="Special" intern="questions/special" />
       <Link text="All" intern="questions/all" />
