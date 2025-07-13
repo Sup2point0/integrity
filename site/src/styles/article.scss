@@ -80,6 +80,15 @@ article {
     color: $col-text-deut;
     border-left: 2px solid $col-deut-fallback;
     border-left: 2px solid $col-deut;
+
+    &.gfm-alert.note {
+      border-color: $col-based;
+    }
+
+    .gfm-alert-indicator {
+      color: white;
+      background: $col-based;
+    }
   }
 
   ul, ol {

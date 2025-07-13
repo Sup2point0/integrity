@@ -2,13 +2,15 @@
 
 <script lang="ts">
 
+import type { Page } from "#scripts/types";
+
 import ArticleBanners from "#parts/page/article-banners.svelte";
 
 
 interface Props {
   title?: string;
   capt?: string;
-  page?: object;
+  page?: Page;
 }
 
 let { title, capt, page }: Props = $props();
@@ -52,6 +54,10 @@ header {
 h1 {
   @include font-serif;
   font-size: 250%;
+
+  :global(em) {
+    font-style: italic;
+  }
 }
 
 p {

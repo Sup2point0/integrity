@@ -9,12 +9,29 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex-svelte";
 
 import scss_config from "./scss-config.js";
-import { correct_hast_tree, render_katex_blocks } from "./latex-config.js";
+import { correct_hast_tree, render_katex_blocks } from "./preprocess-latex.js";
+import { remark_alerts } from "./preprocess-alerts.js";
 
 import dyna_scriptures from "./src/data/scriptures.json" with { type: "json" };
 
 
-const config = {
+export const mdsvex_config = {
+  extensions: [".svx", ".md"],
+  remarkPlugins: [
+    remarkFootnotes,
+    remarkIndexFootnotes,
+    remark_alerts,
+    remarkMath,
+    render_katex_blocks
+  ],
+  rehypePlugins: [
+    rehypeSlug,
+    correct_hast_tree,
+    rehypeKatex,
+  ],
+};
+
+const svelte_config = {
   extensions: [".svelte", ".svx", ".md"],
   
   kit: {
@@ -53,20 +70,7 @@ const config = {
   },
 
   preprocess: [
-    mdsvex({
-      extensions: [".svx", ".md"],
-      remarkPlugins: [
-        remarkFootnotes,
-        remarkIndexFootnotes,
-        remarkMath,
-        render_katex_blocks
-      ],
-      rehypePlugins: [
-        rehypeSlug,
-        correct_hast_tree,
-        rehypeKatex,
-      ],
-    }),
+    mdsvex(mdsvex_config),
     sveltePreprocess({
       extensions: [".svelte"],
       scss: scss_config,
@@ -75,13 +79,12 @@ const config = {
   
   onwarn: (warning, handler) => {
     if (
-      warning.code === "css_unused_selector" ||
-      warning.code === "component_name_lowercase"
+      warning.code !== "css_unused_selector" &&
+      warning.code !== "component_name_lowercase"
     ) {
-      return;
+      handler(warning);
     }
-    handler(warning);
   },
 };
 
-export default config;
+export default svelte_config;
