@@ -26,7 +26,7 @@ import { goto } from "$app/navigation";
     <NavLink text="Questions" intern="questions">
       <Link text="Integrals" intern="questions/integrals" />
       <Link text="Graph Drawing" intern="questions/graph-drawing" />
-      <Link text="Guess the Graph" intern="questions/guess-graph" />
+      <Link text="Guess the Graph" intern="questions/guess-graph" hot={true} />
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
       <Link text="Completing the Square" intern="questions/complete-square" />
       <Link text="Addvent" intern="questions/addvent" />
@@ -34,7 +34,7 @@ import { goto } from "$app/navigation";
       <Link text="All" intern="questions/all" />
     </NavLink>
 
-    <NavLink text="Explore" intern="explore" hot={true}>
+    <NavLink text="Explore" intern="explore">
       <Link text="Random Question" action={() => {
         /* `goto()` here uses undesirable Svelte-y surgical updates which don't load the question page correctly */
         window.location.href = `${base}/question/${pick_random_question()}`;
@@ -43,7 +43,7 @@ import { goto } from "$app/navigation";
         goto(`/${pick_random_scripture()}`);
       }} />
       <Link text="Workspace" intern="workspace" />
-      <Link text="Speedrun" intern="speedrun" />
+      <Link text="Speedrun" intern="speedrun" dev={true} />
       <Link text="Trails" intern="trails" />
       <Link text="Your Data" intern="data" />
     </NavLink>
@@ -53,7 +53,7 @@ import { goto } from "$app/navigation";
       <Link text="Difficulties" intern="docs/difficulties" />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
-      <Link text="Speedrun" intern="docs/speedrun" hot={true} />
+      <Link text="Speedrun" intern="docs/speedrun" />
       <Link text="Fun Facts" intern="docs/fun-facts" />
     </NavLink>
 
@@ -63,7 +63,7 @@ import { goto } from "$app/navigation";
       <Link text="Graph Drawing" intern="graph-drawing" disabled={true} />
       <Link text="Completing the Square" intern="scriptures/complete-square" />
       <Link text="Desmos" intern="scriptures/desmos" disabled={true} />
-      <Link text="Gamedev in Desmos" intern="scriptures/desmos/gamedev" hot={true} />
+      <Link text="Gamedev in Desmos" intern="scriptures/desmos/gamedev" dev={true} />
     </NavLink>
 
     <NavLink text="Challenges" intern="challenges" collapse={true}>

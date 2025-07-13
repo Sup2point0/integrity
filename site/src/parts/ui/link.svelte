@@ -14,9 +14,18 @@ interface Props {
   action?: () => void;
   disabled?: boolean;
   hot?: boolean;
+  dev?: boolean;
 }
 
-let { text, link, intern, action, disabled = false, hot = false }: Props = $props();
+let {
+  text,
+  link,
+  intern,
+  action,
+  disabled = false,
+  hot = false,
+  dev = false,
+}: Props = $props();
 
 </script>
 
@@ -25,7 +34,11 @@ let { text, link, intern, action, disabled = false, hot = false }: Props = $prop
   {text}
 
   {#if hot}
-    <span class="hot">NEW</span>
+    <span class="status hot">NEW</span>
+  {/if}
+
+  {#if dev}
+    <span class="status dev">DEV</span>
   {/if}
 {/snippet}
 
@@ -80,14 +93,16 @@ button.link {
   width: 100%;
 }
 
-.hot {
+.status {
   width: max-content;
   padding: 0.2em 0.4em;
   margin-left: 0.5em;
   color: white;
   font-size: 75%;
-  background: $col-deut;
   border-radius: 0.5em;
+
+  &.hot { background: $col-deut; }
+  &.dev { background: $col-manifold; }
 }
 
 </style>
