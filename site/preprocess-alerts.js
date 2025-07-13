@@ -6,18 +6,29 @@ import { visit } from "unist-util-visit";
 export function remark_alerts() {
   return (tree) => {
     visit(tree, "blockquote", (node) => {
-      let line = node.children?.[0]?.children?.[0];
+      let block = node.children?.[0];
+      let line = block?.children?.[0];
       let content = line?.children?.[0];
       let kind = content?.value?.match(/!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)/i)?.[1];
-      console.log(">> KIND =", kind)
-      // console.log(">> CONTENT =", content)
-      // console.log(">> LINE =", line)
-      // console.log(">> TYPE =", line.type)
-      // console.log(">> CHILDREN =", line.children)
+      console.log(">> NODE =", node)
+      console.log(">> BLOCK =", block)
+      console.log(">> LINE =", line)
+      console.log(">> CONTENT =", content)
+
       if (line?.type === "linkReference" && kind) {
-        line.type = "text";
-        line.value = "";
-        content.value = "";
+        block.children.shift();  // remove old 
+        node.children.unshift({
+          type: "paragraph",
+          children: [{
+            type: "text",
+            value: kind.toUpperCase()
+          }],
+          data: {
+            hProperties: {
+              class: "gfm-alert-indicator"
+            }
+          },
+        });
         
         node.data = {
           hName: "blockquote",

@@ -76,18 +76,22 @@ article {
   }
 
   blockquote {
+    --col: #{$col-deut};
     padding-left: 1em;
     color: $col-text-deut;
     border-left: 2px solid $col-deut-fallback;
-    border-left: 2px solid $col-deut;
-
-    &.gfm-alert.note {
-      border-color: $col-based;
-    }
+    border-left: 2px solid var(--col);
 
     .gfm-alert-indicator {
-      color: white;
-      background: $col-based;
+      margin-bottom: -0.5em;
+      color: $col-deut-fallback;
+      color: var(--col);
+      font-size: 90%;
+      font-weight: 450;
+    }
+
+    &.gfm-alert.note {
+      --col: #{$col-based};
     }
   }
 
