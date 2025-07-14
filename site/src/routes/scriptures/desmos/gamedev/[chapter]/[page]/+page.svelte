@@ -198,6 +198,7 @@ function next_subsection()
     </header>
 
     <nav class="lower">
+      <div></div>
       <Clicky text="Start" action={() => { started = true; }} />
     </nav>
   </aside>
@@ -321,7 +322,7 @@ section {
 
 nav.lower {
   padding-top: 1rem;
-  flex-flow: row-reverse nowrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
 }
 
