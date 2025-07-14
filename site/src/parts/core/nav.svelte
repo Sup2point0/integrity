@@ -176,4 +176,11 @@ nav.nav {
   }
 }
 
+
+@media (prefers-reduced-transparency: reduce) {
+  nav {
+    background: light-dark(white, black);
+  }
+}
+
 </style>

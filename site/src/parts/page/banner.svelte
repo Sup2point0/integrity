@@ -50,4 +50,11 @@ p {
   font-size: 100%;
 }
 
+
+@media (prefers-contrast: more) {
+  p {
+    color: $col-text-deut-contrast;
+  }
+}
+
 </style>
