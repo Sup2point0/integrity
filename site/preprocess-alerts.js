@@ -10,10 +10,6 @@ export function remark_alerts() {
       let line = block?.children?.[0];
       let content = line?.children?.[0];
       let kind = content?.value?.match(/!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)/i)?.[1];
-      console.log(">> NODE =", node)
-      console.log(">> BLOCK =", block)
-      console.log(">> LINE =", line)
-      console.log(">> CONTENT =", content)
 
       if (line?.type === "linkReference" && kind) {
         block.children.shift();  // remove old 
