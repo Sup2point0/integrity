@@ -107,6 +107,22 @@ import Line from "#parts/page/line.svelte";
 
     <li class="card">
       <div class="info">
+        <h3> Rendering </h3>
+        <p> Coming soon! </p>
+      </div>
+
+      <Line width="80%" margin="1.5rem 0.5rem" />
+
+      {#each Object.values(dyna_scriptures.rendering ?? []) as page}
+        <Link
+          text={page.title}
+          intern="scriptures/desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+        />
+      {/each}
+    </li>
+
+    <li class="card">
+      <div class="info">
         <h3> Advanced </h3>
         <p> Coming soon! </p>
       </div>
