@@ -1,4 +1,4 @@
-***July 13*** [Guess the Graph](https://sup2point0.github.io/integrity/questions/guess-the-graph) have been added!
+***July 13*** [Guess the Graph questions](https://sup2point0.github.io/integrity/questions/guess-the-graph) have been added!
 
 ***July 9*** All-new dynamic scriptures with step-by-step walkthroughs have been added for the *Game Development in Desmos* series! Go [check it out](https://sup2point0.github.io/integrity/scriptures/desmos/gamedev/prerequisites/graphs).
 
