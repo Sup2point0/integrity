@@ -2,6 +2,10 @@
 
 <script lang="ts">
 
+import { duality } from "#scripts/stores";
+
+import { Duality } from "#scripts/types";
+
 import Link from "#parts/ui/link.svelte";
 
 import { base } from "$app/paths";
@@ -15,7 +19,7 @@ import { base } from "$app/paths";
     <div class="left">
       <img id="integrity-title"
         alt="integrity’"
-        src="{base}/integrity-title.png" />
+        src="{base}/integrity-title{$duality === Duality.DARK ? '-dark' : ''}.png" />
 
         <div class="quicklinks">
           <Link text="About" intern="info/synopsis" />

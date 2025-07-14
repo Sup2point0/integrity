@@ -50,7 +50,7 @@ import { goto } from "$app/navigation";
     <h3> Tools </h3>
     <div class="links">
       <Link text="Workspace" intern="workspace" />
-      <Link text="Speedrun" intern="speedrun" hot={true} />
+      <Link text="Speedrun" intern="speedrun" dev={true} />
       <Link text="Trails" intern="trails" />
       <Link text="Your Data" intern="data" />
     </div>
@@ -63,7 +63,7 @@ import { goto } from "$app/navigation";
       <Link text="Difficulties" intern="docs/difficulties" />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />
-      <Link text="Speedrun" intern="docs/speedrun" hot={true} />
+      <Link text="Speedrun" intern="docs/speedrun" />
       <Link text="Fun Facts" intern="docs/fun-facts" />
     </div>
   </section>
@@ -201,6 +201,7 @@ import { goto } from "$app/navigation";
       <Link text="Supplementals" intern="scriptures/desmos/gamedev/supplementals" />
       <Link text="Core" intern="scriptures/desmos/gamedev/core" />
       <Link text="Architecture" intern="scriptures/desmos/gamedev/architecture" disabled={true} />
+      <Link text="Rendering" intern="scriptures/desmos/gamedev/rendering" disabled={true} />
       <Link text="Advanced" intern="scriptures/desmos/gamedev/advanced" disabled={true} />
       <Link text="Extras" intern="scriptures/desmos/gamedev/extras" disabled={true} />
       <Link text="Examples" intern="scriptures/desmos/gamedev/examples" disabled={true} />

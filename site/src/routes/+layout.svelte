@@ -4,7 +4,7 @@ import "#styles/essence.scss";
 import "#styles/article.scss";
 import "#styles/a11y.scss";
 
-import { search, userprefs } from "#scripts/stores";
+import { duality, search, userprefs } from "#scripts/stores";
 
 import Nav from "#parts/core/nav.svelte";
 import Footer from "#parts/core/footer.svelte";
@@ -13,6 +13,7 @@ import { page } from "$app/state";
 import { fade } from "svelte/transition";
 import { quadIn } from "svelte/easing";
 import { onMount } from "svelte";
+    import { Duality } from "#src/scripts/stores/duality";
 
 
 let { children } = $props();
@@ -24,6 +25,7 @@ let active = $state(true);
 onMount(() => {
   handle_overlay();
   count_visits();
+  sync_duality();
 });
 
 /** Handle removing the overlay. */
@@ -48,6 +50,20 @@ function count_visits()
       method: "POST"
     });
   }
+}
+
+function sync_duality()
+{
+  (window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", ({ matches }) => {      
+      if (matches) {
+        $duality = Duality.DARK;
+      } else {
+        $duality = Duality.LIGHT;
+      }
+    })
+  );
 }
 
 </script>

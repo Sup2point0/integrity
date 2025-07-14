@@ -2,9 +2,10 @@
 
 <script lang="ts">
 
-import { userprefs } from "#scripts/stores";
+import { duality, userprefs } from "#scripts/stores";
 
 import { pick_random_question, pick_random_scripture } from "#scripts/utils";
+import { Duality } from "#scripts/types";
 
 import NavLink from "#parts/core/nav.link.svelte";
 import Link from "#parts/ui/link.svelte";
@@ -13,13 +14,17 @@ import GithubIcon from "#parts/svg/github-icon.svelte";
 import { base } from "$app/paths";
 import { goto } from "$app/navigation";
 
+$inspect(`integrity-title${$duality === Duality.DARK ? '-dark' : ''}.png`)
+
 </script>
 
 
 <nav class:nav={$userprefs.nav === false}>
   <section class="left">
-    <NavLink pict="integrity-title.png"
-      link="https://sup2point0.github.io/integrity" />
+    <NavLink
+      pict="integrity-title{$duality === Duality.DARK ? '-dark' : ''}.png"
+      link="https://sup2point0.github.io/integrity"
+    />
   </section>
 
   <section class="centre">

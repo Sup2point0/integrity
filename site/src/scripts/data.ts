@@ -8,15 +8,15 @@ import { Question, DynamicScripture } from "#scripts/types";
 import type { QuestionsData, QuestionCollection, Page } from "#scripts/types";
 
 
-import questions_data from "../data/questions.json";
+import questions_data from "../data/questions.json" with { type: "json" };;
 export const questions = process_questions(questions_data);
 
-import pages_data from "../data/site.json";
+import pages_data from "../data/site.json" with { type: "json" };;
 export const pages = pages_data.pages;
 export const index = pages_data.index;
 export const scriptures = find_scriptures(pages);
 
-import dyna_scriptures_data from "../data/scriptures.json";
+import dyna_scriptures_data from "../data/scriptures.json" with { type: "json" };;
 export const dyna_scriptures = process_dyna_scriptures(dyna_scriptures_data);
 
 
