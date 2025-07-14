@@ -81,4 +81,11 @@ img {
   max-width: 100%;
 }
 
+
+@media (prefers-contrast: more) {
+  .clicky {
+    border-color: light-dark(black, white);
+  }
+}
+
 </style>

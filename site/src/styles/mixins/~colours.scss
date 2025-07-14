@@ -51,6 +51,14 @@ $col-card-click: light-dark(
   oklch(28% 0 0));
 
 
+// a11y
+$col-prot-contrast: light-dark(
+  oklch(0.4809 0.106 237.7),
+  oklch(0.8071 0.106 237.7));
+$col-text-deut-contrast: light-dark(
+  oklch(0.6291 0.015 237.7),
+  oklch(0.6899 0.015 237.7));
+
 // fallbacks
 $col-prot-fallback: #4d9dcd;
 $col-deut-fallback: #f07d1c;

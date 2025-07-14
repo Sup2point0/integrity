@@ -372,7 +372,7 @@ search {
   align-items: center;
 }
 
-div.search-bar {
+.search-bar {
   width: 100%;
   display: flex;
   flex-flow: row;
@@ -455,6 +455,13 @@ td {
   justify-content: center;
   column-gap: 0.5em;
   font-size: 95%;
+}
+
+
+@media (prefers-contrast: more) {
+  input[type='search'] {
+    border-color: light-dark(black, white);
+  }
 }
 
 </style>

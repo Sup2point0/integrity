@@ -172,3 +172,12 @@ article {
     }
   }
 }
+
+
+@media (prefers-contrast: more) {
+  article {
+    .footnotes {
+      color: $col-text-deut-contrast;
+    }
+  }
+}

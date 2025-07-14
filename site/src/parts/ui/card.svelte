@@ -127,4 +127,11 @@ a.card {
   }
 }
 
+
+@media (prefers-contrast: more) {
+  a.card {
+    border-color: light-dark(black, white);
+  }
+}
+
 </style>

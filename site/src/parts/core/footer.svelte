@@ -19,16 +19,17 @@ import { base } from "$app/paths";
     <div class="left">
       <img id="integrity-title"
         alt="integrity’"
-        src="{base}/integrity-title{$duality === Duality.DARK ? '-dark' : ''}.png" />
+        src="{base}/integrity-title{$duality === Duality.DARK ? '-dark' : ''}.png"
+      />
 
-        <div class="quicklinks">
-          <Link text="About" intern="info/synopsis" />
-          <Link text="Explore" intern="explore" />
-          <Link text="Docs" intern="docs" />
-          <Link text="Scriptures" intern="scriptures" />
-          <Link text="Privacy" intern="info/privacy" />
-          <Link text="Licence" intern="info/licence" />
-        </div>
+      <div class="quicklinks">
+        <Link text="About" intern="info/synopsis" />
+        <Link text="Explore" intern="explore" />
+        <Link text="Docs" intern="docs" />
+        <Link text="Scriptures" intern="scriptures" />
+        <Link text="Privacy" intern="info/privacy" />
+        <Link text="Licence" intern="info/licence" />
+      </div>
     </div>
   
     <div class="right">

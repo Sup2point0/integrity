@@ -368,4 +368,11 @@ p.shard {
   border-radius: 0.5em;
 }
 
+
+@media (prefers-contrast: more) {
+  a.question-card {
+    border-color: light-dark(black, white);
+  }
+}
+
 </style>

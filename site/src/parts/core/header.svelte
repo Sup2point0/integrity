@@ -75,4 +75,11 @@ p {
   }
 }
 
+
+@media (prefers-contrast: more) {
+  p {
+    color: $col-text-deut-contrast;
+  }
+}
+
 </style>

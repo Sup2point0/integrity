@@ -23,7 +23,7 @@ const data: Page = page ?? Site.pages[path!];
 </script>
 
 
-<a class="card" class:invalid={!data}
+<a class="article-card" class:invalid={!data}
   href="{base}/{data?.dest}"
 >
   <div class="info">
@@ -38,7 +38,7 @@ const data: Page = page ?? Site.pages[path!];
 
 <style lang="scss">
 
-a.card {
+a.article-card {
   width: 100%;
   min-width: 16em;
   min-height: 8em;
@@ -82,6 +82,13 @@ a.card {
     font-size: 150%;
     font-weight: 350;
     border-bottom: 1px solid $col-line;
+  }
+}
+
+
+@media (prefers-contrast: more) {
+  a.article-card {
+    border-color: light-dark(black, white);
   }
 }
 

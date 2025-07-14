@@ -14,8 +14,6 @@ import GithubIcon from "#parts/svg/github-icon.svelte";
 import { base } from "$app/paths";
 import { goto } from "$app/navigation";
 
-$inspect(`integrity-title${$duality === Duality.DARK ? '-dark' : ''}.png`)
-
 </script>
 
 

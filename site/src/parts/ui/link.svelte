@@ -105,4 +105,11 @@ button.link {
   &.dev { background: $col-manifold; }
 }
 
+
+@media (prefers-contrast: more) {
+  .link {
+    color: $col-prot-contrast;
+  }
+}
+
 </style>
