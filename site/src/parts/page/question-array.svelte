@@ -28,20 +28,14 @@ const all_questions = Site.get_map_of_all_questions();
 <ul>
   {#if questions}
     {#each questions as question}
-      <QuestionCard {question}
-        latex={typeof question.question === "string" ? question.question : question.question.content}
-        style="row"
-      />
+      <QuestionCard {question} style="row" />
     {/each}
   
   {:else if shards}
     {#each shards as shard}
       {@const question = all_questions[shard]}
 
-      <QuestionCard {question}
-        latex={typeof question.question === "string" ? question.question : question.question.content}
-        style="row"
-      />
+      <QuestionCard {question} style="row" />
     {/each}
 
   {:else}
