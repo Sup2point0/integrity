@@ -251,14 +251,14 @@ a.question-card.effects {
 }
 
 .difficulty-indicator {
-  $size: 0.65rem;
-  height: $size;
+  --size: 0.65rem;
+  height: var(--size);
   aspect-ratio: 1;
   position: absolute;
   top: 0.57rem;
   right: 0.6rem;
   z-index: 10;
-  border-radius: calc($size / 2);
+  border-radius: calc(var(--size) / 2);
   transition: all 0.12s ease-out;
 
   &.based    { background: $col-based; }
@@ -372,6 +372,10 @@ p.shard {
 @media (prefers-contrast: more) {
   a.question-card {
     border-color: light-dark(black, white);
+  }
+
+  .difficulty-indicator {
+    --size: 0.75rem;
   }
 }
 

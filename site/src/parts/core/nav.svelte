@@ -20,7 +20,7 @@ import { goto } from "$app/navigation";
 <nav class:nav={$userprefs.nav === false}>
   <section class="left">
     <NavLink
-      pict="integrity-title{$duality === Duality.DARK ? '-dark' : ''}.png"
+      pict="integrity-title{$duality === Duality.DARK || $userprefs.nav === false ? '-dark' : ''}.png"
       link="https://sup2point0.github.io/integrity"
     />
   </section>

@@ -53,6 +53,7 @@ a.article-card {
   color: $col-text;
   text-decoration: none;
   background: auto;
+  border: 1px solid $col-line-fallback;
   border: 1px solid $col-line;
   border-radius: 0.5em;
   box-shadow: 0 2px 2px -0.5px $col-line;

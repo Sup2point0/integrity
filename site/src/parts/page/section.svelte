@@ -75,6 +75,7 @@ section {
   justify-content: stretch;
   align-items: center;
   background: auto;
+  border-bottom: 1px solid $col-line-fallback;
   border-bottom: 1px solid $col-line;
   @include interact();
 
