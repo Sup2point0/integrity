@@ -93,10 +93,9 @@ function next_subsection()
 
 
 <Breadcrumbs levels={[
-  { text: "Scriptures", intern: "scriptures" },
-  { text: "Desmos", intern: "scriptures/desmos" },
-  { text: "Game Development", intern: "scriptures/desmos/gamedev" },
-  { text: data.chapter, intern: `scriptures/desmos/gamedev/${data.chapter.toLowerCase()}` },
+  { text: "Desmos", intern: "desmos" },
+  { text: "Game Development", intern: "desmos/gamedev" },
+  { text: data.chapter, intern: `desmos/gamedev/${data.chapter.toLowerCase()}` },
   { text: data.title },
 ]} />
 
@@ -166,7 +165,7 @@ function next_subsection()
 
           {#if next_disabled}
             <Clicky text="Next Up: {dyna_scriptures[data.chapter.toLowerCase()][data.next].title}"
-              intern="scriptures/desmos/gamedev/{data.chapter.toLowerCase()}/{data.next}"
+              intern="desmos/gamedev/{data.chapter.toLowerCase()}/{data.next}"
             />
           {:else}
             <Clicky text="Next"

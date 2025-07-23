@@ -53,10 +53,6 @@ import ArticleArray from "#parts/page/article-array.svelte";
       intern="scriptures/complete-square"
       latex={String.raw`a(x-p)^2 + q`}
     />
-    <Card title="Game Development in Desmos"
-      intern="scriptures/desmos/gamedev"
-      latex={String.raw`g_{state} \to 1 - g_{state}`}
-    />
   </div>
 </section>
 

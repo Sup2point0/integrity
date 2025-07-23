@@ -1,7 +1,7 @@
 ---
 title: 
 topic: desmos/gamedev
-dest: scriptures/desmos/gamedev/
+dest: desmos/gamedev/
 update: 
 ---
 

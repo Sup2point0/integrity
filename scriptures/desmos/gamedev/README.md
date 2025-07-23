@@ -1,6 +1,6 @@
 # Game Development in Desmos
 <!-- #SQUARK live!
-| dest = scriptures/desmos/gamedev
+| dest = desmos/gamedev
 | title = Game Development
 -->
 
@@ -9,14 +9,14 @@ Desmos is so much more than a graphing calculator. Believe it or not, you can cr
 
 In these scriptures, I’ll walk you through the essentials for developing games in Desmos. We’ll start by consolidating the fundamental features of Desmos that enable us to use it like a programming language, like conditionals and mutable state. We’ll then look at how we can combine, build and abstract upon those features to craft a game. Along the way, I’ll also cover some fun tricks that may come in useful, as well as limitations I’ve encountered and ways I have (or haven’t) found to circumvent them.
 
-Hyped? Head to the [Polymap](https://sup2point0.github.io/integrity/scriptures/desmos/gamedev/polymap) to begin.
+Hyped? Head to the [Polymap](https://sup2point0.github.io/integrity/desmos/gamedev/polymap) to begin.
 
 
 ## Reading Order
 
 Some chapters have a suggested order while others don’t. The pages do roughly build upon each other and the concepts covered up to that point, so if you plan on doing a complete pass, then I would recommend following my designated order. If you’re just popping by, the pages should still hold up fine as standalone scriptures.
 
-More specific guidance is given by the [Polymap](https://sup2point0.github.io/integrity/scriptures/desmos/gamedev/polymap).
+More specific guidance is given by the [Polymap](https://sup2point0.github.io/integrity/desmos/gamedev/polymap).
 
 
 ## Dynamic Scriptures

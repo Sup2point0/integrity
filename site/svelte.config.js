@@ -61,7 +61,7 @@ const svelte_config = {
         ...(
           Object.entries(dyna_scriptures).flatMap(
             ([chapter, pages]) => Object.keys(pages).map(
-              page => `/scriptures/desmos/gamedev/${chapter.toLowerCase()}/${page}`
+              page => `/desmos/gamedev/${chapter.toLowerCase()}/${page}`
             )
           )
         )

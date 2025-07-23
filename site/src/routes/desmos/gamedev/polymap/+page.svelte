@@ -1,12 +1,13 @@
 <script lang="ts">
 
+import { dyna_scriptures } from "#scripts/data";
+
 import Link from "#parts/ui/link.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Line from "#parts/page/line.svelte";
-    import { dyna_scriptures } from "#src/scripts/data";
 
 </script>
 
@@ -15,9 +16,8 @@ import Line from "#parts/page/line.svelte";
 
 
 <Breadcrumbs levels={[
-  { text: "Scriptures", intern: "scriptures" },
-  { text: "Desmos", intern: "scriptures/desmos" },
-  { text: "Game Development", intern: "scriptures/desmos/gamedev" },
+  { text: "Desmos", intern: "desmos" },
+  { text: "Game Development", intern: "desmos/gamedev" },
   { text: "Polymap" },
 ]} />
 
@@ -43,7 +43,7 @@ import Line from "#parts/page/line.svelte";
       {#each Object.values(dyna_scriptures.essentials ?? []) as page}
         <Link
           text={page.title}
-          intern="scriptures/desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
         />
       {/each}
     </li>
@@ -59,7 +59,7 @@ import Line from "#parts/page/line.svelte";
       {#each Object.values(dyna_scriptures.supplementals ?? []) as page}
         <Link
           text={page.title}
-          intern="scriptures/desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
         />
       {/each}
     </li>
@@ -84,7 +84,7 @@ import Line from "#parts/page/line.svelte";
       {#each Object.values(dyna_scriptures.core) as page}
         <Link
           text={page.title}
-          intern="scriptures/desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
         />
       {/each}
     </li>
@@ -100,7 +100,7 @@ import Line from "#parts/page/line.svelte";
       {#each Object.values(dyna_scriptures.architecture ?? []) as page}
         <Link
           text={page.title}
-          intern="scriptures/desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
         />
       {/each}
     </li>
@@ -116,7 +116,7 @@ import Line from "#parts/page/line.svelte";
       {#each Object.values(dyna_scriptures.rendering ?? []) as page}
         <Link
           text={page.title}
-          intern="scriptures/desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
         />
       {/each}
     </li>
@@ -132,7 +132,7 @@ import Line from "#parts/page/line.svelte";
       {#each Object.values(dyna_scriptures.advanced ?? []) as page}
         <Link
           text={page.title}
-          intern="scriptures/desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
         />
       {/each}
     </li>
@@ -157,7 +157,7 @@ import Line from "#parts/page/line.svelte";
       {#each Object.values(dyna_scriptures.extras ?? []) as page}
         <Link
           text={page.title}
-          intern="scriptures/desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
         />
       {/each}
     </li>
@@ -173,7 +173,7 @@ import Line from "#parts/page/line.svelte";
       {#each Object.values(dyna_scriptures.examples ?? []) as page}
         <Link
           text={page.title}
-          intern="scriptures/desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
         />
       {/each}
     </li>
@@ -205,14 +205,13 @@ header {
 }
 
 ul.row {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, max(16rem, 40%));
   gap: 1rem;
   list-style-type: none;
 
   li.card {
-    flex: 1 1 0;
-    max-width: 25rem;
+    flex: 1 1 16rem;
     padding: 1.2rem 1rem 1.5rem;
     border-radius: 0.5em;
     box-shadow: 0 1px 4px $col-line;
@@ -226,6 +225,13 @@ ul.row {
     padding-bottom: 0.5rem;
     font-size: 125%;
     font-weight: 450;
+  }
+}
+
+
+@media (max-width: 50rem) {
+  ul.row {
+  grid-template-columns: repeat(auto-fit, 100%);
   }
 }
 

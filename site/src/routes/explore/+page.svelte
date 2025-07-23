@@ -189,22 +189,22 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Desmos </h3>
     <div class="links">
-      <Link text="Why Desmos?" intern="scriptures/desmos/why" disabled={true} />
+      <Link text="Why Desmos?" intern="desmos/why" disabled={true} />
     </div>
   </section>
 
   <section>
     <h3> Game Development in Desmos </h3>
     <div class="links">
-      <Link text="Polymap" intern="scriptures/desmos/gamedev/polymap" hot={true} />
-      <Link text="Essentials" intern="scriptures/desmos/gamedev/essentials" />
-      <Link text="Supplementals" intern="scriptures/desmos/gamedev/supplementals" />
-      <Link text="Core" intern="scriptures/desmos/gamedev/core" />
-      <Link text="Architecture" intern="scriptures/desmos/gamedev/architecture" disabled={true} />
-      <Link text="Rendering" intern="scriptures/desmos/gamedev/rendering" disabled={true} />
-      <Link text="Advanced" intern="scriptures/desmos/gamedev/advanced" disabled={true} />
-      <Link text="Extras" intern="scriptures/desmos/gamedev/extras" disabled={true} />
-      <Link text="Examples" intern="scriptures/desmos/gamedev/examples" disabled={true} />
+      <Link text="Polymap" intern="desmos/gamedev/polymap" hot={true} />
+      <Link text="Essentials" intern="desmos/gamedev/essentials" />
+      <Link text="Supplementals" intern="desmos/gamedev/supplementals" />
+      <Link text="Core" intern="desmos/gamedev/core" />
+      <Link text="Architecture" intern="desmos/gamedev/architecture" disabled={true} />
+      <Link text="Rendering" intern="desmos/gamedev/rendering" disabled={true} />
+      <Link text="Advanced" intern="desmos/gamedev/advanced" disabled={true} />
+      <Link text="Extras" intern="desmos/gamedev/extras" disabled={true} />
+      <Link text="Examples" intern="desmos/gamedev/examples" disabled={true} />
     </div>
   </section>
 </div>
