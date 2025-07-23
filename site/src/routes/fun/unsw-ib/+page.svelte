@@ -13,7 +13,7 @@ import Meta from "#parts/page/meta.svelte";
 
 
 <Breadcrumbs levels={[
-  { text: "Challenges", intern: "challenges" },
+  { text: "Fun", intern: "fun" },
   { text: "UNSW Integration Bee"}
 ]} />
 

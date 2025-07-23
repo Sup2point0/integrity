@@ -14,7 +14,7 @@ import Header from "#parts/core/header.svelte";
 
 
 <Breadcrumbs levels={[
-  { text: "Challenges", intern: "challenges" },
+  { text: "Fun", intern: "fun" },
   { text: "0-100 Year Challenge", intern: "fun/year" },
   { text: page.title },
 ]} />

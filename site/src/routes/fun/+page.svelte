@@ -10,18 +10,18 @@ import Meta from "#parts/page/meta.svelte";
 </script>
 
 
-<Meta title="Challenges"
-  desc="My solutions to various mathematical challenges"
+<Meta title="Fun"
+  desc="General mathematical fun"
 />
 
 
 <Breadcrumbs levels={[
   { text: "Integrity", link: Site.root },
-  { text: "Challenges" },
+  { text: "Fun" },
 ]} />
 
 <Header title="Challenges"
-  capt="My solutions to various mathematical challenges"
+  capt="General mathematical fun"
 />
 
 
