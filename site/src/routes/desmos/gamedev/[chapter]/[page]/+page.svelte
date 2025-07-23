@@ -15,9 +15,9 @@ import RenderBlock from "#parts/page/render-block.svelte";
 import { untrack } from "svelte";
 import { slide, fade } from "svelte/transition";
 import { expoOut } from "svelte/easing";
-import { page } from "$app/state";
+import { page, navigating } from "$app/state";
 
-import { goto, } from "$app/navigation";
+import { goto, onNavigate } from "$app/navigation";
 
 
 let data: DynamicScripture = $derived(page.data as DynamicScripture);
@@ -75,6 +75,22 @@ $effect(() => {
     current_section = 0;
     current_subsection = 0;
   });
+});
+
+onNavigate(async (navigation) => {
+  if (!document.startViewTransition) return;
+
+  let url = navigating.to?.url.toString();
+  let parts = url?.split("/");
+
+  if (parts?.at(-4) === "desmos" || parts?.at(-3) === "gamedev") {
+    return new Promise(resolve => {
+      document.startViewTransition(async () => {
+        resolve();
+        await navigation.complete;
+      });
+    });
+  }
 });
 
 
