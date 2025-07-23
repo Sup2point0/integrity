@@ -160,13 +160,13 @@ a {
 }
 
 
-@media (max-width: 50rem) {
+@media (max-width: 70rem) {
   .nav-link:has(img, .svg) p {
     display: none;
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 60rem) {
   .nav-link.collapse {
     display: none;
   }

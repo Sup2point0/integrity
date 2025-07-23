@@ -60,19 +60,22 @@ import { goto } from "$app/navigation";
       <Link text="Fun Facts" intern="docs/fun-facts" />
     </NavLink>
 
-    <NavLink text="Scriptures" intern="scriptures" hot={true}>
+    <NavLink text="Scriptures" intern="scriptures">
       <Link text="General" intern="scriptures/general" />
       <Link text="Integration" intern="scriptures/integrals" />
       <Link text="Graph Drawing" intern="graph-drawing" disabled={true} />
       <Link text="Completing the Square" intern="scriptures/complete-square" />
-      <Link text="Desmos" intern="scriptures/desmos" disabled={true} />
-      <Link text="Gamedev in Desmos" intern="scriptures/desmos/gamedev" dev={true} />
     </NavLink>
 
-    <NavLink text="Challenges" intern="challenges" collapse={true}>
-      <Link text="MIT Integration Bee" intern="challenges/mit-ib" />
-      <Link text="UNSW Integration Bee" intern="challenges/unsw-ib" />
-      <Link text="0–100 Year Challenge" intern="challenges/year" />
+    <NavLink text="Desmos" intern="desmos" collapse={true} hot={true}>
+      <Link text="Game Development" intern="desmos/gamedev" dev={true} />
+      <Link text="Gradient Descent" intern="desmos/grad-desc" disabled={true} />
+    </NavLink>
+
+    <NavLink text="Fun" intern="challenges" collapse={true}>
+      <Link text="MIT Integration Bee" intern="fun/mit-ib" />
+      <Link text="UNSW Integration Bee" intern="fun/unsw-ib" />
+      <Link text="0–100 Year Challenge" intern="fun/year" />
     </NavLink>
 
     <NavLink text="Info" intern="info" collapse={true}>
