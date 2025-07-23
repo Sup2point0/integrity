@@ -23,41 +23,45 @@ let year = $state("2025");
 
 let general: {
   visits: Record<string, Record<string, number | null>>,
-  topics: Record<string, number>,
-  difficulties: Record<string, number>,
 } = $state({
   visits: {
     "2024": { December: null },
     "2025": { January: null, February: null, March: null, April: null, May: null, June: null, July: null, August: null, September: null }
   },
+});
+
+let questions: {
+  topics: Record<string, number>,
+  difficulties: Record<string, number>,
+  title_words: Record<number, number>,
+  title_chars: Record<number | string, number>,
+  title_letters: Record<string, number>,
+  tags_counts: Record<number, number>,
+  hints_counts: Record<number, number>,
+} = {
   topics: Object.fromEntries(
     Object.entries(Site.questions).map(
       ([topic, data]) => [topic, Object.keys(data.questions).length]
     )
   ),
   difficulties: { based: 0, incline: 0, manifold: 0, chaos: 0, null: 0 },
-});
+  title_words: {},
+  title_chars: {0: 1},
+  title_letters: {},
+  tags_counts: {},
+  hints_counts: {},
+}
 
 let integrals: {
   difficulties: Record<string, number>,
-  title_words: Record<number, number>,
-  title_chars: Record<number | string, number>,
-  title_letters: Record<string, number>,
   question_chars: Record<number | string, number>,
-  question_letters: Record<string, number>
-  tags_counts: Record<number, number>,
-  hints_counts: Record<number, number>,
+  question_letters: Record<string, number>,
   parts_counts: Record<number, number>,
   days: Record<string, number>,
 } = {
   difficulties: { based: 0, incline: 0, manifold: 0, chaos: 0, null: 0 },
-  title_words: {},
-  title_chars: {0: 1},
-  title_letters: {},
   question_chars: {},
   question_letters: {},
-  tags_counts: {},
-  hints_counts: {},
   parts_counts: {},
   days: {},
 };
@@ -91,9 +95,55 @@ async function try_load_data(i: number = 0)
 
 for (let q of Site.get_list_of_all_questions()) {
   if (q.difficulty) {
-    general.difficulties[q.difficulty]++;
+    questions.difficulties[q.difficulty]++;
   } else if (q.difficulty === null || q.difficulty === undefined) {
-    general.difficulties.null++;
+    questions.difficulties.null++;
+  }
+
+  if (q.title) {
+    let count = q.title.split(" ").length;
+
+    if (questions.title_words[count]) {
+      questions.title_words[count]++;
+    } else {
+      questions.title_words[count] = 1;
+    }
+
+    count = q.title.length;
+
+    if (questions.title_chars[count]) {
+      questions.title_chars[count]++;
+    } else {
+      questions.title_chars[count] = 1;
+    }
+
+    for (let letter of q.title) {
+      if (questions.title_letters[letter]) {
+        questions.title_letters[letter]++;
+      } else {
+        questions.title_letters[letter] = 1;
+      }
+    }
+  }
+
+  if (q.tags) {
+    let count = q.tags.length;
+
+    if (questions.tags_counts[count]) {
+      questions.tags_counts[count]++;
+    } else {
+      questions.tags_counts[count] = 1;
+    }
+  }
+
+  if (q.hints) {
+    let count = Object.keys(q.hints).length;
+
+    if (questions.hints_counts[count]) {
+      questions.hints_counts[count]++;
+    } else {
+      questions.hints_counts[count] = 1;
+    }
   }
 }
 
@@ -102,32 +152,6 @@ for (let q of Site.get_questions_of_topic("integrals")) {
     integrals.difficulties[q.difficulty]++;
   } else if (q.difficulty === null || q.difficulty === undefined) {
     integrals.difficulties.null++;
-  }
-
-  if (q.title) {
-    let count = q.title.split(" ").length;
-
-    if (integrals.title_words[count]) {
-      integrals.title_words[count]++;
-    } else {
-      integrals.title_words[count] = 1;
-    }
-
-    count = q.title.length;
-
-    if (integrals.title_chars[count]) {
-      integrals.title_chars[count]++;
-    } else {
-      integrals.title_chars[count] = 1;
-    }
-
-    for (let letter of q.title) {
-      if (integrals.title_letters[letter]) {
-        integrals.title_letters[letter]++;
-      } else {
-        integrals.title_letters[letter] = 1;
-      }
-    }
   }
 
   if (q.question) {
@@ -151,26 +175,6 @@ for (let q of Site.get_questions_of_topic("integrals")) {
       } else {
         integrals.question_letters[letter] = 1;
       }
-    }
-  }
-
-  if (q.tags) {
-    let count = q.tags.length;
-
-    if (integrals.tags_counts[count]) {
-      integrals.tags_counts[count]++;
-    } else {
-      integrals.tags_counts[count] = 1;
-    }
-  }
-
-  if (q.hints) {
-    let count = Object.keys(q.hints).length;
-
-    if (integrals.hints_counts[count]) {
-      integrals.hints_counts[count]++;
-    } else {
-      integrals.hints_counts[count] = 1;
     }
   }
 
@@ -290,15 +294,18 @@ for (let q of Site.get_questions_of_topic("integrals")) {
       )}
     </Section>
   {/if}
+</Section>
+
+<Section title="Questions" closed={false}>
 
   <h2> Questions by Topic </h2>
 
-  {#if general.topics}
+  {#if questions.topics}
     {@const topics = (
-      Object.entries(general.topics)
+      Object.entries(questions.topics)
         .sort((prot, deut) => deut[1] - prot[1])
     )}
-    {@const highest = Math.max(...Object.values(general.topics))}
+    {@const highest = Math.max(...Object.values(questions.topics))}
 
     <div class="chart">
       {#each topics as [topic, freq], idx}
@@ -317,16 +324,111 @@ for (let q of Site.get_questions_of_topic("integrals")) {
 
   <h2> Questions by Difficulty </h2>
 
-  {#if general.difficulties}
-    {@const highest = Math.max(...Object.values(general.difficulties))}
+  {#if questions.difficulties}
+    {@const highest = Math.max(...Object.values(questions.difficulties))}
 
     <div class="chart">
-      {#each Object.entries(general.difficulties) as [diff, freq], idx}
+      {#each Object.entries(questions.difficulties) as [diff, freq], idx}
         <div class="column">
           <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label">
             <Tag kind={diff} tag={diff === "null" ? "UNASSIGNED" : diff.toUpperCase()} />
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+  
+  <h2> Words in Name </h2>
+
+  {#if questions.title_words}
+    {@const highest = Math.max(...Object.values(questions.title_words))}
+
+    <div class="chart">
+      {#each Object.entries(questions.title_words) as [count, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label">
+            {count}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  <h2> Characters in Name </h2>
+
+  {#if questions.title_chars}
+    {@const highest = Math.max(...Object.values(questions.title_chars))}
+
+    <div class="chart">
+      {#each Object.entries(questions.title_chars) as [count, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label" style:font-size="75%">
+            {count}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  <h2> Unique Characters in Name </h2>
+
+  {#if questions.title_letters}
+    {@const letters = (
+      Object.entries(questions.title_letters)
+        .sort((prot, deut) => deut[1] - prot[1])
+        .slice(0, 20)
+    )}
+    {@const highest = Math.max(...letters.map(each => each[1]))}
+
+    <div class="chart">
+      {#each letters as [letter, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label">
+            {letter}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  <h2> Number of Tags </h2>
+
+  {#if questions.tags_counts}
+    {@const highest = Math.max(...Object.values(questions.tags_counts))}
+
+    <div class="chart">
+      {#each Object.entries(questions.tags_counts) as [count, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label">
+            {count}
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  <h2> Number of Hints </h2>
+
+  {#if questions.hints_counts}
+    {@const highest = Math.max(...Object.values(questions.hints_counts))}
+
+    <div class="chart">
+      {#each Object.entries(questions.hints_counts) as [count, freq], idx}
+        <div class="column">
+          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
+
+          <div class="class-label">
+            {count}
           </div>
         </div>
       {/each}
@@ -348,65 +450,6 @@ for (let q of Site.get_questions_of_topic("integrals")) {
 
           <div class="class-label">
             <Tag kind={diff} tag={diff === "null" ? "UNASSIGNED" : diff.toUpperCase()} />
-          </div>
-        </div>
-      {/each}
-    </div>
-  {/if}
-  
-  <h2> Words in Name </h2>
-
-  {#if integrals.title_words}
-    {@const highest = Math.max(...Object.values(integrals.title_words))}
-
-    <div class="chart">
-      {#each Object.entries(integrals.title_words) as [count, freq], idx}
-        <div class="column">
-          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
-
-          <div class="class-label">
-            {count}
-          </div>
-        </div>
-      {/each}
-    </div>
-  {/if}
-
-  <h2> Characters in Name </h2>
-
-  {#if integrals.title_chars}
-    {@const highest = Math.max(...Object.values(integrals.title_chars))}
-
-    <div class="chart">
-      {#each Object.entries(integrals.title_chars) as [count, freq], idx}
-        <div class="column">
-          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
-
-          <div class="class-label" style:font-size="75%">
-            {count}
-          </div>
-        </div>
-      {/each}
-    </div>
-  {/if}
-
-  <h2> Unique Characters in Name </h2>
-
-  {#if integrals.title_letters}
-    {@const letters = (
-      Object.entries(integrals.title_letters)
-        .sort((prot, deut) => deut[1] - prot[1])
-        .slice(0, 20)
-    )}
-    {@const highest = Math.max(...letters.map(each => each[1]))}
-
-    <div class="chart">
-      {#each letters as [letter, freq], idx}
-        <div class="column">
-          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
-
-          <div class="class-label">
-            {letter}
           </div>
         </div>
       {/each}
@@ -452,42 +495,6 @@ for (let q of Site.get_questions_of_topic("integrals")) {
 
           <div class="class-label">
             {letter}
-          </div>
-        </div>
-      {/each}
-    </div>
-  {/if}
-
-  <h2> Number of Tags </h2>
-
-  {#if integrals.tags_counts}
-    {@const highest = Math.max(...Object.values(integrals.tags_counts))}
-
-    <div class="chart">
-      {#each Object.entries(integrals.tags_counts) as [count, freq], idx}
-        <div class="column">
-          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
-
-          <div class="class-label">
-            {count}
-          </div>
-        </div>
-      {/each}
-    </div>
-  {/if}
-
-  <h2> Number of Hints </h2>
-
-  {#if integrals.hints_counts}
-    {@const highest = Math.max(...Object.values(integrals.hints_counts))}
-
-    <div class="chart">
-      {#each Object.entries(integrals.hints_counts) as [count, freq], idx}
-        <div class="column">
-          <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
-
-          <div class="class-label">
-            {count}
           </div>
         </div>
       {/each}
