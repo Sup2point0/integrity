@@ -10,7 +10,7 @@ import type { Block } from "#scripts/types";
 import { onMount } from "svelte";
 
 interface Props {
-  blocks: Block | Block[] | undefined;
+  blocks?: Block | Block[] | null;
   options?: object;
   controls?: boolean;
   height?: string;
@@ -21,7 +21,7 @@ interface Props {
 }
 
 let {
-  blocks = undefined,
+  blocks,
   options = {},
   controls = true,
   height,

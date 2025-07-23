@@ -17,6 +17,8 @@ import { slide, fade } from "svelte/transition";
 import { expoOut } from "svelte/easing";
 import { page } from "$app/state";
 
+import { goto, } from "$app/navigation";
+
 
 let data: DynamicScripture = $derived(page.data as DynamicScripture);
 let sections_list = $derived(Object.values(data.sections));
@@ -60,9 +62,18 @@ $effect(() => {
     }
 
     if (article_viewport) {
-      // article_viewport.scrollTo(0, article_viewport.scrollHeight);
       article_viewport.scrollTo({ top: article_viewport.scrollHeight, behavior: "smooth" });
     }
+  });
+});
+
+$effect(() => {
+  page.url;
+
+  untrack(() => {
+    started = false;
+    current_section = 0;
+    current_subsection = 0;
   });
 });
 
@@ -163,9 +174,9 @@ function next_subsection()
             disabled={current_section === 0 && current_subsection === 0}
           />
 
-          {#if next_disabled}
+          {#if next_disabled && data.next}
             <Clicky text="Next Up: {dyna_scriptures[data.chapter.toLowerCase()][data.next].title}"
-              intern="desmos/gamedev/{data.chapter.toLowerCase()}/{data.next}"
+              action={() => goto(`/desmos/gamedev/${data.chapter.toLowerCase()}/${data.next}`)}
             />
           {:else}
             <Clicky text="Next"
@@ -274,6 +285,7 @@ nav.upper {
 }
 
 .layout {
+  padding-bottom: 3rem;
   display: flex;
   flex-flow: row nowrap;
   gap: 3rem;
