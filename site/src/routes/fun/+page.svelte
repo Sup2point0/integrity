@@ -27,15 +27,15 @@ import Meta from "#parts/page/meta.svelte";
 
 <div class="content">
   <Card title="MIT Integration Bee"
-    intern="challenges/mit-ib"
+    intern="fun/mit-ib"
     latex={String.raw`\int \frac {\sin{x}}{2e^x + \sin{x} + \cos{x}} \ dx`}
   />
   <Card title="UNSW Integration Bee"
-    intern="challenges/unsw-ib"
+    intern="fun/unsw-ib"
     latex={String.raw`\int_{0}^{\infin} \frac{1}{\left( x+1/x \right)^2} \ dx`}
   />
   <Card title="0–100 Year Challenge"
-    intern="challenges/year"
+    intern="fun/year"
     latex={String.raw`2^{(0!+2)! + 5}`}
   />
 </div>

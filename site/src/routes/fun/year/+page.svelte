@@ -25,11 +25,11 @@ import Meta from "#parts/page/meta.svelte";
 
 <div class="content">
   <Card title="2024"
-    intern="challenges/year/2024"
+    intern="fun/year/2024"
     latex={String.raw`\arcsin(2^0)/2 + 4!`}
   />
   <Card title="2025"
-    intern="challenges/year/2025"
+    intern="fun/year/2025"
     latex={String.raw`2^{(0!+2)! + 5}`}
   />
 </div>

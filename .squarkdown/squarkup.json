@@ -9,7 +9,7 @@
     ".squarkdown/content/",
     "docs/",
     "scriptures/",
-    "challenges/"
+    "fun/"
   ],
   "paths / dest": "src/routes/",
 

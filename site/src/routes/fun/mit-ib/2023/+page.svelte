@@ -15,7 +15,7 @@ import Header from "#parts/core/header.svelte";
 
 <Breadcrumbs levels={[
   { text: "Challenges", intern: "challenges" },
-  { text: "MIT Integration Bee", intern: "challenges/mit-ib" },
+  { text: "MIT Integration Bee", intern: "fun/mit-ib" },
   { text: "2023" },
 ]} />
 

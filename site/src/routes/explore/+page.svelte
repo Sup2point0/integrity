@@ -71,9 +71,9 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Challenges </h3>
     <div class="links">
-      <Link text="MIT Integration Bee" intern="challenges/mit-ib" />
-      <Link text="UNSW Integration Bee" intern="challenges/unsw-ib" />
-      <Link text="0–100 Year Challenge" intern="challenges/year" />
+      <Link text="MIT Integration Bee" intern="fun/mit-ib" />
+      <Link text="UNSW Integration Bee" intern="fun/unsw-ib" />
+      <Link text="0–100 Year Challenge" intern="fun/year" />
     </div>
   </section>
 

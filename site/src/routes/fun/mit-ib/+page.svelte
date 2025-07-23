@@ -9,19 +9,21 @@ import Meta from "#parts/page/meta.svelte";
 </script>
 
 
-<Meta title="UNSW Integration Bee" desc="Fun questions from the UNSW Maths Society Integration Bee" />
+<Meta title="MIT Integration Bee"
+  desc="Fun questions from the MIT Integration Bee rounds"
+/>
 
 
 <Breadcrumbs levels={[
   { text: "Challenges", intern: "challenges" },
-  { text: "UNSW Integration Bee"}
+  { text: "MIT Integration Bee"}
 ]} />
 
-<Header title="UNSW Integration Bee" capt="Fun questions from the UNSW Maths Society Integration Bee" />
+<Header title="MIT Integration Bee" capt="Fun questions from the MIT Integration Bee rounds" />
 
 
 <div class="content">
-  <Card title="2022" intern="challenges/unsw-ib/2022" />
+  <Card title="2023" intern="fun/mit-ib/2023" />
 </div>
 
 

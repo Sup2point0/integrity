@@ -72,7 +72,7 @@ import { goto } from "$app/navigation";
       <Link text="Gradient Descent" intern="desmos/grad-desc" disabled={true} />
     </NavLink>
 
-    <NavLink text="Fun" intern="challenges" collapse={true}>
+    <NavLink text="Fun" intern="fun" collapse={true}>
       <Link text="MIT Integration Bee" intern="fun/mit-ib" />
       <Link text="UNSW Integration Bee" intern="fun/unsw-ib" />
       <Link text="0–100 Year Challenge" intern="fun/year" />

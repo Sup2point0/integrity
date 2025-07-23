@@ -1,6 +1,6 @@
 # 0–100 Year Challenge
 <!-- #SQUARK live!
-| dest = challenges/year
+| dest = fun/year
 | capt = Making the numbers from 0 to 100 with the digits of the year, in order
 -->
 
