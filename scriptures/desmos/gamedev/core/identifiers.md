@@ -25,7 +25,7 @@ multi = 0
 
 We avoid one-letter names in programming, so we’ll want to do the same in Desmos.
 
-However, we can’t create multi-character identifiers, because Desmos interprets these as multiplying multiple symbols (like in maths).
+However, we can’t create multi-character identifiers, because Desmos interprets these as multiplying multiple symbols (like in maths). Here, it’s trying to evaluate $m \times u \times l \times t \times i$, instead of creating a variable called $\text{multi}$.
 
 ### _
 ```desmos
@@ -46,9 +46,8 @@ Luckily for us, Desmos does allow subscripts to be more than 1 letter long!
 This means we can easily spell out words and phrases. Now we rarely ever need to worry about clashes; instead we should think about how best to structure and name identifiers.
 
 ### _
-<aside>
+<aside></aside>
 You add a subscript by typing `_` after an expression. Try defining a variable called $g_{state}$.
-</aside>
 
 
 ## // Naming Identifiers
@@ -83,9 +82,18 @@ Now we can easily read $\text{timer}$ while also having additional information a
 ## // Allowed Characters
 
 ### _
+```desmos
+💀 = 0
+```
+
 Desmos does not quite allow any arbitrary Unicode characters in identifier names, since many have specific mathematical meanings in Desmos.
 
 ### _
+```desmos
+\lambda = 0
+\phi_{instance1} = 1
+```
+
 For the base, we can use any lowercase or uppercase letter – including Greek letters!
 
 In the subscript, we can now use numbers too. Annoyingly, no punctuation marks are allowed (at time of writing).
@@ -102,13 +110,17 @@ In programming we can achieve this with dot notation like `namespace.category.id
 Unfortunately, none of these are available for identifiers in Desmos. These would be ideal for separating individual words in multi-word names.
 
 ### _
+```desmos
+s_{namespace_{variable}}
+```
+
 If you try using `_`, you’ll notice it actually creates another subscript. This double subscripting would be a decent workaround – the text gets a bit too small to read, but it’s still somewhat acceptable.
 
 However, Desmos doesn’t allow subscripts to have subscripts.
 
 ### _
 ```desmos
-s_{bulletSpeed}
+s_{bulletSpeed} = 0
 ```
 
 The only solution, pretty much, is to use `camelCase`. This isn’t ideal since readability is poor, especially at the condensed font size, but it’s the least evil.
@@ -121,4 +133,4 @@ s_{playercount} = 1
 
 And it’s probably better than the approach I tend to use, which is `nocase`...
 
-I mean, it works for a lot of things like $g_{\text{screenheight}}$ or $s_{\text{playercount}}$, sooo
+I mean, it works for a lot of things like $g_{\text{screenheight}}$ or $s_{\text{playercount}}$, sooo...
