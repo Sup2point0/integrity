@@ -131,7 +131,13 @@ function next_subsection()
 
 {#if started}
   <div in:fade={{ duration: 250, delay: 250 }}>
-    <Header title={data.title} capt={data.chapter} />
+    <Header title={data.title}
+      capt="Last Updated {new Intl.DateTimeFormat("en-GB", {
+        day: "2-digit",
+        month: "long",
+        year: "2-digit"
+      }).format(data.update ?? undefined)}"
+    />
 
     <nav class="upper">
       {#each data.sections as section, I}
