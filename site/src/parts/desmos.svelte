@@ -101,10 +101,12 @@ function try_load_desmos()
   }
 
   if (blocks) {
+    desmos.setExpressions([]);
+    
     if (Array.isArray(blocks)) {
       desmos.setExpressions(blocks.map((block, i) => parse_block(block, i)));
     } else {
-      desmos.setExpressions([parse_block(blocks, 0)]);
+      desmos.setExpression(parse_block(blocks, 1));
     }
   }
 
@@ -119,9 +121,7 @@ function parse_block(block: Block, index: number): object | undefined
 
   if (control.includes("\\viewport")) {    
     let bounds = control.match(/(?<=\\viewport\{)\{.+\}(?=\})/)?.at(0);
-    bounds = bounds?.replaceAll(/([a-zA-Z]+):/, '"1":');
-    console.log("bounds =", bounds);
-    
+    bounds = bounds?.replaceAll(/([a-zA-Z]+):/, '"1":');    
     desmos.setMathBounds(JSON.parse(bounds));
   }
   
@@ -132,7 +132,7 @@ function parse_block(block: Block, index: number): object | undefined
     latex: content,
     color: control.includes("\\asympt") ? Desmos.Colors.BLACK : cols.next().value,
     hidden: control.includes("\\hidden"),
-    lineOpacity: control.includes("\\asympt") ? 0.4 : undefined,
+    lineOpacity: control.includes("\\asympt") ? 0.4 : 0.9,
     lineStyle: (control.includes("\\dashed") || control.includes("\\asympt")) ? Desmos.Styles.DASHED : Desmos.Styles.SOLID,
   };
 }

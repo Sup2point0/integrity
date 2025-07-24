@@ -49,13 +49,15 @@ $effect(() => {
   untrack(() => {
     let subsection = sections_list[current_section].subsections[current_subsection];
     if (subsection[0].kind === "desmos") {
-      desmos_blocks = subsection[0].content.split("<br><br>").map(
-        line => ({
+      desmos_blocks = (subsection[0].content
+        .split("<br><br>")
+        .map(line => ({
           kind: "desmos",
           content: line,
-        })
-      );   
-    } else {
+        }))
+      );
+    }
+    else {
       if (current_subsection === 0) {
         desmos_blocks = null;
       }
