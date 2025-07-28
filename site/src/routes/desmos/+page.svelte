@@ -27,6 +27,10 @@ import Header from "#parts/core/header.svelte";
 
 
 <div class="browse">
+  <Card title="Docs"
+    intern="desmos/docs"
+    latex={String.raw`I_\text{desmos} \ : \ I()`}
+  />
   <Card title="Game Development"
     intern="desmos/gamedev"
     latex={String.raw`g_{state} \to 1 - g_{state}`}
