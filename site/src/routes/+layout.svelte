@@ -54,6 +54,10 @@ function count_visits()
 
 function sync_duality()
 {
+  if (window.matchMedia("(prefers-color-scheme: dark)")) {
+    $duality = Duality.DARK;
+  }
+
   (window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", ({ matches }) => {      
