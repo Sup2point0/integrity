@@ -1,6 +1,7 @@
 <script lang="ts">
 
-import Site from "#src/scripts/site";
+import Site from "#scripts/site";
+import { dyna_scriptures } from "#scripts/data";
 import { pick_random_question, pick_random_scripture } from "#scripts/utils";
 
 import Link from "#parts/ui/link.svelte";
@@ -69,7 +70,7 @@ import { goto } from "$app/navigation";
   </section>
 
   <section>
-    <h3> Challenges </h3>
+    <h3> Fun </h3>
     <div class="links">
       <Link text="MIT Integration Bee" intern="fun/mit-ib" />
       <Link text="UNSW Integration Bee" intern="fun/unsw-ib" />
@@ -185,16 +186,18 @@ import { goto } from "$app/navigation";
       <Link text="Why Complete the Square?" intern="scriptures/complete-square/why" />
     </div>
   </section>
+</div>
 
-  <section>
-    <h3> Desmos </h3>
+<h2> Desmos </h2>
+  <div class="content">  <section>
+    <h3> Docs </h3>
     <div class="links">
-      <Link text="Why Desmos?" intern="desmos/why" disabled={true} />
+      <Link text="Identifiable Identifiers" intern="docs/desmos/identifiers" />
     </div>
   </section>
 
   <section>
-    <h3> Game Development in Desmos </h3>
+    <h3> Game Development </h3>
     <div class="links">
       <Link text="Polymap" intern="desmos/gamedev/polymap" hot={true} />
       <Link text="Essentials" intern="desmos/gamedev/essentials" />
@@ -205,6 +208,102 @@ import { goto } from "$app/navigation";
       <Link text="Advanced" intern="desmos/gamedev/advanced" disabled={true} />
       <Link text="Extras" intern="desmos/gamedev/extras" disabled={true} />
       <Link text="Examples" intern="desmos/gamedev/examples" disabled={true} />
+    </div>
+  </section>
+
+  <section>
+    <h3> Essentials </h3>
+    <div class="links">
+      {#each Object.values(dyna_scriptures.essentials ?? []) as page}
+        <Link
+          text={page.title}
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+        />
+      {/each}
+    </div>
+  </section>
+
+  <section>
+    <h3> Supplementals </h3>
+    <div class="links">
+      {#each Object.values(dyna_scriptures.supplementals ?? []) as page}
+        <Link
+          text={page.title}
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+        />
+      {/each}
+    </div>
+  </section>
+
+  <section>
+    <h3> Core </h3>
+    <div class="links">
+      {#each Object.values(dyna_scriptures.core) as page}
+        <Link
+          text={page.title}
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+        />
+      {/each}
+    </div>
+  </section>
+
+  <section>
+    <h3> Architecture </h3>
+    <div class="links">
+      {#each Object.values(dyna_scriptures.architecture ?? []) as page}
+        <Link
+          text={page.title}
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+        />
+      {/each}
+    </div>
+  </section>
+
+  <section>
+    <h3> Rendering </h3>
+    <div class="links">
+      {#each Object.values(dyna_scriptures.rendering ?? []) as page}
+        <Link
+          text={page.title}
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+        />
+      {/each}
+    </div>
+  </section>
+
+  <section>
+    <h3> Advanced </h3>
+    <div class="links">
+      {#each Object.values(dyna_scriptures.advanced ?? []) as page}
+        <Link
+          text={page.title}
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+        />
+      {/each}
+    </div>
+  </section>
+
+  <section>
+    <h3> Extras </h3>
+    <div class="links">
+      {#each Object.values(dyna_scriptures.extras ?? []) as page}
+        <Link
+          text={page.title}
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+        />
+      {/each}
+    </div>
+  </section>
+
+  <section>
+    <h3> Examples </h3>
+    <div class="links">
+      {#each Object.values(dyna_scriptures.examples ?? []) as page}
+        <Link
+          text={page.title}
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+        />
+      {/each}
     </div>
   </section>
 </div>
