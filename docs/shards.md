@@ -16,6 +16,8 @@ i24f-hr1
 s25cu-dq4
 ```
 
+All question shards are unique, even between topics. Shards are permanently assigned – a question’s shard will never change, even if other questions are added or deleted. They act as a compact and unambiguous way to identify questions.
+
 
 <br>
 
