@@ -1,6 +1,7 @@
 # Polygon Renderers
 <!-- #SQUARK live!
 | dest = desmos/library/rendering/polygons
+| title = Polygons
 | index = desmos / library / rendering / polygons
 | update = 2025 August 21
 -->
