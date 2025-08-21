@@ -27,7 +27,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
 
 
 <ArticleArray
-  paths={Site.index.library.pages.filter(path => (
-    Site.index.functions.pages.includes(path)
+  paths={Site.index.functions.pages.filter(path => (
+    Site.index.library.pages.includes(path)
   ))}
 />

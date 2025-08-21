@@ -348,6 +348,9 @@ import { goto } from "$app/navigation";
   </section>
 </div>
 
+<h2> Gradient Descent in Desmos </h2>
+<p align="center"> Coming soon! </p>
+
 
 <style lang="scss">
 
