@@ -104,7 +104,24 @@ import { goto } from "$app/navigation";
   </section>
 
   <section>
-    <h3> Integration </h3>
+    <h3> Graph Drawing </h3>
+    <div class="links">
+      <Link text="Why Draw Graphs?" intern="scriptures/graph-drawing" disabled={true} />
+    </div>
+  </section>
+
+  <section>
+    <h3> Completing the Square </h3>
+    <div class="links">
+      <Link text="Why Complete the Square?" intern="scriptures/complete-square/why" />
+    </div>
+  </section>
+</div>
+
+<h2> Integration </h2>
+<div class="content">
+  <section>
+    <h3> General </h3>
     <div class="links">
       <Link text="Why Integrate?" intern="scriptures/integrals/why" />
       <Link text="Why Is Integration Difficult?" intern="scriptures/integrals/why-hard" />
@@ -172,34 +189,57 @@ import { goto } from "$app/navigation";
       <Link text="What’s This?" intern="integrity/integrity" disabled={true} />
     </div>
   </section>
-
-  <section>
-    <h3> Graph Drawing </h3>
-    <div class="links">
-      <Link text="Why Draw Graphs?" intern="scriptures/graph-drawing" disabled={true} />
-    </div>
-  </section>
-
-  <section>
-    <h3> Completing the Square </h3>
-    <div class="links">
-      <Link text="Why Complete the Square?" intern="scriptures/complete-square/why" />
-    </div>
-  </section>
 </div>
 
 <h2> Desmos </h2>
-  <div class="content">  <section>
+<div class="content">
+  <section>
     <h3> Docs </h3>
     <div class="links">
       <Link text="Identifiable Identifiers" intern="docs/desmos/identifiers" />
     </div>
   </section>
+</div>
 
+<h2> Desmos Library </h2>
+<div class="content">
   <section>
-    <h3> Game Development </h3>
+    <h3> Functions </h3>
     <div class="links">
-      <Link text="Polymap" intern="desmos/gamedev/polymap" hot={true} />
+      {#each Site.index.library.pages.filter(path => (
+        Site.index.functions.pages.includes(path)
+      )) as path}
+        {@const page = Site.pages[path]}
+
+        {#if page}
+          <Link text={page.title!} intern={page.dest} />
+        {/if}
+      {/each}
+    </div>
+  </section>
+  
+  <section>
+    <h3> Rendering </h3>
+    <div class="links">
+      {#each Site.index.library.pages.filter(path => (
+        Site.index.rendering.pages.includes(path)
+      )) as path}
+        {@const page = Site.pages[path]}
+
+        {#if page}
+          <Link text={page.title!} intern={page.dest} />
+        {/if}
+      {/each}
+    </div>
+  </section>
+</div>
+
+<h2> Game Development in Desmos </h2>
+<div class="content">
+  <section>
+    <h3> Quicklinks </h3>
+    <div class="links">
+      <Link text="Polymap" intern="desmos/gamedev/polymap" />
       <Link text="Essentials" intern="desmos/gamedev/essentials" />
       <Link text="Supplementals" intern="desmos/gamedev/supplementals" />
       <Link text="Core" intern="desmos/gamedev/core" />
@@ -316,7 +356,7 @@ import { goto } from "$app/navigation";
   display: grid;
   grid-template-columns: repeat(auto-fit, max(16rem, 30%));
   justify-content: center;
-  row-gap: 1rem;
+  gap: 1rem;
 
   @media (max-width: 40rem) {
     justify-content: start;
