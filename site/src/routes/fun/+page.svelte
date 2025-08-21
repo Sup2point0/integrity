@@ -20,7 +20,7 @@ import Meta from "#parts/page/meta.svelte";
   { text: "Fun" },
 ]} />
 
-<Header title="Challenges"
+<Header title="Fun"
   capt="General mathematical fun"
 />
 

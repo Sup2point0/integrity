@@ -16,7 +16,6 @@ import ArticleArray from "#parts/page/article-array.svelte";
 
 
 <Breadcrumbs levels={[
-  { text: "Integrity", link: Site.root },
   { text: "Desmos", intern: "desmos" },
   { text: "Docs" },
 ]} />

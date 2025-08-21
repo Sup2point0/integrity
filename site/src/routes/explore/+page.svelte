@@ -93,7 +93,7 @@ import { goto } from "$app/navigation";
 <h2> Scriptures </h2>
 <div class="content">
   <section>
-    <h3> Scriptures </h3>
+    <h3> General </h3>
     <div class="links">
       <Link text="Random" action={() => {
         goto(`/${pick_random_scripture()}`);

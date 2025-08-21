@@ -31,6 +31,10 @@ import Header from "#parts/core/header.svelte";
     intern="desmos/docs"
     latex={String.raw`I_\text{desmos} \ : \ I()`}
   />
+  <Card title="Library"
+    intern="desmos/library"
+    latex={String.raw`f_\text{library}()`}
+  />
   <Card title="Game Development"
     intern="desmos/gamedev"
     latex={String.raw`g_{state} \to 1 - g_{state}`}
