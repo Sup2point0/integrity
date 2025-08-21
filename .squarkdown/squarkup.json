@@ -9,7 +9,8 @@
     ".squarkdown/content/",
     "docs/",
     "scriptures/",
-    "fun/"
+    "fun/",
+    "desmos/"
   ],
   "paths / dest": "src/routes/",
 

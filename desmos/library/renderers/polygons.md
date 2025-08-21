@@ -21,7 +21,7 @@ d_\text{polygon} \left(\,
 \,\right)
 ```
 
-> Generate vertices of an $n$-sided regular polygon.
+Generate vertices of an $n$-sided regular polygon.
 
 ### Arguments
 | Argument | Description | Type | Constraints | Notes |
