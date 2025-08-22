@@ -2,8 +2,8 @@
 <!-- #SQUARK live!
 | dest = desmos/library/functions/ranges
 | title = Ranges
-| index = desmos / library / functions / ranges
-| update = 2025 July 28
+| index = desmos / library / functions
+| update = 2025 August 22
 -->
 
 > Base: $f$
