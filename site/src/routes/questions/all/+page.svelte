@@ -3,8 +3,8 @@
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 
-import Desmos from "#parts/desmos.svelte";
 import QuestionCard from "#parts/ui/card.question.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -18,7 +18,8 @@ const questions = Site.get_list_of_all_questions();
 const tags = Site.get_all_tags();
 const methods = Site.get_all_methods();
 
-let filtered = $derived($search.filter_questions(questions));
+let limit = $state(60);
+let filtered = $derived($search.filter_questions(questions).slice(0, limit));
 
 
 onMount(() => {
@@ -30,7 +31,7 @@ onMount(() => {
 
 
 <Meta title="All Questions"
-  desc="Questions from all topics"
+  desc="Questions from all topics on Integrity, including integrals, graphs, completing the square and specials"
 />
 
 
@@ -52,9 +53,16 @@ onMount(() => {
 
 <aside>
   {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {questions.length} </p>
+    <p> Showing <span>{filtered.length}</span> question{filtered.length === 1 ? "" : "s"} of {questions.length} </p>
   {:else}
     <p> Oops, no questions found! </p>
+  {/if}
+  
+  {#if limit < questions.length}
+    <div class="buttons">
+      <Clicky text="Show More" action={() => { limit += 60; }} />
+      <Clicky text="Show All" action={() => { limit = questions.length }} />
+    </div>
   {/if}
 </aside>
 
@@ -84,16 +92,28 @@ onMount(() => {
 }
 
 aside {
-  margin-top: 1.5rem;
+  padding: 2.5rem 0 1rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   text-align: center;
   
   p {
+    padding-bottom: 1rem;
     color: $col-text-deut;
 
     span {
       font-weight: 400;
       color: $col-prot;
     }
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 0.5rem;
   }
 }
 

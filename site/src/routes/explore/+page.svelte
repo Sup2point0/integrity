@@ -39,7 +39,7 @@ import { goto } from "$app/navigation";
       }} />
       <Link text="Integrals" intern="questions/integrals" />
       <Link text="Graph Drawing" intern="questions/graph-drawing" />
-      <Link text="Guess the Graph" intern="questions/guess-graph" disabled={true} />
+      <Link text="Guess the Graph" intern="questions/guess-graph" hot={true} />
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
       <Link text="Completing the Square" intern="questions/complete-square" />
       <Link text="Addvent" intern="questions/addvent" />
