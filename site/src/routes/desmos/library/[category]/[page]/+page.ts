@@ -1,4 +1,5 @@
 import Site from "#scripts/site";
+import { capitalise } from "#scripts/utils";
 
 import { error } from "@sveltejs/kit";
 
@@ -19,7 +20,7 @@ export async function load({ url, params })
   }
   
   // @ts-ignore
-  page.category = params.category[0].toUpperCase() + params.category.slice(1);
+  page.category = capitalise(params.category);
   // @ts-ignore
   page.wide = true;
 

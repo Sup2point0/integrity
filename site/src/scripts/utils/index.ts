@@ -1,2 +1,2 @@
 export { pick_random_question, pick_random_scripture } from "./pick";
-export { display_time } from "./display";
+export { capitalise, display_time } from "./display";

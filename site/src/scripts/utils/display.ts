@@ -1,3 +1,9 @@
+/** Capitalise the first letter of the given text. */
+export function capitalise(text: string): string
+{
+  return text[0].toUpperCase() + text.slice(1);
+}
+
 /** Display a time in the format `HH:MM:SS`, given its seconds count. */
 export function display_time(t: number): string
 {

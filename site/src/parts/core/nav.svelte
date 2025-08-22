@@ -68,10 +68,9 @@ import { goto } from "$app/navigation";
     </NavLink>
 
     <NavLink text="Desmos" intern="desmos" collapse={true} hot={true}>
-      <Link text="Docs" intern="desmos/docs" hot={true} />
+      <Link text="Docs" intern="desmos/docs" />
       <Link text="Library" intern="desmos/library" hot={true} />
       <Link text="Game Development" intern="desmos/gamedev" dev={true} />
-      <Link text="Polymap" intern="desmos/gamedev/polymap" />
       <Link text="Gradient Descent" intern="desmos/grad-desc" disabled={true} />
     </NavLink>
 
