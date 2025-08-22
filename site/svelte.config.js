@@ -12,6 +12,7 @@ import scss_config from "./scss-config.js";
 import { correct_hast_tree, render_katex_blocks } from "./preprocess-latex.js";
 import { remark_alerts } from "./preprocess-alerts.js";
 
+import site_pages from "./src/data/site.json" with { type: "json" };
 import dyna_scriptures from "./src/data/scriptures.json" with { type: "json" };
 
 
@@ -59,12 +60,17 @@ const svelte_config = {
         "/speedrun/finish",
         "/trails/integrity",
         ...(
+          Object.values(site_pages.index.library.pages)
+          .map(path => site_pages.pages[path])
+          .map(page => `/${page.dest}`)
+        ),
+        ...(
           Object.entries(dyna_scriptures).flatMap(
             ([chapter, pages]) => Object.keys(pages).map(
               page => `/desmos/gamedev/${chapter.toLowerCase()}/${page}`
             )
           )
-        )
+        ),
       ]
     },
   },

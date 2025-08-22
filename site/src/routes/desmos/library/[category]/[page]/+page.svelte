@@ -21,7 +21,7 @@ let data = $derived(page.data as Page);
   { text: "Desmos", intern: "desmos" },
   { text: "Library", intern: "desmos/library" },
   // @ts-ignore
-  { text: data.category!, intern: `desmos/library/${data.category!}` },
+  { text: data.category!, intern: `desmos/library/${data.category!.toLowerCase()}` },
   { text: data.title! },
 ]} />
 
