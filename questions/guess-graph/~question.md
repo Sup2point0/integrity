@@ -32,9 +32,3 @@ graph-bounds:
 ### 2
 
 ### 3
-
-
-## Answer
-```math
-
-```
