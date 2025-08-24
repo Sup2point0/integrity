@@ -1,7 +1,7 @@
 # Numerical Functions
 <!-- #SQUARK live!
 | dest = desmos/library/functions/numerical
-| title = Numerical Functions
+| title = Numerical
 | index = desmos / library / functions
 | update = 2025 August 21
 -->

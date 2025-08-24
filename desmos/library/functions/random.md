@@ -1,7 +1,7 @@
-# Random Functions
+# Randomisation Functions
 <!-- #SQUARK live!
 | dest = desmos/library/functions/random
-| title = Random Functions
+| title = Randomisation
 | index = desmos / library / functions
 | update = 2025 August 24
 -->
