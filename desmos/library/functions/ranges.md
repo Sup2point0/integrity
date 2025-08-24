@@ -1,7 +1,7 @@
 # Range Functions
 <!-- #SQUARK live!
 | dest = desmos/library/functions/ranges
-| title = Ranges
+| title = Range Functions
 | index = desmos / library / functions
 | update = 2025 August 22
 -->

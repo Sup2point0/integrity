@@ -1,7 +1,7 @@
 # Trigonometric Functions
 <!-- #SQUARK live!
 | dest = desmos/library/functions/trig
-| title = Trigonometry
+| title = Trigonometric Functions
 | index = desmos / library / functions
 | update = 2025 August 22
 -->

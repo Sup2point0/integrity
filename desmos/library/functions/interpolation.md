@@ -1,7 +1,7 @@
 # Interpolation Functions
 <!-- #SQUARK live!
 | dest = desmos/library/functions/interpolation
-| title = Interpolation
+| title = Interpolation Functions
 | index = desmos / library / functions
 | update = 2025 August 24
 -->

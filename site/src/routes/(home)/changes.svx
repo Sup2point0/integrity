@@ -1,5 +1,5 @@
+***August 22*** The [Desmos library](https://sup2point0.github.io/integrity/desmos/library) has been added. [Gamedev in Desmos](https://sup2point0.github.io/desmos/gamedev) scriptures have been moved from `/scriptures/desmos/` to `/desmos/`.
+
 ***July 13*** [Guess the Graph questions](https://sup2point0.github.io/integrity/questions/guess-the-graph) have been added!
 
 ***July 9*** All-new dynamic scriptures with step-by-step walkthroughs have been added for the *Game Development in Desmos* series! Go [check it out](https://sup2point0.github.io/integrity/desmos/gamedev/prerequisites/graphs).
-
-***July 2*** [Graph-drawing questions](https://sup2point0.github.io/integrity/questions/graph-drawing) have (finally) been added!
