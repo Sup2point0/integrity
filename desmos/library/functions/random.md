@@ -3,7 +3,7 @@
 | dest = desmos/library/functions/random
 | title = Random
 | index = desmos / library / functions
-| update = 2025 August 22
+| update = 2025 August 24
 -->
 
 This page documents library functions related to randomisation.
