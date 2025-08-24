@@ -65,19 +65,19 @@ d_\text{polygon} \left(\,
 ```math
 d_\text{rect} \left(\,
   p_\text{centre},
-  s_\text{width},
-  s_\text{height}
+  x,
+  y
 \,\right)
 ```
 
-Draw a rectangle at centre $p_\text{centre}$ with dimensions $s_\text{width} \times s_\text{height}$.
+Draw a rectangle at centre $p_\text{centre}$ with dimensions $x \times y$.
 
 ### Arguments
 | Argument | Description | Type | Constraints | Notes |
 | :------- | :---------- | :--- | :---------- | :---- |
 | $p_\text{centre}$ | rectangle centre | $(\mathbb{R}, \mathbb{R})$ | | |
-| $s_\text{width}$ | rectangle width | $\mathbb{R}^{+}$ | | $x$ dimension |
-| $s_\text{height}$ | rectangle height | $\mathbb{R}^{+}$ | | $y$ dimension |
+| $x$ | rectangle width | $\mathbb{R}^{+}$ | | |
+| $y$ | rectangle height | $\mathbb{R}^{+}$ | | |
 
 ### Return
 None
@@ -92,11 +92,57 @@ d_{rect}\left(\left(3,\ 2\right),\ 4,\ 1\right)
 ```math
 d_\text{rect} \left(\,
   p_\text{centre},
-  s_\text{width},
-  s_\text{height}
+  x,
+  y
 \,\right)
 =
-\operatorname{polygon}\left(p_{centre}+\left(-\frac{s_{width}}{2},\ -\frac{s_{height}}{2}\right),\ p_{centre}+\left(\frac{s_{width}}{2},\ -\frac{s_{height}}{2}\right),\ p_{centre}+\left(\frac{s_{width}}{2},\ \frac{s_{height}}{2}\right),\ p_{centre}+\left(-\frac{s_{width}}{2},\ \frac{s_{height}}{2}\right)\right)
+\operatorname{polygon}\left(p_{centre}+\left(-\frac{x}{2},\ -\frac{y}{2}\right),\ p_{centre}+\left(\frac{x}{2},\ -\frac{y}{2}\right),\ p_{centre}+\left(\frac{x}{2},\ \frac{y}{2}\right),\ p_{centre}+\left(-\frac{x}{2},\ \frac{y}{2}\right)\right)
+```
+
+### Dependencies
+None
+
+
+## Aligned Rectangle
+
+```math
+d_\text{rectaligned} \left(\,
+  p_\text{pivot},
+  p_{xy},
+  p_\text{align}
+\,\right)
+```
+
+Draw a rectangle at pivot $p_\text{pivot}$ with dimensions $p_{xy}$.
+
+### Arguments
+| Argument | Description | Domain | Constraints | Notes |
+| :------- | :---------- | :----- | :---------- | :---- |
+| $p_\text{pivot}$ | pivot point | $(\mathbb{R}, \mathbb{R})$ | | |
+| $p_\text{xy}$ | rectangle dimensions | $(\mathbb{R}, \mathbb{R})$ | | |
+| $p_\text{align}$ | alignment | $(\mathbb{R}, \mathbb{R})$ | $(-1, -1) \leq p_\text{align} \leq (1, 1)$ | $(-1, -1)$ means the upper-right corner is used as the pivot (the rectangle is drawn in the negative quadrant). |
+
+### Return
+None
+
+### Usage
+```desmos
+d_{rectaligned}\left(p_{pivot},\ p_{xy},\ p_{align}\right)=\operatorname{polygon}\left(p_{pivot}+\left(\left(p_{align}.x-1\right)\frac{p_{xy}.x}{2},\ \left(p_{align}.y-1\right)\frac{p_{xy}.y}{2}\right),\ p_{pivot}+\left(\left(p_{align}.x+1\right)\frac{p_{xy}.x}{2},\ \left(p_{align}.y-1\right)\frac{p_{xy}.y}{2}\right),\ p_{pivot}+\left(\left(p_{align}.x+1\right)\cdot\frac{p_{xy}.x}{2},\ \left(p_{align}.y+1\right)\frac{p_{xy}.y}{2}\right),\ p_{pivot}+\left(\left(p_{align}.x-1\right)\cdot\frac{p_{xy}.x}{2},\ \left(p_{align}.y+1\right)\frac{p_{xy}.y}{2}\right)\right)
+d_{rectaligned}\left(\left(0,\ 0\right),\ \left(3,\ 4\right),\ \left(-1,\ -1\right)\right)
+d_{rectaligned}\left(\left(2,\ 2\right),\ \left(5,\ 5\right),\ \left(1,\ -1\right)\right)
+```
+
+### Implementation
+```math
+d_\text{rectaligned} \left(\,
+  p_\text{pivot},
+  p_{xy},
+  p_\text{align}
+\,\right)
+=
+\operatorname{polygon}\left(
+  p_{pivot}+\left(\left(p_{align}.x-1\right)\frac{p_{xy}.x}{2},\ \left(p_{align}.y-1\right)\frac{p_{xy}.y}{2}\right),\ p_{pivot}+\left(\left(p_{align}.x+1\right)\frac{p_{xy}.x}{2},\ \left(p_{align}.y-1\right)\frac{p_{xy}.y}{2}\right),\ p_{pivot}+\left(\left(p_{align}.x+1\right)\cdot\frac{p_{xy}.x}{2},\ \left(p_{align}.y+1\right)\frac{p_{xy}.y}{2}\right),\ p_{pivot}+\left(\left(p_{align}.x-1\right)\cdot\frac{p_{xy}.x}{2},\ \left(p_{align}.y+1\right)\frac{p_{xy}.y}{2}\right)
+\right)
 ```
 
 ### Dependencies

@@ -59,23 +59,6 @@ f_\text{nrange} \left(\,
 None
 
 
-## List Range
-
-```math
-\begin{align*}
-  &\ f_\text{lrange} \left(\,
-    l
-  \,\right)
-\\[1em] =&\
-  \left[\,
-    1 \, \text{...}\,  \text{length}(l)
-  \,\right]
-\end{align*}
-```
-
-> Generate a list of integers corresponding to the indices of a list.
-
-
 ## Step-Wise List Range
 
 ```math
