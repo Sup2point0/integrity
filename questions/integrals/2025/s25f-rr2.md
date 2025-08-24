@@ -9,6 +9,8 @@ tags:
   - wack
 methods:
   - acc
+flags:
+  - abstract
 ---
 
 

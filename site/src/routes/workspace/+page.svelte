@@ -100,6 +100,11 @@ function try_load_question(shard: Shard | null): Question | undefined
     return;
   }
 
+  if (question.flags.includes("abstract")) {
+    alert("Sorry, this question can’t be checked with Workspace.");
+    return;
+  }
+
   return question;
 }
 

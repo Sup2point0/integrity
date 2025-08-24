@@ -49,9 +49,11 @@ function display_title(text: string): string
   </div>
 
   <Line width="80%" margin="1rem auto" />
-
+  
   <div class="utils lower">
-    <Clicky text="Open in Workspace" intern="workspace?shard={question?.shard}" />
+    {#if !question?.flags.includes("abstract")}
+      <Clicky text="Open in Workspace" intern="workspace?shard={question?.shard}" />
+    {/if}
   </div>
 </section>
 

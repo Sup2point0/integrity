@@ -8,6 +8,8 @@ tags:
   - funny
 methods:
   - troll
+flags:
+  - abstract
 ---
 
 
