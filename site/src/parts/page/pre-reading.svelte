@@ -22,7 +22,7 @@ let { paths }: Props = $props();
 
 
 <Banner title="Pre-Reading Material">
-  You’ll need to know the content in the following articles:
+  You’ll need to be familiar with the content in the following articles:
   
   {#each paths as path}
     {@const data = Site.pages[path]}
@@ -30,3 +30,12 @@ let { paths }: Props = $props();
     <a href="{base}/{data?.dest}">{data?.head}</a>
   {/each}
 </Banner>
+
+
+<style lang="scss">
+
+a {
+  @include underline-link;
+}
+
+</style>
