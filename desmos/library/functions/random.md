@@ -19,7 +19,7 @@ f_\text{randint} \left(\,
 \,\right)
 ```
 
-Generate a random integer $x$ such that $s_\text{start} \leq x \leq s_\text{stop}$.
+Uniformly generate a random integer $x$ such that $s_\text{start} \leq x \leq s_\text{stop}$.
 
 ### Arguments
 | Argument | Description | Domain | Constraints | Notes |
@@ -31,7 +31,7 @@ Generate a random integer $x$ such that $s_\text{start} \leq x \leq s_\text{stop
 ### Return
 | Value | Description | Codomain | Constraints | Notes |
 | :---- | :---------- | :------- | :---------- | :---- |
-| $x$ | random integer | $\mathbb{Z}$ | $s_\text{start} \leq x \leq s_\text{stop}$ | |
+| $\omega$ | random integer | $\mathbb{Z}$ | $s_\text{start} \leq \omega \leq s_\text{stop}$ | |
 
 ### Usage
 ```desmos
@@ -54,6 +54,49 @@ f_\text{randint} \left(\,
 
 ### Notes
 - $s_\text{stop} < s_\text{start}$ results in unexpected behaviour due to the use of $\operatorname{floor}()$ and $s_\text{stop} + 1$.
+
+### Dependencies
+None
+
+
+## Random Integer Scalar
+
+```math
+f_\text{randintscale} \left(\,
+  s_\text{seed}
+\,\right)
+```
+
+Uniformly pick a random number from $\{ -1, 0, 1 \}$.
+
+### Arguments
+| Argument | Description | Domain | Constraints | Notes |
+| :------- | :---------- | :----- | :---------- | :---- |
+| $s_\text{seed}$ | randomiser seed | $\mathbb{R}$ | | |
+
+### Return
+| Value | Description | Codomain | Constraints | Notes |
+| :---- | :---------- | :------- | :---------- | :---- |
+| $\omega$ | random integer | $\mathbb{Z}$ | $\omega \in \{ -1, 0, 1 \}$ | |
+
+### Usage
+```desmos
+f_{randintscale}\left(s_{seed}\right)=\operatorname{floor}\left(3\cdot\operatorname{random}\left(\right)-1\right)
+f_{randintscale}\left(e\right)
+f_{randintscale}\left(e^{2}\right)
+f_{randintscale}\left(e^{3}\right)
+```
+
+### Implementation
+```math
+f_\text{randintscale} \left(\,
+  s_\text{seed}
+\,\right)
+=
+\operatorname{floor}\left(
+  3\cdot\operatorname{random}\left(\right)-1
+\right)
+```
 
 ### Dependencies
 None
