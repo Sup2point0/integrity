@@ -3,7 +3,7 @@ topic: guess-graph
 title: retroactive
 desc: 
 date: 2024 June
-difficulty: retroactive
+difficulty: based
 tags:
   - poly
 graph-bounds: 8
