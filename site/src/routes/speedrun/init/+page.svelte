@@ -166,7 +166,7 @@ onMount(() => {
         <p> Use this to prevent downtime between questions from adding to your run time. </p>
       </th>
       <td>
-        <SelectDropdown bind:value={$speedrun.prefs.pause_timer_onsubmit} options={{
+        <SelectDropdown bind:value={$speedrun.prefs.pause_onsubmit} options={{
           "Always": "always",
           "Only When Correct": "when-correct",
           "Never": false,

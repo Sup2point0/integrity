@@ -19,6 +19,7 @@ export interface TextBlock
 }
 
 
+/** An object with properties that are set to either `true` or `false`. */
 export interface States {
   [key: string]: boolean;
 }

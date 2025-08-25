@@ -29,7 +29,7 @@ export class SpeedrunData
     solved: true,
   };
 
-  prefs: States = {
+  prefs = {
     pause_onblur: false,
     pause_onsubmit: "when-correct",
     reveal_answer_onsubmit: "always",
@@ -141,6 +141,7 @@ export class SpeedrunData
     }
     else {
       this.run.state = "incorrect";
+      current.correct = false;
       if (this.prefs.pause_onsubmit === "always") {
         this._clear_interval_();
       }

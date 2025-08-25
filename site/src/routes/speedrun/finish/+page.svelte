@@ -1,13 +1,16 @@
 <script lang="ts">
 
 import { speedrun } from "#scripts/stores";
-import { display_time } from "#scripts/utils";
+import * as utils from "#scripts/utils";
 
+import Clicky from "#parts/ui/clicky.svelte";
 import ProgressBar from "#parts/ui/progress-bar.svelte";
+import Tag from "#parts/ui/tag.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
+import Line from "#parts/page/line.svelte";
 import Section from "#parts/page/section.svelte";
 import QuestionArray from "#parts/page/question-array.svelte";
 
@@ -15,12 +18,11 @@ import QuestionArray from "#parts/page/question-array.svelte";
 let seen = $derived(
   $speedrun.run.question_hist.map(q => q.shard)
 );
-
 let answered = $derived(
-  $speedrun.run.question_hist.map(q => q.correct !== null)
+  $speedrun.run.question_hist.filter(q => q.correct !== null)
 );
 let correct = $derived(
-  $speedrun.run.question_hist.map(q => q.correct === true)
+  $speedrun.run.question_hist.filter(q => q.correct === true)
 );
 
 </script>
@@ -39,26 +41,26 @@ let correct = $derived(
 <Header title="Speedrun Results" />
 
 
-<div class="container">
-  <div class="results">
-    <section>
-      <div class="row">
-        <p class="label"> Time </p>
-        <p class="count"> <span>{display_time($speedrun.run.elapsed)}</span> </p>
-      </div>
-    </section>
-      
-    <section>
-      <div class="row">
-        <p class="label"> Question Seen </p>
-        <p class="count"> <span>{seen.length}</span> </p>
-      </div>
-    </section>
+{#if $speedrun.run.finished}
 
+<div class="container results">
+  <div class="col left">
+    <div class="row">
+      <p class="label"> Time </p>
+      <p class="value"> <span>{utils.display_time($speedrun.run.elapsed)}</span> </p>
+    </div>
+    
+    <div class="row">
+      <p class="label"> Question Seen </p>
+      <p class="value"> <span>{seen.length}</span> </p>
+    </div>
+  </div>
+
+  <div class="col right">
     <section>
       <div class="row">
         <p class="label"> Questions Answered </p>
-        <p class="count">
+        <p class="value">
           <span>{answered.length}</span> of {seen.length}
         </p>
       </div>
@@ -68,7 +70,7 @@ let correct = $derived(
     <section>
       <div class="row">
         <p class="label"> Questions Correct </p>
-        <p class="count">
+        <p class="value">
           <span>{correct.length}</span> of {seen.length}
         </p>
       </div>
@@ -77,27 +79,82 @@ let correct = $derived(
   </div>
 </div>
 
+<Line width="80%" margin="1rem auto" />
+<div class="utils">
+  <Clicky text="Export Run Data" action={() => {
+    utils.download_json_file($speedrun.to_json(), "integrity.run.json");
+  }} />
+</div>
+
+<Section title="Statistics">
+  <div class="container">
+    <div class="col left">
+      <section>
+        <div class="row">
+          <div>
+            <p class="label"> Accuracy </p>
+            <p class="caption"> The proportion of questions you answered which were correct (ignores skipped questions). </p>
+          </div>
+          <p class="value"> <span>{utils.round(100 * correct.length / answered.length, 1)}%</span> </p>
+        </div>
+        <ProgressBar value={correct.length / answered.length} />
+      </section>
+    </div>
+
+    <div class="col right">
+
+    </div>
+  </div>
+</Section>
+
 <Section title="Questions">
   <QuestionArray shards={seen} />
 </Section>
+
+<Section title="Configuration">
+  <div class="row">
+    <p class="label"> Topic </p>
+    <p class="value"> <span>{$speedrun.topic ?? "?"}</span> </p>
+  </div>
+  
+  <div class="row">
+    <p class="label"> Difficulties </p>
+    <p class="value">
+      {#each Object.entries($speedrun.difficulties).filter(([diff, state]) => state) as [diff, state]}
+        <Tag kind={diff} tag={diff} />
+      {/each}
+    </p>
+  </div>
+</Section>
+
+{:else}
+
+<article>
+  <p> Oops, no recently finished speedruns! </p>
+  <p> Head over to <a href="init">Setup</a> to start a new speedrun. </p>
+</article>
+
+{/if}
+
 
 
 <style lang="scss">
 
 .container {
-  width: 100%;
+  padding: 0 4rem 2rem;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  gap: 4rem;
 
-.results {
-  padding: 2rem 0;
-  width: 80%;
-}
+  .col {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
 
-section {
-  padding: 1rem 0 2rem;
+    &.left { gap: 1rem; }
+    &.right { gap: 2rem; }
+  }
 }
 
 .row {
@@ -110,15 +167,36 @@ section {
   p {
     font-size: 120%;
 
-    &.count {
-      color: $col-text-deut;
+    &.label {
+      padding-bottom: 0.25em;
     }
 
-    span {
-      font-weight: 400;
-      color: $col-prot;
+    &.caption {
+      color: $col-text-deut;
+      font-size: 90%;
+    }
+
+    &.value {
+      color: $col-text-deut;
+
+      span {
+        font-weight: 400;
+        color: $col-prot;
+      }
     }
   }
+}
+
+.results {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.utils {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 </style>
