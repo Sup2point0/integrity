@@ -21,7 +21,7 @@ export class SpeedrunData
     incline: false,
     manifold: false,
     chaos: false,
-    null: false,
+    unassigned: false,
   };
 
   include: States = {
@@ -40,14 +40,22 @@ export class SpeedrunData
   created = $state(false);
 
 
+  /** Trigger a write to localStorage. */
+  _sync_()
+  {    
+    speedrun.update(s => {
+      return s;
+    });
+  }
+
   /** Expose attributes for syncing to localStorage. */
   to_json(): object
   {
     return {
       topic: this.topic,
       difficulties: this.difficulties,
-      prefs: this.prefs,
       include: this.include,
+      prefs: this.prefs,
       run: this.run.to_json(),
       created: this.created,
     };
@@ -76,6 +84,7 @@ export class SpeedrunData
   new_run()
   {
     this.run = new RunData();
+    this._sync_();
   }
 
   /** Check the run configurations are all valid. Returns an Array of errors, if empty then no errors were found. */
@@ -103,11 +112,12 @@ export class SpeedrunData
 
   /** Start the currently created run. */
   start()
-  {
+  {    
     this.next_question();
     this._set_interval_();
     this.run.started = true;
     this.run.running = true;
+    this._sync_();
   }
 
   /** Submit the index of an answer chosen from the options for a multiple-choice question. Returns `true` if the answer is correct. */
@@ -116,7 +126,7 @@ export class SpeedrunData
     this.run.answers.add(index);
     
     let current = this.run.question_hist.at(-1)!;
-    current.answered = true;
+    current.attempts++;
 
     if (index === 0) {
       this.run.state = "correct";
@@ -125,6 +135,8 @@ export class SpeedrunData
       if (["always", "when-correct"].includes(this.prefs.pause_onsubmit)) {
         this._clear_interval_();
       }
+      
+      this._sync_();
       return true;
     }
     else {
@@ -132,6 +144,8 @@ export class SpeedrunData
       if (this.prefs.pause_onsubmit === "always") {
         this._clear_interval_();
       }
+
+      this._sync_();
       return false;
     }
   }
@@ -147,13 +161,14 @@ export class SpeedrunData
 
     this.run.question_hist.push({
       shard: shard,
-      answered: false,
       correct: null,
+      attempts: 0,
       time: this.run.elapsed,
     });
 
     this.run.state = "solving";
     this._set_interval_();
+    this._sync_();
   }
 
   /** Pause the current run. */
@@ -161,12 +176,14 @@ export class SpeedrunData
   {
     this._clear_interval_();
     this.run.running = false;
+    this._sync_();
   }
 
   unpause()
   {
     this._set_interval_();
     this.run.running = true;
+    this._sync_();
   }
 
   /** Finish the current run. */
@@ -176,6 +193,7 @@ export class SpeedrunData
     this.run.running = false;
     this.run.finished = true;
     goto("finish");
+    this._sync_();
   }
 
 
@@ -204,7 +222,7 @@ export class SpeedrunData
  * - When the speedrun starts `.started` is set to `true`.
  * - `.running` controls whether the run is paused/unpaused.
  * - `.state` keeps track of whether an answer has been submitted.
- * - `
+ * - `.finished` controls whether the run has been ended.
  */
 class RunData
 {
@@ -237,8 +255,8 @@ class RunData
       finished: this.finished,
 
       elapsed: this.elapsed,
-      question_pool: this.question_pool,
       question: this.question?.shard,
+      question_pool: this.question_pool,
       question_hist: this.question_hist,
     }
   }
@@ -247,7 +265,7 @@ class RunData
 interface QuestionData {
   shard: Shard;
   correct: boolean | null;
-  attempts: number | null;
+  attempts: number;
   time: number;
 }
 

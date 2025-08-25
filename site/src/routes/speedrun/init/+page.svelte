@@ -77,9 +77,9 @@ onMount(() => {
       </th>
       <td class="flex">
         <Toggle text="UNASSIGNED"
-          value={$speedrun.difficulties.null}
+          value={$speedrun.difficulties.unassigned}
           toggle={() => {
-            $speedrun.difficulties.null = !$speedrun.difficulties.null;
+            $speedrun.difficulties.unassigned = !$speedrun.difficulties.unassigned;
           }}
         />
         <Toggle text="BASED" kind="based"
