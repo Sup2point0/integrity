@@ -2,7 +2,7 @@
 title: Ranges
 topic: Core
 next: list-comprehensions
-update: 2025 July 28
+update: 2025 August 25
 ---
 
 
