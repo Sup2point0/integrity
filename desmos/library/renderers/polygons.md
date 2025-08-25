@@ -60,6 +60,59 @@ d_\text{polygon} \left(\,
 - $f_\text{nrange}()$
 
 
+## Circle
+
+```math
+d_\text{circle} \left(\,
+  p_\text{centre},
+  r,
+  x,
+  y
+\,\right)
+```
+
+Generate a circle at centre $p_\text{centre}$ with radius $r$.
+
+### Arguments
+| Argument | Description | Domain | Constraints | Notes |
+| :------- | :---------- | :----- | :---------- | :---- |
+| $p_\text{centre}$ | centre | $(\mathbb{R}, \mathbb{R})$ | | |
+| $r$ | radius | $\mathbb{R}^{+}$ | | |
+| $x$ | calculator $x$ | | | |
+| $y$ | calculator $y$ | | | |
+
+### Return
+| Value | Description | Codomain | Constraints | Notes |
+| :---- | :---------- | :------- | :---------- | :---- |
+| $\omega$ | projection | $\mathbb{R}$ | | |
+
+### Usage
+Circles cannot be rendered by a function – an expression is needed. Compare the output of the renderer to $0$ using an inequality to render the circle.
+
+```desmos
+d_{circle}\left(p_{centre},\ r,\ x,\ y\right)=\left(x-p_{centre}.x\right)^{2}+\left(y-p_{centre}.y\right)^{2}-r^{2}
+d_{circle}\left(\left(2,\ 2\right),\ 1,\ x,\ y\right)\le0
+d_{circle}\left(\left(5,\ 5\right),\ 10,\ x,\ y\right)\ge0
+```
+
+### Implementation
+```math
+d_\text{circle} \left(\,
+  p_\text{centre},
+  r,
+  x,
+  y
+\,\right)
+=
+\left(x-p_{centre}.x\right)^{2}+\left(y-p_{centre}.y\right)^{2}-r^{2}
+```
+
+For all points $(x, y)$ in the 2D plane, the renderer evaluates the formula of a circle with $(x, y)$ substituted in. Using an inequality renders the locus of points that form the circle.
+
+### Dependencies
+None
+
+
 ## Rectangle
 
 ```math
