@@ -115,6 +115,11 @@ function next_subsection()
 <DesmosAPI />
 
 <svelte:window onkeydown={e => {
+  if (!started) {
+    started = true;
+    return;
+  }
+  
   if (e.key === "Enter" && e.shiftKey) {
     next_subsection();
   }
