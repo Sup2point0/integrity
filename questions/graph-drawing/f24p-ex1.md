@@ -30,10 +30,13 @@ e^{x}+x
 ## Hints
 
 ### 1
+Start by drawing $e^x$.
 
 ### 2
+As $x \to 0$, we’re dividing $e^x$ by an increasingly tiny value.
 
 ### 3
+As $x \to \infin$, $e^x$ grows faster than $x$.
 
 
 ## Solution

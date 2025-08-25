@@ -31,10 +31,13 @@ y = \tan\left(\ln x\right)
 ## Hints
 
 ### 1
+Consider $\tan(x)$.
 
 ### 2
+What’s the domain of the graph?
 
 ### 3
+As $\ln(x)$ changes more quickly, $\tan(x)$ oscillates faster.
 
 
 ## Solution

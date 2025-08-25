@@ -32,10 +32,13 @@ e^{-x}\sin\left(e^{x}\right)
 ## Hints
 
 ### 1
+Consider $\sin(e^x)$ individually first.
 
 ### 2
+What happens to the frequency of the sine wave?
 
 ### 3
+The whole sine wave is then also scaled by $e^x$.
 
 
 ## Solution
