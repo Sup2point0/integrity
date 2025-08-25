@@ -7,15 +7,17 @@
 -->
 
 ### What’s *Integrity* for?
-It’s a home for all the [maths questions](https://sup2point0.github.io/integrity/questions) I’ve created, [scriptures](https://sup2point0.github.io/integrity/scriptures) I’ve written, and various other mathematical adventures. You can find out more in [Synopsis](synopsis.md).
+It’s a home for all the [maths questions](https://sup2point0.github.io/integrity/questions) I’ve created, [guides](https://sup2point0.github.io/integrity/scriptures) I’ve written, [desmos stuff](https://sup2point0.github.io/integrity/desmos), and various other mathematical adventures. You can find out more in [Synopsis](synopsis.md).
 
 ### Who wrote these questions?
 Me!
 
-All of these questions were hand-crafted from scratch. A few will no doubt have been inspired by ideas or tricks from other questions I’ve seen before. And of course, this is maths, so there’s no such thing as an ‘original question’ anyway.
+All of these questions were hand-crafted from scratch by yours truly.
+
+A few will no doubt have been inspired by ideas or tricks from other questions I’ve seen before. And of course, this is maths, so there’s no such thing as an ‘original question’ anyway.
 
 ### What are these questions for?
-Some, such as the [Addvent](https://sup2point0.github.io/integrity/questions/addvent) questions, I created for events and competitions at school.
+Some, such as the [*Addvent*](https://sup2point0.github.io/integrity/questions/addvent) questions, I created for events and competitions at school.
 
 The rest I just come up with for fun, whether to experiment myself or challenge my friends.
 
@@ -26,14 +28,14 @@ Honestly, I don’t even know. I just gave it a shot, and it turned out I quite 
 
 [^similar]: Yeah, I know I say this for everything 💀
 
-A lot of questions are simply the results of permuting different functions – throwing stuff together and seeing what works. Some are built from the ground up with an intended method or track in mind.[^trick] A rare few come to me in dreams.[^dreams] Others take hours of painstaking engineering.[^dreams]
+A lot of questions are simply the results of permuting different functions – throwing stuff together and seeing what works. Some are built from the ground up with an intended method or track in mind.[^trick] Others take hours of painstaking engineering.[^alt-sol] A rare few come to me in dreams.[^dreams]
 
 [^trick]: It’s like, *“hmmm, what if we did one where you had to use this method...”*
 [^dreams]: I’m not even joking lmao
 [^alt-sol]: Only for someone to cheese it with a far simpler solution which I unknowingly created, naturally.
 
 ### Why are there so many questions?
-Oh my days, I actually love creating questions (especially integrals) too much. I came up with like 16 on a coach journey once. They just keep on coming, y’know. You’d think I’m approaching a point where I’ve tried most of the common combinations of the functions in maths, but nope!
+Oh my days, I actually love creating questions (especially integrals) too much. I came up with like 16 integrals on a coach journey once. They just keep on coming, y’know. You’d think I’m approaching a point where I’ve tried most of the common combinations of the functions in maths, but nope!
 
 It’s just fun, what can I say.
 
@@ -49,10 +51,8 @@ Okayy, can’t fault you for being too good at maths! The integrals are definite
 
 And [Addvent](https://sup2point0.github.io/integrity/questions/addvent) was for Addvent, there’s a reason the questions were accessible.
 
-### Why do questions have no difficulty indicator?
-Assigning difficulties to maths questions is painfully nontrivial, so I adopted the approach of “I’m just not even gonna try.”
-
-Update: This may change. See [Docs / Difficulties](https://sup2point0.github.io/integrity/docs/difficulties).
+### What do the difficulty indicators mean?
+See [Docs / Difficulties](docs/difficulties.md).
 
 ### I’ve finished all the questions, do you have any more?
 Hello!! Congratulations on solving so many, and tysm for using *Integrity*!
@@ -65,7 +65,7 @@ Absolutely, you’re more than welcome to! For more details, see [Licence](https
 ### Why are the scriptures so empty?
 It’s a work in progress lmao. I really don’t write fast, and I have way too many other projects I’m working on simultaneously. Also, I’d much rather release complete, polished and actually useful articles than vapid filler to make it look like I’ve done a lot.[^lot] Yes, it’s very unlikely I’ll get round to writing all the articles you can see I have planned in [Explore](https://sup2point0.github.io/integrity/explore). Such is life ¯\\_(ツ)_/¯
 
-[^lot]: The exception are the [Collections](https://sup2point0.github.io/integrity/scriptures/integrals/collections), which are eternally works in progress. Also I’m just lazy.
+[^lot]: The exception are the [Integral Collections](https://sup2point0.github.io/integrity/scriptures/integrals/collections), which are eternally works in progress. Also I’m just lazy.
 
 ### Why would I want to practise integration?
 See [Why Integrate?](https://sup2point0.github.io/integrity/scriptures/integrals/why)
@@ -94,7 +94,7 @@ I decided against allowing different themes on this site, since the focus is on 
 Just [drop an Issue on Github](https://github.com/Sup2point0/integrity/issues), and if I like the feature, I’ll get round to implementing it!
 
 ### Are the questions checked?
-All integrals are checked with Desmos before being added to *Integrity*, if possible. For those where the solution is difficult to plot, or are just generally horrific, solutions have been verified with either [WolframAlpha<sup>↗</sup>](https://www.wolframalpha.com/) or my mathematically inclined friend [iTechnical](https://github.com/itechnicals).
+All questions are checked with Desmos before being added to *Integrity*, if possible. For those where the solution is difficult to numerically verify, or are just generally horrific, solutions have been verified with either [WolframAlpha<sup>↗</sup>](https://www.wolframalpha.com/) or my mathematically inclined friend [iTechnical](https://github.com/itechnicals).
 
 ### Uhh, a question has an incorrect solution?
 Ohhh dear, I’ve done it again. *Definitely* drop an [issue on GitHub](https://github.com/Sup2point0/integrity/issues) and I’ll fix it as soon as I can.
@@ -103,4 +103,6 @@ Ohhh dear, I’ve done it again. *Definitely* drop an [issue on GitHub](https://
 Oh dear, the parsing engine’s flopped again. Or more likely, I’ve made some typo in the source LaTeX. Drop an [issue on GitHub](https://github.com/Sup2point0/integrity/issues) and I’ll be right on fixing it.
 
 ### Uhhh, the site’s broken?
-If the loading overlay’s taking a while, it almost certainly means JavaScript’s broken or crashed. This seems to happen very easily on Safari, but rarely on Chrome. I do check the site after each deployment, so if it’s immediately unusable I will go and fix it.
+If the loading overlay’s taking a while, it almost certainly means JavaScript’s broken or crashed. I do check the site after each deployment, so if it’s immediately unusable I will go and fix it.
+
+Again, drop an [issue on GitHub](https://github.com/Sup2point0/integrity/issues), ideally with some screenshots and console traces, and I’ll be on it.
