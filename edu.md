@@ -3,8 +3,8 @@
 | dest = info/decoded
 | title = decoded
 | head = <em>decoded</em>: Integrity
-| capt = Learnings, challenges and discoveries from writing my own maths questions
-| date = 2025 July 20
+| capt = Learnings, challenges and discoveries from developing a long-term large-scale site and writing my own maths questions
+| date = 2025 August 25
 -->
 
 > [!Note]
@@ -18,7 +18,7 @@
 
 - Doing questions on a topic every day *really* makes you better at it.
   - *Writing* questions on a topic *REALLY* makes you better at it.
-- You genuinely develop quite an insane intuition for topics when you immerse yourself in them for a prolonged period.
+  - You genuinely develop quite an insane intuition for topics when you immerse yourself in them for a prolonged period.
 - Development is a blast when you have the right tooling all available in advance.
 - Nice UIs aren’t *that* difficult to build if you prototype and think through things properly.
 - A lot of projects can end up wayyy larger than you expected or intended.
