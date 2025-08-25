@@ -39,7 +39,7 @@ import { goto } from "$app/navigation";
       }} />
       <Link text="Integrals" intern="questions/integrals" />
       <Link text="Graph Drawing" intern="questions/graph-drawing" />
-      <Link text="Guess the Graph" intern="questions/guess-graph" hot={true} />
+      <Link text="Guess the Graph" intern="questions/guess-graph" />
       <Link text="Cool Graphs" intern="questions/cool-graphs" />
       <Link text="Completing the Square" intern="questions/complete-square" />
       <Link text="Addvent" intern="questions/addvent" />
@@ -239,7 +239,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Quicklinks </h3>
     <div class="links">
-      <Link text="Polymap" intern="desmos/gamedev/polymap" />
+      <Link text="Polymap" intern="desmos/gamedev/polymap" dev={true} />
       <Link text="Essentials" intern="desmos/gamedev/essentials" />
       <Link text="Supplementals" intern="desmos/gamedev/supplementals" />
       <Link text="Core" intern="desmos/gamedev/core" />

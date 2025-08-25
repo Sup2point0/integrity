@@ -172,7 +172,7 @@ function next_subsection()
               out:slide={{ duration: 500, easing: expoOut }}
             >
               <!-- yes, it is a tad confusing to use <section> for each subsection, but... -->
-              <section class="sub"
+              <section class="sub gamedev"
                 class:live={idx === shown_subsections.length -1}
               >
                 {#each subsection as source}
@@ -350,7 +350,7 @@ section {
   }
 }
 
-:global(section:has(aside)) {
+:global(section.gamedev:has(aside)) {
   color: color.change($col-yes, $lightness: 40%);
   background: color.change($col-yes, $alpha: 12%);
 }
