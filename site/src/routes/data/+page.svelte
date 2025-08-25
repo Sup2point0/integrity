@@ -5,6 +5,7 @@ import en from "javascript-time-ago/locale/en";
 
 import Site from "#src/scripts/site";
 import { userprefs } from "#scripts/stores";
+import * as utils from "#scripts/utils";
 
 import Clicky from "#src/parts/ui/clicky.svelte";
 import Checkbox from "#parts/ui/checkbox.svelte";
@@ -38,15 +39,7 @@ const time_ago = new TimeAgo("en-US");
 function export_prefs()
 {
   $userprefs.saved = new Date().getTime();
-
-  const data = JSON.stringify($userprefs.to_json(), null, 2);
-  const blob = new Blob([data], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "integrity.prefs.json";
-  a.click();
+  utils.download_json_file($userprefs.to_json(), "integrity.prefs.json");
 }
 
 function check_integrity()

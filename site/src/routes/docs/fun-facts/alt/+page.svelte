@@ -37,8 +37,8 @@ onMount(() => {
 
 {#if live}
   <p>
-    <br><br> {T.split("").map(c => String.fromCharCode(c.charCodeAt()-4)).join("")}
-    <br><br> {R.split("").map(c => String.fromCharCode(c.charCodeAt()+4)).join("")}
+    <br><br> {T.split("").map(c => String.fromCharCode(c.charCodeAt(0)-4)).join("")}
+    <br><br> {R.split("").map(c => String.fromCharCode(c.charCodeAt(0)+4)).join("")}
   </p>
 
 {:else}
