@@ -26,7 +26,7 @@ let { levels, copy = false, shard }: Props = $props();
 
 <nav class="breadcrumbs">
   <div class="left">
-    {#each levels.entries() as [i, { text, intern, link}]}
+    {#each levels.entries() as [i, { text, intern, link }]}
       {#if i === levels.length -1}
         <div class="current"> {text} </div>
       

@@ -332,6 +332,8 @@ import { goto } from "$app/navigation";
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
         />
       {/each}
+
+      <a style:display="none" href="{base}/questions/special/interview"></a>
     </div>
   </section>
 
