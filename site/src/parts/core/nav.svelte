@@ -63,7 +63,7 @@ import { goto } from "$app/navigation";
     <NavLink text="Scriptures" intern="scriptures">
       <Link text="General" intern="scriptures/general" />
       <Link text="Integration" intern="scriptures/integrals" />
-      <Link text="Graph Drawing" intern="graph-drawing" disabled={true} />
+      <Link text="Graph Drawing" intern="graph-drawing" dev={true} />
       <Link text="Completing the Square" intern="scriptures/complete-square" />
     </NavLink>
 

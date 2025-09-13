@@ -107,6 +107,7 @@ import { goto } from "$app/navigation";
     <h3> Graph Drawing </h3>
     <div class="links">
       <Link text="Why Draw Graphs?" intern="scriptures/graph-drawing" disabled={true} />
+      <Link text="Addition as Clothes Hanging" intern="scriptures/graph-drawing/addition" dev={true} />
     </div>
   </section>
 
@@ -196,7 +197,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Docs </h3>
     <div class="links">
-      <Link text="Identifiable Identifiers" intern="docs/desmos/identifiers" />
+      <Link text="Identifiable Identifiers" intern="desmos/docs/identifiers" />
     </div>
   </section>
 </div>

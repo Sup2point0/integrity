@@ -16,7 +16,11 @@ def execute(source, dest)
   source.each do |file|
     log "#{i}#{GREY} of #{total}: #{WHITE}#{file.parent.basename}#{GREY}/#{BLUE}#{file.basename}"
     
-    shard = file.basename(".*")
+    shard = file.basename(".*").to_s
+
+    if shard.end_with?("~")
+      shard = shard[..-2]
+    end
 
     out = process(shard:, file:)
     topic = out["topic"]
@@ -42,6 +46,9 @@ questions = (ROOT/"questions").glob("**/*-*.md")
 log success: "found #{questions.length} question files!"
 execute(questions, ROOT/"site/src/data/questions.json")
 
-scriptures = (ROOT/"desmos/gamedev").glob("*/**/[!~]**.md")
+desmos = (ROOT/"desmos/gamedev").glob("*/**/[!~]**.md")
+graphs = (ROOT/"scriptures/graph-drawing").glob("*~.md")
+scriptures = desmos + graphs
+
 log success: "found #{scriptures.length} dynamic scripture files!"
 execute(scriptures, ROOT/"site/src/data/scriptures.json")
