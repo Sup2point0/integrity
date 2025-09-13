@@ -31,8 +31,8 @@ Honestly, I don’t even know. I just gave it a shot, and it turned out I quite 
 A lot of questions are simply the results of permuting different functions – throwing stuff together and seeing what works. Some are built from the ground up with an intended method or track in mind.[^trick] Others take hours of painstaking engineering.[^alt-sol] A rare few come to me in dreams.[^dreams]
 
 [^trick]: It’s like, *“hmmm, what if we did one where you had to use this method...”*
-[^dreams]: I’m not even joking lmao
 [^alt-sol]: Only for someone to cheese it with a far simpler solution which I unknowingly created, naturally.
+[^dreams]: I’m not even joking lmao
 
 ### Why are there so many questions?
 Oh my days, I actually love creating questions (especially integrals) too much. I came up with like 16 integrals on a coach journey once. They just keep on coming, y’know. You’d think I’m approaching a point where I’ve tried most of the common combinations of the functions in maths, but nope!
