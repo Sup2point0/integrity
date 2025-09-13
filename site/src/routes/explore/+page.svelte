@@ -178,7 +178,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Adventures </h3>
     <div class="links">
-      <Link text="How Do I Write Integrals?" intern="" disabled={true} />
+      <Link text="How Do I Write Integrals?" intern="scriptures/integrals/adventures/write" hot={true} />
       <Link text="What Makes a Good Integral?" intern="" disabled={true} />
       <Link text="Integration Is Like Organic Chemistry" intern="" disabled={true} />
       <Link text="Why -c?" intern="scriptures/integrals/adventures/-c" />
