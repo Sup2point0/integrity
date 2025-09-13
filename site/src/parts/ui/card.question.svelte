@@ -21,10 +21,9 @@ interface Props {
   latex?: Latex;
   desmos?: Block | Block[];
   style?: "block" | "row";
-  children?: any;
 }
 
-let { question, latex, desmos, style = "block", children }: Props = $props();
+let { question, latex, desmos, style = "block" }: Props = $props();
 
 
 function check_valid(data: Array<any>): boolean
