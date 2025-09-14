@@ -11,6 +11,7 @@ import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/page/search.svelte";
+import SearchFooter from "#parts/page/search-footer.svelte";
 
 import site from "#scripts/utils/site";
 
@@ -53,13 +54,8 @@ onMount(() => {
   {/each}
 </div>
 
-<aside>  
-  {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> question{filtered.length === 1 ? "" : "s"} of {questions.length} </p>
-  {:else}
-    <p> Oops, no questions found! </p>
-  {/if}
-</aside>
+<SearchFooter found={filtered.length} total={questions.length} />
+
 
 <div class="corn">
   <Clicky text="?" action={e => {    
@@ -93,24 +89,6 @@ onMount(() => {
   flex-flow: column;
   align-items: stretch;
   gap: 1rem;
-}
-
-aside {
-  padding: 2.5rem 0 1rem;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  text-align: center;
-  
-  p {
-    padding-bottom: 1rem;
-    color: $col-text-deut;
-
-    span {
-      font-weight: 400;
-      color: $col-prot;
-    }
-  }
 }
 
 .corn {

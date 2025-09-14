@@ -4,8 +4,8 @@ import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 
 import DesmosAPI from "#parts/desmos-api.svelte";
-import Desmos from "#parts/desmos.svelte";
 import QuestionCard from "#parts/ui/card.question.svelte";
+import SearchFooter from "#parts/page/search-footer.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -50,13 +50,7 @@ onMount(() => {
   {/each}
 </div>
 
-<aside>
-  {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> questions of {questions.length} </p>
-  {:else}
-    <p> Oops, no questions found! </p>
-  {/if}
-</aside>
+<SearchFooter found={filtered.length} total={questions.length} />
 
 
 <style lang="scss">

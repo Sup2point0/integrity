@@ -9,6 +9,7 @@ import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/page/search.svelte";
+import SearchFooter from "#parts/page/search-footer.svelte";
 
 import { onMount } from "svelte";
 
@@ -49,13 +50,7 @@ onMount(() => {
   {/each}
 </div>
 
-<aside>
-  {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> question{filtered.length == 1 ? "" : "s"} of {questions.length} </p>
-  {:else}
-    <p> Oops, no questions found! </p>
-  {/if}
-</aside>
+<SearchFooter found={filtered.length} total={questions.length} />
 
 
 <style lang="scss">

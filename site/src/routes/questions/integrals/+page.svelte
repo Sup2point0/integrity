@@ -11,7 +11,9 @@ import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/page/search.svelte";
 
+
 import { onMount } from "svelte";
+    import SearchFooter from "#src/parts/page/search-footer.svelte";
 
 
 const questions = Site.get_questions_of_topic("integrals");
@@ -51,20 +53,10 @@ onMount(() => {
   {/each}
 </div>
 
-<aside>  
-  {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> question{filtered.length === 1 ? "" : "s"} of {questions.length} </p>
-  {:else}
-    <p> Oops, no questions found! </p>
-  {/if}
-  
-  {#if limit < questions.length}
-    <div class="buttons">
-      <Clicky text="Show More" action={() => { limit += 60; }} />
-      <Clicky text="Show All" action={() => { limit = questions.length }} />
-    </div>
-  {/if}
-</aside>
+<SearchFooter bind:limit
+  found={filtered.length}
+  total={questions.length}
+/>
 
 
 <style lang="scss">
@@ -88,32 +80,6 @@ onMount(() => {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     justify-content: center;
-  }
-}
-
-aside {
-  padding: 2.5rem 0 1rem;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  text-align: center;
-  
-  p {
-    padding-bottom: 1rem;
-    color: $col-text-deut;
-
-    span {
-      font-weight: 400;
-      color: $col-prot;
-    }
-  }
-
-  .buttons {
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    gap: 0.5rem;
   }
 }
 

@@ -4,12 +4,12 @@ import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/page/search.svelte";
+import SearchFooter from "#parts/page/search-footer.svelte";
 
 import { onMount } from "svelte";
 
@@ -51,20 +51,10 @@ onMount(() => {
   {/each}
 </div>
 
-<aside>
-  {#if filtered.length > 0}
-    <p> Showing <span>{filtered.length}</span> question{filtered.length === 1 ? "" : "s"} of {questions.length} </p>
-  {:else}
-    <p> Oops, no questions found! </p>
-  {/if}
-  
-  {#if limit < questions.length}
-    <div class="buttons">
-      <Clicky text="Show More" action={() => { limit += 60; }} />
-      <Clicky text="Show All" action={() => { limit = questions.length }} />
-    </div>
-  {/if}
-</aside>
+<SearchFooter bind:limit
+  found={filtered.length}
+  total={questions.length}
+/>
 
 
 <style lang="scss">
@@ -103,17 +93,8 @@ aside {
     color: $col-text-deut;
 
     span {
-      font-weight: 400;
       color: $col-prot;
     }
-  }
-
-  .buttons {
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    gap: 0.5rem;
   }
 }
 
