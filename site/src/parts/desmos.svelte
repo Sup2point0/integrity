@@ -125,20 +125,25 @@ function parse_block(block: Block, index: number): object | undefined
     desmos.setMathBounds(viewport_bounds);
   }
 
-  let slider_bounds = parse_control_sequence(control, "slider")
+  let style = parse_control_sequence(control, "style");
+  let slider_bounds = parse_control_sequence(control, "slider");
   
   if (parts.length === 0) return undefined;
 
   return {
     id: `graph-${index}`,
     latex: content === "" ? " " : content,
+
+    hidden: control.includes("\\hidden"),
+
     color: (
+      style?.colour ??
       (control.includes("\\asympt") || control.includes("\\base")) ? Desmos.Colors.BLACK :
       cols.next().value
     ),
-    hidden: control.includes("\\hidden"),
 
     lineOpacity: (
+      style?.opacity ??
       (control.includes("\\asympt") || control.includes("\\base")) ? 0.3 :
       0.9
     ),
@@ -159,7 +164,7 @@ function parse_control_sequence(source: string, sequence: string): object | unde
   let pattern = (
     String.raw`(?<=\\`
     + sequence
-    + String.raw`\{)\{.+\}(?=\})`
+    + String.raw`)\{.+\}`
   );
 
   let out = source.match(pattern)?.at(0);
