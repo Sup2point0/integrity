@@ -80,6 +80,7 @@ let question: Question | null = $derived(page_data.question);
   <Desmos
     blocks={question?.answer ?? question?.question}
     bounds={question?.["graph-bounds"]}
+    height="70vh"
   />
 </Section>
 

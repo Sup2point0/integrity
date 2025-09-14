@@ -184,7 +184,7 @@ function parse_block(block: Block, index: number): object | undefined
 
     sliderBounds: control.slider,
 
-    playing: control?.animate?.playing,
+    playing: control?.animate?.playing ?? false,
   };
 }
 

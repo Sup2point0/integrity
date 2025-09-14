@@ -1,3 +1,4 @@
+<!-- TODO use <Desmos> instead of self-made -->
 <script lang="ts">
 
 import { page_data } from "../page-data.svelte.ts";
