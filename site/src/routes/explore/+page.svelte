@@ -107,7 +107,9 @@ import { goto } from "$app/navigation";
     <h3> Graph Drawing </h3>
     <div class="links">
       <Link text="Why Draw Graphs?" intern="scriptures/graph-drawing" disabled={true} />
-      <Link text="Addition as Clothes Hanging" intern="scriptures/graph-drawing/addition" dev={true} />
+      <Link text="Addition as Stacking" intern="scriptures/graph-drawing/dyna/addition" disabled={true} />
+      <Link text="Subtraction as Clothes Hanging" intern="scriptures/graph-drawing/dyna/subtraction" disabled={true} />
+      <Link text="Multiplication as Scaling" intern="scriptures/graph-drawing/dyna/multiplication" dev={true} />
     </div>
   </section>
 

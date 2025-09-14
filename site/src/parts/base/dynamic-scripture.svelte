@@ -323,8 +323,7 @@ nav.upper {
 
 article {
   max-height: 70vh;
-  padding-right: 0.5rem;
-  padding-bottom: 1rem;
+  padding: 0 0.5rem 1rem;
   display: flex;
   flex-flow: column nowrap;
   overflow-y: scroll;
