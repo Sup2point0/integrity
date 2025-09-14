@@ -16,7 +16,17 @@ import site_pages from "./src/data/site.json" with { type: "json" };
 import dyna_scriptures from "./src/data/scriptures.json" with { type: "json" };
 
 
-export const mdsvex_config = {
+function get_paths_of_index(index)
+{
+  return (
+    Object.values(site_pages.index[index].pages)
+      .map(path => site_pages.pages[path])
+      .map(page => `/${page.dest}`)
+  );
+}
+
+
+const mdsvex_config = {
   extensions: [".svx", ".md"],
   remarkPlugins: [
     remarkFootnotes,
@@ -59,11 +69,8 @@ const svelte_config = {
         "/",
         "/speedrun/finish",
         "/trails/integrity",
-        ...(
-          Object.values(site_pages.index.library.pages)
-          .map(path => site_pages.pages[path])
-          .map(page => `/${page.dest}`)
-        ),
+        ...get_paths_of_index("graph-drawing"),
+        ...get_paths_of_index("library"),
         ...(
           Object.entries(dyna_scriptures).flatMap(
             ([chapter, pages]) => Object.keys(pages).map(
