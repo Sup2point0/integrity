@@ -60,7 +60,7 @@ x \leq 1
 As $x \to 1^{+}$, $\ln{x} \to 0$, so $\ln(\ln{x}) \to -\infin$. We still have an asymptote, but now at $x = 1$ instead of $x = 0$.
 
 ```desmos
-\asympt : x = 1
+\asympt :: x = 1
 ```
 
 For $1 < x$, notice $\ln{x}$ is a positive increasing function just like $x$. This means $\ln(\ln{x})$ will still look similar to a $\ln(x)$ curve, just with a distorted shape.
