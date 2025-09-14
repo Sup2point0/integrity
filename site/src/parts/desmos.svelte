@@ -120,34 +120,40 @@ function parse_block(block: Block, index: number): object | undefined
   let parts = block.content?.split(" : ");
   let content = parts.at(-1);
 
-  let control: string | string[];
+  let sequence: string | string[];
   if (parts.length > 1) {
-    control = parts.slice(0, -1);
+    sequence = parts.slice(0, -1);
   } else {
-    control = parts.at(0)!;
+    sequence = parts.at(0)!;
   }
 
   /* parse control sequences */
-  let viewport_bounds;
-  let style;
-  let slider_bounds;
-  let animate;
+  let control: {
+    [sequence: string]: object | boolean | undefined;
+  } = {};
 
   function apply_sequence(sequence: string)
   {
-    viewport_bounds = parse_sequence(sequence, "viewport");
-    if (viewport_bounds) {
-      desmos.setMathBounds(viewport_bounds);
+    control.viewport_bounds = parse_sequence(sequence, "viewport");
+    if (control.viewport_bounds) {
+      desmos.setMathBounds(control.viewport_bounds);
     }
 
-    style = parse_sequence(sequence, "style");
-    slider_bounds = parse_sequence(sequence, "slider");
+    for (let each of ["asympt", "base", "dashed", "hidden"]) {
+      if (sequence.includes("\\" + each)) {
+        control[each] = control[each] || true;
+      }
+    }
+
+    for (let each of ["style", "slider", "animate"]) {
+      control[each] = parse_sequence(sequence, each);
+    }
   }
 
-  if (Array.isArray(control)) {
-    control.forEach(apply_sequence);
+  if (Array.isArray(sequence)) {
+    sequence.forEach(apply_sequence);
   } else {
-    apply_sequence(control);
+    apply_sequence(sequence);
   }
   
   /* build expression */
@@ -157,26 +163,28 @@ function parse_block(block: Block, index: number): object | undefined
     id: `graph-${index}`,
     latex: content === "" ? " " : content,
 
-    hidden: control.includes("\\hidden"),
+    hidden: control.hidden,
 
     color: (
-      style?.colour ??
-      (control.includes("\\asympt") || control.includes("\\base")) ? Desmos.Colors.BLACK :
+      control.style?.colour ??
+      (control.asympt || control.base) ? Desmos.Colors.BLACK :
       cols.next().value
     ),
 
     lineOpacity: (
-      style?.opacity ??
-      (control.includes("\\asympt") || control.includes("\\base")) ? 0.3 :
+      control.style?.opacity ??
+      (control.asympt || control.base) ? 0.3 :
       0.9
     ),
 
     lineStyle: (
-      (control.includes("\\dashed") || control.includes("\\asympt")) ? Desmos.Styles.DASHED :
+      (control.dashed || control.asympt) ? Desmos.Styles.DASHED :
       Desmos.Styles.SOLID
     ),
 
-    sliderBounds: slider_bounds,
+    sliderBounds: control.slider,
+
+    playing: control?.animate?.playing,
   };
 }
 
