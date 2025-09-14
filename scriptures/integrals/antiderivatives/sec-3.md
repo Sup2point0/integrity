@@ -31,7 +31,7 @@ Then using $\sin^2{x} = 1 - \cos^2{x}$ we get
 
 and the rest is easy to integrate – inverse chain rule takes care of the right. So the strategy here was to break the product of $\sin{x}$-s up into $\sin{x}$ and $\cos{x}$, giving us an expanded product with parts that we can individually integrate.
 
-Let’s try the same thing for $\sec{x}$. We’ll split it into $\sec{x}$ and $\sec^2{x}$, then use the trigonometric identity $\tan^2{x} + 1 = \sec^2{x}$ (also part of your [standard arsenal](../everything-anything.md)), giving
+Let’s try the same thing for $\sec{x}$. We’ll split it into $\sec{x}$ and $\sec^2{x}$, then use the trigonometric identity $\tan^2{x} + 1 = \sec^2{x}$ (also part of your [standard arsenal](../collections/everything-anything.md)), giving
 
 ```math
 \begin{align*}

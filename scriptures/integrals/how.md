@@ -111,7 +111,7 @@ And secondly:
 
 This means that multiplicative constants *of the whole integral* make no difference, so you can factorise them out.
 
-Bear in mind that $k$ **must** be a constant term – i.e. no $x$-s (or whatever your integrating variable is). [This is a common beginner pitfall](epic-errors.md).
+Bear in mind that $k$ **must** be a constant term – i.e. no $x$-s (or whatever your integrating variable is). [This is a common beginner pitfall](collections/epic-errors.md).
 
 
 ## Sweep the Battlefield

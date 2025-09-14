@@ -67,7 +67,7 @@ It’s all fun and games until you get to $\ln()$. Here’s a gnarly inequality:
 
 </div>
 
-The issue with $\ln(x)$ is that it is decidely [*twin-signed*](../integrals/collections/glossary.md#twin-signed). In fact, it can even be $0$. If you’re not familiar, this is what the graph of $\ln(x)$ looks like:
+The issue with $\ln(x)$ is that it is decidely [*twin-signed*](../integrals/collections/int-int.md#twin-signed). In fact, it can even be $0$. If you’re not familiar, this is what the graph of $\ln(x)$ looks like:
 
 ```desmos
 y = \ln\left(x\right)
