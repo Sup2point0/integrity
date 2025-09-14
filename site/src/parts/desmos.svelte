@@ -121,7 +121,7 @@ function try_load_desmos()
 function parse_block(block: Block, index: number): object | undefined
 {
   /* split parts */
-  let parts = block.content?.split(" : ");
+  let parts = block.content?.split(" :: ");
   let content = parts.at(-1);
 
   let sequence: string | string[];
@@ -138,23 +138,35 @@ function parse_block(block: Block, index: number): object | undefined
 
   function apply_sequence(sequence: string)
   {
-    control.viewport_bounds = parse_sequence(sequence, "viewport");
-    if (control.viewport_bounds) {
-      desmos.setMathBounds(control.viewport_bounds);
+    let viewport_bounds = parse_sequence(sequence, "viewport");
+    if (viewport_bounds) {
+      viewport_bounds.left = viewport_bounds.left ?? -10;
+      viewport_bounds.bottom = viewport_bounds.bottom ?? -10;
+      viewport_bounds.right = viewport_bounds.right ?? 10;
+      viewport_bounds.top = viewport_bounds.top ?? 10;
+      
+      desmos.setMathBounds(viewport_bounds);
     }
 
-    for (let each of ["asympt", "base", "dashed", "hidden"]) {
+    /* flags */
+    for (let each of ["animate", "asympt", "base", "dashed", "hidden", "text"]) {
       if (sequence.includes("\\" + each)) {
-        control[each] = control[each] || true;
+        control[each] = true;
       }
     }
 
-    for (let each of ["style", "slider", "animate"]) {
-      control[each] = parse_sequence(sequence, each);
+    /* data */
+    let out;
+
+    for (let each of ["line", "point", "slider", "label"]) {
+      out = parse_sequence(sequence, each);
+      if (out) {
+        control[each] = out;
+      }
     }
   }
 
-  if (Array.isArray(sequence)) {
+  if (Array.isArray(sequence)) {    
     sequence.forEach(apply_sequence);
   } else {    
     apply_sequence(sequence);
@@ -163,40 +175,60 @@ function parse_block(block: Block, index: number): object | undefined
   /* build expression */
   if (
     parts.length === 0
-    || sequence[0] === "\\" && content[0] === "\\"
+    || sequence[0] === "\\" && content![0] === "\\"
   ) return undefined;
 
-  return {
+  let out = {
     id: `graph-${index}`,
-    latex: content === "" ? " " : content,
+
+    ...(!control.text && { latex: (content === "" ? " " : content) }),
+    ...( control.text && { text: (content === "" ? " " : content), type: "text" }),
 
     hidden: control.hidden,
 
     color: (
-      control.style?.colour ??
-      (control.asympt || control.base) ? Desmos.Colors.BLACK :
-      cols.next().value
+      control.style?.colour
+      ?? (control.asympt || control.base) ? Desmos.Colors.BLACK
+      : cols.next().value
     ),
 
     lineOpacity: (
-      control.style?.opacity ??
-      (control.asympt || control.base) ? 0.3 :
-      0.9
+      control.style?.opacity
+      ?? (control.asympt || control.base) ? 0.3
+      : 0.9
     ),
 
     lineStyle: (
-      (control.dashed || control.asympt) ? Desmos.Styles.DASHED :
-      Desmos.Styles.SOLID
+      (control.dashed || control.asympt) ? Desmos.Styles.DASHED
+      : Desmos.Styles.SOLID
+    ),
+
+    pointStyle: (
+      control.point?.style ? Desmos.Styles[control.point.style]
+      : Desmos.Styles.OPEN
     ),
 
     sliderBounds: control.slider,
 
-    playing: control?.animate?.playing ?? false,
+    playing: control.animate ?? false,
+
+    label: control.label?.text ?? "",
+
+    showLabel: control.label?.show || control.label?.text,
+
+    labelOrientation: (
+      control.label?.pos ? Desmos.LabelOrientations[control.label.pos]
+      : Desmos.LabelOrientations.DEFAULT
+    ),
   };
+
+  console.log("out =", out);
+
+  return out;
 }
 
 function parse_sequence(source: string, sequence: string): object | undefined
-{
+{  
   if (!source.includes(sequence)) return;
 
   let pattern = (
