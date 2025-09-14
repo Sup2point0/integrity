@@ -287,7 +287,7 @@ y = \ln\left( \frac{1}{x^2} \right) \cdot e^{\left(1/x\right)}
 
 
 
-https://sup2point0.github.io/questions/special/interview
+https://sup2point0.github.io/integrity/questions/special/interview
 ```
 
 ### Thought

@@ -136,5 +136,6 @@ end
 
 
 def clean(text)
-  return text.strip.gsub(/[ ]+/, " ").gsub(/[\n]+/, "<br><br>")
+  # return text.strip.gsub(/[ ]+/, " ").gsub(/[\n]+/, "<br><br>")
+  return text.strip.gsub(/[ ]+/, " ").gsub(/\n/, "<br><br>")
 end

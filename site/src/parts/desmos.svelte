@@ -115,16 +115,10 @@ function try_load_desmos()
 }
 
 function parse_block(block: Block, index: number): object | undefined
-{
+{  
   let parts = block.content?.split(" : ");
   let control = parts.at(0)!;
   let content = parts.at(-1);
-
-  // if (control.includes("\\viewport")) {    
-  //   let bounds = control.match(/(?<=\\viewport\{)\{.+\}(?=\})/)?.at(0);
-  //   bounds = bounds?.replaceAll(/([a-zA-Z]+):/, '"1":');    
-  //   desmos.setMathBounds(JSON.parse(bounds));
-  // }
 
   let viewport_bounds = parse_control_sequence(control, "viewport");
   if (viewport_bounds) {
@@ -133,11 +127,11 @@ function parse_block(block: Block, index: number): object | undefined
 
   let slider_bounds = parse_control_sequence(control, "slider")
   
-  if (parts.length === 0 || content === "") return undefined;
+  if (parts.length === 0) return undefined;
 
   return {
     id: `graph-${index}`,
-    latex: content,
+    latex: content === "" ? " " : content,
     color: (
       (control.includes("\\asympt") || control.includes("\\base")) ? Desmos.Colors.BLACK :
       cols.next().value
@@ -145,7 +139,7 @@ function parse_block(block: Block, index: number): object | undefined
     hidden: control.includes("\\hidden"),
 
     lineOpacity: (
-      (control.includes("\\asympt") || control.includes("\\base")) ? 0.4 :
+      (control.includes("\\asympt") || control.includes("\\base")) ? 0.3 :
       0.9
     ),
 
