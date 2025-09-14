@@ -1,6 +1,7 @@
-$col-prot: light-dark(
-  oklch(61.3% 0.106 237.7),
-  oklch(66.6% 0.106 237.7));
+$col-prot-light: oklch(61.3% 0.106 237.7);
+$col-prot-dark: oklch(66.6% 0.106 237.7);
+$col-prot: light-dark($col-prot-light, $col-prot-dark);
+
 $col-deut: oklch(70.74% 0.1702 53.41);
 
 $col-yes: oklch(0.7632 0.149 170.92);

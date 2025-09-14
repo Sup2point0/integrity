@@ -173,7 +173,7 @@ function next_subsection()
               out:slide={{ duration: 500, easing: expoOut }}
             >
               <!-- yes, it is a tad confusing to use <section> for each subsection, but... -->
-              <section class="sub gamedev"
+              <section class="sub dyna-scripture"
                 class:live={idx === shown_subsections.length -1}
               >
                 {#each subsection as source}
@@ -250,7 +250,7 @@ nav {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 nav.upper {
@@ -351,9 +351,13 @@ section {
   }
 }
 
-:global(section.gamedev:has(aside)) {
+:global(section.dyna-scripture:has(aside)) {
   color: color.change($col-yes, $lightness: 40%);
   background: color.change($col-yes, $alpha: 12%);
+}
+:global(section.dyna-scripture:has(aside.note)) {
+  color: color.change($col-prot-light, $lightness: 40%);
+  background: color.change($col-prot-light, $alpha: 12%);
 }
 
 nav.lower {
