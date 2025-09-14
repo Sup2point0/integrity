@@ -3,6 +3,8 @@
 import { page_data } from "../page-data.svelte.ts";
 import { Question } from "#scripts/types";
 
+import DesmosAPI from "#parts/desmos-api.svelte";
+
 import Katex from "#parts/katex.svelte";
 import Desmos from "#parts/desmos.svelte";
 import Tag from "#parts/ui/tag.svelte";
@@ -20,9 +22,8 @@ let question: Question | null = $derived(page_data.question);
 </script>
 
 
-<Meta title="{question?.shard ?? '?'} · Graph Drawing">
-  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-</Meta>
+<Meta title="{question?.shard ?? '?'} · Graph Drawing" />
+<DesmosAPI />
 
 
 <Breadcrumbs levels={[

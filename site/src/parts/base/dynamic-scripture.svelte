@@ -313,7 +313,7 @@ nav.upper {
   padding-bottom: 3rem;
   display: flex;
   flex-flow: row nowrap;
-  gap: 3rem;
+  gap: 2rem;
 
   .half {
     width: 50%;

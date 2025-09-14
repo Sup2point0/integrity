@@ -1,6 +1,6 @@
 <!-- @component Desmos
 
-A graph rendered by Desmos.
+An embedded Desmos window that handles initialisation when the element scrolls into view.
 -->
 
 <script lang="ts">
@@ -8,6 +8,7 @@ A graph rendered by Desmos.
 import type { Block } from "#scripts/types";
 
 import { onMount } from "svelte";
+
 
 interface Props {
   blocks?: Block | Block[] | null;
@@ -119,22 +120,70 @@ function parse_block(block: Block, index: number): object | undefined
   let control = parts.at(0)!;
   let content = parts.at(-1);
 
-  if (control.includes("\\viewport")) {    
-    let bounds = control.match(/(?<=\\viewport\{)\{.+\}(?=\})/)?.at(0);
-    bounds = bounds?.replaceAll(/([a-zA-Z]+):/, '"1":');    
-    desmos.setMathBounds(JSON.parse(bounds));
+  // if (control.includes("\\viewport")) {    
+  //   let bounds = control.match(/(?<=\\viewport\{)\{.+\}(?=\})/)?.at(0);
+  //   bounds = bounds?.replaceAll(/([a-zA-Z]+):/, '"1":');    
+  //   desmos.setMathBounds(JSON.parse(bounds));
+  // }
+
+  let viewport_bounds = parse_control_sequence(control, "viewport");
+  if (viewport_bounds) {
+    desmos.setMathBounds(viewport_bounds);
   }
+
+  let slider_bounds = parse_control_sequence(control, "slider")
   
   if (parts.length === 0 || content === "") return undefined;
 
   return {
     id: `graph-${index}`,
     latex: content,
-    color: control.includes("\\asympt") ? Desmos.Colors.BLACK : cols.next().value,
+    color: (
+      (control.includes("\\asympt") || control.includes("\\base")) ? Desmos.Colors.BLACK :
+      cols.next().value
+    ),
     hidden: control.includes("\\hidden"),
-    lineOpacity: control.includes("\\asympt") ? 0.4 : 0.9,
-    lineStyle: (control.includes("\\dashed") || control.includes("\\asympt")) ? Desmos.Styles.DASHED : Desmos.Styles.SOLID,
+
+    lineOpacity: (
+      (control.includes("\\asympt") || control.includes("\\base")) ? 0.4 :
+      0.9
+    ),
+
+    lineStyle: (
+      (control.includes("\\dashed") || control.includes("\\asympt")) ? Desmos.Styles.DASHED :
+      Desmos.Styles.SOLID
+    ),
+
+    sliderBounds: slider_bounds,
   };
+}
+
+function parse_control_sequence(source: string, sequence: string): object | undefined
+{
+  if (!source.includes(sequence)) return;
+
+  let pattern = (
+    String.raw`(?<=\\`
+    + sequence
+    + String.raw`\{)\{.+\}(?=\})`
+  );
+
+  let out = source.match(pattern)?.at(0);
+  if (out === undefined) return;
+
+  out = out.replaceAll(/([a-zA-Z]+):/g, String.raw`"$1":`);
+  if (out === undefined) return;
+
+  let res: object;
+
+  try {
+    res = JSON.parse(out);
+  }
+  catch {
+    return;
+  }
+
+  return res;
 }
 
 </script>
