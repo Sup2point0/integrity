@@ -115,19 +115,42 @@ function try_load_desmos()
 }
 
 function parse_block(block: Block, index: number): object | undefined
-{  
+{
+  /* split parts */
   let parts = block.content?.split(" : ");
-  let control = parts.at(0)!;
   let content = parts.at(-1);
 
-  let viewport_bounds = parse_control_sequence(control, "viewport");
-  if (viewport_bounds) {
-    desmos.setMathBounds(viewport_bounds);
+  let control: string | string[];
+  if (parts.length > 1) {
+    control = parts.slice(0, -1);
+  } else {
+    control = parts.at(0)!;
   }
 
-  let style = parse_control_sequence(control, "style");
-  let slider_bounds = parse_control_sequence(control, "slider");
+  /* parse control sequences */
+  let viewport_bounds;
+  let style;
+  let slider_bounds;
+  let animate;
+
+  function apply_sequence(sequence: string)
+  {
+    viewport_bounds = parse_sequence(sequence, "viewport");
+    if (viewport_bounds) {
+      desmos.setMathBounds(viewport_bounds);
+    }
+
+    style = parse_sequence(sequence, "style");
+    slider_bounds = parse_sequence(sequence, "slider");
+  }
+
+  if (Array.isArray(control)) {
+    control.forEach(apply_sequence);
+  } else {
+    apply_sequence(control);
+  }
   
+  /* build expression */
   if (parts.length === 0) return undefined;
 
   return {
@@ -157,7 +180,7 @@ function parse_block(block: Block, index: number): object | undefined
   };
 }
 
-function parse_control_sequence(source: string, sequence: string): object | undefined
+function parse_sequence(source: string, sequence: string): object | undefined
 {
   if (!source.includes(sequence)) return;
 
