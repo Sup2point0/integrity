@@ -8,7 +8,7 @@
   <img height="36px" alt="synopsis" src="assets/links/synopsis.png"></a>
 <a title="FAQ" href="faq.md">
   <img height="36px" alt="faq" src="assets/links/faq.png"></a>
-<a title="docs" href="docs/">
+<a title="docs" href="https://sup2point0.github.io/integrity/docs">
   <img height="36px" alt="docs" src="assets/links/docs.png"></a>
 <a title="decoded" href="edu.md">
   <img height="36px" alt="decoded" src="assets/links/decoded.png"></a>
@@ -23,22 +23,24 @@
 
 ## Features
 
-- Dozens of hand-crafted maths questions
-- Question browser with hints and solutions
-- Hand-crafted scriptures on mathematical topics
-- Processing engine to extract questions from Markdown files
+- Hundreds of hand-crafted maths questions
+- Question browser with myriads of filters
+- Hints, answers and solutions to every question
+- Articles on mathematical topics
+- Dynamic step-by-step walkthroughs
+
+- Parsing engine to extract questions and content from Markdown files
+- Custom syntax for controlling Desmos embed from markup
 
 ### Topics
 - [Integration](https://sup2point0.github.io/integrity/questions/integrals)
+- [Game Development in Desmos](https://sup2point0.github.io/integrity/desmos/gamedev)
+- [Gradient Descent in Desmos](https://sup2point0.github.io/integrity/desmos/grad-desc) (coming soon!)
 - [Graph Drawing](https://sup2point0.github.io/integrity/questions/graph-drawing)
-- [Completing the Square](https://sup2point0.github.io/integrity/questions/complete-square)
 - [Guess the Graph](https://sup2point0.github.io/integrity/questions/guess-graph)
-- [Addvent](https://sup2point0.github.io/questions/addvent) (Christmas-themed questions)
 - [Cool Graphs](https://sup2point0.github.io/integrity/questions/cool-graphs)
-- [Desmos](https://www.desmos.com/)
-
-### Upcoming
-- Speedrun environment for speedrunning questions
+- [Completing the Square](https://sup2point0.github.io/integrity/questions/complete-square)
+- [Addvent](https://sup2point0.github.io/integrity/questions/addvent)
 
 
 <br>
@@ -48,7 +50,7 @@
 
 <table>
   <tr><td>
-    <img alt="Integral questions" src="assets/previews/integrity-preview.png">
+    <img alt="Integration questions in Integrity’s question browser" src="assets/previews/integrity-preview.png">
   </td></tr>
 </table>
 
