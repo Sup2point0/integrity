@@ -106,7 +106,7 @@ def extract_blocks(lines)
       })
       ctx = nil
     else
-      if ctx == "desmos"
+      if ctx == "desmos" and not line.strip.empty?
         load.concat("\n")
       end
       load.concat(line)
