@@ -66,7 +66,7 @@ As $x \to 1^{+}$, $\ln{x} \to 0$, so $\ln(\ln{x}) \to -\infin$. We still have an
 For $1 < x$, notice $\ln{x}$ is a positive increasing function just like $x$. This means $\ln(\ln{x})$ will still look similar to a $\ln(x)$ curve, just with a distorted shape.
 
 ```desmos
-\viewport{ left: -2, right: 8, bottom: -2, top: 8 } :
+\viewport{ left: -2, right: 8, bottom: -2, top: 8 }
 y = x \ \left\{ 1 < x \right\}
 y = \ln{x} \ \left\{ 1 < x \right\}
 ```

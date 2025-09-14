@@ -105,7 +105,11 @@ function try_load_desmos()
     desmos.setExpressions([]);
     
     if (Array.isArray(blocks)) {
-      desmos.setExpressions(blocks.map((block, i) => parse_block(block, i)));
+      desmos.setExpressions(
+        blocks
+          .map((block, i) => parse_block(block, i))
+          .filter(each => each !== undefined)
+      );
     } else {
       desmos.setExpression(parse_block(blocks, 1));
     }
@@ -152,12 +156,15 @@ function parse_block(block: Block, index: number): object | undefined
 
   if (Array.isArray(sequence)) {
     sequence.forEach(apply_sequence);
-  } else {
+  } else {    
     apply_sequence(sequence);
   }
   
   /* build expression */
-  if (parts.length === 0) return undefined;
+  if (
+    parts.length === 0
+    || sequence[0] === "\\" && content[0] === "\\"
+  ) return undefined;
 
   return {
     id: `graph-${index}`,
