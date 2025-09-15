@@ -3,7 +3,8 @@ name: 'Github Pages Deployment'
 on:
   workflow_dispatch:
   push:
-    paths: '**.yml'
+    paths:
+      - '**.yml'
   schedule:
     - cron: '20 4 * * 6'
 
