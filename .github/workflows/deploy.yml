@@ -42,7 +42,6 @@ jobs:
 
       - name: 'svelte / build'
         env:
-          # BASE_PATH: '/${{ github.event.repository.name }}/site'
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           npm run buildx
