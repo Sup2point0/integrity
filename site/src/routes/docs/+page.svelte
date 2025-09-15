@@ -6,6 +6,7 @@ import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Meta from "#parts/page/meta.svelte";
 import ArticleArray from "#parts/page/article-array.svelte";
+import ArticleCard from "#parts/ui/card.article.svelte";
 
 </script>
 
@@ -23,4 +24,8 @@ import ArticleArray from "#parts/page/article-array.svelte";
 <Header title="Docs" />
 
 
-<ArticleArray paths={Site.index.docs.pages} />
+<ArticleArray paths={Site.index.docs.pages}>
+  <ArticleCard page={{
+    dest: "docs/tags", head: "Tags", capt: "Descriptor tags for questions",
+  }} />
+</ArticleArray>

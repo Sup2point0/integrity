@@ -1,5 +1,5 @@
 # Speedrun
-<!-- #SQUARK live!
+<!-- #SQUARK live! devy!
 | dest = docs/speedrun
 | index = docs
 | date = 2025 January 14
@@ -22,7 +22,7 @@ The speedrun menu may look a little different for each topic, but ultimately it 
 
 Head to [Setup Speedrun](https://sup2point0.github.io/integrity/speedrun/init) to configure the speedrun. Pick your topic, difficulties to include, and customise all your other preferences.
 
-![configuring speedrun options]()
+![configuring speedrun options](../assets/previews/speedrun-setup.png)
 
 If you don’t set finishing criteria, the speedrun will keep going until you’ve exhausted all the available questions. You can also choose to end the speedrun manually at any time.
 

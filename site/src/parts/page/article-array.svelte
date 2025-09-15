@@ -13,9 +13,10 @@ import ArticleCard from "#parts/ui/card.article.svelte";
 interface Props {
   paths?: string[];
   pages?: Page[];
+  children?: any;
 }
 
-let { paths, pages }: Props = $props();
+let { paths, pages, children }: Props = $props();
 
 </script>
 
@@ -30,10 +31,10 @@ let { paths, pages }: Props = $props();
     {#each paths as path}
       <ArticleCard {path} />
     {/each}
-
-  {:else}
   
   {/if}
+
+  {@render children?.()}
 </ul>
 
 

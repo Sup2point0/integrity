@@ -32,6 +32,12 @@ let { page } = $props();
     </Banner>
   {/if}
 
+  {#if page.flags?.includes("devy")}
+    <Banner title="Eternal Maintenance">
+      The content in this article may be liable to change. Some things may be out of date!
+    </Banner>
+  {/if}
+
   {#if page.flags?.includes("opin")}
     <Banner title="Objective Minima">
       This piece contains opinionated content, please do not feel obliged to agree.

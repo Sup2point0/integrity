@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = desmos/docs/identifiers
 | capt = Standardised conventions for identifier naming
-| index = desmos / docs
+| index = desmos / desmos-docs
 | date = 2024 September
 | update = 2025 July 28
 -->
