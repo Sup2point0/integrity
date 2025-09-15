@@ -104,9 +104,9 @@ Well well, don’t these look familiar. Oh yes, completing the square is how the
 
 Next time you use your calculator to solve a quadratic equation, remember it is completing the square that made it possible.
 
-From the quadratic formula we know the discriminant $b^2 - 4ac$ tells us the number of real solutions for $x$. If it’s positive here are 2 solutions, if it’s zero there’s 1 repeated solution, and if it’s negative this means there are no real solutions since we’re taking the swuare root of a negative number.
+From the quadratic formula we know the discriminant $b^2 - 4ac$ tells us the number of real solutions for $x$. If it’s positive there are 2 solutions, if it’s zero there’s 1 repeated solution, and if it’s negative this means there are no real solutions since we’re taking the square root of a negative number.
 
-With the context of completing the square we know have a very graphic way to interpret this. $b^2 - 4ac$ is how much we shift our quadratic down (or up) by:
+With the context of completing the square we now have a very graphic way to interpret this. $b^2 - 4ac$ is how much we shift our quadratic down (or up) by:
 
 `.`
 
