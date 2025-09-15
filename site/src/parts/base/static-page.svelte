@@ -12,7 +12,7 @@ import Header from "#parts/core/header.svelte";
 import { page } from "$app/state";
 
 
-let { levels } = $props();
+let { levels, id = undefined } = $props();
 
 const { content, metadata: data } = page.data;
 
@@ -29,6 +29,6 @@ const { content, metadata: data } = page.data;
 
 <Header page={data} />
 
-<article>
+<article {id}>
   {@render content()}
 </article>

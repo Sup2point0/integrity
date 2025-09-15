@@ -7,6 +7,7 @@ A block that renders HTML and LaTeX content from a list of `Block`s.
 
 import katex from "katex";
 
+import { render_markdown } from "#scripts/utils";
 import type { Block } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
@@ -43,20 +44,12 @@ let { source }: Props = $props();
   {:else}
     {@const chunks = source.content.split(/(\$[^$]+\$)/).map(
       chunk => (
-          chunk.startsWith("$")
+        chunk.startsWith("$")
         ? katex.renderToString(chunk.slice(1, -1), {
             displayMode: false,
             throwOnError: false,
           })
-        : (chunk
-          // bold, italic
-          .replaceAll(/(?<=^|[ \n\(])\*{3}(.+?)\*{3}(?=$|[ \n,\.\)])/g, "<strong><em>$1</em></strong>")
-          .replaceAll(/(?<=^|[ \n\(])\*{2}(.+?)\*{2}(?=$|[ \n,\.\)])/g, "<strong>$1</strong>")
-          .replaceAll(/(?<=^|[ \n\(])\*(.+?)\*(?=$|[ \n,\.\)])/g, "<em>$1</em>")
-          // code
-          .replaceAll(/(?<=^|[ \n\(])`/g, "<code>")
-          .replaceAll(/`(?=$|[ \n,\.\)])/g, "</code>")
-        )
+        : render_markdown(chunk)
       )
     )}
 

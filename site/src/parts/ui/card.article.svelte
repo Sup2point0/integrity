@@ -6,6 +6,7 @@ A card for selecting an article. -->
 
 import Site from "#scripts/site";
 
+import { render_markdown } from "#scripts/utils";
 import type { Page } from "#scripts/types";
 
 import { base } from "$app/paths";
@@ -27,10 +28,10 @@ const data: Page = page ?? Site.pages[path!];
   href="{base}/{data?.dest}"
 >
   <div class="info">
-    <h4> {@html data?.head ?? "Page Unavailable"} </h4>
+    <h4> {@html render_markdown(data?.head) ?? "Page Unavailable"} </h4>
     
     {#if data?.capt}
-      <p> {@html data.capt} </p>
+      <p> {@html render_markdown(data.capt)} </p>
     {/if}
   </div>
 </a>

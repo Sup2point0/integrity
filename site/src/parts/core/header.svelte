@@ -2,6 +2,7 @@
 
 <script lang="ts">
 
+import { render_markdown } from "#scripts/utils";
 import type { Page } from "#scripts/types";
 
 import ArticleBanners from "#parts/page/article-banners.svelte";
@@ -20,8 +21,8 @@ let { title, capt, page }: Props = $props();
 
 <header>
   <div class="info">
-    <h1> {@html title ?? page?.head ?? "Untitled Page"} </h1>
-    <p class="capt"> {@html capt ?? page?.capt ?? ""} </p>
+    <h1> {@html render_markdown(title ?? page?.head) ?? "Untitled Page"} </h1>
+    <p class="capt"> {@html render_markdown(capt ?? page?.capt) ?? ""} </p>
   </div>
 
   {#if page}

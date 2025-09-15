@@ -1,7 +1,7 @@
 # Roadmap
 <!-- #SQUARK live!
 | dest = info/roadmap
-| capt = Development of <em>Integrity</em>
+| capt = Development of *Integrity*
 | index = info
 | update = 2025 September 15
 -->
