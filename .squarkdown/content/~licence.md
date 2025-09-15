@@ -2,6 +2,8 @@
 <!-- #SQUARK live!
 | dest = info/licence
 | capt = Usage of content from Integrity
+| index = info
+| update = 2025 September 15
 -->
 
 The [questions](https://github.com/Sup2point0/integrity/questions/all) and [source code](https://github.com/Sup2point0/integrity) of *Integrity* are licensed under the [MIT Licence](https://github.com/Sup2point0/integrity/blob/main/LICENSE).

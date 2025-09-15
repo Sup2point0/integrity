@@ -26,6 +26,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
     "synopsis.md",
     "faq.md",
     "edu.md",
+    "roadmap.md",
     ".squarkdown/content/privacy.md",
     ".squarkdown/content/~licence.md",
   ]}

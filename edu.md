@@ -4,6 +4,7 @@
 | title = decoded
 | head = <em>decoded</em>: Integrity
 | capt = Learnings, challenges and discoveries from developing a long-term large-scale site and writing my own maths questions
+| index = info
 | date = 2025 August 25
 -->
 

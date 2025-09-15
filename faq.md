@@ -3,6 +3,7 @@
 | dest = info/faq
 | capt = Frequently Asked Questions
 | desc = Frequently asked questions about Integrity
+| index = info
 | date = 2025 June 26
 -->
 

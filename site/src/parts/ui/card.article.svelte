@@ -42,12 +42,12 @@ a.article-card {
   width: 100%;
   min-width: 16em;
   min-height: 8em;
-  padding: 0.75em;
+  padding: 1em 1.5em;
   flex: 1 0 auto;
   display: flex;
   flex-flow: row;
   justify-content: start;
-  align-items: stretch;
+  align-items: center;
   
   @include font-ui;
   color: $col-text;
@@ -73,7 +73,6 @@ a.article-card {
 
 .info {
   width: 100%;
-  padding: 1em 0.4em 0.4em;
   text-align: left;
 
   h4 {
