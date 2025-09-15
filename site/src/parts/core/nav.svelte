@@ -85,6 +85,7 @@ import { goto } from "$app/navigation";
       <Link text="About" intern="info/synopsis" />
       <Link text="FAQ" intern="info/faq" />
       <Link text="decoded" intern="info/decoded" />
+      <Link text="Roadmap" intern="info/roadmap" />
       <Link text="Privacy" intern="info/privacy" />
       <Link text="Licence" intern="info/licence" />
     </NavLink>

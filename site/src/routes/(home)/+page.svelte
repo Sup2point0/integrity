@@ -39,7 +39,7 @@ onMount(() => {
 
 <svelte:head>
   <title> Integrity · Sup#2.0 </title>
-  <meta name="description" content="Lovingly handcrafted maths questions for the intellectually adventurous. Features 200+ challenging integrals, plus problems on completing the square, graph drawing and more!" />
+  <meta name="description" content="Lovingly handcrafted maths questions for the intellectually adventurous. Features 300 challenging integrals, plus problems on completing the square, graph drawing and more!" />
 </svelte:head>
 
 
