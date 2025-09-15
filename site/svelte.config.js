@@ -69,15 +69,20 @@ const svelte_config = {
         "/",
         "/speedrun/finish",
         "/trails/integrity",
+
         ...get_paths_of_index("graph-drawing"),
         ...get_paths_of_index("library"),
-        ...(
-          Object.entries(dyna_scriptures).flatMap(
-            ([chapter, pages]) => Object.keys(pages).map(
-              page => `/desmos/gamedev/${chapter.toLowerCase()}/${page}`
+
+        ...(Object.entries(dyna_scriptures).flatMap(
+          ([chapter, pages]) => Object.keys(pages).map(
+            page => (
+              chapter === "graph-drawing" ?
+                `/scriptures/graph-drawing/dyna/${page}`
+              :
+                `/desmos/gamedev/${chapter.toLowerCase()}/${page}`
             )
           )
-        ),
+        )),
       ],
     },
   },
