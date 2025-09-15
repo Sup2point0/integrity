@@ -13,7 +13,15 @@ In this scripture, we look at an approach for drawing graphs that involve multip
 ## // Static Scaling
 
 ### _
-So, let’s start with the simple transformation of **scaling** graphs which I’m sure you’re familiar with. It’s simple, but it’s actually the fundamental idea that multiplying expressions draws from.
+You might be surprised why multiplication is the first operation we look at. Surely addition is simpler?
+
+### _
+Funnily enough, it rarely is. We’ll see why this is later on, but essentially, in graph drawing we care about *relative* magnitudes much more than *absolute* magnitudes.
+
+Multiplication deals with the former, but addition deals with the latter, and that can make determining the shape of a graph a whole lot more painful.
+
+### _
+So, let’s start with the simple transformation of **scaling** graphs which I’m sure you’re familiar with. It’s simple, but it’s actually the fundamental idea that multiplying expressions draws from (pun intended).
 
 ### _
 ```desmos
@@ -31,9 +39,17 @@ What does $y = 2\sin(x)$ look like?
 y = 2 \sin{x}
 ```
 
-We’re *scaling* $\sin(x)$ by $2$, which means for every point on the line, its $y$-value is doubled.
+We’re multiplying $\sin(x)$ by $2$, which means for every point on the line, its $y$-value is doubled.
 
 The visual result is that the whole graph is ‘stretched’ vertically (parallel to the $y$ axis), such that it doubles in height. It’s just like stretching an image in PowerPoint.
+
+### _
+So, think of multiplying a graph as *scaling* it in the $y$-direction. Remember, all of graph drawing is just transformations.
+
+### _
+We’re going to refer to the original, unscaled graph of $y = \sin(x)$ as our “base” graph – it’s our starting point.
+
+We’ll then call the scaled graph we get our “final” graph – it’s the final ‘answer’ we obtain.
 
 ### _
 ```desmos
@@ -49,7 +65,7 @@ Ok great, now let’s replace that $2$ with a constant, $k$. We’ll restrict $k
 <aside class="note"></aside>
 It’s important to clarify here that $k$ is a **constant**, not a **variable**. As far as the graph $y = k\sin{x}$ is concerned, $k$ is just some number.
 
-We give Desmos a $k$, and then it renders the graph for that $k$. We can change $k$, and it’ll then render a different $k$.
+We give Desmos a $k$, and then it renders the graph for that $k$. We can change $k$, and it’ll then render the graph for a different $k$.
 
 ### _
 When $k = 1$ we get our original graph.
@@ -61,9 +77,9 @@ When $k$ is large ($k > 1$), the $\sin(x)$ wave becomes expanded – multiplying
 And when $k$ is $0$, the graph of course becomes a straight line, because we just get $y = 0$.
 
 ### _
-This should all be intuitive. But it encapsulates some pretty key concepts!
+This should all be intuitive, maybe obvious even. But it encapsulates some pretty key concepts!
 
-Firstly, points of interest. Those 2 special values, $k = 1$ and $k = 0$, will be crucial for drawing graphs. Can you think why?
+Firstly, points of interest. Those 2 special values, $k = 1$ and $k = 0$, will be crucial for drawing scaled graphs. Can you think why?
 
 ### _
 ```desmos
@@ -86,14 +102,18 @@ If we multiply that $y$-value by $1$, we just get $q_1 = f(p) \cdot 1 = f(p)$. I
 If we multiply it by $0$, we get $q_0 = f(p) \cdot 0 = 0$. Anything multiplied by $0$ is $0$. This means we get a $y$-value of $0$, so the graph touches the $x$-axis.
 
 ### _
-This makes these great ‘anchor’ points! We can immediately deduce what $y$-value they should take.
+This makes these great ‘anchor’ points! We can immediately deduce what $y$-value they should take – it’s the same as on the base graph.
 
 ### _
-Secondly, and even though this is obvious, it’s the thing to remember – $k > 1$ scales up, and $0 < k < 1$ scales down.
+Secondly, and even though this is obvious, it’s the key thing to remember. $k > 1$ scales up, and $0 < k < 1$ scales down.
 
+When we multiply values for graph drawing, we’ll *constantly* be thinking, “Is this scale factor greater than $1$?”. If so, scale, otherwise scale down.
+
+### _
+<aside class="note"></aside>
 The asymmetry is interesting – for scaling up, $k > 1$ can take on so, so many values, all the way up to $\infin$, and yet $k$ for scaling down only has between $0$ and $1$.
 
-But that’s just how reciprocals work, and plus, there are the same number of numbers in $(0, 1)$ as there are in $(1, \infin)$ ;)
+But that’s just how reciprocals work, and plus, there are the same number of numbers in $(0, 1)$ as there are in $(1, \infin)$, hehe ;)
 
 ### _
 ```desmos
@@ -115,7 +135,12 @@ Don’t overthink it! Scaling by $-3$ is the same as multiplying by $3$ followed
 Multiplying by $-1$ inverts all our $y$-values, which reflects the graph in the $x$-axis. Simple as that.
 
 ### _
-I imagine this was all stuff you‘re already familiar with, but the aim here was to really make you think about what scaling means. Because with that appreciation there, it makes it a lot easier to understand how to multiply expressions by thinking of them as scaling.
+For this reason, I wouldn’t even consider negative scale factors when drawing graphs! It just adds unnecessary mental load.
+
+I see $(-3)$ not as a single scale factor, but as first scaling by $3$, followed by a reflection. That’s why when I say “scale factor”, I implicitly mean a non-negative $k$.
+
+### _
+I imagine this was all stuff you‘re already familiar with, but the aim here was to really make you think about what scaling means. With that appreciation there, it makes it a lot easier to understand how to multiply expressions by thinking of them as scaling.
 
 
 ## // Dynamic Scaling
