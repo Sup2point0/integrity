@@ -42,7 +42,7 @@ What’s the derivative of $\sqrt{\ln{x}}$?
 The substitution you’re looking for is $\left(x + \sqrt{\ln{x}} \right) = t$.
 
 ### 6
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 
 ## Answer

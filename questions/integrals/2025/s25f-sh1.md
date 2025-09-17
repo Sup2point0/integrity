@@ -35,7 +35,7 @@ methods:
 $\sin(2e^x)$ is different to all the rest, so expand that out first.
 
 ### 2
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 ### 3
 Exactly 2 terms in the numerator have a factor of $x$, and exactly 2 have a factor of $e^x$.

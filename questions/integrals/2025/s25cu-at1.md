@@ -31,7 +31,7 @@ What does the top look similar to?
 How could you make the bottom only contain 1 trigonometric function?
 
 ### 3
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 
 ## Answer

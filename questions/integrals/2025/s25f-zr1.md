@@ -28,7 +28,7 @@ Does the denominator look familiar?
 What might a squared denominator indicate?
 
 ### 3
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 
 ## Answer

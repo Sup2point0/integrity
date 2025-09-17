@@ -21,7 +21,7 @@ methods:
 ## Hints
 
 ### 1
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 
 ## Answer

@@ -29,7 +29,7 @@ There’s quite a few ways we could clear this up.
 Log laws!
 
 ### 3
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 
 ## Answer

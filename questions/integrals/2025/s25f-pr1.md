@@ -26,7 +26,7 @@ methods:
 Both polynomials have no constant term.
 
 ### 2
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 ### 3
 If in doubt, the factor theorem is useful.

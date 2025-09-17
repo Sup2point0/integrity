@@ -43,7 +43,7 @@ Write $2$ as $1 + 1$.
 What identity equals $1$?
 
 ### 6
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 
 ## Answer

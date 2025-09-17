@@ -34,7 +34,7 @@ You can express $\sqrt{2 + \sqrt{3}}$ as a sum of 2 individual surds.
 Complete the square on $\sqrt{2 + \sqrt{3}}$.
 
 ### 4
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 
 ## Answer

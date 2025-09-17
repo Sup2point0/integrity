@@ -28,7 +28,7 @@ You can start by combining the square roots.
 What does the denominator tell you?
 
 ### 3
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 
 ## Answer

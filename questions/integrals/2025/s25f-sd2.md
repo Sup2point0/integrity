@@ -20,7 +20,7 @@ methods:
 ## Hints
 
 ### 1
-Starts with “f” and rhymes with <em>tractorise</em>.
+Starts with “f” and rhymes with *tractorise*.
 
 ### 2
 You can combine $\ln(p) + \ln(q)$.
