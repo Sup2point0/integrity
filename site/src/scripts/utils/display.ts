@@ -45,3 +45,13 @@ export function display_time(t: number): string
 
   return `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 }
+
+/** Capitalise and strip (x) duplicates from a section title. */
+export function display_title(text: string): string
+{
+  if (text.endsWith(")")) {
+    return text.slice(0, text.lastIndexOf("(")).toUpperCase();
+  } else {
+    return text.toUpperCase();
+  }
+}

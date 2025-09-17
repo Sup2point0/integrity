@@ -1,6 +1,7 @@
 <script lang="ts">
 
 import { page_data } from "../page-data.svelte.ts";
+import { display_title } from "src/scripts/utils";
 import { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
@@ -16,16 +17,6 @@ import Line from "#parts/page/line.svelte";
 
 
 let question: Question | null = $derived(page_data.question);
-
-
-function display_title(text: string): string
-{
-  if (text.endsWith(")")) {
-    return text.slice(0, text.lastIndexOf("(")).toUpperCase();
-  } else {
-    return text.toUpperCase();
-  }
-}
 
 </script>
 

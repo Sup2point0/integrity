@@ -1,6 +1,7 @@
 <script lang="ts">
 
 import { page_data } from "../page-data.svelte.ts";
+import { display_title } from "#scripts/utils";
 import type { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
@@ -43,7 +44,7 @@ let question: Question | null = $derived(page_data.question);
 {#if question?.solution}
   <Section title="Solution">
     {#each Object.entries(question.solution) as [step, source]}
-      <Section ctx="inner" closed={false} title={step}>
+      <Section ctx="inner" closed={false} title={display_title(step)}>
         <RenderBlock {source} />
       </Section>
     {/each}
