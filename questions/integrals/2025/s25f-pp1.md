@@ -26,7 +26,7 @@ methods:
 ## Hints
 
 ### 1
-STARTS WITH <strong>F</strong> AND RHYMES WITH *TRACTORISE*
+STARTS WITH **F** AND RHYMES WITH *TRACTORISE*
 
 
 ## Answer
