@@ -28,7 +28,7 @@ methods:
 You’re gonna need substitution for this one.
 
 ### 2
-A <em>lot</em> of substitution.
+A *lot* of substitution.
 
 ### 3
 Start with $1 + e^x = t$.

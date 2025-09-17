@@ -30,7 +30,7 @@ methods:
 You’ll need a substitution for this.
 
 ### 2
-You will need to <em>solve</em> the substitution.
+You will need to *solve* the substitution.
 
 ### 3
 Let $y$ denote the integrand.

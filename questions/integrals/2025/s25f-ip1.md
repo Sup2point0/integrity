@@ -29,7 +29,7 @@ flags:
 No substitution’s gonna work here.
 
 ### 2
-What you <em>do</em> know is how to differentiate and integrate trig functions.
+What you *do* know is how to differentiate and integrate trig functions.
 
 ### 3
 Parts...?

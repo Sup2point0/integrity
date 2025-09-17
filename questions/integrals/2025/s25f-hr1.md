@@ -127,7 +127,7 @@ The trick here is that we can change $\text{sign}(x)$ in the numerator to $x$, i
 
 Now we’re talking. But if we’re going to make our substitution we’ll also need to think about how we handle the $2x^2 - x^4$ in the lower $\sqrt{}$.
 
-At this point, we can consider what we’d do <em>after</em> substituting $x^2 - 1 = t$. We would end up with $\sin^{-1}{t}$, which we’d need to substitute again. So then we’re looking for the derivative of $\sin^{-1}{t}$, which can be quoted:
+At this point, we can consider what we’d do *after* substituting $x^2 - 1 = t$. We would end up with $\sin^{-1}{t}$, which we’d need to substitute again. So then we’re looking for the derivative of $\sin^{-1}{t}$, which can be quoted:
 
 ```math
 \frac{d}{dx}\sin^{-1}t=\frac{1}{\sqrt{1-t^{2}}}

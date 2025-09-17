@@ -41,19 +41,19 @@ flags:
 ## Hints
 
 ### 1
-$\operatorname{vers}(\theta)$ denotes the <a target="_blank" href="https://wikipedia.org/wiki/Versine"><em>versed sine</em></a>, equivalent to $1 - \cos(\theta)$.
+$\operatorname{vers}(\theta)$ denotes the <a target="_blank" href="https://wikipedia.org/wiki/Versine">*versed sine*</a>, equivalent to $1 - \cos(\theta)$.
 
 ### 2
 $\operatorname{covers}(\theta)$ denotes the <a target="_blank" href="https://wikipedia.org/wiki/Versine#cvs">complementary of versine</a>, i.e. $1 - \sin(\theta)$.
 
 ### 3
-$\operatorname{hav}(\theta)$ denotes the <a target="_blank" href="https://wikipedia.org/wiki/Versine#hav"><em>haversine</em></a>, equivalent to $\displaystyle \frac{1}{2} \operatorname{vers}(\theta)$.
+$\operatorname{hav}(\theta)$ denotes the <a target="_blank" href="https://wikipedia.org/wiki/Versine#hav">*haversine*</a>, equivalent to $\displaystyle \frac{1}{2} \operatorname{vers}(\theta)$.
 
 ### 4
-$\operatorname{exsec}(\theta)$ denotes the <a target="_blank" href="https://wikipedia.org/wiki/Exsecant"><em>exsecant</em></a>, equivalent to $\sec(\theta) - 1$.
+$\operatorname{exsec}(\theta)$ denotes the <a target="_blank" href="https://wikipedia.org/wiki/Exsecant">*exsecant*</a>, equivalent to $\sec(\theta) - 1$.
 
 ### 5
-$\operatorname{crd}(\theta)$ denotes the <a target="_blank" href="https://wikipedia.org/wiki/Chord_(geometry)"><em>chord</em></a>, given by $2\sin(\theta/2)$.
+$\operatorname{crd}(\theta)$ denotes the <a target="_blank" href="https://wikipedia.org/wiki/Chord_(geometry)">*chord*</a>, given by $2\sin(\theta/2)$.
 
 
 ## Answer
