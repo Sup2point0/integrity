@@ -36,7 +36,7 @@ Start by rewriting $\log_{200}(x)$.
 Then rewrite $200^{\,\ln{x}}$.
 
 ### 3
-If you’re stuck, there are at least 199 other integrals on <em>Integrity</em>! :P
+If you’re stuck, there are at least 199 other integrals on *Integrity*! :P
 
 ### 4
 Sometimes, parts is acceptable.

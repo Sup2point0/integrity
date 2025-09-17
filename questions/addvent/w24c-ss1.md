@@ -10,12 +10,15 @@ tags:
 
 ## Question
 
-The 4 squirrels <em>Poppy</em>, <em>Quill</em>, <em>Ronald</em>, <em>Sunset</em> are having a sledging race.
+The 4 squirrels *Poppy*, *Quill*, *Ronald*, *Sunset* are having a sledging race.
 
- - Poppy did not finish first or last.
- - Quill beat at least 2 squirrels.
- - Sunset finished before Ronald.
- - There was at least 1 squirrel between Poppy and Ronald.
+Poppy did not finish first or last.
+
+Quill beat at least 2 squirrels.
+
+Sunset finished before Ronald.
+
+There was at least 1 squirrel between Poppy and Ronald.
 
 <strong>Can you determine what order they finished in?</strong>
 
