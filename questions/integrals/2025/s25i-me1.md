@@ -76,7 +76,7 @@ Hence
 
 ## Alternates
 
-Thanks to my friend <a target="_blank" href="https://github.com/itechnicals">iTechnical</a> for finding this alternative solution!
+Thanks to my friend [iTechnical<sup>↗</sup>](https://github.com/itechnicals) for finding this alternative solution!
 
 ```math
 \begin{align*}

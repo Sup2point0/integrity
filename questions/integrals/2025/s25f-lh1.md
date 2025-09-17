@@ -72,7 +72,7 @@ $\frac{1}{2}$
 
 ## Alternates
 
-Courtesy of my friend <a target="_blank" href="https://github.com/itechnicals">iTechnical</a>!
+Courtesy of my friend [iTechnical<sup>↗</sup>](https://github.com/itechnicals)!
 
 ```math
 \begin{align*}
