@@ -7,7 +7,7 @@ export function render_markdown(text: string | undefined): string | undefined
     .replaceAll(/(?<=^|[ \n\(\[])\*{2}(.+?)\*{2}(?=$|[ \n,\.\)\]])/g, "<strong>$1</strong>")
     .replaceAll(/(?<=^|[ \n\(\[])\*(.+?)\*(?=$|[ \n,\.\)\]])/g, "<em>$1</em>")
     // links
-    .replaceAll(/\[(.*?)\]\((.*?)\)/g, (_, text, link) => {
+    .replaceAll(/\[(.*?)\]\(([^\ ]*)\)/g, (_, text, link) => {
       if (text.includes("↗")) {
         return `<a target="blank" href=${link}>${text}</a>`;
       } else {
