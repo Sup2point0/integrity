@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import { page_data } from "../page-data.svelte.ts";
-import { display_title } from "src/scripts/utils";
+import { display_title } from "#scripts/utils";
 import { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
