@@ -194,7 +194,7 @@ export class SearchPrefs
         scorer: (query, q) => (
           q._match ? 
           Math.max(...q._match.map(
-            each => fuzz.ratio(each, query)
+            each => fuzz.partial_ratio(each, query)
           ))
           : 0
         ),
