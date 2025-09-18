@@ -1,5 +1,5 @@
 # Standard Integrals
-<!-- #SQUARK live!
+<!-- #SQUARK live! vect!
 | dest = scriptures/integrals/collections/standard-integrals
 | | index = scriptures / integrals / collections
 -->

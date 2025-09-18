@@ -1,5 +1,5 @@
 # Everything & Anything
-<!-- #SQUARK live! feat! c! devx!
+<!-- #SQUARK live! feat! c! devx! vect!
 | dest = scriptures/integrals/collections/everything-anything
 | capt = The prime integrator’s standard arsenal
 | index = scriptures / integrals / collections
