@@ -3,11 +3,15 @@
 | dest = scriptures/integrals/collections/once
 | capt = Landmarks on the expedition of integration
 | index = scriptures / integrals / collections
+| update = 2025 September 18
 -->
 
 There are easy integrals. There are hard integrals. There are simple integrals, nice integrals, ugly integrals, and horror integrals. But there are also integrals so *exquisitely* beautiful, that you can only experience their beauty once in your lifetime. Like a firework they come, a burst of colour and vibrance, dazzling, yet ephemeral.
 
 Once you have seen them, their charm and brilliance can fade away; once you know the solution, you know how to solve all integrals of that form, and it melds into but another tool in your integration arsenal. But that initial moment of realisation when you experience the solution for the first time – when your eyes are opened to something entirely new – that, is truly special.
+
+
+## $\tan{x}$
 
 
 ## $e^x \sin{x}$
@@ -39,6 +43,12 @@ And hey, that’s integration by parts!
 But soon you realise $\sqrt{x}$ is almost always safe to substitute, and integrals like this become trivial.
 
 
+## $\tan^{-1}{x}$
+
+
 ## $\sec{x}$
 
 Oh yes, another special one. See [Integrating the Secant](antiderivatives/sec.md).
+
+
+## $\operatorname{sech}{x}$

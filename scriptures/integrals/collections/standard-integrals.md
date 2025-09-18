@@ -67,6 +67,7 @@ I trust you can work out and verify these for yourself, so no answers have been 
 \begin{align*}
      & \int xe^x \ dx
   \\ & \int x \ln{x} \ dx
+  \\ & \int \frac{\ln{x}}{x} \ dx
 \end{align*}
 ```
 
