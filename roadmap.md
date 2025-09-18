@@ -9,7 +9,7 @@
 
 ## Known Issues
 
-I’m working on it!
+I’m finding a fix!
 
 - `desmos/library/` pages are not prerendering so are inaccessible
 
@@ -19,6 +19,8 @@ I’m working on it!
 
 ## Under Development
 
+I’m working on it!
+
 - Speedrun environment
 - Upgrade static scripture routes to all dynamically prerendered
 
@@ -27,6 +29,8 @@ I’m working on it!
 
 
 ## Upcoming
+
+I will be working on it!
 
 - "Originally written date" for articles
 - Gradient Descent in Desmos dynamic scriptures
