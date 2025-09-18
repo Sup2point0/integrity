@@ -38,6 +38,12 @@ let { page } = $props();
     </Banner>
   {/if}
 
+  {#if page.flags?.includes("vect")}
+    <Banner title="1-Dimensional Matrix">
+      This page acts as a checklist for content more than an explainer or walkthrough.
+    </Banner>
+  {/if}
+
   {#if page.flags?.includes("opin")}
     <Banner title="Objective Minima">
       This piece contains opinionated content, please do not feel obliged to agree.
