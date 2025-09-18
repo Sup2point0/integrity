@@ -34,4 +34,17 @@ import ArticleArray from "#parts/page/article-array.svelte";
       "scriptures/integrals/collections/epic-errors.md",
     ]} />
   </aside>
+
+  <p>
+    <a href="int-int/int-int">Ooh, what’s this? ~o.0~</a>
+  </p>
 </article>
+
+
+<style lang="scss">
+
+p {
+  opacity: 0%;
+}
+
+</style>

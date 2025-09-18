@@ -40,6 +40,8 @@ function s() {
 };
 
 const W = "?SP\vLYNTPY_\vNS]ZYTNWP^\v^[ZVP\vZQ\vYZY\x180`NWTOPLY\vPWO]T_NS\vSZ]]Z]^\x17\vXLYTQZWO^\vZQ\vNSLZ^\vTYNZYNPTaLMWP\v_Z\v]PLWT_d\x19\v4YNWTYPO\vMd\v_SPT]\vZbY\vOTXPY^TZYWP^^YP^^\x17\vZ`]\v[]ZRPYT_Z]^\vML^PO\vL\v]L_TZYLWT^L_TZY\v_S]Z`RS\vTXLRTYL]d\vNZY^_]`N_^\vZQ\vbZYOP]\v῾\vTYaT^TMWP\v_Z\v_SP\vPdP\x17\vM`_\vTY_`T_TaP\v_Z\v_SP\vXTYO\x19";
+const W2 = ",XTO^_\v_SP\vP_P]YLW\vOL]VYP^^\x17\vLY\vTYQTYT_P^TXLW\v]Ld\vZQ\v[P]NP[_TZY\vPXP]RP^\x17\vP[SPXP]LW\vLYO\v[ZWdXZ][STN\vTY\vYL_`]P\x19";
+const W3 = ",YdbLd\x17\vb]T_TYR\vbZ]O\v^Z`[^\vT^\v[]P__d\vQ`Y\x17\vTYYT_*\v/ZY _\vbZ]]d\x17\vdZ`\vSLaPY _\v^_`XMWPO\vLN]Z^^\vL\vN`W_\vZ]\vLYd_STYR\x17\vWXLZ\x19";
 
 
 onMount(() => {
@@ -56,9 +58,23 @@ onMount(() => {
 
 
 {#if comp}
-  <p transition:fade={{ duration: 2000, easing: expoIn }}>
-    {W.split("").map(c => String.fromCharCode(c.charCodeAt()+21)).join("")}
-  </p>
+  <div class="container">
+    <div class="outer"></div>
+
+    <div class="inner">
+      <p transition:fade={{ duration: 3000, easing: expoIn }}>
+        {W.split("").map(c => String.fromCharCode(c.charCodeAt()+21)).join("")}
+      </p>
+
+      <p transition:fade={{ duration: 3000, delay: 5000, easing: expoIn }}>
+        {W2.split("").map(c => String.fromCharCode(c.charCodeAt()+21)).join("")}
+      </p>
+
+      <p transition:fade={{ duration: 3000, delay: 10000, easing: expoIn }}>
+        {W3.split("").map(c => String.fromCharCode(c.charCodeAt()+21)).join("")}
+      </p>
+    </div>
+  </div>
 
 {:else}
   <div class="layout">
@@ -103,11 +119,34 @@ onMount(() => {
   gap: 1rem;
 }
 
-p {
-  margin-top: 4rem;
-  font-family: 'Protest Revolution';
-  font-size: 150%;
-  line-height: 200%;
+.container {
+  position: relative;
+
+  .outer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: black;
+  }
+
+  .inner {
+    margin-top: 4rem;
+    position: absolute;
+    top: 50vh;
+    z-index: 101;
+    transform: translateY(-50%);
+
+    p {
+      margin: 2rem 0;
+      font-family: 'Protest Revolution';
+      font-size: 150%;
+      line-height: 200%;
+      color: red;
+    }
+  }
 }
 
 </style>

@@ -61,6 +61,7 @@ import { goto } from "$app/navigation";
     <h3> Docs </h3>
     <div class="links">
       <Link text="Questions" intern="docs/questions" />
+      <Link text="Integrals" intern="docs/integrals" />
       <Link text="Difficulties" intern="docs/difficulties" />
       <Link text="Shards" intern="docs/shards" />
       <Link text="Tags" intern="docs/tags" />

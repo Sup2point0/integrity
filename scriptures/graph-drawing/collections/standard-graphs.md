@@ -39,14 +39,30 @@ y = x
 ## Polynomials
 
 ### $x^2$
+Famously known as a “happy parabola”, symmetrical in the $y$-axis.
+
+```desmos
+y = x^2
+```
 
 ### $x^3$
 
 ### $x^p$
 
 ### $x^{2p}$
+All even positive powers of $x$ produce even graphs.
+
+### $x^{2p-1}$
+All odd positive powers of $x$ produce odd graphs.
 
 ### $(x-p)(x-q)$
+When $x = p$ or $x = q$, the output $y$ becomes $0$. That means the graph intersects the $x$-axis.
+
+This is a (positive) quadratic with roots at $x = p, x = q$.
+
+```desmos
+y = (x-p)(x-q)
+```
 
 ### $(x-p)(x-q)(x-r)(...)$
 

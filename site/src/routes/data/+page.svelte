@@ -34,6 +34,7 @@ try {
   console.error(e);
 }
 const time_ago = new TimeAgo("en-US");
+const _ = 10;
 
 
 function export_prefs()
@@ -169,7 +170,7 @@ function fix_integrity()
         <p class="label"> Secrets Found </p>
         <p class="count"> <span>{$userprefs.skipped?.size ?? 0}</span> of ? </p>
       </div>
-      <ProgressBar value={($userprefs.skipped?.size ?? 0) / 9} />
+      <ProgressBar value={($userprefs.skipped?.size ?? 0) / _} />
     </section>
     
     <section>
@@ -177,7 +178,7 @@ function fix_integrity()
         <p class="label"> Secrets Solved </p>
         <p class="count"> <span>{$userprefs.marked?.size ?? 0}</span> of ? </p>
       </div>
-      <ProgressBar value={($userprefs.marked?.size ?? 0) / 9} />
+      <ProgressBar value={($userprefs.marked?.size ?? 0) / _} />
     </section>
   </div>
 
