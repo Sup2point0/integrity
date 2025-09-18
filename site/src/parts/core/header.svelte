@@ -55,10 +55,6 @@ header {
 h1 {
   @include font-serif;
   font-size: 250%;
-
-  :global(em) {
-    font-style: italic;
-  }
 }
 
 p {

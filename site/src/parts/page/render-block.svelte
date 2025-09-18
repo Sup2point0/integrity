@@ -60,7 +60,7 @@ let { source }: Props = $props();
   {/if}
 {/snippet}
 
-<div class="content">
+<div class="block-content">
   {#if Array.isArray(source)}
     {#each source as each}
       {@render block(each)}
@@ -80,7 +80,7 @@ let { source }: Props = $props();
 
 <style lang="scss">
 
-.content {
+.block-content {
   :global(strong) {
     font-weight: 400;
   }
