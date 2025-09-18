@@ -232,15 +232,15 @@ function parse_sequence(source: string, sequence: string): object | undefined
   if (!source.includes(sequence)) return;
 
   let pattern = (
-    String.raw`(?<=\\`
+    String.raw `(?<=\\`
     + sequence
-    + String.raw`)\{.+\}`
+    + String.raw `)\{.+\}`
   );
 
   let out = source.match(pattern)?.at(0);
   if (out === undefined) return;
 
-  out = out.replaceAll(/([a-zA-Z]+):/g, String.raw`"$1":`);
+  out = out.replaceAll(/([a-zA-Z]+):/g, String.raw `"$1":`);
   if (out === undefined) return;
 
   let res: object;

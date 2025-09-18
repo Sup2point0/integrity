@@ -25,7 +25,7 @@ export function inject_question(desmos: any, question: Question)
         
         desmos.setExpression({
           id: "integrals-latex-integral",
-          latex: String.raw`g\left(x\right) = ${integral}`
+          latex: String.raw `g\left(x\right) = ${integral}`
         });
       }
   }
@@ -45,13 +45,13 @@ export const presets: Record<string, object[]> =
     },
     { id: "integrals-latex-antideriv",
       hidden: true,
-      latex: String.raw`f\left(x\right) = `
+      latex: String.raw `f\left(x\right) = `
     },
     { id: "integrals-text-integral", type: "text",
       text: "Type your integral (question) here:"
     },
     { id: "integrals-latex-integral",
-      latex: String.raw`g\left(x\right) = `
+      latex: String.raw `g\left(x\right) = `
     },
     { id: "integrals-text-integral-2", type: "text",
       text: "(This should be the expression between ∫ and dx)"
@@ -60,7 +60,7 @@ export const presets: Record<string, object[]> =
       latex: " "
     },
     { id: "integrals-text-antideriv-deriv",
-      latex: String.raw`f'\left(x\right)`
+      latex: String.raw `f'\left(x\right)`
     },
     { id: "integrals-text-guide", type: "text",
       text: "If the graphs of f'(x) and g(x) match, then your antiderivative is correct!"
@@ -83,13 +83,13 @@ export const presets: Record<string, object[]> =
       text: "Type your original quadratic here:"
     },
     { id: "complete-square-latex-quad",
-      latex: String.raw`f\left(x\right) = x^{2} + x + 1`
+      latex: String.raw `f\left(x\right) = x^{2} + x + 1`
     },
     { id: "complete-square-text-complete", type: "text",
       text: "Type your quadratic in completed square form here:"
     },
     { id: "complete-square-latex-complete",
-      latex: String.raw`g\left(x\right) = \left(x - p\right)^{2} + q`
+      latex: String.raw `g\left(x\right) = \left(x - p\right)^{2} + q`
     },
     { id: "complete-square-text-filler-2",
       latex: " "

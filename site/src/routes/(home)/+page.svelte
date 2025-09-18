@@ -3,11 +3,14 @@
 import sample from "@stdlib/random-sample";
 
 import Site from "#scripts/site";
+import type { Question, Page } from "#scripts/types";
 
 import Changes from "./changes.svx";
+import { pick_trivia, type Trivia } from "./trivia.ts";
 
 import Header from "#parts/core/header.svelte";
 import Line from "#parts/page/line.svelte";
+import RenderBlock from "#parts/page/render-block.svelte";
 import Link from "#parts/ui/link.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
 import Card from "#parts/ui/card.svelte";
@@ -15,21 +18,21 @@ import QuestionArray from "#parts/page/question-array.svelte";
 import ArticleArray from "#src/parts/page/article-array.svelte";
 
 import { onMount } from "svelte";
+import { slide } from "svelte/transition";
+import { expoInOut } from "svelte/easing";
 
 
 const all_featured_questions = Site.get_featured_questions();
 const all_featured_scriptures = Site.get_featured_scriptures();
 
-// start with 1 featured on server side
-let featured_questions = [
-  all_featured_questions[Math.floor(Math.random() * all_featured_questions.length)]
-];
-let featured_scriptures = [
-  all_featured_scriptures[Math.floor(Math.random() * all_featured_scriptures.length)]
-];
+// start with none featured on server side
+let featured_trivia: Trivia = null;
+let featured_questions: Question[] = [];
+let featured_scriptures: Page[] = [];
 
-// fill in more randomly on client side
+// then fill in on client side
 onMount(() => {
+  featured_trivia = pick_trivia();
   featured_questions = sample(all_featured_questions, { size: 3, replace: false });
   featured_scriptures = sample(all_featured_scriptures, { size: 3, replace: false });
 });
@@ -42,6 +45,22 @@ onMount(() => {
   <meta name="description" content="Lovingly handcrafted maths questions for the intellectually adventurous. Features 300 challenging integrals, plus problems on completing the square, graph drawing and more!" />
 </svelte:head>
 
+
+{#if featured_trivia}
+  <section class="trivia"
+    transition:slide={{ duration: 1000, delay: 200, easing: expoInOut }}
+  >
+    <h2> TODAY’S TRIVIA </h2>
+
+    <div class="centre">
+      <RenderBlock source={{ content: featured_trivia.text }} />
+    </div>
+    
+    {#if featured_trivia.note}
+      <p class="note"> {featured_trivia.note} </p>
+    {/if}
+  </section>
+{/if}
 
 <section class="browse">
   <Header title="What fun are we having today?" />
@@ -130,6 +149,43 @@ onMount(() => {
 section {
   margin: 0 0 4rem;
   text-align: center;
+}
+
+.trivia {
+  min-width: 40rem;
+  max-width: max-content;
+  padding: 1rem 3rem;
+  margin-left: auto;
+  margin: 0 auto 2rem;
+  border: 1px solid $col-line-fallback;
+  border: 1px solid $col-line;
+  border-radius: 0.5em;
+
+  h2 {
+    @include font-ui;
+    font-weight: 500;
+    color: $col-deut;
+    text-align: center;
+  }
+
+  .centre {
+    width: 100%;
+    margin: 1rem 0 0;
+    @include font-serif;
+    font-size: 150%;
+    text-wrap: wrap;
+
+    & :global(.katex) {
+      font-size: 100%;
+    }
+  }
+
+  p.note {
+    margin-top: 1rem;
+    @include font-ui;
+    font-size: 90%;
+    color: $col-text-deut;
+  }
 }
 
 .browse .topics {
