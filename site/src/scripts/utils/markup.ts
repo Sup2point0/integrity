@@ -15,7 +15,6 @@ export function render_markdown(text: string | undefined): string | undefined
       }
     })
     // code
-    .replaceAll(/(?<=^|[ \n\(])`/g, "<code>")
-    .replaceAll(/`(?=$|[ \n,\.\)])/g, "</code>")
+    .replaceAll(/(?<=^|[^`])`(.*?)`(?=$|[^`])/g, "<code>$1</code>")
   );
 }
