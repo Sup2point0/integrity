@@ -57,7 +57,9 @@ onMount(() => {
     </div>
     
     {#if featured_trivia.note}
-      <p class="note"> {featured_trivia.note} </p>
+      <p class="note">
+        <RenderBlock source={{ content: featured_trivia.note }} />
+      </p>
     {/if}
   </section>
 {/if}
@@ -94,7 +96,7 @@ onMount(() => {
 </section>
 
 <section class="featured">
-  <Header title="Featured" />
+  <Header title="Featured Questions" />
   
   <QuestionArray questions={featured_questions} />
   
@@ -104,7 +106,7 @@ onMount(() => {
 </section>
 
 <section class="featured">
-  <Header title="Scriptures" />
+  <Header title="Featured Scriptures" />
 
   <ArticleArray pages={featured_scriptures} />
   
