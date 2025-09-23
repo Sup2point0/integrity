@@ -2,6 +2,7 @@
 
 <script lang="ts">
 
+import { userprefs } from "#scripts/stores";
 import { render_markdown } from "#scripts/utils";
 import type { Page } from "#scripts/types";
 
@@ -19,7 +20,7 @@ let { title, capt, page }: Props = $props();
 </script>
 
 
-<header>
+<header class="{$userprefs.style}">
   <div class="info">
     <h1> {@html render_markdown(title ?? page?.head) ?? "Untitled Page"} </h1>
     <p class="capt"> {@html render_markdown(capt ?? page?.capt) ?? ""} </p>
@@ -77,6 +78,11 @@ p {
   p {
     color: $col-text-deut-contrast;
   }
+}
+
+header.tech h1 {
+  font-family: 'Anta', system-ui, sans-serif;
+  text-transform: uppercase;
 }
 
 </style>

@@ -79,7 +79,7 @@ function sync_duality()
   <Nav />
 {/if}
 
-<div class="layout">
+<div class="layout {$userprefs.style}">
   <main class:wide={
     page.url.pathname.includes("questions/") && $search.view === "grid-wide"
     || page.data?.wide
@@ -111,6 +111,12 @@ function sync_duality()
     <small style:animation-delay="2.6s"> Some parts of the site may not function. </small>
   </aside>
 {/if}
+
+<svelte:head>
+  {#if $userprefs.style}
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+  {/if}
+</svelte:head>
 
 
 <style lang="scss">

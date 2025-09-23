@@ -1,4 +1,4 @@
-***September 15*** Back at *Integrity* again... loads of quality of life tweaks ;D
+***September 23*** Enjoy a bit of daily maths trivia ;)
 
 ***August 22*** The [Desmos library](https://sup2point0.github.io/integrity/desmos/library) has been added. [Gamedev in Desmos](https://sup2point0.github.io/desmos/gamedev) scriptures have been moved from `/scriptures/desmos/` to `/desmos/`.
 

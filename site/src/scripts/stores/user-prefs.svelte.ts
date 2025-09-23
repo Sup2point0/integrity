@@ -35,6 +35,8 @@ export class UserPrefs
 
   nav: boolean = $state(true);
 
+  style: string = $state("");
+
 
   /** Expose attributes for syncing to localStorage. */
   to_json(): object
@@ -46,8 +48,8 @@ export class UserPrefs
       solved: Array.from(this.solved),
       flagged: Array.from(this.flagged),
       starred: Array.from(this.starred),
-      
       nav: this.nav,
+      style: this.style,
       "desmos-preset": this["desmos-preset"],
       skipped: Array.from(this.skipped),
       marked: Array.from(this.marked),
@@ -64,8 +66,8 @@ export class UserPrefs
     this.solved = new Set(data.solved ?? this.solved);
     this.flagged = new Set(data.flagged ?? this.flagged);
     this.starred = new Set(data.starred ?? this.starred);
-
     this.nav = data.nav ?? this.nav;
+    this.style = data.style ?? this.style;
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
     this.skipped = new SvelteSet(data.skipped ?? this.skipped);
     this.marked = new SvelteSet(data.marked ?? this.marked);

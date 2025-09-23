@@ -45,7 +45,7 @@ let questions: {
     )
   ),
   difficulties: { based: 0, incline: 0, manifold: 0, chaos: 0, null: 0 },
-  title_words: {},
+  title_words: { 0: 0 },
   title_chars: {0: 1},
   title_letters: {},
   tags_counts: {},
@@ -351,7 +351,11 @@ for (let q of Site.get_questions_of_topic("integrals")) {
           <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label">
-            {count}
+            {#if count === "0"}
+              <a href="trails/integrals">{count}</a>
+            {:else}
+              {count}
+            {/if}
           </div>
         </div>
       {/each}
@@ -621,6 +625,11 @@ h2 {
   font-weight: 400;
   font-size: 175%;
   text-align: center;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
 }
 
 </style>

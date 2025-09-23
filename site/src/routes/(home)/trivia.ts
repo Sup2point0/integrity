@@ -29,14 +29,15 @@ const _template = [
 
 export const trivia = [
   {
-    text: String.raw `Have we heard of the hairy ball theorem?`,
-  },
-  {
     text: String.raw `There are the same number of numbers between $0$ and $1$ as there are between $1$ and $\infin$.`,
     note: String.raw `Uncountably infinite!`,
   },
   {
     text: String.raw `$69^2$ and $69^3$ collectively use all the digits from $0$ to $9$ exactly once each.`,
+  },
+  {
+    text: String.raw `$6 + 9 \times 6 + 9 = 69$`,
+    note: String.raw `nice.`,
   },
   {
     text: String.raw `The Riemann integral is not the only kind of integral 0.o`,
@@ -46,7 +47,8 @@ export const trivia = [
     note: String.raw `And vice versa!`,
   },
   {
-    text: String.raw `A function can be continuous everywhere but differentiable nowhere...`,
+    text: String.raw `A function can be continuous everywhere but differentiable nowhere 0.o`,
+    note: String.raw `Search up “Weierstrass function”.`,
   },
   {
     text: String.raw `$\displaystyle \int x \ dx - \int x \ dx$ is not $0$, it’s $c$ 😎`,
@@ -57,8 +59,29 @@ export const trivia = [
     note: String.raw `Might be one of the fastest growing sequences :0`,
   },
   {
-    text: String.raw `*Dual numbers* are like complex numbers. They take the form $p + q\epsilon$, where $\epsilon$ satisfies $\epsilon^2 = 0$. With $\epsilon \neq 0$.`,
+    text: String.raw `*Dual numbers* are like complex numbers. They take the form $p + q\epsilon$, where $\epsilon$ satisfies $\epsilon^2 = 0$. But. With $\epsilon \neq 0$.`,
     note: String.raw `Yeah, wack af.`,
+  },
+  {
+    text: String.raw `“forty” is the only number that has its letters in alphabetical order when spelt as a word.`
+  },
+  {
+    text: String.raw `In large real-life data, the first digit is most likely to be $1$.`,
+    note: String.raw `You know it to be true. This is known as [Benford’s law](https://en.wikipedia.org/wiki/Benford%27s_law).`,
+  },
+  {
+    text: String.raw `$2^5 \times 9^2 = 2592$`,
+    note: String.raw `Fun!`,
+  },
+  {
+    text: String.raw `Consecutive terms of the Fibonacci sequence approximate converting from km to miles.`,
+  },
+  {
+    text: String.raw `$x = \frac{2c}{-b \pm \sqrt{ b^2 - 4ac }}$`,
+    note: String.raw `Alternate flipped quadratic formula! [sauce<sup>↗</sup>](https://people.csail.mit.edu/bkph/articles/Quadratics.pdf)`,
+  },
+  {
+    text: String.raw `Depending on the angle at which a plane which cuts a cone, the curve produced by the intersection is either a parabola, hyperbola, ellipse, or circle!`,
   },
 
   {
@@ -87,6 +110,7 @@ export const trivia = [
   },
   {
     text: String.raw `*Integrity* is honestly my first experience maintaining and growing a long-term project.`,
+    note: String.raw `We’ve come a long way.`,
   },
   {
     text: String.raw `When difficulties were introduced to *Integrity*, I went through all 300 integrals and manually assigned difficulties to them.`,
@@ -94,13 +118,27 @@ export const trivia = [
   },
   {
     text: String.raw `Coming up with a way to deterministically but uniformly randomly select one of these trivia to display was quite fun.`,
+  },
+  {
+    text: String.raw `The *Integrity* scriptures used to be called “guides”.`,
+    note: String.raw `That’s what they were, until I branched out a bit and now there’s tons of miscellaneous stuff.`,
+  },
+  {
+    text: String.raw `The *Integrity* GitHub repo has over $1,000$ commits!`,
+    note: String.raw `[What’s the precise count right now?<sup>↗</sup>](https://github.com/Sup2point0/integrity)`,
+  },
+  {
+    text: String.raw `*Integrity* currently has $n$ secrets, where $n \in \mathbb{N}$ and $0 < n$.`
+  },
 
+  {
+    text: String.raw `Have we heard of the hairy ball theorem?`,
   },
   {
     text: String.raw `What starts with “f” and rhymes with *tractorise*?`,
   },
   {
-    text: String.raw `What starts wih “c” and rhymes with *swear*?`,
+    text: String.raw `What starts with “c” and rhymes with *swear*?`,
   },
   {
     text: "So, d’you pronounce $\\ln()$ as `/ln/` or `/log/`?",
