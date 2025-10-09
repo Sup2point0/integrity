@@ -25,7 +25,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
     <h2> Continue Reading </h2>
     
     <ArticleArray paths={[
-      "/scriptures/inequalities.md",
+      "scriptures/general/inequalities.md",
     ]} />
   </aside>
 </article>
