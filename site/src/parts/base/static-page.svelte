@@ -14,7 +14,7 @@ import { page } from "$app/state";
 
 let { levels, id = undefined } = $props();
 
-const { content, metadata: data } = page.data;
+let { content, metadata: data } = $derived(page.data);
 
 </script>
 
