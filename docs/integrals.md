@@ -18,7 +18,7 @@ I started writing integrals for my school’s Integration Bee. I think I ended u
 
 It’s painfully nontrivial to pinpoint a precise ‘threshold’ for what level of integration ability is required, or provide a comprehensive ‘specification’ for what knowledge you need. The difficulty and style of integrals on *Integrity* varies hugely, and of course everyone will perceive them differently depending on their exposure and experience.
 
-I will say that if you are confident with the integration taught in A-level [Further Mathematics<sup>↗</sup>](https://en.m.wikipedia.org/wiki/Further_Mathematics),[^a-level] the basic principles you learn there will leave you in a good spot for tackling *Integrity*’s integrals. The [cheatsheet](../guides/integrals/collections/everything-anything.md) should also act as a useful checklist for algebra and calculus you should be familiar with.
+I will say that if you are confident with the integration taught in A-level [Further Mathematics<sup>↗</sup>](https://en.m.wikipedia.org/wiki/Further_Mathematics),[^a-level] the basic principles you learn there will leave you in a good spot for tackling *Integrity*’s integrals. The [cheatsheet](../scriptures/integrals/collections/everything-anything.md) should also act as a useful checklist for algebra and calculus you should be familiar with.
 
 [^a-level]: Or anything equivalent to A-levels – I’m not particularly familiar with the maths taught in other qualifications.
 
