@@ -47,7 +47,7 @@ log success: "found #{questions.length} question files!"
 execute(questions, ROOT/"site/src/data/questions.json")
 
 desmos = (ROOT/"desmos/gamedev").glob("*/**/[!~]**.md")
-graphs = (ROOT/"scriptures/graph-drawing").glob("*~.md")
+graphs = (ROOT/"scriptures/graph-drawing/dyna").glob("*~.md")
 scriptures = desmos + graphs
 
 log success: "found #{scriptures.length} dynamic scripture files!"
