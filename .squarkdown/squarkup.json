@@ -17,7 +17,7 @@
   "out / file-name": "~content",
   "out / site-data": "src/data/site.json",
 
-  "opts / if-no-dir": ["warn", "create"],
+  "opts / on-no-dir": ["warn", "create"],
   "opts / on-error": "kill",
 
   "assets / path": "assets/",
