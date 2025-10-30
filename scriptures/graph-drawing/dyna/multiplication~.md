@@ -107,7 +107,7 @@ This makes these great ‘anchor’ points! We can immediately deduce what $y$-v
 ### _
 Secondly, and even though this is obvious, it’s the key thing to remember. $k > 1$ scales up, and $0 < k < 1$ scales down.
 
-When we multiply values for graph drawing, we’ll *constantly* be thinking, “Is this scale factor greater than $1$?”. If so, scale, otherwise scale down.
+When we multiply values for graph drawing, we’ll *constantly* be thinking, “Is this scale factor greater than $1$?”. If so, scale up, otherwise scale down.
 
 ### _
 <aside class="note"></aside>

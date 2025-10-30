@@ -4,6 +4,10 @@
 | capt = Substitution without substitution
 | index = scriptures / integrals / methods
 | date = 2025 June 23
+| --
+| example-questions = s25f-qt2
+| continue-reading =
+    scriptures/integrals/methods/partials-asymptotes.md
 -->
 
 When we see

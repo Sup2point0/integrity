@@ -6,5 +6,5 @@ import PageContent from "#parts/base/static-page.svelte";
 
 
 <PageContent levels={[
-  { text: "Docs", intern: "docs" }
+  { text: "Docs", intern: "docs" },
 ]} />

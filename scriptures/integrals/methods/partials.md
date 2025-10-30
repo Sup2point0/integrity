@@ -3,6 +3,10 @@
 | dest = scriptures/integrals/methods/partials
 | title = Partial Fractions
 | index = scriptures / integrals / methods
+| --
+| continue-reading =
+    scriptures/integrals/methods/power-partials.md /
+    scriptures/integrals/methods/partials-asymptotes.md
 -->
 
 Rational functions – functions that only involve polynomials – are often ‘safe’ to integrate because we have a whole host of methods that can allow us to integrate pretty much any rational function. Now, this can often end up being quite long because of all the splitting and reshaping we have to do, but we can often look at an integral like
