@@ -25,6 +25,7 @@
   "assets / site-assets": "assets/site/",
   "fonts / queries": [
     "Geologica:slnt,wght,CRSV@-12..0,100..900,1",
-    "Crimson+Pro:ital,wght@0,200..900;1,200..900"
+    "Crimson+Pro:ital,wght@0,200..900;1,200..900",
+    "Fira+Mono:wght@400"
   ]
 }

@@ -11,7 +11,7 @@
 
 I’m finding a fix!
 
-- `desmos/library/` pages are not prerendering so are inaccessible
+- [URGENT] `desmos/library/` pages are not prerendering so are inaccessible
 
 
 <br>

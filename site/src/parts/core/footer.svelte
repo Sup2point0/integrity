@@ -102,6 +102,10 @@ footer {
     flex-flow: row wrap;
     gap: 0.25em;
   }
+
+  .outlinks code {
+    @include font-code;
+  }
 }
 
 .right {
