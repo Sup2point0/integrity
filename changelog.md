@@ -1,7 +1,7 @@
 # Changelog
 <!-- #SQUARK live!
 | dest = info/changelog
-| capt = Snapshots into Integrity’s history
+| capt = Casual snapshots into Integrity’s history
 | index = info
 | update = 2025 October 31
 -->
@@ -15,6 +15,9 @@
 
 
 ## 31 October
+You can now reset search filters to their defaults (finally!)
+
+## 30 October
 Laptop recovered from the dead, and ofc we’re straight back to work on *Integrity*. Many quality-of-life fixes and much long-awaited technical debt to be resolved...
 
 ## 23 September

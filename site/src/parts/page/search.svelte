@@ -32,7 +32,6 @@ onMount(() => {
         for (let tag of search_tags) {
           $search.tags[tag] = true;
         }
-        // $search.tags = $search.tags;
       }, 0);
     }
     
@@ -43,7 +42,6 @@ onMount(() => {
         for (let method of search_methods) {
           $search.methods[method] = true;
         }
-        // $search.methods = $search.methods;
       }, 0);
     }
   }
@@ -352,9 +350,9 @@ onMount(() => {
         action={() => { $search.expanded = !$search.expanded; }}
       />
 
-      <!-- <Clicky text="Reset to Defaults"
+      <Clicky text="Reset to Defaults"
         action={() => { window.confirm("Clear search filters?") && $search.reset_defaults(); }}
-      /> -->
+      />
     </div>
   {/if}
 </search>

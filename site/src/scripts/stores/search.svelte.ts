@@ -4,7 +4,6 @@
 
 import sample from "@stdlib/random-sample";
 import * as fuzz from "fuzzball";
-
 import { persisted, type Serializer } from "svelte-persisted-store";
 
 import { get } from "svelte/store";
@@ -12,59 +11,73 @@ import { get } from "svelte/store";
 import userprefs from "./user-prefs.svelte.ts";
 import type { UserPrefs, Question, States } from "#scripts/types";
 
+
 export class SearchPrefs
 {
-  query: string = $state("");
+  #DEFAULTS = {
+    query: "",
+    difficulties: {
+      based: true,
+      incline: true,
+      manifold: true,
+      chaos: true,
+      unassigned: true,
+    },
+    include: {
+      solved: false,
+      flagged: false,
+      starred: false,
+      featured: false,
+      "has hints": false,
+      guided: false,
+    },
+    exclude: {
+      solved: false,
+      flagged: false,
+      starred: false,
+      featured: false,
+      "has hints": false,
+      guided: false,
+    },
+    show: {
+      question: true,
+      shard: false,
+      dates: true,
+      tags: true,
+      methods: false,
+      difficulties: false,
+    },
+    buttons: {
+      solved: true,
+      flag: true,
+      star: true,
+    },
+    view: "grid",
+    effects: null,
+    sort: null,
+    reverse: false,
+    expanded: true,
+  };
+
+  query: string = $state(this.#DEFAULTS.query);
 
   tags: States = $state({});
   methods: States = $state({});
-  difficulties: States = $state({
-    based: true,
-    incline: true,
-    manifold: true,
-    chaos: true,
-    unassigned: true,
-  });
+  difficulties: States = $state(this.#DEFAULTS.difficulties);
 
-  include: States = $state({
-    solved: false,
-    flagged: false,
-    starred: false,
-    featured: false,
-    "has hints": false,
-    guided: false,
-  });
-  exclude: States = $state({
-    solved: false,
-    flagged: false,
-    starred: false,
-    featured: false,
-    "has hints": false,
-    guided: false,
-  });
+  include: States = $state(this.#DEFAULTS.include);
+  exclude: States = $state(this.#DEFAULTS.exclude);
 
-  show: States = $state({
-    question: true,
-    shard: false,
-    dates: true,
-    tags: true,
-    methods: false,
-    difficulties: false,
-  });
+  show: States = $state(this.#DEFAULTS.show);
+  buttons: States = $state(this.#DEFAULTS.buttons);
 
-  buttons: States = $state({
-    solved: true,
-    flag: true,
-    star: true,
-  });
-
-  view: "grid" | "list" | "grid-wide" = $state("grid");
-  effects: boolean | null = $state(null);
-  sort: "rel" | "date" | "name" | "diff" | "rand" | null = $state(null);
-  reverse: boolean = $state(false);
+  view: "grid" | "list" | "grid-wide" = $state(this.#DEFAULTS.view);
+  effects: boolean | null = $state(this.#DEFAULTS.effects);
+  sort: "rel" | "date" | "name" | "diff" | "rand" | null = $state(this.#DEFAULTS.sort);
+  reverse: boolean = $state(this.#DEFAULTS.reverse);
 
   /** Whether search filters should be expanded. */
-  expanded = $state(true);
+  expanded = $state(this.#DEFAULTS.expanded);
 
 
   /** Expose attributes for syncing to localStorage. */
@@ -104,7 +117,17 @@ export class SearchPrefs
   /** Reset all search options to their defaults. */
   reset_defaults()
   {
-    // TODO
+    Object.assign(this, this.#DEFAULTS);
+
+    for (let tag of Object.keys(this.tags)) {
+      this.tags[tag] = false;
+    }
+
+    for (let method of Object.keys(this.methods)) {
+      this.methods[method] = false;
+    }
+
+    this.query = "";  // NOTE just to trigger reactivity
   }
 
   /** Apply the filters to the given list of questions. */
