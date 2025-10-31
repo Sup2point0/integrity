@@ -1,5 +1,5 @@
+***October 31*** Laptop recovered from the dead, and ofc we’re straight back to work on *Integrity*. Many quality-of-life fixes and much long-awaited technical debt to be resolved...
+
 ***September 23*** Enjoy a bit of daily maths trivia ;)
 
-***August 22*** The [Desmos library](https://sup2point0.github.io/integrity/desmos/library) has been added. [Gamedev in Desmos](https://sup2point0.github.io/desmos/gamedev) scriptures have been moved from `/scriptures/desmos/` to `/desmos/`.
-
-***July 9*** All-new dynamic scriptures with step-by-step walkthroughs have been added for the *Game Development in Desmos* series! Go [check it out](https://sup2point0.github.io/integrity/desmos/gamedev/prerequisites/graphs).
+***August 22*** The [Desmos library](https://sup2point0.github.io/integrity/desmos/library) has been added.

@@ -9,7 +9,7 @@ export function pick_trivia(): Trivia
   let scale = 0.69 * total;
   let idx = (scale * t + 8) % total;
 
-  return trivia[Math.round(idx)];
+  return trivia[Math.floor(idx)];
 }
 
 
@@ -154,5 +154,9 @@ export const trivia = [
   },
   {
     text: String.raw `*Quaternion* has got to be one of the coolest terms in all of mathematics.`,
+  },
+  {
+    text: String.raw `The Mandelbrot set is really a 2-dimensional slice of the possible 6-dimensional super-fractal O_o`,
+    note: String.raw `In the Mandelbrot set, you vary $z$ in $z^2 + c$. But you can also vary the $2$ or $c$, each taking on a complex value – thus giving $2 + 2 + 2 = 6$ dimensions.`,
   },
 ];

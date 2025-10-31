@@ -9,17 +9,17 @@ import Changes from "./changes.svx";
 import { pick_trivia, type Trivia } from "./trivia.ts";
 
 import Header from "#parts/core/header.svelte";
-import Line from "#parts/page/line.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
-import Link from "#parts/ui/link.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
-import Card from "#parts/ui/card.svelte";
-import QuestionArray from "#parts/page/question-array.svelte";
 import ArticleArray from "#src/parts/page/article-array.svelte";
+import Card from "#parts/ui/card.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
+import Line from "#parts/page/line.svelte";
+import Link from "#parts/ui/link.svelte";
+import QuestionArray from "#parts/page/question-array.svelte";
+import RenderBlock from "#parts/page/render-block.svelte";
 
 import { onMount } from "svelte";
-import { slide } from "svelte/transition";
 import { expoInOut } from "svelte/easing";
+import { slide } from "svelte/transition";
 
 
 const all_featured_questions = Site.get_featured_questions();
