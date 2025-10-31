@@ -1,3 +1,8 @@
+# Integration
+<!-- #SQUARK live!
+| dest = scriptures/integrals
+-->
+
 Welcome, adventurer. You’ve come to a realm of problem-solving, extended contemplation, and boundless creativity.
 
 If you’re new here, congratulations on taking your first steps along the path of integration. This is not an easy excursion. It will be challenging; it will require you to *think*; and you will never reach the end. Following this trail mandates you be familiar with differentiation, and even beyond that, general proficiency in all areas of mathematics.

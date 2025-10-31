@@ -3,6 +3,7 @@
 import Site from "#scripts/site";
 
 import Card from "#parts/ui/card.svelte";
+import CardsContainer from "#parts/ui/container.cards.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -26,7 +27,7 @@ import Header from "#parts/core/header.svelte";
 />
 
 
-<div class="browse">
+<CardsContainer>
   <Card title="Docs"
     intern="desmos/docs"
     latex={String.raw`I_\text{desmos} \ : \ I()`}
@@ -43,18 +44,4 @@ import Header from "#parts/core/header.svelte";
     intern="desmos/grad-desc"
     latex={String.raw`\frac{\partial}{\partial x} \ L(x)`}
   /> -->
-</div>
-
-
-<style lang="scss">
-
-.browse {
-  margin: 1rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 1rem;
-  text-align: center;
-}
-
-</style>
+</CardsContainer>

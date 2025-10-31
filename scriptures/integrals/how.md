@@ -2,7 +2,7 @@
 <!-- #SQUARK live! feat! dev!
 | dest = scriptures/integrals/how
 | capt = The Art & Strategy of Integration
-| index = scriptures / integrals
+| index = scriptures / integrals / general
 | date = 2025 January 21
 -->
 

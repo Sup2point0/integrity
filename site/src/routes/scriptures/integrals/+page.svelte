@@ -1,10 +1,9 @@
 <script lang="ts">
 
-import Site from "#scripts/site";
+import Content from "./~content.svx";
 
-import Content from "./integrals.svx";
-
-import ArticleArray from "#parts/page/article-array.svelte";
+import Card from "#parts/ui/card.svelte";
+import CardsContainer from "#parts/ui/container.cards.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -31,57 +30,29 @@ import Line from "#parts/page/line.svelte";
 
 <Line />
 
-<section>
-  <ArticleArray
-    paths={Site.index.integrals.pages.filter(path => !(
-         Site.index.antiderivatives.pages.includes(path)
-      || Site.index.methods.pages.includes(path)
-      // || Site.index.strategies.pages.includes(path)
-      || Site.index.collections.pages.includes(path)
-      || Site.index.adventures.pages.includes(path)
-    ))}
+<CardsContainer>
+  <Card title="General"
+    intern="scriptures/integrals/general"
+    latex={String.raw`\int f(x) \ dx`}
   />
-</section>
-
-<section>
-  <h2 id="antiderivatives"> Antiderivatives </h2>
-  <ArticleArray paths={Site.index.antiderivatives.pages} />
-</section>
-
-<section>
-  <h2 id="methods"> Methods </h2>
-  <ArticleArray paths={Site.index.methods.pages} />
-</section>
-
-<!-- <section>
-  <h2 id="strategies"> Strategies </h2>
-  <ArticleArray paths={Site.index.strategies.pages} />
-</section> -->
-
-<section>
-  <h2 id="collections"> Collections </h2>
-  <ArticleArray paths={Site.index.collections.pages} />
-</section>
-
-<section>
-  <h2 id="adventures"> Adventures </h2>
-  <ArticleArray paths={Site.index.adventures.pages} />
-</section>
-
-
-<style lang="scss">
-
-section {
-  margin: 0 0 4rem;
-  text-align: center;
-}
-
-h2 {
-  margin: 1em 0;
-  padding: 0 0.1em 0.25em;
-  @include font-serif;
-  font-weight: 400;
-  font-size: 200%;
-}
-
-</style>
+  <Card title="Antiderivatives"
+    intern="scriptures/integrals/antiderivatives"
+    latex={String.raw`\int \sec^2{x} \ dx = \tan{x} - c`}
+  />
+  <Card title="Methods"
+    intern="scriptures/integrals/methods"
+    latex={String.raw`\int f g' \ dx = fg - \int f' g \ dx`}
+  />
+  <!-- <Card title="Strategies
+      intern="scriptures/integrals/strategies" /> 
+      latex={String.raw``}
+  >/ -->
+  <Card title="Collections"
+    intern="scriptures/integrals/collections"
+    latex={String.raw`\int g(x) \ dx \quad \int h(x) \ dx`}
+  />
+  <Card title="Adventures"
+    intern="scriptures/integrals/adventures"
+    latex={String.raw`\int w(\zeta) \ d\zeta`}
+  />
+</CardsContainer>

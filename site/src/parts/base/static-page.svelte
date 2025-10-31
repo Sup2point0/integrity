@@ -30,5 +30,5 @@ let { content, metadata: data } = $derived(page.data);
 <Header page={data} />
 
 <article {id}>
-  {@render content()}
+  {@render content?.()}
 </article>
