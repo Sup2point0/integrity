@@ -86,6 +86,7 @@ import { goto } from "$app/navigation";
       <Link text="FAQ" intern="info/faq" />
       <Link text="decoded" intern="info/decoded" />
       <Link text="Roadmap" intern="info/roadmap" />
+      <Link text="Changelog" intern="info/changelog" />
       <Link text="Privacy" intern="info/privacy" />
       <Link text="Licence" intern="info/licence" />
     </div>

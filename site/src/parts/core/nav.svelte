@@ -48,7 +48,6 @@ import { goto } from "$app/navigation";
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" dev={true} />
       <Link text="Trails" intern="trails" />
-      <Link text="Changelog" intern="changelog" />
       <Link text="Your Data" intern="data" />
     </NavLink>
 
@@ -88,6 +87,7 @@ import { goto } from "$app/navigation";
       <Link text="FAQ" intern="info/faq" />
       <Link text="decoded" intern="info/decoded" />
       <Link text="Roadmap" intern="info/roadmap" />
+      <Link text="Changelog" intern="info/changelog" />
       <Link text="Privacy" intern="info/privacy" />
       <Link text="Licence" intern="info/licence" />
     </NavLink>
