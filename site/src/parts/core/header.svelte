@@ -3,10 +3,10 @@
 <script lang="ts">
 
 import { userprefs } from "#scripts/stores";
-import { render_markdown } from "#scripts/utils";
 import type { Page } from "#scripts/types";
 
 import ArticleBanners from "#parts/page/article-banners.svelte";
+import RenderBlock from "#parts/page/render-block.svelte";
 
 
 interface Props {
@@ -22,8 +22,13 @@ let { title, capt, page }: Props = $props();
 
 <header class="{$userprefs.style}">
   <div class="info">
-    <h1> {@html render_markdown(title ?? page?.head) ?? "Untitled Page"} </h1>
-    <p class="capt"> {@html render_markdown(capt ?? page?.capt) ?? ""} </p>
+    <h1>
+      <RenderBlock source={{ content: title ?? page?.head ?? "Untitled Page" }} />
+    </h1>
+
+    <div class="capt">
+      <RenderBlock source={{ content: capt ?? page?.capt ?? "" }} />
+    </div>
   </div>
 
   {#if page}
@@ -51,25 +56,29 @@ header {
   text-align: center;
   border-bottom: 1px solid $col-line-fallback;
   border-bottom: 1px solid $col-line;
+
+  h1 {
+    @include font-serif;
+    font-size: 250%;
+  }
+
+  .capt {
+    margin-top: 1em;
+    @include font-ui;
+    color: $col-text-deut;
+    font-weight: 200;
+  }
 }
 
-h1 {
-  @include font-serif;
-  font-size: 250%;
-}
-
-p {
+p.date {
   margin-top: 1em;
   @include font-ui;
   color: $col-text-deut;
   font-weight: 200;
+  text-align: right;
 
-  &.date {
-    text-align: right;
-
-    span {
-      color: $col-deut;
-    }
+  span {
+    color: $col-deut;
   }
 }
 

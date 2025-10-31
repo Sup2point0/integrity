@@ -15,7 +15,7 @@ import Desmos from "#parts/desmos.svelte";
 
 
 interface Props {
-  source: Block | Block[] | undefined;
+  source: Partial<Block> | Partial<Block>[] | undefined;
 }
 
 let { source }: Props = $props();

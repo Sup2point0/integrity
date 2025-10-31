@@ -53,12 +53,12 @@ onMount(() => {
     <h2> TODAY’S TRIVIA </h2>
 
     <div class="centre">
-      <RenderBlock source={{ kind: "text", content: featured_trivia.text }} />
+      <RenderBlock source={{ content: featured_trivia.text }} />
     </div>
     
     {#if featured_trivia.note}
       <p class="note">
-        <RenderBlock source={{ kind: "text", content: featured_trivia.note }} />
+        <RenderBlock source={{ content: featured_trivia.note }} />
       </p>
     {/if}
   </section>

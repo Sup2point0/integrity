@@ -63,7 +63,6 @@ function check_valid(data: Array<any>): boolean
         <Desmos blocks={desmos} bounds={question["graph-bounds"]} controls={false} ratio={1} />
       {/if}
 
-
       {#if question.topic === "guess-graph"}
         <Desmos
           blocks={question.desmos}

@@ -105,6 +105,4 @@ const svelte_config = {
   },
 };
 
-console.log("svelte_config.kit.prerender.entries =", svelte_config.kit.prerender.entries);
-
 export default svelte_config;
