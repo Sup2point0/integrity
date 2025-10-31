@@ -48,6 +48,7 @@ import { goto } from "$app/navigation";
       <Link text="Workspace" intern="workspace" />
       <Link text="Speedrun" intern="speedrun" dev={true} />
       <Link text="Trails" intern="trails" />
+      <Link text="Changelog" intern="changelog" />
       <Link text="Your Data" intern="data" />
     </NavLink>
 

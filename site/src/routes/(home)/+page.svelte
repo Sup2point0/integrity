@@ -53,12 +53,12 @@ onMount(() => {
     <h2> TODAY’S TRIVIA </h2>
 
     <div class="centre">
-      <RenderBlock source={{ content: featured_trivia.text }} />
+      <RenderBlock source={{ kind: "text", content: featured_trivia.text }} />
     </div>
     
     {#if featured_trivia.note}
       <p class="note">
-        <RenderBlock source={{ content: featured_trivia.note }} />
+        <RenderBlock source={{ kind: "text", content: featured_trivia.note }} />
       </p>
     {/if}
   </section>
@@ -93,6 +93,10 @@ onMount(() => {
   <article style:text-align="left">
     <Changes />
   </article>
+
+  <div class="centre">
+    <Clicky text="View All" intern="changelog" />
+  </div>
 </section>
 
 <section class="featured">
