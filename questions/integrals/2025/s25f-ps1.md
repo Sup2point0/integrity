@@ -50,3 +50,5 @@ The expected value (mean) of a Poisson distribution with parameter $\lambda$ is 
   \\ =&\ \frac{1}{3}x^{3}-c
 \end{align*}
 ```
+
+Thanks to [syan212<sup>↗</sup>](https://github.com/syan212) for pointing out an error in the solution!
