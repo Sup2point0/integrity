@@ -35,7 +35,7 @@ If you haven’t done statistics before (or haven’t done it in a while), it’
 
 ## Answer
 ```math
-\frac{1}{2}x^{2}-c
+\frac{1}{3}x^{3}-c
 ```
 
 
@@ -47,6 +47,6 @@ The expected value (mean) of a Poisson distribution with parameter $\lambda$ is 
 \begin{align*}
   &\ \int \mathbb{E} \left[\operatorname{Po} \left(x^2\right)\right]\ dx
   \\ =&\ \int x^{2}\ dx
-  \\ =&\ \frac{1}{2}x^{2}-c
+  \\ =&\ \frac{1}{3}x^{3}-c
 \end{align*}
 ```
