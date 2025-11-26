@@ -278,7 +278,7 @@ export class SearchPrefs
     return Object.values(categories).flatMap(category => category);
   }
 
-  categorise_rel(question: Question, data: UserPrefs, difficulty = false)
+  categorise_rel(question: Question, data: UserPrefs, difficulty = false): number
   {
     if (data.flagged.has(question.shard)) return 5;
     if (data.starred.has(question.shard)) return 40;
