@@ -16,6 +16,11 @@
 </div> -->
 
 
+## 26 November – life is busy
+I’m trying to find time to work on *Integrity*, I really am.
+
+(The crippling Rust addiction does not help...)
+
 
 ## 31 October
 You can now reset search filters to their defaults (finally!)
@@ -29,18 +34,20 @@ Laptop recovered from the dead, and ofc we’re straight back to work on *Integr
 Enjoy a bit of daily maths trivia ;)
 
 
-## 3 months off maths
+## September – 3 months off maths
 
 3 months since I last did serious maths, and I’ve forgotten how to solve differential equations.
 
 Times are bleak.
 
 
+## 00:21, Thursday 4 September, Shanghai
+
+I kinda miss *Integrity*...
+
+
 ## 22 August
 The [Desmos library](https://sup2point0.github.io/integrity/desmos/library) has been added. [Gamedev in Desmos](https://sup2point0.github.io/desmos/gamedev) scriptures have been moved from `/scriptures/desmos/` to `/desmos/`.
-
-
-## I kinda miss Integrity
 
 
 ## 13 July
