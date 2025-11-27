@@ -58,6 +58,7 @@ Words are not separated with any separator due to Desmos limitations. This clear
 | $\textcolor{#f07d1c}{c}$ | control / core | A core action for running the game. | | $\textcolor{#f07d1c}{c}_\text{tick}(...)$ |
 | $\textcolor{#f07d1c}{d}$ | draw | A function for rendering polygons to the viewport. | | $\textcolor{#f07d1c}{d}_\text{rect}(...)$ |
 | $\textcolor{#f07d1c}{f}$ | function | A pure function[^pure] that performs computations instead of modifying state. | Intended for commonly used utility functions. | $\textcolor{#f07d1c}{f}_\text{lsrange}(...)$ |
+| $\textcolor{#f07d1c}{g}$ | generator | A sequence generator. | | $\textcolor{#f07d1c}{g}_\text{fib}(...)$ |
 | $\textcolor{#f07d1c}{n}$ | new | An action for creating new objects (internally). | | $\textcolor{#f07d1c}{n}_\text{enemy}(...)$ |
 | $\textcolor{#f07d1c}{v}$ | move | An action for moving something forward in time – either literally or by processing its frame updates. | $v$ for velocity in physics, literally changing position. | $\textcolor{#f07d1c}{v}_\text{player}(...)$ |
 | $\textcolor{#f07d1c}{w}$ | handle | Abstraction upon $v()$, usually for branching between different $v()$ depending on conditional. | | $\textcolor{#f07d1c}{w}_\text{collision}(...)$ |

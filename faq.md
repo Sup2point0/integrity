@@ -53,7 +53,12 @@ Okayy, can’t fault you for being too good at maths! The integrals are definite
 And [Addvent](https://sup2point0.github.io/integrity/questions/addvent) was for Addvent, there’s a reason the questions were accessible.
 
 ### What do the difficulty indicators mean?
+<!-- #SQUARK leave? -->
 See [Docs / Difficulties](docs/difficulties.md).
+<!-- #SQUARK leave. -->
+<!-- #SQUARK only?
+See [Docs / Difficulties](../docs/difficulties.md).
+     #SQUARK only.-->
 
 ### I’ve finished all the questions, do you have any more?
 Hello!! Congratulations on solving so many, and tysm for using *Integrity*!

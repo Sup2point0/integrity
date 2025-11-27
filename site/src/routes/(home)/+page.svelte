@@ -95,7 +95,7 @@ onMount(() => {
   </article>
 
   <div class="centre">
-    <Clicky text="View All" intern="changelog" />
+    <Clicky text="View All" intern="info/changelog" />
   </div>
 </section>
 
