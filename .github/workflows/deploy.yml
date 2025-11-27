@@ -29,9 +29,9 @@ jobs:
 
       - name: 'ruby / bundle install'
         run: |
-          cd ../.stranger-quarkdown
+          cd prep
           bundle install
-          cd ../.github/scripts
+          cd ../../.stranger-quarkdown
           bundle install
 
       - name: 'github / node / setup'
