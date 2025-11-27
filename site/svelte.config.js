@@ -26,7 +26,8 @@ function get_paths_of_index(index)
 }
 
 
-const mdsvex_config = {
+const mdsvex_config =
+{
   extensions: [".svx", ".md"],
   remarkPlugins: [
     remarkFootnotes,
@@ -42,7 +43,8 @@ const mdsvex_config = {
   ],
 };
 
-const svelte_config = {
+const svelte_config =
+{
   extensions: [".svelte", ".svx", ".md"],
   
   kit: {
@@ -72,6 +74,10 @@ const svelte_config = {
 
         ...get_paths_of_index("graph-drawing"),
         ...get_paths_of_index("library"),
+
+        (() => {
+          console.log(...get_paths_of_index("library"));
+        })(),
 
         ...(Object.entries(dyna_scriptures).flatMap(
           ([chapter, pages]) => Object.keys(pages).map(
