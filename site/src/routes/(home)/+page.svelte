@@ -158,7 +158,7 @@ section {
 }
 
 .trivia {
-  min-width: 40rem;
+  min-width: min(40rem, 100%);
   max-width: max-content;
   padding: 1rem 3rem;
   margin-left: auto;
