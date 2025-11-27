@@ -12,6 +12,61 @@ This page documents library functions related to lists.
 <br>
 
 
+## Tail
+
+```math
+f_\text{tail} \left(\,
+  l
+\,\right)
+```
+
+> Get the tail of a list (all elements excluding the first).
+
+### Arguments
+| Argument | Description | Domain | Constraints | Notes |
+| :------- | :---------- | :----- | :---------- | :---- |
+| $l$ | source list | $\forall T: [T, ...]$ | Not empty.
+
+### Return
+| Value | Description | Codomain | Constraints | Notes |
+| :---- | :---------- | :------- | :---------- | :---- |
+| $\omega$ | tail | $[T, ...]$ | | $\text{undefined}$ if $l$ is empty.
+
+### Instances
+```desmos
+f_{tail}\left(\left[\right]\right)
+=\frac{1}{0}
+
+f_{tail}\left(\left[0\right]\right)-\left[\right]
+f_{tail}\left(\left[0,\ 10\right]\right)-\left[10\right]
+f_{tail}\left(\left[0,\ 10,\ 100\right]\right)-\left[10,\ 100\right]
+```
+
+### Implementation
+```math
+\begin{align*}
+  f_\text{tail} \left(\,
+    l
+  \,\right)
+  =
+  \{&
+    \operatorname{length}\left(l\right)<1:\ \left[1/0\right],
+    \\
+    & \operatorname{length}\left(l\right)=1:\ \left[\right],
+    \\
+    & \left[l\left[i\right]\operatorname{for}i=\left[2...\operatorname{length}\left(l\right)\right]\right]
+  \\
+  \}&
+\end{align*}
+```
+
+### Dependencies
+None
+
+
+<br>
+
+
 ## Count Occurrences
 
 ```math
