@@ -7,23 +7,20 @@ import { error } from "@sveltejs/kit";
 export async function load({ url, params })
 {
   let dest = url.pathname.slice(1);
-  console.log("dest =", dest);
   
-  let path = (
-    Object.entries(Site.pages)
-    .find(([_, data]) => data.dest === dest)
-    ?.at(0)
-  );
+  let path = Object.entries(Site.pages).find(
+    ([_, data]) => data.dest === dest || `integrity/${data.dest}` === dest
+  )?.at(0);
 
   if (path === undefined) {
-    console.log("NO PATH FOUND");
-    error(404, { message: `No path found!` });
+    console.error(`!! CRITICAL: No path found for ${dest}`);
+    error(404, { message: `No path found for ${dest}` });
   }
 
   let page = Site.pages[path as string];
   if (page === undefined) {
-    console.log(`NO ROUTE FOUND FOR ${path}`);
-    error(404, { message: `Failed to find route ${path}!` });
+    console.log(`!! CRITICAL: No page found for ${path}`);
+    error(404, { message: `No page found for ${path}!` });
   }
   
   // @ts-ignore
