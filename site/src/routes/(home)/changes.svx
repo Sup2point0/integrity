@@ -1,5 +1,5 @@
+***November 28*** A long-overdue mobile navbar has been added. Still figuring out how best to do dropdowns, bear with me! For now, the current navigation should make mobile a lot more usable without going into horizontal and/or zooming out =)
+
 ***November 27*** After 3 months of debugging, the [Desmos library](https://sup2point0.github.io/integrity/desmos/library) is finally correctly deploying and is now accessible.
 
 ***October 31*** Laptop recovered from the dead, and ofc we’re straight back to work on *Integrity*. Many quality-of-life fixes and much long-awaited technical debt to be resolved...
-
-***September 23*** Enjoy a bit of daily maths trivia ;)

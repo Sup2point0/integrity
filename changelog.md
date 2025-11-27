@@ -16,9 +16,14 @@
 </div> -->
 
 
+## 28 November
+
+A long-overdue mobile navbar has been added. Still figuring out how best to do dropdowns, bear with me! For now, the current navigation should make mobile a lot more usable without going into horizontal and/or zooming out =)
+
+
 ## 27 November
 
-***November 27*** After 3 months of debugging, the [Desmos library](https://sup2point0.github.io/integrity/desmos/library) is finally correctly deploying and is now accessible.
+After 3 months of debugging, the [Desmos library](https://sup2point0.github.io/integrity/desmos/library) is finally correctly deploying and is now accessible.
 
 
 ## 26 November – life is busy

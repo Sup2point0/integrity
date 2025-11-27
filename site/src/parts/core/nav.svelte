@@ -8,16 +8,20 @@ import { pick_random_question, pick_random_scripture } from "#scripts/utils";
 import { Duality } from "#scripts/types";
 
 import NavLink from "#parts/core/nav.link.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
 import Link from "#parts/ui/link.svelte";
 import GithubIcon from "#parts/svg/github-icon.svelte";
 
 import { base } from "$app/paths";
 import { goto } from "$app/navigation";
 
+
+let show_mobile_dropdown = $state(false);
+
 </script>
 
 
-<nav class:nav={$userprefs.nav === false}>
+<nav class="bar" class:nav={$userprefs.nav === false}>
   <section class="left">
     <NavLink
       pict="integrity-title{$duality === Duality.DARK || $userprefs.nav === false ? '-dark' : ''}.png"
@@ -25,7 +29,7 @@ import { goto } from "$app/navigation";
     />
   </section>
 
-  <section class="centre">
+  <section class="centre mobile-hide">
     <NavLink text="Questions" intern="questions">
       <Link text="Integrals" intern="questions/integrals" />
       <Link text="Graph Drawing" intern="questions/graph-drawing" />
@@ -93,13 +97,34 @@ import { goto } from "$app/navigation";
     </NavLink>
   </section>
 
-  <section class="right">
-    <NavLink text="GitHub" collapse={true}
+  <section class="centre mobile-show"></section>
+
+  <section class="right mobile-hide">
+    <NavLink text="GitHub"
       extern="https://github.com/Sup2point0/integrity"
     >
       {#snippet svg()} <GithubIcon /> {/snippet}
     </NavLink>
   </section>
+
+  <section class="right mobile-show">
+    <Clicky action={() => { show_mobile_dropdown = !show_mobile_dropdown; }}>
+      <code class:active={show_mobile_dropdown}> ↓ </code>
+    </Clicky>
+  </section>
+</nav>
+
+<nav class="mobile-dropdown" class:shown={show_mobile_dropdown}>
+  <NavLink text="Questions" intern="questions"></NavLink>
+  <NavLink text="Explore" intern="explore"></NavLink>
+  <NavLink text="Docs" intern="docs"></NavLink>
+  <NavLink text="Scriptures" intern="scriptures"></NavLink>
+  <NavLink text="Desmos" intern="desmos" hot={true}></NavLink>
+  <NavLink text="Fun" intern="fun"></NavLink>
+  <NavLink text="Info" intern="info"></NavLink>
+  <NavLink text="GitHub" extern="https://github.com/Sup2point0/integrity">
+    {#snippet svg()} <GithubIcon /> {/snippet}
+  </NavLink>
 </nav>
 
 
@@ -119,7 +144,7 @@ import { goto } from "$app/navigation";
   inherits: false;
 }
 
-nav {
+nav.bar {
   --col-left: #{$col-nav};
   --col-right: #{$col-nav};
   width: 100%;
@@ -167,9 +192,79 @@ section {
   }
 }
 
+.mobile-show {
+  display: none;
+}
+
+
 @media (max-width: 40rem) {
-  nav {
+  nav.bar {
     padding: 0 1rem;
+  }
+
+  .mobile-show {
+    display: block;
+  }
+  .mobile-hide {
+    display: none;
+  }
+
+  nav.mobile-dropdown {
+    width: max-content;
+    padding: 0.5em;
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    display: block;
+    z-index: 20;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+
+    background: $col-nav-fallback;
+    background: $col-nav;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 16px -1px $col-line-fallback;
+    box-shadow: 0 2px 16px -1px $col-line;
+    transform: translateY(-0.4em);
+    transition:
+      visibility 0.12s,
+      opacity 0.12s ease-out,
+      transform 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.335);  // ease-in circ
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 0.5em;
+      backdrop-filter: blur(12px);
+    }
+
+    &.shown {
+      visibility: visible;
+      opacity: 1;
+      transform: none;
+      transition:
+        opacity 0.16s ease-out,
+        transform 0.24s cubic-bezier(0.075, 0.82, 0.165, 1);  // ease-out circ
+    }
+  }
+
+  code {
+    display: block;
+    padding: 0.2em 0;
+    transition: transform 0.16s ease-out;
+
+    &.active {
+      transform: rotate(180deg);
+    }
   }
 }
 
@@ -184,7 +279,6 @@ nav.nav {
     color: white;
   }
 }
-
 
 @media (prefers-reduced-transparency: reduce) {
   nav {
