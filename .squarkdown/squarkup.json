@@ -1,5 +1,5 @@
 {
-  "$schema": "../.stranger-quarkdown/squarkdown/resources/squarkup-schema.json",
+  "$schema": "https://sup2point0.github.io/stranger-quarkdown/squarkup-schema/latest.json",
 
   "repo": "Integrity",
 
