@@ -77,6 +77,7 @@ const svelte_config =
 
         (() => {
           console.log(...get_paths_of_index("library"));
+          return "/";
         })(),
 
         ...(Object.entries(dyna_scriptures).flatMap(
