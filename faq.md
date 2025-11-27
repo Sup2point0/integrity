@@ -112,3 +112,13 @@ Oh dear, the parsing engine’s flopped again. Or more likely, I’ve made some 
 If the loading overlay’s taking a while, it almost certainly means JavaScript’s broken or crashed. I do check the site after each deployment, so if it’s immediately unusable I will go and fix it.
 
 Again, drop an [issue on GitHub](https://github.com/Sup2point0/integrity/issues), ideally with some screenshots and console traces, and I’ll be on it.
+
+### Are you finished with *Integrity*?
+Nope, ofc not ;D
+
+*Integrity* is an ever-ongoing project. Somehow, I always have more to fix, more to optimise, and more importantly, more to add!
+
+### Are you still writing questions?
+At time of writing, yes! Just nowhere near as often as I used to, as so many other things are occupying my time.
+
+Also, watch out for random dumps of large amounts of questions out of the blue, when I finally get round to copying them from Desmos over to *Integrity* xD
