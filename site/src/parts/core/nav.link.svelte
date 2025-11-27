@@ -32,7 +32,7 @@ let {
 
 <div class="nav-link" class:collapse class:disabled>
   <a href={link || extern || `${base}/${intern}`}
-    target={extern ? "_blank" : "_self"}
+    target={extern ? "_blank" : undefined}
   >
     {#if svg}
       <div class="svg">
