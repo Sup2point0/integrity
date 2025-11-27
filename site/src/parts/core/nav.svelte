@@ -114,7 +114,7 @@ let show_mobile_dropdown = $state(false);
   </section>
 </nav>
 
-<nav class="mobile-dropdown" class:shown={show_mobile_dropdown}>
+<nav class="mobile-dropdown mobile-show" class:shown={show_mobile_dropdown}>
   <NavLink text="Questions" intern="questions"></NavLink>
   <NavLink text="Explore" intern="explore"></NavLink>
   <NavLink text="Docs" intern="docs"></NavLink>
@@ -229,6 +229,7 @@ section {
     border-radius: 0.5em;
     box-shadow: 0 2px 16px -1px $col-line-fallback;
     box-shadow: 0 2px 16px -1px $col-line;
+    backdrop-filter: blur(12px);
     transform: translateY(-0.4em);
     transition:
       visibility 0.12s,
