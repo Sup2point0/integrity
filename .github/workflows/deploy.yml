@@ -16,31 +16,35 @@ jobs:
         working-directory: './site'
         
     steps:
-      - name: 'git / checkout'
+      - name: 'github / checkout'
         uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: 'ruby / setup'
+      - name: 'github / ruby / setup'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.3
           bundler-cache: true
 
-      - name: 'ruby / install'
-        run: cd ../.stranger-quarkdown && bundle install && cd ../.github/scripts && bundle install
+      - name: 'ruby / bundle install'
+        run: |
+          cd ../.stranger-quarkdown
+          bundle install
+          cd ../.github/scripts
+          bundle install
 
-      - name: 'node / setup'
+      - name: 'github / node / setup'
         uses: actions/setup-node@v4
         with:
           node-version: 'latest'
           cache: 'npm'
           cache-dependency-path: './site/package-lock.json'
 
-      - name: 'node / install'
+      - name: 'svelte / npm install'
         run: npm install
 
-      - name: 'svelte / build'
+      - name: 'svelte / npm run build'
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
