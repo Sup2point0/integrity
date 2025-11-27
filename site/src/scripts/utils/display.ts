@@ -1,7 +1,7 @@
 /** Capitalise the first letter of the given text. */
-export function capitalise(text: string): string
+export function capitalise(text?: string): string | undefined
 {
-  return text[0].toUpperCase() + text.slice(1);
+  return text && (text[0].toUpperCase() + text.slice(1));
 }
 
 /** Round a number to a given number of decimal places, and pad with `0`s if necessary. */
