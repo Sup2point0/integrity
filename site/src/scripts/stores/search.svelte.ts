@@ -265,7 +265,7 @@ export class SearchPrefs
     return out;
   }
 
-  sort_rel(source: Question[], data: UserPrefs, difficulty = false) {
+  sort_rel(source: Question[], data: UserPrefs, difficulty = false): Question[] {
     if (typeof Object.groupBy === "undefined") return this.sort_date(source);
     
     let categories = Object.groupBy(source, q => this.categorise_rel(q, data, difficulty));
@@ -275,7 +275,7 @@ export class SearchPrefs
       category.sort((prot, deut) => (prot.date && deut.date) ? (deut.date - prot.date) : -1);
     }
 
-    return Object.values(categories).flatMap(category => category);
+    return Object.values(categories).flatMap(category => category) as Question[];
   }
 
   categorise_rel(question: Question, data: UserPrefs, difficulty = false): number
