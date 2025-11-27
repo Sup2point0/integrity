@@ -14,10 +14,12 @@ export async function load({ url, params })
   );
 
   if (path === undefined) {
+    console.log("NO PATGH SUPPLIED");
     error(404, { message: `No path supplied!` });
   }
 
   let page = Site.pages[path as string];
+    console.log("NO ROUTE FOUND");
   if (page === undefined) {
     error(404, { message: `Failed to find route ${path}!` });
   }
