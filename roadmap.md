@@ -11,7 +11,7 @@
 
 I’m finding a fix!
 
-- [URGENT] `desmos/library/` pages are not prerendering so are inaccessible
+- Navigating backwards in dynamic scripture can clear Desmos window. This is unideal, since it should instead revert to the newest window up until that step.
 
 
 <br>
@@ -21,8 +21,9 @@ I’m finding a fix!
 
 I’m working on it!
 
-- Speedrun environment
+- Mobile-friendly navbar
 - Upgrade static scripture routes to all dynamically prerendered
+- Speedrun environment
 
 
 <br>

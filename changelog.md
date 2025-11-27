@@ -16,7 +16,13 @@
 </div> -->
 
 
+## 27 November
+
+***November 27*** After 3 months of debugging, the [Desmos library](https://sup2point0.github.io/integrity/desmos/library) is finally correctly deploying and is now accessible.
+
+
 ## 26 November – life is busy
+
 I’m trying to find time to work on *Integrity*, I really am.
 
 (The crippling Rust addiction does not help...)
