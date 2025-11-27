@@ -7,6 +7,7 @@ import { error } from "@sveltejs/kit";
 export async function load({ url, params })
 {
   let dest = url.pathname.slice(1);
+  console.log("dest =", dest);
   
   let path = (
     Object.entries(Site.pages)
@@ -15,11 +16,10 @@ export async function load({ url, params })
   );
 
   if (path === undefined) {
-    console.log("NO PATH SUPPLIED");
-    error(404, { message: `No path supplied!` });
+    console.log("NO PATH FOUND");
+    error(404, { message: `No path found!` });
   }
 
-  console.log("Site.pages =", Site.pages);
   let page = Site.pages[path as string];
   if (page === undefined) {
     console.log(`NO ROUTE FOUND FOR ${path}`);
