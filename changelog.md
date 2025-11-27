@@ -21,6 +21,11 @@
 A long-overdue mobile navbar has been added. Still figuring out how best to do dropdowns, bear with me! For now, the current navigation should make mobile a lot more usable without going into horizontal and/or zooming out =)
 
 
+## 24:00
+
+what a finnicky issue lmao, turns out the top-level navbar `<a>` links were refreshing the page cuz I was setting `target="_self"` on them explicitly, which I suppose interferes with SvelteKit’s on-hover preloading? setting them to `undefined` has fixed it lmao. Enjoy the smoother experience!!
+
+
 ## 27 November
 
 After 3 months of debugging, the [Desmos library](https://sup2point0.github.io/integrity/desmos/library) is finally correctly deploying and is now accessible.
