@@ -75,11 +75,6 @@ const svelte_config =
         ...get_paths_of_index("graph-drawing"),
         ...get_paths_of_index("library"),
 
-        (() => {
-          console.log(...get_paths_of_index("library"));
-          return "/";
-        })(),
-
         ...(Object.entries(dyna_scriptures).flatMap(
           ([chapter, pages]) => Object.keys(pages).map(
             page => (

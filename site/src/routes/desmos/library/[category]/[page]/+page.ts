@@ -7,16 +7,19 @@ import { error } from "@sveltejs/kit";
 export async function load({ url, params })
 {
   let dest = url.pathname.slice(1);
-  let path = Object.entries(Site.pages).find(
-    ([_, data]) => data.dest === dest
-  )?.at(0);  
+  let path = (
+    Object.entries(Site.pages)
+    .find(([_, data]) => data.dest === dest)
+    ?.at(0)
+  );
+
   if (path === undefined) {
-    error(404);
+    error(404, { message: `No path supplied!` });
   }
 
   let page = Site.pages[path as string];
   if (page === undefined) {
-    error(404);
+    error(404, { message: `Failed to find route ${path}!` });
   }
   
   // @ts-ignore
