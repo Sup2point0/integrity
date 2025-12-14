@@ -4,6 +4,7 @@
 | capt = The prime integrator’s standard arsenal
 | index = scriptures / integrals / collections
 | date = 2025 April 17
+| update = 2025 December 14
 -->
 
 Integration can’t be learnt in a day. Nor can you, or should you, memorise in a day all of the useful formulae, identities and other quotable results that will come in crucial throughout your adventures in integration.
@@ -319,7 +320,30 @@ It’s super useful to visualise trigonometric functions with a right triangle. 
 
 ### Periodicity
 
+$\sin(x)$ looks like a wave – it oscillates up and down, above and below the $x$-axis between $-1$ and $1$. It crosses the axis (i.e. $\sin{x} = 0$) when $x$ is an integer multiple of $\pi$, and completes a full up-and-down oscillation when $x$ is a multiple of $2\pi$.
+
+$\cos(x)$ is exactly the same shape as a $\sin(x)$ wave, just shifted. It crosses the $x$-axis when $x$ is a half-integer multiple ($0.5, 1.5, 2.5, ...$) of $\pi$.
+
 ### Values
+We often consider only 1 oscillation of these waves, usually in their principal range of $0 \leq \theta \leq 2\pi$.
+
+It’s easy to see when $\sin(x)$ and $\cos(x)$ equal $0$, $1$ or $-1$ by just drawing them out. However, there are also a number of noteworthy triangles with very ‘nice’ values of $\theta$ that happen to give very memorable ratios.
+
+Enumerating these out, it may not look like there’s a pattern...
+
+| $\theta$ | $0$ | $30\degree$ | $45\degree$ | $60\degree$ | $90\degree$ |
+| :------- | :-- | :---------- | :---------- | :---------- | :---------- |
+| $\sin{\theta}$ | $0$ | $\frac{1}{2}$ | $\frac{1}{\sqrt{2}}$ | $\frac{\sqrt{3}}{2}$ | $1$ |
+| $\cos{\theta}$ | $1$ | $\frac{\sqrt{3}}{2}$ | $\frac{1}{\sqrt{2}}$ | $\frac{1}{2}$ | $0$ |
+
+However, if we ‘un-simplify’ a few of the non-irrationals, we find:
+
+| $\theta$ | $0$ | $30\degree$ | $45\degree$ | $60\degree$ | $90\degree$ |
+| :------- | :-- | :---------- | :---------- | :---------- | :---------- |
+| $\sin{\theta}$ | $\frac{\sqrt{0}}{2}$ | $\frac{\sqrt{1}}{2}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{3}}{2}$ | $\frac{\sqrt{4}}{2}$ |
+| $\cos{\theta}$ | $\frac{\sqrt{4}}{2}$ | $\frac{\sqrt{3}}{2}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{1}}{2}$ | $\frac{\sqrt{0}}{2}$ |
+
+Notice the sequences in the $\sqrt{}$ terms.
 
 ### Identities
 The primitive trigonometric identity is
