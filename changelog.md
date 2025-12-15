@@ -16,6 +16,21 @@
 </div> -->
 
 
+## 12 December – A year in Integrity
+
+oops, lowkey missed the anniversary :P
+
+Oh my days, it’s been a year since I created *Integrity*.
+
+This has become perhaps my most unexpected favourite project. I created it on impulse, just as something which I really wanted to make. Fun fact, I was meant to be revising for exams, I did this to procrastinate.
+
+Never thought for a moment it’d grow to what it is today. A hub/wiki/repo of everything maths that I do. I mean it’s almost beaten *Assort*, holy mackerel. It’s the project I like to show people most when they ask what I work on, because it encapsulates 2 of my most core loves.
+
+Time flies, innit. Soon it’ll be 2026. shivers.
+
+I hope I continue to have time to work on *Integrity* and write scriptures. Life is getting busy, but... the contents list in the roadmap still has a lot of pages unchecked ;)
+
+
 ## 28 November
 
 A long-overdue mobile navbar has been added. Still figuring out how best to do dropdowns, bear with me! For now, the current navigation should make mobile a lot more usable without going into horizontal and/or zooming out =)
