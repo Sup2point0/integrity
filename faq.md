@@ -1,10 +1,10 @@
 # FAQ
-<!-- #SQUARK live!
+<!-- #SQUARK live! dev!
 | dest = info/faq
 | capt = Frequently Asked Questions
 | desc = Frequently asked questions about Integrity
 | index = info
-| date = 2025 June 26
+| date = 2025 December 16
 -->
 
 ### What’s *Integrity* for?
@@ -13,16 +13,14 @@ It’s a home for all the [maths questions](https://sup2point0.github.io/integri
 ### Who wrote these questions?
 Me!
 
-All of these questions were hand-crafted from scratch by yours truly.
-
-A few will no doubt have been inspired by ideas or tricks from other questions I’ve seen before. And of course, this is maths, so there’s no such thing as an ‘original question’ anyway.
+All of these questions were hand-crafted by yours truly.
 
 ### What are these questions for?
 Some, such as the [*Addvent*](https://sup2point0.github.io/integrity/questions/addvent) questions, I created for events and competitions at school.
 
 The rest I just come up with for fun, whether to experiment myself or challenge my friends.
 
-Writing questions is a pretty unique and fun way of deeply delving into a topic – you really learn a lot. You come to appreciate a lot of things you otherwise wouldn’t know, and start thinking about the process in a different way.
+Writing questions is a pretty unique and fun way of deeply delving into a topic. You come to appreciate a lot of things you otherwise wouldn’t, and start thinking about the process in a different way. You also gain a really deep intuition for how everything fits together.
 
 ### How did you write these questions?
 Honestly, I don’t even know. I just gave it a shot, and it turned out I quite enjoyed writing maths problems! It’s a creative and problem-solving process that is satisfying in a similar way to software development or music production.[^similar]
@@ -38,14 +36,10 @@ A lot of questions are simply the results of permuting different functions – t
 ### Why are there so many questions?
 Oh my days, I actually love creating questions (especially integrals) too much. I came up with like 16 integrals on a coach journey once. They just keep on coming, y’know. You’d think I’m approaching a point where I’ve tried most of the common combinations of the functions in maths, but nope!
 
-It’s just fun, what can I say.
-
 ### Why are the questions so difficult?
 Well, the vast majority of integrals on *Integrity* are made to be nontrivial. I want this site to be a source of high-quality, thought-provoking, handcrafted integrals that aren’t just a test of speed.
 
 Some questions are only tough because they have a very specific and obscure trick.
-
-This is less true for the [Completing the Square](https://sup2point0.github.io/integrity/questions/complete-square) questions, but how hard can completing the square get...
 
 ### Why are the questions so easy?
 Okayy, can’t fault you for being too good at maths! The integrals are definitely above A-level level, but I wouldn’t say anything above A-level Further Maths knowledge. (Can confirm: my A-level maths friends could solve most of them.)
@@ -61,9 +55,9 @@ See [Docs / Difficulties](../docs/difficulties.md).
      #SQUARK only.-->
 
 ### I’ve finished all the questions, do you have any more?
-Hello!! Congratulations on solving so many, and tysm for using *Integrity*!
+Hello!?! Congratulations on solving so many, and tysm for using *Integrity*!
 
-I’m regularly adding more questions (because I can’t seem to stop writing more), so just check back in a bit and there’ll almost certainly be more waiting for you.
+I’m regularly adding more questions (because I can’t seem to stop writing more), so just check back in a bit and there’ll almost certainly be more waiting for you. Also, do drop me a message to let me know, because that’s mad work!
 
 ### Can I use these questions?
 Absolutely, you’re more than welcome to! For more details, see [Licence](https://sup2point0.github.io/integrity/info/licence).
@@ -81,6 +75,9 @@ See [Why Draw Graphs?](https://sup2point0.github.io/integrity/scriptures/graph-d
 
 ### Why would I want to practise completing the square?
 See [Why Complete the Square?](https://sup2point0.github.io/integrity/scriptures/complete-square/why)
+
+### Is my progress saved?
+Yes, your data is stored locally in your browser. See [Info / Privacy](https://sup2point0.github.io/integrity/info/privacy).
 
 ### How was the site built?
 See [Synopsis](https://sup2point0.github.io/integrity/info/synopsis).
