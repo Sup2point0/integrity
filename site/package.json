@@ -12,7 +12,9 @@
     "export": "cd prep && rake export && cd ../../site",
     "build": "vite build",
       "buildx": "npm run prepx && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "playwright test",
+      "testx": "npm run build && playwright test"
   },
   "devDependencies": {
     "@stdlib/random-sample": "^0.2.1",
@@ -23,6 +25,7 @@
     "javascript-time-ago": "^2.5.10",
     "katex": "^0.16.11",
     "mdsvex": "^0.12.3",
+    "@playwright/test": "^1.57.0",
     "rehype-katex": "^7.0.1",
     "rehype-katex-svelte": "^1.2.0",
 		"rehype-slug": "^6.0.0",

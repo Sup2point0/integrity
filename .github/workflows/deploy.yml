@@ -44,6 +44,10 @@ jobs:
       - name: 'svelte / npm install'
         run: npm install
 
+      - name: 'svelte / npm run test'
+        run: |
+          npm run testx
+
       - name: 'svelte / npm run build'
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
