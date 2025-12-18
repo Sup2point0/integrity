@@ -52,6 +52,7 @@ jobs:
 
       - name: 'svelte / npm run test'
         run: |
+          npx playwright install
           npm run test
 
       - name: 'github / upload artifacts'
