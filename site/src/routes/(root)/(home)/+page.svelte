@@ -10,12 +10,12 @@ import { pick_trivia, type Trivia } from "./trivia.ts";
 
 import Header from "#parts/core/header.svelte";
 import ArticleArray from "#src/parts/page/article-array.svelte";
+import QuestionArray from "#parts/page/question-array.svelte";
+import RenderBlock from "#parts/page/render-block.svelte";
 import Card from "#parts/ui/card.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
 import Line from "#parts/page/line.svelte";
 import Link from "#parts/ui/link.svelte";
-import QuestionArray from "#parts/page/question-array.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
 
 import { onMount } from "svelte";
 import { expoInOut } from "svelte/easing";
@@ -26,7 +26,7 @@ const all_featured_questions = Site.get_featured_questions();
 const all_featured_scriptures = Site.get_featured_scriptures();
 
 // start with none featured on server side
-let featured_trivia: Trivia = null;
+let featured_trivia: Trivia | null = null;
 let featured_questions: Question[] = [];
 let featured_scriptures: Page[] = [];
 
