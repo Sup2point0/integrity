@@ -71,7 +71,7 @@ onMount(() => {
       }
     }, 0);
 
-    e.target.remove();
+    e.target?.remove();
   }} />
 </div>
 
