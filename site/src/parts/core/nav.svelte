@@ -115,13 +115,13 @@ let show_mobile_dropdown = $state(false);
 </nav>
 
 <nav class="mobile-dropdown mobile-show" class:shown={show_mobile_dropdown}>
-  <NavLink text="Questions" intern="questions"></NavLink>
-  <NavLink text="Explore" intern="explore"></NavLink>
-  <NavLink text="Docs" intern="docs"></NavLink>
-  <NavLink text="Scriptures" intern="scriptures"></NavLink>
-  <NavLink text="Desmos" intern="desmos" hot={true}></NavLink>
-  <NavLink text="Fun" intern="fun"></NavLink>
-  <NavLink text="Info" intern="info"></NavLink>
+  <NavLink text="Questions" intern="questions" mobile={true} />
+  <NavLink text="Explore" intern="explore" mobile={true} />
+  <NavLink text="Docs" intern="docs" mobile={true} />
+  <NavLink text="Scriptures" intern="scriptures" mobile={true} />
+  <NavLink text="Desmos" intern="desmos" mobile={true} hot={true} />
+  <NavLink text="Fun" intern="fun" mobile={true} />
+  <NavLink text="Info" intern="info" mobile={true} />
   <NavLink text="GitHub" extern="https://github.com/Sup2point0/integrity">
     {#snippet svg()} <GithubIcon /> {/snippet}
   </NavLink>

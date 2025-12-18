@@ -17,20 +17,21 @@ interface Props {
     extern?: string;
   collapse?: boolean;
   disabled?: boolean;
+  mobile?: boolean;
   hot?: boolean;
   children?: any;
 }
 
 let {
   text, pict, svg, link, intern, extern,
-  collapse = false, disabled = false, hot = false,
+  collapse = false, disabled = false, mobile = false, hot = false,
   children,
 }: Props = $props();
 
 </script>
 
 
-<div class="nav-link" class:collapse class:disabled>
+<div class={["nav-link", { collapse, disabled, mobile }]}>
   <a href={link || extern || `${base}/${intern}`}
     target={extern ? "_blank" : undefined}
   >
@@ -63,6 +64,10 @@ let {
 
 .nav-link {
   padding: 0.5em 0;
+
+  &.mobile {
+    padding: 0;
+  }
 }
 
 a {
