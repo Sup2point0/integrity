@@ -3,13 +3,15 @@
 | dest = scriptures/integrals/why-hard
 | capt = You can learn to differentiate in a day, but you can’t learn to integrate in a lifetime.
 | index = scriptures / integrals / general
+| date = 2025 January 8
+| update = 2025 December 18
 -->
 
 The [Fundamental Theorem of Calculus<sup>↗</sup>](https://wikipedia.org/wiki/Fundamental_theorem_of_calculus) says that *integration* and *differentiation* are the inverses of each other. So why is it that integration is extraordinarily, incomparably more difficult[^difficult-nontrivial] than differentiation?
 
 [^difficult-nontrivial]: Perhaps a better term would be *nontrivial*.
 
-Well, this is true for a lot of things in life: often, reversing something is much, much harder than doing it in the first place – and in many cases, pretty much impossible. For instance, smash a fragile LEGO set, and it’ll take a while to repair it. It takes considerably more effort to rebuild it than it took to break it apart.[^break] And if you’ve inevitably lost the instruction set, then it might not even turn out like the original.
+Well, this is true for a lot of things in life: often, reversing something is much, much harder than doing it in the first place – and in many cases, pretty much impossible. For instance, smash a fragile LEGO set, and it’ll take considerably more effort to rebuild it than it took to break it apart.[^break] And if you’ve lost the instruction set, then it might not even turn out like the original.
 
 [^break]: Humour me, it was a *fragile* LEGO set, ok?
 
@@ -35,11 +37,11 @@ But when we square a number, suddenly things aren’t so black-and-white. We mig
 \end{align*}
 ```
 
-If they are inverses we would need $\sqrt{x^2}$ to give $x$. But as we know, $\sqrt{}$ only gives the positive root – which means $\sqrt{x^2} = |x|$ instead.
+For them to be inverses, we would need $\sqrt{x^2}$ to give $x$. But as we know, $\sqrt{}$ only gives the positive root, which means $\sqrt{x^2} = |x|$ instead.
 
 So why does that happen?
 
-Think about what happens when we square $-2$. We have $(-2) \times (-2)$, so the twos multiply to give $4$. But the $-$ signs cancel out. It’s like they weren’t even there. In fact, just looking at the answer of $4$, there’s absolutely no way to tell the $-$ signs were there in the original calculation!
+Think about what happens when we square $-2$. We have $(-2) \times (-2) = (-1) \times (-1) \times 2 \times 2$. The twos multiply to give $4$. But the $-$ signs cancel out. It’s like they weren’t even there at all. In fact, just looking at the answer of $4$, there’s absolutely no way to tell the $-$ signs were there in the original calculation!
 
 This is a **loss of information**. And unlike losing your password, it’s an unrecoverable loss.
 
@@ -55,7 +57,7 @@ Integration is the inverse of differentiation, so integrating this expression sh
 \int 2x + 1 \ dx = x^2 + x
 ```
 
-And this is why we need the $+c$ – it’s to account for *any* possible constant term.
+And this is why we need the $+c$ – it’s to account for *any* possible constant term, which would otherwise vanish.
 
 ```math
 \int 2x + 1 \ dx = x^2 + x + c
@@ -63,7 +65,21 @@ And this is why we need the $+c$ – it’s to account for *any* possible consta
 
 In this case we knew $c = +2$, but there’s no way to know this when evaluating an integral blind.
 
-Now this isn’t what makes integration difficult, but it helps illustrate the idea: when we differentiate, we often *lose* information. This information doesn’t have to be irreversibly lost, and it may not even be essential – but when we don’t have it, it can make a solution much tougher to spot.
+Now this isn’t what makes integration difficult, but it helps illustrate the idea: when we differentiate, we often *lose* information. This information doesn’t always have to be irreversibly lost, and it may not even be essential. It can be something more abstract, like a particular structure or ordering of terms – but when we don’t have it, it can make a solution much tougher to spot.
+
+For instance, let’s differentiate $\tan^{-1}\sqrt{\sin{x}}$:
+
+```math
+\begin{align*}
+  &\ \frac{d}{dx} \ \tan^{-1}\sqrt{\sin{x}}
+  \\ =&\ \frac{1}{\sin{x}+1} \cdot \frac{1}{2\sqrt{\sin{x}}} \cdot \cos{x}
+  \\ 
+\end{align*}
+```
+
+Even a superficially simple expression can become incredibly complicated when differentiated, simply down to the layers of chain and product rule that are needed.
+
+With integration, and lot of things have to be *exactly* in a particular form – tweak one thing, and it could entirely warp the nature of the question. With differentiation, it’s unlikely to make a significant difference to the difficulty. Differentiate $\ln(x^2)$? Easy. Differentiate $\ln(x^2 + 2)$? Literally the same. Integrate $\ln(x^2)$? Not too hard to spot. Integrate $\ln(x^2 + 2)$? **Horror.**
 
 This is perhaps my favourite example for demonstrating this. Let’s differentiate $\ln \left(\sec{x} + \tan{x} \right)$. We’ll use chain rule and quote the standard derivatives of logarithmic functions.
 
@@ -81,7 +97,7 @@ And miraculously, at the final step $\sec{x} + \tan{x}$ perfectly factors out, l
 
 But now, suppose we do that in reverse. We want to *integrate* $\sec{x}$. And we have no clue of what we’ve just seen.
 
-*This* is where it gets hard, because the critical factor of $\sec{x} + \tan{x}$ – it’s been lost. It was cancelled out in differentiation, just like $-$ when squaring. Without it, the integral is a whole lot more nontrivial, and the challenge lies in spotting that multiplication that allows you to apply [straight-up layer cake].
+*This* is where it gets hard, because that critical factor of $(\sec{x} + \tan{x})$? – it’s been lost. It was cancelled out in differentiation, just like the $-$ sign when squaring. Without it, the integral is a whole lot more nontrivial, and the challenge lies in spotting that multiplication that allows you to apply [straight-up layer cake](methods/layer-cake.md).
 
 And so looking at this, one would wonder how you could *ever* spot the multiplication by $\sec{x} + \tan{x}$ when integrating $\sec{x}$.
 
@@ -89,8 +105,11 @@ This is an extreme case, but the same applies to many, many integrals.[^many]
 
 [^many]: It’s quite tough to judge how many, or what proportion, exactly. Given there are an uncountably infinite number of possible integrals.
 
-The challenge of integration is not in carrying out the integration,[^accuracy] but in manipulating the integrand into a form where we *can* integrate it.
+The state space of possible expressions is so unfathomably infinite, and only a tiny, *tiny* subset of those are integrable. The challenge of integration is not in carrying out the integration,[^accuracy] but in manipulating the integrand into a form where we *can* integrate it.
 
 [^accuracy]: That being said, algebraic accuracy is also nontrivial. Tough in both differentiation and integration, let’s say that.
 
 And how do we do that? Continue reading at [How Do We Integrate?](how.md)
+
+
+<br>
