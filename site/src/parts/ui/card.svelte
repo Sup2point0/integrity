@@ -31,7 +31,6 @@ let { title, capt, intern, latex, pict, style = "block" }: Props = $props();
       <img alt={title} src="{base}/{pict}" />
     {:else if latex}
       <Katex text={latex} inline={false} />
-    {:else}
     {/if}
   </div>
 

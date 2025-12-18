@@ -2,7 +2,7 @@
 
 import Site from "#scripts/site";
 
-import Content from "../../../../scriptures/README.md";
+import Content from "#src/../../scriptures/README.md";
 
 import Card from "#parts/ui/card.svelte";
 

@@ -12,7 +12,7 @@
     "fun/",
     "desmos/"
   ],
-  "paths / dest": "src/routes/",
+  "paths / dest": "src/routes/(root)/",
 
   "out / file-name": "~content",
   "out / site-data": "src/data/site.json",
