@@ -37,8 +37,6 @@ const all_questions = Site.get_map_of_all_questions();
 
       <QuestionCard {question} style="row" />
     {/each}
-
-  {:else}
   
   {/if}
 </ul>

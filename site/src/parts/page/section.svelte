@@ -32,6 +32,7 @@ let open = $state(!closed);
 <section class={ctx}>
   <div class="row"
     onclick={() => { open = !open; }}
+    onkeydown={e => { if (e.key.toLowerCase() === "space") open = !open; }}
   >
     {#if ctx === "outer"}
       <h2> {title} </h2>
