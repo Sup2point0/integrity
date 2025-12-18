@@ -22,9 +22,9 @@ I’m finding a fix!
 
 I’m working on it!
 
-- Mobile-friendly navbar
 - Upgrade static scripture routes to all dynamically prerendered
 - Speedrun environment
+- Automated tests to ensure no errors in builds
 
 
 <br>
