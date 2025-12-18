@@ -44,15 +44,15 @@ jobs:
       - name: 'svelte / npm install'
         run: npm install
 
-      - name: 'svelte / npm run test'
-        run: |
-          npm run testx
-
       - name: 'svelte / npm run build'
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           npm run buildx
+
+      - name: 'svelte / npm run test'
+        run: |
+          npm run test
 
       - name: 'github / upload artifacts'
         uses: actions/upload-pages-artifact@v3
