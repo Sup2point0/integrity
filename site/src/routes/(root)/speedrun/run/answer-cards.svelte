@@ -52,8 +52,8 @@ let options = $derived(
             options={{ showXAxis: true, showYAxis: true }}
             controls={false}
             bounds={question["graph-bounds"]}
-            height="25vh"
-          />
+            height="100%"
+            />
         {/key}
 
       {:else}
@@ -68,13 +68,16 @@ let options = $derived(
 <style lang="scss">
 
 .answer-cards {
+  width: max-content;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
 button {
+  aspect-ratio: 2 / 1;
   min-width: 16em;
+  max-width: 40vw;
   min-height: 6em;
   padding: 0.75em;
   display: flex;
