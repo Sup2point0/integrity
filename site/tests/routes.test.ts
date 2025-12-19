@@ -49,7 +49,7 @@ const routes = [
   "/desmos/docs",
   "/desmos/docs/identifiers",
   "/desmos/gamedev",
-  // "/desmos/gamedev/polymap",
+  "/desmos/gamedev/polymap",
   "/desmos/gamedev/core/actions",
   "/desmos/gamedev/core/identifiers",
   "/desmos/gamedev/core/ranges",

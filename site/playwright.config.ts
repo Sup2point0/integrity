@@ -6,5 +6,5 @@ export default defineConfig({
     command: "npm run preview",
     port: 4173,
   },
-  retries: 1,
+  retries: 2,
 });
