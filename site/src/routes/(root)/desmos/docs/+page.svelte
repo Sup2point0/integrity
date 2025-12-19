@@ -24,7 +24,5 @@ import ArticleArray from "#parts/page/article-array.svelte";
 
 
 <ArticleArray
-  paths={Site.index.docs.pages.filter(path => (
-    Site.index.desmos.pages.includes(path)
-  ))}
+  paths={Site.index["desmos-docs"].pages}
 />
