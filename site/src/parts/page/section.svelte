@@ -33,6 +33,7 @@ let open = $state(!closed);
   <div class="row"
     onclick={() => { open = !open; }}
     onkeydown={e => { if (e.key.toLowerCase() === "space") open = !open; }}
+    role="button"
   >
     {#if ctx === "outer"}
       <h2> {title} </h2>

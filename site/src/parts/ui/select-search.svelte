@@ -75,6 +75,8 @@ function filter_suggestions(): string[]
 
 
   {#snippet select_option(val: string)}
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
     <li class="option" class:active={value === val}
       onclick={() => { value = val; }}
       onkeydown={e => {
