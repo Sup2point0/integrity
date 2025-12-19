@@ -126,15 +126,9 @@ function try_load_desmos()
 function parse_block(block: Block, index: number): object | undefined
 {
   /* split parts */
-  let parts = block.content?.split(" :: ");
-  let content = parts.at(-1);
-
-  let sequence: string | string[];
-  if (parts.length > 1) {
-    sequence = parts.slice(0, -1);
-  } else {
-    sequence = parts.at(0)!;
-  }
+  let parts: string[] = block.content.split(/ ?:: ?/);
+  let content: string = parts.at(-1)!;
+  let sequences: string[] = (parts.length > 1) ? parts.slice(0, -1) : [...parts];
 
   /* parse control sequences */
   let control: {
@@ -155,7 +149,7 @@ function parse_block(block: Block, index: number): object | undefined
 
     /* flags */
     for (let each of ["animate", "asympt", "base", "dashed", "hidden", "text"]) {
-      if (sequence.includes("\\" + each)) {
+      if (sequence.includes("/" + each)) {
         control[each] = true;
       }
     }
@@ -171,16 +165,13 @@ function parse_block(block: Block, index: number): object | undefined
     }
   }
 
-  if (Array.isArray(sequence)) {    
-    sequence.forEach(apply_sequence);
-  } else {    
-    apply_sequence(sequence);
-  }
+  sequences?.forEach(apply_sequence);
   
   /* build expression */
   if (
     parts.length === 0
-    || sequence[0] === "\\" && content![0] === "\\"
+    /* Lines with only control sequences */
+    || sequences.length === 1 && content![0] === "/"
   ) return undefined;
 
   let out = {
@@ -235,7 +226,7 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
   if (!source.includes(sequence)) return;
 
   let pattern = (
-    String.raw `(?<=\\`
+    String.raw `(?<=\/`
     + sequence
     + String.raw `)\{.+\}`
   );
@@ -248,6 +239,7 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
 
   let res;
   try { res = JSON.parse(out); } catch { return undefined; }
+  console.log("res =", res);
   return res;
 }
 

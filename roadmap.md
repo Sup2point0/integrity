@@ -12,6 +12,7 @@
 I’m finding a fix!
 
 - Navigating backwards in dynamic scripture can clear Desmos window. This is unideal, since it should instead revert to the newest window up until that step.
+- Dynamic scriptures with many steps can overflow scroll
 - Desmos library **Usage**/**Instances** sections do not use a Desmos block
 
 

@@ -112,13 +112,13 @@ y = \frac{1}{x}
 At the extremes, as $x \to \pm \infin$, $\frac{1}{x} \to 0$ for both $+\infin$ and $-\infin$. Then $e^{1/x} \to 1$, so we know our graph approaches $y = 1$ for small and large $x$.
 
 ```desmos
-\asympt :: y = 1\ \left\{x<-2,\ x>2\right\}
+/asympt :: y = 1\ \left\{x<-2,\ x>2\right\}
 ```
 
 Now let’s deal with the positive side first. $\frac{1}{x}$ is positive and decreasing, so we’re raising $e$ to an increasingly small positive number. That means the graph is decreasing, and so will tend to $1$ from above.
 
 ```desmos
-\asympt :: y = 1\ \left\{x>2\right\}
+/asympt :: y = 1\ \left\{x>2\right\}
 e^{1/x}\ \left\{5<x\right\}
 ```
 
@@ -143,7 +143,7 @@ e^{1/x}\ \left\{0<x\right\}
 Now on the left, as we decrease towards $-\infin$, $\frac{1}{x}$ is negative and increasing, so we’re raising $e$ to a negative number increasingly close to $0$. Remembering that $e^0 = 1$, this implies we approach the asymptote from below.
 
 ```desmos
-\asympt :: y = 1\ \left\{x<-2,\ x>2\right\}
+/asympt :: y = 1\ \left\{x<-2,\ x>2\right\}
 e^{1/x}\ \left\{x<-5,\ 0<x\right\}
 ```
 
