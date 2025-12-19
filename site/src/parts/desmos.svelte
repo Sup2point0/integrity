@@ -111,7 +111,12 @@ function try_load_desmos()
           .filter(each => each !== undefined)
       );
     } else {
-      desmos.setExpression(parse_block(blocks, 1));
+      let expr = parse_block(blocks, 1);
+      if (expr === undefined) {
+        desmos = false;
+        return false;
+      }
+      desmos.setExpression(expr);
     }
   }
 
@@ -133,7 +138,7 @@ function parse_block(block: Block, index: number): object | undefined
 
   /* parse control sequences */
   let control: {
-    [sequence: string]: object | boolean | undefined;
+    [sequence: string]: Record<string, any> | boolean | undefined;
   } = {};
 
   function apply_sequence(sequence: string)
@@ -222,12 +227,10 @@ function parse_block(block: Block, index: number): object | undefined
     ),
   };
 
-  console.log("out =", out);
-
   return out;
 }
 
-function parse_sequence(source: string, sequence: string): object | undefined
+function parse_sequence(source: string, sequence: string): Record<string, any> | undefined
 {  
   if (!source.includes(sequence)) return;
 
@@ -243,15 +246,8 @@ function parse_sequence(source: string, sequence: string): object | undefined
   out = out.replaceAll(/([a-zA-Z]+):/g, String.raw `"$1":`);
   if (out === undefined) return;
 
-  let res: object;
-
-  try {
-    res = JSON.parse(out);
-  }
-  catch {
-    return;
-  }
-
+  let res;
+  try { res = JSON.parse(out); } catch { return undefined; }
   return res;
 }
 
@@ -278,6 +274,7 @@ function parse_sequence(source: string, sequence: string): object | undefined
   width: 100%;
   min-width: 12rem;
   max-width: 100%;
+  color: $col-text-deut;
   opacity: 0;
   transition: opacity 0.24s ease-out 0.05s;
 

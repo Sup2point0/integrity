@@ -3,8 +3,6 @@
 A select dropdown input.
 -->
 
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 <script lang="ts">
 
 import { base } from "$app/paths";
@@ -57,6 +55,8 @@ let selected_option = $derived(
   </ul>
 
   {#snippet select_option(text: string, val: string)}
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
     <li class="option" class:active={value === val}
       onclick={() => { value = val; }}
       onkeydown={e => {

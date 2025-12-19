@@ -203,8 +203,8 @@ export class SpeedrunData
   {
     this._clear_interval_();
     this.run.interval = setInterval(() => {
-      this.run.elapsed += 250;
-    }, 250);
+      this.run.elapsed += 200;
+    }, 200);
   }
 
   /** Clear the current interval if it exists. */
