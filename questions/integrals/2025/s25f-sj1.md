@@ -36,7 +36,7 @@ You’ll want a $1 + x\ln{x}$ on the top.
 
 ## Answer
 ```math
-x-\ln\left(1+x\ln x\right)-c
+\ln\left(1+x\ln x\right)-x-c
 ```
 
 
@@ -46,9 +46,12 @@ x-\ln\left(1+x\ln x\right)-c
 \begin{align*}
   &\ \int \frac{\ln x-x\ln x}{1+x\ln x}\ dx
   \\ =&\ -\int \frac{x\ln x-\ln x}{1+x\ln x}\ dx
-  \\ =&\ \int \frac{x\ln x-\ln x+1-1}{1+x\ln x}\ dx
-  \\ =&\ \int \frac{1+x\ln x}{1+x\ln x}-\frac{1+\ln x}{1+x\ln x}\ dx
-  \\ =&\ \int 1-\frac{\frac{1}{x}\cdot x+\ln x}{1+x\ln x}\ dx
-  \\ =&\ x-\ln\left(1+x\ln x\right)-c
+  \\ =&\ -\int \frac{x\ln x-\ln x+1-1}{1+x\ln x}\ dx
+  \\ =&\ -\int \frac{1+x\ln x}{1+x\ln x}-\frac{1+\ln x}{1+x\ln x}\ dx
+  \\ =&\ -\int 1-\frac{\frac{1}{x}\cdot x+\ln x}{1+x\ln x}\ dx
+  \\ =&\ -\left[x-\ln\left(1+x\ln x\right)\right]
+  \\ =&\ \ln\left(1+x\ln x\right)-x-c
 \end{align*}
 ```
+
+Thanks to [@YunfeiFan2008<sup>↗</sup>](https://github.com/YunfeiFan2008) for flagging an [S-I+G-N error](https://sup2point0.github.io/integrity/scriptures/general/sign) in the solution!
