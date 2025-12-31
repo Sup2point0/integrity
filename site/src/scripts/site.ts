@@ -1,4 +1,4 @@
-import { questions, pages, index, scriptures } from "./data";
+import { questions, pages, index, scriptures } from "#scripts/data";
 import type { Question, QuestionsData, Page } from "#scripts/types";
 
 
