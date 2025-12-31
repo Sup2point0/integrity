@@ -3,12 +3,13 @@
 
 site.json
 questions.json
-scriptures.json
+dyna-scriptures.json
 scss-config.js
 
 # output
 static/
 build/
+test-results/
 
 # internal
 node_modules/

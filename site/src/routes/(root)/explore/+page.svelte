@@ -339,7 +339,7 @@ import { goto } from "$app/navigation";
         />
       {/each}
 
-      <a style:display="none" href="{base}/questions/special/interview"></a>
+      <a style:opacity="1%" href="{base}/questions/special/interview">.</a>
     </div>
   </section>
 

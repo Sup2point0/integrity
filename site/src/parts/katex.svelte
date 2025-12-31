@@ -27,6 +27,7 @@ const opts = {
 };
 
 
+/* svelte-ignore non_reactive_update */
 let self: HTMLElement | null = null;
 
 onMount(() => {
