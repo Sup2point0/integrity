@@ -4,16 +4,20 @@
 | title = Changelog
 | capt = Not-so-official snapshots into *Integrity’s* history
 | index = info
-| update = 2025 October 31
+| update = 2025 December 31
 -->
 
 <!-- NOTE for when we need it ;) -->
 <!-- <div align="center">
 
-
 ## 2025
 
 </div> -->
+
+
+## 31 December
+
+Thanks so much to everyone who’s helped me find bugs, slips and other mishaps on *Integrity*. There’ll inevitably always be more, but I couldn’t do this without you guys <3
 
 
 ## 12 December – A year in Integrity
@@ -118,15 +122,15 @@ finally caved and added it...
 
 I’m not actually writing this when *Integrity* hit 200 integrals, since I (annoyingly) didn’t think to write any kind of ‘blogs’ on *Integrity* at the time.
 
-But yeah, 200 integrals kinda crept up on me. It was actually a pretty significant milestone. I think I realised at the last monent and wrote a special integral ([Duality](https://sup2point0.github.io/integrity/question/integrals?shard=s25f-sp2)) to celebrate ^v^
+But yeah, 200 integrals kinda crept up on me. It was actually a pretty significant milestone. I think I realised at the last moment and wrote a special integral ([Duality](https://sup2point0.github.io/integrity/question/integrals?shard=s25f-sp2)) to celebrate ^v^
 
 The more notable milestone[^notable] was honestly 100 integrals, that one I was actually aiming for
 
-[^notable] this feels like sacrilege since $200$ is MY number but yes
+[^notable]: this feels like sacrilege since $200$ is MY number but yes
 
-I felt quite a sense of accomplishment when I reached it. Like, below 50 and the questions are sparse (even tho they can stoll occupy you for ages); in the 80s and it’s looking a lot fuller; but only when you break 100 is it really like “ok wow, there’s SO much here”.
+I felt quite a sense of accomplishment when I reached it. Like, below 50 and the questions are sparse (even tho they can still occupy you for ages); in the 80s and it’s looking a lot fuller; but only when you break 100 is it really like “ok wow, there’s SO much here”.
 
-At the rate I’m going, 300 probably won’t be far away lmao
+At the rate I’m going, 300 probably won’t be far away keke
 
 
 ## Integrity now has a blog lmao
