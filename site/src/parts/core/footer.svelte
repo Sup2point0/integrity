@@ -51,6 +51,10 @@ import { base } from "$app/paths";
         </a>
 
         <a target="_blank" href="https://github.com/Sup2point0/integrity/issues">
+          <p> Request Feature <code>↗</code> </p>
+        </a>
+
+        <a target="_blank" href="https://github.com/Sup2point0/integrity/issues">
           <p> Report Issue <code>↗</code> </p>
         </a>
       </div>
@@ -70,7 +74,7 @@ import { base } from "$app/paths";
 
 footer {
   width: 100%;
-  padding: 4rem 0 2rem;
+  padding: 3rem 0 2rem;
   background: light-dark(oklch(99% 0 0), black);
 }
 
@@ -90,7 +94,7 @@ footer {
   img#integrity-title {
     min-width: 10rem;
     max-width: 15vw;
-    margin-bottom: 1rem;
+    padding: 1.5rem 0;
 
     @media (max-width: 40rem) {
       max-width: 50vw;
@@ -154,7 +158,7 @@ footer {
 
   .outlinks {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row-reverse wrap;
 
     a {
       padding: 0.5em 1em;
