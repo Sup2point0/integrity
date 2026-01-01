@@ -2,7 +2,7 @@
 
 import Site from "#scripts/site";
 import { dyna_scriptures } from "#scripts/site";
-import { pick_random_question, pick_random_scripture } from "#scripts/utils";
+import { pick_random_question, pick_random_scripture, capitalise } from "#scripts/utils";
 
 import Link from "#parts/ui/link.svelte";
 
@@ -109,10 +109,11 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Graph Drawing </h3>
     <div class="links">
-      <Link text="Why Draw Graphs?" intern="scriptures/graph-drawing" disabled={true} />
+      <Link text="Why Draw Graphs?" intern="scriptures/graph-drawing/why" />
+      <Link text="Fundamental Graphs for Graph Drawing" intern="scriptures/graph-drawing/collections/standard-graphs" />
       <Link text="Addition as Stacking" intern="scriptures/graph-drawing/dyna/addition" disabled={true} />
       <Link text="Subtraction as Clothes Hanging" intern="scriptures/graph-drawing/dyna/subtraction" disabled={true} />
-      <Link text="Multiplication as Scaling" intern="scriptures/graph-drawing/dyna/multiplication" dev={true} />
+      <Link text="Multiplication as Scaling" intern="scriptures/graph-drawing/dyna/multiplication" />
     </div>
   </section>
 
@@ -184,7 +185,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Adventures </h3>
     <div class="links">
-      <Link text="How Do I Write Integrals?" intern="scriptures/integrals/adventures/write" hot={true} />
+      <Link text="How Do I Write Integrals?" intern="scriptures/integrals/adventures/write" />
       <Link text="What Makes a Good Integral?" intern="" disabled={true} />
       <Link text="Integration Is Like Organic Chemistry" intern="" disabled={true} />
       <Link text="Why -c?" intern="scriptures/integrals/adventures/-c" />
@@ -254,106 +255,23 @@ import { goto } from "$app/navigation";
       <Link text="Advanced" intern="desmos/gamedev/advanced" disabled={true} />
       <Link text="Extras" intern="desmos/gamedev/extras" disabled={true} />
       <Link text="Examples" intern="desmos/gamedev/examples" disabled={true} />
+      <a style:opacity="1%" href="{base}/questions/special/interview">...</a>
     </div>
   </section>
 
-  <section>
-    <h3> Essentials </h3>
-    <div class="links">
-      {#each Object.values(dyna_scriptures["desmos-gamedev"].essentials ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
-    </div>
-  </section>
-
-  <section>
-    <h3> Supplementals </h3>
-    <div class="links">
-      {#each Object.values(dyna_scriptures["desmos-gamedev"].supplementals ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
-    </div>
-  </section>
-
-  <section>
-    <h3> Core </h3>
-    <div class="links">
-      {#each Object.values(dyna_scriptures["desmos-gamedev"].core) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
-    </div>
-  </section>
-
-  <section>
-    <h3> Architecture </h3>
-    <div class="links">
-      {#each Object.values(dyna_scriptures["desmos-gamedev"].architecture ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
-    </div>
-  </section>
-
-  <section>
-    <h3> Rendering </h3>
-    <div class="links">
-      {#each Object.values(dyna_scriptures["desmos-gamedev"].rendering ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
-    </div>
-  </section>
-
-  <section>
-    <h3> Advanced </h3>
-    <div class="links">
-      {#each Object.values(dyna_scriptures["desmos-gamedev"].advanced ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
-    </div>
-  </section>
-
-  <section>
-    <h3> Extras </h3>
-    <div class="links">
-      {#each Object.values(dyna_scriptures["desmos-gamedev"].extras ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
-
-      <a style:opacity="1%" href="{base}/questions/special/interview">.</a>
-    </div>
-  </section>
-
-  <section>
-    <h3> Examples </h3>
-    <div class="links">
-      {#each Object.values(dyna_scriptures["desmos-gamedev"].examples ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
-    </div>
-  </section>
+  {#each Object.entries(dyna_scriptures["desmos-gamedev"]) as [chapter, pages]}
+    <section>
+      <h3> {capitalise(chapter)} </h3>
+      <div class="links">
+        {#each Object.values(pages) as page}
+          <Link
+            text={page.title}
+            intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          />
+        {/each}
+      </div>
+    </section>
+  {/each}
 </div>
 
 <h2> Gradient Descent in Desmos </h2>
