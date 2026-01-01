@@ -57,7 +57,7 @@ You can integrate $(\sin{x})\sin(\cos{x})$?
 \end{align*}
 ```
 
-### Substitute
+### Solve
 ```math
 \begin{align*}
   &\ -\left[fg-\int f'g\ dx\right]

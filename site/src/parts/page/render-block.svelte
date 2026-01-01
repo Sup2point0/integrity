@@ -30,6 +30,7 @@ let { source }: Props = $props();
   {:else if source.kind === "desmos"}
     <div style:padding="2rem 0">
       <Desmos
+        options={{ expressionsCollapsed: false }}
         blocks={
           source.content.split("<br><br>")
           .map(line => ({
