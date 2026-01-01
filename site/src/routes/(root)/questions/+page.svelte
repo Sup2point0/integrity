@@ -11,17 +11,17 @@ import Header from "#parts/core/header.svelte";
 </script>
 
 
-<Meta title="Topics"
-  desc="Practice questions on various topics in mathematics"
+<Meta title="Questions"
+  desc="Hundreds of practice questions on various topics in mathematics"
 />
 
 
 <Breadcrumbs levels={[
   { text: "Integrity", link: Site.root },
-  { text: "Topics" },
+  { text: "Questions" },
 ]} />
 
-<Header title="Topics" />
+<Header title="Questions" />
 
 <div class="content">
   <Card title="Integrals"
