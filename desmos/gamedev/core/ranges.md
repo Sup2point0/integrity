@@ -1,7 +1,8 @@
 ---
-title: Ranges
-topic: Core
-next: list-comprehensions
+domain: desmos-gamedev
+topic:  Core
+title:  Ranges
+next:   list-comprehensions
 update: 2025 August 25
 ---
 

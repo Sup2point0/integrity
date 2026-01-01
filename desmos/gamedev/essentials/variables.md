@@ -1,7 +1,8 @@
 ---
-title: Variables
-topic: Essentials
-next: lists
+domain: desmos-gamedev
+topic:  Essentials
+title:  Variables
+next:   lists
 update: 2025 July 19
 ---
 

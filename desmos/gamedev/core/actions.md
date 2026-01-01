@@ -1,7 +1,8 @@
 ---
-title: Actions
-topic: Core
-next: identifiers
+domain: desmos-gamedev
+topic:  Core
+title:  Actions
+next:   identifiers
 update: 2025 July 24
 ---
 

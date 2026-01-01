@@ -4,6 +4,10 @@
 | title = Game Development
 -->
 
+<!-- #SQUARK leave? -->
+> [!Note]
+> The content in this folder is intended to be read on the [*Integrity* site](https://sup2point0.github.io/integrity/desmos/gamedev).
+<!-- #SQUARK leave. -->
 
 Desmos is so much more than a graphing calculator. Believe it or not, you can create games with it! Desmos is quite literally a programming language – I’m pretty sure it’s Turing-complete.
 

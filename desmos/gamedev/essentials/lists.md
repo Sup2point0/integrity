@@ -1,8 +1,9 @@
 ---
-title: Lists
-topic: Essentials
-reco: variables
-next: points
+domain: desmos-gamedev
+topic:  Essentials
+title:  Lists
+reco:   variables
+next:   points
 update: 2025 July 16
 ---
 

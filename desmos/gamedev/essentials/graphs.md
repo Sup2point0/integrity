@@ -1,7 +1,8 @@
 ---
-title: Graphs
-topic: Essentials
-next: functions
+domain: desmos-gamedev
+topic:  Essentials
+title:  Graphs
+next:   functions
 update: 2025 July 2
 ---
 

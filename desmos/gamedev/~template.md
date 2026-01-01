@@ -1,7 +1,7 @@
 ---
-title: 
-topic: desmos/gamedev
-dest: desmos/gamedev/
+domain: desmos-gamedev
+topic:  
+title:  
 update: 
 ---
 

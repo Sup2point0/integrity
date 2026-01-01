@@ -1,6 +1,7 @@
 ---
-title: Multiplication as Scaling
-topic: graph-drawing
+domain: graph-drawing
+topic:  graph-drawing
+title:  Multiplication as Scaling
 update: 2025 September 14
 ---
 

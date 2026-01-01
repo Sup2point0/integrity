@@ -1,7 +1,8 @@
 ---
-title: Identifiers
-topic: Core
-next: the-ticker
+domain: desmos-gamedev
+topic:  Core
+title:  Identifiers
+next:   the-ticker
 update: 2025 July 8
 ---
 
