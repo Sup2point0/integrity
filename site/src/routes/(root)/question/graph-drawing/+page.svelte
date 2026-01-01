@@ -16,8 +16,11 @@ import Section from "#parts/page/section.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
 import Line from "#parts/page/line.svelte";
 
+import { page } from "$app/state";
+
 
 let question: Question | null = $derived(page_data.question);
+let sections = page.url.searchParams.getAll("section");
 
 </script>
 
@@ -35,17 +38,17 @@ let question: Question | null = $derived(page_data.question);
 
 <section class="question">
   <div class="latex">
-    <Katex text={question?.question.content} />
+    <Katex text={question?.question?.content} />
   </div>
 
   <div class="utils upper">
-    <CopyClicky value={Question.sanitise(question?.question.content)} />
+    <CopyClicky value={Question.sanitise(question?.question?.content)} />
   </div>
 
   <Line width="80%" margin="1rem auto" />
 </section>
 
-<Section title="Info">
+<Section title="Info" closed={!sections.includes("info")}>
   <div class="info">
     <div class="details">
       <h4 class="name"> {question?.title ?? "unnamed"} </h4>  
@@ -67,7 +70,7 @@ let question: Question | null = $derived(page_data.question);
 </Section>
 
 {#if question?.hints}
-  <Section title="Hints">
+  <Section title="Hints" closed={!sections.includes("hints")}>
     {#each Object.entries(question.hints) as [hint, source]}
       <Section ctx="inner" title={hint}>
         <RenderBlock {source} />
@@ -76,16 +79,19 @@ let question: Question | null = $derived(page_data.question);
   </Section>
 {/if}
 
-<Section title="Answer">
-  <Desmos
-    blocks={question?.answer ?? question?.question}
-    bounds={question?.["graph-bounds"]}
-    height="70vh"
-  />
+<Section title="Answer" closed={!sections.includes("answer")}>
+  <div class="answer">
+    <Desmos
+      blocks={question?.answer ?? question?.question}
+      bounds={question?.["graph-bounds"]}
+      height="70vh"
+      ratio={1}
+    />
+  </div>
 </Section>
 
 {#if question?.solution}
-  <Section title="Solution">
+  <Section title="Solution" closed={!sections.includes("solution")}>
     {#if Array.isArray(question.solution)}
       {#each question.solution as source}
         <RenderBlock {source} />
@@ -168,10 +174,11 @@ section.question {
   }
 }
 
-#desmos-window {
-  margin: 1rem 0;
+.answer {
   width: 100%;
-  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 </style>
