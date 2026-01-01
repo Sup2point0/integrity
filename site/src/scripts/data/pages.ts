@@ -7,17 +7,21 @@ export const index = pages_data.index;
 export const scriptures = find_scriptures(pages);
 
 
-function find_scriptures(raw: any)
+interface SiteScriptures {
+  [topic: string]: Page[]
+}
+
+
+function find_scriptures(raw: object): SiteScriptures
 {
-  let out: {
-    [topic: string]: Page[]
-  } = {};
+  // MIGRATE: Maybe increase nesting?
+  let out: SiteScriptures = {};
 
   for (let p of Object.values(raw)) {
     let page = p as Page;
 
     if (page.index?.includes("scriptures")) {
-      let topic: string = page.index[1];
+      let topic = page.index[1];
 
       if (out[topic] == null) {
         out[topic] = [];

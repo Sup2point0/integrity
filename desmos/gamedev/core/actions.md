@@ -164,6 +164,9 @@ This is a bit weird, since it looks more like we’re creating a list!
 
 ### _
 ```desmos
+p = 0
+q = 0
+
 a = p \to 1
 b = q \to 2
 c = a, \ b

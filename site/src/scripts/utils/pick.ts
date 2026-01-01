@@ -1,4 +1,4 @@
-import Site from "#scripts/site";
+import { Site, get_list_of_all_scriptures } from "#scripts/site";
 
 
 /** Randomly pick a question and return its URL params. */
@@ -16,7 +16,7 @@ export function pick_random_question(): string
 /** Randomly pick a scripture page and return its internal URL. */
 export function pick_random_scripture(): string
 {
-  let pages = Site.get_list_of_all_scriptures();
+  let pages = get_list_of_all_scriptures();
   let page = pages[Math.floor(Math.random() * pages.length)];
   return page.dest;
 }

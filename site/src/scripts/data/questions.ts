@@ -8,7 +8,7 @@ import questions_data from "#src/data/questions.json" with { type: "json" };
 export const questions = process_questions(questions_data);
 
 
-function process_questions(raw: any)
+function process_questions(raw: object)
 {
   let out: QuestionsData = {};
   let collection: QuestionCollection;

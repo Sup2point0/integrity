@@ -5,7 +5,7 @@ The fully implemented dynamic scripture viewer.
 
 <script lang="ts">
   
-import { dyna_scriptures } from "#scripts/data";
+import { dyna_scriptures } from "#scripts/site";
 import type { Block, DynamicScripture } from "#scripts/types";
 
 import Desmos from "#parts/desmos.svelte";
@@ -43,6 +43,7 @@ let shown_subsections = $derived(
 );
 let desmos_blocks: Block[] | null = $state(null);
 
+/* svelte-ignore non_reactive_update */
 let article_viewport: HTMLElement | null = null;
 
 
@@ -141,20 +142,20 @@ function next_subsection()
     />
 
     <nav class="upper">
-      {#each data.sections as section, I}
-        {#each section.subsections as _, i}
+      {#each data.sections as section, i}
+        {#each section.subsections as _, j}
           <div class={["subsection", {
-            live: current_section === I && current_subsection === i,
-            done: current_section > I || (current_section === I && current_subsection > i),
-            edge: i === 0,
+            live: current_section === i && current_subsection === j,
+            done: current_section > i || (current_section === i && current_subsection > j),
+            edge: j === 0,
           }]}>
-            <button class="juice" onclick={() => {
-              current_section = I;
-              current_subsection = i;
+            <button class="juice" aria-label="subsection" onclick={() => {
+              current_section = i;
+              current_subsection = j;
             }}>
             </button>
             
-            {#if i === 0}
+            {#if j === 0}
               <div class="section-label">
                 {section.title}
               </div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import { dyna_scriptures } from "#scripts/data";
+import { dyna_scriptures } from "#scripts/site";
 
 import Link from "#parts/ui/link.svelte";
 
@@ -8,6 +8,9 @@ import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Line from "#parts/page/line.svelte";
+
+
+const chapters = dyna_scriptures["desmos-gamedev"];
 
 </script>
 
@@ -40,7 +43,7 @@ import Line from "#parts/page/line.svelte";
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(dyna_scriptures.essentials ?? []) as page}
+      {#each Object.values(chapters.essentials ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -56,7 +59,7 @@ import Line from "#parts/page/line.svelte";
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(dyna_scriptures.supplementals ?? []) as page}
+      {#each Object.values(chapters.supplementals ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -81,7 +84,7 @@ import Line from "#parts/page/line.svelte";
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(dyna_scriptures.core) as page}
+      {#each Object.values(chapters.core) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -97,7 +100,7 @@ import Line from "#parts/page/line.svelte";
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(dyna_scriptures.architecture ?? []) as page}
+      {#each Object.values(chapters.architecture ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -113,7 +116,7 @@ import Line from "#parts/page/line.svelte";
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(dyna_scriptures.rendering ?? []) as page}
+      {#each Object.values(chapters.rendering ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -129,7 +132,7 @@ import Line from "#parts/page/line.svelte";
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(dyna_scriptures.advanced ?? []) as page}
+      {#each Object.values(chapters.advanced ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -154,7 +157,7 @@ import Line from "#parts/page/line.svelte";
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(dyna_scriptures.extras ?? []) as page}
+      {#each Object.values(chapters.extras ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -170,7 +173,7 @@ import Line from "#parts/page/line.svelte";
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(dyna_scriptures.examples ?? []) as page}
+      {#each Object.values(chapters.examples ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"

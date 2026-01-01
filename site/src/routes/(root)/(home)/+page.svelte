@@ -2,7 +2,7 @@
 
 import sample from "@stdlib/random-sample";
 
-import Site from "#scripts/site";
+import { Site, get_featured_scriptures } from "#scripts/site";
 import type { Question, Page } from "#scripts/types";
 
 import Changes from "./changes.svx";
@@ -23,7 +23,7 @@ import { slide } from "svelte/transition";
 
 
 const all_featured_questions = Site.get_featured_questions();
-const all_featured_scriptures = Site.get_featured_scriptures();
+const all_featured_scriptures = get_featured_scriptures();
 
 // start with none featured on server side
 let featured_trivia: Trivia | null = null;

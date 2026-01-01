@@ -23,11 +23,19 @@ def execute(source, dest)
     end
 
     out = process(shard:, file:)
+
     topic = out["topic"]
     if topic.nil? then next end
 
-    if data[topic].nil? then data[topic] = {} end
-    data[topic][shard] = out
+    domain = out["domain"]
+    if domain.nil? then
+      if data[topic].nil? then data[topic] = {} end
+      data[topic][shard] = out
+    else
+      if data[domain].nil? then data[domain] = {} end
+      if data[domain][topic].nil? then data[domain][topic] = {} end
+      data[domain][topic][shard] = out
+    end
 
     i += 1
   end
@@ -51,4 +59,4 @@ graphs = (ROOT/"scriptures/graph-drawing/dyna").glob("*~.md")
 scriptures = desmos + graphs
 
 log success: "found #{scriptures.length} dynamic scripture files!"
-execute(scriptures, ROOT/"site/src/data/scriptures.json")
+execute(scriptures, ROOT/"site/src/data/dyna-scriptures.json")

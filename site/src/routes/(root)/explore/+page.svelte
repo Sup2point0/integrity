@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import Site from "#scripts/site";
-import { dyna_scriptures } from "#scripts/data";
+import { dyna_scriptures } from "#scripts/site";
 import { pick_random_question, pick_random_scripture } from "#scripts/utils";
 
 import Link from "#parts/ui/link.svelte";
@@ -260,7 +260,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Essentials </h3>
     <div class="links">
-      {#each Object.values(dyna_scriptures.essentials ?? []) as page}
+      {#each Object.values(dyna_scriptures["desmos-gamedev"].essentials ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -272,7 +272,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Supplementals </h3>
     <div class="links">
-      {#each Object.values(dyna_scriptures.supplementals ?? []) as page}
+      {#each Object.values(dyna_scriptures["desmos-gamedev"].supplementals ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -284,7 +284,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Core </h3>
     <div class="links">
-      {#each Object.values(dyna_scriptures.core) as page}
+      {#each Object.values(dyna_scriptures["desmos-gamedev"].core) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -296,7 +296,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Architecture </h3>
     <div class="links">
-      {#each Object.values(dyna_scriptures.architecture ?? []) as page}
+      {#each Object.values(dyna_scriptures["desmos-gamedev"].architecture ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -308,7 +308,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Rendering </h3>
     <div class="links">
-      {#each Object.values(dyna_scriptures.rendering ?? []) as page}
+      {#each Object.values(dyna_scriptures["desmos-gamedev"].rendering ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -320,7 +320,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Advanced </h3>
     <div class="links">
-      {#each Object.values(dyna_scriptures.advanced ?? []) as page}
+      {#each Object.values(dyna_scriptures["desmos-gamedev"].advanced ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -332,7 +332,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Extras </h3>
     <div class="links">
-      {#each Object.values(dyna_scriptures.extras ?? []) as page}
+      {#each Object.values(dyna_scriptures["desmos-gamedev"].extras ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
@@ -346,7 +346,7 @@ import { goto } from "$app/navigation";
   <section>
     <h3> Examples </h3>
     <div class="links">
-      {#each Object.values(dyna_scriptures.examples ?? []) as page}
+      {#each Object.values(dyna_scriptures["desmos-gamedev"].examples ?? []) as page}
         <Link
           text={page.title}
           intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"

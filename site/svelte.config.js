@@ -13,7 +13,7 @@ import { correct_hast_tree, render_katex_blocks } from "./preprocess-latex.js";
 import { remark_alerts } from "./preprocess-alerts.js";
 
 import site_pages from "./src/data/site.json" with { type: "json" };
-import dyna_scriptures from "./src/data/scriptures.json" with { type: "json" };
+import dyna_scriptures from "./src/data/dyna-scriptures.json" with { type: "json" };
 
 
 function get_paths_of_index(index)

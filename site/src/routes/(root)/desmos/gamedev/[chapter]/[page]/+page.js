@@ -1,11 +1,11 @@
-import { dyna_scriptures } from "#scripts/data";
+import { dyna_scriptures } from "#scripts/site";
 
 import { error } from "@sveltejs/kit";
 
 
 export function load({ params })
 {
-  let chapter = dyna_scriptures[params.chapter];
+  let chapter = dyna_scriptures["desmos-gamedev"][params.chapter];
   if (chapter === undefined) {
     error(404);
   }
