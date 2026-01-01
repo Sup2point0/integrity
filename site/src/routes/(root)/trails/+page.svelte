@@ -18,7 +18,7 @@ import { onMount } from "svelte";
 import { base } from "$app/paths";
 
 
-let year = $state("2025");
+let year = $state("2026");
 
 
 let general: {
@@ -26,7 +26,8 @@ let general: {
 } = $state({
   visits: {
     "2024": { December: null },
-    "2025": { January: null, February: null, March: null, April: null, May: null, June: null, July: null, August: null, September: null }
+    "2025": { January: null, February: null, March: null, April: null, May: null, June: null, July: null, August: null, September: null },
+    "2026": { January: null, February: null, March: null, April: null, May: null, June: null, July: null, August: null, September: null },
   },
 });
 
