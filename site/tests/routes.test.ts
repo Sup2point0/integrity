@@ -8,7 +8,8 @@ test.beforeEach(async ({ page }) => {
 test("routes", async ({ page }) => {
   for (let route of routes) {
     let status = await page.goto(route);
-    expect(status?.ok(), `access ${route}`).toBe(true);
+    await page.waitForTimeout(200);
+    expect(status?.ok(), `Failed to access \`${route}\``).toBe(true);
   }
 });
 
