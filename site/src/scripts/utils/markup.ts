@@ -1,3 +1,6 @@
+import { renderToString } from "katex";
+
+
 /** Render basic Markdown to HTML. */
 export function render_markdown(text: string | undefined): string | undefined
 { 
@@ -22,5 +25,28 @@ export function render_markdown(text: string | undefined): string | undefined
   }
   catch {
     return text;
+  }
+}
+
+
+export function split_latex(text: string | undefined): string[] | undefined
+{
+  if (text === undefined) return undefined;
+
+  try {
+    return text.split(/(\$[^$]+\$)/).map(
+      /* @ts-ignore */
+      chunk => (
+        chunk.startsWith("$")
+        ? renderToString(chunk.slice(1, -1), {
+            displayMode: false,
+            throwOnError: false,
+          })
+        : render_markdown(chunk)!
+      )
+    )
+  }
+  catch {
+    return [text];
   }
 }

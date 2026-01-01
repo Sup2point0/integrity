@@ -6,7 +6,7 @@ A card for selecting an article. -->
 
 import Site from "#scripts/site";
 
-import { render_markdown } from "#scripts/utils";
+import { render_markdown, split_latex } from "#scripts/utils";
 import type { Page } from "#scripts/types";
 
 import { base } from "$app/paths";
@@ -28,7 +28,15 @@ const data: Page = page ?? Site.pages[path!];
   href="{base}/{data?.dest}"
 >
   <div class="info">
-    <h4> {@html render_markdown(data?.head) ?? "Page Unavailable"} </h4>
+    <h4>
+      {#if data?.head}
+        {#each split_latex(data?.head) as chunk}
+          {@html chunk}
+        {/each}
+      {:else}
+        Page Unavailable
+      {/if}
+    </h4>
     
     {#if data?.capt}
       <p> {@html render_markdown(data.capt)} </p>

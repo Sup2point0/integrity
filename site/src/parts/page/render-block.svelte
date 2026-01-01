@@ -7,7 +7,7 @@ A block that renders HTML and LaTeX content from a list of `Block`s.
 
 import katex from "katex";
 
-import { render_markdown } from "#scripts/utils";
+import { split_latex } from "#scripts/utils";
 import type { Block } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
@@ -43,18 +43,7 @@ let { source }: Props = $props();
     </div>
 
   {:else}
-    {@const chunks = source.content.split(/(\$[^$]+\$)/).map(
-      chunk => (
-        chunk.startsWith("$")
-        ? katex.renderToString(chunk.slice(1, -1), {
-            displayMode: false,
-            throwOnError: false,
-          })
-        : render_markdown(chunk)
-      )
-    )}
-
-    {#each chunks as chunk}
+    {#each split_latex(source.content) as chunk}
       {@html chunk}
     {/each}
 
