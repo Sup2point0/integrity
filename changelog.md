@@ -90,7 +90,7 @@ The [Desmos library](https://sup2point0.github.io/integrity/desmos/library) has 
 
 
 ## 9 July
-All-new dynamic scriptures with step-by-step walkthroughs have been added for the *Game Development in Desmos* series! Go [check it out](https://sup2point0.github.io/integrity/scriptures/desmos/gamedev/prerequisites/graphs).
+All-new dynamic scriptures with step-by-step walkthroughs have been added for the *Game Development in Desmos* series! Go [check it out](https://sup2point0.github.io/integrity/desmos/gamedev/prerequisites/graphs).
 
 
 ## 2 July
