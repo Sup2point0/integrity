@@ -25,7 +25,6 @@ I’m working on it!
 
 - Upgrade static scripture routes to all dynamically prerendered
 - Speedrun environment
-- Automated tests to ensure no errors in builds
 
 
 <br>
