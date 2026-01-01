@@ -25,7 +25,7 @@ let {
   blocks,
   options = {},
   controls = true,
-  height,
+  height = "auto",
   ratio,
   bounds = controls ? undefined : 2,
 }: Props = $props();
@@ -249,6 +249,7 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
 <div class="desmos"
   class:live
   bind:this={self}
+  style:width={ratio ? "auto" : "100%"}
   style:height={height}
   style:aspect-ratio={ratio}
 >
@@ -263,7 +264,6 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
 <style lang="scss">
 
 .desmos {
-  width: 100%;
   min-width: 12rem;
   max-width: 100%;
   color: $col-text-deut;
