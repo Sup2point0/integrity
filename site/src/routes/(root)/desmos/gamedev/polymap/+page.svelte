@@ -87,7 +87,7 @@ const chapters = dyna_scriptures["desmos-gamedev"];
       {#each Object.values(chapters.core) as page}
         <Link
           text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.shard}"
         />
       {/each}
     </li>

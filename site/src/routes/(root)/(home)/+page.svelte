@@ -215,7 +215,7 @@ section {
   margin: 2rem auto 0;
 }
 
-:global(article strong em) {
+:global(.whats-new article strong em) {
   display: block;
   color: $col-deut;
   font-style: normal;

@@ -14,6 +14,7 @@ I’m finding a fix!
 - Navigating backwards in dynamic scripture can clear Desmos window. This is unideal, since it should instead revert to the newest window up until that step.
 - Dynamic scriptures with many steps can overflow scroll
 - Desmos library **Usage**/**Instances** sections do not use a Desmos block
+- Dynamic Markdown rendering engine is a custom RegEx-based one, so a lot of features are lacking. Code blocks in particular, which are coming up progressively more in Gamedev in Desmos...
 
 
 <br>

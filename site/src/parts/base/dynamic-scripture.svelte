@@ -27,6 +27,14 @@ import { goto, onNavigate } from "$app/navigation";
 let data: DynamicScripture = $derived(page.data as DynamicScripture);
 let sections_list = $derived(Object.values(data.sections));
 
+let updated = $derived(
+  new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }
+).format(data.update ?? undefined));
+
 
 let started = $state(false);
 let current_section = $state(0);
@@ -133,13 +141,7 @@ function next_subsection()
 
 {#if started}
   <div in:fade={{ duration: 250, delay: 250 }}>
-    <Header title={data.title}
-      capt="Last Updated {new Intl.DateTimeFormat("en-GB", {
-        day: "2-digit",
-        month: "long",
-        year: "2-digit"
-      }).format(data.update ?? undefined)}"
-    />
+    <Header title={data.title} capt="Last Updated {updated}" />
 
     <nav class="upper">
       {#each data.sections as section, i}
@@ -156,7 +158,9 @@ function next_subsection()
             </button>
             
             {#if j === 0}
-              <div class="section-label">
+              <div class="section-label"
+                class:down={(data.sections.length > 3) && (i % 2 == 1)}
+              >
                 {section.title}
               </div>
             {/if}
@@ -234,7 +238,7 @@ function next_subsection()
     </header>
 
     <nav class="lower">
-      <div></div>
+      <p> Last updated {updated} </p>
       <Clicky text="Start" action={() => { started = true; }} />
     </nav>
   </aside>
@@ -251,7 +255,7 @@ nav {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 nav.upper {
@@ -306,6 +310,8 @@ nav.upper {
       font-size: 80%;
       color: $col-text-deut;
       white-space: nowrap;
+
+      &.down { top: 2em; }
     }
   }
 }
@@ -340,8 +346,8 @@ section {
   transition: all 0.12s ease-out;
 
   &:not(.live) {
-    color: $col-text-deut;
-    background: $col-hover;
+    color: $col-text-deut !important;
+    background: $col-hover !important;
     opacity: 50%;
   }
   
@@ -358,6 +364,9 @@ section {
 :global(section.dyna-scripture:has(aside.note)) {
   color: color.change($col-prot-light, $lightness: 40%);
   background: color.change($col-prot-light, $alpha: 12%);
+}
+:global(section.dyna-scripture strong em) {
+  color: $col-deut;
 }
 
 nav.lower {
@@ -389,6 +398,11 @@ aside.overlay {
 
   nav.lower {
     font-size: 150%;
+
+    p {
+      color: $col-text-deut;
+      font-size: 80%;
+    }
   }
 }
 

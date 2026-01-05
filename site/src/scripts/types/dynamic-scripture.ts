@@ -6,6 +6,7 @@ export class DynamicScripture implements Page
 {
   path: string;
   dest: string;
+  shard: string;
 
   /** The exact displayed title of the page. Use `toLowerCase()` for caseless processing. */
   title: string;
@@ -25,6 +26,7 @@ export class DynamicScripture implements Page
   {
     this.path = "";
     this.dest = data.dest;
+    this.shard = data.shard;
 
     this.title = data.title;
     this.desc = data.description;
