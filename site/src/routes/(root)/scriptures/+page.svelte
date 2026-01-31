@@ -53,6 +53,14 @@ import ArticleArray from "#parts/page/article-array.svelte";
       intern="scriptures/complete-square"
       latex={String.raw`a(x-p)^2 + q`}
     />
+    <Card title="Graph Drawing"
+      intern="scriptures/graph-drawing"
+      latex={String.raw`y = \frac{e^x}{x}`}
+    />
+    <Card title="Special"
+      intern="scriptures/special"
+      latex={String.raw`f : \mathbb{R} \to \mathbb{N}`}
+    />
   </div>
 </section>
 
