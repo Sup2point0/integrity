@@ -1,5 +1,7 @@
 <script lang="ts">
 
+import "#styles/prism.css";
+
 import "#styles/essence.scss";
 import "#styles/article.scss";
 import "#styles/a11y.scss";
