@@ -123,6 +123,13 @@ import { goto } from "$app/navigation";
       <Link text="Why Complete the Square?" intern="scriptures/complete-square/why" />
     </div>
   </section>
+
+  <section>
+    <h3> Special </h3>
+    <div class="links">
+      <Link text="Conjecture: You Know Haskell" intern="scriptures/special/haskell-conjecture" />
+    </div>
+  </section>
 </div>
 
 <h2> Integration </h2>

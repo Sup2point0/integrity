@@ -70,6 +70,7 @@ let show_mobile_dropdown = $state(false);
       <Link text="Integration" intern="scriptures/integrals" />
       <Link text="Graph Drawing" intern="scriptures/graph-drawing" dev={true} />
       <Link text="Completing the Square" intern="scriptures/complete-square" />
+      <Link text="Special" intern="scriptures/special" hot={true} />
     </NavLink>
 
     <NavLink text="Desmos" intern="desmos" collapse={true} hot={true}>

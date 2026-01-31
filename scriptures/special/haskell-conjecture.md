@@ -85,6 +85,23 @@ relu x | x > 0     = x
 
 *Basically* identical, right?
 
+Here’s what a quick-and-dirty function for computing Fibonacci numbers could look like:
+
+```hs
+fib :: Int -> Int
+fib n
+  | n == 0    = 0
+  | otherwise = fib (n-1) + fib (n-2)
+```
+
+Or even more literally (this uses a technique called “pattern matching”):
+
+```hs
+fib :: Int -> Int
+fib 0 = 0
+fib n = fib (n-1) + fib (n-2)
+```
+
 I think what you’ll find is that Haskell is essentially maths, but as a programming language. If you enjoy maths, there’s a good chance you’ll enjoy Haskell, and vice versa.
 
 
@@ -503,6 +520,8 @@ So, we’ve no shown:
 - If the identity holds true for $n = k$, a list `xs` of length $k$, then it must hold true for $n = k+1$, a list `x:xs` of length $k+1$.
 
 Hence, by mathematical induction, we have shown the identity holds true for all lists. We’re done!
+
+> If you’ve done proofs by induction on summation or matrix identities before, this should feel strangely similar – manipulating expressions, expanding and merging terms, moulding into the right forms to perform simplifications or deductions!
 
 ### TLDR
 The steps are pretty detailed, but sometimes that’s detrimental to understanding because you forget the big picture. Here’s a minimal-comments rundown of the proof:
