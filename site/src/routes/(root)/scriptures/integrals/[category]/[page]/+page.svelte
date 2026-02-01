@@ -12,5 +12,6 @@ import { page } from "$app/state";
 <PageContent levels={[
   { text: "Scriptures", intern: "scriptures" },
   { text: "Integration", intern: "scriptures/integrals" },
+  // TODO FIXME add category
   { text: capitalise(page.data.title), intern: `scriptures/integrals/${page.data.title}` },
 ]} />

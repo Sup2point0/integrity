@@ -3,6 +3,8 @@
 | dest = scriptures/special/haskell-conjecture
 | capt = I’ll show you how you already know much of the Haskell functional programming language!
 | index = scriptures / special
+| date = 31 January 2026
+| update = 1 February 2026
 -->
 
 [Haskell<sup>↗</sup>](https://www.haskell.org) is perhaps one of the most well-known programming languages focusing on the *functional programming* paradigm.

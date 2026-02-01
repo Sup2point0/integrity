@@ -42,17 +42,17 @@ export class UserPrefs
   to_json(): object
   {
     return {
-      saved: this.saved,
-      visits: this.visits,
-      seen: Array.from(this.seen),
-      solved: Array.from(this.solved),
+      saved:   this.saved,
+      visits:  this.visits,
+      seen:    Array.from(this.seen),
+      solved:  Array.from(this.solved),
       flagged: Array.from(this.flagged),
       starred: Array.from(this.starred),
-      nav: this.nav,
-      style: this.style,
+      nav:     this.nav,
+      style:   this.style,
       "desmos-preset": this["desmos-preset"],
       skipped: Array.from(this.skipped),
-      marked: Array.from(this.marked),
+      marked:  Array.from(this.marked),
     }
   }
 
@@ -60,17 +60,17 @@ export class UserPrefs
   set_from_json(data: Partial<UserPrefs>): UserPrefs
   {
     // FIXME surely we can come up with a better way...
-    this.saved = data.saved ?? this.saved;
-    this.visits = data.visits ?? this.visits;
-    this.seen = new Set(data.seen ?? this.seen);
-    this.solved = new Set(data.solved ?? this.solved);
+    this.saved   = data.saved ?? this.saved;
+    this.visits  = data.visits ?? this.visits;
+    this.seen    = new Set(data.seen ?? this.seen);
+    this.solved  = new Set(data.solved ?? this.solved);
     this.flagged = new Set(data.flagged ?? this.flagged);
     this.starred = new Set(data.starred ?? this.starred);
-    this.nav = data.nav ?? this.nav;
-    this.style = data.style ?? this.style;
+    this.nav     = data.nav ?? this.nav;
+    this.style   = data.style ?? this.style;
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
     this.skipped = new SvelteSet(data.skipped ?? this.skipped);
-    this.marked = new SvelteSet(data.marked ?? this.marked);
+    this.marked  = new SvelteSet(data.marked ?? this.marked);
 
     return this;
   }
