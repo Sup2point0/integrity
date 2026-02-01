@@ -215,4 +215,8 @@ export const trivia = [
   {
     text: String.raw `*Quaternion* has got to be one of the coolest terms in all of mathematics.`,
   },
+  {
+    text: String.raw `What if we denote $\frac{d^4 y}{dx^4}$ as $y^{IV}$?`,
+    note: String.raw `Just hear me out.`,
+  },
 ];
