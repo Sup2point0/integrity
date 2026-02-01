@@ -4,7 +4,7 @@
 code[class*=language-],
 pre[class*=language-]
 {
-  color: #000;
+  color: light-dark(#000, #fff);
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -39,7 +39,7 @@ pre[class*=language-]
 .token.doctype,
 .token.prolog
 {
-  color: #708090
+  color: oklch(0.5632 0.149 170.92);
 }
 
 .token.punctuation
@@ -60,7 +60,10 @@ pre[class*=language-]
 .token.symbol,
 .token.tag
 {
-  color: #905
+  color: light-dark(
+    oklch(0.6077 0.1834 360),
+    oklch(0.6677 0.1834 360)
+  );
 }
 
 .token.attr-name,
@@ -70,7 +73,10 @@ pre[class*=language-]
 .token.selector,
 .token.string
 {
-  color: #690
+  color: light-dark(
+    oklch(0.6074 0.1455 295.91),
+    oklch(0.7074 0.1455 295.91)
+  );
 }
 
 .language-css .token.string,
@@ -79,7 +85,10 @@ pre[class*=language-]
 .token.operator,
 .token.url
 {
-  color: #9a6e3a
+  color: light-dark(
+    oklch(0.6809 0.106 237.7),
+    oklch(81.02% 0.1702 85.48)
+  );
 }
 
 .token.atrule,
