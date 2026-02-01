@@ -10,6 +10,11 @@
 <div align="center" style="text-align: center;"> <h2> 2026 </h2> </div>
 
 
+## 1 February
+
+If you’re looking for awesome maths YouTubers to watch, I’ve compiled a [small list of my favourites](https://sup2point0.github.io/integrity/fun/youtube) :D
+
+
 ## 1 January
 
 Guess what, we’re uploading questions again.

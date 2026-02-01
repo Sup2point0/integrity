@@ -5,8 +5,6 @@ A block that renders HTML and LaTeX content from a list of `Block`s.
 
 <script lang="ts">
 
-import katex from "katex";
-
 import { split_latex } from "#scripts/utils";
 import type { Block } from "#scripts/types";
 
@@ -15,7 +13,9 @@ import Desmos from "#parts/desmos.svelte";
 
 
 interface Props {
-  source: Partial<Block> | Partial<Block>[] | undefined;
+  source?:
+      string | string[]
+    | Partial<Block> | Partial<Block>[];
 }
 
 let { source }: Props = $props();
@@ -23,7 +23,7 @@ let { source }: Props = $props();
 </script>
 
 
-{#snippet block(source: Block)}
+{#snippet block(source: Block | string)}
   {#if source.kind === "latex"}
     <Katex text={source.content} />
 
@@ -43,7 +43,7 @@ let { source }: Props = $props();
     </div>
 
   {:else}
-    {#each split_latex(source.content) as chunk}
+    {#each split_latex(source.content ?? source) as chunk}
       {@html chunk}
     {/each}
 
