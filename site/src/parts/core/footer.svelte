@@ -33,7 +33,7 @@ import { base } from "$app/paths";
     </div>
   
     <div class="right">
-      <a class="credits" href="https://github.com/Sup2point0">
+      <a class="credits" target="_blank" href="https://github.com/Sup2point0">
         <div>
           <p> made with love by </p>
           <p id="sup2point0"> Sup#2.0 </p>

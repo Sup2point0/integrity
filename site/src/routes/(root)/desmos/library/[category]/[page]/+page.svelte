@@ -2,9 +2,10 @@
 
 import type { Page } from "#scripts/types";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import Header        from "#parts/core/header.svelte";
+import Meta          from "#parts/page/meta.svelte";
+import Breadcrumbs   from "#parts/page/breadcrumbs.svelte";
+import ArticleFooter from "#parts/page/footer.article.svelte";
 
 import { page } from "$app/state";
 
@@ -29,4 +30,6 @@ let data = $derived(page.data as Page);
 
 <article>
   {@render data.content()}
+
+  <ArticleFooter page={data} />
 </article>
