@@ -3,11 +3,11 @@
 import Content from "./~content.svx";
 import { metadata as page } from "./~content.svx";
 
-import Card from "#parts/ui/card.svelte";
-
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import Meta from "#parts/page/meta.svelte";
+import Header         from "#parts/core/header.svelte";
+import Breadcrumbs    from "#parts/page/breadcrumbs.svelte";
+import Meta           from "#parts/page/meta.svelte";
+import Card           from "#parts/ui/card.svelte";
+import CardsContainer from "#parts/ui/container.cards.svelte";
 
 </script>
 
@@ -23,7 +23,7 @@ import Meta from "#parts/page/meta.svelte";
 <Header {page} />
 
 
-<div class="content">
+<CardsContainer>
   <Card title="2024"
     intern="fun/year/2024"
     latex={String.raw`\arcsin(2^0)/2 + 4!`}
@@ -32,7 +32,7 @@ import Meta from "#parts/page/meta.svelte";
     intern="fun/year/2025"
     latex={String.raw`2^{(0!+2)! + 5}`}
   />
-</div>
+</CardsContainer>
 
 <article>
   <Content />
@@ -41,14 +41,8 @@ import Meta from "#parts/page/meta.svelte";
 
 <style lang="scss">
 
-.content {
-  padding-bottom: 2rem;
-  margin: 1rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 1rem;
-  text-align: center;
+article {
+  padding-top: 2rem;
 }
 
 </style>

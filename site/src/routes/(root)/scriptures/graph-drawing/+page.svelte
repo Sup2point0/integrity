@@ -2,12 +2,10 @@
 
 import Site from "#scripts/site";
 
+import Header       from "#parts/core/header.svelte";
+import Meta         from "#parts/page/meta.svelte";
+import Breadcrumbs  from "#parts/page/breadcrumbs.svelte";
 import ArticleArray from "#parts/page/article-array.svelte";
-
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import Line from "#parts/page/line.svelte";
 
 </script>
 
@@ -23,14 +21,14 @@ import Line from "#parts/page/line.svelte";
 <Header title="Graph Drawing" />
 
 
-<Line />
-
 <section>
-  <!-- TODO -->
+  <ArticleArray paths={Site.index["graph-drawing"].pages} />
 </section>
 
 <section>
   <h2 id="antiderivatives"> Dynamic Scriptures </h2>
+
+  <!-- TODO -->
   <ArticleArray pages={[
     { dest: "scriptures/graph-drawing/dyna/multiplication", head: "Multiplication as Scaling" },
   ]} />

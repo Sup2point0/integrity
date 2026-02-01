@@ -2,11 +2,11 @@
 
 import Site from "#src/scripts/site";
 
-import Card from "#parts/ui/card.svelte";
-
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import Header         from "#parts/core/header.svelte";
+import Meta           from "#parts/page/meta.svelte";
+import Breadcrumbs    from "#parts/page/breadcrumbs.svelte";
+import Card           from "#parts/ui/card.svelte";
+import CardsContainer from "#parts/ui/container.cards.svelte";
 
 </script>
 
@@ -23,7 +23,7 @@ import Header from "#parts/core/header.svelte";
 
 <Header title="Questions" />
 
-<div class="content">
+<CardsContainer>
   <Card title="Integrals"
     intern="questions/integrals"
     latex={"\\int f(x) \\, dx"}
@@ -52,18 +52,4 @@ import Header from "#parts/core/header.svelte";
     intern="questions/special"
     latex={String.raw`\exp(x) = \sum_{n=0}^{\infin} \frac{x^n}{n!}`}
   />
-</div>
-
-
-<style lang="scss">
-
-.content {
-  margin: 1rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 1rem;
-  text-align: center;
-}
-
-</style>
+</CardsContainer>

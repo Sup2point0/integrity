@@ -1,10 +1,10 @@
 <script lang="ts">
 
-import Card from "#parts/ui/card.svelte";
-
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import Meta from "#parts/page/meta.svelte";
+import Header         from "#parts/core/header.svelte";
+import Breadcrumbs    from "#parts/page/breadcrumbs.svelte";
+import Meta           from "#parts/page/meta.svelte";
+import Card           from "#parts/ui/card.svelte";
+import CardsContainer from "#parts/ui/container.cards.svelte";
 
 </script>
 
@@ -22,20 +22,6 @@ import Meta from "#parts/page/meta.svelte";
 <Header title="MIT Integration Bee" capt="Fun questions from the MIT Integration Bee rounds" />
 
 
-<div class="content">
+<CardsContainer>
   <Card title="2023" intern="fun/mit-ib/2023" />
-</div>
-
-
-<style lang="scss">
-
-.content {
-  margin: 1rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 1rem;
-  text-align: center;
-}
-
-</style>
+</CardsContainer>

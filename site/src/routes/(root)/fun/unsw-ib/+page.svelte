@@ -1,10 +1,10 @@
 <script lang="ts">
 
-import Card from "#parts/ui/card.svelte";
-
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import Meta from "#parts/page/meta.svelte";
+import Header         from "#parts/core/header.svelte";
+import Meta           from "#parts/page/meta.svelte";
+import Breadcrumbs    from "#parts/page/breadcrumbs.svelte";
+import Card           from "#parts/ui/card.svelte";
+import CardsContainer from "#parts/ui/container.cards.svelte";
 
 </script>
 
@@ -20,20 +20,7 @@ import Meta from "#parts/page/meta.svelte";
 <Header title="UNSW Integration Bee" capt="Fun questions from the UNSW Maths Society Integration Bee" />
 
 
-<div class="content">
+<CardsContainer>
   <Card title="2022" intern="fun/unsw-ib/2022" />
-</div>
+</CardsContainer>
 
-
-<style lang="scss">
-
-.content {
-  margin: 1rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 1rem;
-  text-align: center;
-}
-
-</style>
