@@ -6,7 +6,6 @@ export function pick_trivia(): Trivia
   let t = Math.floor(delta / 24 / 60 / 60 / 1000);
 
   let total = trivia.length;
-  console.log("total =", total);
   let scale = 0.69 * total;
   let idx = (scale * t + 8) % total;
 

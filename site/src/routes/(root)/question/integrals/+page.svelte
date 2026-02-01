@@ -93,7 +93,6 @@ let sections = page.url.searchParams.getAll("section");
 {/if}
 
 {#if question?.solution}
-{@const t = console.log(page.url.pathname)}
   <Section title="Solution" closed={!sections.includes("solution")}>
     {#if Array.isArray(question.solution)}
       {#each question.solution as source}

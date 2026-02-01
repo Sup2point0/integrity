@@ -237,9 +237,10 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
   out = out.replaceAll(/([a-zA-Z]+):/g, String.raw `"$1":`);
   if (out === undefined) return;
 
+  // FIXME why separate?
   let res;
   try { res = JSON.parse(out); } catch { return undefined; }
-  console.log("res =", res);
+
   return res;
 }
 
