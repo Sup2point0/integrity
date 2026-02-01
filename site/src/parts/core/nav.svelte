@@ -65,7 +65,7 @@ let show_mobile_dropdown = $state(false);
       <Link text="Fun Facts" intern="docs/fun-facts" />
     </NavLink>
 
-    <NavLink text="Scriptures" intern="scriptures">
+    <NavLink text="Scriptures" intern="scriptures" hot={true}>
       <Link text="General" intern="scriptures/general" />
       <Link text="Integration" intern="scriptures/integrals" />
       <Link text="Graph Drawing" intern="scriptures/graph-drawing" dev={true} />

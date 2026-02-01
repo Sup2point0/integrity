@@ -102,6 +102,13 @@ fib 0 = 0
 fib n = fib (n-1) + fib (n-2)
 ```
 
+And guess what, the definition in Desmos is basically identical!
+
+```desmos
+f\left( 0 \right) = 0
+f\left( n \right) = f \left( n-1 \right) + f \left( n-2 \right)
+```
+
 I think what you’ll find is that Haskell is essentially maths, but as a programming language. If you enjoy maths, there’s a good chance you’ll enjoy Haskell, and vice versa.
 
 
@@ -160,7 +167,7 @@ sum xs
 ```
 
 > [!Note]
-> You should read `xs` as *EX-cis*, as in the plural of “x”. Just a Haskell idiosyncrasy ;)
+> You should read `xs` as `/ɛkˈsɪs/` (*EX-cis*), as in the plural of “x”. Just a Haskell idiosyncrasy ;)
 
 **Inductive step**. Then consider $n = k+1$. That is, we have 1 more element in the list, added to the start.[^start] Let’s call it `x`.
 
@@ -186,12 +193,12 @@ sum (x:xs) = ?
 
 Well, suppose, imagine, pretend for a sec that we already knew the sum of `xs`. Then the sum of this new list would just be the sum of `xs`, *plus `x`*.
 
-Wouldn’t it be nice if I had a function that could compute the sum of `xs`?
+Wouldn’t it be nice if we had a function that could compute the sum of `xs`?
 
-Oh hang on a sec, *that’s the function I’m defining*. Soo... let’s just use `sum`!
+Oh hang on a sec, *that’s the function we’re defining*. Soo... let’s just use `sum`!
 
 > [!Tip]
-> This is known as **recursion** (a function calling itself), and luckily for us, Haskell does allow it – in fact, it’s a SUPER common technique in functional programming.
+> This is known as **recursion** (a function calling itself), and luckily for us, Haskell does allow it – in fact, it’s a super common technique in functional programming.
 
 But wait, how do we know `sum` will work? After all, we’re currently defining that very function.
 
@@ -208,7 +215,7 @@ That’s it. We’ve shown:
 - The proposition holds true for the base case $n = 0$.
 - If it holds true for $n = k$, it also holds true for $n = k+1$,
 
-Hence by the principle of mathematical induction, the proposition is true for all $n \in \mathbb{N}$.
+Hence by mathematical induction, the proposition is true for all $n \in \mathbb{N}$.
 
 Or, more programmatically, we’ve shown:
 
@@ -586,8 +593,11 @@ True for base case, and if true for `xs` then true for `x:xs`. Hence true for al
 
 ## The Ending is the Beginning
 
-Hopefully I’ve piqued your interest, and maybe you’re so fascinated that you’re gonna check out Haskell. If you do, what I will say is: you should probably already have some programming experience.
+Hopefully I’ve piqued your interest, and maybe you’re so fascinated that you’re gonna check out Haskell. If you do, what I will say is: you should probably make sure you already have some programming experience.
 
 Haskell is intuitive in many of the basics. But it easily becomes unintuitive very quickly as things become more abstract. You gain extremely useful and transferable logic and reasoning skills from both maths and programming, and uniting these will make Haskell *click*.
+
+That said, if your background is purely maths, and you’ve never touched code in your life, I think you’ll still get on fine. Haskell is a brilliant language to learn, whether you’re already a programmer or not ;)
+
 
 <br>
