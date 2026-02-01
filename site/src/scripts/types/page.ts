@@ -1,3 +1,4 @@
+/** Data for a page on the site, exported by Squarkdown. */
 export interface Page
 {
   path: string;
@@ -6,7 +7,7 @@ export interface Page
   flags?: string[];
 
   title?: string | null;
-  desc?: string | null;
+  desc?:  string | null;
 
   head?: string | null;
   capt?: string | null;
@@ -14,4 +15,5 @@ export interface Page
   index?: string[];
   
   date_display?: string | null;
+  update_display?: string | null;
 }

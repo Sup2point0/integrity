@@ -1,18 +1,29 @@
 <!-- @component PageContent
 
-The content for a generic static article page.
+The main displayed content for a static article page.
 -->
 
-<script>
+<script lang="ts">
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import Header        from "#parts/core/header.svelte";
+import Meta          from "#parts/page/meta.svelte";
+import Breadcrumbs   from "#parts/page/breadcrumbs.svelte";
+import ArticleFooter from "#parts/page/footer.article.svelte";
 
 import { page } from "$app/state";
 
 
-let { levels, id = undefined } = $props();
+interface Props {
+  levels: Array<{
+    text: string,
+    intern?: string,
+    link?: string,
+  }>;
+  id?: string;
+}
+
+let { levels, id = undefined }: Props = $props();
+
 
 let { content, metadata: data } = $derived(page.data);
 
@@ -31,4 +42,6 @@ let { content, metadata: data } = $derived(page.data);
 
 <article {id}>
   {@render content?.()}
+
+  <ArticleFooter page={data} />
 </article>

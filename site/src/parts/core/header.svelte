@@ -32,9 +32,14 @@ let { title, capt, page }: Props = $props();
   </div>
 
   {#if page}
-    {#if page.date_display}
+    {#if page.update_display}
+      <p class="date"> Last updated <span>{page.update_display}</span> </p>
+      <div style:height="1rem"></div>
+    
+    {:else if page.date_display}
       <p class="date"> Last updated <span>{page.date_display}</span> </p>
       <div style:height="1rem"></div>
+    
     {:else}
       <div style:height="2rem"></div>
     {/if}

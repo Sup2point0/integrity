@@ -5,8 +5,11 @@ The footer at the end of an article.
 
 <script lang="ts">
 
+import type { Page } from "#scripts/types";
+
+
 interface Props {
-  page?: object;
+  page?: Page;
 }
 
 let { page }: Props = $props();
@@ -15,10 +18,10 @@ let { page }: Props = $props();
 
 
 <footer>
-  <p> See an oversight or error? Drop me an issue on <a target="_blank" href="https://github.com/Sup2point0/integrity/issues">GitHub<sup>↗</sup></a>. </p>
+  <p> See an oversight or error? Drop an issue on <a target="_blank" href="https://github.com/Sup2point0/integrity/issues">GitHub<sup>↗</sup></a>. </p>
 
   {#if page?.date_display}
-    <p> Last updated on <span>{page.date_display}</span> </p>
+    <p> Released on <span>{page.date_display}</span> </p>
   {/if}
 </footer>
 
@@ -38,7 +41,7 @@ p {
   color: $col-text-deut;
 
   span {
-    color: $col-prot;
+    color: $col-deut;
   }
 }
 
