@@ -6,6 +6,7 @@ export function pick_trivia(): Trivia
   let t = Math.floor(delta / 24 / 60 / 60 / 1000);
 
   let total = trivia.length;
+  console.log("total =", total);
   let scale = 0.69 * total;
   let idx = (scale * t + 8) % total;
 
@@ -28,6 +29,7 @@ const _template = [
 
 
 export const trivia = [
+  // == MATHEMATICS == //
   {
     text: String.raw `There are the same number of numbers between $0$ and $1$ as there are between $1$ and $\infin$.`,
     note: String.raw `Uncountably infinite!`,
@@ -82,8 +84,65 @@ export const trivia = [
   },
   {
     text: String.raw `Depending on the angle at which a plane which cuts a cone, the curve produced by the intersection is either a parabola, hyperbola, ellipse, or circle!`,
+    note: String.raw `Hence why these curves are also known as “conic sections”.`,
+  },
+  {
+    text: String.raw `The Mandelbrot set is really a 2-dimensional slice of the possible 6-dimensional super-fractal O_o`,
+    note: String.raw `In the Mandelbrot set, you vary $z$ in $z^2 + c$. But you can also vary the $2$ or $c$, each taking on a complex value – thus giving $2 + 2 + 2 = 6$ dimensions.`,
+  },
+  {
+    text: String.raw `The Mandelbrot set contains mini Julia sets inside, and Julia sets contains mini Mandelbrot sets inside.`,
+    note: String.raw `As [2swap](https://www.youtube.com/watch?v=Ed1gsyxxwM0) put it, they’re self-similar across dimensions!`,
+  },
+  {
+    text: String.raw `$21978 \times 4 = 87912$`,
+    note: String.raw `palin...drome?`,
+  },
+  {
+    text: String.raw `Mathematical theorems can be thought of as computer programs, where the types of the program are the formulas of the theorem, and successfully running the program is proof of the theorem.`,
+    note: String.raw `Search up “Curry-Howard correspondence”.`,
   },
 
+  // == REDDIT == //
+  // sourced from: https://www.reddit.com/r/math/comments/qfmea8/what_is_the_coolest_math_fact_you_know/
+  {
+    text: String.raw `$3^{12} \approx 2^{19}$`,
+    note: String.raw `$1.36\%$ error, pretty close.`,
+  },
+  {
+    text: String.raw `If an infinite series $a_1 \pm a_2 \pm a_3 \pm ...$ converges conditionally (not absolutely), then it can be rearranged to converge to *any* real number.`,
+    note: String.raw `Search up “Riemann series theorem”.`,
+  },
+  {
+    text: String.raw `If you hold a map of the place you are in, at least one point on the map is directly above the point it represents.`,
+    note: String.raw `Matrix transformations!`,
+  },
+  {
+    text: String.raw `$1/998999 = 0.000000001002003005008013021034055089144...$`,
+    note: String.raw `Took me a moment.`,
+  },
+  {
+    text: String.raw `$p \cdot q = \text{gcd}(p, q) \cdot \text{lcm}(p, q)$`,
+    note: String.raw `Funny how that works.`,
+  },
+  {
+    text: String.raw `TeX’s (the typesetting engine behind LaTeX and KaTeX) version number is converging to $\pi$.`,
+    note: String.raw `Based.`,
+  },
+  {
+    text: String.raw `$\tan^{-1}(1) + \tan^{-1}(2) + \tan^{-1}(3) = \pi$`,
+    note: String.raw `hello???`,
+  },
+  {
+    text: String.raw `$i^i$ is real.`,
+    note: String.raw `No like, literally. It’s a real number.`,
+  },
+  {
+    text: String.raw `Statistically speaking, your friends have more friends than you.`,
+    note: String.raw `Search up “friendship paradox”.`,
+  },
+
+  // == INTEGRITY == //
   {
     text: String.raw `I came up with the name *Integrity* in, like, 2 seconds.`,
     note: String.raw `Like I seriously didn’t put much thought into it, but I just instantly knew it was perfect.`,
@@ -109,7 +168,7 @@ export const trivia = [
     note: String.raw `It feels so good making these tiny changes. Just nearing perfection bit by bit.`,
   },
   {
-    text: String.raw `*Integrity* is honestly my first experience maintaining and growing a long-term project.`,
+    text: String.raw `*Integrity* is honestly my first experience maintaining and growing a long-term project (properly).`,
     note: String.raw `We’ve come a long way.`,
   },
   {
@@ -131,8 +190,10 @@ export const trivia = [
     text: String.raw `*Integrity* currently has $n$ secrets, where $n \in \mathbb{N}$ and $0 < n$.`
   },
 
+  // == SUP == //
   {
     text: String.raw `Have we heard of the hairy ball theorem?`,
+    note: String.raw `Edit 31/01/2026: Let’s go, Grant made a video on it!!`,
   },
   {
     text: String.raw `What starts with “f” and rhymes with *tractorise*?`,
@@ -146,7 +207,7 @@ export const trivia = [
   },
   {
     text: "Anyone else pronounce $\\cos()$ as `/kous/`?",
-    note: String.raw `I mean, it’s short for cosine.`,
+    note: String.raw `I mean, it’s short for ‘co’-sine.`,
   },
   {
     text: String.raw `Anyone else know the international symbol of cross-multiplying?`,
@@ -154,9 +215,5 @@ export const trivia = [
   },
   {
     text: String.raw `*Quaternion* has got to be one of the coolest terms in all of mathematics.`,
-  },
-  {
-    text: String.raw `The Mandelbrot set is really a 2-dimensional slice of the possible 6-dimensional super-fractal O_o`,
-    note: String.raw `In the Mandelbrot set, you vary $z$ in $z^2 + c$. But you can also vary the $2$ or $c$, each taking on a complex value – thus giving $2 + 2 + 2 = 6$ dimensions.`,
   },
 ];
