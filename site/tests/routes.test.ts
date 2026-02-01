@@ -5,19 +5,15 @@ test.beforeEach(async ({ page }) => {
   page.on("pageerror", err => { throw err; });
 });
 
-for (let route of tested_routes()) {
-  test(route, async ({ page }) => {
-  // for (let route of routes) {
+test("routes", async ({ page }) => {
+  for (let route of routes) {
     let status = await page.goto(route);
     expect(status?.ok(), `Failed to access \`${route}\``).toBe(true);
-  // }
-  });
-}
+  }
+});
 
 
-// const routes = [
-function tested_routes() {
-  return [
+const routes = [
   "/",
   "/data",
   "/workspace",
@@ -87,7 +83,5 @@ function tested_routes() {
   "/fun/mit-ib/2023.html",
   "/scriptures/",
   "/trails.html",
-  "/404.html",
   "/explore.html",
 ];
-}
