@@ -32,7 +32,7 @@ List comprehensions also exist in some programming languages like Python and Has
 ### _
 A list comprehension works by:
 
-<ul style="margin-left: 2em">
+<ul>
   <li> Iterating over the terms of the existing list </li>
   <li> Computing an expression for each </li>
   <li> Building a new list with the results </li>
@@ -310,7 +310,7 @@ L\left[ f_{resquare}\left( L \right) = L \right]
 
 We can check if a number is square by:
 
-<ul style="margin-left: 2em">
+<ul>
   <li> Square rooting it </li>
   <li> Rounding the result </li>
   <li> Squaring the result </li>
