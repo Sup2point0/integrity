@@ -72,7 +72,6 @@ let {
 
 a {
   padding: 0.75em 0.75em;
-  &:has(img) { padding: 0.5em; }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +88,12 @@ a {
 
   .nav-link.disabled & {
     opacity: 0.2;
+  }
+
+  &:has(img) {
+    padding: 0.5em;
+    // NOTE: Dirty hack to make Integrity logo bigger, we don't have any other `img` in the navbar anyway
+    transform: scale(120%);
   }
 
   img, .svg {

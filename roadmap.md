@@ -11,10 +11,10 @@
 
 I’m finding a fix!
 
+- Desmos blocks in pages are not rendered
 - Topic -> displayed text map
 - Navigating backwards in dynamic scripture can clear Desmos window. This is unideal, since it should instead revert to the newest window up until that step.
 - Dynamic scriptures with many steps can overflow scroll
-- Desmos library **Usage**/**Instances** sections do not use a Desmos block
 - Dynamic Markdown rendering engine is a custom RegEx-based one, so a lot of features are lacking. Code blocks in particular, which are coming up progressively more in Gamedev in Desmos...
 
 
@@ -26,6 +26,7 @@ I’m finding a fix!
 I’m working on it!
 
 - Upgrade static scripture routes to all dynamically prerendered
+  - General integrals scriptures are still static
 - Speedrun environment
 
 
