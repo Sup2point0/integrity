@@ -323,8 +323,16 @@ nav.upper {
   gap: 2rem;
 
   .half {
-    width: 50%;
     height: 70vh;
+
+    &.left {
+      flex-grow: 1;
+      max-width: min(40em, 40vw);
+    }
+
+    &.right {
+      flex-grow: 3;
+    }
   }
 }
 
