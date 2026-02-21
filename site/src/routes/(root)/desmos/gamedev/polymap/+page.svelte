@@ -2,12 +2,12 @@
 
 import { dyna_scriptures } from "#scripts/site";
 
-import Link from "#parts/ui/link.svelte";
 
-import Meta from "#parts/page/meta.svelte";
+import Header      from "#parts/core/header.svelte";
+import Meta        from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import Line from "#parts/page/line.svelte";
+import Line        from "#parts/page/line.svelte";
+import Link        from "#parts/ui/link.svelte";
 
 
 const chapters = dyna_scriptures["desmos-gamedev"];
@@ -43,12 +43,12 @@ const chapters = dyna_scriptures["desmos-gamedev"];
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(chapters.essentials ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
+      <Link text="Graphs" intern="desmos/gamedev/essentials/graphs" />
+      <Link text="Variables" intern="desmos/gamedev/essentials/variables" />
+      <Link text="Lists" intern="desmos/gamedev/essentials/lists" />
+      <Link text="Points" intern="desmos/gamedev/essentials/points" disabled={true} />
+      <Link text="Functions" intern="desmos/gamedev/essentials/functions" disabled={true} />
+      <Link text="Parametrics" intern="desmos/gamedev/essentials/parametrics" disabled={true} />
     </li>
 
     <li class="card">
@@ -59,12 +59,12 @@ const chapters = dyna_scriptures["desmos-gamedev"];
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      {#each Object.values(chapters.supplementals ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
+      <Link text="Undefined" intern="desmos/gamedev/supplementary/" disabled={true} />
+      <Link text="Sliders" intern="desmos/gamedev/supplementary/" disabled={true} />
+      <Link text="Domains" intern="desmos/gamedev/supplementary/" disabled={true} />
+      <Link text="Summations & Products" intern="desmos/gamedev/supplementary/" disabled={true} />
+      <Link text="Recursion" intern="desmos/gamedev/supplementary/" disabled={true} />
+      <Link text="Vectorisation" intern="desmos/gamedev/supplementary/vectorisation" />
     </li>
   </ul>
 </section>
@@ -83,13 +83,12 @@ const chapters = dyna_scriptures["desmos-gamedev"];
       </div>
 
       <Line width="80%" margin="1.5rem 0.5rem" />
-
-      {#each Object.values(chapters.core) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.shard}"
-        />
-      {/each}
+      
+      <Link text="Actions" intern="desmos/gamedev/core/actions" />
+      <Link text="Identifiers" intern="desmos/gamedev/core/identifiers" />
+      <Link text="Ranges" intern="desmos/gamedev/core/ranges" />
+      <Link text="List Comprehensions" intern="desmos/gamedev/core/list-comprehensions" />
+      <Link text="Conditionals" intern="desmos/gamedev/core/conditionals" />
     </li>
 
     <li class="card">
@@ -131,13 +130,9 @@ const chapters = dyna_scriptures["desmos-gamedev"];
       </div>
 
       <Line width="80%" margin="1.5rem 0.5rem" />
-
-      {#each Object.values(chapters.advanced ?? []) as page}
-        <Link
-          text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
-        />
-      {/each}
+      
+      <Link text="Inline Substitution" intern="desmos/gamedev/advanced/" disabled={true} />
+      <Link text="Indexing Lists with Lists" intern="desmos/gamedev/advanced/" disabled={true} />
     </li>
   </ul>
 </section>
