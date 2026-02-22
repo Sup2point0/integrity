@@ -1,7 +1,7 @@
 ---
 topic: integrals
 title: end of an epoch
-desc:  Halfway through the decode. Crikey.
+desc:  Halfway through the decade. Crikey.
 date:  2025 December 31
 difficulty: manifold
 tags:
