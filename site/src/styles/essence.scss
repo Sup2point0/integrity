@@ -20,6 +20,10 @@ html, body {
   background: light-dark(white, black);
 }
 
+html {
+  scroll-padding-top: 20rem;
+}
+
 
 p, td {
   @include font-ui;

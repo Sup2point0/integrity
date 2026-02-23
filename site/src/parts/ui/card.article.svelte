@@ -5,9 +5,9 @@ A card for selecting an article. -->
 <script lang="ts">
 
 import Site from "#scripts/site";
-
-import { render_markdown, split_latex } from "#scripts/utils";
 import type { Page } from "#scripts/types";
+
+import RenderBlock from "#parts/page/render-block.svelte";
 
 import { base } from "$app/paths";
 
@@ -30,16 +30,14 @@ const data: Page = page ?? Site.pages[path!];
   <div class="info">
     <h4>
       {#if data?.head}
-        {#each split_latex(data?.head) as chunk}
-          {@html chunk}
-        {/each}
+        <RenderBlock source={data!.head} />
       {:else}
         Page Unavailable
       {/if}
     </h4>
     
     {#if data?.capt}
-      <p> {@html render_markdown(data.capt)} </p>
+      <RenderBlock source={data!.capt} />
     {/if}
   </div>
 </a>
@@ -89,8 +87,12 @@ a.article-card {
     padding: 0 0 0.5em;
     margin: 0 0 0.5em;
     font-size: 150%;
-    font-weight: 350;
     border-bottom: 1px solid $col-line;
+
+    // NOTE: Nested `<p>` due to `<RenderBlock>` Markdown parsing
+    :global(p) {
+    font-weight: 350;
+    }
   }
 }
 

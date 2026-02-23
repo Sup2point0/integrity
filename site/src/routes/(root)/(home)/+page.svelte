@@ -177,11 +177,15 @@ section {
   .centre {
     width: 100%;
     margin: 1rem 0 0;
-    @include font-serif;
     font-size: 150%;
     text-wrap: wrap;
 
-    & :global(.katex) {
+    // NOTE: Nested `<p>` due to `<RenderBlock>` Markdown parsing
+    :global(p) {
+      @include font-serif;
+    }
+
+    :global(.katex) {
       font-size: 100%;
     }
   }
