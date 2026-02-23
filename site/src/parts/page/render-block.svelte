@@ -9,12 +9,9 @@ import Markdown from "svelte-exmarkdown";
 import { gfmPlugin } from "svelte-exmarkdown/gfm";
 import remarkMath from "remark-math-6.0";
 import rehypeRaw from "rehype-raw";
-
 import rehypeSlug from "rehype-slug";
 import rehypeKatex from "rehype-katex";
 
-import mdsvex_config from "#src/../config/mdsvex-config";
-// import { split_latex } from "#scripts/utils";
 import type { Block } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
@@ -32,10 +29,8 @@ let { source }: Props = $props();
 
 const plugins = [
   gfmPlugin(),
-  // ...mdsvex_config.remarkPlugins.map(plugin => ({ remarkPlugin: plugin })),
   { remarkPlugin: remarkMath },
   { rehypePlugin: rehypeRaw },
-  // ...mdsvex_config.rehypePlugins.map(plugin => ({ rehypePlugin: plugin })),
   { rehypePlugin: rehypeSlug },
   { rehypePlugin: rehypeKatex },
 ];
@@ -65,14 +60,6 @@ const plugins = [
 
   {:else}
     <Markdown md={source.content ?? source} {plugins} />
-
-    <!-- {#each split_latex(source.content ?? source) as block}
-      {#if block.kind === "latex"}
-        {@html block.content}
-      {:else}
-        <Markdown md={block.content} {plugins} />
-      {/if}
-    {/each} -->
 
   {/if}
 {/snippet}

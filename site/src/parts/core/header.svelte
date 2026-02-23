@@ -63,8 +63,12 @@ header {
   border-bottom: 1px solid $col-line;
 
   h1 {
-    @include font-serif;
     font-size: 250%;
+
+    // NOTE: Nested `<p>` due to `<RenderBlock>` Markdown parsing
+    :global(p) {
+      @include font-serif;
+    }
   }
 
   .capt {
