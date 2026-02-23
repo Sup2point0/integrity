@@ -10,6 +10,11 @@
 <div align="center" style="text-align: center;"> <h2> 2026 </h2> </div>
 
 
+## 23 February
+
+If you didn’t notice then I’ve done my job well, but the Markdown rendering engine for many parts of the site has been upgraded (finally!) from a makeshift in-house RegEx-based one to an actual unified renderer. Rendering $\LaTeX$ is SO much less finnicky, idk if that’ll actually result in any performance gains, but there should be much fewer syntax glitches now!
+
+
 ## 1 February
 
 If you’re looking for awesome maths YouTubers to watch, I’ve compiled a [small list of my favourites](https://sup2point0.github.io/integrity/fun/youtube) :D
