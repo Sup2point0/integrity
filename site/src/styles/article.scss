@@ -57,12 +57,20 @@ article {
     font-weight: 500;
   }
 
-  :not(pre) code {
+  :not(pre) > code {
     padding: 0.25em 0.5em;
     @include font-code;
     font-size: 90%;
     background: $col-click;
     border-radius: 0.4em;
+  }
+
+  pre:has(code) {
+    padding: 0.5em 1em;
+    @include font-code;
+    font-size: 100%;
+    background: $col-hover;
+    border-radius: 0.75em;
   }
 
   p > a,
@@ -135,14 +143,6 @@ article {
       font-weight: 400;
       color: $col-prot;
     }
-  }
-
-  pre:has(code) {
-    padding: 0.5em 1em;
-    @include font-code;
-    font-size: 100%;
-    background: $col-hover;
-    border-radius: 0.75em;
   }
 }
 
