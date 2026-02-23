@@ -95,7 +95,6 @@ Hence
   \cos3x+\sin3x
     &= 4\cos^{3}x-3\cos x+3\sin x-4\sin^{3}x
   \\ &= 4\cos^{3}x+3\sin x-4\sin^{3}x-3\cos x
-  \\ \frac{\cos3x+\sin3x}{4\cos^{3}x+3\sin x-4\sin^{3}x-3\cos x} &= 1
   \\ \frac{4\cos^{3}x+3\sin x-4\sin^{3}x-3\cos x}{\sin3x+\cos3x} &= 1
 \end{align*}
 ```
@@ -103,7 +102,7 @@ Hence
 ### Solve
 ```math
 \begin{align*}
-  \int \frac{4\cos^{3}x+3\sin x-4\sin^{3}x-3\cos x}{\sin3x+\cos3x}\cdot\sin3x\cos3x\ dx
+  &\ \int \frac{4\cos^{3}x+3\sin x-4\sin^{3}x-3\cos x}{\sin3x+\cos3x}\cdot\sin3x\cos3x\ dx
   \\ =&\ \int \sin3x\cos3x\ dx
   \\ =&\ \frac{1}{2}\int \sin6x\ dx
   \\ =&\ -\frac{1}{12}\cos6x-c

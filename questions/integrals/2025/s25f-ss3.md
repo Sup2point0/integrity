@@ -90,7 +90,7 @@ Did you have fun? I did ;)
 \end{align*}
 ```
 
-### $I_1$
+### 1
 ```math
 \begin{align*}
   I_{1} &= fg-\int f'g\ dt
@@ -100,7 +100,7 @@ Did you have fun? I did ;)
 \end{align*}
 ```
 
-### $I_2$
+### 2
 ```math
 \begin{align*}
   I_{2} &= \int \sin\left(t\right)\cosh\left(t\right)\ dt
@@ -112,7 +112,7 @@ Did you have fun? I did ;)
 \end{align*}
 ```
 
-### $I_3$
+### 3
 ```math
 I_{3}=\int t\cos\left(t\right)\cosh\left(t\right)\ dt
 ```
@@ -133,7 +133,7 @@ I_{3}=\int t\cos\left(t\right)\cosh\left(t\right)\ dt
 \end{align*}
 ```
 
-### $I_4$
+### 4
 ```math
 \begin{align*}
   I_{4}=\int \cos\left(t\right)\sinh\left(t\right)\ dt
@@ -145,7 +145,7 @@ I_{3}=\int t\cos\left(t\right)\cosh\left(t\right)\ dt
 \end{align*}
 ```
 
-### $I_3$ (again)
+### 3 (again)
 ```math
 \begin{align*}
   I_{3} &= t\cos\left(t\right)\sinh\left(t\right)-I_{4}+I_{1}
