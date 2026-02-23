@@ -23,11 +23,11 @@ let { title, capt, page }: Props = $props();
 <header class="{$userprefs.style}">
   <div class="info">
     <h1>
-      <RenderBlock source={{ content: title ?? page?.head ?? "Untitled Page" }} />
+      <RenderBlock source={title ?? page?.head ?? "Untitled Page"} />
     </h1>
 
     <div class="capt">
-      <RenderBlock source={{ content: capt ?? page?.capt ?? "" }} />
+      <RenderBlock source={capt ?? page?.capt ?? ""} />
     </div>
   </div>
 

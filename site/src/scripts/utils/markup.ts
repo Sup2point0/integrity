@@ -1,5 +1,7 @@
 import { renderToString } from "katex";
 
+import type { Block } from "#scripts/types";
+
 
 /** Render basic Markdown to HTML. */
 export function render_markdown(text: string | undefined): string | undefined
@@ -29,24 +31,33 @@ export function render_markdown(text: string | undefined): string | undefined
 }
 
 
-export function split_latex(text: string | undefined): string[] | undefined
+export function split_latex(text: string): Block[]
 {
-  if (text === undefined) return undefined;
-
+  console.log("text =", text);
   try {
-    return text.split(/(\$[^$]+\$)/).map(
-      /* @ts-ignore */
-      chunk => (
-        chunk.startsWith("$")
-        ? renderToString(chunk.slice(1, -1), {
+    const parity = text.startsWith("$") ? 0 : 1;
+    let chunks = text.split("$");
+    
+    return chunks.entries().map(
+      ([i, chunk]) => (
+        (i % 2 == parity)
+        ? {
+          kind: "latex",
+          content: renderToString(chunk, {
             displayMode: false,
             throwOnError: false,
           })
-        : render_markdown(chunk)!
-      )
-    )
+        }
+        : {
+          kind: "text",
+          content: chunk
+        }
+      ) satisfies Block
+    ).toArray();
   }
   catch {
-    return [text];
+    return [
+      { kind: "text", content: text }
+    ];
   }
 }
