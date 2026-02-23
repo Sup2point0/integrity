@@ -1,6 +1,7 @@
 require "front_matter_parser"
 
 
+## Process a file into its JSON representation.
 def process(shard:, file:)
   parsed = FrontMatterParser::Parser.parse_file(file)
 
@@ -86,56 +87,85 @@ def process(shard:, file:)
 end
 
 
+module CTX
+  TEXT   = "text"
+  CODE   = "code"
+  LATEX  = "latex"
+  DESMOS = "desmos"
+end
+
+## Process lines of source text into a list of "text", "latex" or "desmos" blocks.
 def extract_blocks(lines)
   out = []
   load = ""
   ctx = nil
 
   lines.each do |line|
-    if (ctx == "latex" or ctx == "desmos") and line.end_with?("```")
+    ## close context
+    if (ctx == CTX::LATEX or ctx == CTX::DESMOS) and line.end_with?("```")
       out.push({
-        "kind" => ctx,
-        "content" => clean(load),
+        "kind"    => ctx,
+        "content" => clean_breaks(clean_spaces load),
       })
       ctx = nil
       next
-    elsif ctx == "text" and line.start_with?("```")
+    elsif ctx == CTX::CODE and line.end_with?("```")
       out.push({
-        "kind" => "text",
-        "content" => clean(load),
+        "kind"    => CTX::CODE,
+        "content" => load + "\n```",
+      })
+      ctx = nil
+      next
+    elsif ctx == CTX::TEXT and line.start_with?("```")
+      out.push({
+        "kind"    => CTX::TEXT,
+        "content" => clean_breaks(load),
       })
       ctx = nil
     else
-      if ctx == "desmos" and not line.strip.empty?
+      if ctx == CTX::TEXT or (ctx == CTX::DESMOS and not line.strip.empty?)
         load.concat("\n")
       end
       load.concat(line)
     end
 
+    ## open context
     if line.start_with?("```math")
-      ctx = "latex"
+      ctx = CTX::LATEX
       load = ""
     elsif line.start_with?("```desmos")
-      ctx = "desmos"
+      ctx = CTX::DESMOS
       load = ""
+    elsif line.start_with?("```")
+      ctx = CTX::CODE
+      load = line + "\n"
     elsif ctx.nil? and not line.strip.empty?
-      ctx = "text"
+      ctx = CTX::TEXT
       load = line
     end
   end
 
   if not ctx.nil?
     out.push({
-      "kind" => "text",
-      "content" => clean(load),
+      "kind" => CTX::TEXT,
+      "content" => clean_breaks(load),
     })
   end
 
   return out
 end
 
-
-def clean(text)
+def clean_breaks(text)
   # return text.strip.gsub(/[ ]+/, " ").gsub(/[\n]+/, "<br><br>")
-  return text.strip.gsub(/[ ]+/, " ").gsub(/\n/, "<br><br>")
+  return text.gsub(/(?<![|])\n\n\n/, "\n<br><br>\n")
+end
+
+## Condense unnecessary spaces in LaTeX (to save a little on space!)
+def clean_spaces(text)
+  return (
+    text.strip
+      .gsub(/[ ]+/, " ")
+      .gsub(/(?<=[\(\[\{]) /, "")
+      .gsub(/ (?<=[\)\]\}])/, "")
+  )
 end
