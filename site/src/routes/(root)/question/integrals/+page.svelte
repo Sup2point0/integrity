@@ -58,7 +58,7 @@ let sections = page.url.searchParams.getAll("section");
       <p class="date"> {question?.date_display} </p>
       
       {#if question?.desc}
-        <p class="desc"> {@html question.desc} </p>
+        <RenderBlock source={question.desc} />
       {/if}
     </div>
 
@@ -195,13 +195,10 @@ section.question {
     }
 
     p.date {
+      padding-bottom: 1em;
       color: $col-text-deut;
       font-size: 100%;
       font-weight: 250;
-    }
-
-    p.desc {
-      padding-top: 2em;
     }
   }
   
