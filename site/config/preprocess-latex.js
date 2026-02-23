@@ -1,7 +1,7 @@
-/// code by pngwn
+/// code by pngwn (modified)
 /// source - https://github.com/pngwn/mdsvex-math/blob/main/mdsvex.config.js
 
-import katex from "katex";
+import { renderToString } from "katex";
 import { visit } from "unist-util-visit";
 
 
@@ -18,7 +18,7 @@ export function render_katex_blocks()
 {
 	return (tree) => visit(tree, 'code', (node) => {
 		if (node.lang === 'math') {
-			const str = katex.renderToString(node.value, {
+			const str = renderToString(node.value, {
 				displayMode: true,
 				leqno: false,
 				fleqn: false,

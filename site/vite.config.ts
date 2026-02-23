@@ -8,4 +8,9 @@ export default defineConfig({
       "top-level-await": true,
     },
   },
+  server: {
+    fs: {
+      allow: [".."],
+    },
+  },
 });

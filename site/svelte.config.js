@@ -2,15 +2,9 @@ import adapter from "@sveltejs/adapter-static";
 import { sveltePreprocess } from "svelte-preprocess";
 
 import { mdsvex } from "mdsvex";
-import rehypeSlug from "rehype-slug";
-import remarkFootnotes from "remark-footnotes";
-import remarkIndexFootnotes from "remark-numbered-footnote-labels";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex-svelte";
 
+import mdsvex_config from "./config/mdsvex-config.js";
 import scss_config from "./scss-config.js";
-import { correct_hast_tree, render_katex_blocks } from "./preprocess-latex.js";
-import { remark_alerts } from "./preprocess-alerts.js";
 
 import site_pages from "./src/data/site.json" with { type: "json" };
 import dyna_scriptures from "./src/data/dyna-scriptures.json" with { type: "json" };
@@ -25,23 +19,6 @@ function get_paths_of_index(index)
   );
 }
 
-
-const mdsvex_config =
-{
-  extensions: [".svx", ".md"],
-  remarkPlugins: [
-    remarkFootnotes,
-    remarkIndexFootnotes,
-    remark_alerts,
-    remarkMath,
-    render_katex_blocks
-  ],
-  rehypePlugins: [
-    rehypeSlug,
-    correct_hast_tree,
-    rehypeKatex,
-  ],
-};
 
 const svelte_config =
 {
@@ -97,14 +74,18 @@ const svelte_config =
     }),
   ],
   
+  /* @ts-ignore */
   onwarn: (warning, handler) => {
-    if (
-      warning.code !== "css_unused_selector" &&
-      warning.code !== "component_name_lowercase"
-    ) {
+    if (!IGNORED_WARNINGS.includes(warning.code)) {
       handler(warning);
     }
   },
 };
 
 export default svelte_config;
+
+
+const IGNORED_WARNINGS = [
+  "css_unused_selector",
+  "component_name_lowercase",
+];

@@ -3,13 +3,16 @@
 import { visit } from "unist-util-visit";
 
 
-export function remark_alerts() {
-  return tree => {
-    visit(tree, "blockquote", node => {
-      let block = node.children?.[0];
-      let line = block?.children?.[0];
+export function remark_alerts()
+{
+  return tree =>
+  {
+    visit(tree, "blockquote", node =>
+    {
+      let block   = node.children?.[0];
+      let line    = block?.children?.[0];
       let content = line?.children?.[0];
-      let kind = content?.value?.match(/!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)/i)?.[1];
+      let kind    = content?.value?.match(/!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)/i)?.[1];
 
       if (line?.type === "linkReference" && kind) {
         block.children.shift();  // remove old
