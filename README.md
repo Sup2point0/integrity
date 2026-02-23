@@ -24,10 +24,10 @@
 ## Features
 
 - Hundreds of hand-crafted maths questions
-- Question browser with myriads of filters
-- Hints, answers and solutions to every question
-- Articles on mathematical topics
-- Dynamic step-by-step walkthroughs
+- Question browser with instantaneous search and filtering
+- Hints, answers and full solutions to every question
+- Articles and explainers on advanced concepts
+- Dynamic step-by-step walkthroughs on programming in Desmos
 
 ### Topics
 - [Integration](https://sup2point0.github.io/integrity/questions/integrals)
@@ -37,11 +37,10 @@
 - [Guess the Graph](https://sup2point0.github.io/integrity/questions/guess-graph)
 - [Cool Graphs](https://sup2point0.github.io/integrity/questions/cool-graphs)
 - [Completing the Square](https://sup2point0.github.io/integrity/questions/complete-square)
-- [Addvent](https://sup2point0.github.io/integrity/questions/addvent)
 
 ### Tooling
 - Parsing engine to extract questions and content from Markdown files
-- Custom syntax for controlling Desmos embed from markup
+- Parsing engine for custom LaTeX-like syntax for controlling Desmos embeds
 
 
 <br>
@@ -51,8 +50,15 @@
 
 <table>
   <tr><td>
-    <img alt="Integration questions in Integrity’s question browser" src="assets/previews/integrity-preview.png">
+    <img
+      alt="Integration questions in Integrity’s question browser"
+      src="assets/previews/integrity-preview.png"
+    />
   </td></tr>
+
+  <tr><td align="center">
+    <em>Integrity</em> is a site for all things maths that I do, and more!
+  </td></td>
 </table>
 
 
@@ -61,12 +67,18 @@
 
 ## Credits
 
-All content in *Integrity* was created by myself.
+All content in *Integrity* was created by myself!
 
-Many thanks to everyone who’s helped find bugs, spot typos, and test new features! You know who you are ;)
+Eternal thanks to everyone who’s helped find bugs, spot typos, and test new features. You know who you are ;)
+
+If you’re curious how *Integrity* was built, head over to [Synopsis](synopsis.md).
 
 ### Contribute
-*Integrity* is an independent project for my own maths questions, but I appreciate the sentiment! And if you just want to chat about maths, well, I’m always more than happy to do that >:)
+Corrections, bug fixes and security patches are always more than welcome!
+
+If you want to submit content, I won’t be taking it, since *Integrity* is an independent project for my own maths questions – but I’m flattered and appreciate the sentiment, truly.
+
+If you just want to chat about maths, well, I’m always more than happy to do that >:)
 
 ### Licence
 See [Licence](https://sup2point0.github.io/integrity/info/licence). CC BY-SA for the written content, MIT for the questions and source code.
