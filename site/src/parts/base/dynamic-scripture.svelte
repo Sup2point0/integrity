@@ -4,7 +4,7 @@ The fully implemented dynamic scripture viewer.
 -->
 
 <script lang="ts">
-  
+
 import { dyna_scriptures } from "#scripts/site";
 import type { Block, DynamicScripture } from "#scripts/types";
 
@@ -182,7 +182,7 @@ function next_subsection()
                 class:live={idx === shown_subsections.length -1}
               >
                 {#each subsection as source}
-                  {#if source.kind === "text" || source.kind === "latex"}
+                  {#if source.kind !== "desmos"}
                     <RenderBlock {source} />
                   {/if}
                 {/each}
@@ -344,7 +344,14 @@ article {
   overflow-y: scroll;
 
   .padding-container {
-    padding-bottom: 1rem;  // instead of `gap:`, to ensure `slide` transition is smooth
+    // NOTE: Using `padding:` instead of `gap:` to ensure `slide` transition is smooth
+    padding-bottom: 1rem;
+  }
+
+  // NOTE: Overriding `article p` expanded styling
+  :global(p) {
+    margin: 0;
+    line-height: 125%;
   }
 }
 
