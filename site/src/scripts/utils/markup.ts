@@ -33,7 +33,6 @@ export function render_markdown(text: string | undefined): string | undefined
 
 export function split_latex(text: string): Block[]
 {
-  console.log("text =", text);
   try {
     const parity = text.startsWith("$") ? 0 : 1;
     let chunks = text.split("$");

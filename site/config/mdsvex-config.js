@@ -1,7 +1,7 @@
-import rehypeSlug from "rehype-slug";
 import remarkFootnotes from "remark-footnotes";
 import remarkIndexFootnotes from "remark-numbered-footnote-labels";
 import remarkMath from "remark-math";
+import rehypeSlug from "rehype-slug";
 import rehypeKatex from "rehype-katex-svelte";
 
 import { correct_hast_tree, render_katex_blocks } from "./preprocess-latex.js";

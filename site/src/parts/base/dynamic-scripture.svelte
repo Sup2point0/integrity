@@ -351,7 +351,6 @@ article {
   // NOTE: Overriding `article p` expanded styling
   :global(p) {
     margin: 0;
-    line-height: 125%;
   }
 }
 
