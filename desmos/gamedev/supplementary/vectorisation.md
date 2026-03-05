@@ -2,7 +2,7 @@
 domain: desmos-gamedev
 topic:  Supplementary
 title:  Vectorisation
-update: 2026 February 21
+update: 2026 February 23
 ---
 
 

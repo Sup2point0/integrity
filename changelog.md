@@ -4,7 +4,7 @@
 | title = Changelog
 | capt = Not-so-official snapshots into *Integrity’s* history
 | index = info
-| update = 2025 December 31
+| update = 2026 February 23
 -->
 
 <div align="center" style="text-align: center;"> <h2> 2026 </h2> </div>
