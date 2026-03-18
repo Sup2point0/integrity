@@ -11,6 +11,8 @@ methods:
   - tough
   - spot
   - fun
+flags:
+  - feat
 ---
 
 

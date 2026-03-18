@@ -2,7 +2,7 @@
 topic: integrals
 title: insomniac
 desc:  Not even joking, wrote this one at 3.14 am. Only shame is that it wasn’t on Pi Day itself.
-date:  2026 March 18
+date:  2026 March 17
 difficulty: incline
 tags:
   - definite
