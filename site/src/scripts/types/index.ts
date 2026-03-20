@@ -2,7 +2,7 @@ export type * from "./root";
 
 export type { Page } from "./page";
 
-export { Topic } from "./topic";
+export { Topic, TOPIC_DISPLAY_NAMES } from "./topic";
 
 export { Question } from "./question";
 export type * from "./question";

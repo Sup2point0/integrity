@@ -1,16 +1,15 @@
-export { scriptures } from "#scripts/data/pages";
 export { dyna_scriptures } from "#scripts/data/dyna-scriptures";
 
 import { questions } from "#scripts/data/questions";
-import { pages, index } from "#scripts/data/pages";
-import { scriptures } from "#scripts/data/pages";
-import type { Question, QuestionsData, Topic, Page } from "#scripts/types";
+import { pages, index, scriptures } from "#scripts/data/pages";
+import { Topic, TOPIC_DISPLAY_NAMES } from "#scripts/types";
+import type { Question, QuestionsData, Page, url } from "#scripts/types";
 
 
 interface SiteData
 {
   /** The base URL of the site. */
-  root: string;
+  root: url;
 
   pages: Record<string, Page>;
   index: Record<string, {
@@ -19,6 +18,7 @@ interface SiteData
   }>;
   questions: QuestionsData;
 
+  display_topic: (topic: Topic) => string;
   get_questions_of_topic: (topic: Topic) => Question[];
   get_list_of_all_questions: () => Question[];
   get_map_of_all_questions: () => Record<string, Question>;
@@ -34,7 +34,10 @@ export const Site: SiteData =
   pages,
   index,
   questions,
-  scriptures,
+
+  display_topic: (topic: Topic | null | undefined): string => {
+    return (topic && TOPIC_DISPLAY_NAMES[topic]) ?? "Unknown Topic";
+  },
 
   get_questions_of_topic: (topic) => {
     return Object.values(Site.questions[topic]?.questions ?? {});

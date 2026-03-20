@@ -3,7 +3,6 @@
 import katex from "katex";
 
 import Site from "#scripts/site";
-import { display_topic } from "#scripts/utils";
 import { Topic } from "#scripts/types";
 
 import GraphBar from "./graph-bar.svelte";
@@ -321,7 +320,7 @@ for (let q of Site.get_questions_of_topic(Topic.INTEGRALS)) {
               font-size: 80%;
               transform: translateX(-16%) translateY(50%);
             ">
-              {display_topic(topic)}
+              {Site.display_topic(topic as Topic)}
             </div>
           </div>
         </div>

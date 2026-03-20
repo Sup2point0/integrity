@@ -1,3 +1,6 @@
+export type int = number;
+export type url = string;
+
 /** A unique identifier for a question, in a format like `s25f-eg1`. */
 export type Shard = string;
 

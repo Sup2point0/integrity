@@ -99,9 +99,8 @@ class UserPrefsSerializer implements Serializer<UserPrefs>
 }
 
 
-/** User data and preferences. */
-const userprefs = persisted("integrity.prefs", new UserPrefs(), {
+/** All of the user's locally stored questions data and site-wide preferences. */
+export const userprefs = persisted("integrity.prefs", new UserPrefs(), {
   serializer: new UserPrefsSerializer(),
   syncTabs: true,
 });
-export default userprefs;
