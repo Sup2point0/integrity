@@ -67,8 +67,6 @@ export const Site: SiteData = {
 export default Site;
 
 
-
-
 export function get_list_of_all_scriptures(): Page[]
 {
   return Object.values(scriptures).flat();

@@ -2,6 +2,8 @@ export type * from "./root";
 
 export type { Page } from "./page";
 
+export { Topic } from "./topic";
+
 export { Question } from "./question";
 export type * from "./question";
 

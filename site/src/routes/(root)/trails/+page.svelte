@@ -3,6 +3,7 @@
 import katex from "katex";
 
 import Site from "#scripts/site";
+import { display_topic } from "#scripts/utils";
 
 import GraphBar from "./graph-bar.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
@@ -32,13 +33,13 @@ let general: {
 });
 
 let questions: {
-  topics: Record<string, number>,
-  difficulties: Record<string, number>,
-  title_words: Record<number, number>,
-  title_chars: Record<number | string, number>,
+  topics:        Record<string, number>,
+  difficulties:  Record<string, number>,
+  title_words:   Record<number, number>,
+  title_chars:   Record<number | string, number>,
   title_letters: Record<string, number>,
-  tags_counts: Record<number, number>,
-  hints_counts: Record<number, number>,
+  tags_counts:   Record<number, number>,
+  hints_counts:  Record<number, number>,
 } = {
   topics: Object.fromEntries(
     Object.entries(Site.questions).map(
@@ -47,18 +48,18 @@ let questions: {
   ),
   difficulties: { based: 0, incline: 0, manifold: 0, chaos: 0, null: 0 },
   title_words: { 0: 0 },
-  title_chars: {0: 1},
+  title_chars: { 0: 1 },
   title_letters: {},
   tags_counts: {},
   hints_counts: {},
 }
 
 let integrals: {
-  difficulties: Record<string, number>,
-  question_chars: Record<number | string, number>,
+  difficulties:     Record<string, number>,
+  question_chars:   Record<number | string, number>,
   question_letters: Record<string, number>,
-  parts_counts: Record<number, number>,
-  days: Record<string, number>,
+  parts_counts:     Record<number, number>,
+  days:             Record<string, number>,
 } = {
   difficulties: { based: 0, incline: 0, manifold: 0, chaos: 0, null: 0 },
   question_chars: {},
@@ -314,8 +315,12 @@ for (let q of Site.get_questions_of_topic("integrals")) {
           <GraphBar {idx} {freq} frac={(freq ?? 0) / highest} />
 
           <div class="class-label">
-            <div style:transform="translateY(1rem)">
-              {topic}
+            <div style="
+              width: 150%;
+              font-size: 80%;
+              transform: translateX(-16%) translateY(50%);
+            ">
+              {display_topic(topic)}
             </div>
           </div>
         </div>

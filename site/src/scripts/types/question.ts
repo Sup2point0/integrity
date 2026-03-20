@@ -1,4 +1,5 @@
-import type { Shard, Latex, Block } from "./root";
+import { Topic } from "#scripts/types";
+import type { Shard, Latex, Block } from "#scripts/types";
 
 /**
  * Represents a question.
@@ -8,10 +9,10 @@ import type { Shard, Latex, Block } from "./root";
 export class Question
 {
   /** A collection of the question's key information for use in fuzzy searching. */
-  _match: string[];
+  _match: string[] = [];
 
   shard: Shard;
-  topic: string;
+  topic: Topic;
   difficulty: "based" | "incline" | "manifold" | "chaos" | null = null;
 
   title?: string;
@@ -56,12 +57,18 @@ export class Question
   "graph-bounds"?: number;
 
 
+  /**
+   * Construct a new question from the given JSON data.
+   * 
+   * If the question was constructed manually, set `process` to `false` to disable standardised data cleanup.
+  */
   constructor(data: any, process = true)
   {
     Object.assign(this, data);
 
     if (!process) return;
 
+    this.topic = Topic[data.topic?.toUpperCase().replaceAll("-", "_")];
     this.question = data.question && data.question[0];
     this.date_display = data.date.toString();
     try {
@@ -71,14 +78,13 @@ export class Question
     }
     this.answer = Array.isArray(data.answer) ? data.answer[0] : data.answer;
 
-    // @ts-ignore
     this._match = [
       // @ts-ignore
       this.shard.toLowerCase(),
       this.title?.toLowerCase(),
       ...(this.tags ?? []),
       ...(this.methods ?? []),
-    ].filter(Boolean);
+    ].filter(Boolean) as string[];
 
     if (this.topic === "graph-drawing") {
       this.options = data.options[0].content.split("<br><br>").map(
