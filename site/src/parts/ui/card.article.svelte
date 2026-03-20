@@ -36,8 +36,8 @@ const data: Page = page ?? Site.pages[path!];
       {/if}
     </h4>
     
-    {#if data?.capt}
-      <RenderBlock source={data!.capt} />
+    {#if data?.capt || data?.desc}
+      <RenderBlock source={data!.capt ?? data!.desc} />
     {/if}
   </div>
 </a>
