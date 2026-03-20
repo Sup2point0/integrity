@@ -23,5 +23,7 @@ import ArticleArray from "#parts/page/article-array.svelte";
 
 
 <section>
-  <ArticleArray paths={Site.index.general.pages} />
+  <ArticleArray paths={Site.index.general.pages.filter(
+    path => !Site.index.integrals.pages.includes(path)
+  )} />
 </section>
