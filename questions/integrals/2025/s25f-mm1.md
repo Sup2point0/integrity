@@ -5,10 +5,11 @@ desc:
 date: 2025 May 13
 difficulty: manifold
 tags:
-  - definite
   - combinatorics
 methods:
   - fun
+flags:
+  - definite
 ---
 
 

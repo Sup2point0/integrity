@@ -5,10 +5,11 @@ desc:
 date: 2025 May 12
 difficulty: manifold
 tags:
-  - definite
   - trig
 methods:
   - spot
+flags:
+  - definite
 ---
 
 

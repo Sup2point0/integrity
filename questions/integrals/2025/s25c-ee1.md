@@ -5,12 +5,13 @@ desc: I’m quite proud of coming up with this one in a vacuum, even if it is ac
 date: 2025 March 17
 difficulty: chaos
 tags:
-  - definite
   - dread
   - exp
 methods:
   - tough
   - parts
+flags:
+  - definite
 ---
 
 

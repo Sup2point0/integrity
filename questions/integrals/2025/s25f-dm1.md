@@ -5,11 +5,12 @@ desc:
 date: 2025 June 12
 difficulty: incline
 tags:
-  - definite
   - trig
   - arctrig
 methods:
   - spot
+flags:
+  - definite
 ---
 
 

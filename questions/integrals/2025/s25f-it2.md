@@ -5,10 +5,11 @@ desc:
 date: 2025 April 24
 difficulty: incline
 tags:
-  - definite
   - arctrig
 methods:
   - speed
+flags:
+  - definite
 ---
 
 

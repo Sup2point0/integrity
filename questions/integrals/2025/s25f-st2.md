@@ -5,8 +5,6 @@ desc:
 date: 2025 June 6
 difficulty: manifold
 tags:
-  - definite
-  - improper
   - elite
   - horror
   - pi
@@ -14,6 +12,7 @@ methods:
   - spot
   - acc
 flags:
+  - definite
   - guide
 ---
 

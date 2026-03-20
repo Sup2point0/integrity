@@ -5,12 +5,12 @@ desc:
 date: 2025 April 17
 difficulty: incline
 tags:
-  - definite
-  - improper
   - poly
   - ln
 methods:
   - spot
+flags:
+  - definite
 ---
 
 

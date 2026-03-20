@@ -5,12 +5,12 @@ desc:
 date: 2025 April 20
 difficulty: incline
 tags:
-  - definite
-  - improper
   - sqrt
   - ln
 methods:
   - fun
+flags:
+  - definite
 ---
 
 

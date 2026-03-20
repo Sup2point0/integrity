@@ -5,10 +5,11 @@ desc:  when doing the thing you love destroys your very ability to do that thing
 date:  2025 June 14
 difficulty: incline
 tags:
-  - definite
-  - inverse trig
+  - arctrig
 methods:
   - work
+flags:
+  - definite
 ---
 
 

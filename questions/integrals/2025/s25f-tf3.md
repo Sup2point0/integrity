@@ -5,7 +5,6 @@ desc:  Halfway through the decade. Crikey.
 date:  2025 December 31
 difficulty: manifold
 tags:
-  - definite
   - dread
 methods:
   - tough
@@ -13,6 +12,7 @@ methods:
   - fun
 flags:
   - feat
+  - definite
 ---
 
 

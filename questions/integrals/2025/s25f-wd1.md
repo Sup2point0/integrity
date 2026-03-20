@@ -5,11 +5,11 @@ desc:
 date: 2025 June 11
 difficulty: based
 tags:
-  - definite
-  - improper
   - poly
 methods:
   - speed
+flags:
+  - definite
 ---
 
 

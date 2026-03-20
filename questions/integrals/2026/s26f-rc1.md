@@ -5,10 +5,11 @@ desc:
 date:  2026 March 18
 difficulty: incline
 tags:
-  - definite
   - wack
 methods:
   - fun
+flags:
+  - definite
 ---
 
 

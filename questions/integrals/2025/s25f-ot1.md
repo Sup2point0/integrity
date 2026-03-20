@@ -5,11 +5,12 @@ desc:
 date: 2025 June 1
 difficulty: incline
 tags:
-  - definite
   - poly
   - pi
 methods:
   - spot
+flags:
+  - definite
 ---
 
 

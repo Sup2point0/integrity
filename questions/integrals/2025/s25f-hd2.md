@@ -5,11 +5,12 @@ desc:
 date: 2025 March 9
 difficulty: incline
 tags:
-  - definite
   - poly
   - series
 methods:
   - spot
+flags:
+  - definite
 ---
 
 

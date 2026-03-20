@@ -5,12 +5,13 @@ desc:
 date: 2024 October
 difficulty: incline
 tags:
-  - definite
   - sqrt
   - trig
 methods:
   - troll
   - spot
+flags:
+  - definite
 ---
 
 

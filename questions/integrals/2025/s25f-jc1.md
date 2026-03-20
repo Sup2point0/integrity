@@ -5,11 +5,12 @@ desc:
 date: 2025 February 2
 difficulty: incline
 tags:
-  - definite
   - sqrt
 methods:
   - spot
   - draw
+flags:
+  - definite
 ---
 
 

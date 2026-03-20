@@ -5,14 +5,14 @@ desc:
 date: 2025 May 25
 difficulty: manifold
 tags:
-  - definite
-  - improper
   - dread
   - arctrig
 methods:
   - tough
   - fun
   - spot
+flags:
+  - definite
 ---
 
 

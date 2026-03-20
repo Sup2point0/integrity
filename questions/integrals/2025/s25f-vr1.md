@@ -5,10 +5,12 @@ desc:
 date: 2025 March 24
 difficulty: manifold
 tags:
-  - definite
   - horror
+  - ln
 methods:
   - sub
+flags:
+  - definite
 ---
 
 

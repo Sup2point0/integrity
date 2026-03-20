@@ -5,12 +5,12 @@ desc:
 date: 2025 May 24
 difficulty: manifold
 tags:
-  - definite
-  - improper
   - sqrt
   - exp
 methods:
   - 
+flags:
+  - definite
 ---
 
 
