@@ -5,7 +5,7 @@
 | head = <em>decoded</em>: Integrity
 | capt = Learnings, challenges and discoveries from developing a long-term large-scale site and writing my own maths questions
 | index = info
-| date = 2025 August 25
+| date = 2026 March 20
 -->
 
 > [!Note]
@@ -41,7 +41,7 @@
   - I settled on writing each question in its Markdown file, using YAML frontmatter for metadata and then writing a small parsing engine in Ruby to extract the text blocks.
   - Organising by files is pretty nice, since it makes finding a particular question and tracking its version history much easier.
   - I decided against using Squarkdown to export to `.svx` files, since questions needed more fine-tuned formatting and different treatment depending on their topic.
-- Writing LaTeX manually is *long*. Luckily, we can type mathematical expressions in Desmos and `ctrl`+`C``V`, which directly copies the raw LaTeX!
+- Writing LaTeX manually is *long*. Luckily, we can type mathematical expressions in Desmos and `ctrl`+`C` `V`, which directly copies the raw LaTeX!
   - In fact, you don’t even need to `ctrl`+`A` to select the whole row in Desmos, `ctrl`+`C` while you have nothing selected automatically copies the entire block!
 
 
