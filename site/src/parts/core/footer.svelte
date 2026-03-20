@@ -2,9 +2,7 @@
 
 <script lang="ts">
 
-import { duality } from "#scripts/stores";
-
-import { Duality } from "#scripts/types";
+import { duality, Duality } from "#scripts/stores";
 
 import Link from "#parts/ui/link.svelte";
 

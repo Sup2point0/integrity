@@ -2,10 +2,8 @@
 
 <script lang="ts">
 
-import { duality, userprefs } from "#scripts/stores";
-
+import { userprefs, duality, Duality } from "#scripts/stores";
 import { pick_random_question, pick_random_scripture } from "#scripts/utils";
-import { Duality } from "#scripts/types";
 
 import NavLink from "#parts/core/nav.link.svelte";
 import Clicky from "#parts/ui/clicky.svelte";

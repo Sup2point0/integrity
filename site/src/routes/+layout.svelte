@@ -6,8 +6,7 @@ import "#styles/essence.scss";
 import "#styles/article.scss";
 import "#styles/a11y.scss";
 
-import { duality, userprefs } from "#scripts/stores";
-import { Duality } from "#scripts/stores/duality";
+import { userprefs, duality, Duality } from "#scripts/stores";
 
 import { page } from "$app/state";
 import { fade } from "svelte/transition";
