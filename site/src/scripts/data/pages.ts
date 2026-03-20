@@ -7,8 +7,9 @@ export const index = pages_data.index;
 export const scriptures = find_scriptures(pages);
 
 
-interface SiteScriptures {
-  [topic: string]: Page[]
+interface SiteScriptures
+{
+  [topic: string]: Page[];
 }
 
 

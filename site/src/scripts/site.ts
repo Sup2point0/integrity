@@ -1,13 +1,14 @@
-export { scriptures } from "#src/scripts/data/pages";
+export { scriptures } from "#scripts/data/pages";
 export { dyna_scriptures } from "#scripts/data/dyna-scriptures";
 
 import { questions } from "#scripts/data/questions";
-import { pages, index } from "#src/scripts/data/pages";
-import { scriptures } from "#src/scripts/data/pages";
+import { pages, index } from "#scripts/data/pages";
+import { scriptures } from "#scripts/data/pages";
 import type { Question, QuestionsData, Topic, Page } from "#scripts/types";
 
 
-interface SiteData {
+interface SiteData
+{
   /** The base URL of the site. */
   root: string;
 
@@ -26,12 +27,14 @@ interface SiteData {
   get_all_methods: () => string[];
 }
 
-export const Site: SiteData = {
-  root: "https://sup2point0.github.io/integrity/",
+export const Site: SiteData =
+{
+  root: "https://sup2point0.github.io/integrity",
 
   pages,
   index,
   questions,
+  scriptures,
 
   get_questions_of_topic: (topic) => {
     return Object.values(Site.questions[topic]?.questions ?? {});
@@ -66,6 +69,11 @@ export const Site: SiteData = {
 
 export default Site;
 
+
+export function get_scriptures_of_topic(topic: Topic): Page[]
+{
+  return scriptures[topic] ?? [];
+}
 
 export function get_list_of_all_scriptures(): Page[]
 {

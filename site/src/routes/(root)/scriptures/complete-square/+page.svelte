@@ -1,6 +1,7 @@
 <script lang="ts">
 
-import Site from "#scripts/site";
+import { get_scriptures_of_topic } from "#scripts/site";
+import { Topic } from "#scripts/types";
 
 import Card from "#parts/ui/card.svelte";
 
@@ -23,7 +24,7 @@ import Header from "#parts/core/header.svelte";
 
 
 <div class="browse">
-  {#each Site.scriptures["complete-square"] as page}
+  {#each get_scriptures_of_topic(Topic.COMPLETE_SQUARE) as page}
     <Card title={page.head}
       capt={page.desc}
       intern={page.dest}

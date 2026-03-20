@@ -1,5 +1,5 @@
-import { Topic } from "#scripts/types";
-import type { Shard, Latex, Block } from "#scripts/types";
+import { Topic } from "./topic";
+import type { Shard, Latex, Block } from "./root";
 
 /**
  * Represents a question.
@@ -68,7 +68,10 @@ export class Question
 
     if (!process) return;
 
-    this.topic = Topic[data.topic?.toUpperCase().replaceAll("-", "_")];
+    if (data.topic) {
+      /* @ts-ignore */
+      this.topic = Topic[data.topic.toUpperCase().replaceAll("-", "_")];
+    }
     this.question = data.question && data.question[0];
     this.date_display = data.date.toString();
     try {
