@@ -1,6 +1,7 @@
 # About Questions on Integrity
 <!-- #SQUARK live!
 | dest = docs/questions
+| desc = How are the questions on Integrity intended to work?
 | index = docs
 | date = 2025 May 20
 | clean = line-breaks

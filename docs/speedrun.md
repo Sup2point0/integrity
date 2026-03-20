@@ -1,6 +1,7 @@
 # Speedrun
 <!-- #SQUARK live! devy!
 | dest = docs/speedrun
+| desc = A focused environment for speedrunning through questions on Integrity
 | index = docs
 | date = 2025 January 14
 | update = 2025 July 2

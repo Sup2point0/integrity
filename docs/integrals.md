@@ -1,6 +1,7 @@
 # Integrals
 <!-- #SQUARK live! dev!
 | dest = docs/integrals
+| desc = All about integrals on Integrity, its life and soul
 | index = docs
 | date = 2025 June 21
 | update = 2025 September 18

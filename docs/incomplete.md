@@ -1,7 +1,8 @@
 # Why the Scriptures are so incomplete
 <!-- #SQUARK live!
-| dest = scriptures/general/incomplete
-| index = scriptures / general
+| dest = docs/incomplete
+| desc = Life is busy ;-;
+| index = docs
 | date = 2026 January 1
 -->
 
