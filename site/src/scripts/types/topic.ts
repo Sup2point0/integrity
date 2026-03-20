@@ -6,5 +6,6 @@ export enum Topic
   GUESS_GRAPH     = "guess-graph",
   COOL_GRAPHS     = "cool-graphs",
   ADDVENT         = "addvent",
+  DERIVATIVES     = "derivatives",
   SPECIAL         = "special",
 }

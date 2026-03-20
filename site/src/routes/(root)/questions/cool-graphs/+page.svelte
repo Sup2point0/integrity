@@ -2,6 +2,7 @@
 
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
+import { Topic } from "#scripts/types";
 
 import DesmosAPI from "#parts/desmos-api.svelte";
 import QuestionCard from "#parts/ui/card.question.svelte";
@@ -15,9 +16,9 @@ import SearchFooter from "#parts/page/search-footer.svelte";
 import { onMount } from "svelte";
 
 
-const questions = Site.get_questions_of_topic("cool-graphs");
-const tags = Site.questions["cool-graphs"].tags;
-const methods = Site.questions["cool-graphs"].methods;
+const questions = Site.get_questions_of_topic(Topic.COOL_GRAPHS);
+const tags      = Site.questions[Topic.COOL_GRAPHS].tags;
+const methods   = Site.questions[Topic.COOL_GRAPHS].methods;
 
 let filtered = $derived($search.filter_questions(questions));
 

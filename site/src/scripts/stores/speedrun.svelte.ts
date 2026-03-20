@@ -1,14 +1,10 @@
 import { persisted, type Serializer } from "svelte-persisted-store";
 
+import Site from "#scripts/site";
+import type { Question, Topic, Shard, States, InternalError } from "#scripts/types";
+
 import { SvelteSet as Set } from "svelte/reactivity";
 import { goto } from "$app/navigation";
-
-import Site from "#scripts/site";
-
-import type { Shard, Question, States, InternalError } from "#scripts/types";
-
-
-type Topic = "integrals" | "derivatives" | "graph-drawing";
 
 
 /** Speedrun configurations. Data for the current run is stored in `.run` attribute. */

@@ -6,6 +6,7 @@ import en from "javascript-time-ago/locale/en";
 import Site from "#src/scripts/site";
 import { userprefs } from "#scripts/stores";
 import * as utils from "#scripts/utils";
+import { Topic } from "#scripts/types";
 
 import Clicky from "#src/parts/ui/clicky.svelte";
 import Checkbox from "#parts/ui/checkbox.svelte";
@@ -20,7 +21,7 @@ let checking = $state(false);
 let checks = $state(0);
 
 const total_questions = Site.get_list_of_all_questions().length;
-const total_integrals = Site.get_questions_of_topic("integrals").length;
+const total_integrals = Site.get_questions_of_topic(Topic.INTEGRALS).length;
 
 let seen_integrals = $derived(
   [...$userprefs.seen].filter(q => q.startsWith("s")).length);

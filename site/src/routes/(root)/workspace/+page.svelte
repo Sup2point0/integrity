@@ -4,7 +4,7 @@ import { presets, inject_question } from "./presets";
 
 import Site from "#scripts/site";
 import { userprefs } from "#scripts/stores";
-import { Question, type Shard } from "#scripts/types";
+import { Question, Topic, type Shard } from "#scripts/types";
 
 import DesmosAPI from "#parts/desmos-api.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
@@ -147,8 +147,8 @@ function apply_question(shard: Shard | null) {
     <small> PRESET </small>
     <Select bind:value={$userprefs["desmos-preset"]} options={{
       "Default": null,
-      "Integral": "integrals",
-      "Completing the Square": "complete-square"
+      "Integral": Topic.INTEGRALS,
+      "Completing the Square": Topic.COMPLETE_SQUARE,
     }} />
   </section>
 

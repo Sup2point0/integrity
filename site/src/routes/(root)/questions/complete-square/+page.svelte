@@ -2,6 +2,7 @@
 
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
+import { Topic } from "#scripts/types";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
@@ -14,9 +15,9 @@ import SearchFooter from "#parts/page/search-footer.svelte";
 import { onMount } from "svelte";
 
 
-const questions = Site.get_questions_of_topic("complete-square");
-const tags = Site.questions["complete-square"].tags;
-const methods = Site.questions["complete-square"].methods;
+const questions = Site.get_questions_of_topic(Topic.COMPLETE_SQUARE);
+const tags = Site.questions[Topic.COMPLETE_SQUARE].tags;
+const methods = Site.questions[Topic.COMPLETE_SQUARE].methods;
 
 let filtered = $derived($search.filter_questions(questions));
 

@@ -13,7 +13,7 @@ export function display_topic(topic: Topic | null | undefined): string
     case Topic.COOL_GRAPHS:     return "Cool Graphs";
     case Topic.ADDVENT:         return "Addvent";
     case Topic.SPECIAL:         return "Special";
-    case "derivatives":         return "Derivatives";
+    case Topic.DERIVATIVES:     return "Derivatives";
     default:                    return "Unknown Topic";
   }
 }

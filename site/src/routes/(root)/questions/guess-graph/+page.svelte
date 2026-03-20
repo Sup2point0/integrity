@@ -2,6 +2,7 @@
 
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
+import { Topic } from "#scripts/types";
 
 import DesmosAPI from "#parts/desmos-api.svelte";
 import QuestionCard from "#parts/ui/card.question.svelte";
@@ -15,9 +16,9 @@ import Search from "#parts/page/search.svelte";
 import { onMount } from "svelte";
 
 
-const questions = Site.get_questions_of_topic("guess-graph");
-const tags = Site.questions["guess-graph"].tags;
-const methods = Site.questions["guess-graph"].methods;
+const questions = Site.get_questions_of_topic(Topic.GUESS_GRAPH);
+const tags      = Site.questions[Topic.GUESS_GRAPH].tags;
+const methods   = Site.questions[Topic.GUESS_GRAPH].methods;
 
 let filtered = $derived($search.filter_questions(questions));
 

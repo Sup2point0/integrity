@@ -4,6 +4,7 @@ import katex from "katex";
 
 import Site from "#scripts/site";
 import { display_topic } from "#scripts/utils";
+import { Topic } from "#scripts/types";
 
 import GraphBar from "./graph-bar.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
@@ -149,7 +150,7 @@ for (let q of Site.get_list_of_all_questions()) {
   }
 }
 
-for (let q of Site.get_questions_of_topic("integrals")) {
+for (let q of Site.get_questions_of_topic(Topic.INTEGRALS)) {
   if (q.difficulty) {
     integrals.difficulties[q.difficulty]++;
   } else if (q.difficulty === null || q.difficulty === undefined) {

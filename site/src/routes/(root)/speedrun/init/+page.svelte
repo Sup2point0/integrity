@@ -2,6 +2,7 @@
 
 import Site from "#scripts/site";
 import { speedrun } from "#src/scripts/stores";
+import { Topic } from "#scripts/types";
 import type { InternalError } from "#scripts/types";
 
 import Toggle from "#parts/ui/toggle.svelte";
@@ -63,9 +64,9 @@ onMount(() => {
       </th>
       <td>
         <SelectDropdown bind:value={$speedrun.topic} options={{
-          "Differentiation": "derivatives",
-          "Integrals": "integrals",
-          "Graph Drawing": "graph-drawing",
+          "Differentiation": Topic.DERIVATIVES,
+          "Integrals":       Topic.INTEGRALS,
+          "Graph Drawing":   Topic.GRAPH_DRAWING,
         }} />
       </td>
     </tr>

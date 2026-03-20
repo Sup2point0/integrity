@@ -2,6 +2,7 @@
 
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
+import { Topic } from "#scripts/types";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
@@ -14,9 +15,9 @@ import SearchFooter from "#parts/page/search-footer.svelte";
 import { onMount } from "svelte";
 
 
-const questions = Site.get_questions_of_topic("graph-drawing");
-const tags = Site.questions["graph-drawing"].tags;
-const methods = Site.questions["graph-drawing"].methods;
+const questions = Site.get_questions_of_topic(Topic.GRAPH_DRAWING);
+const tags = Site.questions[Topic.GRAPH_DRAWING].tags;
+const methods = Site.questions[Topic.GRAPH_DRAWING].methods;
 
 let filtered = $derived($search.filter_questions(questions));
 

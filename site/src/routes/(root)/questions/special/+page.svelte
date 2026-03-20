@@ -3,7 +3,7 @@
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 import { sync } from "#scripts/utils/sync";
-
+import { Topic } from "#scripts/types";
 
 import Header         from "#parts/core/header.svelte";
 import Meta           from "#parts/page/meta.svelte";
@@ -19,8 +19,8 @@ import site from "#scripts/utils/site";
 import { onMount } from "svelte";
 
 
-const questions = Site.get_questions_of_topic("special");
-const tags = Site.questions["special"].tags;
+const questions = Site.get_questions_of_topic(Topic.SPECIAL);
+const tags = Site.questions[Topic.SPECIAL].tags;
 
 let filtered = $derived($search.filter_questions(questions));
 

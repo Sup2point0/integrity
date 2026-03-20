@@ -2,6 +2,7 @@
 
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
+import { Topic } from "#scripts/types";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
@@ -16,9 +17,9 @@ import { onMount } from "svelte";
     import SearchFooter from "#src/parts/page/search-footer.svelte";
 
 
-const questions = Site.get_questions_of_topic("integrals");
-const tags = Site.questions["integrals"].tags;
-const methods = Site.questions["integrals"].methods;
+const questions = Site.get_questions_of_topic(Topic.INTEGRALS);
+const tags      = Site.questions[Topic.INTEGRALS].tags;
+const methods   = Site.questions[Topic.INTEGRALS].methods;
 
 let limit = $state(60);
 let filtered = $derived($search.filter_questions(questions).slice(0, limit));

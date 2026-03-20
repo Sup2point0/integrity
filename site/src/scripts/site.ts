@@ -4,7 +4,7 @@ export { dyna_scriptures } from "#scripts/data/dyna-scriptures";
 import { questions } from "#scripts/data/questions";
 import { pages, index } from "#src/scripts/data/pages";
 import { scriptures } from "#src/scripts/data/pages";
-import type { Question, QuestionsData, Page } from "#scripts/types";
+import type { Question, QuestionsData, Topic, Page } from "#scripts/types";
 
 
 interface SiteData {
@@ -18,7 +18,7 @@ interface SiteData {
   }>;
   questions: QuestionsData;
 
-  get_questions_of_topic: (topic: string) => Question[];
+  get_questions_of_topic: (topic: Topic) => Question[];
   get_list_of_all_questions: () => Question[];
   get_map_of_all_questions: () => Record<string, Question>;
   get_featured_questions: () => Question[];

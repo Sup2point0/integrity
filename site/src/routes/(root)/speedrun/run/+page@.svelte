@@ -5,6 +5,7 @@ import sample from "@stdlib/random-sample";
 import Site from "#scripts/site";
 import { speedrun } from "#scripts/stores";
 import { display_time } from "#scripts/utils";
+import { Topic } from "#scripts/types";
 import type { InternalError } from "#scripts/types";
 
 import RunNav from "./nav.run.svelte";
@@ -109,13 +110,10 @@ function create_question_pool()
               
               <div class="question">
                 {#if question.topic === "derivatives"}
-                  <Katex text="{
-                    String.raw`\frac{d}{dx} \ `}{
-                    question.question as string
-                  }" />
-                {:else if question.topic === "integrals"}
+                  <Katex text="{String.raw`\frac{d}{dx} \ `}{question.question as string}" />
+                {:else if question.topic === Topic.INTEGRALS}
                   <Katex text={question.question?.content} />
-                {:else if question.topic === "graph-drawing"}
+                {:else if question.topic === Topic.GRAPH_DRAWING}
                   <Katex text={question.question?.content} />
                 {:else}
                   <Katex text={typeof question.question === "string" ? question.question : question.question?.content} />
