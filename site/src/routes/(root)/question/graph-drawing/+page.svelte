@@ -3,10 +3,9 @@
 import { page_data } from "../page-data.svelte.ts";
 import { Question } from "#scripts/types";
 
-import DesmosAPI from "#parts/desmos-api.svelte";
-
 import Katex from "#parts/katex.svelte";
 import Desmos from "#parts/desmos.svelte";
+import DesmosAPI from "#parts/desmos-api.svelte";
 import Tag from "#parts/ui/tag.svelte";
 import CopyClicky from "#parts/page/copy-clicky.svelte";
 

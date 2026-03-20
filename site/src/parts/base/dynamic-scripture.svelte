@@ -76,9 +76,7 @@ $effect(() => {
       }
     }
 
-    if (article_viewport) {
-      article_viewport.scrollTo({ top: article_viewport.scrollHeight, behavior: "smooth" });
-    }
+    article_viewport?.scrollTo({ top: article_viewport.scrollHeight, behavior: "smooth" });
   });
 });
 

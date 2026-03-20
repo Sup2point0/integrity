@@ -102,15 +102,15 @@ export class Question
 
     // standardise brackets
     out = out.replaceAll(
-      /\\(sin|cos|tan|sec|cot|csc)\^([\d])[\(\{]([a-z])[\)\}]/g,
+      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)\^([\d])[\(\{]([a-z])[\)\}]/g,
       "\\$1\\left($3\\right)^$2"
     );
     out = out.replaceAll(
-      /\\(sin|cos|tan|sec|cot|csc)[\(\{]([a-z])[\)\}]/g,
+      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)[\(\{]([a-z])[\)\}]/g,
       "\\$1\\left($2\\right)"
     );
     out = out.replaceAll(
-      /\\(sin|cos|tan|sec|cot|csc) x([\\\+])/g,
+      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth) x([\\\+])/g,
       "\\$1\\left(x\\right)$2"
     );
 

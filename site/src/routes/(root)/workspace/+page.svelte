@@ -6,6 +6,7 @@ import Site from "#scripts/site";
 import { userprefs } from "#scripts/stores";
 import { Question, type Shard } from "#scripts/types";
 
+import DesmosAPI from "#parts/desmos-api.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
 import Select from "#parts/ui/select-dropdown.svelte";
 import SelectSearch from "#parts/ui/select-search.svelte";
@@ -19,11 +20,17 @@ import { page } from "$app/state";
 import { base } from "$app/paths";
 
 
-const questions = Site.get_list_of_all_questions();
 const questions_map = Site.get_map_of_all_questions();
 
-/** The current input of the question selector, is a question shard. */
-let selected_question: string | null = $state(null);
+/** The currently available questions in the question selector. */
+let questions = $derived(
+  $userprefs["desmos-preset"]
+  ? Site.get_questions_of_topic($userprefs["desmos-preset"])
+  : Site.get_list_of_all_questions()
+);
+
+/** The current input of the question selector. */
+let selected_question: Shard | null = $state(null);
 
 let desmos: any | false | null = $state(null);
 let last_reset: number = Date.now();
@@ -113,7 +120,9 @@ function apply_question(shard: Shard | null) {
   if (!question) return;
 
   desmos.setBlank();
-  apply_preset(question.topic);
+  
+  /* NOTE: Definite integrals have a different checker preset */
+  apply_preset(question.flags.includes("definite") ? "integral-definite" : question.topic);
   inject_question(desmos, question);
 }
 
@@ -122,9 +131,8 @@ function apply_question(shard: Shard | null) {
 
 <Meta title="Workspace"
   desc="An in-built Desmos calculator with presets to check solutions to integrals and other problems on Integrity"
->
-  <script src="https://www.desmos.com/api/v1.10/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-</Meta>
+/>
+<DesmosAPI />
 
 
 <Breadcrumbs levels={[

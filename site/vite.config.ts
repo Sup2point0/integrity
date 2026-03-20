@@ -12,5 +12,6 @@ export default defineConfig({
     fs: {
       allow: [".."],
     },
+    open: process.env.BROWSER = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
   },
 });
