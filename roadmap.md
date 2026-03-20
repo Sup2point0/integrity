@@ -3,7 +3,7 @@
 | dest = info/roadmap
 | capt = Development of *Integrity*
 | index = info
-| update = 2025 September 15
+| update = 2026 March 20
 -->
 
 
@@ -11,8 +11,7 @@
 
 I’m finding a fix!
 
-- Desmos blocks in pages are not rendered
-- (Topic -> displayed text) map
+- Desmos blocks in article pages are not rendered
 - Navigating backwards in dynamic scripture can clear Desmos window. This is unideal, since it should instead revert to the newest window up until that step.
 - Dynamic scriptures with many steps can overflow scroll
 
@@ -36,5 +35,7 @@ I’m working on it!
 
 I will be working on it!
 
+- Add `?section=` URL param for question pages, so that you can link to a question with a section (e.g. solution) already expanded for directing people's attention.
+- RegEx replacement utility in Workspace
 - Index/contents for Desmos library
 - Gradient Descent in Desmos dynamic scriptures
