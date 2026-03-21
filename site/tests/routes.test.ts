@@ -75,4 +75,13 @@ test("crawl-routes", async () =>
       console.info(`>> ${WORKER} Finished scanning.`);
     })()
   ));
+
+  if (failed_routes.length > 0) {
+    console.error(
+      `\n---------------------------------------------------------------------`,
+      `\n!! Failed to access routes:`,
+      `\n\n    `,
+      failed_routes.join("\n    ")
+    );
+  }
 });

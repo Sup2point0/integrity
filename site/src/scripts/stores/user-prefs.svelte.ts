@@ -59,7 +59,6 @@ export class UserPrefs
   /** Load attributes from `localStorage` JSON. */
   set_from_json(data: Partial<UserPrefs>): UserPrefs
   {
-    // FIXME surely we can come up with a better way...
     this.saved   = data.saved ?? this.saved;
     this.visits  = data.visits ?? this.visits;
     this.seen    = new Set(data.seen ?? this.seen);
