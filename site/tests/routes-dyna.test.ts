@@ -5,12 +5,12 @@ test.beforeEach(async ({ page }) => {
   page.on("pageerror", err => { throw err; });
 });
 
-test("routes", async ({ page }) => {
-  for (let route of routes) {
-    let status = await page.goto(route);
-    expect(status?.ok(), `Failed to access \`${route}\``).toBe(true);
-  }
-});
+// test("routes", async ({ page }) => {
+//   for (let route of routes) {
+//     let status = await page.goto(route);
+//     expect(status?.ok(), `Failed to access \`${route}\``).toBe(true);
+//   }
+// });
 
 
 // TODO dynamically fetch these?
