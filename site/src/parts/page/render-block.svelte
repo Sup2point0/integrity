@@ -54,7 +54,7 @@ const plugins = [
               content: line,
             }))
         }
-        height="70vh"
+        height="69vh"
       />
     </div>
 

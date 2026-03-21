@@ -6,6 +6,7 @@ The main displayed content for a static article page.
 <script lang="ts">
 
 import Header        from "#parts/core/header.svelte";
+import InjectDesmos  from "#parts/core/inject-desmos.svelte";
 import Meta          from "#parts/page/meta.svelte";
 import Breadcrumbs   from "#parts/page/breadcrumbs.svelte";
 import ArticleFooter from "#parts/page/footer.article.svelte";
@@ -41,7 +42,7 @@ let { content, metadata: data } = $derived(page.data);
 <Header page={data} />
 
 <article {id}>
-  {@render content?.()}
+  <InjectDesmos {content} />
 
   <ArticleFooter page={data} />
 </article>

@@ -19,7 +19,7 @@ export async function load({ url, params })
 
   let page = Site.pages[path as string];
   if (page === undefined) {
-    console.log(`!! CRITICAL: No page found for ${path}`);
+    console.error(`!! CRITICAL: No page found for ${path}`);
     error(404, { message: `No page found for ${path}!` });
   }
   

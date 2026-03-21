@@ -7,7 +7,8 @@ export async function load({ params })
   
   try {
     data = await import(`../${params.page}/~content.svx`);
-  } catch {
+  } catch (e) {
+    console.error(e.frame ?? e);
     error(404, { message: `Couldn’t find the page you’re looking for =(` });
   }
   

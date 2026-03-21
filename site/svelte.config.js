@@ -1,6 +1,5 @@
 import adapter from "@sveltejs/adapter-static";
 import { sveltePreprocess } from "svelte-preprocess";
-
 import { mdsvex } from "mdsvex";
 
 import mdsvex_config from "./config/mdsvex-config.js";

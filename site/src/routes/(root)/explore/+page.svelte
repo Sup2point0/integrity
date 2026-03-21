@@ -67,6 +67,7 @@ import { goto } from "$app/navigation";
       <Link text="Tags" intern="docs/tags" />
       <Link text="Speedrun" intern="docs/speedrun" />
       <Link text="Fun Facts" intern="docs/fun-facts" />
+      <Link text="Why the Scriptures are so incomplete" intern="docs/incomplete" hot={true} />
     </div>
   </section>
 

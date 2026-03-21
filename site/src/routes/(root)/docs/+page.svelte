@@ -21,7 +21,7 @@ import ArticleCard from "#parts/ui/card.article.svelte";
   { text: "Docs" },
 ]} />
 
-<Header title="Docs" />
+<Header title="Docs" capt="How Does *Integrity* Work?" />
 
 
 <ArticleArray paths={Site.index.docs.pages}>

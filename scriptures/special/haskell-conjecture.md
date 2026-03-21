@@ -93,6 +93,7 @@ Here’s what a quick-and-dirty function for computing Fibonacci numbers could l
 fib :: Int -> Int
 fib n
   | n == 0    = 0
+  | n == 1    = 1
   | otherwise = fib (n-1) + fib (n-2)
 ```
 
@@ -101,6 +102,7 @@ Or even more literally (this uses a technique called “pattern matching”):
 ```hs
 fib :: Int -> Int
 fib 0 = 0
+fib 1 = 1
 fib n = fib (n-1) + fib (n-2)
 ```
 
@@ -108,7 +110,8 @@ And guess what, the definition in Desmos is basically identical!
 
 ```desmos
 f\left( 0 \right) = 0
-f\left( n \right) = f \left( n-1 \right) + f \left( n-2 \right)
+f\left( 1 \right) = 1
+f\left( n \right) = f\left( n-1 \right) + f\left( n-2 \right)
 ```
 
 I think what you’ll find is that Haskell is essentially maths, but as a programming language. If you enjoy maths, there’s a good chance you’ll enjoy Haskell, and vice versa.
