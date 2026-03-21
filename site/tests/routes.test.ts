@@ -21,7 +21,7 @@ test("crawl-routes", async () =>
 
   let active_workers = 0;
 
-  await Promise.all(Array.from({ length: 6 }, (_, i) =>
+  await Promise.all(Array.from({ length: 4 }, (_, i) =>
     (async () => {
       await new Promise(r => setTimeout(r, i * 500));
       active_workers++;
@@ -80,7 +80,7 @@ test("crawl-routes", async () =>
     console.error(
       `\n---------------------------------------------------------------------`,
       `\n!! Failed to access routes:`,
-      `\n\n    `,
+      `\n\n   `,
       failed_routes.join("\n    ")
     );
   }
