@@ -275,7 +275,7 @@ import { goto } from "$app/navigation";
         {#each Object.values(pages) as page}
           <Link
             text={page.title}
-            intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+            intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase().replace(" ", "-")}"
           />
         {/each}
       </div>
