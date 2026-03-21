@@ -24,7 +24,11 @@ import ArticleCard from "#parts/ui/card.article.svelte";
 <Header title="Docs" capt="How Does *Integrity* Work?" />
 
 
-<ArticleArray paths={Site.index.docs.pages}>
+<ArticleArray
+  paths={Site.index.docs.pages.filter(
+    path => !Site.index["integrating-integrity"].pages.includes(path)
+  )}
+>
   <ArticleCard page={{
     dest: "docs/tags", head: "Tags", capt: "Descriptor tags for questions",
   }} />

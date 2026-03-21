@@ -14,6 +14,8 @@
 
 Desmos embeds have (finally!) arrived to all pages on *Integrity*!
 
+btw, if you’re interested in some of the engineering behind *Integrity*, I’ve started delving into it in [Integrating Integrity](https://sup2point0.github.io/integrity/docs/integrity) =)
+
 
 ## 20 March
 

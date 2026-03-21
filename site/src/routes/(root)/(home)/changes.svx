@@ -1,4 +1,4 @@
-***March 21*** Desmos embeds have (finally!) arrived to all pages on *Integrity*!
+***March 21*** Desmos embeds have (finally!) arrived to all pages on *Integrity*! btw, if you’re interested in some of the engineering behind *Integrity*, I’ve started delving into it in [Integrating Integrity](https://sup2point0.github.io/integrity/docs/integrity) =)
 
 ***March 20*** [Workspace](https://sup2point0.github.io/integrity/workspace) has received some long overdue polishing, and now correctly loads definite integrals.
 

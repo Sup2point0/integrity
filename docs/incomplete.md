@@ -1,9 +1,10 @@
 # Why the Scriptures are so incomplete
 <!-- #SQUARK live!
-| dest = docs/incomplete
+| dest = docs/integrity/incomplete
 | desc = Life is busy ;-;
-| index = docs
+| index = docs / integrating-integrity
 | date = 2026 January 1
+| update = 2026 March 21
 -->
 
 It’s coming up to a year since I started writing scriptures on *Integrity*, and you might notice there still aren’t many.

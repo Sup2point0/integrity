@@ -27,7 +27,7 @@ import { goto } from "$app/navigation";
 ]} />
 
 
-<Header title="Explore" capt="Integrity" />
+<Header title="Explore" capt="What will you learn today?" />
 
 <div class="content">
   <section>
@@ -67,7 +67,6 @@ import { goto } from "$app/navigation";
       <Link text="Tags" intern="docs/tags" />
       <Link text="Speedrun" intern="docs/speedrun" />
       <Link text="Fun Facts" intern="docs/fun-facts" />
-      <Link text="Why the Scriptures are so incomplete" intern="docs/incomplete" hot={true} />
     </div>
   </section>
 
@@ -78,6 +77,14 @@ import { goto } from "$app/navigation";
       <Link text="UNSW Integration Bee" intern="fun/unsw-ib" />
       <Link text="0–100 Year Challenge" intern="fun/year" />
       <Link text="Maths on YouTube" intern="fun/youtube" hot={true} />
+    </div>
+  </section>
+
+  <section>
+    <h3> Integrating <em>Integrity</em> </h3>
+    <div class="links">
+      <Link text="Why the Scriptures are so incomplete" intern="docs/integrity/incomplete" />
+      <Link text="Integrity has 2 Markdown renderers" intern="docs/integrity/markdown" />
     </div>
   </section>
 
