@@ -31,6 +31,7 @@ let {
 }: Props = $props();
 
 
+// @svelte-ignore state_referenced_locally
 let config = {
   expressions: controls, expressionsCollapsed: true,
   graphPaper: false, showGrid: controls,
@@ -43,7 +44,10 @@ let config = {
 Object.assign(config, options);
 
 
+/** The Desmos calculator instance. */
 let desmos: any | false | null = $state(null);
+
+/** Have we successfully loaded the Desmos embed? */
 let live = $state(false);
 let self: HTMLElement;
 
@@ -51,13 +55,22 @@ const cols = col_picker();
 
 
 onMount(() => {
-  new IntersectionObserver(entries => {
-    for (let entry of entries) {
-      if (entry.isIntersecting && !live) {
-        live = try_load_desmos();
+  /* NOTE: Waiting a little before trying to load the Desmos embeds is more reliable */
+  setTimeout(() => {
+    new IntersectionObserver(entries => {
+      for (let entry of entries) {
+        if (entry.isIntersecting && !live) {
+          live = try_load_desmos();
+
+          if (!live) setTimeout(() => {
+            live = try_load_desmos;
+          }, 10);
+        }
       }
-    }
-  }).observe(self);
+    }).observe(self);
+
+    // live = try_load_desmos();
+  }, 500);
 });
 
 function* col_picker()
@@ -81,7 +94,7 @@ function* col_picker()
   }
 }
 
-function try_load_desmos()
+function try_load_desmos(): boolean
 {
   try {
     Desmos;
@@ -248,17 +261,22 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
 
 
 <div class="desmos"
-  class:live
-  bind:this={self}
   style:width={ratio ? "auto" : "100%"}
   style:height={height}
   style:aspect-ratio={ratio}
 >
-  {#if desmos === false}
-    Error loading Desmos preview =(
-  {:else if !live}
-    Loading...
-  {/if}
+  <div class="embed"
+    class:live
+    bind:this={self}
+  ></div>
+
+  <p class="status">
+    {#if live === false}
+      Loading Desmos embed...
+    {:else if desmos === false}
+      Error loading Desmos embed =(
+    {/if}
+  </p>
 </div>
 
 
@@ -267,13 +285,28 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
 .desmos {
   min-width: 12rem;
   max-width: 100%;
-  color: $col-text-deut;
+  min-height: 6rem;
+  max-height: 100vh;
+  position: relative;
+}
+
+.embed {
+  width: 100%;
+  height: 100%;
   opacity: 0;
   transition: opacity 0.24s ease-out 0.05s;
 
   &.live {
     opacity: 1;
   }
+}
+
+p.status {
+  color: $col-text-deut;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 </style>
