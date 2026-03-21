@@ -5,7 +5,7 @@ An embedded Desmos window that handles initialisation when the element scrolls i
 
 <script lang="ts">
 
-import type { Block } from "#scripts/types";
+import type { Block, int } from "#scripts/types";
 
 import { onMount } from "svelte";
 
@@ -45,11 +45,16 @@ Object.assign(config, options);
 
 
 /** The Desmos calculator instance. */
-let desmos: any | false | null = $state(null);
+let desmos: any = $state();
 
-/** Have we successfully loaded the Desmos embed? */
-let live = $state(false);
-let self: HTMLElement;
+/** Are we still trying to load the Desmos embed? */
+let is_loading: boolean = $state(true);
+
+/** Message to show the user, if loading the Desmos embed failed. */
+let error_message: string = $state();
+
+/** Element to load the Desmos embed into. */
+let root: HTMLElement;
 
 const cols = col_picker();
 
@@ -59,17 +64,11 @@ onMount(() => {
   setTimeout(() => {
     new IntersectionObserver(entries => {
       for (let entry of entries) {
-        if (entry.isIntersecting && !live) {
-          live = try_load_desmos();
-
-          if (!live) setTimeout(() => {
-            live = try_load_desmos;
-          }, 10);
+        if (entry.isIntersecting && is_loading) {
+          load_desmos();
         }
       }
-    }).observe(self);
-
-    // live = try_load_desmos();
+    }).observe(root);
   }, 500);
 });
 
@@ -94,16 +93,38 @@ function* col_picker()
   }
 }
 
+function load_desmos()
+{
+  for (let tries = 0; tries < 3; tries++) {
+    let ok = try_load_desmos();
+    
+    if (ok) {
+      break;
+    }
+
+    console.error("Failed to load Desmos embed, retrying...");
+
+    if (tries >= 3 && !error_message) {
+      error_message = `Failed after ${tries} retries`;
+      break;
+    }
+
+    continue;
+  }
+
+  is_loading = false;
+}
+
 function try_load_desmos(): boolean
 {
   try {
     Desmos;
   } catch {
-    desmos = false;
+    error_message = "Could not access Desmos API, please try checking your internet connection?";
     return false;
   }
 
-  desmos = Desmos.GraphingCalculator(self, config);
+  desmos = Desmos.GraphingCalculator(root, config);
 
   if (typeof bounds === "number") {
     desmos.setMathBounds({
@@ -123,10 +144,12 @@ function try_load_desmos(): boolean
           .map((block, i) => parse_block(block, i))
           .filter(each => each !== undefined)
       );
-    } else {
+    }
+    else {
       let expr = parse_block(blocks, 1);
       if (expr === undefined) {
-        desmos = false;
+        console.error(`Integrity: Failed to parse block supplied to \`<Desmos />\`: ${JSON.stringify(blocks)}`);
+        error_message = "Failed to parse block";
         return false;
       }
       desmos.setExpression(expr);
@@ -266,17 +289,22 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
   style:aspect-ratio={ratio}
 >
   <div class="embed"
-    class:live
-    bind:this={self}
+    class:live={!is_loading}
+    bind:this={root}
   ></div>
 
-  <p class="status">
-    {#if live === false}
-      Loading Desmos embed...
-    {:else if desmos === false}
-      Error loading Desmos embed =(
+  <div class="status">
+    {#if is_loading}
+      <p> Loading Desmos embed... </p>
+
+    {:else if desmos === undefined}
+      <p> Error loading Desmos embed =( </p>
+      {#if error_message}
+        <p> {@html error_message} </p>
+      {/if}
+    
     {/if}
-  </p>
+  </div>
 </div>
 
 
@@ -293,6 +321,7 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
 .embed {
   width: 100%;
   height: 100%;
+  background: light-dark(rgb(black, 2%), rgb(white, 10%));
   opacity: 0;
   transition: opacity 0.24s ease-out 0.05s;
 

@@ -4,10 +4,15 @@
 | title = Changelog
 | capt = Not-so-official snapshots into *Integrity’s* history
 | index = info
-| update = 2026 February 23
+| update = 2026 March 21
 -->
 
 <div align="center" style="text-align: center;"> <h2> 2026 </h2> </div>
+
+
+## 21 March
+
+Desmos embeds have (finally!) arrived to all pages on *Integrity*!
 
 
 ## 20 March
