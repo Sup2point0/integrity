@@ -55,7 +55,7 @@ let show_mobile_dropdown = $state(false);
       <Link text="Your Data" intern="data" />
     </NavLink>
 
-    <NavLink text="Docs" intern="docs" collapse={true}>
+    <NavLink text="Docs" intern="docs" collapse={true} hot={true}>
       <Link text="Questions" intern="docs/questions" />
       <Link text="Integrals" intern="docs/integrals" />
       <Link text="Difficulties" intern="docs/difficulties" />
@@ -63,14 +63,15 @@ let show_mobile_dropdown = $state(false);
       <Link text="Tags" intern="docs/tags" />
       <Link text="Speedrun" intern="docs/speedrun" />
       <Link text="Fun Facts" intern="docs/fun-facts" />
+      <Link text="Integrating Integrity" intern="docs/integrity" hot={true} />
     </NavLink>
 
-    <NavLink text="Scriptures" intern="scriptures" hot={true}>
+    <NavLink text="Scriptures" intern="scriptures">
       <Link text="General" intern="scriptures/general" />
       <Link text="Integration" intern="scriptures/integrals" />
       <Link text="Graph Drawing" intern="scriptures/graph-drawing" />
       <Link text="Completing the Square" intern="scriptures/complete-square" />
-      <Link text="Special" intern="scriptures/special" hot={true} />
+      <Link text="Special" intern="scriptures/special" />
     </NavLink>
 
     <NavLink text="Desmos" intern="desmos" collapse={true}>
