@@ -3,7 +3,7 @@
 | dest = info/roadmap
 | capt = Development of *Integrity*
 | index = info
-| update = 2026 March 20
+| update = 2026 March 22
 -->
 
 
@@ -13,6 +13,7 @@ I’m finding a fix!
 
 - Navigating backwards in dynamic scripture can clear Desmos window. This is unideal, since it should instead revert to the newest window up until that step.
 - Dynamic scriptures with many steps can overflow scroll
+- Somewhere around 119 links on the site are currently broken. Hopefully that number will slowly go down... ;-;
 
 
 <br>
@@ -22,8 +23,6 @@ I’m finding a fix!
 
 I’m working on it!
 
-- Upgrade static scripture routes to all dynamically prerendered
-  - General integrals scriptures are still static
 - Speedrun environment
 
 
