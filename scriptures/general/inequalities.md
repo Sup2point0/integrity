@@ -2,8 +2,9 @@
 <!-- #SQUARK live!
 | dest = scriptures/general/inequalities
 | capt = Solving inequalities with twin-signed terms
-| date = 2025 June 27
 | index = scriptures / general
+| date = 2025 June 27
+| update = 2026 March 22
 -->
 
 Inequalities are quite a bit more finicky than plain equations to solve, and are one of the invisible-class [S-I+G-N error](sign.md)’s favourite breeding grounds. The source of all this pain is their ability to invert when certain operations are applied to both sides.
@@ -61,9 +62,9 @@ It’s all fun and games until you get to $\ln()$. Here’s a gnarly inequality:
 
 <div class="bigblock">
 
-> <span>Try It Yourself</span>
->
-> Before you read on, try solving this inequality yourself!
+> <span class="alert">Try It Yourself</span>
+> 
+> Before you read on, how would you go about solving this inequality?
 
 </div>
 
@@ -81,7 +82,7 @@ Thus whether $\ln(x)$ is positive or negative depends on the value of $x$. So if
 
 We don’t know with certainty the sign of $\ln(x)$ unless we know $x$. But to solve for $x$, we need to know the sign of $\ln(x)$. But we need $x$ for that. Uhh...
 
-Luckily, this isn’t an actual catch 22. The solution is to just separately consider the 2 cases – solve for $x$ if $\ln(x) > 0$, solve $x$ if $\ln(x) < 0$, and then combine the solutions.
+Luckily, this isn’t an actual catch-22. The solution is to just separately consider the 2 cases – solve for $x$ if $\ln(x) > 0$, solve $x$ if $\ln(x) < 0$, and then combine the solutions.
 
 So, for the inequality above, consider the case where $\ln(x) < 0$.
 

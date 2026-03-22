@@ -86,11 +86,12 @@ article {
   blockquote {
     --col: #{$col-deut};
     padding-left: 1em;
+    font-size: unset;
     color: $col-text-deut;
     border-left: 2px solid $col-deut-fallback;
     border-left: 2px solid var(--col);
 
-    .gfm-alert-indicator {
+    .gfm-alert-indicator, .alert {
       margin-bottom: -0.5em;
       color: $col-deut-fallback;
       color: var(--col);
