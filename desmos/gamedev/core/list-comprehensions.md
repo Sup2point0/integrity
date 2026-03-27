@@ -2,7 +2,7 @@
 domain: desmos-gamedev
 topic:  Core
 title:  List Comprehensions
-update: 2026 January 2
+update: 2026 
 ---
 
 
@@ -152,7 +152,9 @@ Sweet!
 ## // Higher-Dimension Products
 
 ### _
-“Higher-dimension” might sound scary, but c’mon. If you’re a programmer, you’ve got this. If you’re a mathematician, you’ve got this, easy dubs. If you’re both (me), remember that grass is nice. (sauce: trust me bro)
+“Higher-dimension” might sound scary, but it really just means more variables.
+
+If you’re a programmer, you’ve got this. If you’re a mathematician, you’ve got this, easy dubs. If you’re both (me), remember that grass is nice. (sauce: trust me bro)
 
 ### _
 I won’t even explain it to you. Just take a look at this, and I want you to guess what it does:
@@ -162,17 +164,13 @@ I won’t even explain it to you. Just take a look at this, and I want you to gu
 ```
 
 ### _
-This will produce all of the *possible pairings* of $(x, y)$, given those input values. We let $x$ take on either 1, 2 or 3. We let $y$ take on either 4, 6 or 8.
-
-The output would look something like this:
-
-```math
-\left[\ 
-  (1, 4), (1, 6), (1, 8), (2, 4), (2, 6), (2, 8), (3, 4), (3, 6), (3, 8)
-\ \right]
+```desmos
+\left[ (x, y) for x=\left[1,\ 2,\ 3\right],\ y=\left[4,\ 6,\ 8\right] \right]
 ```
 
-Or more neatly (but still a list, not a matrix):
+This will produce all of the *possible pairings* of $(x, y)$, given those input values. $x$ can take on either 1, 2 or 3, and $y$ can take on either 4, 6 or 8.
+
+Rendering the output more neatly (but remember this is still a list, not a matrix):
 
 ```math
 \begin{bmatrix}
@@ -183,10 +181,30 @@ Or more neatly (but still a list, not a matrix):
 ```
 
 ### _
-That was a 2-dimensional list comprehension, or more mathematically, a ***cartesian product***.
+That was a 2-dimensional list comprehension. It uses not 1, but *2* iterating variables, $x$ and $y$.
+
+Keep in mind this still outputs 1 flat list, not lists in lists (Desmos doesn’t currently support nested lists).
 
 ### _
-A “cartesian product” between $P$ and $Q$ is all the possible pairings of one element from $P$ with another from $Q$.
+```desmos
+\left[ x+y for x=\left[1,\ 2,\ 3\right],\ y=\left[4,\ 6,\ 8\right] \right]
+```
+
+Remember we can still put anything we want in the computed expression, so for instance, we could find all the possible sums of an $x$ and $y$.
+
+### _
+```desmos
+```
+
+One common use for 2-dimensional list comprehensions is in a gridded game – for instance, we might want to initialise each cell in the grid differently depending on its co-ordinates.
+
+### _
+More mathematically, a higher-dimension list comprehension iterates over a ***cartesian product***.
+
+### _
+A “cartesian product” between $P$ and $Q$, denoted $P \times Q$, is all the possible pairings of one element from $P$ with another from $Q$.
+
+For instance, $\mathbb{Z} \times \mathbb{Z}$ produces all the co-ordinates in a 2D plane (using the Cartesian co-ordinate system – unfortunate name clash here).
 
 ### _
 <aside></aside>
@@ -194,30 +212,7 @@ A “cartesian product” between $P$ and $Q$ is all the possible pairings of on
 In maths we don’t really care about the order of items, so $P$ and $Q$ are sets, not lists. If you’re interested more, this is [discrete maths<sup>↗</sup>](https://wikipedia.org/wiki/Discrete_mathematics).
 
 ### _
-For instance, $\mathbb{Z} \times \mathbb{Z}$ produces all the co-ordinates in a gridded plane: $(0, 0), (0, 1), (0, 2), ..., (1, 0), (1, 1), ...$.
-
-($\mathbb{Z}$ is the set of integers, and $\times$ denotes the cartesian product of sets.)
-
-### _
-A 2-dimensional list comprehension *is* a cartesian product. When you do this in code:
-
-```py
-for x in X:
-
-    for y in Y:
-
-        print(x, y)
-```
-
-This is iterating over *every possible* value of $x$, and pairing it with *every possible* value of $y$.
-
-### _
-It’s 2-dimensional because there’s 2 degrees of freedom: the value of $x$, and the value of $y$.
-
-If you draw out the possible pairings of $(x, y)$, you’d get a 2-dimensional grid.
-
-### _
-WORK IN PROGRESS SORRY
+1-dimensional list comprehensions will usually be far more common than higher-dimension list comprehensions, but it’s a fantastic tool to have in your arsenal.
 
 
 ## // Filtering Lists
