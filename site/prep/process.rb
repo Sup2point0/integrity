@@ -157,7 +157,7 @@ end
 
 def clean_breaks(text)
   # return text.strip.gsub(/[ ]+/, " ").gsub(/[\n]+/, "<br><br>")
-  return text.gsub(/(?<![|])\n\n\n/, "\n<br><br>\n")
+  return text.gsub(/(?<![|])\n\n\n/, "<br><br>\n\n")
 end
 
 ## Condense unnecessary spaces in LaTeX (to save a little on space!)

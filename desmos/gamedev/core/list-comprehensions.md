@@ -23,11 +23,11 @@ List comprehensions are a way of constructing *new* lists from *existing* lists.
 ```
 
 ### _
-<aside>
+<aside></aside>
+
 If you’ve coded before, you may recognise this as a `for` loop. Which it essentially is!
 
 List comprehensions also exist in some programming languages like Python and Haskell as a concrete feature.
-</aside>
 
 ### _
 A list comprehension works by:
@@ -67,6 +67,7 @@ It’s a bit unlike how most programming languages do it with `for ... in ...` w
 
 ### _
 <aside class="note"></aside>
+
 Haskell does actually do it this way, just with a monadic `<-` arrow instead of an `=` ;)
 
 `[x^2 | x <- [1, 2, 3, 4, 5]]`
@@ -157,7 +158,7 @@ Sweet!
 I won’t even explain it to you. Just take a look at this, and I want you to guess what it does:
 
 ```math
-(x, y) \text{ for } x = [1,2,3], y = [4,6,8]
+(x, y) \ \text{for } x = [1,2,3], y = [4,6,8]
 ```
 
 ### _
@@ -189,6 +190,7 @@ A “cartesian product” between $P$ and $Q$ is all the possible pairings of on
 
 ### _
 <aside></aside>
+
 In maths we don’t really care about the order of items, so $P$ and $Q$ are sets, not lists. If you’re interested more, this is [discrete maths<sup>↗</sup>](https://wikipedia.org/wiki/Discrete_mathematics).
 
 ### _
@@ -199,11 +201,13 @@ For instance, $\mathbb{Z} \times \mathbb{Z}$ produces all the co-ordinates in a 
 ### _
 A 2-dimensional list comprehension *is* a cartesian product. When you do this in code:
 
-`for x in X:`
+```py
+for x in X:
 
-`    for y in Y:`
+    for y in Y:
 
-`        print(x, y)`
+        print(x, y)
+```
 
 This is iterating over *every possible* value of $x$, and pairing it with *every possible* value of $y$.
 
@@ -213,9 +217,7 @@ It’s 2-dimensional because there’s 2 degrees of freedom: the value of $x$, a
 If you draw out the possible pairings of $(x, y)$, you’d get a 2-dimensional grid.
 
 ### _
-
-### _
-Let's write
+WORK IN PROGRESS SORRY
 
 
 ## // Filtering Lists

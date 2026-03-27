@@ -91,6 +91,10 @@ const plugins = [
   :global(a) {
     @include underline-link;
   }
+
+  :global(:last-child > br:last-child) {
+    display: none;
+  }
 }
 
 </style>

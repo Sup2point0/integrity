@@ -141,7 +141,7 @@ function next_subsection()
   <div in:fade={{ duration: 250, delay: 250 }}>
     <Header title={data.title} capt="Last Updated {updated}" />
 
-    <nav class="upper">
+    <nav class="upper" class:tight={data.sections.some(sec => sec.subsections.length > 8)}>
       {#each data.sections as section, i}
         {#each section.subsections as _, j}
           <div class={["subsection", {
@@ -260,6 +260,10 @@ nav.upper {
   width: 100%;
   padding: 2rem 0 3rem;
 
+  &.tight {
+    gap: 0.3rem;
+  }
+
   .subsection {
     flex: 1 1 0;
     height: 1.25rem;
@@ -312,6 +316,10 @@ nav.upper {
       &.down { top: 2em; }
     }
   }
+
+  &.tight .edge {
+    padding-left: 0.6rem;
+  }
 }
 
 .layout {
@@ -337,8 +345,6 @@ nav.upper {
 article {
   max-height: 70vh;
   padding: 0 0.5rem 1rem;
-  display: flex;
-  flex-flow: column nowrap;
   overflow-y: scroll;
 
   .padding-container {
@@ -367,6 +373,18 @@ section {
     opacity: 100%;
     box-shadow: 0 1px 4px $col-line;
   }
+
+  :global(strong em) {
+    color: $col-deut;
+  }
+
+  :global(pre) {
+    margin: 1em 0;
+  }
+
+  :global(aside ~ br) {
+    display: none;
+  }
 }
 
 :global(section.dyna-scripture:has(aside)) {
@@ -376,9 +394,6 @@ section {
 :global(section.dyna-scripture:has(aside.note)) {
   color: color.change($col-prot-light, $lightness: 40%);
   background: color.change($col-prot-light, $alpha: 12%);
-}
-:global(section.dyna-scripture strong em) {
-  color: $col-deut;
 }
 
 nav.lower {
