@@ -330,12 +330,17 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
   }
 }
 
-p.status {
+.status {
   color: $col-text-deut;
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   transform: translateX(-50%) translateY(-50%);
+
+  p {
+    margin: 1em 0;
+  }
 }
 
 </style>
