@@ -74,19 +74,19 @@ let show_mobile_dropdown = $state(false);
       <Link text="Special" intern="scriptures/special" />
     </NavLink>
 
-    <NavLink text="Desmos" intern="desmos" collapse={true}>
+    <NavLink text="Desmos" intern="desmos" collapse={true} hot={true}>
       <Link text="Docs" intern="desmos/docs" />
       <Link text="Library" intern="desmos/library" />
-      <Link text="Polymap" intern="desmos/gamedev/polymap" dev={true} />
-      <Link text="Game Development" intern="desmos/gamedev" />
+      <Link text="Polymap" intern="desmos/gamedev/polymap" />
+      <Link text="Game Development" intern="desmos/gamedev" hot={true} />
       <Link text="Gradient Descent" intern="desmos/grad-desc" disabled={true} />
     </NavLink>
 
-    <NavLink text="Fun" intern="fun" collapse={true} hot={true}>
+    <NavLink text="Fun" intern="fun" collapse={true}>
       <Link text="MIT Integration Bee" intern="fun/mit-ib" />
       <Link text="UNSW Integration Bee" intern="fun/unsw-ib" />
       <Link text="0–100 Year Challenge" intern="fun/year" />
-      <Link text="Maths on YouTube" intern="fun/youtube" hot={true} />
+      <Link text="Maths on YouTube" intern="fun/youtube" />
     </NavLink>
 
     <NavLink text="Info" intern="info" collapse={true}>

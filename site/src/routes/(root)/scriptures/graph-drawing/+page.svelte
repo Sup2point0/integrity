@@ -22,16 +22,21 @@ import ArticleArray from "#parts/page/article-array.svelte";
 
 
 <section>
-  <ArticleArray paths={Site.index["graph-drawing"].pages} />
+  <ArticleArray paths={Site.index.general.pages.filter(path => Site.index["graph-drawing"].pages.includes(path))} />
 </section>
 
 <section>
-  <h2 id="antiderivatives"> Dynamic Scriptures </h2>
+  <h2 id="dynamic-scriptures"> Dynamic Scriptures </h2>
 
   <!-- TODO -->
   <ArticleArray pages={[
     { dest: "scriptures/graph-drawing/dyna/multiplication", head: "Multiplication as Scaling" },
   ]} />
+</section>
+
+<section>
+  <h2> Collections </h2>
+  <ArticleArray paths={Site.index.collections.pages.filter(path => Site.index["graph-drawing"].pages.includes(path))} />
 </section>
 
 

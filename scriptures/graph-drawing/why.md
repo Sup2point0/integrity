@@ -1,8 +1,8 @@
 # Why Draw Graphs?
 <!-- #SQUARK live! dev!
-| dest = scriptures/graph-drawing/why
+| dest = scriptures/graph-drawing/general/why
 | capt = Desmos in the mind
-| index = scriptures / graph-drawing
+| index = scriptures / graph-drawing / general
 | date = 2025 July 1
 | update = 2025 September 14
 -->
