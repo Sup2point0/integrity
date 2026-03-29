@@ -51,7 +51,7 @@ let desmos: any = $state();
 let is_loading: boolean = $state(true);
 
 /** Message to show the user, if loading the Desmos embed failed. */
-let error_message: string = $state();
+let error_message: string | undefined = $state();
 
 /** Element to load the Desmos embed into. */
 let root: HTMLElement;
@@ -64,8 +64,10 @@ onMount(() => {
   setTimeout(() => {
     new IntersectionObserver(entries => {
       for (let entry of entries) {
-        if (entry.isIntersecting && is_loading) {
-          load_desmos();
+        if (entry.isIntersecting) {
+          if (is_loading || error_message) {
+            load_desmos();
+          }
         }
       }
     }).observe(root);
@@ -99,6 +101,7 @@ function load_desmos()
     let ok = try_load_desmos();
     
     if (ok) {
+      error_message = undefined;
       break;
     }
 
