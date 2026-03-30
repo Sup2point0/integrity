@@ -141,7 +141,9 @@ function next_subsection()
   <div in:fade={{ duration: 250, delay: 250 }}>
     <Header title={data.title} capt="Last Updated {updated}" />
 
-    <nav class="upper" class:tight={data.sections.some(sec => sec.subsections.length > 8)}>
+    <nav class="upper"
+      class:tight={data.sections.filter(sec => sec.subsections.length > 8).length > 1}
+    >
       {#each data.sections as section, i}
         {#each section.subsections as _, j}
           <div class={["subsection", {
@@ -393,6 +395,10 @@ section {
 }
 
 :global(section.dyna-scripture:has(aside)) {
+  color: color.change($col-manifold, $lightness: 40%);
+  background: color.change($col-manifold, $alpha: 12%);
+}
+:global(section.dyna-scripture:has(aside.solution)) {
   color: color.change($col-yes, $lightness: 40%);
   background: color.change($col-yes, $alpha: 12%);
 }
