@@ -78,3 +78,5 @@ Perhaps it is their inevitability, the fact that no matter how careful we might 
 Nevertheless, please be assurred that S-I+G-N errors are perfectly natural. Encountering them every now and then is a part of what it means to *math*. Do you even *math* if you’ve never been hit with one? They are the torment of every seasoned mathematician; a shared experience, a common enemy.
 
 S-I+G-N errors have very little to do with one’s “mathematical ability”. Often, they arise as the result of cognitive overload, or merely focusing on matters at hand that are more important – such as fractional arithmetic when completing the square, or drawing a integral sign that is rotationally symmetric. So take it in good humour, and humbly vow to be more careful in future. Because someday, our S-I+G-N errors will have tended to zero.
+
+<!-- TODO still looking for S-I+G-N error examples -->
