@@ -59,7 +59,7 @@ const chapters = dyna_scriptures["desmos-gamedev"];
 
       <Line width="80%" margin="1.5rem 0.5rem" />
 
-      <Link text="Undefined" intern="desmos/gamedev/supplementary/" disabled={true} />
+      <Link text="Undefined" intern="desmos/gamedev/supplementary/undefined" />
       <Link text="Sliders" intern="desmos/gamedev/supplementary/" disabled={true} />
       <Link text="Domains" intern="desmos/gamedev/supplementary/" disabled={true} />
       <Link text="Summations & Products" intern="desmos/gamedev/supplementary/" disabled={true} />

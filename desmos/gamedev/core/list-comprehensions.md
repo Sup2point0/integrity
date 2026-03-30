@@ -2,7 +2,7 @@
 domain: desmos-gamedev
 topic:  Core
 title:  List Comprehensions
-update: 2026 
+update: 2026 March 29
 ---
 
 
@@ -75,7 +75,7 @@ Haskell does actually do it this way, just with a monadic `<-` arrow instead of 
 ### _
 ```desmos
 L = \left[ 1,\ 2,\ 3,\ 4,\ 5 \right]
-/
+
 \left[ i^2 \operatorname{for} i = L \right]
 ```
 

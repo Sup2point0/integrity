@@ -1,10 +1,10 @@
 # FAQ
-<!-- #SQUARK live! dev!
+<!-- #SQUARK live!
 | dest = info/faq
 | capt = Frequently Asked Questions
 | desc = Frequently asked questions about Integrity
 | index = info
-| date = 2025 December 16
+| update = 2025 December 16
 -->
 
 ### What’s *Integrity* for?
