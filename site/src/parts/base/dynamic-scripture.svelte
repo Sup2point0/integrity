@@ -217,7 +217,12 @@ function next_subsection()
 
       <div class="half right">
         {#key desmos_blocks}
-          <Desmos blocks={desmos_blocks} options={{ expressionsCollapsed: false }} height="70vh" />
+          <Desmos
+            blocks={desmos_blocks}
+            options={{ expressionsCollapsed: false }}
+            height="70vh"
+            no_delay={true}
+          />
         {/key}
       </div>
     </div>

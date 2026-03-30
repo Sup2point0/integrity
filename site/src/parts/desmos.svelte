@@ -19,6 +19,7 @@ interface Props {
   bounds?: number | {
     left?: number, right?: number, bottom?: number, top?: number,
   };
+  no_delay?: boolean;
 }
 
 let {
@@ -28,6 +29,7 @@ let {
   height = "auto",
   ratio,
   bounds = controls ? undefined : 2,
+  no_delay = false,
 }: Props = $props();
 
 
@@ -60,7 +62,7 @@ const cols = col_picker();
 
 
 onMount(() => {
-  /* NOTE: Waiting a little before trying to load the Desmos embeds is more reliable */
+  /* NOTE: Waiting a little before trying to load the Desmos embed is more reliable */
   setTimeout(() => {
     new IntersectionObserver(entries => {
       for (let entry of entries) {
@@ -71,7 +73,7 @@ onMount(() => {
         }
       }
     }).observe(root);
-  }, 500);
+  }, no_delay ? 0 : 500);
 });
 
 function* col_picker()
