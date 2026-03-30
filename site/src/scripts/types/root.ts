@@ -1,11 +1,18 @@
 export type int = number;
+
+/** An internal relative URL or fully qualified external URL. */
 export type url = string;
+
+/** A path to a file in the repository. */
+export type filepath = string;
+
 
 /** A unique identifier for a question, in a format like `s25f-eg1`. */
 export type Shard = string;
 
 /** A raw LaTeX string. */
 export type Latex = string;
+
 
 /** A block of text, could be HTML or LaTeX. */
 export interface Block
@@ -14,21 +21,24 @@ export interface Block
   content: string;
 }
 
+
 /** A block of text and LaTeX. */
 export interface TextBlock
 {
   title: string;
-  body: (string | Latex)[];
+  body: Array<string | Latex>;
 }
 
 
 /** An object with properties that are set to either `true` or `false`. */
-export interface States {
+export interface States
+{
   [key: string]: boolean;
 }
 
 
-export interface InternalError {
+export interface InternalError
+{
   code: number | string;
   message?: string;
 }
