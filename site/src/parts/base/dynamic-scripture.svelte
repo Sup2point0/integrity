@@ -63,7 +63,7 @@ $effect(() => {
     let subsection = sections_list[current_section].subsections[current_subsection];
     if (subsection[0].kind === "desmos") {
       desmos_blocks = (subsection[0].content
-        .split("<br><br>")
+        .split("\n")
         .map(line => ({
           kind: "desmos",
           content: line,
