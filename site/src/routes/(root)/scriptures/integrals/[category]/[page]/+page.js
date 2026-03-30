@@ -13,6 +13,6 @@ export async function load({ params })
   
   return {
     content: data.default,
-    metadata: data.metadata,
+    metadata: { category: params.category, ...data.metadata },
   };
 }

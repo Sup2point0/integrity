@@ -6,12 +6,13 @@ import PageContent from "#parts/base/static-page.svelte";
 
 import { page } from "$app/state";
 
+let data = $derived(page.data.metadata);
+
 </script>
 
 
 <PageContent levels={[
   { text: "Scriptures", intern: "scriptures" },
   { text: "Integration", intern: "scriptures/integrals" },
-  // TODO FIXME add category
-  { text: capitalise(page.data.title), intern: `scriptures/integrals/${page.data.title}` },
+  { text: capitalise(data.category), intern: `scriptures/integrals/${data.category}` },
 ]} />

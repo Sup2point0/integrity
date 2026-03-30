@@ -52,7 +52,7 @@ test("crawl-routes", async () =>
         if (target.includes("?shard=")) question_pages_visited++;
 
         try {
-          console.info(`-- ${WORKER} Visiting page: ${target}`);
+          console.info(`-- ${WORKER} Visiting: ${target}`);
           let status = await page.goto(target);
 
           if (!status?.ok()) throw Error();
@@ -65,7 +65,7 @@ test("crawl-routes", async () =>
           to_visit.push(...links.map(url => ({ url, source: target })));
         }
         catch (e) {
-          console.error(`!! ${WORKER} Failed to access route: ${target}; linked from: ${source}`);
+          console.error(`!! ${WORKER} Failed: ${target}; linked from: ${source}`);
           failed_routes.push(target);
         }
       }
@@ -79,7 +79,7 @@ test("crawl-routes", async () =>
   if (failed_routes.length > 0) {
     console.error(
       `\n---------------------------------------------------------------------`,
-      `\n!! Failed to access routes:`,
+      `\n!! Failed to access ${failed_routes.length} routes:`,
       `\n\n   `,
       failed_routes.join("\n    ")
     );

@@ -3,6 +3,7 @@
 | dest = scriptures/general/sign
 | capt = The “semicolon missing” of Mathematics
 | index = scriptures / general
+| update = 2026 March 30
 -->
 
 What’s $1 \times 1$? $1$, right?

@@ -3,6 +3,7 @@
 | dest = scriptures/integrals/methods/partials
 | title = Partial Fractions
 | index = scriptures / integrals / methods
+| update = 2026 March 30
 | --
 | continue-reading =
     scriptures/integrals/methods/power-partials.md /
@@ -25,9 +26,7 @@ When the denominator does factorise, we can use ***partial fractions*** to split
 
 ```math
 \int \frac{1}{(x-2)(x+4)} \ dx
-= \frac{1}{8} \left(
-  \frac{1}{x-2} - \frac{1}{x+6}
-\right)
+= \frac{1}{8} \int \frac{1}{x-2} - \frac{1}{x+6} \ dx
 ```
 
 This reduces a large, messy fraction of polynomials into several smaller terms which are much easier to integrate.
