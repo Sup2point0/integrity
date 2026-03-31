@@ -2,6 +2,7 @@
 domain: desmos-gamedev
 topic:  Core
 title:  List Comprehensions
+next:   conditionals
 update: 2026 March 29
 ---
 

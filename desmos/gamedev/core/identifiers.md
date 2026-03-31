@@ -2,7 +2,7 @@
 domain: desmos-gamedev
 topic:  Core
 title:  Identifiers
-next:   the-ticker
+next:   ranges
 update: 2025 July 8
 ---
 

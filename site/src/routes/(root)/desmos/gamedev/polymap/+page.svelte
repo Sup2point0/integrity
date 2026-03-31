@@ -2,7 +2,6 @@
 
 import { dyna_scriptures } from "#scripts/site";
 
-
 import Header      from "#parts/core/header.svelte";
 import Meta        from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
@@ -94,7 +93,7 @@ const chapters = dyna_scriptures["desmos-gamedev"];
     <li class="card">
       <div class="info">
         <h3> Architecture </h3>
-        <p> Constructing the game to be modular, robust and flexible. </p>
+        <p> Constructing a game to be modular, robust and flexible. </p>
       </div>
 
       <Line width="80%" margin="1.5rem 0.5rem" />
@@ -110,7 +109,7 @@ const chapters = dyna_scriptures["desmos-gamedev"];
     <li class="card">
       <div class="info">
         <h3> Rendering </h3>
-        <p> Coming soon! </p>
+        <p> Drawing game graphics and UI with reactivity and interactivity. </p>
       </div>
 
       <Line width="80%" margin="1.5rem 0.5rem" />
@@ -126,7 +125,7 @@ const chapters = dyna_scriptures["desmos-gamedev"];
     <li class="card">
       <div class="info">
         <h3> Advanced </h3>
-        <p> Coming soon! </p>
+        <p> Cool Desmos features that’ll upgrade your programming. </p>
       </div>
 
       <Line width="80%" margin="1.5rem 0.5rem" />
@@ -147,7 +146,7 @@ const chapters = dyna_scriptures["desmos-gamedev"];
     <li class="card">
       <div class="info">
         <h3> Extras </h3>
-        <p> Coming soon! </p>
+        <p> More loose-ended, casual dives into programming in Desmos. </p>
       </div>
 
       <Line width="80%" margin="1.5rem 0.5rem" />
@@ -155,7 +154,7 @@ const chapters = dyna_scriptures["desmos-gamedev"];
       {#each Object.values(chapters.extras ?? []) as page}
         <Link
           text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.shard}"
         />
       {/each}
     </li>
@@ -163,7 +162,7 @@ const chapters = dyna_scriptures["desmos-gamedev"];
     <li class="card">
       <div class="info">
         <h3> Examples </h3>
-        <p> Coming soon! </p>
+        <p> Walkthroughs on developing particular components and systems in Desmos. </p>
       </div>
 
       <Line width="80%" margin="1.5rem 0.5rem" />
@@ -171,7 +170,7 @@ const chapters = dyna_scriptures["desmos-gamedev"];
       {#each Object.values(chapters.examples ?? []) as page}
         <Link
           text={page.title}
-          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.title.toLowerCase()}"
+          intern="desmos/gamedev/{page.chapter.toLowerCase()}/{page.shard}"
         />
       {/each}
     </li>

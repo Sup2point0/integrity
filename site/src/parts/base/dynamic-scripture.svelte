@@ -394,7 +394,7 @@ section {
   }
 }
 
-:global(section.dyna-scripture:has(aside)) {
+:global(section.dyna-scripture:has(aside, aside.challenge)) {
   color: color.change($col-manifold, $lightness: 40%);
   background: color.change($col-manifold, $alpha: 12%);
 }
