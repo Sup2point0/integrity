@@ -73,20 +73,32 @@ f\left( x \right) = x^{2p-1}
 ```
 
 ### $(x-p)(x-q)$
-When $x = p$ or $x = q$, the output $y$ becomes $0$. That means the graph intersects the $x$-axis.
+Only when $x = p$ or $x = q$ does the output $y$ becomes $0$. That means the graph intersects the $x$-axis twice, at $(p, 0)$ and $(q, p)$.
 
 This is a (positive) quadratic with roots at $x = p, x = q$.
 
 ```desmos
 y = \left( x-p \right) \left( x-q \right)
-x = p
-x = q
+/asympt :: x = p
+/dashed :: x = q
 
-/asympt :: p = -2
-/dashed :: q = 3
+p = -2
+q = 3
 ```
 
 ### $(x-p)(x-q)(x-r)(...)$
+More generally, any factorised polynomial in this form has roots $p, q, r, ...$ since whenever $x$ is one of these values the whole polynomial collapses to $0$.
+
+```desmos
+y = \left( x-p \right) \left( x-q \right) \left( x-r \right)
+/dashed :: x = p
+/dashed :: x = q
+/dashed :: x = r
+
+p = -3
+q = 1
+/hidden :: r = 2
+```
 
 
 ## Fractional Powers
