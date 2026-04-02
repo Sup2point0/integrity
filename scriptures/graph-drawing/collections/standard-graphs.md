@@ -2,7 +2,7 @@
 <!-- #SQUARK live! vect! devx! dev!
 | dest = scriptures/graph-drawing/collections/standard-graphs
 | index = scriptures / graph-drawing / collections
-| update = 2026 March 29
+| update = 2026 April 2
 -->
 
 Just like with [standard integrals](../../integrals/collections/standard-integrals.md), in graph drawing there are a number of basic graphs that you should absolutely know how to draw.
@@ -47,29 +47,36 @@ y = x^2
 
 ### $x^3$
 ```desmos
-t = x^3
+y = x^3
 ```
 
 ### $x^p$
+For all $p \in \mathbb{Z}^{+}$, $x^p$ will always intersect the origin (because $0^p = 0$ as long as $p > 0$).
+
+```desmos
+x^p
+
+/slider{ min: 0.1 } :: p = 2
+```
 
 ### $x^{2p}$
-All even positive powers of $x$ produce even graphs.
+All even positive powers of $x$ produce even graphs. This is because an even number of multiplications cancels out pairs of $-$ signs.
 
 ```desmos
 f\left( x \right) = x^{2p}
 f\left( -x \right)
 
-/slider{ min: 1, step: 1 } :: p = 3
+/slider{ min: 2, step: 2 } :: p = 4
 ```
 
 ### $x^{2p-1}$
-All odd positive powers of $x$ produce odd graphs.
+All odd positive powers of $x$ produce odd graphs. This is because one $-$ sign will be left unpaired and hence not cancelled out through the multiplications.
 
 ```desmos
 f\left( x \right) = x^{2p-1}
 -f\left( -x \right)
 
-/slider{ min: 1, step: 1 } :: p = 3
+/slider{ min: 1, step: 2 } :: p = 3
 ```
 
 ### $(x-p)(x-q)$
