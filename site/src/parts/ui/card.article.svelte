@@ -91,8 +91,14 @@ a.article-card {
 
     // NOTE: Nested `<p>` due to `<RenderBlock>` Markdown parsing
     :global(p) {
-    font-weight: 350;
+      margin: 0;
+      font-weight: 350;
     }
+  }
+
+  // NOTE: Nested `<p>` due to `<RenderBlock>` Markdown parsing
+  :global(p) {
+    margin: 0;
   }
 }
 

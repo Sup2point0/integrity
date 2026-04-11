@@ -6,6 +6,7 @@ import PageContent from "#parts/base/static-page.svelte";
 
 import { page } from "$app/state";
 
+
 let data = $derived(page.data.metadata);
 
 </script>

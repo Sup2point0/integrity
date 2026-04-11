@@ -5,7 +5,7 @@ The main displayed content for a static article page.
 
 <script lang="ts">
 
-import type { url, filepath } from "#scripts/types";
+import type { url } from "#scripts/types";
 
 import Header        from "#parts/core/header.svelte";
 import InjectDesmos  from "#parts/core/inject-desmos.svelte";
@@ -18,7 +18,6 @@ import PreReading    from "#parts/page/pre-reading.svelte";
 import { page } from "$app/state";
 
 
-// TODO upgrade Squarkdown to accept arbitrary parameters and extract pre_reading and continue_reading from there
 interface Props {
   id?: string;
   levels: Array<{
@@ -26,15 +25,11 @@ interface Props {
     intern?: url,
     link?: url,
   }>;
-  pre_reading?: filepath[];
-  continue_reading?: filepath[];
 }
 
 let {
   id = undefined,
   levels,
-  pre_reading,
-  continue_reading,
 }: Props = $props();
 
 
@@ -53,18 +48,18 @@ let { content, metadata: data } = $derived(page.data);
 
 <Header page={data} />
 
-{#if pre_reading}
-  <PreReading paths={pre_reading} />
+{#if data.rest.pre_reading}
+  <PreReading paths={data.rest.pre_reading} />
 {/if}
 
 <article {id}>
   <InjectDesmos {content} />
 
-  {#if continue_reading}
+  {#if data.rest.continue_reading}
     <aside>
       <h2> Continue Reading </h2>
 
-      <ArticleArray paths={continue_reading} />
+      <ArticleArray paths={data.rest.continue_reading} />
     </aside>
   {/if}
 
