@@ -1,50 +1,25 @@
 <script>
 
-import Content from "./~content.svx";
-import { metadata as page } from "./~content.svx";
-
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import ArticleArray from "#parts/page/article-array.svelte";
+import PageContent from "#parts/base/static-page.svelte";
 
 </script>
 
 
-<Meta title={page.title} desc={page.desc} />
-
-
-<Breadcrumbs levels={[
+<PageContent levels={[
   { text: "Scriptures", intern: "scriptures" },
   { text: "Integration", intern: "scriptures/integrals" },
-  { text: "Collections", intern: "scriptures/integrals#collections" },
-  { text: page.title },
+  { text: "Collections", intern: "scriptures/integrals/collections" },
 ]} />
 
-<Header {page} />
-
-<article>
-  <Content />
-
-  <aside>
-    <h2> Continue Reading </h2>
-    
-    <ArticleArray paths={[
-      "scriptures/integrals/collections/everything-anything.md",
-      "scriptures/integrals/collections/epic-errors.md",
-    ]} />
-  </aside>
-
-  <p>
-    <a href="int-int/int-int">Ooh, what’s this? ~o.0~</a>
-  </p>
-</article>
+<p>
+  <a href="int-int/int-int">Ooh, what’s this? ~o.0~</a>
+</p>
 
 
 <style lang="scss">
 
 p {
-  opacity: 0%;
+  opacity: 1%;
 }
 
 </style>

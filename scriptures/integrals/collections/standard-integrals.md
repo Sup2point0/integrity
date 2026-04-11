@@ -1,7 +1,11 @@
 # Standard Integrals
 <!-- #SQUARK live! vect!
 | dest = scriptures/integrals/collections/standard-integrals
-| | index = scriptures / integrals / collections
+| index = scriptures / integrals / collections
+---
+| continue-reading =
+    / scriptures/integrals/collections/everything-anything
+    / scriptures/integrals/collections/epic-errors.md
 -->
 
 This is a collection of integrals which have very standard solutions.[^sol] You by no means need to memorise these in the same way that you should know the derivative of $\tan^{-1}(x)$ or the antiderivative of $\sec(x)$, but you can go a lot faster if you can quote or jump to their solutions on the spot.

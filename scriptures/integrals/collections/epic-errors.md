@@ -5,6 +5,10 @@
 | index = scriptures / integrals / collections
 | date = 2025 January 21
 | update = 2025 September 18
+---
+| continue-reading =
+    / scriptures/integrals/why-hard.md
+    / scriptures/integrals/how.m
 -->
 
 Top $n$ most common errors, slips and faults in integration, where $n \in \mathbb{Z}$ and $\log(n) > 0$. Based off my personal experience, my experience with other students around me, and internal hypothesisation.[^hypo]

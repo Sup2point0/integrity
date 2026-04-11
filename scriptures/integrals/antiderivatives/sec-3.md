@@ -3,6 +3,12 @@
 | dest = scriptures/integrals/antiderivatives/sec-3
 | capt = An unlikely duplication
 | index = scriptures / integrals / antiderivatives
+---
+| pre-reading =
+    / scriptures/integrals/methods/parts.md
+    / scriptures/integrals/antiderivatives/sec.md
+| continue-reading =
+    / scriptures/integrals/antiderivatives/ln.md
 -->
 
 Here’s a particularly nontrivial power-of-a-trig-function integral:

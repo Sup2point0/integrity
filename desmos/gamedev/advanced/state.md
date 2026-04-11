@@ -8,6 +8,7 @@ update: 2026 March 31
 
 ## Description
 
+<!-- TODO -->
 (This scripture is currently unfinished!)
 
 Hey adventurer! In this casual scripture, I’ll walk you through my ‘discovery’ of how state in Desmos works.
@@ -229,96 +230,40 @@ The flow looks like:
 \text{run action} \to \text{receive report} \to \text{update variables}
 ```
 
-So you can see the actual updating of variables is *delayed*, and only happens after all the actions have been computed.
+So you can see the actual updating of variables is *delayed*, and only happens after all the actions have been computed. This is why each individual action only sees the original values of the variables, not any updated variables.
 
 ### _
-Another more programmatic way to look at it (which I quite like) is to treat the entire action chain as a *pure* function.
+Another more programmatic way to look at it (which I quite like) is to treat the entire action chain as a *pure* function. In functional programming, pure functions have the following properties:
 
-It receives the current global state as an argument, and returns what the new global state should be after it executes.
-
-```math
-a_\text{action}(\text{current state}) = \{ \text{do stuff; return new state} \}
-```
+- They are **deterministic** – evaluating them with the same arguments always produces the same result (also known as referential transparency).
+- They have **no side effects** – all they do is ‘compute’ things, without causing any change observable to the outside world (such as altering global state).
 
 ### _
-So then, a program running on a loop would look like (intentionally verbose for explicitness):
+Of course, an action won’t necessarily do the same thing every time we run it.
 
-```math
-\begin{align*}
-  & \text{loop } \{
-    \\ & \quad \text{old state} \leftarrow \text{current state}
-    \\ & \quad \text{new state} \leftarrow \text{run}(\text{old state})
-    \\ & \quad \text{current state} \leftarrow \text{new state}
-  \\ & \}
-\end{align*}
+But, if we instead think of the current global state as one of the arguments to the function, then we do get pure behaviour.
+
+For a given global state, an action must always do the same thing (deterministic), and like we said before, all of its assignments are returned as part of a report that is only carried out later (no side effects).
+
+### _
+<aside class="note"></aside>
+
+Fun fact – even $\text{random}()$ is deterministic in Desmos!
+
+
+## // Getting Over It
+
+### _
+Well that’s cool and all, but how can we get around this? Making multiple assignments to the same variable is a fairly common thing we’d like to do, and this limitation is very restrictive.
+
+### _
+The only way I know of is to merge the many assignments into one
+
+### _
+```desmos
 ```
 
-Everything inside $\text{run}()$ only sees $\text{old state}$.
+<aside class="note"></aside>
 
-<!-- // ### _
-// In functional programming there is an emphasis on *pure* functions, which:
-// 
-// - Are deterministic
-// - Have no side effects
-// 
-// ### _
-// A deterministic function *always* outputs the same value(s) for the same input parameters(s).
-// 
-// This means it is dependent only on its parameters – no global variables or other external state.
-// 
-// ```math
-// f(5) = 10
-// f(5) = 10
-// …
-// f(5) = 10 \quad \text{still } 10 \text{ and always will be}
-// ```
-// 
-// ### _
-// Side effects are permanent changes that ‘executing’ an impure function can produce. For instance, `print()` in Python would output text to the terminal; `i++` in JavaScript would mutate a variable.
-// 
-// ```py
-// var i = 0
-// i++;  # something has changed!
-// ```
-// 
-// ### _
-// In maths, all functions are pure. They are defined as expressions of their parameters, and so are computed deterministically from those parameters.
-// 
-// ```math
-// <quantum wave>
-// ```
-// 
-// And I’m pretty sure side effects don’t exist in mathematics.
-// 
-// <aside>
-// I haven’t been able to find an irrefutable source for this claim, but I have yet to see an impure mathematical function. You... could of course define a stupid function like “f(x) is the total number of people currently reading this definition”, but that’s just a bit stupid.
-// </aside>
-// 
-// ### _
-// Now, Desmos treads the line between mathematics and programming, but for the most part it’s pure.
-// 
-// ### _
-// Now, we know that in Desmos actions we can mutate variables – i.e. global state – thus producing side effects, which makes them impure.
-// 
-// ### _
-// But can you think of a way to transform an impure function with side effects, into a pure function with no side effects?
-// 
-// (For simplicity, let’s consider the only side effects in Desmos to be mutating variables.)
-// 
-// ### _
-// Hint: How would you represent side effects as a *value*?
-// 
-// ### _
-// Instead of actually performing the side effects, we could return some value that *encapsulates* 
-// 
-// ### _
-// In Haskell, this is known as the `State` monad, and it encapsulates the idea of 
-// 
-// ### _
-// Instead of an impure function applying side effects directly, we can have a pure function that *takes in* a ‘world’ as input and returns a ‘new’ world with all the side effects applied.
-// 
-// It’s saying “give me an argument telling me what state the world is in, and I will return a value telling you what state the world is in with my side effects applied”.
-// 
-// ### _
-// How do the side effects actually happen, then? Well, we need a function
-//  -->
+What if we ‘staggered’ assignments, so that in one frame we’d make one type of necessary update to a variable, and in the next make the other update?
+

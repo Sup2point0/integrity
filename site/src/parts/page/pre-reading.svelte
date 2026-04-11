@@ -1,6 +1,6 @@
-<!-- @component PreReading
+<!-- @component `PreReading`
 
-Links to pre-reading material for the current page.
+A banner containing links to pre-reading material for the current page.
 -->
 
 <script lang="ts">
@@ -22,12 +22,13 @@ let { paths }: Props = $props();
 
 
 <Banner title="Pre-Reading Material">
-  You’ll need to be familiar with the content in the following articles:
+  For this scripture, you’ll need to be familiar with content from:
   
-  {#each paths as path}
+  {#each paths as path, i}
     {@const data = Site.pages[path]}
 
-    <a href="{base}/{data?.dest}">{data?.head}</a>
+    {#if i > 0} , {/if}
+    <a href="{base}/{data?.dest}">{data?.head ?? "<Unwritten>"}</a>
   {/each}
 </Banner>
 

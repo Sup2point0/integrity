@@ -5,6 +5,9 @@
 | index = scriptures / integrals / adventures
 | date = 2025 February 4
 | update = 2025 June 27
+---
+| continue-reading =
+    / scriptures/integrals/why-hard.md
 -->
 
 Integrals are, for sure, some of the most satisfying mathematical problems to solve. More so than any other kind of problem (except perhaps geometry) they are such an intricate form of puzzle, taking a little skill, creativity, and intuition. Sometimes, the solution is so beautiful that it leaves you[^you] breathless, gasping for air, as you freak out over its elegance.[^freak]

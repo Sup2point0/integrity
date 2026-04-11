@@ -4,6 +4,10 @@
 | capt = Abusing the +c
 | index = scriptures / integrals / adventures
 | date = 2025 January 15
+---
+| continue-reading =
+    / scriptures/integrals/how.md
+    / scriptures/integrals/once.md
 -->
 
 Here’s a pretty standard integral. How would you approach it?

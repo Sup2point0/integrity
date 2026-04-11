@@ -4,6 +4,10 @@
 | capt = Glossary of the integration homies
 | index = scriptures / integrals / collections
 | date = 2025 May 19
+---
+| continue-reading =
+    / scriptures/integrals/collections/everything-anything.md
+    / scriptures/integrals/collections/epic-errors.md
 -->
 
 Don’t we love our integration slang.

@@ -74,7 +74,10 @@ a.article-card {
 
   &.invalid {
     pointer-events: none;
-    opacity: 50%;
+
+    h4 {
+      color :$col-text-deut;
+    }
   }
 }
 
@@ -86,6 +89,7 @@ a.article-card {
     width: 80%;
     padding: 0 0 0.5em;
     margin: 0 0 0.5em;
+    @include font-ui;
     font-size: 150%;
     border-bottom: 1px solid $col-line;
 

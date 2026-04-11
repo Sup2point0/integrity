@@ -41,6 +41,7 @@ let { paths, pages, children }: Props = $props();
 <style lang="scss">
 
 ul {
+  margin: 0;
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;

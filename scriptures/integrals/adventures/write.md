@@ -5,6 +5,9 @@
 | index = scriptures / integrals / adventures
 | date = 2025 April 2
 | update = 2025 September 13
+---
+| continue-reading =
+    / scriptures/integrals/adventures/what-good.md
 -->
 
 I often get asked “how do you write your integrals?”

@@ -4,6 +4,9 @@
 | capt = When hoping for the best works out
 | index = scriptures / integrals / adventures
 | date = 2025 June 10
+---
+| continue-reading =
+    / scriptures/integrals/adventures/neat-trick.md
 -->
 
 This is the [artanh](../antiderivates/artanh.md) integral, which shows up pretty often, especially when integrating rational functions:

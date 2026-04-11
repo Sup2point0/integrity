@@ -4,6 +4,12 @@
 | capt = (It’s not actually that difficult.)
 | index = scriptures / integrals / antiderivatives
 | date = 2025 February 11
+---
+| pre-reading =
+    / scriptures/integrals/methods/parts.md
+    / scriptures/integrals/methods/sub.md
+| continue-reading =
+    / scriptures/integrals/antiderivatives/sec-3.md
 -->
 
 So far, our antiderivatives of standard functions have been relatively straightforward to figure out. All we’ve had to do is think about what would *differentiate* to give our integrand. $x^2$ gives $2x$, $\sin(x)$ gives $\cos(x)$, $e^x$ gives $e^x$. But now comes a bridge that can’t be crossed while seeing what’s on the other side.

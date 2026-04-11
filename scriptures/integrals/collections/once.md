@@ -4,6 +4,10 @@
 | capt = Landmarks on the expedition of integration
 | index = scriptures / integrals / collections
 | update = 2025 September 18
+---
+| continue-reading =
+    / scriptures/integrals/collections/epic-errors.md
+    / scriptures/integrals/collections/standard-integrals.md
 -->
 
 There are easy integrals. There are hard integrals. There are simple integrals, nice integrals, ugly integrals, and horror integrals. But there are also integrals so *exquisitely* beautiful, that you can only experience their beauty once in your lifetime. Like a firework they come, a burst of colour and vibrance, dazzling, yet ephemeral.

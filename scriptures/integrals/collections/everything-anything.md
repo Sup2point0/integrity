@@ -5,6 +5,10 @@
 | index = scriptures / integrals / collections
 | date = 2025 April 17
 | update = 2025 December 14
+---
+| continue-reading =
+    / scriptures/integrals/collections/epic-errors.md
+    / scriptures/integrals/what.md
 -->
 
 Integration can’t be learnt in a day. Nor can you, or should you, memorise in a day all of the useful formulae, identities and other quotable results that will come in crucial throughout your adventures in integration.
