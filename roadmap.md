@@ -11,6 +11,7 @@
 
 I’m finding a fix!
 
+- April 20: Desmos previews in graph questions are getting duplicated
 - Navigating backwards in dynamic scripture can clear Desmos window. This is unideal, since it should instead revert to the newest window up until that step.
 - Dynamic scriptures with many steps can overflow scroll
 - Somewhere around 119 links on the site are currently broken. Hopefully that number will slowly go down... ;-;
