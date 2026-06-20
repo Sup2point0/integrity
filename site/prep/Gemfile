@@ -2,6 +2,8 @@
 
 source "https://rubygems.org"
 
+ruby file: ".ruby-version"
+
 gem "rake"
 gem "json"
 gem "front_matter_parser", "~> 1.0"
