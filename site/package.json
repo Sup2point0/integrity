@@ -12,10 +12,10 @@
     "prep":      "npm run squark && npm run export",
       "prepx":   "npm run squarkx && npm run export",
 
-    "squark":    "cd ../.stranger-quarkdown && rake squark[fonts,scss] && cd ../site",
-      "squarkx": "cd ../.stranger-quarkdown && rake squark[fonts,scss,assets] && cd ../site",
+    "squark":    "cd ../.stranger-quarkdown && bundle exec rake squark[fonts,scss] && cd ../site",
+      "squarkx": "cd ../.stranger-quarkdown && bundle exec rake squark[fonts,scss,assets] && cd ../site",
 
-    "export":    "cd prep && rake export && cd ../../site",
+    "export":    "cd prep && bundle exec rake export && cd ../../site",
 
     "build":     "vite build",
       "buildx":  "npm run prepx && vite build",

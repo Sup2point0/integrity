@@ -21,27 +21,26 @@ jobs:
         with:
           submodules: recursive
 
-      - name: 'github / ruby / setup'
+      - name: 'ruby / setup / squarkdown'
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.4.7
+          working-directory: './stranger-quarkdown/'
           bundler-cache: true
 
-      - name: 'ruby / bundle install'
-        run: |
-          cd prep
-          bundle install
-          cd ../../.stranger-quarkdown
-          bundle install
+      - name: 'ruby / setup / prep'
+        uses: ruby/setup-ruby@v1
+        with:
+          working-directory: './prep/'
+          bundler-cache: true
 
-      - name: 'github / node / setup'
+      - name: 'node / setup'
         uses: actions/setup-node@v4
         with:
           node-version: 'latest'
           cache: 'npm'
-          cache-dependency-path: './site/package-lock.json'
+          cache-dependency-path: './package-lock.json'
 
-      - name: 'svelte / npm install'
+      - name: 'svelte / npm run install'
         run: npm install
 
       - name: 'svelte / npm run build'
