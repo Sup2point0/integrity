@@ -35,9 +35,9 @@ const svelte_config =
       base: process.argv.includes("dev") ? "" : process.env.BASE_PATH
     },
     alias: {
-      "#src": "./src/",
-      "#parts": "./src/parts",
-      "#styles": "./src/styles",
+      "#src":     "./src/",
+      "#parts":   "./src/parts",
+      "#styles":  "./src/styles",
       "#scripts": "./src/scripts",
     },
     prerender: {
