@@ -48,7 +48,6 @@ onMount(() => {
 <div class="content {$search.view}">
   {#each filtered as question (question.shard)}
     <QuestionCard {question}
-      desmos={$search.show.question ? question.desmos : undefined}
       style={$search.view === "list" ? "row" : "block"}
     />
   {/each}
