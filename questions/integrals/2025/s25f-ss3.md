@@ -90,7 +90,7 @@ Did you have fun? I did ;)
 \end{align*}
 ```
 
-### 1
+### Integral 1
 ```math
 \begin{align*}
   I_{1} &= fg-\int f'g\ dt
@@ -100,7 +100,7 @@ Did you have fun? I did ;)
 \end{align*}
 ```
 
-### 2
+### Integral 2
 ```math
 \begin{align*}
   I_{2} &= \int \sin\left(t\right)\cosh\left(t\right)\ dt
@@ -112,7 +112,7 @@ Did you have fun? I did ;)
 \end{align*}
 ```
 
-### 3
+### Integral 3
 ```math
 I_{3}=\int t\cos\left(t\right)\cosh\left(t\right)\ dt
 ```
@@ -133,7 +133,7 @@ I_{3}=\int t\cos\left(t\right)\cosh\left(t\right)\ dt
 \end{align*}
 ```
 
-### 4
+### Integral 4
 ```math
 \begin{align*}
   I_{4}=\int \cos\left(t\right)\sinh\left(t\right)\ dt
@@ -145,7 +145,7 @@ I_{3}=\int t\cos\left(t\right)\cosh\left(t\right)\ dt
 \end{align*}
 ```
 
-### 3 (again)
+### Integral 3 (again)
 ```math
 \begin{align*}
   I_{3} &= t\cos\left(t\right)\sinh\left(t\right)-I_{4}+I_{1}
