@@ -74,11 +74,11 @@ let show_mobile_dropdown = $state(false);
       <Link text="Special" intern="scriptures/special" />
     </NavLink>
 
-    <NavLink text="Desmos" intern="desmos" collapse={true} hot={true}>
+    <NavLink text="Desmos" intern="desmos" collapse={true}>
       <Link text="Docs" intern="desmos/docs" />
       <Link text="Library" intern="desmos/library" />
       <Link text="Polymap" intern="desmos/gamedev/polymap" />
-      <Link text="Game Development" intern="desmos/gamedev" hot={true} />
+      <Link text="Game Development" intern="desmos/gamedev" />
       <Link text="Gradient Descent" intern="desmos/grad-desc" disabled={true} />
     </NavLink>
 
