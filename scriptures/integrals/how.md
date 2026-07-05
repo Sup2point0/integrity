@@ -1,5 +1,5 @@
 # How Do We Integrate?
-<!-- #SQUARK live! feat! dev!
+<!-- #SQUARK live! dev!
 | dest = scriptures/integrals/how
 | capt = The Art & Strategy of Integration
 | index = scriptures / integrals / general
