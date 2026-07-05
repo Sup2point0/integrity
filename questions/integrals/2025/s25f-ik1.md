@@ -25,6 +25,11 @@ methods:
 ```
 
 
+## Notes
+
+This is technically abuse of notation. Treat all the $x$-s as the same variable.
+
+
 ## Hints
 
 ### 1
