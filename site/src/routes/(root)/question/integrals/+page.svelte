@@ -72,6 +72,12 @@ let sections = page.url.searchParams.getAll("section");
   </div>
 </Section>
 
+{#if question?.notes}
+  <Section title="Notes" closed={!sections.includes("notes")}>
+    <RenderBlock source={question.notes} />
+  </Section>
+{/if}
+
 {#if question?.hints}
   <Section title="Hints" closed={!sections.includes("hints")}>
     {#each Object.entries(question.hints) as [hint, source]}
