@@ -1,5 +1,5 @@
 # Conjecture: You Know Haskell
-<!-- #SQUARK live! opin! dev!
+<!-- #SQUARK live! feat! opin!
 | dest = scriptures/special/haskell-conjecture
 | capt = I’ll show you how you already know much of the Haskell functional programming language!
 | index = scriptures / special
