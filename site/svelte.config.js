@@ -42,7 +42,7 @@ const svelte_config =
     },
     prerender: {
       handleHttpError: "warn",
-      handleMissingId: "ignore",
+      handleMissingId: "warn",
       entries: [
         "/",
         "/speedrun/finish",
