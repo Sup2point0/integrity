@@ -39,13 +39,16 @@ let { text, pict, link, intern, action, disabled, children }: Props = $props();
     {@render content()}
   </button>
 
-{:else}
+{:else if link || intern}
   <a class="clicky"
     class:disabled
     href={link || `${base}/${intern}`}
   >
     {@render content()}
   </a>
+
+{:else}
+  {@const _ = console.warn("Integrity: <Clicky> received no link")}
 
 {/if}
 

@@ -75,7 +75,7 @@ const plugins = [
     {@render block(source)}
 
   {:else}
-    {@const _ = console.warn("Integrity: `<RenderBlock>` received nothing to render")}
+    {@const _ = console.warn("Integrity: <RenderBlock> received nothing to render")}
 
   {/if}
 </div>
