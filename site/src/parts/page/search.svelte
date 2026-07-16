@@ -26,7 +26,7 @@ onMount(() => {
     open = true;
 
     let search_tags = page.url.searchParams.getAll("tag");
-    if (search_tags) {
+    if (search_tags.length > 0) {
       tags_expanded = true;
       setTimeout(() => {
         for (let tag of search_tags) {
@@ -36,7 +36,7 @@ onMount(() => {
     }
     
     let search_methods = page.url.searchParams.getAll("method");
-    if (search_methods) {
+    if (search_methods.length > 0) {
       methods_expanded = true;
       setTimeout(() => {
         for (let method of search_methods) {
