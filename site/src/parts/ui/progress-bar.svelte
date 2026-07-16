@@ -15,7 +15,7 @@ interface Props {
 let { value, total = 1 }: Props = $props();
 
 
-let frac = $derived(value / total);
+let frac = $derived(value / (total === 0 ? 1 : total));
 
 let live = $state(false);
 let self: HTMLElement;
