@@ -243,7 +243,7 @@ export class SearchPrefs
           break;
         
         case "name":
-          out.sort((prot, deut) => (prot.title && deut.title) ? prot.title.localeCompare(deut.title) : -1);
+          out.sort((prot, deut) => (prot.title ?? "").localeCompare(deut.title ?? ""));
           break;
 
         case "diff":
