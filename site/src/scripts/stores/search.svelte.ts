@@ -211,9 +211,9 @@ export class SearchPrefs
     /* string matching is heavy, so do this after filtering as much as we can */
     if (this.query) {
       let query = this.query.toLowerCase();
-      let limit = Math.max(Math.round((1.44 ** -query.length) * questions.length), 2);
+      let limit = Math.round((1.44 ** -query.length) * questions.length);
   
-      let matches = fuzz.extract(query, questions, {
+      let matches = fuzz.extract(query, out, {
         scorer: (query, q) => (
           q._match ? 
           Math.max(...q._match.map(
@@ -221,7 +221,7 @@ export class SearchPrefs
           ))
           : 0
         ),
-        limit,
+        limit: Math.max(limit, 2),
       });
 
       if (limit < 2 && matches[0][1] < 50) {
