@@ -3,6 +3,12 @@
 An embedded Desmos window that handles initialisation when the element scrolls into view.
 -->
 
+<script module>
+
+declare let Desmos: any;
+
+</script>
+
 <script lang="ts">
 
 import type { Block, int } from "#scripts/types";
@@ -53,7 +59,7 @@ let desmos: any = $state();
 let is_loading: boolean = $state(true);
 
 /** Message to show the user, if loading the Desmos embed failed. */
-let error_message: string | undefined = $state();
+let error_message: string | null | undefined = $state();
 
 /** Element to load the Desmos embed into. */
 let root: HTMLElement;
@@ -66,10 +72,10 @@ onMount(() => {
   setTimeout(() => {
     new IntersectionObserver(entries => {
       for (let entry of entries) {
-        if (entry.isIntersecting) {
-          if (is_loading || error_message) {
-            load_desmos();
-          }
+        if (!entry.isIntersecting) return;
+
+        if (is_loading || error_message !== undefined) {
+          try_load_desmos();
         }
       }
     }).observe(root);
@@ -97,30 +103,27 @@ function* col_picker()
   }
 }
 
-function load_desmos()
+function try_load_desmos(tries: int = 0)
 {
-  for (let tries = 0; tries < 3; tries++) {
-    let ok = try_load_desmos();
-    
-    if (ok) {
-      error_message = undefined;
-      break;
-    }
+  if (tries > 3) {
+    error_message = `Failed to load after ${tries} retries`;
+  }
+  let ok = load_desmos();
 
-    console.error("Failed to load Desmos embed, retrying...");
-
-    if (tries >= 3 && !error_message) {
-      error_message = `Failed after ${tries} retries`;
-      break;
-    }
-
-    continue;
+  if (ok) {
+    error_message = undefined;
+    is_loading = false;
+    return;
   }
 
-  is_loading = false;
+  tries++;
+
+  console.error(`Failed to load Desmos embed, retrying in ${tries} seconds...`);
+
+  setTimeout(() => try_load_desmos(tries), tries * 1000);
 }
 
-function try_load_desmos(): boolean
+function load_desmos(): boolean
 {
   try {
     Desmos;
