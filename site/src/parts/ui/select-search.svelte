@@ -48,7 +48,7 @@ function filter_suggestions(): string[]
 <div class="container">
 
   <search>
-    <button class="select" class:open
+    <div class="select" class:open
       onkeydown={e => {
         if (e.key === "Enter" || e.key === " ") { open = !open; }
       }}
@@ -66,7 +66,7 @@ function filter_suggestions(): string[]
       />
 
       <img class="arrow" alt="/" src="{base}/arrow.svg" />
-    </button>
+    </div>
 
     <Clicky action={() => onselect(value)}>
       Go
@@ -80,7 +80,10 @@ function filter_suggestions(): string[]
     <li class="option" class:active={value === val}
       onclick={() => { value = val; }}
       onkeydown={e => {
-        if (e.key === "Enter" || e.key === " ") { value = val; }
+        if (e.key === " " || e.key === "Enter") {
+          value = val;
+          e.preventDefault();
+        }
       }}
       tabindex={0}
     >
@@ -113,8 +116,8 @@ search {
   column-gap: 0.5em;
 }
 
-button.select {
-  padding: 0.5em 0.8em;
+.select {
+  padding: 0.25em 0.8em 0.25em 0.5em;
   background: light-dark(white, black);
   border: 1px solid $col-line;
   border-radius: 0.5em;
