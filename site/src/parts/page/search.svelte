@@ -228,7 +228,7 @@ onMount(() => {
             value={!unchecked_exclude}
             toggle={() => {
               $search.exclude = Object.fromEntries(
-                Object.entries($search.include).map(
+                Object.entries($search.exclude).map(
                   ([prop, state]) => [prop, unchecked_exclude]
                 )
               );
