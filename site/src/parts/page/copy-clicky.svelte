@@ -21,10 +21,11 @@ let copied = $state(false);
 
 
 <button class="copy"
-  onclick={() => {
+  onclick={async () => {
     if (value) {
-      navigator.clipboard.writeText(value);
+      await navigator.clipboard.writeText(value);
       copied = true;
+      setTimeout(() => { copied = false; }, 2000);
     }
   }}
 >
