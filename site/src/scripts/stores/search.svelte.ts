@@ -4,7 +4,7 @@
 
 import sample from "@stdlib/random-sample";
 import * as fuzz from "fuzzball";
-import { persisted, type Serializer } from "svelte-persisted-store";
+import { persisted } from "svelte-persisted-store";
 
 import { get } from "svelte/store";
 
@@ -84,14 +84,14 @@ export class SearchPrefs
   to_json(): object
   {
     return {
-      include: this.include,
-      exclude: this.exclude,
-      show: this.show,
-      buttons: this.buttons,
-      view: this.view,
-      effects: this.effects,
-      sort: this.sort,
-      reverse: this.reverse,
+      include:  this.include,
+      exclude:  this.exclude,
+      show:     this.show,
+      buttons:  this.buttons,
+      view:     this.view,
+      effects:  this.effects,
+      sort:     this.sort,
+      reverse:  this.reverse,
       expanded: this.expanded,
     }
   }
@@ -104,10 +104,10 @@ export class SearchPrefs
     if (data.show) Object.assign(this.show, data.show);
     if (data.buttons) Object.assign(this.buttons, data.buttons);
     
-    this.view = data.view ?? this.view;
-    this.effects = data.effects ?? this.effects;
-    this.sort = data.sort ?? this.sort;
-    this.reverse = data.reverse ?? this.reverse;
+    this.view     = data.view     ?? this.view;
+    this.effects  = data.effects  ?? this.effects;
+    this.sort     = data.sort     ?? this.sort;
+    this.reverse  = data.reverse  ?? this.reverse;
     this.expanded = data.expanded ?? this.expanded;
 
     return this;
@@ -127,7 +127,7 @@ export class SearchPrefs
       this.methods[method] = false;
     }
 
-    this.query = "";  // NOTE just to trigger reactivity
+    this.query = "";  // NOTE: Just to trigger reactivity
   }
 
   /** Apply the filters to the given list of questions. */
