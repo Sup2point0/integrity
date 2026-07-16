@@ -195,9 +195,9 @@ export class SearchPrefs
       out = out.filter(q => !q.flags?.includes("feat"));
     }
   
-    if (this.include.hints) {
+    if (this.include["has hints"]) {
       out = out.filter(q => q.hints?.length);
-    } else if (this.exclude.hints) {
+    } else if (this.exclude["has hints"]) {
       out = out.filter(q => !q.hints?.length);
     }
 
