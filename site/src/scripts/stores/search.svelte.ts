@@ -303,21 +303,21 @@ export class SearchPrefs
 }
 
 
-class SearchPrefsSerializer implements Serializer<SearchPrefs>
-{
-  parse(data: string): SearchPrefs
+/** Global search options. */
+export const search = persisted(
+  "integrity.search",
+  new SearchPrefs(),
   {
-    return new SearchPrefs().set_from_json(JSON.parse(data));
+    serializer: {
+      parse: data => {
+        try {
+          return new SearchPrefs().set_from_json(JSON.parse(data));
+        } catch {
+          return new SearchPrefs();
+        }
+      },
+      stringify: data => JSON.stringify(data.to_json()),
+    },
+    syncTabs: true,
   }
-
-  stringify(data: SearchPrefs): string
-  {
-    return JSON.stringify(data.to_json());
-  }
-}
-
-/** Search options for the current page. */
-export const search = persisted("integrity.search", new SearchPrefs(), {
-  serializer: new SearchPrefsSerializer(),
-  syncTabs: true,
-});
+);
