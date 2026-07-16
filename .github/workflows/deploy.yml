@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - '**.yml'
+      - 'changelog.md'
   schedule:
     - cron: '00 2 4,20 * *'
 
