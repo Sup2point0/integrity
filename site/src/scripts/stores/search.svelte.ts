@@ -179,13 +179,13 @@ export class SearchPrefs
 
     if (this.include.flagged) {
       out = out.filter(q => data.flagged.has(q.shard));
-    } else if (this.exclude.solved) {
+    } else if (this.exclude.flagged) {
       out = out.filter(q => !data.flagged.has(q.shard));
     }
 
     if (this.include.starred) {
       out = out.filter(q => data.starred.has(q.shard));
-    } else if (this.exclude.solved) {
+    } else if (this.exclude.starred) {
       out = out.filter(q => !data.starred.has(q.shard));
     }
 
