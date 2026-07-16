@@ -158,7 +158,7 @@ a {
     backdrop-filter: blur(12px);
   }
   
-  .nav-link:not(.disabled):hover &,
+  .nav-link:not(.disabled):where(:hover, :focus-visible, :focus-within) &,
   &:hover {
     visibility: visible;
     opacity: 1;
