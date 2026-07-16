@@ -56,6 +56,7 @@ function filter_suggestions(): string[]
       onfocus={() => { open = true; }}
       onmouseleave={() => { open = false; }}
       onfocusout={() => { open = false; }}
+      role="search"
     >
       <input type="search"
         bind:value
@@ -86,6 +87,7 @@ function filter_suggestions(): string[]
         }
       }}
       tabindex={0}
+      role="listitem"
     >
       {val}
     </li>

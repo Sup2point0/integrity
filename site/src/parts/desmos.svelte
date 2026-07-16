@@ -39,7 +39,7 @@ let {
 }: Props = $props();
 
 
-// @svelte-ignore state_referenced_locally
+// svelte-ignore state_referenced_locally
 let config = {
   expressions: controls, expressionsCollapsed: true,
   graphPaper: false, showGrid: controls,
