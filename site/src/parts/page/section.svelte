@@ -32,7 +32,12 @@ let open = $state(!closed);
 <section class={ctx}>
   <div class="row"
     onclick={() => { open = !open; }}
-    onkeydown={e => { if (e.key.toLowerCase() === "space") open = !open; }}
+    onkeydown={e => {
+      if (e.key === " " || e.key === "Enter") {
+        open = !open;
+        e.preventDefault();
+      }
+    }}
     tabindex={0}
     role="button"
   >

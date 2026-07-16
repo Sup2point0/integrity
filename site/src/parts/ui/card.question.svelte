@@ -44,6 +44,7 @@ function check_valid(data: Array<any>): boolean
   {#if $search.show.difficulties && question.difficulty}
     <div class="difficulty-indicator {question.difficulty}"
       title={question.difficulty.toUpperCase()}
+      aria-label={question.difficulty.toUpperCase()}
       transition:fade={{ duration: 250 }}
     >
       {#if style === "row"}
