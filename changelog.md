@@ -10,6 +10,11 @@
 <div align="center" style="text-align: center;"> <h2> 2026 </h2> </div>
 
 
+## 16 July
+
+A whole host of behind-the-scene fixes should mean your experience on *Integrity* is even smoother ;)
+
+
 ## 21 March
 
 Desmos embeds have (finally!) arrived to all pages on *Integrity*!
