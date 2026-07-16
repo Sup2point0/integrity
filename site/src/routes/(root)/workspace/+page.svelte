@@ -1,3 +1,9 @@
+<script module>
+
+declare let Desmos: any;
+
+</script>
+
 <script lang="ts">
 
 import { presets, inject_question } from "./presets";
@@ -36,8 +42,9 @@ let desmos: any | false | null = $state(null);
 let last_reset: number = Date.now();
 
 
-onMount(() => {
-  try_load_desmos();
+onMount(() => {  
+  let timeout = try_load_desmos();
+  return () => clearTimeout(timeout);
 });
 
 /** Try load the question from the shard provided in the URL params. */
@@ -63,8 +70,9 @@ function try_load_desmos(i: number = 0)
       document.getElementById("desmos-window")
     );
     try_process_url();
-  } catch {
-    setTimeout(
+  }
+  catch {
+    return setTimeout(
       () => try_load_desmos(++i),
       100 + i*i * 100
     );
