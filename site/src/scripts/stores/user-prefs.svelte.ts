@@ -4,6 +4,8 @@
 
 import { persisted, type Serializer } from "svelte-persisted-store";
 
+import { Topic, type Shard } from "#scripts/types";
+
 import { SvelteSet } from "svelte/reactivity";
 
 
@@ -16,22 +18,23 @@ export class UserPrefs
   visits: number = $state(0);
 
   /** Shards of questions whose pages have been visited before. */
-  seen: Set<string> = new Set();
+  seen = new SvelteSet<Shard>();
 
   /** Shards of questions marked as solved. */
-  solved: Set<string> = new Set();
+  solved = new SvelteSet<Shard>();
 
-  /** shards of flagged questions. */
-  flagged: Set<string> = new Set();
+  /** Shards of flagged questions. */
+  flagged = new SvelteSet<Shard>();
 
   /** Shards of starred questions. */
-  starred: Set<string> = new Set();
+  starred = new SvelteSet<Shard>();
 
-  skipped: SvelteSet<string> = $state(new SvelteSet());
-  marked: SvelteSet<string> = $state(new SvelteSet());
+  skipped = new SvelteSet<Shard>();
+
+  marked = new SvelteSet<Shard>();
 
   /** Preset of the Workspace Desmos window. */
-  "desmos-preset": "integrals" | "complete-square" | null = $state("integrals");
+  "desmos-preset": Topic.INTEGRALS | Topic.COMPLETE_SQUARE | null = $state(Topic.INTEGRALS);
 
   nav: boolean = $state(true);
 
@@ -59,15 +62,15 @@ export class UserPrefs
   /** Load attributes from `localStorage` JSON. */
   set_from_json(data: Partial<UserPrefs>): UserPrefs
   {
-    this.saved   = data.saved ?? this.saved;
+    this.saved   = data.saved  ?? this.saved;
     this.visits  = data.visits ?? this.visits;
-    this.seen    = new Set(data.seen ?? this.seen);
-    this.solved  = new Set(data.solved ?? this.solved);
-    this.flagged = new Set(data.flagged ?? this.flagged);
-    this.starred = new Set(data.starred ?? this.starred);
+    this.seen    = new SvelteSet(data.seen ?? this.seen);
+    this.solved  = new SvelteSet(data.solved ?? this.solved);
+    this.flagged = new SvelteSet(data.flagged ?? this.flagged);
+    this.starred = new SvelteSet(data.starred ?? this.starred);
     this.skipped = new SvelteSet(data.skipped ?? this.skipped);
     this.marked  = new SvelteSet(data.marked ?? this.marked);
-    this.nav     = data.nav ?? this.nav;
+    this.nav     = data.nav   ?? this.nav;
     this.style   = data.style ?? this.style;
     this["desmos-preset"] = data["desmos-preset"] ?? this["desmos-preset"];
 

@@ -44,11 +44,9 @@ function safe_exec(func: () => any)
     value={() => $userprefs.solved.has(shard)}
     enable={safe_exec(() => {
       $userprefs.solved.add(shard);
-      $userprefs.solved = $userprefs.solved;
     })}
     disable={safe_exec(() => {
       $userprefs.solved.delete(shard);
-      $userprefs.solved = $userprefs.solved;
     })}
   >
     <TickIcon />
@@ -61,11 +59,9 @@ function safe_exec(func: () => any)
     value={() => $userprefs.flagged.has(shard)}
     enable={safe_exec(() => {
       $userprefs.flagged.add(shard);
-      $userprefs.flagged = $userprefs.flagged;
     })}
     disable={safe_exec(() => {
       $userprefs.flagged.delete(shard);
-      $userprefs.flagged = $userprefs.flagged;
     })}
   >
     <FlagIcon />
@@ -78,11 +74,9 @@ function safe_exec(func: () => any)
     value={() => $userprefs.starred.has(shard)}
     enable={safe_exec(() => {
       $userprefs.starred.add(shard);
-      $userprefs.starred = $userprefs.starred;
     })}
     disable={safe_exec(() => {
       $userprefs.starred.delete(shard);
-      $userprefs.starred = $userprefs.starred;
     })}
   >
     <StarIcon />

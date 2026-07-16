@@ -60,10 +60,8 @@ function check_integrity()
   } else {
     if (checks > 3 && Math.random() > 0.9) {
       $userprefs.skipped.add("b");
-      $userprefs.skipped = $userprefs.skipped;
       confirm("Mate, are you having a bubble bath?");
       $userprefs.marked.add("B");
-      $userprefs.marked = $userprefs.marked;
     } else {
       confirm("No errors found, looking good!");
     }
@@ -83,8 +81,6 @@ function fix_integrity()
   $userprefs.flagged.delete(undefined);
   $userprefs.starred.delete(null);
   $userprefs.starred.delete(undefined);
-
-  $userprefs = $userprefs;
 }
 
 </script>

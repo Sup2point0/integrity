@@ -73,7 +73,7 @@ export class Question
       this.topic = Topic[data.topic.toUpperCase().replaceAll("-", "_")];
     }
     this.question = data.question && data.question[0];
-    this.date_display = data.date.toString();
+    this.date_display = data.date;
     try {
       this.date = new Date(data.date);
     } catch {

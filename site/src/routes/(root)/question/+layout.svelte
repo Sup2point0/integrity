@@ -43,7 +43,6 @@ function load_question()
   }
 
   $userprefs.seen.add(question.shard);
-  $userprefs = $userprefs;
 
   page_data.question = question;
 }
