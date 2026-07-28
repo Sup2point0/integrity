@@ -6,8 +6,6 @@ on:
     paths:
       - '**.yml'
       - 'changelog.md'
-  schedule:
-    - cron: '00 2 4,20 * *'
 
 jobs:
   build:
@@ -59,11 +57,10 @@ jobs:
         run: |
           npm run build
 
-      # FIXME awaiting patch
-      # - name: 'svelte / npm run test'
-      #   run: |
-      #     npx playwright install
-      #     npm run test
+      - name: 'svelte / npm run test'
+        run: |
+          npx playwright install
+          npm run test
 
       - name: 'github / upload artifacts'
         uses: actions/upload-pages-artifact@v3
