@@ -13,9 +13,9 @@ jobs:
     defaults:
       run:
         working-directory: './site/'
-        
+
     steps:
-      - name: 'github / checkout'
+      - name: 'git / checkout'
         uses: actions/checkout@v7
         with:
           submodules: recursive
@@ -29,7 +29,7 @@ jobs:
       - name: 'squarkdown'
         run: |
           npm run squarkx
-      
+
       - name: 'ruby / setup / prep'
         uses: ruby/setup-ruby@v1
         with:
@@ -43,7 +43,7 @@ jobs:
       - name: 'node / setup'
         uses: actions/setup-node@v6
         with:
-          node-version: 'latest'
+          node-version: 26
           cache: 'npm'
           cache-dependency-path: './site/package-lock.json'
 
@@ -82,4 +82,4 @@ jobs:
     steps:
       - name: 'github / deploy'
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
