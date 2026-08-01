@@ -24,7 +24,6 @@ const mdsvex_config =
     rehypeSlug,
     correct_hast_tree,
     rehypeKatex,
-    // inject_desmos,
   ],
 };
 
