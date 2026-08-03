@@ -7,9 +7,7 @@ A search bar which expands to show filters.
 
 import { search } from "#scripts/stores";
 
-import Clicky from "#parts/ui/clicky.svelte";
-import Toggle from "#parts/ui/toggle.svelte";
-import Select from "#parts/ui/select-dropdown.svelte";
+import { Clicky, Toggle, Select } from "#parts/ui";
 
 import { fade } from "svelte/transition";
 import { page } from "$app/state";

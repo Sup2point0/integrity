@@ -8,9 +8,7 @@ import { userprefs } from "#scripts/stores";
 import * as utils from "#scripts/utils";
 import { Topic } from "#scripts/types";
 
-import Clicky from "#parts/ui/clicky.svelte";
-import Checkbox from "#parts/ui/checkbox.svelte";
-import ProgressBar from "#parts/ui/progress-bar.svelte";
+import { Clicky, Checkbox, ProgressBar } from "#parts/ui";
 
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";

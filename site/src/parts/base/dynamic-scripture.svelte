@@ -10,7 +10,7 @@ import type { Block, DynamicScripture } from "#scripts/types";
 
 import Desmos from "#parts/desmos.svelte";
 import DesmosAPI from "#parts/desmos-api.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
+import { Clicky } from "#parts/ui";
 
 import Meta from "#parts/page/meta.svelte";
 import Header from "#parts/core/header.svelte";

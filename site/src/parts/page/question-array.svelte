@@ -9,7 +9,7 @@ import Site from "#scripts/site";
 
 import type { Question } from "#src/scripts/types";
 
-import QuestionCard from "#parts/ui/card.question.svelte";
+import { QuestionCard } from "#parts/ui";
 
 
 interface Props {

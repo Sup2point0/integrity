@@ -13,9 +13,7 @@ import { userprefs } from "#scripts/stores";
 import { Question, Topic, type Shard } from "#scripts/types";
 
 import DesmosAPI from "#parts/desmos-api.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
-import Select from "#parts/ui/select-dropdown.svelte";
-import SelectSearch from "#parts/ui/select-search.svelte";
+import { Clicky, Select, SelectSearch } from "#parts/ui";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";

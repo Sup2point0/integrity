@@ -1,19 +1,15 @@
 <script lang="ts">
 
-import Site from "#scripts/site";
 import { speedrun } from "#src/scripts/stores";
 import { Topic } from "#scripts/types";
 import type { InternalError } from "#scripts/types";
 
-import Toggle from "#parts/ui/toggle.svelte";
-import SelectDropdown from "#parts/ui/select-dropdown.svelte";
-import Checkbox from "#parts/ui/checkbox.svelte";
+import { Clicky, Toggle, Select, Checkbox } from "#parts/ui";
 import TickIcon from "#parts/svg/tick-icon.svelte";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
 
 import { onMount, untrack } from "svelte";
 import { goto } from "$app/navigation";
@@ -63,7 +59,7 @@ onMount(() => {
         <p> Pick the type of questions to speedrun. </p>
       </th>
       <td>
-        <SelectDropdown bind:value={$speedrun.topic} options={{
+        <Select bind:value={$speedrun.topic} options={{
           "Differentiation": Topic.DERIVATIVES,
           "Integrals":       Topic.INTEGRALS,
           "Graph Drawing":   Topic.GRAPH_DRAWING,
@@ -167,7 +163,7 @@ onMount(() => {
         <p> Use this to prevent downtime between questions from adding to your run time. </p>
       </th>
       <td>
-        <SelectDropdown bind:value={$speedrun.prefs.pause_onsubmit} options={{
+        <Select bind:value={$speedrun.prefs.pause_onsubmit} options={{
           "Always": "always",
           "Only When Correct": "when-correct",
           "Never": false,
@@ -180,7 +176,7 @@ onMount(() => {
         <h4> Reveal correct answer if incorrect </h4>
       </th>
       <td>
-        <SelectDropdown bind:value={$speedrun.prefs.reveal_answer_onsubmit} options={{
+        <Select bind:value={$speedrun.prefs.reveal_answer_onsubmit} options={{
           "Always": "always",
           "After 2 Incorrect Answers": "after-2",
           "Never": false,

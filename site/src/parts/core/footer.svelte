@@ -4,7 +4,7 @@
 
 import { duality, Duality } from "#scripts/stores";
 
-import Link from "#parts/ui/link.svelte";
+import { Link } from "#parts/ui";
 
 import { base } from "$app/paths";
 

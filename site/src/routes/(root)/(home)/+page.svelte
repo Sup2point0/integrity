@@ -12,10 +12,8 @@ import Header from "#parts/core/header.svelte";
 import ArticleArray from "#parts/page/article-array.svelte";
 import QuestionArray from "#parts/page/question-array.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
-import Card from "#parts/ui/card.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
+import { Card, Clicky, Link } from "#parts/ui";
 import Line from "#parts/page/line.svelte";
-import Link from "#parts/ui/link.svelte";
 
 import { onMount } from "svelte";
 import { expoInOut } from "svelte/easing";

@@ -2,8 +2,7 @@
 
 import Site from "#scripts/site";
 
-import Card from "#parts/ui/card.svelte";
-import CardsContainer from "#parts/ui/container.cards.svelte";
+import { Card, CardsContainer } from "#parts/ui";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";

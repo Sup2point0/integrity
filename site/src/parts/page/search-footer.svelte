@@ -7,7 +7,7 @@ A footer at the bottom of search results showing how many results were found.
   
 import { search } from "#scripts/stores";
 
-import Clicky from "#parts/ui/clicky.svelte";
+import { Clicky } from "#parts/ui";
 
 
 interface Props {

@@ -7,7 +7,7 @@ Displays a list of article cards.
 
 import type { Page } from "#scripts/types";
 
-import ArticleCard from "#parts/ui/card.article.svelte";
+import { ArticleCard } from "#parts/ui";
 
 
 interface Props {

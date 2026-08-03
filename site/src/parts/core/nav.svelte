@@ -6,8 +6,7 @@ import { userprefs, duality, Duality } from "#scripts/stores";
 import { pick_random_question, pick_random_scripture } from "#scripts/utils";
 
 import NavLink from "#parts/core/nav.link.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
-import Link from "#parts/ui/link.svelte";
+import { Clicky, Link } from "#parts/ui";
 import GithubIcon from "#parts/svg/github-icon.svelte";
 
 import { base } from "$app/paths";

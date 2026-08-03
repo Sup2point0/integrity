@@ -7,7 +7,7 @@ Buttons for solving, flagging or starred questions.
 
 import { userprefs } from "#scripts/stores";
 
-import Checkbox from "#parts/ui/checkbox.svelte";
+import { Checkbox } from "#parts/ui";
 import TickIcon from "#parts/svg/tick-icon.svelte";
 import FlagIcon from "#parts/svg/flag-icon.svelte";
 import StarIcon from "#parts/svg/star-icon.svelte";

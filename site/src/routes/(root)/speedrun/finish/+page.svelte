@@ -3,9 +3,7 @@
 import { speedrun } from "#scripts/stores";
 import * as utils from "#scripts/utils";
 
-import Clicky from "#parts/ui/clicky.svelte";
-import ProgressBar from "#parts/ui/progress-bar.svelte";
-import Tag from "#parts/ui/tag.svelte";
+import { Clicky, ProgressBar, Tag } from "#parts/ui";
 
 import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
