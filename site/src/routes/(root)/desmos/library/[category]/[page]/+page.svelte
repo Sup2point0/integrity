@@ -2,9 +2,7 @@
 
 import type { Page } from "#scripts/types";
 
-import Header        from "#parts/core/header.svelte";
-import Meta          from "#parts/page/meta.svelte";
-import Breadcrumbs   from "#parts/page/breadcrumbs.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 import ArticleFooter from "#parts/page/footer.article.svelte";
 
 import { page } from "$app/state";

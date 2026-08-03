@@ -9,10 +9,7 @@ import * as utils from "#scripts/utils";
 import { Topic } from "#scripts/types";
 
 import { Clicky, Checkbox, ProgressBar } from "#parts/ui";
-
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import Meta from "#parts/page/meta.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 
 let checking = $state(false);

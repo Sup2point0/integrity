@@ -11,10 +11,8 @@ import type { Block, DynamicScripture } from "#scripts/types";
 import Desmos from "#parts/desmos.svelte";
 import DesmosAPI from "#parts/desmos-api.svelte";
 import { Clicky } from "#parts/ui";
-
-import Meta from "#parts/page/meta.svelte";
-import Header from "#parts/core/header.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
+import { RenderBlock } from "#parts/page";
+import { Meta, Header } from "#parts/core";
 
 import { untrack } from "svelte";
 import { slide, fade } from "svelte/transition";

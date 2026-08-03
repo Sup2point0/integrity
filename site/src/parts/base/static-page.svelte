@@ -7,13 +7,8 @@ The main displayed content for a static article page.
 
 import type { url } from "#scripts/types";
 
-import Header        from "#parts/core/header.svelte";
-import InjectDesmos  from "#parts/core/inject-desmos.svelte";
-import Meta          from "#parts/page/meta.svelte";
-import Breadcrumbs   from "#parts/page/breadcrumbs.svelte";
-import ArticleFooter from "#parts/page/footer.article.svelte";
-import ArticleArray  from "#parts/page/article-array.svelte";
-import PreReading    from "#parts/page/pre-reading.svelte";
+import { Meta, Breadcrumbs, Header, InjectDesmos } from "#parts/core";
+import { ArticleFooter, ArticleArray, PreReading } from "#parts/page";
 
 import { page } from "$app/state";
 

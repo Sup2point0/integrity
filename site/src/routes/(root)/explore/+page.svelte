@@ -6,9 +6,7 @@ import { pick_random_question, pick_random_scripture, capitalise } from "#script
 
 import Link from "#parts/ui/link.svelte";
 
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import Meta from "#parts/page/meta.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 import { base } from "$app/paths";
 import { goto } from "$app/navigation";

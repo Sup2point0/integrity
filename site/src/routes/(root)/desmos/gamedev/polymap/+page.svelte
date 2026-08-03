@@ -2,9 +2,7 @@
 
 import { dyna_scriptures } from "#scripts/site";
 
-import Header      from "#parts/core/header.svelte";
-import Meta        from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 import Line        from "#parts/page/line.svelte";
 import Link        from "#parts/ui/link.svelte";
 

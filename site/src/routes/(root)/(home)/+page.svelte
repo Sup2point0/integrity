@@ -8,12 +8,9 @@ import type { Question, Page } from "#scripts/types";
 import Changes from "./changes.svx";
 import { pick_trivia, type Trivia } from "./trivia.ts";
 
-import Header from "#parts/core/header.svelte";
-import ArticleArray from "#parts/page/article-array.svelte";
-import QuestionArray from "#parts/page/question-array.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
+import { Header } from "#parts/core";
+import { ArticleArray, Line, QuestionArray, RenderBlock } from "#parts/page";
 import { Card, Clicky, Link } from "#parts/ui";
-import Line from "#parts/page/line.svelte";
 
 import { onMount } from "svelte";
 import { expoInOut } from "svelte/easing";

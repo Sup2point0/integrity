@@ -2,8 +2,7 @@
 
 import { userprefs, search } from "#scripts/stores";
 
-import Nav from "#parts/core/nav.svelte";
-import Footer from "#parts/core/footer.svelte";
+import { Nav, Footer } from "#parts/core";
 
 import { page } from "$app/state";
 

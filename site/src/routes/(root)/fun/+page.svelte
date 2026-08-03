@@ -3,9 +3,7 @@
 
 import Site from "#src/scripts/site";
 
-import Header      from "#parts/core/header.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Meta        from "#parts/page/meta.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 import { Card, CardsContainer } from "#parts/ui";
 
 </script>
