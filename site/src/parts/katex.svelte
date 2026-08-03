@@ -14,15 +14,13 @@ import { onMount } from "svelte";
 
 interface Props {
   text: Latex | undefined;
-  inline?: boolean;
   client_render?: boolean;
 }
 
-let { text, inline = false, client_render = false }: Props = $props();
+let { text, client_render = false }: Props = $props();
 
 
 const opts = {
-  displayMode: !inline,
   throwOnError: false,
 };
 
@@ -31,7 +29,8 @@ const opts = {
 let self: HTMLElement | null = null;
 
 onMount(() => {
-  if (!text || !self) return;
+  if (text == undefined) return;
+  if (self == undefined) return;
   
   katex.render(text, self, opts);
 });

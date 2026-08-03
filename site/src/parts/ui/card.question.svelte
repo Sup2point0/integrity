@@ -57,7 +57,7 @@ function check_valid(data: Array<any>): boolean
     <div class="question" transition:fade={{ duration: 250 }}>
 
       {#if latex}
-        <Katex text={latex} inline={false} client_render={true} />
+        <Katex text={latex} client_render={true} />
       {/if}
 
       {#if desmos}
@@ -82,7 +82,7 @@ function check_valid(data: Array<any>): boolean
       {:else if question.topic === "addvent"}
         <!-- TODO decide what to show -->
       {:else}
-        <Katex text={question.question?.content} inline={false} client_render={true} />
+        <Katex text={question.question?.content} client_render={true} />
       {/if}
     </div>
   {/if}
