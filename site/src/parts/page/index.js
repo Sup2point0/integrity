@@ -1,7 +1,6 @@
 export { default as ArticleArray   } from "./article-array.svelte";
 export { default as ArticleBanners } from "./article-banners.svelte";
 export { default as Banner         } from "./banner.svelte";
-export { default as CopyClicky     } from "./copy-clicky.svelte";
 export { default as ArticleFooter  } from "./footer.article.svelte";
 export { default as Line           } from "./line.svelte";
 export { default as PreReading     } from "./pre-reading.svelte";

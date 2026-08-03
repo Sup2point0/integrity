@@ -8,6 +8,7 @@ export { default as Card           } from "./card.svelte";
 export { default as Checkbox       } from "./checkbox.svelte";
 export { default as Clicky         } from "./clicky.svelte";
 export { default as CardsContainer } from "./container.cards.svelte";
+export { default as CopyClicky     } from "./copy-clicky.svelte";
 export { default as Link           } from "./link.svelte";
 export { default as ProgressBar    } from "./progress-bar.svelte";
 export { default as Select         } from "./select-dropdown.svelte";
