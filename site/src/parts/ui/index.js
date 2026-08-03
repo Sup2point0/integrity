@@ -1,3 +1,7 @@
+/**
+ * Isolated components heavily reusable across the whole site in all sorts of contexts.
+ */
+
 export { default as ArticleCard    } from "./card.article.svelte";
 export { default as QuestionCard   } from "./card.question.svelte";
 export { default as Card           } from "./card.svelte";
