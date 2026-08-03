@@ -4,7 +4,7 @@ import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 import { Topic } from "#scripts/types";
 
-import QuestionCard from "#parts/ui/card.question.svelte";
+import { QuestionCard } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 import Search from "#parts/page/search.svelte";

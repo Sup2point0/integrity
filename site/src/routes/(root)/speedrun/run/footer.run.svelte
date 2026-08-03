@@ -3,7 +3,7 @@
 import { speedrun } from "#scripts/stores";
 import { display_time } from "#scripts/utils";
 
-import Tag from "#parts/ui/tag.svelte";
+import { Tag } from "#parts/ui";
 
 import { fade } from "svelte/transition";
 

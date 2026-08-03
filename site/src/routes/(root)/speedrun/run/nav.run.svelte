@@ -2,7 +2,7 @@
 
 import { speedrun } from "#scripts/stores";
 
-import Clicky from "#parts/ui/clicky.svelte";
+import { Clicky } from "#parts/ui";
 
 </script>
 

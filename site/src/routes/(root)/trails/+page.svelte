@@ -6,8 +6,8 @@ import Site from "#scripts/site";
 import { Topic } from "#scripts/types";
 
 import GraphBar from "./graph-bar.svelte";
-import Select from "#parts/ui/select-dropdown.svelte";
-import Tag from "#parts/ui/tag.svelte";
+import { Select } from "#parts/ui";
+import { Tag } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 import Banner from "#parts/page/banner.svelte";

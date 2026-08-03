@@ -3,7 +3,7 @@
 import { get_scriptures_of_topic } from "#scripts/site";
 import { Topic } from "#scripts/types";
 
-import Card from "#parts/ui/card.svelte";
+import { Card } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 

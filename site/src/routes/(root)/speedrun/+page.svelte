@@ -3,7 +3,7 @@
 import Site from "#scripts/site";
 import { speedrun } from "#scripts/stores";
 
-import Clicky from "#parts/ui/clicky.svelte";
+import { Clicky } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 

@@ -2,8 +2,8 @@
 
 import Content from "./~content.svx";
 
-import Card from "#parts/ui/card.svelte";
-import CardsContainer from "#parts/ui/container.cards.svelte";
+import { Card } from "#parts/ui";
+import { CardsContainer } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 import Line from "#parts/page/line.svelte";

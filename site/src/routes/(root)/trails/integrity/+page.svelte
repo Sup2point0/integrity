@@ -4,7 +4,7 @@ import Site from "#scripts/utils/site";
 
 import { sync } from "#scripts/utils/sync";
 
-import Toggle from "#parts/ui/toggle.svelte";
+import { Toggle } from "#parts/ui";
 
 import { onMount } from "svelte";
 import { fade } from "svelte/transition";
