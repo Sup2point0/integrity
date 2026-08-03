@@ -1,9 +1,6 @@
 <script>
-  
-import { fade, slide } from "svelte/transition";
-import { expoOut } from "svelte/easing";
 
-import Clicky from "#src/parts/ui/clicky.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
   
 import { onMount } from "svelte";
 import { base } from "$app/paths";
@@ -11,20 +8,24 @@ import { base } from "$app/paths";
 let { children } = $props();
 
 
-let scrollY = $state(0);
+let scroll_y = $state(0);
 
 onMount(() => {
-  window.addEventListener("scroll", () => {
-    scrollY = window.scrollY;
-  })
-})
+  window.addEventListener("scroll", sync_scroll);
+  return () => window.removeEventListener("scroll", sync_scroll);
+});
+
+function sync_scroll()
+{
+  scroll_y = window.scrollY;
+}
 
 </script>
 
 
 {@render children?.()}
 
-<div class="up" class:live={scrollY > 500}>
+<div class="up" class:live={scroll_y > 500}>
   <Clicky action={() => {
     window.scrollTo({ top: 200, behavior: "smooth" });
   }}>
