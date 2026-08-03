@@ -191,7 +191,7 @@ function fix_integrity()
     <div style="display: flex; gap: 1rem;">
       <Clicky text={checking ? "Checking..." : "Check Integrity"} action={() => {
         checking = true;
-        setTimeout(check_integrity, 0);
+        requestAnimationFrame(check_integrity);
       }} />
     
       {#if checks > 0}

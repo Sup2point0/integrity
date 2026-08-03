@@ -57,7 +57,7 @@ let options = $derived(
         {/key}
 
       {:else}
-        <Katex text={option.latex} inline={false} />
+        <Katex text={option.latex} />
 
       {/if}
     </button>

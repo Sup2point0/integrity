@@ -66,11 +66,11 @@ onMount(() => {
     for (let i = 0; i < 20; i++) {
       length.push([0, 1]);
     }
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       for (let i = 0; i < 20; i++) {
         length[i] = [Math.random(), Math.random()];
       }
-    }, 0);
+    });
 
     e.target?.remove();
   }} />

@@ -28,21 +28,23 @@ onMount(() => {
     let search_tags = page.url.searchParams.getAll("tag");
     if (search_tags.length > 0) {
       tags_expanded = true;
-      setTimeout(() => {
+
+      requestAnimationFrame(() => {
         for (let tag of search_tags) {
           $search.tags[tag] = true;
         }
-      }, 0);
+      });
     }
     
     let search_methods = page.url.searchParams.getAll("method");
     if (search_methods.length > 0) {
       methods_expanded = true;
-      setTimeout(() => {
+      
+      requestAnimationFrame(() => {
         for (let method of search_methods) {
           $search.methods[method] = true;
         }
-      }, 0);
+      });
     }
   }
 });
