@@ -24,7 +24,7 @@ let {
 }: Props = $props();
 
 
-let open = $state(!closed);
+let open = $derived(!closed);
 
 </script>
 

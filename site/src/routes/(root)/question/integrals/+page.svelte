@@ -7,17 +7,14 @@ import { Question } from "#scripts/types";
 import Katex from "#parts/katex.svelte";
 import { Clicky, CopyClicky, Tag } from "#parts/ui";
 
-import Meta from "#parts/core/meta.svelte";
-import Breadcrumbs from "#parts/core/breadcrumbs.svelte";
-import Section from "#parts/page/section.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
-import Line from "#parts/page/line.svelte";
+import { Breadcrumbs, Meta } from "#parts/core";
+import { Line, RenderBlock, Section } from "#parts/page";
 
 import { page } from "$app/state";
 
 
 let question: Question | null = $derived(page_data.question);
-let sections = page.url.searchParams.getAll("section");
+let sections = $derived(page.url.searchParams.getAll("section"));
 
 </script>
 

@@ -7,15 +7,15 @@ import Katex from "#parts/katex.svelte";
 import Desmos from "#parts/desmos.svelte";
 import DesmosAPI from "#parts/desmos-api.svelte";
 
-import { Tag } from "#parts/ui";
-import { CopyClicky, Line, RenderBlock, Section } from "#parts/page";
+import { CopyClicky, Tag } from "#parts/ui";
+import { Line, RenderBlock, Section } from "#parts/page";
 import { Meta, Breadcrumbs } from "#parts/core";
 
 import { page } from "$app/state";
 
 
 let question: Question | null = $derived(page_data.question);
-let sections = page.url.searchParams.getAll("section");
+let sections = $derived(page.url.searchParams.getAll("section"));
 
 </script>
 
