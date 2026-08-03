@@ -5,12 +5,8 @@ import * as utils from "#scripts/utils";
 
 import { Clicky, ProgressBar, Tag } from "#parts/ui";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import Line from "#parts/page/line.svelte";
-import Section from "#parts/page/section.svelte";
-import QuestionArray from "#parts/page/question-array.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
+import { Line, QuestionArray, Section } from "#parts/page";
 
 
 let seen = $derived(

@@ -1,7 +1,7 @@
 <script>
 
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import DynamicScriptureView from "#parts/base/dynamic-scripture.svelte";
+import { Breadcrumbs } from "#parts/core";
 
 import { page } from "$app/state";
 

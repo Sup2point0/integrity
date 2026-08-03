@@ -5,9 +5,7 @@ import Content from "./~content.svx";
 import Card from "#parts/ui/card.svelte";
 import CardsContainer from "#parts/ui/container.cards.svelte";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 import Line from "#parts/page/line.svelte";
 
 </script>

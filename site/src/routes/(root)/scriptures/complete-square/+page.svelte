@@ -5,9 +5,7 @@ import { Topic } from "#scripts/types";
 
 import Card from "#parts/ui/card.svelte";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 </script>
 

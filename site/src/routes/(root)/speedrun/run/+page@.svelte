@@ -16,7 +16,7 @@ import DesmosAPI from "#parts/desmos-api.svelte";
 import Katex from "#parts/katex.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
 
-import Meta from "#parts/page/meta.svelte";
+import Meta from "#parts/core/meta.svelte";
 import Line from "#parts/page/line.svelte";
 
 import { fade } from "svelte/transition";

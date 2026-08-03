@@ -7,9 +7,7 @@ import type { InternalError } from "#scripts/types";
 import { Clicky, Toggle, Select, Checkbox } from "#parts/ui";
 import TickIcon from "#parts/svg/tick-icon.svelte";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 import { onMount, untrack } from "svelte";
 import { goto } from "$app/navigation";

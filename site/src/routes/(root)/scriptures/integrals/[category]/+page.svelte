@@ -4,10 +4,8 @@ import Site from "#scripts/site";
 import { capitalise } from "#scripts/utils";
 
 import ArticleArray from "#parts/page/article-array.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
 import Line from "#parts/page/line.svelte";
-import Meta from "#parts/page/meta.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 import { page } from "$app/state";
 

@@ -15,9 +15,7 @@ import { Question, Topic, type Shard } from "#scripts/types";
 import DesmosAPI from "#parts/desmos-api.svelte";
 import { Clicky, Select, SelectSearch } from "#parts/ui";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 import { onMount } from "svelte";
 import { page } from "$app/state";
