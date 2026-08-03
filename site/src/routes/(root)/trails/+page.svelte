@@ -13,7 +13,7 @@ import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Banner from "#parts/page/banner.svelte";
-import Section from "#src/parts/page/section.svelte";
+import Section from "#parts/page/section.svelte";
 
 import { onMount } from "svelte";
 import { base } from "$app/paths";

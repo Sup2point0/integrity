@@ -4,7 +4,7 @@ import Site from "#scripts/utils/site";
 
 import { sync } from "#scripts/utils/sync";
 
-import Katex from "#src/parts/katex.svelte";
+import Katex from "#parts/katex.svelte";
 
 import { onMount } from "svelte";
 

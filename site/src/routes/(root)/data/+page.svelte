@@ -8,7 +8,7 @@ import { userprefs } from "#scripts/stores";
 import * as utils from "#scripts/utils";
 import { Topic } from "#scripts/types";
 
-import Clicky from "#src/parts/ui/clicky.svelte";
+import Clicky from "#parts/ui/clicky.svelte";
 import Checkbox from "#parts/ui/checkbox.svelte";
 import ProgressBar from "#parts/ui/progress-bar.svelte";
 

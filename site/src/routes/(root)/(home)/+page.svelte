@@ -9,7 +9,7 @@ import Changes from "./changes.svx";
 import { pick_trivia, type Trivia } from "./trivia.ts";
 
 import Header from "#parts/core/header.svelte";
-import ArticleArray from "#src/parts/page/article-array.svelte";
+import ArticleArray from "#parts/page/article-array.svelte";
 import QuestionArray from "#parts/page/question-array.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
 import Card from "#parts/ui/card.svelte";

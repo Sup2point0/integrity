@@ -11,10 +11,9 @@ import Meta from "#parts/page/meta.svelte";
 import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
 import Header from "#parts/core/header.svelte";
 import Search from "#parts/page/search.svelte";
-
+import SearchFooter from "#parts/page/search-footer.svelte";
 
 import { onMount } from "svelte";
-    import SearchFooter from "#src/parts/page/search-footer.svelte";
 
 
 const questions = Site.get_questions_of_topic(Topic.INTEGRALS);
