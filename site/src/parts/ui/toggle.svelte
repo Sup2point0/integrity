@@ -1,4 +1,4 @@
-<!-- @component Toggle
+<!-- @component `<Toggle>`
  
 A clicky that binds to a variable and toggles it.
 -->

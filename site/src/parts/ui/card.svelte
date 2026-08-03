@@ -1,6 +1,7 @@
-<!-- @component Card
+<!-- @component `<Card>`
 
-A generic card. -->
+A generic card.
+-->
 
 <script lang="ts">
 

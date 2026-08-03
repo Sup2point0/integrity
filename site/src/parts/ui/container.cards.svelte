@@ -1,4 +1,4 @@
-<!-- @component CardsContainer
+<!-- @component `<CardsContainer>`
 
 A layout container for a collection of card links.
 -->

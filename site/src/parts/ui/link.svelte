@@ -1,6 +1,7 @@
-<!-- @component Link
+<!-- @component `<Link>`
 
-A generic block-level link. -->
+A generic block-level link.
+-->
 
 <script lang="ts">
 

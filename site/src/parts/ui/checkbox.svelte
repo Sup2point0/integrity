@@ -1,4 +1,4 @@
-<!-- @component Checkbox
+<!-- @component `<Checkbox>`
 
 A checkbox button.
 -->

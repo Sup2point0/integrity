@@ -1,4 +1,5 @@
-<!-- @component Tag -->
+<!-- @component `<Tag>`
+-->
 
 <script lang="ts">
 

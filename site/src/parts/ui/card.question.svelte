@@ -1,6 +1,7 @@
-<!-- @component QuestionCard
+<!-- @component `<QuestionCard>`
 
-A card for selecting a question. -->
+A card for selecting a question.
+-->
 
 <script lang="ts">
 
@@ -8,7 +9,7 @@ import { userprefs, search } from "#scripts/stores";
 import type { Latex, Block, Question } from "#scripts/types";
 
 import SaveButtons from "#parts/page/save-buttons.svelte";
-import Tag from "#parts/ui/tag.svelte";
+import { Tag } from "#parts/ui";
 import Katex from "#parts/katex.svelte";
 import Desmos from "#parts/desmos.svelte";
 

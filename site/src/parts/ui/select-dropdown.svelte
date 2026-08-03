@@ -1,4 +1,4 @@
-<!-- @component Select
+<!-- @component `<Select>`
 
 A select dropdown input.
 -->

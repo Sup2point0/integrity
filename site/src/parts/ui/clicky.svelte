@@ -1,4 +1,7 @@
-<!-- @component Clicky -->
+<!-- @component `<Clicky>`
+
+A button for a link or callback.
+-->
 
 <script lang="ts">
 

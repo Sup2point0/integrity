@@ -1,6 +1,7 @@
-<!-- @component ArticleCard
+<!-- @component `<ArticleCard>`
 
-A card for selecting an article. -->
+A card for selecting an article.
+-->
 
 <script lang="ts">
 

@@ -1,4 +1,4 @@
-<!-- @component SelectSearch
+<!-- @component `<SelectSearch>`
 
 A select input with a dropdown and search bar.
 -->
