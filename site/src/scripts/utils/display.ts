@@ -1,5 +1,7 @@
+export function capitalise(text: string): string;
+export function capitalise(text: undefined): undefined;
 /** Capitalise the first letter of the given text. */
-export function capitalise(text?: string): string | undefined
+export function capitalise(text: string | undefined): string | undefined
 {
   return text && (text[0].toUpperCase() + text.slice(1));
 }
