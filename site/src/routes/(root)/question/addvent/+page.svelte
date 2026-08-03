@@ -3,10 +3,8 @@
 import { page_data } from "../page-data.svelte.ts";
 import type { Question } from "#scripts/types";
 
-import RenderBlock from "#parts/page/render-block.svelte";
-
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Section from "#parts/page/section.svelte";
+import { RenderBlock, Section } from "#parts/page";
+import { Breadcrumbs } from "#parts/core";
 
 
 let question: Question | null = $derived(page_data.question);

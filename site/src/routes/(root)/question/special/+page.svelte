@@ -3,12 +3,9 @@
 import { page_data } from "../page-data.svelte.ts";
 import { Question, type Block } from "#scripts/types";
 
-import Tag from "#parts/ui/tag.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
-
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
-import Section from "#parts/page/section.svelte";
+import { Tag } from "#parts/ui";
+import { RenderBlock, Section } from "#parts/page";
+import { Header, Breadcrumbs } from "#parts/core";
 
 
 let question: Question | null = $derived(page_data.question);

@@ -6,14 +6,10 @@ import { Question } from "#scripts/types";
 import Katex from "#parts/katex.svelte";
 import Desmos from "#parts/desmos.svelte";
 import DesmosAPI from "#parts/desmos-api.svelte";
-import Tag from "#parts/ui/tag.svelte";
-import CopyClicky from "#parts/page/copy-clicky.svelte";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Section from "#parts/page/section.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
-import Line from "#parts/page/line.svelte";
+import { Tag } from "#parts/ui";
+import { CopyClicky, Line, RenderBlock, Section } from "#parts/page";
+import { Meta, Breadcrumbs } from "#parts/core";
 
 import { page } from "$app/state";
 

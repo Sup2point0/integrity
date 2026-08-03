@@ -5,9 +5,7 @@ import { Topic } from "#scripts/types";
 
 import QuestionCard from "#parts/ui/card.question.svelte";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 
 const questions = Site.get_questions_of_topic(Topic.ADDVENT);

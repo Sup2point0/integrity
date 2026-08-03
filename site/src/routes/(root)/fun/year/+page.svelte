@@ -3,11 +3,8 @@
 import Content from "./~content.svx";
 import { metadata as page } from "./~content.svx";
 
-import Header         from "#parts/core/header.svelte";
-import Breadcrumbs    from "#parts/page/breadcrumbs.svelte";
-import Meta           from "#parts/page/meta.svelte";
-import Card           from "#parts/ui/card.svelte";
-import CardsContainer from "#parts/ui/container.cards.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
+import { Card, CardsContainer } from "#parts/ui";
 
 </script>
 

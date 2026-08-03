@@ -9,8 +9,8 @@ import Tag from "#parts/ui/tag.svelte";
 import Clicky from "#parts/ui/clicky.svelte";
 import CopyClicky from "#parts/page/copy-clicky.svelte";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
+import Meta from "#parts/core/meta.svelte";
+import Breadcrumbs from "#parts/core/breadcrumbs.svelte";
 import Section from "#parts/page/section.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
 import Line from "#parts/page/line.svelte";

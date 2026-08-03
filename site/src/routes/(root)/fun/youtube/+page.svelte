@@ -2,9 +2,7 @@
 
 import Card from "#parts/ui/card.svelte";
 
-import Header      from "#parts/core/header.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Meta        from "#parts/page/meta.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 import RenderBlock from "#parts/page/render-block.svelte";
 
 import { channels } from "./channels";

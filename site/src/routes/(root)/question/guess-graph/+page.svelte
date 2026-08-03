@@ -6,9 +6,7 @@ import type { Question } from "#scripts/types";
 
 import DesmosAPI from "#parts/desmos-api.svelte";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 import Section from "#parts/page/section.svelte";
 import RenderBlock from "#parts/page/render-block.svelte";
 

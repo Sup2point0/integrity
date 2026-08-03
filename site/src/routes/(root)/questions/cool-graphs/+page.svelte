@@ -7,9 +7,7 @@ import { Topic } from "#scripts/types";
 import DesmosAPI from "#parts/desmos-api.svelte";
 import QuestionCard from "#parts/ui/card.question.svelte";
 
-import Meta from "#parts/page/meta.svelte";
-import Breadcrumbs from "#parts/page/breadcrumbs.svelte";
-import Header from "#parts/core/header.svelte";
+import { Meta, Breadcrumbs, Header } from "#parts/core";
 import Search from "#parts/page/search.svelte";
 import SearchFooter from "#parts/page/search-footer.svelte";
 
