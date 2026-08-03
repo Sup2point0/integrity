@@ -68,18 +68,25 @@ const cols = col_picker();
 
 
 onMount(() => {
-  /* NOTE: Waiting a little before trying to load the Desmos embed is more reliable */
-  setTimeout(() => {
-    new IntersectionObserver(entries => {
-      for (let entry of entries) {
-        if (!entry.isIntersecting) return;
+  let observer: IntersectionObserver | null = null;
 
-        if (is_loading || error_message !== undefined) {
-          try_load_desmos();
-        }
+  /* NOTE: Waiting a little before trying to load the Desmos embed is more reliable */
+  let timeout = setTimeout(() => {
+    observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+
+      if (is_loading || error_message !== undefined) {
+        try_load_desmos();
       }
-    }).observe(root);
+    });
+    
+    observer.observe(root);
   }, no_delay ? 0 : 500);
+
+  return () => {
+    clearTimeout(timeout);
+    if (observer != null) observer.disconnect();
+  };
 });
 
 function* col_picker()
