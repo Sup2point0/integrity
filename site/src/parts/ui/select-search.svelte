@@ -7,7 +7,7 @@ A select input with a dropdown and search bar.
 
 import * as fuzz from "fuzzball";
 
-import Clicky from "#parts/ui/clicky.svelte";
+import { Clicky } from "#parts/ui";
 
 import { base } from "$app/paths";
 
@@ -48,6 +48,7 @@ function filter_suggestions(): string[]
 <div class="container">
 
   <search>
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
     <div class="select" class:open
       onkeydown={e => {
         if (e.key === "Enter" || e.key === " ") { open = !open; }

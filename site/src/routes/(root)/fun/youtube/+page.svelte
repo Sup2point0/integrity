@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import Card from "#parts/ui/card.svelte";
+import { Card } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 import RenderBlock from "#parts/page/render-block.svelte";

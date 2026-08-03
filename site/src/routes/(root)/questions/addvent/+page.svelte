@@ -3,7 +3,7 @@
 import Site from "#scripts/site";
 import { Topic } from "#scripts/types";
 
-import QuestionCard from "#parts/ui/card.question.svelte";
+import { QuestionCard } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 

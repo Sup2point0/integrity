@@ -4,7 +4,7 @@ import Site from "#scripts/site";
 import { dyna_scriptures } from "#scripts/site";
 import { pick_random_question, pick_random_scripture, capitalise } from "#scripts/utils";
 
-import Link from "#parts/ui/link.svelte";
+import { Link } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 

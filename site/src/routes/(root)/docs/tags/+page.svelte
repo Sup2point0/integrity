@@ -3,7 +3,7 @@
 import Site from "#src/scripts/site";
 
 import RenderBlock from "#parts/page/render-block.svelte";
-import Tag from "#parts/ui/tag.svelte";
+import { Tag } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 

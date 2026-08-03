@@ -5,9 +5,9 @@ A bar of slash-separated `<Link>`s for navigation.
 
 <script lang="ts">
 
-import { Link } from "#parts/ui";
-import CopyClicky from "#parts/page/copy-clicky.svelte";
+import { CopyClicky, Link } from "#parts/ui";
 import SaveButtons from "#parts/page/save-buttons.svelte";
+
 
 interface Props {
   levels: {

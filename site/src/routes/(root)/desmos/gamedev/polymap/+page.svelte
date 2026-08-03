@@ -4,7 +4,7 @@ import { dyna_scriptures } from "#scripts/site";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 import Line        from "#parts/page/line.svelte";
-import Link        from "#parts/ui/link.svelte";
+import { Link        } from "#parts/ui";
 
 
 const chapters = dyna_scriptures["desmos-gamedev"];

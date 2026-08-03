@@ -5,9 +5,7 @@ import { display_title } from "#scripts/utils";
 import { Question } from "#scripts/types";
 
 import Katex from "#parts/katex.svelte";
-import Tag from "#parts/ui/tag.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
-import CopyClicky from "#parts/page/copy-clicky.svelte";
+import { Clicky, CopyClicky, Tag } from "#parts/ui";
 
 import Meta from "#parts/core/meta.svelte";
 import Breadcrumbs from "#parts/core/breadcrumbs.svelte";

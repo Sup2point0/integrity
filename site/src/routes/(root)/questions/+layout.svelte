@@ -1,6 +1,6 @@
 <script>
 
-import Clicky from "#parts/ui/clicky.svelte";
+import { Clicky } from "#parts/ui";
   
 import { onMount } from "svelte";
 import { base } from "$app/paths";

@@ -4,7 +4,7 @@ import { page_data } from "../page-data.svelte.ts";
 import type { Question } from "#scripts/types";
 
 import DesmosAPI from "#parts/desmos-api.svelte";
-import Clicky from "#parts/ui/clicky.svelte";
+import { Clicky } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 
