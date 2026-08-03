@@ -10,7 +10,7 @@ interface Props {
   pict?: string;
   link?: string;
   intern?: string;
-  action?: () => void;
+  action?: (e: MouseEvent) => void;
   disabled?: boolean;
   children?: any;
 }
