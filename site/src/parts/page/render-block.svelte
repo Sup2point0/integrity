@@ -14,8 +14,8 @@ import rehypeKatex from "rehype-katex";
 
 import type { Block } from "#scripts/types";
 
-import Katex from "#parts/katex.svelte";
-import Desmos from "#parts/desmos.svelte";
+import { Katex } from "#parts/ui";
+import { Desmos } from "#parts/ui";
 
 
 interface Props {

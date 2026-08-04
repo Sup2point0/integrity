@@ -5,16 +5,14 @@ A card for selecting a question.
 
 <script lang="ts">
 
-import { userprefs, search } from "#scripts/stores";
-import type { Latex, Block, Question } from "#scripts/types";
+import { search, userprefs } from "#scripts/stores";
+import type { Block, Latex, Question } from "#scripts/types";
 
 import { SaveButtons } from "#parts/page";
-import { Tag } from "#parts/ui";
-import Katex from "#parts/katex.svelte";
-import Desmos from "#parts/desmos.svelte";
+import { Desmos, Katex, Tag } from "#parts/ui";
 
-import { fade, slide } from "svelte/transition";
 import { base } from "$app/paths";
+import { fade, slide } from "svelte/transition";
 
 
 interface Props {

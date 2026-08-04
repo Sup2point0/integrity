@@ -4,8 +4,7 @@
 import type { Question } from "#scripts/types";
 import { page_data } from "../page-data.svelte.ts";
 
-import { Breadcrumbs, Header, Meta } from "#parts/core";
-import DesmosAPI from "#parts/desmos-api.svelte";
+import { Breadcrumbs, DesmosAPI, Header, Meta } from "#parts/core";
 import { RenderBlock, Section } from "#parts/page";
 
 import { onMount } from "svelte";

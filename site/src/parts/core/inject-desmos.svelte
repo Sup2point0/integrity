@@ -5,11 +5,11 @@ Transform ```desmos``` blocks in an MDsveX body to Desmos embeds.
 
 <script lang="ts">
 
-import DesmosAPI from "#parts/desmos-api.svelte";
-import Desmos from "#parts/desmos.svelte";
+import { DesmosAPI } from "#parts/core";
+import { Desmos } from "#parts/ui";
 
-import { mount, onMount } from "svelte";
 import { page } from "$app/state";
+import { mount, onMount } from "svelte";
 
 
 let { content } = $props();

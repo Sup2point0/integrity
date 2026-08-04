@@ -11,8 +11,7 @@ import { speedrun } from "#src/scripts/stores";
 
 import type { Question } from "#scripts/types";
 
-import Katex from "#parts/katex.svelte";
-import Desmos from "#parts/desmos.svelte";
+import { Desmos, Katex } from "#parts/ui";
 
 
 interface Props {

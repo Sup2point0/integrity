@@ -5,7 +5,7 @@ A generic card.
 
 <script lang="ts">
 
-import Katex from "#parts/katex.svelte";
+import { Katex } from "#parts/ui";
 
 import { base } from "$app/paths";
 

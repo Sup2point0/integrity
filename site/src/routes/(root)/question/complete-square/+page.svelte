@@ -1,12 +1,12 @@
 <script lang="ts">
 
-import { page_data } from "../page-data.svelte.ts";
-import { display_title } from "#scripts/utils";
 import type { Question } from "#scripts/types";
+import { display_title } from "#scripts/utils";
+import { page_data } from "../page-data.svelte.ts";
 
-import Katex from "#parts/katex.svelte";
-import { RenderBlock, Section } from "#parts/page";
 import { Breadcrumbs } from "#parts/core";
+import { RenderBlock, Section } from "#parts/page";
+import { Katex } from "#parts/ui";
 
 let question: Question | null = $derived(page_data.question);
 

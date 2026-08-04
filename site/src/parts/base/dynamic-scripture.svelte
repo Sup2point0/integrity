@@ -8,16 +8,14 @@ The fully implemented dynamic scripture viewer.
 import { dyna_scriptures } from "#scripts/site";
 import type { Block, DynamicScripture } from "#scripts/types";
 
-import Desmos from "#parts/desmos.svelte";
-import DesmosAPI from "#parts/desmos-api.svelte";
-import { Clicky } from "#parts/ui";
+import { DesmosAPI, Header, Meta } from "#parts/core";
 import { RenderBlock } from "#parts/page";
-import { Meta, Header } from "#parts/core";
+import { Clicky, Desmos } from "#parts/ui";
 
+import { navigating, page } from "$app/state";
 import { untrack } from "svelte";
-import { slide, fade } from "svelte/transition";
 import { expoOut } from "svelte/easing";
-import { page, navigating } from "$app/state";
+import { fade, slide } from "svelte/transition";
 
 import { goto, onNavigate } from "$app/navigation";
 

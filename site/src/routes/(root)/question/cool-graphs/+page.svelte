@@ -1,12 +1,12 @@
 <script lang="ts">
 
-import { page_data } from "../page-data.svelte.ts";
 import type { Question } from "#scripts/types";
+import { page_data } from "../page-data.svelte.ts";
 
-import DesmosAPI from "#parts/desmos-api.svelte";
+import { DesmosAPI } from "#parts/core";
 import { Clicky } from "#parts/ui";
 
-import { Meta, Breadcrumbs, Header } from "#parts/core";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 
 import { onMount } from "svelte";
 

@@ -6,20 +6,20 @@ declare let Desmos: any;
 
 <script lang="ts">
 
-import { presets, inject_question } from "./presets";
+import { inject_question, presets } from "./presets";
 
 import Site from "#scripts/site";
 import { userprefs } from "#scripts/stores";
 import { Question, Topic, type Shard } from "#scripts/types";
 
-import DesmosAPI from "#parts/desmos-api.svelte";
+import { DesmosAPI } from "#parts/core";
 import { Clicky, Select, SelectSearch } from "#parts/ui";
 
-import { Meta, Breadcrumbs, Header } from "#parts/core";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 
-import { onMount } from "svelte";
-import { page } from "$app/state";
 import { base } from "$app/paths";
+import { page } from "$app/state";
+import { onMount } from "svelte";
 
 
 const questions_map = Site.get_map_of_all_questions();

@@ -1,15 +1,14 @@
 <script lang="ts">
 
-import { page_data } from "../page-data.svelte.ts";
 import { Question } from "#scripts/types";
+import { page_data } from "../page-data.svelte.ts";
 
-import Katex from "#parts/katex.svelte";
-import Desmos from "#parts/desmos.svelte";
-import DesmosAPI from "#parts/desmos-api.svelte";
+import { DesmosAPI } from "#parts/core";
+import { Desmos, Katex } from "#parts/ui";
 
-import { CopyClicky, Tag } from "#parts/ui";
+import { Breadcrumbs, Meta } from "#parts/core";
 import { Line, RenderBlock, Section } from "#parts/page";
-import { Meta, Breadcrumbs } from "#parts/core";
+import { CopyClicky, Tag } from "#parts/ui";
 
 import { page } from "$app/state";
 

@@ -1,11 +1,10 @@
 <script lang="ts">
 
-import { page_data } from "../page-data.svelte.ts";
-import { display_title } from "#scripts/utils";
 import { Question } from "#scripts/types";
+import { display_title } from "#scripts/utils";
+import { page_data } from "../page-data.svelte.ts";
 
-import Katex from "#parts/katex.svelte";
-import { Clicky, CopyClicky, Tag } from "#parts/ui";
+import { Clicky, CopyClicky, Katex, Tag } from "#parts/ui";
 
 import { Breadcrumbs, Meta } from "#parts/core";
 import { Line, RenderBlock, Section } from "#parts/page";

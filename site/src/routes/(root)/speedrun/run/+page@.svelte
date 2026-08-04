@@ -4,23 +4,22 @@ import sample from "@stdlib/random-sample";
 
 import Site from "#scripts/site";
 import { speedrun } from "#scripts/stores";
-import { display_time } from "#scripts/utils";
-import { Topic } from "#scripts/types";
 import type { InternalError } from "#scripts/types";
+import { Topic } from "#scripts/types";
+import { display_time } from "#scripts/utils";
 
-import RunNav from "./nav.run.svelte";
-import RunFooter from "./footer.run.svelte";
 import AnswerCards from "./answer-cards.svelte";
+import RunFooter from "./footer.run.svelte";
+import RunNav from "./nav.run.svelte";
 
-import DesmosAPI from "#parts/desmos-api.svelte";
-import Katex from "#parts/katex.svelte";
-import { Clicky } from "#parts/ui";
+import { DesmosAPI } from "#parts/core";
+import { Clicky, Katex } from "#parts/ui";
 
 import Meta from "#parts/core/meta.svelte";
 import { Line } from "#parts/page";
 
-import { fade } from "svelte/transition";
 import { onMount } from "svelte";
+import { fade } from "svelte/transition";
 
 
 let errors: InternalError[] = $state([]);
