@@ -3,12 +3,9 @@
 import { Question } from "#scripts/types";
 import { page_data } from "../page-data.svelte.ts";
 
-import { DesmosAPI } from "#parts/core";
-import { Desmos, Katex } from "#parts/ui";
-
-import { Breadcrumbs, Meta } from "#parts/core";
+import { Breadcrumbs, DesmosAPI, Meta } from "#parts/core";
 import { Line, RenderBlock, Section } from "#parts/page";
-import { CopyClicky, Tag } from "#parts/ui";
+import { CopyClicky, Desmos, Katex, Tag } from "#parts/ui";
 
 import { page } from "$app/state";
 

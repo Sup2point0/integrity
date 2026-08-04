@@ -12,10 +12,8 @@ import Site from "#scripts/site";
 import { userprefs } from "#scripts/stores";
 import { Question, Topic, type Shard } from "#scripts/types";
 
-import { DesmosAPI } from "#parts/core";
+import { Breadcrumbs, DesmosAPI, Header, Meta } from "#parts/core";
 import { Clicky, Select, SelectSearch } from "#parts/ui";
-
-import { Breadcrumbs, Header, Meta } from "#parts/core";
 
 import { base } from "$app/paths";
 import { page } from "$app/state";

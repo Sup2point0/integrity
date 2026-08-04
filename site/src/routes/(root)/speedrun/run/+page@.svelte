@@ -12,11 +12,9 @@ import AnswerCards from "./answer-cards.svelte";
 import RunFooter from "./footer.run.svelte";
 import RunNav from "./nav.run.svelte";
 
-import { DesmosAPI } from "#parts/core";
-import { Clicky, Katex } from "#parts/ui";
-
-import Meta from "#parts/core/meta.svelte";
+import { DesmosAPI, Meta } from "#parts/core";
 import { Line } from "#parts/page";
+import { Clicky, Katex } from "#parts/ui";
 
 import { onMount } from "svelte";
 import { fade } from "svelte/transition";

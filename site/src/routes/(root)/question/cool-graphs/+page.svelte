@@ -3,10 +3,8 @@
 import type { Question } from "#scripts/types";
 import { page_data } from "../page-data.svelte.ts";
 
-import { DesmosAPI } from "#parts/core";
+import { Breadcrumbs, DesmosAPI, Header, Meta } from "#parts/core";
 import { Clicky } from "#parts/ui";
-
-import { Breadcrumbs, Header, Meta } from "#parts/core";
 
 import { onMount } from "svelte";
 
