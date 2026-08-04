@@ -2,6 +2,9 @@
  * Isolated components heavily reusable across the whole site in all sorts of contexts.
  */
 
+export { default as Desmos } from "./desmos.svelte";
+export { default as Katex  } from "./katex.svelte";
+
 export { default as ArticleCard    } from "./card.article.svelte";
 export { default as QuestionCard   } from "./card.question.svelte";
 export { default as Card           } from "./card.svelte";

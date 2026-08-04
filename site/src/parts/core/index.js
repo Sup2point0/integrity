@@ -3,6 +3,7 @@
  */
 
 export { default as Breadcrumbs  } from "./breadcrumbs.svelte";
+export { default as DesmosAPI    } from "./desmos-api.svelte";
 export { default as Footer       } from "./footer.svelte";
 export { default as Header       } from "./header.svelte";
 export { default as InjectDesmos } from "./inject-desmos.svelte";
