@@ -5,7 +5,7 @@ Handles displaying banners at the top of an article page.
 
 <script>
 
-import Banner from "#parts/page/banner.svelte";
+import { Banner } from "#parts/page";
 
 
 let { page } = $props();

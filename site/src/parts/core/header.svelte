@@ -5,8 +5,7 @@
 import { userprefs } from "#scripts/stores";
 import type { Page } from "#scripts/types";
 
-import ArticleBanners from "#parts/page/article-banners.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
+import { ArticleBanners, RenderBlock } from "#parts/page";
 
 
 interface Props {

@@ -7,7 +7,7 @@ A banner containing links to pre-reading material for the current page.
 
 import Site from "#scripts/site";
 
-import Banner from "#parts/page/banner.svelte";
+import { Banner } from "#parts/page";
 
 import { base } from "$app/paths";
 

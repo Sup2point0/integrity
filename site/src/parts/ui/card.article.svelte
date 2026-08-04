@@ -8,7 +8,7 @@ A card for selecting an article.
 import Site from "#scripts/site";
 import type { Page } from "#scripts/types";
 
-import RenderBlock from "#parts/page/render-block.svelte";
+import { RenderBlock } from "#parts/page";
 
 import { base } from "$app/paths";
 
