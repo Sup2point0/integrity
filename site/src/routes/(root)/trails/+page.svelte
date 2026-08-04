@@ -6,15 +6,13 @@ import Site from "#scripts/site";
 import { Topic } from "#scripts/types";
 
 import GraphBar from "./graph-bar.svelte";
-import { Select } from "#parts/ui";
-import { Tag } from "#parts/ui";
 
-import { Meta, Breadcrumbs, Header } from "#parts/core";
-import Banner from "#parts/page/banner.svelte";
-import Section from "#parts/page/section.svelte";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
+import { Banner, Section } from "#parts/page";
+import { Select, Tag } from "#parts/ui";
 
-import { onMount } from "svelte";
 import { base } from "$app/paths";
+import { onMount } from "svelte";
 
 
 let year = $state("2026");

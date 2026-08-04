@@ -4,7 +4,7 @@ import Content from "./~content.svx";
 import { metadata as page } from "./~content.svx";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
-import ArticleArray from "#parts/page/article-array.svelte";
+import { ArticleArray } from "#parts/page";
 
 </script>
 

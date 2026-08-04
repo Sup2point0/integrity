@@ -1,11 +1,9 @@
 <script>
 
-import Content from "./~content.svx";
-import { metadata as page } from "./~content.svx";
+import Content, { metadata as page } from "./~content.svx";
 
-import { Meta, Breadcrumbs, Header } from "#parts/core";
-import ArticleArray from "#parts/page/article-array.svelte";
-import ArticleFooter from "#parts/page/footer.article.svelte";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
+import { ArticleArray, ArticleFooter } from "#parts/page";
 
 </script>
 

@@ -3,9 +3,8 @@
 import Site from "#scripts/site";
 import { capitalise } from "#scripts/utils";
 
-import ArticleArray from "#parts/page/article-array.svelte";
-import Line from "#parts/page/line.svelte";
-import { Meta, Breadcrumbs, Header } from "#parts/core";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
+import { ArticleArray, Line } from "#parts/page";
 
 import { page } from "$app/state";
 

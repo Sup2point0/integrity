@@ -4,11 +4,9 @@ import Site from "#scripts/site";
 
 import Content from "#src/../../scriptures/README.md";
 
+import { Breadcrumbs, Header, Meta } from "#parts/core";
+import { ArticleArray, Line } from "#parts/page";
 import { Card } from "#parts/ui";
-
-import { Meta, Breadcrumbs, Header } from "#parts/core";
-import Line from "#parts/page/line.svelte";
-import ArticleArray from "#parts/page/article-array.svelte";
 
 </script>
 

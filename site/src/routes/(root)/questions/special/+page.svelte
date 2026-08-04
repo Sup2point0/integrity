@@ -2,12 +2,11 @@
 
 import Site from "#scripts/site";
 import { search } from "#scripts/stores";
-import { sync } from "#scripts/utils/sync";
 import { Topic } from "#scripts/types";
+import { sync } from "#scripts/utils/sync";
 
-import { Meta, Breadcrumbs, Header } from "#parts/core";
-import Search         from "#parts/page/search.svelte";
-import SearchFooter   from "#parts/page/search-footer.svelte";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
+import { Search, SearchFooter } from "#parts/page";
 import { Clicky, QuestionCard } from "#parts/ui";
 
 import site from "#scripts/utils/site";

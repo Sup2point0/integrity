@@ -17,7 +17,7 @@ import Katex from "#parts/katex.svelte";
 import { Clicky } from "#parts/ui";
 
 import Meta from "#parts/core/meta.svelte";
-import Line from "#parts/page/line.svelte";
+import { Line } from "#parts/page";
 
 import { fade } from "svelte/transition";
 import { onMount } from "svelte";

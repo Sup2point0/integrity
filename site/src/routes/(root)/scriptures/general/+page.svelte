@@ -2,9 +2,8 @@
 
 import Site from "#scripts/site";
 
-import { Meta, Breadcrumbs, Header } from "#parts/core";
-import Line from "#parts/page/line.svelte";
-import ArticleArray from "#parts/page/article-array.svelte";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
+import { ArticleArray } from "#parts/page";
 
 </script>
 
