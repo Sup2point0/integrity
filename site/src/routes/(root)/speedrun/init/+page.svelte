@@ -1,16 +1,15 @@
 <script lang="ts">
 
-import { speedrun } from "#src/scripts/stores";
-import { Topic } from "#scripts/types";
 import type { InternalError } from "#scripts/types";
+import { Topic } from "#scripts/types";
+import { speedrun } from "#src/scripts/stores";
 
-import { Clicky, Toggle, Select, Checkbox } from "#parts/ui";
-import TickIcon from "#parts/svg/tick-icon.svelte";
+import { TickIcon } from "#parts/svg";
+import { Checkbox, Clicky, Select, Toggle } from "#parts/ui";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 
-import { Meta, Breadcrumbs, Header } from "#parts/core";
-
-import { onMount, untrack } from "svelte";
 import { goto } from "$app/navigation";
+import { onMount, untrack } from "svelte";
 
 
 let submitted = $state(false);

@@ -6,7 +6,7 @@ import { duality, Duality, userprefs } from "#scripts/stores";
 import { pick_random_question, pick_random_scripture } from "#scripts/utils";
 
 import { NavLink } from "#parts/core";
-import GithubIcon from "#parts/svg/github-icon.svelte";
+import { GitHubIcon } from "#parts/svg";
 import { Clicky, Link } from "#parts/ui";
 
 import { goto } from "$app/navigation";
@@ -105,7 +105,7 @@ let show_mobile_dropdown = $state(false);
     <NavLink text="GitHub"
       extern="https://github.com/Sup2point0/integrity"
     >
-      {#snippet svg()} <GithubIcon /> {/snippet}
+      {#snippet svg()} <GitHubIcon /> {/snippet}
     </NavLink>
   </section>
 
@@ -125,7 +125,7 @@ let show_mobile_dropdown = $state(false);
   <NavLink text="Fun" intern="fun" mobile={true} />
   <NavLink text="Info" intern="info" mobile={true} />
   <NavLink text="GitHub" extern="https://github.com/Sup2point0/integrity">
-    {#snippet svg()} <GithubIcon /> {/snippet}
+    {#snippet svg()} <GitHubIcon /> {/snippet}
   </NavLink>
 </nav>
 
