@@ -2,7 +2,7 @@
 
 import { page } from "$app/state";
 
-import Header from "#parts/core/header.svelte";
+import { Header } from "#parts/core";
 
 </script>
 

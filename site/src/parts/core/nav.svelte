@@ -2,15 +2,15 @@
 
 <script lang="ts">
 
-import { userprefs, duality, Duality } from "#scripts/stores";
+import { duality, Duality, userprefs } from "#scripts/stores";
 import { pick_random_question, pick_random_scripture } from "#scripts/utils";
 
-import NavLink from "#parts/core/nav.link.svelte";
-import { Clicky, Link } from "#parts/ui";
+import { NavLink } from "#parts/core";
 import GithubIcon from "#parts/svg/github-icon.svelte";
+import { Clicky, Link } from "#parts/ui";
 
-import { base } from "$app/paths";
 import { goto } from "$app/navigation";
+import { base } from "$app/paths";
 
 
 let show_mobile_dropdown = $state(false);
