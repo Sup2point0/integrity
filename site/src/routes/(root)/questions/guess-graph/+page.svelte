@@ -4,12 +4,10 @@ import Site from "#scripts/site";
 import { search } from "#scripts/stores";
 import { Topic } from "#scripts/types";
 
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 import DesmosAPI from "#parts/desmos-api.svelte";
+import { Search, SearchFooter } from "#parts/page";
 import { QuestionCard } from "#parts/ui";
-import SearchFooter from "#parts/page/search-footer.svelte";
-
-import { Meta, Breadcrumbs, Header } from "#parts/core";
-import Search from "#parts/page/search.svelte";
 
 import { onMount } from "svelte";
 

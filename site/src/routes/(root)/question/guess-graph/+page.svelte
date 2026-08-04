@@ -1,14 +1,12 @@
 <!-- TODO use <Desmos> instead of self-made -->
 <script lang="ts">
 
-import { page_data } from "../page-data.svelte.ts";
 import type { Question } from "#scripts/types";
+import { page_data } from "../page-data.svelte.ts";
 
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 import DesmosAPI from "#parts/desmos-api.svelte";
-
-import { Meta, Breadcrumbs, Header } from "#parts/core";
-import Section from "#parts/page/section.svelte";
-import RenderBlock from "#parts/page/render-block.svelte";
+import { RenderBlock, Section } from "#parts/page";
 
 import { onMount } from "svelte";
 

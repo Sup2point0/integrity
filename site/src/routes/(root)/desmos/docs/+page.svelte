@@ -3,7 +3,7 @@
 import Site from "#src/scripts/site";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
-import ArticleArray from "#parts/page/article-array.svelte";
+import { ArticleArray } from "#parts/page";
 
 </script>
 

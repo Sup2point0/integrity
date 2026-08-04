@@ -3,7 +3,7 @@
 import type { Page } from "#scripts/types";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
-import ArticleFooter from "#parts/page/footer.article.svelte";
+import { ArticleFooter } from "#parts/page";
 
 import { page } from "$app/state";
 

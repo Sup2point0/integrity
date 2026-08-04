@@ -3,7 +3,7 @@
 import { Card } from "#parts/ui";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
-import RenderBlock from "#parts/page/render-block.svelte";
+import { RenderBlock } from "#parts/page";
 
 import { channels } from "./channels";
 
