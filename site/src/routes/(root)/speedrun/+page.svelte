@@ -3,9 +3,8 @@
 import Site from "#scripts/site";
 import { speedrun } from "#scripts/stores";
 
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 import { Clicky } from "#parts/ui";
-
-import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 </script>
 

@@ -3,10 +3,9 @@
 import { speedrun } from "#scripts/stores";
 import * as utils from "#scripts/utils";
 
-import { Clicky, ProgressBar, Tag } from "#parts/ui";
-
-import { Meta, Breadcrumbs, Header } from "#parts/core";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 import { Line, QuestionArray, Section } from "#parts/page";
+import { Clicky, ProgressBar, Tag } from "#parts/ui";
 
 
 let seen = $derived(

@@ -2,10 +2,9 @@
 
 import Content from "./~content.svx";
 
-import { Card, CardsContainer } from "#parts/ui";
-
 import { Breadcrumbs, Header, Meta } from "#parts/core";
 import { Line } from "#parts/page";
+import { Card, CardsContainer } from "#parts/ui";
 
 </script>
 

@@ -3,9 +3,8 @@
 import { get_scriptures_of_topic } from "#scripts/site";
 import { Topic } from "#scripts/types";
 
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 import { Card } from "#parts/ui";
-
-import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 </script>
 

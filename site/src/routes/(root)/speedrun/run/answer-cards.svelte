@@ -7,7 +7,7 @@ Cards for selecting the answer to a multiple-choice question.
 
 import sample from "@stdlib/random-sample";
 
-import { speedrun } from "#src/scripts/stores";
+import { speedrun } from "#scripts/stores";
 
 import type { Question } from "#scripts/types";
 

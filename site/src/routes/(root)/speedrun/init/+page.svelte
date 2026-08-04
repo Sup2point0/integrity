@@ -2,7 +2,7 @@
 
 import type { InternalError } from "#scripts/types";
 import { Topic } from "#scripts/types";
-import { speedrun } from "#src/scripts/stores";
+import { speedrun } from "#scripts/stores";
 
 import { TickIcon } from "#parts/svg";
 import { Checkbox, Clicky, Select, Toggle } from "#parts/ui";

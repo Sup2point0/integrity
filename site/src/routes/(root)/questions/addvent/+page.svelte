@@ -3,9 +3,8 @@
 import Site from "#scripts/site";
 import { Topic } from "#scripts/types";
 
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 import { QuestionCard } from "#parts/ui";
-
-import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 
 const questions = Site.get_questions_of_topic(Topic.ADDVENT);
