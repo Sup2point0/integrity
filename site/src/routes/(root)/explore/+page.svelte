@@ -1,15 +1,13 @@
 <script lang="ts">
 
-import Site from "#scripts/site";
-import { dyna_scriptures } from "#scripts/site";
-import { pick_random_question, pick_random_scripture, capitalise } from "#scripts/utils";
+import Site, { dyna_scriptures } from "#scripts/site";
+import { capitalise, pick_random_question, pick_random_scripture } from "#scripts/utils";
 
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 import { Link } from "#parts/ui";
 
-import { Meta, Breadcrumbs, Header } from "#parts/core";
-
-import { base } from "$app/paths";
 import { goto } from "$app/navigation";
+import { base } from "$app/paths";
 
 </script>
 

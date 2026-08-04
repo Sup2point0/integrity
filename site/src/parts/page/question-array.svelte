@@ -7,7 +7,7 @@ Displays a list of question cards.
 
 import Site from "#scripts/site";
 
-import type { Question } from "#src/scripts/types";
+import type { Question } from "#scripts/types";
 
 import { QuestionCard } from "#parts/ui";
 

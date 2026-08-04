@@ -1,11 +1,8 @@
 <script lang="ts">
 
-import Site from "#src/scripts/site";
-
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 import { RenderBlock } from "#parts/page";
 import { Tag } from "#parts/ui";
-
-import { Meta, Breadcrumbs, Header } from "#parts/core";
 
 </script>
 

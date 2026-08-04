@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import Site from "#src/scripts/site";
+import Site from "#scripts/site";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
 import { ArticleArray } from "#parts/page";

@@ -3,7 +3,7 @@
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
 
-import Site from "#src/scripts/site";
+import Site from "#scripts/site";
 import { userprefs } from "#scripts/stores";
 import * as utils from "#scripts/utils";
 import { Topic } from "#scripts/types";

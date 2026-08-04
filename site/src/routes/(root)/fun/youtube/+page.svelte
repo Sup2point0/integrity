@@ -1,8 +1,6 @@
 <script lang="ts">
 
-import { Card } from "#parts/ui";
-
-import { Meta, Breadcrumbs, Header } from "#parts/core";
+import { Breadcrumbs, Header, Meta } from "#parts/core";
 import { RenderBlock } from "#parts/page";
 
 import { channels } from "./channels";
