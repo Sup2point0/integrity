@@ -7,12 +7,7 @@ export function load({ params })
 {
   // MIGRATE FIXME add graph-drawing topics
   let page = dyna_scriptures["graph-drawing"]["graph-drawing"][params.page];
-  if (page === undefined) {
-    error(404);
-  }
+  if (page == undefined) error(404);
 
-  // @ts-expect-error
-  page.wide = true;
-
-  return { ...page };
+  return { ...page, wide: true };
 }

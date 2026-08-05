@@ -164,7 +164,7 @@ export class SearchPrefs
         q => Object.keys(this.difficulties).some(diff =>
           this.difficulties[diff] && (
               diff === "unassigned"
-            ? q.difficulty === null || q.difficulty === undefined
+            ? q.difficulty == undefined
             : q.difficulty?.includes(diff)
           )
         )
@@ -271,8 +271,9 @@ export class SearchPrefs
     let categories = Object.groupBy(source, q => this.categorise_rel(q, data, difficulty));
 
     for (let category of Object.values(categories)) {
-      // @ts-expect-error
-      category.sort((prot, deut) => (prot.date && deut.date) ? (deut.date - prot.date) : -1);
+      category?.sort((prot, deut) =>
+        (deut.date?.getTime() ?? 0) - (prot.date?.getTime() ?? 0)
+      );
     }
 
     return Object.values(categories).flatMap(category => category) as Question[];
@@ -296,9 +297,10 @@ export class SearchPrefs
     return 10;
   }
 
-  sort_date(source: Question[]) {
-    // @ts-expect-error
-    return source.sort((prot, deut) => (prot.date && deut.date) ? (deut.date - prot.date) : -1);
+  sort_date(source: Question[]): Question[] {
+    return source.toSorted((prot, deut) =>
+      (deut.date?.getTime() ?? 0) - (prot.date?.getTime() ?? 0)
+    );
   }
 }
 

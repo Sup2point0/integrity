@@ -44,7 +44,7 @@ function check_integrity()
   checks++;
   let errors = (
     [...$userprefs.solved].some(
-      q => (q === null || q === undefined)
+      q => (q == undefined)
     )
   );
 

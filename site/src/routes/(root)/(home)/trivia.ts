@@ -1,8 +1,7 @@
 export function pick_trivia(): Trivia
 {
   let today = new Date();
-  // @ts-expect-error
-  let delta = today - Date.UTC(today.getFullYear(), 0, 0);
+  let delta = today.getTime() - Date.UTC(today.getFullYear(), 0, 0);
   let t = Math.floor(delta / 24 / 60 / 60 / 1000);
 
   let total = trivia.length;

@@ -94,7 +94,7 @@ async function try_load_data(i: number = 0)
 for (let q of Site.get_list_of_all_questions()) {
   if (q.difficulty) {
     questions.difficulties[q.difficulty]++;
-  } else if (q.difficulty === null || q.difficulty === undefined) {
+  } else if (q.difficulty == undefined) {
     questions.difficulties.null++;
   }
 
@@ -148,7 +148,7 @@ for (let q of Site.get_list_of_all_questions()) {
 for (let q of Site.get_questions_of_topic(Topic.INTEGRALS)) {
   if (q.difficulty) {
     integrals.difficulties[q.difficulty]++;
-  } else if (q.difficulty === null || q.difficulty === undefined) {
+  } else if (q.difficulty == undefined) {
     integrals.difficulties.null++;
   }
 

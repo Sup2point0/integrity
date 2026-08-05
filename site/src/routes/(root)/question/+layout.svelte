@@ -22,23 +22,23 @@ function load_question()
   let url = page.url;
 
   let topic: string | undefined = url.pathname.split("/").at(-1);
-  if (topic == null) {
+  if (topic == undefined) {
     error(400, { message: "URL is missing topic" });
   }
 
   let params = url.searchParams;
   let shard: Shard | null = params.get("shard");
-  if (shard == null) {
+  if (shard == undefined) {
     error(400, { message: "URL is missing question shard" });
   }
 
   let questions: QuestionCollection = Site.questions[topic];
-  if (questions == null) {
+  if (questions == undefined) {
     error(500, { message: "Could not load questions for topic" });
   }
 
   let question: Question = questions.questions[shard];
-  if (question == null) {
+  if (question == undefined) {
     error(404, { message: "Could not find question" });
   }
 

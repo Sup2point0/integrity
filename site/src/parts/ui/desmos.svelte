@@ -162,7 +162,7 @@ function load_desmos(): boolean
     }
     else {
       let expr = parse_block(blocks, 1);
-      if (expr === undefined) {
+      if (expr == undefined) {
         console.error(`Integrity: Failed to parse block supplied to \`<Desmos />\`: ${JSON.stringify(blocks)}`);
         error_message = "Failed to parse block";
         return false;
@@ -283,10 +283,10 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
   );
 
   let out = source.match(pattern)?.at(0);
-  if (out === undefined) return;
+  if (out == undefined) return;
 
   out = out.replaceAll(/([a-zA-Z]+):/g, String.raw `"$1":`);
-  if (out === undefined) return;
+  if (out == undefined) return;
 
   try {
     return JSON.parse(out);
@@ -312,7 +312,7 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
     {#if is_loading}
       <p> Loading Desmos embed... </p>
 
-    {:else if desmos === undefined}
+    {:else if desmos == undefined}
       <p> Error loading Desmos embed =( </p>
       {#if error_message}
         <p> {@html error_message} </p>

@@ -12,7 +12,7 @@ export class Question
   _match: string[] = [];
 
   shard: Shard;
-  topic: Topic;
+  topic!: Topic;
   difficulty: "based" | "incline" | "manifold" | "chaos" | null = null;
 
   title?: string;
@@ -66,23 +66,36 @@ export class Question
   {
     Object.assign(this, data);
 
+    // @ts-expect-error: Literally checking if it's defined
+    if (typeof this.shard === "undefined") {
+      throw new Error(`No shard provided for question: ${data}`);
+    }
+
     if (!process) return;
 
     if (data.topic) {
-      // @ts-expect-error
+      // @ts-expect-error: Topic is indexable
       this.topic = Topic[data.topic.toUpperCase().replaceAll("-", "_")];
+      
+      if (this.topic == undefined) {
+        throw new Error(`Invalid question topic: ${data.topic}, shard: ${data.shard}`);
+      }
+    } else {
+      throw new Error(`No topic provided for question: ${data}`);
     }
+
     this.question = data.question && data.question[0];
     this.date_display = data.date;
+
     try {
       this.date = new Date(data.date);
     } catch {
       this.date = new Date();
     }
+
     this.answer = Array.isArray(data.answer) ? data.answer[0] : data.answer;
 
     this._match = [
-      // @ts-expect-error
       this.shard.toLowerCase(),
       this.title?.toLowerCase(),
       ...(this.tags ?? []),
@@ -91,6 +104,7 @@ export class Question
 
     if (this.topic === "graph-drawing") {
       this.options = data.options[0].content.split("<br><br>").map(
+        // @ts-ignore
         (latex, index) => ({ index, latex })
       );
     }
