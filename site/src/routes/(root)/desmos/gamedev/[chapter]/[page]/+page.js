@@ -15,7 +15,7 @@ export function load({ params })
     error(404);
   }
 
-  // @ts-ignore
+  // @ts-expect-error
   page.wide = true;
 
   return {...page};

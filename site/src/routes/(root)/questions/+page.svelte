@@ -23,7 +23,7 @@ import { Card, CardsContainer } from "#parts/ui";
 <CardsContainer>
   <Card title="Integrals"
     intern="questions/integrals"
-    latex={"\\int f(x) \\, dx"}
+    latex={String.raw`\int f(x) \, dx`}
   />
   <Card title="Graph Drawing"
     intern="questions/graph-drawing"
@@ -31,7 +31,7 @@ import { Card, CardsContainer } from "#parts/ui";
   />
   <Card title="Completing the Square"
     intern="questions/complete-square"
-    latex={"a(x - p)^2 + q"}
+    latex={String.raw`a(x - p)^2 + q`}
   />
   <Card title="Guess the Graph"
     intern="questions/guess-graph"

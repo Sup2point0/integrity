@@ -93,7 +93,7 @@ export const presets: Record<string, object[]> =
       text: `Enter your question (integral) here:`,
     },
     { id: "int-latex-integral",
-      latex: "I = \int \ dx",
+      latex: String.raw `I = \int \ dx`,
     },
     { id: "int-note-integral-2", type: "text",
       text: `(This should evaluate to a constant)`,
