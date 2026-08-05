@@ -113,7 +113,7 @@ let correct = $derived(
   <div class="row">
     <p class="label"> Difficulties </p>
     <p class="value">
-      {#each Object.entries($speedrun.difficulties).filter(([diff, state]) => state) as [diff, state]}
+      {#each Object.entries($speedrun.difficulties).filter(([_diff, state]) => state) as [diff, _state]}
         <Tag kind={diff} tag={diff} />
       {/each}
     </p>

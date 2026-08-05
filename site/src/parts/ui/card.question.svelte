@@ -111,7 +111,7 @@ function check_valid(data: Array<any>): boolean
           {#if check_valid(question.tags) && $search.show.tags}
             <span class="tags" transition:fade={{ duration: 250 }}>
               {#each question.tags as tag}
-                <Tag {tag} margin={"0.25em"} />
+                <Tag {tag} margin="0.25em" />
               {/each}
             </span>
           {/if}
@@ -119,7 +119,7 @@ function check_valid(data: Array<any>): boolean
           {#if check_valid(question.methods) && $search.show.methods}
             <span class="tags" transition:fade={{ duration: 250 }}>
               {#each question.methods as method}
-                <Tag tag={method} kind="deut" margin={"0.25em"} />
+                <Tag tag={method} kind="deut" margin="0.25em" />
               {/each}
             </span>
           {/if}

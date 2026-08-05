@@ -55,12 +55,6 @@ function try_load_desmos(i: number = 0)
   }
 }
 
-function reload_desmos()
-{
-  desmos.destroy();
-  try_load_desmos();
-}
-
 function pick_col()
 {
   return Object.values(Desmos.Colors).sort(() => Math.random() - 0.5)[0];

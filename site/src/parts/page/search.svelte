@@ -191,13 +191,13 @@ onMount(() => {
             toggle={() => {
               $search.include = Object.fromEntries(
                 Object.entries($search.include).map(
-                  ([prop, state]) => [prop, unchecked_include]
+                  ([prop, _state]) => [prop, unchecked_include]
                 )
               );
               if (!unchecked_include) {
                 $search.exclude = Object.fromEntries(
                   Object.entries($search.exclude).map(
-                    ([prop, state]) => [prop, false]
+                    ([prop, _state]) => [prop, false]
                   )
                 );
               }
@@ -229,13 +229,13 @@ onMount(() => {
             toggle={() => {
               $search.exclude = Object.fromEntries(
                 Object.entries($search.exclude).map(
-                  ([prop, state]) => [prop, unchecked_exclude]
+                  ([prop, _state]) => [prop, unchecked_exclude]
                 )
               );
               if (!unchecked_exclude) {
                 $search.include = Object.fromEntries(
                   Object.entries($search.include).map(
-                    ([prop, state]) => [prop, false]
+                    ([prop, _state]) => [prop, false]
                   )
                 );
               }
@@ -263,7 +263,7 @@ onMount(() => {
               toggle={() => {
                 $search.show = Object.fromEntries(
                   Object.entries($search.show).map(
-                    ([prop, state]) => [prop, unchecked_show]
+                    ([prop, _state]) => [prop, unchecked_show]
                   )
                 );
               }}
@@ -289,7 +289,7 @@ onMount(() => {
               toggle={() => {
                 $search.buttons = Object.fromEntries(
                   Object.entries($search.buttons).map(
-                    ([prop, state]) => [prop, unchecked_buttons]
+                    ([prop, _state]) => [prop, unchecked_buttons]
                   )
                 );
               }}

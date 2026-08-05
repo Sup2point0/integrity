@@ -24,6 +24,7 @@ let sections: [string, Block][] = $derived(
 ]} copy={true} shard={question?.shard} />
 
 
+<!-- FIXME children -->
 <Header title={question?.title} capt={question?.date_display}>
   {#if question?.tags}
     <div class="tags">
