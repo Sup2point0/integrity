@@ -5,7 +5,7 @@ export function inject_question(desmos: any, question: Question)
 {
   switch (question.topic)
   {
-    case "integrals":
+    case "integrals": {
       let content = Question.sanitise(question.question.content) ?? "error";
 
       if (!question.flags.includes("definite")) {
@@ -29,6 +29,7 @@ export function inject_question(desmos: any, question: Question)
           latex: String.raw `I = ${integral}`,
         })
       }
+    }
 
     // TODO: Inject completing the square question
   }

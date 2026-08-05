@@ -73,7 +73,6 @@ const svelte_config =
     }),
   ],
   
-  /* @ts-ignore */
   onwarn: (warning, handler) => {
     if (!IGNORED_WARNINGS.includes(warning.code)) {
       handler(warning);

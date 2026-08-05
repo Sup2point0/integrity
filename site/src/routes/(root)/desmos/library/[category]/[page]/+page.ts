@@ -23,9 +23,9 @@ export async function load({ url, params })
     error(404, { message: `No page found for ${path}!` });
   }
   
-  // @ts-ignore
+  // @ts-expect-error
   page.category = capitalise(params.category);
-  // @ts-ignore
+  // @ts-expect-error
   page.wide = true;
 
   let svx = await import(`../../${params.category}/${params.page}/~content.svx`);

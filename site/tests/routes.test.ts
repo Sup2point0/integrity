@@ -64,7 +64,7 @@ test("crawl-routes", async () =>
           );
           to_visit.push(...links.map(url => ({ url, source: target })));
         }
-        catch (e) {
+        catch {
           console.error(`!! ${WORKER} Failed: ${target}; linked from: ${source}`);
           failed_routes.push(target);
         }

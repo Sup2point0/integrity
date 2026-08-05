@@ -69,7 +69,7 @@ export class Question
     if (!process) return;
 
     if (data.topic) {
-      /* @ts-ignore */
+      // @ts-expect-error
       this.topic = Topic[data.topic.toUpperCase().replaceAll("-", "_")];
     }
     this.question = data.question && data.question[0];
@@ -82,7 +82,7 @@ export class Question
     this.answer = Array.isArray(data.answer) ? data.answer[0] : data.answer;
 
     this._match = [
-      // @ts-ignore
+      // @ts-expect-error
       this.shard.toLowerCase(),
       this.title?.toLowerCase(),
       ...(this.tags ?? []),

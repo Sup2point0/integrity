@@ -271,7 +271,7 @@ export class SearchPrefs
     let categories = Object.groupBy(source, q => this.categorise_rel(q, data, difficulty));
 
     for (let category of Object.values(categories)) {
-      // @ts-ignore
+      // @ts-expect-error
       category.sort((prot, deut) => (prot.date && deut.date) ? (deut.date - prot.date) : -1);
     }
 
@@ -297,7 +297,7 @@ export class SearchPrefs
   }
 
   sort_date(source: Question[]) {
-    // @ts-ignore
+    // @ts-expect-error
     return source.sort((prot, deut) => (prot.date && deut.date) ? (deut.date - prot.date) : -1);
   }
 }
