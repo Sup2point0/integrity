@@ -11,12 +11,12 @@ import ts from "typescript-eslint";
 export default defineConfig(
   includeIgnoreFile(path.resolve(".gitignore")),
 
-  js.configs.recommended,
-  ts.configs.recommended,
-  svelte.configs.recommended,
-
   // TypeScript
   {
+    extends: [
+      js.configs.recommended,
+      ts.configs.recommended,
+    ],
     files: ["**/*.{js,ts}"],
     plugins: { js },
     languageOptions: {
@@ -28,11 +28,17 @@ export default defineConfig(
     rules: {
       "no-undef": "off",
       "prefer-const": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }
+      ],
     },
   },
 
   // Svelte
   {
+    extends: [svelte.configs.recommended],
     files: ["**/*.svelte", "**/*.svelte.{js,ts}"],
     languageOptions: {
       parserOptions: {
@@ -45,14 +51,15 @@ export default defineConfig(
       "no-undef": "off",
       "svelte/no-at-html-tags": "off",
       "svelte/no-navigation-without-resolve": "off",
+      "svelte/require-each-key": "off",
     },
   },
 
   // CSS
-  // {
-  //   extends: ["css/recommended"],
-  //   files: ["**/*.css"],
-  //   language: "css/css",
-  //   plugins: { css },
-  // },
+  {
+    extends: ["css/recommended"],
+    files: ["**/*.css"],
+    language: "css/css",
+    plugins: { css },
+  },
 );
