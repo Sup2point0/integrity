@@ -24,6 +24,7 @@ I’m finding a fix!
 
 I’m working on it!
 
+- Improve integrity checking
 - Speedrun environment
 
 

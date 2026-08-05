@@ -23,7 +23,7 @@
 
     "preview":   "vite preview",
 
-    "check":     "npx eslint .",
+    "check":     "svelte-check sync && svelte-check && npx eslint .",
 
     "test":      "playwright test",
       "testx":   "npm run build && playwright test"
@@ -63,6 +63,7 @@
     "mdsvex": "^0.12.8",
     "sass": "^1.102",
     "svelte": "^5.0",
+    "svelte-check": "^4.7",
     "svelte-preprocess": "^6.0.1",
     "tslib": "^2.4.1",
     "typescript": "^6.0",
