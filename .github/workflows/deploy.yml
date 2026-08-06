@@ -5,7 +5,9 @@ on:
   push:
     paths:
       - '**.yml'
+      - 'site/package-lock.json'
       - 'changelog.md'
+      - 'questions/**/*.md'
 
 jobs:
   build:
@@ -49,7 +51,7 @@ jobs:
 
       - name: 'svelte / npm install'
         run: |
-          npm install
+          npm ci
 
       - name: 'svelte / npm run build'
         env:
