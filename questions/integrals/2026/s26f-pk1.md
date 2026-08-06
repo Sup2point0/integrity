@@ -1,5 +1,5 @@
 ---
-topic: integral
+topic: integrals
 title: wispberry
 desc:  
 date:  2026 August 1

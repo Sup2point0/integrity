@@ -1,5 +1,5 @@
 ---
-topic: integral
+topic: integrals
 title: awkward silence
 desc:  
 date:  2026 July 31
