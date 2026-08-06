@@ -1,4 +1,4 @@
-<!-- @component PageContent
+<!-- @component `<PageContent>`
 
 The main displayed content for a static article page.
 -->

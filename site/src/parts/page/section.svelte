@@ -1,4 +1,4 @@
-<!-- @component Section
+<!-- @component `<Section>`
 
 A collapsible section.
 -->

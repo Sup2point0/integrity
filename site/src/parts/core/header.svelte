@@ -1,4 +1,4 @@
-<!-- @component Header -->
+<!-- @component `<Header>` -->
 
 <script lang="ts">
 

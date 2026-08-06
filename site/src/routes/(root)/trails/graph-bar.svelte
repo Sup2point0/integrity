@@ -1,4 +1,4 @@
-<!-- @component GraphBar -->
+<!-- @component `<GraphBar>` -->
 
 <script lang="ts">
   

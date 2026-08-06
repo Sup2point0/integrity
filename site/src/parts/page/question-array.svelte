@@ -1,4 +1,4 @@
-<!-- @component QuestionArray
+<!-- @component `<QuestionArray>`
 
 Displays a list of question cards.
 -->

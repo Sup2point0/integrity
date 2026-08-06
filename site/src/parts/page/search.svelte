@@ -1,4 +1,4 @@
-<!-- @component Search
+<!-- @component `<Search>`
 
 A search bar which expands to show filters.
 -->

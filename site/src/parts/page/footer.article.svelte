@@ -1,4 +1,4 @@
-<!-- @component ArticleFooter
+<!-- @component `<ArticleFooter>`
 
 The footer at the end of an article.
 -->

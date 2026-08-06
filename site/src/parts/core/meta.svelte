@@ -1,4 +1,4 @@
-<!-- @component Meta
+<!-- @component `<Meta>`
 
 Abstraction for configuring page meta tags in `<head>`.
 -->

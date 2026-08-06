@@ -1,4 +1,4 @@
-<!-- @component Katex
+<!-- @component `<Katex>`
 
 LaTeX rendered by KaTeX.
 -->

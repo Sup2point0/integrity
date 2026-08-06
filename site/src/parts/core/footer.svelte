@@ -1,4 +1,4 @@
-<!-- @component Footer -->
+<!-- @component `<Footer>` -->
 
 <script lang="ts">
 

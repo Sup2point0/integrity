@@ -1,4 +1,4 @@
-<!-- @component ArticleBanners
+<!-- @component `<ArticleBanners>`
 
 Handles displaying banners at the top of an article page.
 -->

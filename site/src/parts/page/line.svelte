@@ -1,4 +1,4 @@
-<!-- @component Line
+<!-- @component `<Line>`
 
 A lovely horizontal line that fills up a specified width of its container.
 -->

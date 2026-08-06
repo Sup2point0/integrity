@@ -1,4 +1,4 @@
-<!-- @component InjectDesmos
+<!-- @component `<InjectDesmos>`
 
 Transform ```desmos``` blocks in an MDsveX body to Desmos embeds.
 -->

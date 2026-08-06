@@ -1,4 +1,4 @@
-<!-- @component CopyClicky
+<!-- @component `<CopyClicky>`
 
 A button to copy something to clipboard.
 -->

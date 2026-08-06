@@ -1,4 +1,4 @@
-<!-- @component RenderBlock
+<!-- @component `<RenderBlock>`
 
 A block that renders HTML and LaTeX content.
 -->

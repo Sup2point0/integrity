@@ -1,4 +1,4 @@
-<!-- @component Breadcrumbs
+<!-- @component `<Breadcrumbs>`
 
 A bar of slash-separated `<Link>`s for navigation.
 -->

@@ -1,4 +1,4 @@
-<!-- @component TickIcon -->
+<!-- @component `<TickIcon>` -->
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="3 3 16 16">
   <g transform="matrix(1.99997 0 0 1.99997-10.994-2071.68)" fill="#da4453">

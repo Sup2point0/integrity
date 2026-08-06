@@ -1,4 +1,4 @@
-<!-- @component DynamicScriptureView
+<!-- @component `<DynamicScriptureView>`
 
 The fully implemented dynamic scripture viewer.
 -->

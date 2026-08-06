@@ -1,4 +1,4 @@
-<!-- @component Banner
+<!-- @component `<Banner>`
 
 A banner displayed at the top of a page below the header.
 -->

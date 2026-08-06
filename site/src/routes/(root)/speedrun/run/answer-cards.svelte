@@ -1,4 +1,4 @@
-<!-- @component AnswerCards
+<!-- @component `<AnswerCards>`
 
 Cards for selecting the answer to a multiple-choice question.
 -->

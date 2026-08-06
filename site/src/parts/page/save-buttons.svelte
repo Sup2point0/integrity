@@ -1,4 +1,4 @@
-<!-- @component SaveButtons
+<!-- @component `<SaveButtons>`
 
 Buttons for solving, flagging or starred questions.
 -->

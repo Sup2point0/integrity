@@ -1,4 +1,4 @@
-<!-- @component DesmosAPI
+<!-- @component `<DesmosAPI>`
  
 Inserts a request to the Desmos API in `<head>`. All pages that use the Desmos API somewhere inside should include this component.
 -->

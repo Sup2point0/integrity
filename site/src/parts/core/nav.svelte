@@ -1,4 +1,4 @@
-<!-- @component Nav -->
+<!-- @component `<Nav>` -->
 
 <script lang="ts">
 

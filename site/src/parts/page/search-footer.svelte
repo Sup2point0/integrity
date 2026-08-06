@@ -1,4 +1,4 @@
-<!-- @component SearchFooter
+<!-- @component `<SearchFooter>`
 
 A footer at the bottom of search results showing how many results were found.
 -->

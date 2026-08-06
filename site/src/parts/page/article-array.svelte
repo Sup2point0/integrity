@@ -1,4 +1,4 @@
-<!-- @component ArticleArray
+<!-- @component `<ArticleArray>`
 
 Displays a list of article cards.
 -->
