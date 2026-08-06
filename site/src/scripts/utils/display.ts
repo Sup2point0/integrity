@@ -35,9 +35,7 @@ export function round(value: number, places: number = 0): string
 /** Display a time in the format `HH:MM:SS`, given its seconds count. */
 export function display_time(t: number): string
 {
-  if (t == undefined) {
-    t = 0;
-  }
+  t ??= 0;
 
   let T = Math.round(t / 1000);
 

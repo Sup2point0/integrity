@@ -43,11 +43,11 @@ function construct_collection(raw: any): QuestionCollection
     questions[shard] = question;
     
     for (tag of question.tags) {
-      if (tag === null) continue;
+      if (tag == null) continue;
       tags_set.add(tag);
     }
     for (method of question.methods) {
-      if (method === null) continue;
+      if (method == null) continue;
       methods_set.add(method);
     }
   }

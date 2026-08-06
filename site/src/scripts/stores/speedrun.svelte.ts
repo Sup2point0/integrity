@@ -152,12 +152,12 @@ export class SpeedrunData
   {
     this.run.answers.clear();
 
-    let shard: Shard = this.run.question_pool!.splice(0, 1)[0];
+    let shard: Shard = this.run.question_pool.splice(0, 1)[0];
     let question = Site.questions[this.topic!].questions[shard];
     this.run.question = question;
 
     this.run.question_hist.push({
-      shard: shard,
+      shard,
       correct: null,
       attempts: 0,
       time: this.run.elapsed,

@@ -31,7 +31,8 @@ export function inject_question(desmos: any, question: Question)
       }
     }
 
-    // TODO: Inject completing the square question
+    default:
+      // TODO: Inject completing the square question
   }
 }
 

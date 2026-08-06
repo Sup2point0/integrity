@@ -24,9 +24,7 @@ function find_scriptures(raw: object): SiteScriptures
     if (page.index?.includes("scriptures")) {
       let topic = page.index[1];
 
-      if (out[topic] == null) {
-        out[topic] = [];
-      }
+      out[topic] ??= [];
       out[topic].push(page);
     }
   }
