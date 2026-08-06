@@ -39,7 +39,7 @@ export class Question
     latex: Block[] | string[],
   };
 
-  /** A hint. */
+  /** Hints for the question. */
   hints?: {
     [idx: string]: Block[]
   };
@@ -73,7 +73,7 @@ export class Question
 
     if (!process) return;
 
-    if (data.topic) {
+    if (data.topic != undefined) {
       // @ts-expect-error: Topic is indexable
       this.topic = Topic[data.topic.toUpperCase().replaceAll("-", "_")];
       
@@ -98,8 +98,8 @@ export class Question
     this._match = [
       this.shard.toLowerCase(),
       this.title?.toLowerCase(),
-      ...(this.tags ?? []),
-      ...(this.methods ?? []),
+      ...this.tags,
+      ...this.methods,
     ].filter(Boolean) as string[];
 
     if (this.topic === "graph-drawing") {
@@ -125,15 +125,15 @@ export class Question
 
     // standardise brackets
     out = out.replaceAll(
-      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)\^([\d])[\(\{]([a-z])[\)\}]/g,
+      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)\^([\d])[({]([a-z])[)}]/g,
       "\\$1\\left($3\\right)^$2"
     );
     out = out.replaceAll(
-      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)[\(\{]([a-z])[\)\}]/g,
+      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)[({]([a-z])[)}]/g,
       "\\$1\\left($2\\right)"
     );
     out = out.replaceAll(
-      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth) x([\\\+])/g,
+      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth) x([\\+])/g,
       "\\$1\\left(x\\right)$2"
     );
 

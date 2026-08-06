@@ -88,7 +88,7 @@ export class SpeedrunData
   {
     let out = [];
 
-    if (!this.topic) {
+    if (this.topic == null) {
       out.push({ code: "TOPIC", message: "No question topic(s) have been selected."});
     }
 
@@ -96,10 +96,7 @@ export class SpeedrunData
       out.push({ code: "DIFF", message: "No question difficulties have been selected."});
     }
 
-    if (!(
-      this.run
-      || this.include
-    )) {
+    if (!this.include) {
       out.push({ code: "500", message: "Internal error, something went wrong..."});
     }
 

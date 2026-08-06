@@ -53,9 +53,9 @@ test("crawl-routes", async () =>
 
         try {
           console.info(`-- ${WORKER} Visiting: ${target}`);
-          let status = await page.goto(target);
+          let response = await page.goto(target);
 
-          if (!status?.ok()) throw Error();
+          if (!response?.ok()) throw Error(String(response?.status()));
 
           let links = await page.locator("a").evaluateAll(
             anchors => anchors

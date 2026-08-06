@@ -190,9 +190,9 @@ export class SearchPrefs
     }
 
     if (this.include.featured) {
-      out = out.filter(q => q.flags?.includes("feat"));
+      out = out.filter(q => q.flags.includes("feat"));
     } else if (this.exclude.featured) {
-      out = out.filter(q => !q.flags?.includes("feat"));
+      out = out.filter(q => !q.flags.includes("feat"));
     }
   
     if (this.include["has hints"]) {
