@@ -23,15 +23,30 @@ export default defineConfig(
       globals: {
         ...globals.browser,
         ...globals.node
-      }
+      },
+      parserOptions: {
+        projectService: true,
+      },
     },
     rules: {
+      "no-implicit-coercion": "error",
+      "no-regex-spaces": "off",
       "no-undef": "off",
+      "no-unmodified-loop-condition": "error",
+      "no-unreachable-loop": "error",
+      "object-shorthand": "warn",
       "prefer-const": "off",
+      "@typescript-eslint/no-confusing-void-expression": "error",
+      "@typescript-eslint/no-floating-promises": "error",
+      "@typescript-eslint/no-unnecessary-condition": "error",
+      "@typescript-eslint/no-unnecessary-type-assertion": "error",
       "@typescript-eslint/no-unused-expressions": "off",
+      "@typescript-eslint/prefer-nullish-coalescing": "error",
+      "@typescript-eslint/strict-boolean-expressions": "error",
+      "@typescript-eslint/switch-exhaustiveness-check": "error",
       "@typescript-eslint/no-unused-vars": [
         "error",
-        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }
+        { argsIgnorePattern: "(^_|^params$)", varsIgnorePattern: "^_" }
       ],
     },
   },
