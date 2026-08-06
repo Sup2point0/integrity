@@ -1,13 +1,7 @@
-<!-- @component Desmos
+<!-- @component `<Desmos>`
 
 An embedded Desmos window that handles initialisation when the element scrolls into view.
 -->
-
-<script module>
-
-declare let Desmos: any;
-
-</script>
 
 <script lang="ts">
 
@@ -17,12 +11,12 @@ import { onMount } from "svelte";
 
 
 interface Props {
-  blocks?: Block | Block[] | null;
-  options?: object;
+  blocks?:   Block | Block[] | null;
+  options?:  object;
   controls?: boolean;
-  height?: string;
-  ratio?: number;
-  bounds?: number | {
+  height?:   string;
+  ratio?:    number;
+  bounds?:   number | {
     left?: number, right?: number, bottom?: number, top?: number,
   };
   no_delay?: boolean;
@@ -42,9 +36,11 @@ let {
 // svelte-ignore state_referenced_locally
 let config = {
   expressions: controls, expressionsCollapsed: true,
-  graphPaper: false, showGrid: controls,
-  keypad: false, settingsMenu: controls,
+  graphPaper: false,
+  keypad: false,
   lockViewport: !controls, zoomButtons: controls,
+  settingsMenu: controls,
+  showGrid: controls,
   showXAxis: controls, showYAxis: controls,
   xAxisNumbers: controls, yAxisNumbers: controls,
 };
@@ -52,91 +48,87 @@ let config = {
 Object.assign(config, options);
 
 
-/** The Desmos calculator instance. */
-let desmos: any = $state();
+let desmos: Desmos.Calculator;
 
 /** Are we still trying to load the Desmos embed? */
 let is_loading: boolean = $state(true);
 
-/** Message to show the user, if loading the Desmos embed failed. */
-let error_message: string | null | undefined = $state();
+/** Starts as `undefined`, set to `null` if the embed loads successfully. */
+let error_message: string | null | undefined = $state(undefined);
 
-/** Element to load the Desmos embed into. */
 let root: HTMLElement;
 
 const cols = col_picker();
 
 
 onMount(() => {
-  let observer: IntersectionObserver | null = null;
-
   /* NOTE: Waiting a little before trying to load the Desmos embed is more reliable */
-  let timeout = setTimeout(() => {
-    observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
+  let timeout = setTimeout(
+    () => {
+      let observer = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
 
-      if (is_loading || error_message !== undefined) {
-        try_load_desmos();
-      }
-    });
-    
-    observer.observe(root);
-  }, no_delay ? 0 : 500);
+        if (is_loading || error_message !== undefined) {
+          try { try_load_desmos(); }
+          catch { return; }
 
-  return () => {
-    clearTimeout(timeout);
-    if (observer != null) observer.disconnect();
-  };
+          observer.disconnect();
+        }
+      });
+      observer.observe(root);
+    },
+    no_delay ? 0 : 500
+  );
+
+  return () => clearTimeout(timeout);
 });
+
 
 function* col_picker()
 {
   const colours = Object.values(Desmos.Colors);
 
-  let idx: number;
-  let out: any;
-  let last: any;
+  let out: string;
+  let last: string = "";
 
   while (true) {
-    idx = Math.floor(Math.random() * colours.length);
-    out = colours[idx];
-    
-    if (out === last) {
-      continue
-    } else {
-      last = out;
-      yield out;
-    }
+    out = colours[Math.floor(Math.random() * colours.length)];
+    if (out === last) continue;
+
+    last = out;
+    yield out;
   }
 }
 
-function try_load_desmos(tries: int = 0)
+function try_load_desmos(tries: int = 0): int
 {
   if (tries > 3) {
     error_message = `Failed to load after ${tries} retries`;
   }
-  let ok = load_desmos();
 
-  if (ok) {
+  try {
+    load_desmos();
     error_message = undefined;
     is_loading = false;
-    return;
+    
+    return 0;
   }
+  catch (e) {
+    if (e instanceof Error) {
+      error_message = e.message;
+    }
 
-  tries++;
+    tries++;
+    console.error(`Failed to load Desmos embed, retrying in ${tries} seconds...`);
 
-  console.error(`Failed to load Desmos embed, retrying in ${tries} seconds...`);
-
-  setTimeout(() => try_load_desmos(tries), tries * 1000);
+    return setTimeout(() => try_load_desmos(tries), tries * 1000);
+  }
 }
 
 function load_desmos(): boolean
 {
-  try {
-    Desmos;
-  } catch {
-    error_message = "Could not access Desmos API, please try checking your internet connection?";
-    return false;
+  if (typeof Desmos === "undefined") {
+    throw new Error(`Could not access Desmos API. Try checking your internet connection?`);
   }
 
   desmos = Desmos.GraphingCalculator(root, config);
@@ -146,11 +138,11 @@ function load_desmos(): boolean
       left: -bounds, right: bounds,
       bottom: -bounds, top: bounds,
     });
-  } else if (bounds) {
+  } else if (bounds != undefined) {
     desmos.setMathBounds(bounds);
   }
 
-  if (blocks) {
+  if (blocks != undefined) {
     desmos.setExpressions([]);
     
     if (Array.isArray(blocks)) {
@@ -163,9 +155,7 @@ function load_desmos(): boolean
     else {
       let expr = parse_block(blocks, 1);
       if (expr == undefined) {
-        console.error(`Integrity: Failed to parse block supplied to \`<Desmos />\`: ${JSON.stringify(blocks)}`);
-        error_message = "Failed to parse block";
-        return false;
+        throw new Error(`Failed to parse block supplied to \`<Desmos />\`: ${JSON.stringify(blocks)}`);
       }
       desmos.setExpression(expr);
     }
@@ -288,11 +278,7 @@ function parse_sequence(source: string, sequence: string): Record<string, any> |
   out = out.replaceAll(/([a-zA-Z]+):/g, String.raw `"$1":`);
   if (out == undefined) return;
 
-  try {
-    return JSON.parse(out);
-  } catch {
-    return undefined;
-  }
+  return JSON.parse(out);
 }
 
 </script>
