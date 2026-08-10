@@ -53,6 +53,10 @@ jobs:
         run: |
           npm ci
 
+      - name: 'svelte / npm audit'
+        run: |
+          npm audit --audit-level=moderate
+
       - name: 'svelte / npm run build'
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
