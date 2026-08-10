@@ -155,7 +155,7 @@ export class Question
 /** A dictionary of questions from a single topic. */
 export interface QuestionDictionary
 {
-  [shard: Shard]: Question;
+  [shard: Shard]: Question | undefined;
 }
 
 /** A collection of questions from a single topic, along with their tags and methods. */
@@ -169,5 +169,5 @@ export interface QuestionCollection
 /** The entire collection of question in Integrity. */
 export interface QuestionsData
 {
-  [topic: string]: QuestionCollection;
+  [topic: string]: QuestionCollection | undefined;
 }

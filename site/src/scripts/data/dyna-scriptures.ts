@@ -7,8 +7,8 @@ export const dyna_scriptures = process_dyna_scriptures(dyna_scriptures_data);
 
 interface DynamicScripturesData {
   [domain: string]: {
-    [chapter: string]: Record<string, DynamicScripture>
-  }
+    [chapter: string]: Record<string, DynamicScripture | undefined>
+  } | undefined;
 }
 
 

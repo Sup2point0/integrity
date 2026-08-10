@@ -29,14 +29,14 @@ export function inject_question(desmos: any, question: Question)
           latex: String.raw `I = ${integral}`,
         })
       }
+      break;
     }
-
     default:
       // TODO: Inject completing the square question
   }
 }
 
-export const presets: Record<string, object[]> =
+export const presets: Record<string, Desmos.ExpressionState[]> =
 {
   "integrals": [
     { id: "integrals-title-1", type: "text",

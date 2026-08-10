@@ -11,7 +11,7 @@ interface SiteData
   /** The base URL of the site. */
   root: url;
 
-  pages: Record<string, Page>;
+  pages: Record<string, Page | undefined>;
   index: Record<string, {
     route: string | null;
     pages: string[];
@@ -27,6 +27,7 @@ interface SiteData
   get_all_methods: () => string[];
 }
 
+// TODO try change into namespace?
 export const Site: SiteData =
 {
   root: "https://sup2point0.github.io/integrity",

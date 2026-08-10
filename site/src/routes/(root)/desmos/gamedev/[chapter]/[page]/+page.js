@@ -5,7 +5,7 @@ import { error } from "@sveltejs/kit";
 
 export function load({ params })
 {
-  let chapter = dyna_scriptures["desmos-gamedev"][params.chapter];
+  let chapter = dyna_scriptures["desmos-gamedev"]?.[params.chapter];
   if (chapter == undefined) error(404);
   
   let page = chapter[params.page];
