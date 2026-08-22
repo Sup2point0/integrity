@@ -14,312 +14,312 @@ import type { Question, States } from "#scripts/types";
 
 export class SearchPrefs
 {
-  #DEFAULTS = {
-    query: "",
-    difficulties: {
-      based: true,
-      incline: true,
-      manifold: true,
-      chaos: true,
-      unassigned: true,
-    },
-    include: {
-      solved: false,
-      flagged: false,
-      starred: false,
-      featured: false,
-      "has hints": false,
-      guided: false,
-    },
-    exclude: {
-      solved: false,
-      flagged: false,
-      starred: false,
-      featured: false,
-      "has hints": false,
-      guided: false,
-    },
-    show: {
-      question: true,
-      shard: false,
-      dates: true,
-      tags: true,
-      methods: false,
-      difficulties: false,
-    },
-    buttons: {
-      solved: true,
-      flag: true,
-      star: true,
-    },
-    view: "grid",
-    effects: null,
-    sort: null,
-    reverse: false,
-    expanded: true,
-  };
+	#DEFAULTS = {
+		query: "",
+		difficulties: {
+			based: true,
+			incline: true,
+			manifold: true,
+			chaos: true,
+			unassigned: true,
+		},
+		include: {
+			solved: false,
+			flagged: false,
+			starred: false,
+			featured: false,
+			"has hints": false,
+			guided: false,
+		},
+		exclude: {
+			solved: false,
+			flagged: false,
+			starred: false,
+			featured: false,
+			"has hints": false,
+			guided: false,
+		},
+		show: {
+			question: true,
+			shard: false,
+			dates: true,
+			tags: true,
+			methods: false,
+			difficulties: false,
+		},
+		buttons: {
+			solved: true,
+			flag: true,
+			star: true,
+		},
+		view: "grid",
+		effects: null,
+		sort: null,
+		reverse: false,
+		expanded: true,
+	};
 
-  query: string = $state(this.#DEFAULTS.query);
+	query: string = $state(this.#DEFAULTS.query);
 
-  tags: States = $state({});
-  methods: States = $state({});
-  difficulties: States = $state(this.#DEFAULTS.difficulties);
+	tags: States = $state({});
+	methods: States = $state({});
+	difficulties: States = $state(this.#DEFAULTS.difficulties);
 
-  include: States = $state(this.#DEFAULTS.include);
-  exclude: States = $state(this.#DEFAULTS.exclude);
+	include: States = $state(this.#DEFAULTS.include);
+	exclude: States = $state(this.#DEFAULTS.exclude);
 
-  show: States = $state(this.#DEFAULTS.show);
-  buttons: States = $state(this.#DEFAULTS.buttons);
+	show: States = $state(this.#DEFAULTS.show);
+	buttons: States = $state(this.#DEFAULTS.buttons);
 
-  view: "grid" | "list" | "grid-wide" = $state(this.#DEFAULTS.view);
-  effects: boolean | null = $state(this.#DEFAULTS.effects);
-  sort: "rel" | "date" | "name" | "diff" | "rand" | null = $state(this.#DEFAULTS.sort);
-  reverse: boolean = $state(this.#DEFAULTS.reverse);
+	view: "grid" | "list" | "grid-wide" = $state(this.#DEFAULTS.view);
+	effects: boolean | null = $state(this.#DEFAULTS.effects);
+	sort: "rel" | "date" | "name" | "diff" | "rand" | null = $state(this.#DEFAULTS.sort);
+	reverse: boolean = $state(this.#DEFAULTS.reverse);
 
-  /** Whether search filters should be expanded. */
-  expanded = $state(this.#DEFAULTS.expanded);
-
-
-  /** Expose attributes for syncing to localStorage. */
-  to_json(): object
-  {
-    return {
-      include:  this.include,
-      exclude:  this.exclude,
-      show:     this.show,
-      buttons:  this.buttons,
-      view:     this.view,
-      effects:  this.effects,
-      sort:     this.sort,
-      reverse:  this.reverse,
-      expanded: this.expanded,
-    }
-  }
-
-  /** Load attributes from `localStorage` JSON. */
-  set_from_json(data: Partial<SearchPrefs>): SearchPrefs
-  {
-    if (data.include) Object.assign(this.include, data.include);
-    if (data.exclude) Object.assign(this.exclude, data.exclude);
-    if (data.show) Object.assign(this.show, data.show);
-    if (data.buttons) Object.assign(this.buttons, data.buttons);
-    
-    this.view     = data.view     ?? this.view;
-    this.effects  = data.effects  ?? this.effects;
-    this.sort     = data.sort     ?? this.sort;
-    this.reverse  = data.reverse  ?? this.reverse;
-    this.expanded = data.expanded ?? this.expanded;
-
-    return this;
-  }
+	/** Whether search filters should be expanded. */
+	expanded = $state(this.#DEFAULTS.expanded);
 
 
-  /** Reset all search options to their defaults. */
-  reset_defaults()
-  {
-    Object.assign(this, this.#DEFAULTS);
+	/** Expose attributes for syncing to localStorage. */
+	to_json(): object
+	{
+		return {
+			include:  this.include,
+			exclude:  this.exclude,
+			show:     this.show,
+			buttons:  this.buttons,
+			view:     this.view,
+			effects:  this.effects,
+			sort:     this.sort,
+			reverse:  this.reverse,
+			expanded: this.expanded,
+		}
+	}
 
-    for (let tag of Object.keys(this.tags)) {
-      this.tags[tag] = false;
-    }
+	/** Load attributes from `localStorage` JSON. */
+	set_from_json(data: Partial<SearchPrefs>): SearchPrefs
+	{
+		if (data.include) Object.assign(this.include, data.include);
+		if (data.exclude) Object.assign(this.exclude, data.exclude);
+		if (data.show) Object.assign(this.show, data.show);
+		if (data.buttons) Object.assign(this.buttons, data.buttons);
+		
+		this.view     = data.view     ?? this.view;
+		this.effects  = data.effects  ?? this.effects;
+		this.sort     = data.sort     ?? this.sort;
+		this.reverse  = data.reverse  ?? this.reverse;
+		this.expanded = data.expanded ?? this.expanded;
 
-    for (let method of Object.keys(this.methods)) {
-      this.methods[method] = false;
-    }
+		return this;
+	}
 
-    this.query = "";  // NOTE: Just to trigger reactivity
-  }
 
-  /** Apply the filters to the given list of questions. */
-  filter_questions(
-    questions: Question[],
-  ): Question[]
-  {
-    let out: Question[] = [...questions];
+	/** Reset all search options to their defaults. */
+	reset_defaults()
+	{
+		Object.assign(this, this.#DEFAULTS);
 
-    let data = get(userprefs);
-  
-    // Filter
-    /* we could optimise the order of applying filters so those that cut out the greatest proportion are applied first (thereby speeding up later filters), but this doesn't really impact performance enough to warrant that lmao */
-    /* NOTE still true? */
-    
-    if (Object.values(this.tags).includes(true)) {
-      out = out.filter(
-        q => Object.keys(this.tags).some(tag =>
-          this.tags[tag] && q.tags.includes(tag)
-        )
-      );
-    }
+		for (let tag of Object.keys(this.tags)) {
+			this.tags[tag] = false;
+		}
 
-    if (Object.values(this.methods).includes(true)) {
-      out = out.filter(
-        q => Object.keys(this.methods).some(method =>
-          this.methods[method] && q.methods.includes(method)
-        )
-      );
-    }
+		for (let method of Object.keys(this.methods)) {
+			this.methods[method] = false;
+		}
 
-    if (Object.values(this.difficulties).includes(true)) {
-      out = out.filter(
-        q => Object.keys(this.difficulties).some(diff =>
-          this.difficulties[diff] && (
-              diff === "unassigned"
-            ? q.difficulty == undefined
-            : q.difficulty?.includes(diff)
-          )
-        )
-      );
-    }
+		this.query = "";  // NOTE: Just to trigger reactivity
+	}
 
-    if (this.include.solved) {
-      out = out.filter(q => data.solved.has(q.shard));
-    } else if (this.exclude.solved) {
-      out = out.filter(q => !data.solved.has(q.shard));
-    }
+	/** Apply the filters to the given list of questions. */
+	filter_questions(
+		questions: Question[],
+	): Question[]
+	{
+		let out: Question[] = [...questions];
 
-    if (this.include.flagged) {
-      out = out.filter(q => data.flagged.has(q.shard));
-    } else if (this.exclude.flagged) {
-      out = out.filter(q => !data.flagged.has(q.shard));
-    }
+		let data = get(userprefs);
+	
+		// Filter
+		/* we could optimise the order of applying filters so those that cut out the greatest proportion are applied first (thereby speeding up later filters), but this doesn't really impact performance enough to warrant that lmao */
+		/* NOTE still true? */
+		
+		if (Object.values(this.tags).includes(true)) {
+			out = out.filter(
+				q => Object.keys(this.tags).some(tag =>
+					this.tags[tag] && q.tags.includes(tag)
+				)
+			);
+		}
 
-    if (this.include.starred) {
-      out = out.filter(q => data.starred.has(q.shard));
-    } else if (this.exclude.starred) {
-      out = out.filter(q => !data.starred.has(q.shard));
-    }
+		if (Object.values(this.methods).includes(true)) {
+			out = out.filter(
+				q => Object.keys(this.methods).some(method =>
+					this.methods[method] && q.methods.includes(method)
+				)
+			);
+		}
 
-    if (this.include.featured) {
-      out = out.filter(q => q.flags.includes("feat"));
-    } else if (this.exclude.featured) {
-      out = out.filter(q => !q.flags.includes("feat"));
-    }
-  
-    if (this.include["has hints"]) {
-      out = out.filter(q => q.hints?.length);
-    } else if (this.exclude["has hints"]) {
-      out = out.filter(q => !q.hints?.length);
-    }
+		if (Object.values(this.difficulties).includes(true)) {
+			out = out.filter(
+				q => Object.keys(this.difficulties).some(diff =>
+					this.difficulties[diff] && (
+							diff === "unassigned"
+						? q.difficulty == undefined
+						: q.difficulty?.includes(diff)
+					)
+				)
+			);
+		}
 
-    if (this.include.guided) {
-      out = out.filter(q => q.flags.includes("guide"));
-    } else if (this.exclude.guided) {
-      out = out.filter(q => !q.flags.includes("guide"));
-    }
-  
-    // Search
-    /* string matching is heavy, so do this after filtering as much as we can */
-    if (this.query) {
-      let query = this.query.toLowerCase();
-      let limit = Math.round((1.44 ** (-query.length)) * questions.length);
-  
-      let matches = fuzz.extract(query, out, {
-        scorer: (query: string, q: Question) => (
-          q._match ? 
-            Math.max(...q._match.map(
-              each => fuzz.partial_ratio(each, query)
-            ))
-          : 0
-        ),
-        limit: Math.max(limit, 2),
-      });
+		if (this.include.solved) {
+			out = out.filter(q => data.solved.has(q.shard));
+		} else if (this.exclude.solved) {
+			out = out.filter(q => !data.solved.has(q.shard));
+		}
 
-      if (limit < 2 && matches[0][1] < 50) {
-        return [];  /* no relevant results */
-      } else {
-        out = matches.map(each => each[0])
-      }
-    }
-  
-    // Sort
-    if (this.sort) {
-      switch (this.sort) {
-        case "rel":
-          out = this.sort_rel(out, data);
-          break;
-        
-        case "date":
-          out = this.sort_date(out);
-          break;
-        
-        case "name":
-          out.sort((prot, deut) => (prot.title ?? "").localeCompare(deut.title ?? ""));
-          break;
+		if (this.include.flagged) {
+			out = out.filter(q => data.flagged.has(q.shard));
+		} else if (this.exclude.flagged) {
+			out = out.filter(q => !data.flagged.has(q.shard));
+		}
 
-        case "diff":
-          out = this.sort_rel(out, data, true);
-          break;
+		if (this.include.starred) {
+			out = out.filter(q => data.starred.has(q.shard));
+		} else if (this.exclude.starred) {
+			out = out.filter(q => !data.starred.has(q.shard));
+		}
 
-        case "rand":
-          out = sample(out, { replace: false });
-      }
-    }
-    else if (!this.query) {
-      out = this.sort_rel(out, data);
-    }
-  
-    if (this.reverse) {
-      out.reverse();
-    }
-  
-    return out;
-  }
+		if (this.include.featured) {
+			out = out.filter(q => q.flags.includes("feat"));
+		} else if (this.exclude.featured) {
+			out = out.filter(q => !q.flags.includes("feat"));
+		}
+	
+		if (this.include["has hints"]) {
+			out = out.filter(q => q.hints?.length);
+		} else if (this.exclude["has hints"]) {
+			out = out.filter(q => !q.hints?.length);
+		}
 
-  sort_rel(source: Question[], data: UserPrefs, difficulty = false): Question[] {
-    if (typeof Object.groupBy === "undefined") return this.sort_date(source);
-    
-    let categories = Object.groupBy(source, q => this.categorise_rel(q, data, difficulty));
+		if (this.include.guided) {
+			out = out.filter(q => q.flags.includes("guide"));
+		} else if (this.exclude.guided) {
+			out = out.filter(q => !q.flags.includes("guide"));
+		}
+	
+		// Search
+		/* string matching is heavy, so do this after filtering as much as we can */
+		if (this.query) {
+			let query = this.query.toLowerCase();
+			let limit = Math.round((1.44 ** (-query.length)) * questions.length);
+	
+			let matches = fuzz.extract(query, out, {
+				scorer: (query: string, q: Question) => (
+					q._match ? 
+						Math.max(...q._match.map(
+							each => fuzz.partial_ratio(each, query)
+						))
+					: 0
+				),
+				limit: Math.max(limit, 2),
+			});
 
-    for (let category of Object.values(categories)) {
-      category?.sort((prot, deut) =>
-        (deut.date?.getTime() ?? 0) - (prot.date?.getTime() ?? 0)
-      );
-    }
+			if (limit < 2 && matches[0][1] < 50) {
+				return [];  /* no relevant results */
+			} else {
+				out = matches.map(each => each[0])
+			}
+		}
+	
+		// Sort
+		if (this.sort) {
+			switch (this.sort) {
+				case "rel":
+					out = this.sort_rel(out, data);
+					break;
+				
+				case "date":
+					out = this.sort_date(out);
+					break;
+				
+				case "name":
+					out.sort((prot, deut) => (prot.title ?? "").localeCompare(deut.title ?? ""));
+					break;
 
-    return Object.values(categories).flatMap(category => category) as Question[];
-  }
+				case "diff":
+					out = this.sort_rel(out, data, true);
+					break;
 
-  categorise_rel(question: Question, data: UserPrefs, difficulty = false): number
-  {
-    if (data.flagged.has(question.shard)) return 5;
-    if (data.starred.has(question.shard)) return 40;
-    if (data.solved.has(question.shard)) return 50;
-    
-    if (difficulty && question.difficulty) {
-      switch (question.difficulty) {
-        case "chaos": return 6;
-        case "manifold": return 7;
-        case "incline": return 8;
-        case "based": return 9;
-      }
-    }
-    
-    return 10;
-  }
+				case "rand":
+					out = sample(out, { replace: false });
+			}
+		}
+		else if (!this.query) {
+			out = this.sort_rel(out, data);
+		}
+	
+		if (this.reverse) {
+			out.reverse();
+		}
+	
+		return out;
+	}
 
-  sort_date(source: Question[]): Question[] {
-    return source.toSorted((prot, deut) =>
-      (deut.date?.getTime() ?? 0) - (prot.date?.getTime() ?? 0)
-    );
-  }
+	sort_rel(source: Question[], data: UserPrefs, difficulty = false): Question[] {
+		if (typeof Object.groupBy === "undefined") return this.sort_date(source);
+		
+		let categories = Object.groupBy(source, q => this.categorise_rel(q, data, difficulty));
+
+		for (let category of Object.values(categories)) {
+			category?.sort((prot, deut) =>
+				(deut.date?.getTime() ?? 0) - (prot.date?.getTime() ?? 0)
+			);
+		}
+
+		return Object.values(categories).flatMap(category => category) as Question[];
+	}
+
+	categorise_rel(question: Question, data: UserPrefs, difficulty = false): number
+	{
+		if (data.flagged.has(question.shard)) return 5;
+		if (data.starred.has(question.shard)) return 40;
+		if (data.solved.has(question.shard)) return 50;
+		
+		if (difficulty && question.difficulty) {
+			switch (question.difficulty) {
+				case "chaos": return 6;
+				case "manifold": return 7;
+				case "incline": return 8;
+				case "based": return 9;
+			}
+		}
+		
+		return 10;
+	}
+
+	sort_date(source: Question[]): Question[] {
+		return source.toSorted((prot, deut) =>
+			(deut.date?.getTime() ?? 0) - (prot.date?.getTime() ?? 0)
+		);
+	}
 }
 
 
 /** Global search options. */
 export const search = persisted(
-  "integrity.search",
-  new SearchPrefs(),
-  {
-    serializer: {
-      parse: data => {
-        try {
-          return new SearchPrefs().set_from_json(JSON.parse(data));
-        } catch {
-          return new SearchPrefs();
-        }
-      },
-      stringify: data => JSON.stringify(data.to_json()),
-    },
-    syncTabs: true,
-  }
+	"integrity.search",
+	new SearchPrefs(),
+	{
+		serializer: {
+			parse: data => {
+				try {
+					return new SearchPrefs().set_from_json(JSON.parse(data));
+				} catch {
+					return new SearchPrefs();
+				}
+			},
+			stringify: data => JSON.stringify(data.to_json()),
+		},
+		syncTabs: true,
+	}
 );

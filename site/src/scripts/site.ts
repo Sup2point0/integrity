@@ -8,67 +8,67 @@ import type { Question, QuestionsData, Page, url } from "#scripts/types";
 
 interface SiteData
 {
-  /** The base URL of the site. */
-  root: url;
+	/** The base URL of the site. */
+	root: url;
 
-  pages: Record<string, Page | undefined>;
-  index: Record<string, {
-    route: string | null;
-    pages: string[];
-  }>;
-  questions: QuestionsData;
+	pages: Record<string, Page | undefined>;
+	index: Record<string, {
+		route: string | null;
+		pages: string[];
+	}>;
+	questions: QuestionsData;
 
-  display_topic: (topic: Topic) => string;
-  get_questions_of_topic: (topic: Topic) => Question[];
-  get_list_of_all_questions: () => Question[];
-  get_map_of_all_questions: () => Record<string, Question>;
-  get_featured_questions: () => Question[];
-  get_all_tags: () => string[];
-  get_all_methods: () => string[];
+	display_topic: (topic: Topic) => string;
+	get_questions_of_topic: (topic: Topic) => Question[];
+	get_list_of_all_questions: () => Question[];
+	get_map_of_all_questions: () => Record<string, Question>;
+	get_featured_questions: () => Question[];
+	get_all_tags: () => string[];
+	get_all_methods: () => string[];
 }
 
 // TODO try change into namespace?
 export const Site: SiteData =
 {
-  root: "https://sup2point0.github.io/integrity",
+	root: "https://sup2point0.github.io/integrity",
 
-  pages,
-  index,
-  questions,
+	pages,
+	index,
+	questions,
 
-  display_topic: (topic: Topic | null | undefined): string => {
-    return (topic && TOPIC_DISPLAY_NAMES[topic]) ?? "Unknown Topic";
-  },
+	display_topic: (topic: Topic | null | undefined): string => {
+		return (topic && TOPIC_DISPLAY_NAMES[topic]) ?? "Unknown Topic";
+	},
 
-  get_questions_of_topic: (topic) => {
-    return Object.values(Site.questions[topic]?.questions ?? {});
-  },
+	get_questions_of_topic: (topic) => {
+		return Object.values(Site.questions[topic]?.questions ?? {});
+	},
 
-  get_list_of_all_questions: () => {
-    return Object.values(Site.questions).flatMap(topic => Object.values(topic.questions));
-  },
+	get_list_of_all_questions: () => {
+		return Object.values(Site.questions).flatMap(topic => Object.values(topic.questions));
+	},
 
-  get_map_of_all_questions: () => {
-    return Object.fromEntries(
-      Object.values(Site.questions).flatMap(topic => Object.entries(topic.questions))
-    );
-  },
+	get_map_of_all_questions: () => {
+		return Object.fromEntries(
+			Object.values(Site.questions).flatMap(topic => Object.entries(topic.questions))
+		);
+	},
 
-  get_featured_questions: () => {
-    return Site.get_list_of_all_questions().filter(q => q.flags?.includes("feat"));
-  },
+	get_featured_questions: () => {
+		return Site.get_list_of_all_questions().filter(q => q.flags?.includes("feat"));
+	},
 
-  get_all_tags: () => {
-    return Array.from(
-      new Set(Object.values(Site.questions).flatMap(topic => topic.tags))
-    ).filter(method => method !== undefined).sort();
-  },
+	get_all_tags: () => {
+		return Array.from(
+			new Set(Object.values(Site.questions).flatMap(topic => topic.tags))
+		).filter(method => method !== undefined).sort();
+	},
 
-  get_all_methods: () => {
-    return Array.from(
-      new Set(Object.values(Site.questions).flatMap(topic => topic.methods))
-    ).filter(method => method !== undefined).sort();
-  },
+	get_all_methods: () => {
+		return Array.from(
+			new Set(Object.values(Site.questions).flatMap(topic => topic.methods))
+		).filter(method => method !== undefined).sort();
+	},
 };
 
 export default Site;
@@ -76,15 +76,15 @@ export default Site;
 
 export function get_scriptures_of_topic(topic: Topic): Page[]
 {
-  return scriptures[topic] ?? [];
+	return scriptures[topic] ?? [];
 }
 
 export function get_list_of_all_scriptures(): Page[]
 {
-  return Object.values(scriptures).flat();
+	return Object.values(scriptures).flat();
 }
 
 export function get_featured_scriptures(): Page[]
 {
-  return get_list_of_all_scriptures().filter(page => page.flags?.includes("feat"));
+	return get_list_of_all_scriptures().filter(page => page.flags?.includes("feat"));
 }
