@@ -5,49 +5,52 @@ An embedded Desmos window that handles initialisation when the element scrolls i
 
 <script lang="ts">
 
-import type { Block, int } from "#scripts/types";
+import { compile } from "desmost";
+
+import type { int } from "#scripts/types";
 
 import { onMount } from "svelte";
 
 
 interface Props {
-  blocks?:   Block | Block[] | null;
-  options?:  object;
-  controls?: boolean;
-  height?:   string;
-  ratio?:    number;
-  bounds?:   number | {
-    left?: number, right?: number, bottom?: number, top?: number,
-  };
-  no_delay?: boolean;
+	source?:   string;
+	options?:  object;  // FIXME rename to config
+	controls?: boolean;
+	height?:   string;
+	ratio?:    number;
+	bounds?:   number | {
+		left?: number, right?: number, bottom?: number, top?: number,
+	};
+	no_delay?: boolean;
 }
 
 let {
-  blocks,
-  options = {},
-  controls = true,
-  height = "auto",
-  ratio,
-  bounds = controls ? undefined : 2,
-  no_delay = false,
+	source,
+	options = {},
+	controls = true,
+	height = "auto",
+	ratio,
+	bounds = controls ? undefined : 2,
+	no_delay = false,
 }: Props = $props();
 
 
 // svelte-ignore state_referenced_locally
 let config = {
-  expressions: controls, expressionsCollapsed: true,
-  graphPaper: false,
-  keypad: false,
-  lockViewport: !controls, zoomButtons: controls,
-  settingsMenu: controls,
-  showGrid: controls,
-  showXAxis: controls, showYAxis: controls,
-  xAxisNumbers: controls, yAxisNumbers: controls,
+	expressions: controls, expressionsCollapsed: true,
+	graphPaper: false,
+	keypad: false,
+	lockViewport: !controls, zoomButtons: controls,
+	settingsMenu: controls,
+	showGrid: controls,
+	showXAxis: controls, showYAxis: controls,
+	xAxisNumbers: controls, yAxisNumbers: controls,
 };
 
 Object.assign(config, options);
 
 
+let el_desmos: HTMLElement;
 let desmos: Desmos.Calculator;
 
 /** Are we still trying to load the Desmos embed? */
@@ -56,292 +59,145 @@ let is_loading: boolean = $state(true);
 /** Starts as `undefined`, set to `null` if the embed loads successfully. */
 let error_message: string | null | undefined = $state(undefined);
 
-let root: HTMLElement;
 
-const cols = col_picker();
+onMount(() =>
+{
+	let delay: number;
+	let timeout: number;
+	let observer: IntersectionObserver;
 
+	/* NOTE: Waiting a little before trying to load the Desmos embed is more reliable */
+	delay = setTimeout(
+		() => {
+			observer = new IntersectionObserver(([entry]) => {
+				if (!entry.isIntersecting) return;
 
-onMount(() => {
-  /* NOTE: Waiting a little before trying to load the Desmos embed is more reliable */
-  let timeout = setTimeout(
-    () => {
-      let observer = new IntersectionObserver(([entry]) => {
-        if (!entry.isIntersecting) return;
+				if (is_loading || error_message !== undefined) {
+					timeout = try_load_desmos();
+					if (timeout === 0) {
+						observer.disconnect();
+					}
+				}
+			});
+			observer.observe(el_desmos);
+		},
+		no_delay ? 0 : 500
+	);
 
-        if (is_loading || error_message !== undefined) {
-          try { try_load_desmos(); }
-          catch { return; }
-
-          observer.disconnect();
-        }
-      });
-      observer.observe(root);
-    },
-    no_delay ? 0 : 500
-  );
-
-  return () => clearTimeout(timeout);
+	return () => {
+		clearTimeout(delay);
+		observer.disconnect();
+	}
 });
 
 
-function* col_picker()
-{
-  const colours = Object.values(Desmos.Colors);
-
-  let out: string;
-  let last: string = "";
-
-  while (true) {
-    out = colours[Math.floor(Math.random() * colours.length)];
-    if (out === last) continue;
-
-    last = out;
-    yield out;
-  }
-}
-
 function try_load_desmos(tries: int = 0): int
 {
-  if (tries > 3) {
-    error_message = `Failed to load after ${tries} retries`;
-  }
+	if (tries > 3) {
+		error_message = `Failed to load after ${tries} retries`;
+		return 0;
+	}
 
-  try {
-    load_desmos();
-    error_message = undefined;
-    is_loading = false;
-    
-    return 0;
-  }
-  catch (e) {
-    if (e instanceof Error) {
-      error_message = e.message;
-    }
+	try {
+		load_desmos();
+		error_message = undefined;
+		is_loading = false;
+		
+		return 0;
+	}
+	catch (e) {
+		if (e instanceof Error) error_message = e.message;
 
-    tries++;
-    console.error(`Failed to load Desmos embed, retrying in ${tries} seconds...`);
+		tries++;
+		console.error(`Failed to load Desmos embed, retrying in ${tries} seconds...`);
 
-    return setTimeout(() => try_load_desmos(tries), tries * 1000);
-  }
+		return setTimeout(() => try_load_desmos(tries), tries * 1000);
+	}
 }
 
-function load_desmos(): boolean
+function load_desmos()
 {
-  if (typeof Desmos === "undefined") {
-    throw new Error(`Could not access Desmos API. Try checking your internet connection?`);
-  }
+	if (typeof Desmos === "undefined") {
+		throw new Error(`Could not access Desmos API. Try checking your internet connection?`);
+	}
 
-  desmos = Desmos.GraphingCalculator(root, config);
+	desmos = Desmos.GraphingCalculator(el_desmos, config);
 
-  if (typeof bounds === "number") {
-    desmos.setMathBounds({
-      left: -bounds, right: bounds,
-      bottom: -bounds, top: bounds,
-    });
-  } else if (bounds != undefined) {
-    desmos.setMathBounds(bounds);
-  }
+	if (typeof bounds === "number") {
+		desmos.setMathBounds({
+			left: -bounds, right: bounds,
+			bottom: -bounds, top: bounds,
+		});
+	} else if (bounds != undefined) {
+		desmos.setMathBounds(bounds);
+	}
 
-  if (blocks != undefined) {
-    desmos.setExpressions([]);
-    
-    if (Array.isArray(blocks)) {
-      desmos.setExpressions(
-        blocks
-          .map((block, i) => parse_block(block, i))
-          .filter(each => each !== undefined)
-      );
-    }
-    else {
-      let expr = parse_block(blocks, 1);
-      if (expr == undefined) {
-        throw new Error(`Failed to parse block supplied to \`<Desmos />\`: ${JSON.stringify(blocks)}`);
-      }
-      desmos.setExpression(expr);
-    }
-  }
-
-  return true;
-}
-
-function parse_block(block: Block, index: number): object | undefined
-{
-  /* split parts */
-  let parts: string[] = block.content.split(/ ?:: ?/);
-  let content: string = parts.at(-1)!;
-  let sequences: string[] = (parts.length > 1) ? parts.slice(0, -1) : [...parts];
-
-  /* parse control sequences */
-  let control: {
-    [sequence: string]: Record<string, any> | boolean | undefined;
-  } = {};
-
-  function apply_sequence(sequence: string)
-  {
-    let viewport_bounds = parse_sequence(sequence, "viewport");
-    if (viewport_bounds) {
-      viewport_bounds.left = viewport_bounds.left ?? -10;
-      viewport_bounds.bottom = viewport_bounds.bottom ?? -10;
-      viewport_bounds.right = viewport_bounds.right ?? 10;
-      viewport_bounds.top = viewport_bounds.top ?? 10;
-      
-      desmos.setMathBounds(viewport_bounds);
-    }
-
-    /* flags */
-    for (let each of ["animate", "asympt", "base", "dashed", "hidden", "text"]) {
-      if (sequence.includes("/" + each)) {
-        control[each] = true;
-      }
-    }
-
-    /* data */
-    let out;
-
-    for (let each of ["line", "point", "slider", "label"]) {
-      out = parse_sequence(sequence, each);
-      if (out) {
-        control[each] = out;
-      }
-    }
-  }
-
-  sequences?.forEach(apply_sequence);
-  
-  /* build expression */
-  if (
-    parts.length === 0
-    /* Lines with only control sequences */
-    || sequences.length === 1 && content![0] === "/"
-  ) return undefined;
-
-  let out = {
-    id: `graph-${index}`,
-
-    ...(!control.text && { latex: (content === "" ? " " : content) }),
-    ...( control.text && { text: (content === "" ? " " : content), type: "text" }),
-
-    hidden: control.hidden,
-
-    color: (
-      control.style?.colour
-      ?? (control.asympt || control.base) ? Desmos.Colors.BLACK
-      : cols.next().value
-    ),
-
-    lineOpacity: (
-      control.style?.opacity
-      ?? (control.asympt || control.base) ? 0.3
-      : 0.9
-    ),
-
-    lineStyle: (
-      (control.dashed || control.asympt) ? Desmos.Styles.DASHED
-      : Desmos.Styles.SOLID
-    ),
-
-    pointStyle: (
-      control.point?.style ? Desmos.Styles[control.point.style]
-      : Desmos.Styles.OPEN
-    ),
-
-    sliderBounds: control.slider,
-
-    playing: control.animate ?? false,
-
-    label: control.label?.text ?? "",
-
-    showLabel: control.label?.show || control.label?.text,
-
-    labelOrientation: (
-      control.label?.pos ? Desmos.LabelOrientations[control.label.pos]
-      : Desmos.LabelOrientations.DEFAULT
-    ),
-  };
-
-  return out;
-}
-
-function parse_sequence(source: string, sequence: string): Record<string, any> | undefined
-{  
-  if (!source.includes(sequence)) return;
-
-  let pattern = (
-    String.raw `(?<=\/`
-    + sequence
-    + String.raw `)\{.+\}`
-  );
-
-  let out = source.match(pattern)?.at(0);
-  if (out == undefined) return;
-
-  out = out.replaceAll(/([a-zA-Z]+):/g, String.raw `"$1":`);
-  if (out == undefined) return;
-
-  return JSON.parse(out);
+	if (source != undefined) {
+		compile(desmos, source);
+	}
 }
 
 </script>
 
 
 <div class="desmos"
-  style:width={ratio ? "auto" : "100%"}
-  style:height={height}
-  style:aspect-ratio={ratio}
+	style:width={ratio ? "auto" : "100%"}
+	style:height={height}
+	style:aspect-ratio={ratio}
 >
-  <div class="embed"
-    class:live={!is_loading}
-    bind:this={root}
-  ></div>
+	<div class="embed"
+		class:live={!is_loading}
+		bind:this={el_desmos}
+	></div>
 
-  <div class="status">
-    {#if is_loading}
-      <p> Loading Desmos embed... </p>
+	<div class="status">
+		{#if is_loading}
+			<p> Loading Desmos embed... </p>
 
-    {:else if desmos == undefined}
-      <p> Error loading Desmos embed =( </p>
-      {#if error_message}
-        <p> {@html error_message} </p>
-      {/if}
-    
-    {/if}
-  </div>
+		{:else if desmos == undefined}
+			<p> Error loading Desmos embed =( </p>
+			{#if error_message}
+				<p> {@html error_message} </p>
+			{/if}
+		
+		{/if}
+	</div>
 </div>
 
 
 <style lang="scss">
 
 .desmos {
-  min-width: 12rem;
-  max-width: 100%;
-  min-height: 6rem;
-  max-height: 100vh;
-  position: relative;
+	min-width: 12rem;
+	max-width: 100%;
+	min-height: 6rem;
+	max-height: 100vh;
+	position: relative;
 }
 
 .embed {
-  width: 100%;
-  height: 100%;
-  background: light-dark(rgb(black, 2%), rgb(white, 10%));
-  opacity: 0;
-  transition: opacity 0.24s ease-out 0.05s;
+	width: 100%;
+	height: 100%;
+	background: light-dark(rgb(black, 2%), rgb(white, 10%));
+	opacity: 0;
+	transition: opacity 0.24s ease-out 0.05s;
 
-  &.live {
-    opacity: 1;
-  }
+	&.live {
+		opacity: 1;
+	}
 }
 
 .status {
-  color: $col-text-deut;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translateX(-50%) translateY(-50%);
+	color: $col-text-deut;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translateX(-50%) translateY(-50%);
 
-  p {
-    margin: 1em 0;
-  }
+	p {
+		margin: 1em 0;
+	}
 }
 
 </style>
