@@ -20,7 +20,7 @@ interface Props {
 
 let { path, page }: Props = $props();
 
-const data: Page = page ?? Site.pages[path!];
+let data = $derived(page ?? (path ? Site.pages[path] : undefined));
 
 </script>
 
@@ -37,8 +37,10 @@ const data: Page = page ?? Site.pages[path!];
 			{/if}
 		</h4>
 		
-		{#if data?.capt || data?.desc}
-			<RenderBlock source={data!.capt ?? data!.desc} />
+		{#if data?.capt}
+			<RenderBlock source={data.capt} />
+			{:else if data?.desc}
+			<RenderBlock source={data.desc} />
 		{/if}
 	</div>
 </a>
