@@ -37,7 +37,7 @@ In Desmos, we can mutate the global state via [actions](https://sup2point0.githu
 ```desmos
 t = 0
 
-/text :: We get an error when trying to define this action.
+% We get an error when trying to define this action.
 a_{test}() = f(),\ g()
 f() = t \to 1
 g() = t \to 2
@@ -104,12 +104,12 @@ With $p = 10$ and $q = 0$, we should have $p = q = 11$ afterwards.
 p = 10
 q = 0
 
-/text :: What happens when we run this?
+% What happens when we run this?
 a_{test}() = f(),\ g()
 f() = p \to p + 1
 g() = q \to p
 
-/text :: Use this to see what happens again
+% Use this to see what happens again
 a_{reset}() = p \to 10,\ q \to 0
 ```
 

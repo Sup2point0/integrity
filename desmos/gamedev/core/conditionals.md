@@ -59,7 +59,7 @@ Can you write a function using a conditional that returns $1$ if its input is ev
 
 ### _
 ```desmos
-/hidden :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
+/hide :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
 ```
 
 We use the $\operatorname{mod}()$ function to modulo the input. Even numbers give $0$ when modulo-d with $2$, so we can use this check if $s$ is even.
@@ -109,7 +109,7 @@ In this case that’s $1$. We’ll use a conditional to check if the input is $1
 ```desmos
 f_{collatz}(n) = \{ n=1 :\ 1,\ \{ f_{isEven}(n) = 1:\ f_{collatz}(\frac{n}{2}),\ f_{collatz}(3n+1) \} \}
 
-/hidden :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
+/hide :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
 ```
 
 What do we put in the other branch? Well, there’s nothing stopping us from using another conditional, so we’ll do exactly that!
@@ -123,7 +123,7 @@ k = 50
 
 f_{collatz}(n) = \{ n=1 :\ 1,\ \{ f_{isEven}(n) = 1:\ f_{collatz}(\frac{n}{2}),\ f_{collatz}(3n+1) \} \}
 
-/hidden :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
+/hide :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
 ```
 
 <aside></aside>
@@ -133,7 +133,7 @@ Try evaluating the function for some different inputs – at what point does it 
 ```desmos
 f_{collatz}(n) = \{ n=1 :\ 1,\ f_{isEven}(n) = 1:\ f_{collatz}(\frac{n}{2}),\ f_{collatz}(3n+1) \}
 
-/hidden :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
+/hide :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
 ```
 
 Desmos even has some syntactic sugar, allowing us to omit the curly braces around the nested conditional:
@@ -150,7 +150,7 @@ Fairly minor, but *incredibly* helpful at scale when you have many different bra
 f_{collatz}(1) = 1
 f_{collatz}(n) = \{ f_{isEven}(n) = 1:\ f_{collatz}(\frac{n}{2}),\ f_{collatz}(3n+1) \}
 
-/hidden :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
+/hide :: f_{isEven}(n) = \{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \}
 ```
 
 While we’re here, since this is a single-parameter function we can actually extract the base case into a separate definition too.

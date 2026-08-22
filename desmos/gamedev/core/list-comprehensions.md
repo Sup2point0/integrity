@@ -267,16 +267,16 @@ L[f_\text{predicate}(L)]
 ```desmos
 L = [1,\ 2,\ 3,\ 4,\ 5]
 
-/text :: No way of finding out what’s in this list...
+% No way of finding out what’s in this list...
 L > 2
 
-/text :: Doesn’t show what it evaluates to?
+% Doesn’t show what it evaluates to?
 5 > 2
 
-/text :: Try assigning to a variable?
+% Try assigning to a variable?
 s = 5 > 2
 
-/text :: Ok, wrap it in parentheses?
+% Ok, wrap it in parentheses?
 s = (5 > 2)
 ```
 
@@ -302,7 +302,7 @@ Hint: What happens when you square root a non-square number?
 ```desmos
 L = [1,\ 18,\ 25,\ 7,\ 9,\ 77,\ 64]
 
-/hidden :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
+/hide :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 L[f_{resquare}(L) = L]
 ```
 
@@ -365,7 +365,7 @@ That’s right, we’re going to need a 3-dimensional list comprehension; a cart
 ```desmos
 f_{pythagTriples}(n) = 
 
-/text :: Can’t store (a, b, c), unfortunately...
+% Can’t store (a, b, c), unfortunately...
 f_{allTriples}(n) = [(a, b, c) for a=[1...n],\ b=[1...n],\ c=[1...n]]
 ```
 
@@ -387,7 +387,7 @@ In this case, let’s only store $a$ and $b$ (since $c$ can be computed from the
 f_{pythagTriples}(n) = 
 
 f_{allTriples}(n) = [(a,\ b) for a=[1...n],\ b=[1...n]]
-/text :: Now... how to check if it’s square?
+% Now... how to check if it’s square?
 f_{filterTriples}(L) = L [L.x^2 + L.y^2 = ?]
 ```
 
@@ -408,7 +408,7 @@ f_{pythagTriples}(n) =
 f_{allTriples}(n) = [(a,\ b) for a=[1...n],\ b=[1...n]]
 f_{filterTriples}(L) = L [f_{resquare}(L.x^2 + L.y^2) = L.x^2 + L.y^2]
 
-/hidden :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
+/hide :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 ```
 
 Hmm, what’d’y’know, that earlier challenge comes in helpful here! Let’s bring in $f_\text{resquare}()$ and use it to filter the list.
@@ -421,24 +421,24 @@ f_{allTriples}(n) = [(a,\ b) for a=[1...n],\ b=[1...n]]
 f_{filterTriples}(L) = L [f_{resquare}(L.x^2 + L.y^2) = L.x^2 + L.y^2]
 f_{filterInRange}(L,\ n) = L [L.x^2 + L.y^2 \leq n^2]
 
-/hidden :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
+/hide :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 ```
 
 Finally, remember we have the implicit restriction of $c \leq n$, or equivalently $c^2 \leq n^2$. So we’ll need one more filter $f_\text{filterInRange}()$ after checking the squares too.
 
 ### _
 ```desmos
-/text :: If Desmos complains it "doesn't understand the way = is used", just delete the = and re-type it yourself, not sure why this error's happening ¯\_(ツ)_/¯
+% If Desmos complains it "doesn't understand the way = is used", just delete the = and re-type it yourself, not sure why this error's happening ¯\_(ツ)_/¯
 f_{pythagTriples}(n) = f_{filterInRange}(f_{filterTriples}(f_{allTriples}(n)),\ n)
 
 f_{allTriples}(n) = [(a,\ b) for a=[1...n],\ b=[1...n]]
 f_{filterTriples}(L) = L [f_{resquare}(L.x^2 + L.y^2) = L.x^2 + L.y^2]
 f_{filterInRange}(L,\ n) = L [L.x^2 + L.y^2 \leq n^2]
 
-/hidden :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
+/hide :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 
 
-/text :: Lookin’ good!
+% Lookin’ good!
 f_{pythagTriples}(10)
 f_{pythagTriples}(69)
 ```
