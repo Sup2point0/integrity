@@ -37,14 +37,14 @@ Lists in Desmos are rather special. They’re given special treatment by the Des
 
 ### _
 ```desmos
-10\cdot\left[1,\ 2,\ 3\right]=?
+10\cdot[1,\ 2,\ 3]=?
 ```
 
 Take this example. What would you expect the result of the operation to be?
 
 ### _
 ```desmos
-10\cdot\left[1,\ 2,\ 3\right]
+10\cdot[1,\ 2,\ 3]
 ```
 
 Well, there’s more than 1 way you could define it to work. But a pretty natural choice is to treat the list like a vector, and scale each component of the vector by the scalar:
@@ -65,14 +65,14 @@ In Python, it would instead duplicate the list and give us `[1, 2, 3, 1, 2, 3]`.
 
 ### _
 ```desmos
-10+\left[1,\ 2,\ 3\right]=?
+10+[1,\ 2,\ 3]=?
 ```
 
 Ok, so what would you expect this operation to return?
 
 ### _
 ```desmos
-10+\left[1,\ 2,\ 3\right]
+10+[1,\ 2,\ 3]
 ```
 
 If you thought it would add $10$ to each element in the list, you’d be correct.
@@ -86,7 +86,7 @@ But Desmos is a bit more practical, data-science, graphing-calculator-oriented, 
 
 ### _
 ```desmos
-\sin(\left[0,\ \frac{\pi}{6},\ \frac{\pi}{2},\ \pi\right])
+\sin([0,\ \frac{\pi}{6},\ \frac{\pi}{2},\ \pi])
 ```
 
 Have a look at this. We’re taking the $\sin()$ of a list... very strange, but you can see how it works, right? It’s just applying $\sin(x)$ to every element $x$ of the list.
@@ -114,7 +114,7 @@ Let’s take this function, which should return $1$ for a nonempty list, and $0$
 
 ### _
 ```desmos
-f(l)=\left\{l=\left[\right]:\ 0,\ 1\right\}
+f(l)=\left\{l=[]:\ 0,\ 1\right\}
 ```
 
 There’s no $\operatorname{empty}()$ function, so we’ll replace it with a suitable conditional. Let’s compare the input $l$ to the empty list.
@@ -137,7 +137,7 @@ Well, best way to find out is to play around, test things and break stuff. Give 
 
 ### _
 ```desmos
-\left\{\left[1,\ 2,\ 3\right]=\left[1,\ 2,\ 3\right]:\ 0,\ 1\right\}=?
+\left\{[1,\ 2,\ 3]=[1,\ 2,\ 3]:\ 0,\ 1\right\}=?
 ```
 
 A great way to test is to replace the empty list with a nonempty one. Let’s try this expression.
@@ -147,7 +147,7 @@ Without vectorisation, we’d expect it to return $0$ since the lists are equal.
 ### _
 ```desmos
 
-\left\{\left[1,\ 2,\ 3\right]=\left[1,\ 2,\ 3\right]:\ 0,\ 1\right\}
+\left\{[1,\ 2,\ 3]=[1,\ 2,\ 3]:\ 0,\ 1\right\}
 ```
 
 Instead, what do we get? A list with three $0$ values!
@@ -156,9 +156,9 @@ Can you see what’s going on here? The $=$ is being vectorised on the two lists
 
 ```math
 \begin{align*}
-  \left[
+  [
     \{ [1, 2, 3] = [1, 2, 3]: 0, 1 \}
-  \right]
+ ]
     &\to
   \begin{bmatrix}
     \{ 1 = 1: 0, 1 \} \\
@@ -171,7 +171,7 @@ Can you see what’s going on here? The $=$ is being vectorised on the two lists
 
 ### _
 ```desmos
-\left[1,\ 2,\ 3\right]=\left[1,\ 2,\ 3\right]
+[1,\ 2,\ 3]=[1,\ 2,\ 3]
 1=1
 ```
 

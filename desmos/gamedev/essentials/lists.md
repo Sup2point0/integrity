@@ -20,50 +20,50 @@ Lists allow us to store multiple objects at once. More importantly, they can be 
 
 ### _
 ```desmos
-\left[ 1, 2, 3 \right]
+[1, 2, 3]
 ```
 
 We create lists exactly the same way as in most programming languages, with `[]` square brackets.
 
 ### _
 ```desmos
-L = \left[ 1, 2, 3 \right]
+L = [1, 2, 3]
 ```
 
 Variables can store lists.
 
 ### _
 ```desmos
-L = \left[ 1, 2, 3 \right]
-L \left[ 1 \right]
-L \left[ 2 \right]
-L \left[ 3 \right]
+L = [1, 2, 3]
+L [1]
+L [2]
+L [3]
 ```
 
 We access the items of a list using square brackets.
 
 ### _
 ```desmos
-L = \left[ 1, 2, 3 \right]
-L \left[ 0 \right]
+L = [1, 2, 3]
+L [0]
 ```
 
 Unlike most programming languages, lists in Desmos are 1-indexed, so the first element is at index $1$, the second at index $2$, and so on. Trying to access index $0$ returns $\text{undefined}$.
 
 ### _
 ```desmos
-L = \left[ 1, 2, 3 \right]
-L \left[ -1 \right]
+L = [1, 2, 3]
+L [-1]
 ```
 
 Unfortunately, Desmos doesn’t currently support negative indexing.
 
 ### _
 ```desmos
-L = \left[ 1, 2, 3 \right]
+L = [1, 2, 3]
 
 length(L)
-L\left[ length(L) \right]
+L[length(L)]
 ```
 
 To access the last element, we can count how many items are in the list by calling the $\operatorname{length}()$ function on it, then use this as the index.

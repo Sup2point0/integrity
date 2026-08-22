@@ -55,7 +55,7 @@ You add a subscript by typing `_` after an expression. Try defining a variable c
 
 ### _
 ```desmos
-p_{arse} = \left[\right]
+p_{arse} = []
 ```
 
 A common approach to using subscripts for identifier names is to spell out the intended name of the variable or function, using the first letter as the base, and the rest as the subscripts.

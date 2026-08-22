@@ -87,7 +87,7 @@ We use a conditional expression to check if $l$ is $\text{undefined}$. If it is 
 
 
 
-l_{defined} = \left[ 1,\ 2,\ 3 \right]
+l_{defined} = [1,\ 2,\ 3]
 l_{undefined} = \frac{0}{0}
 ```
 
@@ -105,7 +105,7 @@ f_{safeLength}(l_{undefined})
 f_{safeLength}(l_{defined})
 \operatorname{length}(l_{defined})
 
-l_{defined} = \left[ 1,\ 2,\ 3 \right]
+l_{defined} = [1,\ 2,\ 3]
 l_{undefined} = \frac{0}{0}
 ```
 

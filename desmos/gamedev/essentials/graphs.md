@@ -97,7 +97,7 @@ The syntax can be a bit fiddly (we’ll explore this in more depth when looking 
 ### _
 ```desmos
 y = mx
-m = \left[ 1,\ 2,\ 3 \right]
+m = [1,\ 2,\ 3]
 ```
 
 Normally we’d assign a numerical value to $m$, but here we’ve set it to a list instead. Now Desmos plots 3 lines:
