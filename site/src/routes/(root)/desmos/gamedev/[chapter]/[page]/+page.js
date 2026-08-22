@@ -5,11 +5,11 @@ import { error } from "@sveltejs/kit";
 
 export function load({ params })
 {
-  let chapter = dyna_scriptures["desmos-gamedev"]?.[params.chapter];
-  if (chapter == undefined) error(404);
-  
-  let page = chapter[params.page];
-  if (page == undefined) error(404);
+	let chapter = dyna_scriptures["desmos-gamedev"]?.[params.chapter];
+	if (chapter == undefined) error(404);
+	
+	let page = chapter[params.page];
+	if (page == undefined) error(404);
 
-  return { ...page, wide: true };
+	return { ...page, wide: true };
 }
