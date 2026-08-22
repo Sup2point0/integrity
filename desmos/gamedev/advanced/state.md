@@ -38,7 +38,7 @@ In Desmos, we can mutate the global state via [actions](https://sup2point0.githu
 t = 0
 
 % We get an error when trying to define this action.
-a_{test}() = f(),\ g()
+a_{test}() = f(), g()
 f() = t \to 1
 g() = t \to 2
 ```
@@ -81,7 +81,7 @@ But wait – *are* actions executed in sequence?
 p = 10
 q = 0
 
-a_{test}() = f(),\ g()
+a_{test}() = f(), g()
 f() = p \to p + 1
 g() = q \to p
 ```
@@ -105,12 +105,12 @@ p = 10
 q = 0
 
 % What happens when we run this?
-a_{test}() = f(),\ g()
+a_{test}() = f(), g()
 f() = p \to p + 1
 g() = q \to p
 
 % Use this to see what happens again
-a_{reset}() = p \to 10,\ q \to 0
+a_{reset}() = p \to 10, q \to 0
 ```
 
 <aside class="challenge"></aside>
@@ -127,11 +127,11 @@ Does that mean the sub-actions are executing in *reverse* order?
 p = 10
 q = 0
 
-a_{test}() = g(),\ f()
+a_{test}() = g(), f()
 f() = p \to p + 1
 g() = q \to p
 
-a_{reset}() = p \to 10,\ q \to 0
+a_{reset}() = p \to 10, q \to 0
 ```
 
 <aside class="challenge"></aside>
@@ -150,7 +150,7 @@ p = 1
 q = 10
 r = 100
 
-a_{test}() = f_{p}(),\ f_{q}(),\ f_{r}()
+a_{test}() = f_{p}(), f_{q}(), f_{r}()
 f_{p}() = p \to q + r
 f_{q}() = q \to r + p
 f_{r}() = r \to p + q
@@ -164,12 +164,12 @@ p = 1
 q = 10
 r = 100
 
-a_{test}() = f_{p}(),\ f_{q}(),\ f_{r}()
+a_{test}() = f_{p}(), f_{q}(), f_{r}()
 f_{p}() = p \to q + r
 f_{q}() = q \to r + p
 f_{r}() = r \to p + q
 
-a_{reset}() = p \to 1,\ q \to 10,\ r \to 100
+a_{reset}() = p \to 1, q \to 10, r \to 100
 ```
 
 <aside class="challenge"></aside>

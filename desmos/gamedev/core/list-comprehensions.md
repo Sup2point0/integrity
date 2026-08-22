@@ -41,7 +41,7 @@ A list comprehension works by:
 
 ### _
 ```desmos
-L = [1,\ 2,\ 3,\ 4,\ 5]
+L = [1, 2, 3, 4, 5]
 ```
 
 Let’s look at a simple example. We have an existing list of integers, $L$.
@@ -75,7 +75,7 @@ Haskell does actually do it this way, just with a monadic `<-` arrow instead of 
 
 ### _
 ```desmos
-L = [1,\ 2,\ 3,\ 4,\ 5]
+L = [1, 2, 3, 4, 5]
 
 [i^2 \operatorname{for} i = L]
 ```
@@ -166,7 +166,7 @@ I won’t even explain it to you. Just take a look at this, and I want you to gu
 
 ### _
 ```desmos
-[(x, y) for x=[1,\ 2,\ 3],\ y=[4,\ 6,\ 8]]
+[(x, y) for x=[1, 2, 3], y=[4, 6, 8]]
 ```
 
 This will produce all of the *possible pairings* of $(x, y)$, given those input values. $x$ can take on either 1, 2 or 3, and $y$ can take on either 4, 6 or 8.
@@ -188,7 +188,7 @@ Keep in mind this still outputs 1 flat list, not lists in lists (Desmos doesn’
 
 ### _
 ```desmos
-[x+y for x=[1,\ 2,\ 3],\ y=[4,\ 6,\ 8]]
+[x+y for x=[1, 2, 3], y=[4, 6, 8]]
 ```
 
 Remember we can still put anything we want in the computed expression, so for instance, we could find all the possible sums of an $x$ and $y$.
@@ -229,7 +229,7 @@ Unfortunately, this is *not* as simple in Desmos as one might hope.
 
 ### _
 ```desmos
-L = [1,\ 2,\ 3,\ 4,\ 5]
+L = [1, 2, 3, 4, 5]
 
 L[L > 2]
 ```
@@ -249,7 +249,7 @@ But the well-known Python data library `pandas` uses this syntax too, so I guess
 
 ### _
 ```desmos
-L = [1,\ 2,\ 3,\ 4,\ 5]
+L = [1, 2, 3, 4, 5]
 
 L[L > 2][\operatorname{mod}(L, 2) = 1]
 ```
@@ -265,7 +265,7 @@ L[f_\text{predicate}(L)]
 
 ### _
 ```desmos
-L = [1,\ 2,\ 3,\ 4,\ 5]
+L = [1, 2, 3, 4, 5]
 
 % No way of finding out what’s in this list...
 L > 2
@@ -286,7 +286,7 @@ So whatever’s going on when we do $L[L > 2]$ is very much a black box, unfortu
 
 ### _
 ```desmos
-L = [1,\ 18,\ 25,\ 7,\ 9,\ 77,\ 64]
+L = [1, 18, 25, 7, 9, 77, 64]
 ```
 
 <aside></aside>
@@ -300,7 +300,7 @@ Hint: What happens when you square root a non-square number?
 
 ### _
 ```desmos
-L = [1,\ 18,\ 25,\ 7,\ 9,\ 77,\ 64]
+L = [1, 18, 25, 7, 9, 77, 64]
 
 /hide :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 L[f_{resquare}(L) = L]
@@ -356,7 +356,7 @@ So, where will we get $a, b, c$ from? We want to *combine* them to find all poss
 ### _
 ```desmos
 f_{pythagTriples}(n) = 
-f_{allTriples}(n) = [for a=[1...n],\ b=[1...n],\ c=[1...n]]
+f_{allTriples}(n) = [for a=[1...n], b=[1...n], c=[1...n]]
 ```
 
 That’s right, we’re going to need a 3-dimensional list comprehension; a cartesian product between $A \times B \times C$ (where $X$ denotes the possible values of $x$).
@@ -366,7 +366,7 @@ That’s right, we’re going to need a 3-dimensional list comprehension; a cart
 f_{pythagTriples}(n) = 
 
 % Can’t store (a, b, c), unfortunately...
-f_{allTriples}(n) = [(a, b, c) for a=[1...n],\ b=[1...n],\ c=[1...n]]
+f_{allTriples}(n) = [(a, b, c) for a=[1...n], b=[1...n], c=[1...n]]
 ```
 
 Except – horror! We can’t have points with 3 co-ordinates in the Desmos 2D graphing calculator.
@@ -375,7 +375,7 @@ Except – horror! We can’t have points with 3 co-ordinates in the Desmos 2D g
 ```desmos
 f_{pythagTriples}(n) = 
 
-f_{allTriples}(n) = [(a,\ b) for a=[1...n], b=[1...n]]
+f_{allTriples}(n) = [(a, b) for a=[1...n], b=[1...n]]
 ```
 
 Well, when you hit limitations, and you inevitably will, you’ve gotta find workarounds.
@@ -386,7 +386,7 @@ In this case, let’s only store $a$ and $b$ (since $c$ can be computed from the
 ```desmos
 f_{pythagTriples}(n) = 
 
-f_{allTriples}(n) = [(a,\ b) for a=[1...n],\ b=[1...n]]
+f_{allTriples}(n) = [(a, b) for a=[1...n], b=[1...n]]
 % Now... how to check if it’s square?
 f_{filterTriples}(L) = L [L.x^2 + L.y^2 = ?]
 ```
@@ -405,7 +405,7 @@ Yes, $L.x$ does look *incredibly* cursed. Desmos and its vectorised operations..
 ```desmos
 f_{pythagTriples}(n) = 
 
-f_{allTriples}(n) = [(a,\ b) for a=[1...n],\ b=[1...n]]
+f_{allTriples}(n) = [(a, b) for a=[1...n], b=[1...n]]
 f_{filterTriples}(L) = L [f_{resquare}(L.x^2 + L.y^2) = L.x^2 + L.y^2]
 
 /hide :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
@@ -417,9 +417,9 @@ Hmm, what’d’y’know, that earlier challenge comes in helpful here! Let’s 
 ```desmos
 f_{pythagTriples}(n) = 
 
-f_{allTriples}(n) = [(a,\ b) for a=[1...n],\ b=[1...n]]
+f_{allTriples}(n) = [(a, b) for a=[1...n], b=[1...n]]
 f_{filterTriples}(L) = L [f_{resquare}(L.x^2 + L.y^2) = L.x^2 + L.y^2]
-f_{filterInRange}(L,\ n) = L [L.x^2 + L.y^2 \leq n^2]
+f_{filterInRange}(L, n) = L [L.x^2 + L.y^2 \leq n^2]
 
 /hide :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 ```
@@ -429,11 +429,11 @@ Finally, remember we have the implicit restriction of $c \leq n$, or equivalentl
 ### _
 ```desmos
 % If Desmos complains it "doesn't understand the way = is used", just delete the = and re-type it yourself, not sure why this error's happening ¯\_(ツ)_/¯
-f_{pythagTriples}(n) = f_{filterInRange}(f_{filterTriples}(f_{allTriples}(n)),\ n)
+f_{pythagTriples}(n) = f_{filterInRange}(f_{filterTriples}(f_{allTriples}(n)), n)
 
-f_{allTriples}(n) = [(a,\ b) for a=[1...n],\ b=[1...n]]
+f_{allTriples}(n) = [(a, b) for a=[1...n], b=[1...n]]
 f_{filterTriples}(L) = L [f_{resquare}(L.x^2 + L.y^2) = L.x^2 + L.y^2]
-f_{filterInRange}(L,\ n) = L [L.x^2 + L.y^2 \leq n^2]
+f_{filterInRange}(L, n) = L [L.x^2 + L.y^2 \leq n^2]
 
 /hide :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 

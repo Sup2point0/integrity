@@ -74,7 +74,7 @@ Implement a function $f_\text{safeLength}(l)$ that finds the length of the list 
 
 ### _
 ```desmos
-/hide :: f_{safeLength}(l) = \{ l = l:\ \operatorname{length}(l),\ 0 \}
+/hide :: f_{safeLength}(l) = \{ l = l:\ \operatorname{length}(l), 0 \}
 ```
 
 <aside class="solution"></aside>
@@ -83,11 +83,11 @@ We use a conditional expression to check if $l$ is $\text{undefined}$. If it is 
 
 ### _
 ```desmos
-/hide :: f_{safeLength}(l) = \{ l = l:\ \operatorname{length}(l),\ 0 \}
+/hide :: f_{safeLength}(l) = \{ l = l:\ \operatorname{length}(l), 0 \}
 
 
 
-l_{defined} = [1,\ 2,\ 3]
+l_{defined} = [1, 2, 3]
 l_{undefined} = \frac{0}{0}
 ```
 
@@ -97,7 +97,7 @@ Compare this function to directly taking the length of a potentially undefined v
 
 ### _
 ```desmos
-/hide :: f_{safeLength}(l) = \{ l = l:\ \operatorname{length}(l),\ 0 \}
+/hide :: f_{safeLength}(l) = \{ l = l:\ \operatorname{length}(l), 0 \}
 
 f_{safeLength}(l_{undefined})
 \operatorname{length}(l_{undefined})
@@ -105,7 +105,7 @@ f_{safeLength}(l_{undefined})
 f_{safeLength}(l_{defined})
 \operatorname{length}(l_{defined})
 
-l_{defined} = [1,\ 2,\ 3]
+l_{defined} = [1, 2, 3]
 l_{undefined} = \frac{0}{0}
 ```
 
