@@ -20,7 +20,8 @@ interface Props {
 let { text, client_render = false }: Props = $props();
 
 
-const opts = {
+const OPTIONS = {
+	displayMode: true,
 	throwOnError: false,
 };
 
@@ -32,7 +33,7 @@ onMount(() => {
 	if (text == undefined) return;
 	if (self == undefined) return;
 	
-	katex.render(text, self, opts);
+	katex.render(text, self, OPTIONS);
 });
 
 </script>
@@ -42,6 +43,6 @@ onMount(() => {
 	<span bind:this={self}></span>
 
 {:else}
-	{@html text && katex.renderToString(text, opts)}
+	{@html text && katex.renderToString(text, OPTIONS)}
 
 {/if}
