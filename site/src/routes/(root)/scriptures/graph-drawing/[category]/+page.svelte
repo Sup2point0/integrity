@@ -18,20 +18,20 @@ let { content, metadata: data } = $derived(page.data);
 
 
 <Breadcrumbs levels={[
-  { text: "Scriptures", intern: "scriptures" },
-  { text: "Graph Drawing", intern: "scriptures/graph-drawing" },
-  { text: capitalise(data.title) }
+	{ text: "Scriptures", intern: "scriptures" },
+	{ text: "Graph Drawing", intern: "scriptures/graph-drawing" },
+	{ text: capitalise(data.title) }
 ]} />
 
 <Header page={data} />
 
 
 <article>
-  {@render content?.()}
+	{@render content?.()}
 </article>
 
 <Line />
 
 <ArticleArray paths={(Site.index[data.category]?.pages ?? []).filter(
-  path => Site.index["graph-drawing"].pages.includes(path)
+	path => Site.index["graph-drawing"].pages.includes(path)
 )} />

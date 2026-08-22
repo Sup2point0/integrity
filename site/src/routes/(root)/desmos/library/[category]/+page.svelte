@@ -17,16 +17,16 @@ let data = $derived(page.data);
 
 
 <Breadcrumbs levels={[
-  { text: "Desmos", intern: "desmos" },
-  { text: "Library", intern: "desmos/library" },
-  { text: data.category },
+	{ text: "Desmos", intern: "desmos" },
+	{ text: "Library", intern: "desmos/library" },
+	{ text: data.category },
 ]} />
 
 <Header title={data.category} capt="Desmos Library" />
 
 
 <ArticleArray
-  paths={Site.index[data.category.toLowerCase()].pages.filter(path => (
-    Site.index.library.pages.includes(path)
-  ))}
+	paths={Site.index[data.category.toLowerCase()].pages.filter(path => (
+		Site.index.library.pages.includes(path)
+	))}
 />

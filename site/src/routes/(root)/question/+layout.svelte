@@ -19,39 +19,39 @@ $effect(() => untrack(load_question));
 
 function load_question()
 {
-  let url = page.url;
+	let url = page.url;
 
-  let topic: string | undefined = url.pathname.split("/").at(-1);
-  if (topic == undefined) {
-    error(400, { message: "URL is missing topic" });
-  }
+	let topic: string | undefined = url.pathname.split("/").at(-1);
+	if (topic == undefined) {
+		error(400, { message: "URL is missing topic" });
+	}
 
-  let params = url.searchParams;
-  let shard: Shard | null = params.get("shard");
-  if (shard == undefined) {
-    error(400, { message: "URL is missing question shard" });
-  }
+	let params = url.searchParams;
+	let shard: Shard | null = params.get("shard");
+	if (shard == undefined) {
+		error(400, { message: "URL is missing question shard" });
+	}
 
-  let questions: QuestionCollection = Site.questions[topic];
-  if (questions == undefined) {
-    error(500, { message: "Could not load questions for topic" });
-  }
+	let questions: QuestionCollection = Site.questions[topic];
+	if (questions == undefined) {
+		error(500, { message: "Could not load questions for topic" });
+	}
 
-  let question: Question = questions.questions[shard];
-  if (question == undefined) {
-    error(404, { message: "Could not find question" });
-  }
+	let question: Question = questions.questions[shard];
+	if (question == undefined) {
+		error(404, { message: "Could not find question" });
+	}
 
-  $userprefs.seen.add(question.shard);
+	$userprefs.seen.add(question.shard);
 
-  page_data.question = question;
+	page_data.question = question;
 }
 
 </script>
 
 
 {#if children}
-  {@render children()}
+	{@render children()}
 {:else}
-  <p> Uh, something went wrong! </p>
+	<p> Uh, something went wrong! </p>
 {/if}

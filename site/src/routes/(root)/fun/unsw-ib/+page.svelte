@@ -10,14 +10,14 @@ import { Card, CardsContainer } from "#parts/ui";
 
 
 <Breadcrumbs levels={[
-  { text: "Fun", intern: "fun" },
-  { text: "UNSW Integration Bee"}
+	{ text: "Fun", intern: "fun" },
+	{ text: "UNSW Integration Bee"}
 ]} />
 
 <Header title="UNSW Integration Bee" capt="Fun questions from the UNSW Maths Society Integration Bee" />
 
 
 <CardsContainer>
-  <Card title="2022" intern="fun/unsw-ib/2022" />
+	<Card title="2022" intern="fun/unsw-ib/2022" />
 </CardsContainer>
 

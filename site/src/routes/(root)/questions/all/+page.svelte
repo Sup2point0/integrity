@@ -19,79 +19,79 @@ let filtered = $derived($search.filter_questions(questions).slice(0, limit));
 
 
 onMount(() => {
-  $search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
-  $search.methods = Object.fromEntries(methods.map(method => [method, false]));
+	$search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+	$search.methods = Object.fromEntries(methods.map(method => [method, false]));
 })
 
 </script>
 
 
 <Meta title="All Questions"
-  desc="Questions from all topics on Integrity, including integrals, graphs, completing the square and specials"
+	desc="Questions from all topics on Integrity, including integrals, graphs, completing the square and specials"
 />
 
 
 <Breadcrumbs levels={[
-  { text: "Questions", intern: "questions" },
-  { text: "All" },
+	{ text: "Questions", intern: "questions" },
+	{ text: "All" },
 ]} />
 
 <Header title="All Questions" />
 <Search />
 
 <div class="content {$search.view}">
-  {#each filtered as question}
-    <QuestionCard {question}
-      style={$search.view === "list" ? "row" : "block"}
-    />
-  {/each}
+	{#each filtered as question}
+		<QuestionCard {question}
+			style={$search.view === "list" ? "row" : "block"}
+		/>
+	{/each}
 </div>
 
 <SearchFooter bind:limit
-  found={filtered.length}
-  total={questions.length}
+	found={filtered.length}
+	total={questions.length}
 />
 
 
 <style lang="scss">
 
 .content {
-  display: flex;
-  gap: 1rem;
+	display: flex;
+	gap: 1rem;
 
-  &.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, clamp(16rem, 30%, 24rem));
-    justify-content: center;
-  }
+	&.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, clamp(16rem, 30%, 24rem));
+		justify-content: center;
+	}
 
-  &.list {
-    flex-flow: column;
-    align-items: stretch;
-  }
+	&.list {
+		flex-flow: column;
+		align-items: stretch;
+	}
 
-  &.grid-wide {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    justify-content: center;
-  }
+	&.grid-wide {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		justify-content: center;
+	}
 }
 
 aside {
-  padding: 2.5rem 0 1rem;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  text-align: center;
-  
-  p {
-    padding-bottom: 1rem;
-    color: $col-text-deut;
+	padding: 2.5rem 0 1rem;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	text-align: center;
+	
+	p {
+		padding-bottom: 1rem;
+		color: $col-text-deut;
 
-    span {
-      color: $col-prot;
-    }
-  }
+		span {
+			color: $col-prot;
+		}
+	}
 }
 
 </style>

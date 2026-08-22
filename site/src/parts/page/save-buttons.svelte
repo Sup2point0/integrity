@@ -12,10 +12,10 @@ import { Checkbox } from "#parts/ui";
 
 
 interface Props {
-  shard: string;
-  solved?: boolean;
-  flag?: boolean;
-  star?: boolean;
+	shard: string;
+	solved?: boolean;
+	flag?: boolean;
+	star?: boolean;
 }
 
 let { shard, solved = true, flag = true, star = true }: Props = $props();
@@ -23,61 +23,61 @@ let { shard, solved = true, flag = true, star = true }: Props = $props();
 
 function safe_exec(func: () => any)
 {
-  return () => {
-    try {
-      func();
-    } catch (e) {
-      console.error(e);
-      return false;
-    }
-    return true;
-  }
+	return () => {
+		try {
+			func();
+		} catch (e) {
+			console.error(e);
+			return false;
+		}
+		return true;
+	}
 }
 
 </script>
 
 
 {#if solved}
-  <Checkbox
-    cols={{ off: "light-dark(#dedede, #484848)", on: "oklch(70.74% 0.1702 53.41)" }}
-    value={() => $userprefs.solved.has(shard)}
-    enable={safe_exec(() => {
-      $userprefs.solved.add(shard);
-    })}
-    disable={safe_exec(() => {
-      $userprefs.solved.delete(shard);
-    })}
-  >
-    <TickIcon />
-  </Checkbox>
+	<Checkbox
+		cols={{ off: "light-dark(#dedede, #484848)", on: "oklch(70.74% 0.1702 53.41)" }}
+		value={() => $userprefs.solved.has(shard)}
+		enable={safe_exec(() => {
+			$userprefs.solved.add(shard);
+		})}
+		disable={safe_exec(() => {
+			$userprefs.solved.delete(shard);
+		})}
+	>
+		<TickIcon />
+	</Checkbox>
 {/if}
 
 {#if flag}
-  <Checkbox
-    cols={{ off: "light-dark(#dedede, #484848)", on: "oklch(64.09% 0.1702 150.09)" }}
-    value={() => $userprefs.flagged.has(shard)}
-    enable={safe_exec(() => {
-      $userprefs.flagged.add(shard);
-    })}
-    disable={safe_exec(() => {
-      $userprefs.flagged.delete(shard);
-    })}
-  >
-    <FlagIcon />
-  </Checkbox>
+	<Checkbox
+		cols={{ off: "light-dark(#dedede, #484848)", on: "oklch(64.09% 0.1702 150.09)" }}
+		value={() => $userprefs.flagged.has(shard)}
+		enable={safe_exec(() => {
+			$userprefs.flagged.add(shard);
+		})}
+		disable={safe_exec(() => {
+			$userprefs.flagged.delete(shard);
+		})}
+	>
+		<FlagIcon />
+	</Checkbox>
 {/if}
 
 {#if star}
-  <Checkbox
-    cols={{ off: "light-dark(#dedede, #484848)", on: "oklch(81.02% 0.1702 85.48)" }}
-    value={() => $userprefs.starred.has(shard)}
-    enable={safe_exec(() => {
-      $userprefs.starred.add(shard);
-    })}
-    disable={safe_exec(() => {
-      $userprefs.starred.delete(shard);
-    })}
-  >
-    <StarIcon />
-  </Checkbox>
+	<Checkbox
+		cols={{ off: "light-dark(#dedede, #484848)", on: "oklch(81.02% 0.1702 85.48)" }}
+		value={() => $userprefs.starred.has(shard)}
+		enable={safe_exec(() => {
+			$userprefs.starred.add(shard);
+		})}
+		disable={safe_exec(() => {
+			$userprefs.starred.delete(shard);
+		})}
+	>
+		<StarIcon />
+	</Checkbox>
 {/if}

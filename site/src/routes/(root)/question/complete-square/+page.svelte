@@ -14,51 +14,51 @@ let question: Question | null = $derived(page_data.question);
 
 
 <Breadcrumbs levels={[
-  { text: "Questions", intern: "questions" },
-  { text: "Completing the Square", intern: "questions/complete-square" },
-  { text: question?.shard ?? "?" },
+	{ text: "Questions", intern: "questions" },
+	{ text: "Completing the Square", intern: "questions/complete-square" },
+	{ text: question?.shard ?? "?" },
 ]} copy={true} shard={question?.shard} />
 
 <section class="question">
-  <Katex text={question?.question.content} />
+	<Katex text={question?.question.content} />
 </section>
 
 {#if question?.hints}
-  <Section title="Hints">
-    {#each Object.entries(question.hints) as [hint, source]}
-      <Section ctx="inner" title={hint}>
-        <RenderBlock {source} />
-      </Section>
-    {/each}
-  </Section>
+	<Section title="Hints">
+		{#each Object.entries(question.hints) as [hint, source]}
+			<Section ctx="inner" title={hint}>
+				<RenderBlock {source} />
+			</Section>
+		{/each}
+	</Section>
 {/if}
 
 {#if question?.answer}
-  <Section title="Answer">
-    <RenderBlock source={question.answer} />
-  </Section>
+	<Section title="Answer">
+		<RenderBlock source={question.answer} />
+	</Section>
 {/if}
 
 {#if question?.solution}
-  <Section title="Solution">
-    {#each Object.entries(question.solution) as [step, source]}
-      <Section ctx="inner" closed={false} title={display_title(step)}>
-        <RenderBlock {source} />
-      </Section>
-    {/each}
-  </Section>
+	<Section title="Solution">
+		{#each Object.entries(question.solution) as [step, source]}
+			<Section ctx="inner" closed={false} title={display_title(step)}>
+				<RenderBlock {source} />
+			</Section>
+		{/each}
+	</Section>
 {/if}
 
 
 <style lang="scss">
 
 section {
-  text-align: center;
+	text-align: center;
 
-  &.question {
-    margin: 4rem 0;
-    font-size: 200%;
-  }
+	&.question {
+		margin: 4rem 0;
+		font-size: 200%;
+	}
 }
 
 </style>

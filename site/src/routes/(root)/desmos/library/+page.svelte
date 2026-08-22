@@ -10,20 +10,20 @@ import { Card, CardsContainer } from "#parts/ui";
 
 
 <Breadcrumbs levels={[
-  { text: "Desmos", intern: "desmos" },
-  { text: "Library" }
+	{ text: "Desmos", intern: "desmos" },
+	{ text: "Library" }
 ]} />
 
 <Header title="Library" />
 
 
 <CardsContainer>
-  <Card title="Functions"
-    intern="desmos/library/functions"
-    latex={String.raw`f_\text{activate}(s) = \{ s > 0 : 1, 0 \}`}
-  />
-  <Card title="Rendering"
-    intern="desmos/library/rendering"
-    latex={String.raw`d_\text{polygon}(6, (0, 0), 2, \pi/3)`}
-  />
+	<Card title="Functions"
+		intern="desmos/library/functions"
+		latex={String.raw`f_\text{activate}(s) = \{ s > 0 : 1, 0 \}`}
+	/>
+	<Card title="Rendering"
+		intern="desmos/library/rendering"
+		latex={String.raw`d_\text{polygon}(6, (0, 0), 2, \pi/3)`}
+	/>
 </CardsContainer>

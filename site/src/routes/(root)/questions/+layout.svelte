@@ -1,7 +1,7 @@
 <script>
 
 import { Clicky } from "#parts/ui";
-  
+	
 import { onMount } from "svelte";
 import { base } from "$app/paths";
 
@@ -11,13 +11,13 @@ let { children } = $props();
 let scroll_y = $state(0);
 
 onMount(() => {
-  window.addEventListener("scroll", sync_scroll);
-  return () => window.removeEventListener("scroll", sync_scroll);
+	window.addEventListener("scroll", sync_scroll);
+	return () => window.removeEventListener("scroll", sync_scroll);
 });
 
 function sync_scroll()
 {
-  scroll_y = window.scrollY;
+	scroll_y = window.scrollY;
 }
 
 </script>
@@ -26,37 +26,37 @@ function sync_scroll()
 {@render children?.()}
 
 <div class="up" class:live={scroll_y > 500}>
-  <Clicky action={() => {
-    window.scrollTo({ top: 200, behavior: "smooth" });
-  }}>
-    <img class="arrow" alt="/" src="{base}/arrow.svg" />
-  </Clicky>
+	<Clicky action={() => {
+		window.scrollTo({ top: 200, behavior: "smooth" });
+	}}>
+		<img class="arrow" alt="/" src="{base}/arrow.svg" />
+	</Clicky>
 </div>
 
 
 <style lang="scss">
 
 .up {
-  pointer-events: none;
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  opacity: 0%;
-  transform: translateY(0.25rem);
-  transition: all 0.12s cubic-bezier(0.6, 0.04, 0.98, 0.335);  // ease-in circ
+	pointer-events: none;
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	opacity: 0%;
+	transform: translateY(0.25rem);
+	transition: all 0.12s cubic-bezier(0.6, 0.04, 0.98, 0.335);  // ease-in circ
 
-  &.live {
-    pointer-events: all;
-    display: block;
-    opacity: 100%;
-    transform: none;
-  }
+	&.live {
+		pointer-events: all;
+		display: block;
+		opacity: 100%;
+		transform: none;
+	}
 }
 
 img.arrow {
-  max-width: 0.5em;
-  opacity: 50%;
-  transform: rotate(180deg) scaleX(125%) scaleY(175%) translateY(0.12em);
+	max-width: 0.5em;
+	opacity: 50%;
+	transform: rotate(180deg) scaleX(125%) scaleY(175%) translateY(0.12em);
 }
 
 </style>

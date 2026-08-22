@@ -19,8 +19,8 @@ let filtered = $derived($search.filter_questions(questions));
 
 
 onMount(() => {
-  $search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
-  $search.methods = Object.fromEntries(methods.map(method => [method, false]));
+	$search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+	$search.methods = Object.fromEntries(methods.map(method => [method, false]));
 });
 
 </script>
@@ -31,19 +31,19 @@ onMount(() => {
 
 
 <Breadcrumbs levels={[
-  { text: "Questions", intern: "questions" },
-  { text: "Guess the Graph" },
+	{ text: "Questions", intern: "questions" },
+	{ text: "Guess the Graph" },
 ]} />
 
 <Header title="Guess the Graph" />
 <Search />
 
 <div class="content {$search.view}">
-  {#each filtered as question (question.shard)}
-    <QuestionCard {question}
-      style={$search.view === "list" ? "row" : "block"}
-    />
-  {/each}
+	{#each filtered as question (question.shard)}
+		<QuestionCard {question}
+			style={$search.view === "list" ? "row" : "block"}
+		/>
+	{/each}
 </div>
 
 <SearchFooter found={filtered.length} total={questions.length} />
@@ -52,32 +52,32 @@ onMount(() => {
 <style lang="scss">
 
 .content {
-  display: flex;
-  gap: 1rem;
+	display: flex;
+	gap: 1rem;
 
-  &.grid, &.grid-wide {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, max(16rem, 30%));
-    justify-content: center;
-  }
+	&.grid, &.grid-wide {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, max(16rem, 30%));
+		justify-content: center;
+	}
 
-  &.list {
-    flex-flow: column;
-    align-items: stretch;
-  }
+	&.list {
+		flex-flow: column;
+		align-items: stretch;
+	}
 }
 
 aside {
-  margin-top: 1.5rem;
-  text-align: center;
-  
-  p {
-    color: $col-text-deut;
+	margin-top: 1.5rem;
+	text-align: center;
+	
+	p {
+		color: $col-text-deut;
 
-    span {
-      color: $col-prot;
-    }
-  }
+		span {
+			color: $col-prot;
+		}
+	}
 }
 
 </style>

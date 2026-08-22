@@ -13,22 +13,22 @@ import { ArticleArray } from "#parts/page";
 
 
 <Breadcrumbs levels={[
-  { text: "Scriptures", intern: "scriptures" },
-  { text: "Integration", intern: "scriptures/integrals" },
-  { text: "How Do We Integrate?" },
+	{ text: "Scriptures", intern: "scriptures" },
+	{ text: "Integration", intern: "scriptures/integrals" },
+	{ text: "How Do We Integrate?" },
 ]} />
 
 <Header {page} />
 
 <article>
-  <Content />
+	<Content />
 
-  <aside>
-    <h2> Continue Reading </h2>
-    
-    <ArticleArray paths={[
-      "scriptures/integrals/why-hard.md",
-      "scriptures/integrals/why.md"
-    ]} />
-  </aside>
+	<aside>
+		<h2> Continue Reading </h2>
+		
+		<ArticleArray paths={[
+			"scriptures/integrals/why-hard.md",
+			"scriptures/integrals/why.md"
+		]} />
+	</aside>
 </article>

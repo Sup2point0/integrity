@@ -10,24 +10,24 @@ import { ArticleCard } from "#parts/ui";
 
 
 <Meta title="Docs"
-  desc="Documentation about Integrity features"
+	desc="Documentation about Integrity features"
 />
 
 
 <Breadcrumbs levels={[
-  { text: "Integrity", link: Site.root },
-  { text: "Docs" },
+	{ text: "Integrity", link: Site.root },
+	{ text: "Docs" },
 ]} />
 
 <Header title="Docs" capt="How Does *Integrity* Work?" />
 
 
 <ArticleArray
-  paths={Site.index.docs.pages.filter(
-    path => !Site.index["integrating-integrity"].pages.includes(path)
-  )}
+	paths={Site.index.docs.pages.filter(
+		path => !Site.index["integrating-integrity"].pages.includes(path)
+	)}
 >
-  <ArticleCard page={{
-    dest: "docs/tags", head: "Tags", capt: "Descriptor tags for questions",
-  }} />
+	<ArticleCard page={{
+		dest: "docs/tags", head: "Tags", capt: "Descriptor tags for questions",
+	}} />
 </ArticleArray>

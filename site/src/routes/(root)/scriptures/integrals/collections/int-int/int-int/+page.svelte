@@ -1,5 +1,5 @@
 <script lang="ts">
-  
+	
 import Site from "#scripts/utils/site";
 
 import { sync } from "#scripts/utils/sync";
@@ -11,30 +11,30 @@ const S = "-;BB￶>;BBE￶J>;H;\x04￠￠\x128H\x14￠￠\x1F`C￶GK?J;￶?CFH
 
 
 onMount(() => {
-  $Site.question.add("d");
-  $Site.questions.add("D");
-  sync();
+	$Site.question.add("d");
+	$Site.questions.add("D");
+	sync();
 });
 
 </script>
 
 
 <svelte:head>
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 </svelte:head>
 
 
 {#each S.split("").map(c => String.fromCharCode(c.charCodeAt(0)+42)).join("").split("<br>") as _}
-  <p> {@html _} </p>
+	<p> {@html _} </p>
 {/each}
 
 
 <style>
 
 p {
-  margin: 1em 0;
-  font-family: 'Kalam', system-ui, sans-serif;
-  font-size: 150%;
+	margin: 1em 0;
+	font-family: 'Kalam', system-ui, sans-serif;
+	font-size: 150%;
 }
 
 </style>

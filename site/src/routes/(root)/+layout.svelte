@@ -16,16 +16,16 @@ let { children } = $props();
 <Nav />
 
 <div class="layout {$userprefs.style}">
-  <main class:wide={
-    page.url.pathname.includes("questions/") && $search.view === "grid-wide"
-    || page.data?.wide
-  }>
-    {#if children}
-      {@render children()}
-    {:else}
-      <p> Uh, something went wrong! </p>
-    {/if}
-  </main>
+	<main class:wide={
+		page.url.pathname.includes("questions/") && $search.view === "grid-wide"
+		|| page.data?.wide
+	}>
+		{#if children}
+			{@render children()}
+		{:else}
+			<p> Uh, something went wrong! </p>
+		{/if}
+	</main>
 </div>
 
 <Footer />
@@ -34,20 +34,20 @@ let { children } = $props();
 <style lang="scss">
 
 .layout {
-  padding: 1rem 1rem 4rem;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+	padding: 1rem 1rem 4rem;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 }
 
 main {
-  width: min(80%, 64rem);
-  max-width: 100vw;
-  min-height: 75vh;
+	width: min(80%, 64rem);
+	max-width: 100vw;
+	min-height: 75vh;
 
-  &.wide {
-    width: 90%;
-  }
+	&.wide {
+		width: 90%;
+	}
 }
 
 </style>

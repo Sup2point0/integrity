@@ -10,7 +10,7 @@ import { page } from "$app/state";
 
 
 <PageContent levels={[
-  { text: "Scriptures", intern: "scriptures" },
-  { text: "Special", intern: "scriptures/special" },
-  { text: capitalise(page.data.title), intern: `scriptures/special/${page.data.title}` },
+	{ text: "Scriptures", intern: "scriptures" },
+	{ text: "Special", intern: "scriptures/special" },
+	{ text: capitalise(page.data.title), intern: `scriptures/special/${page.data.title}` },
 ]} />

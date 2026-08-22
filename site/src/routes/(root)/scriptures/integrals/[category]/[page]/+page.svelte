@@ -13,7 +13,7 @@ let data = $derived(page.data.metadata);
 
 
 <PageContent levels={[
-  { text: "Scriptures", intern: "scriptures" },
-  { text: "Integration", intern: "scriptures/integrals" },
-  { text: capitalise(data.category), intern: `scriptures/integrals/${data.category}` },
+	{ text: "Scriptures", intern: "scriptures" },
+	{ text: "Integration", intern: "scriptures/integrals" },
+	{ text: capitalise(data.category), intern: `scriptures/integrals/${data.category}` },
 ]} />

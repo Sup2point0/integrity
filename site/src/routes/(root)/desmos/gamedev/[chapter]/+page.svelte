@@ -6,5 +6,5 @@ import { base } from "$app/paths";
 
 
 <svelte:head>
-  <meta http-equiv="refresh" content="0; URL={base}/desmos/gamedev/polymap" />
+	<meta http-equiv="refresh" content="0; URL={base}/desmos/gamedev/polymap" />
 </svelte:head>

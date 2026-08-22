@@ -12,13 +12,13 @@ import { ArticleArray } from "#parts/page";
 
 
 <Breadcrumbs levels={[
-  { text: "Scriptures", intern: "scriptures" },
-  { text: "Special" }
+	{ text: "Scriptures", intern: "scriptures" },
+	{ text: "Special" }
 ]} />
 
 <Header title="Scriptures" />
 
 
 <section>
-  <ArticleArray paths={Site.index.special.pages} />
+	<ArticleArray paths={Site.index.special.pages} />
 </section>

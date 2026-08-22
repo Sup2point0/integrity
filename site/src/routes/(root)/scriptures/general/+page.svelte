@@ -12,15 +12,15 @@ import { ArticleArray } from "#parts/page";
 
 
 <Breadcrumbs levels={[
-  { text: "Scriptures", intern: "scriptures" },
-  { text: "General" }
+	{ text: "Scriptures", intern: "scriptures" },
+	{ text: "General" }
 ]} />
 
 <Header title="Scriptures" />
 
 
 <section>
-  <ArticleArray paths={Site.index.general.pages.filter(
-    path => !Site.index.integrals.pages.includes(path)
-  )} />
+	<ArticleArray paths={Site.index.general.pages.filter(
+		path => !Site.index.integrals.pages.includes(path)
+	)} />
 </section>

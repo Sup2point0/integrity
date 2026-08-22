@@ -19,50 +19,50 @@ onMount(try_load_desmos);
 
 function try_load_desmos(i: number = 0)
 {
-  if (i > 3) {
-    desmos = false;  // fail after too many tries
-    return;
-  };
+	if (i > 3) {
+		desmos = false;  // fail after too many tries
+		return;
+	};
 
-  try {
-    Desmos;
-    if (question === null) throw new Error();
+	try {
+		Desmos;
+		if (question === null) throw new Error();
 
-    desmos = Desmos.GraphingCalculator(self, {
-      expressionsCollapsed: true,
-    });
+		desmos = Desmos.GraphingCalculator(self, {
+			expressionsCollapsed: true,
+		});
 
-    if (Array.isArray(question.desmos)) {
-      desmos.setExpressions(
-        question.desmos.map((block, i) => ({
-          id: `cool-graph-${i}`,
-          latex: block.content,
-          color: pick_col()
-        }))
-      );
-    } else {
-      desmos.setExpressions([
-        { id: "cool-graph", latex: question.desmos!.content, color: pick_col() }
-      ]);
-    }
-  }
-  catch {
-    setTimeout(
-      () => try_load_desmos(++i),
-      100 + i*i * 100
-    );
-  }
+		if (Array.isArray(question.desmos)) {
+			desmos.setExpressions(
+				question.desmos.map((block, i) => ({
+					id: `cool-graph-${i}`,
+					latex: block.content,
+					color: pick_col()
+				}))
+			);
+		} else {
+			desmos.setExpressions([
+				{ id: "cool-graph", latex: question.desmos!.content, color: pick_col() }
+			]);
+		}
+	}
+	catch {
+		setTimeout(
+			() => try_load_desmos(++i),
+			100 + i*i * 100
+		);
+	}
 }
 
 function reload_desmos()
 {
-  desmos.destroy();
-  try_load_desmos();
+	desmos.destroy();
+	try_load_desmos();
 }
 
 function pick_col()
 {
-  return Object.values(Desmos.Colors).sort(() => Math.random() - 0.5)[0];
+	return Object.values(Desmos.Colors).sort(() => Math.random() - 0.5)[0];
 }
 
 </script>
@@ -73,22 +73,22 @@ function pick_col()
 
 
 <Breadcrumbs levels={[
-  { text: "Questions", intern: "questions" },
-  { text: "Cool Graphs", intern: "questions/cool-graphs" },
-  { text: question?.shard ?? "?" },
+	{ text: "Questions", intern: "questions" },
+	{ text: "Cool Graphs", intern: "questions/cool-graphs" },
+	{ text: question?.shard ?? "?" },
 ]} copy={true} shard={question?.shard} />
 
 <Header title={question?.title} capt={question?.date_display} />
 
 <div id="desmos-window"
-  bind:this={self}
+	bind:this={self}
 >
-  {#if desmos === null}
-    <p> Loading Desmos calculator... </p>
-  {:else if desmos === false}
-    <p> Oops, failed to load Desmos calculator! </p>
-    <p> Please try checking your internet connection and reloading the page. </p>
-  {/if}
+	{#if desmos === null}
+		<p> Loading Desmos calculator... </p>
+	{:else if desmos === false}
+		<p> Oops, failed to load Desmos calculator! </p>
+		<p> Please try checking your internet connection and reloading the page. </p>
+	{/if}
 </div>
 
 <Clicky text="Reload Graph" action={reload_desmos} />
@@ -99,15 +99,15 @@ function pick_col()
 <style lang="scss">
 
 #desmos-window {
-  margin: 1rem 0;
-  width: 100%;
-  height: 80vh;
+	margin: 1rem 0;
+	width: 100%;
+	height: 80vh;
 }
 
 p.caption {
-  padding-top: 1em;
-  font-size: 100%;
-  color: $col-text-deut;
+	padding-top: 1em;
+	font-size: 100%;
+	color: $col-text-deut;
 }
 
 </style>

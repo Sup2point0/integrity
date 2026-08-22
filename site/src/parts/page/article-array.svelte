@@ -11,9 +11,9 @@ import { ArticleCard } from "#parts/ui";
 
 
 interface Props {
-  paths?: string[];
-  pages?: Page[];
-  children?: any;
+	paths?: string[];
+	pages?: Page[];
+	children?: any;
 }
 
 let { paths, pages, children }: Props = $props();
@@ -22,29 +22,29 @@ let { paths, pages, children }: Props = $props();
 
 
 <ul>
-  {#if pages}
-    {#each pages as page}
-      <ArticleCard {page} />
-    {/each}
-  
-  {:else if paths}
-    {#each paths as path}
-      <ArticleCard {path} />
-    {/each}
-  
-  {/if}
+	{#if pages}
+		{#each pages as page}
+			<ArticleCard {page} />
+		{/each}
+	
+	{:else if paths}
+		{#each paths as path}
+			<ArticleCard {path} />
+		{/each}
+	
+	{/if}
 
-  {@render children?.()}
+	{@render children?.()}
 </ul>
 
 
 <style lang="scss">
 
 ul {
-  margin: 0;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 1rem;
+	margin: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1rem;
 }
 
 </style>

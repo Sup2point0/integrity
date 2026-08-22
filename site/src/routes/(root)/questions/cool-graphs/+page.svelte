@@ -19,33 +19,33 @@ let filtered = $derived($search.filter_questions(questions));
 
 
 onMount(() => {
-  $search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
-  $search.methods = Object.fromEntries(methods.map(method => [method, false]));
+	$search.tags = Object.fromEntries(tags.map(tag => [tag, false]));
+	$search.methods = Object.fromEntries(methods.map(method => [method, false]));
 });
 
 </script>
 
 
 <Meta title="Cool Graphs"
-  desc="A collection of cool graphs I’ve found!"
+	desc="A collection of cool graphs I’ve found!"
 />
 <DesmosAPI />
 
 
 <Breadcrumbs levels={[
-  { text: "Questions", intern: "questions" },
-  { text: "Cool Graphs" },
+	{ text: "Questions", intern: "questions" },
+	{ text: "Cool Graphs" },
 ]} />
 
 <Header title="Cool Graphs" />
 <Search />
 
 <div class="content {$search.view}">
-  {#each filtered as question (question.shard)}
-    <QuestionCard {question}
-      style={$search.view === "list" ? "row" : "block"}
-    />
-  {/each}
+	{#each filtered as question (question.shard)}
+		<QuestionCard {question}
+			style={$search.view === "list" ? "row" : "block"}
+		/>
+	{/each}
 </div>
 
 <SearchFooter found={filtered.length} total={questions.length} />
@@ -54,19 +54,19 @@ onMount(() => {
 <style lang="scss">
 
 .content {
-  display: flex;
-  gap: 1rem;
+	display: flex;
+	gap: 1rem;
 
-  &.grid, &.grid-wide {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, max(16rem, 30%));
-    justify-content: center;
-  }
+	&.grid, &.grid-wide {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, max(16rem, 30%));
+		justify-content: center;
+	}
 
-  &.list {
-    flex-flow: column;
-    align-items: stretch;
-  }
+	&.list {
+		flex-flow: column;
+		align-items: stretch;
+	}
 }
 
 </style>

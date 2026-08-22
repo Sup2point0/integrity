@@ -14,8 +14,8 @@ import { base } from "$app/paths";
 
 
 interface Props {
-  path?: string;
-  page?: Page;
+	path?: string;
+	page?: Page;
 }
 
 let { path, page }: Props = $props();
@@ -26,92 +26,92 @@ const data: Page = page ?? Site.pages[path!];
 
 
 <a class="article-card" class:invalid={!data}
-  href="{base}/{data?.dest}"
+	href="{base}/{data?.dest}"
 >
-  <div class="info">
-    <h4>
-      {#if data?.head}
-        <RenderBlock source={data!.head} />
-      {:else}
-        Page Unavailable
-      {/if}
-    </h4>
-    
-    {#if data?.capt || data?.desc}
-      <RenderBlock source={data!.capt ?? data!.desc} />
-    {/if}
-  </div>
+	<div class="info">
+		<h4>
+			{#if data?.head}
+				<RenderBlock source={data!.head} />
+			{:else}
+				Page Unavailable
+			{/if}
+		</h4>
+		
+		{#if data?.capt || data?.desc}
+			<RenderBlock source={data!.capt ?? data!.desc} />
+		{/if}
+	</div>
 </a>
 
 
 <style lang="scss">
 
 a.article-card {
-  width: 100%;
-  min-width: 16em;
-  min-height: 8em;
-  padding: 1em 1.5em;
-  flex: 1 0 auto;
-  display: flex;
-  flex-flow: row;
-  justify-content: start;
-  align-items: center;
-  
-  @include font-ui;
-  color: $col-text;
-  text-decoration: none;
-  background: auto;
-  border: 1px solid $col-line-fallback;
-  border: 1px solid $col-line;
-  border-radius: 0.5em;
-  box-shadow: 0 2px 2px -0.5px $col-line;
+	width: 100%;
+	min-width: 16em;
+	min-height: 8em;
+	padding: 1em 1.5em;
+	flex: 1 0 auto;
+	display: flex;
+	flex-flow: row;
+	justify-content: start;
+	align-items: center;
+	
+	@include font-ui;
+	color: $col-text;
+	text-decoration: none;
+	background: auto;
+	border: 1px solid $col-line-fallback;
+	border: 1px solid $col-line;
+	border-radius: 0.5em;
+	box-shadow: 0 2px 2px -0.5px $col-line;
 
-  @include interact(
-    $hover: $col-card-hover,
-    $click: $col-card-click,
-    $t: 0.16,
-  );
-  @include focus-outline;
+	@include interact(
+		$hover: $col-card-hover,
+		$click: $col-card-click,
+		$t: 0.16,
+	);
+	@include focus-outline;
 
-  &.invalid {
-    pointer-events: none;
+	&.invalid {
+		pointer-events: none;
 
-    h4 {
-      color :$col-text-deut;
-    }
-  }
+		h4 {
+			color :$col-text-deut;
+		}
+	}
 }
 
 .info {
-  width: 100%;
-  text-align: left;
+	width: 100%;
+	text-align: left;
 
-  h4 {
-    width: 80%;
-    padding: 0 0 0.5em;
-    margin: 0 0 0.5em;
-    @include font-ui;
-    font-size: 150%;
-    border-bottom: 1px solid $col-line;
+	h4 {
+		width: 80%;
+		padding: 0 0 0.5em;
+		margin: 0 0 0.5em;
+		@include font-ui;
+		font-size: 150%;
+		border-bottom: 1px solid $col-line;
 
-    // NOTE: Nested `<p>` due to `<RenderBlock>` Markdown parsing
-    :global(p) {
-      margin: 0;
-      font-weight: 350;
-    }
-  }
+		// NOTE: Nested `<p>` due to `<RenderBlock>` Markdown parsing
+		:global(p) {
+			margin: 0;
+			font-weight: 350;
+		}
+	}
 
-  // NOTE: Nested `<p>` due to `<RenderBlock>` Markdown parsing
-  :global(p) {
-    margin: 0;
-  }
+	// NOTE: Nested `<p>` due to `<RenderBlock>` Markdown parsing
+	:global(p) {
+		margin: 0;
+	}
 }
 
 
 @media (prefers-contrast: more) {
-  a.article-card {
-    border-color: light-dark(black, white);
-  }
+	a.article-card {
+		border-color: light-dark(black, white);
+	}
 }
 
 </style>

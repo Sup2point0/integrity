@@ -13,7 +13,7 @@ import { base } from "$app/paths";
 
 
 interface Props {
-  paths: string[]
+	paths: string[]
 }
 
 let { paths }: Props = $props();
@@ -22,21 +22,21 @@ let { paths }: Props = $props();
 
 
 <Banner title="Pre-Reading Material">
-  For this scripture, you’ll need to be familiar with content from:
-  
-  {#each paths as path, i}
-    {@const data = Site.pages[path]}
+	For this scripture, you’ll need to be familiar with content from:
+	
+	{#each paths as path, i}
+		{@const data = Site.pages[path]}
 
-    {#if i > 0} , {/if}
-    <a href="{base}/{data?.dest}">{data?.head ?? "<Unwritten>"}</a>
-  {/each}
+		{#if i > 0} , {/if}
+		<a href="{base}/{data?.dest}">{data?.head ?? "<Unwritten>"}</a>
+	{/each}
 </Banner>
 
 
 <style lang="scss">
 
 a {
-  @include underline-link;
+	@include underline-link;
 }
 
 </style>

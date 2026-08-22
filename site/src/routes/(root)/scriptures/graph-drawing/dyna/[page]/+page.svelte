@@ -9,9 +9,9 @@ import { page } from "$app/state";
 
 
 <Breadcrumbs levels={[
-  { text: "Scriptures", intern: "scriptures" },
-  { text: "Graph Drawing", intern: "scriptures/graph-drawing" },
-  { text: page.data.title },
+	{ text: "Scriptures", intern: "scriptures" },
+	{ text: "Graph Drawing", intern: "scriptures/graph-drawing" },
+	{ text: page.data.title },
 ]} />
 
 

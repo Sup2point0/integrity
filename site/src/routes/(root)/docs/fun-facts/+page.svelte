@@ -6,18 +6,18 @@ import PageContent from "#parts/base/static-page.svelte";
 
 
 <PageContent levels={[
-  { text: "Docs", intern: "docs" }
+	{ text: "Docs", intern: "docs" }
 ]} />
 
 
 <style lang="scss">
 
 :global(a:has(.highlight--), a:has(.highlight--):is(:hover, :focus-visible, :active)) {
-  color: inherit;
+	color: inherit;
 }
 
 :global(a:has(.highlight--)::after) {
-  display: none;
+	display: none;
 }
 
 </style>

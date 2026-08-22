@@ -9,7 +9,7 @@ import { base } from "$app/paths";
 
 
 interface Props {
-  value?: string | null;
+	value?: string | null;
 }
 
 let { value }: Props = $props();
@@ -21,39 +21,39 @@ let copied = $state(false);
 
 
 <button class="copy"
-  onclick={async () => {
-    if (value) {
-      await navigator.clipboard.writeText(value);
-      copied = true;
-      setTimeout(() => { copied = false; }, 2000);
-    }
-  }}
+	onclick={async () => {
+		if (value) {
+			await navigator.clipboard.writeText(value);
+			copied = true;
+			setTimeout(() => { copied = false; }, 2000);
+		}
+	}}
 >
-  {#if copied}
-    <img alt="" src="{base}/tick-new.svg" />
-  {:else}
-    <img alt="" src="{base}/copy.svg" />
-  {/if}
+	{#if copied}
+		<img alt="" src="{base}/tick-new.svg" />
+	{:else}
+		<img alt="" src="{base}/copy.svg" />
+	{/if}
 </button>
 
 
 <style lang="scss">
 
 button.copy {
-  padding: 0.5em;
-  display: inline-block;
-  background: none;
-  border: none;
-  border-radius: 0.5em;
-  opacity: 40%;
+	padding: 0.5em;
+	display: inline-block;
+	background: none;
+	border: none;
+	border-radius: 0.5em;
+	opacity: 40%;
 
-  @include interact();
-  @include focus-outline;
+	@include interact();
+	@include focus-outline;
 }
 
 img {
-  width: 1.5em;
-  max-width: 100%;
+	width: 1.5em;
+	max-width: 100%;
 }
 
 </style>

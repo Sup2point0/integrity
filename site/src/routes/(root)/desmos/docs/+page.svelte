@@ -9,18 +9,18 @@ import { ArticleArray } from "#parts/page";
 
 
 <Meta title="Docs"
-  desc="Documentation on all things Desmos"
+	desc="Documentation on all things Desmos"
 />
 
 
 <Breadcrumbs levels={[
-  { text: "Desmos", intern: "desmos" },
-  { text: "Docs" },
+	{ text: "Desmos", intern: "desmos" },
+	{ text: "Docs" },
 ]} />
 
 <Header title="Docs" />
 
 
 <ArticleArray
-  paths={Site.index["desmos-docs"].pages}
+	paths={Site.index["desmos-docs"].pages}
 />

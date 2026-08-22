@@ -11,12 +11,12 @@ import { Breadcrumbs, Header, Meta } from "#parts/core";
 
 
 <Breadcrumbs levels={[
-  { text: "Desmos", intern: "desmos" },
-  { text: page.title },
+	{ text: "Desmos", intern: "desmos" },
+	{ text: page.title },
 ]} />
 
 <Header {page} />
 
 <article>
-  <Content />
+	<Content />
 </article>

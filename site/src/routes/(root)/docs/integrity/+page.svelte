@@ -9,14 +9,14 @@ import { ArticleArray } from "#parts/page";
 
 
 <Meta title="Integrating Integrity"
-  desc="Uncovering the derivation of Integrity"
+	desc="Uncovering the derivation of Integrity"
 />
 
 
 <Breadcrumbs levels={[
-  { text: "Integrity", link: Site.root },
-  { text: "Docs", link: "docs" },
-  { text: "Integrating Integrity" },
+	{ text: "Integrity", link: Site.root },
+	{ text: "Docs", link: "docs" },
+	{ text: "Integrating Integrity" },
 ]} />
 
 <Header title="Integrating *Integrity*" capt="Uncovering the derivation of Integrity" />

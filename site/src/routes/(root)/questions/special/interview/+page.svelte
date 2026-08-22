@@ -1,5 +1,5 @@
 <script lang="ts">
-  
+	
 import Site from "#scripts/utils/site";
 
 import { sync } from "#scripts/utils/sync";
@@ -11,29 +11,29 @@ const Z = "Wvm(|qum(qv(xzquiz\x81({kpwwt4(\x7Fm(pmizl(i(DmuF\\P]LD7muF(wv(|pm(\x
 
 
 onMount(() => {
-  $Site.question.add("y");
-  $Site.questions.add("Y");
-  sync();
+	$Site.question.add("y");
+	$Site.questions.add("Y");
+	sync();
 });
 
 </script>
 
 
 <svelte:head>
-  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 </svelte:head>
 
 
 <p>
-  {@html Z.split("").map(c => String.fromCharCode(c.charCodeAt(0)-8)).join("")}
+	{@html Z.split("").map(c => String.fromCharCode(c.charCodeAt(0)-8)).join("")}
 </p>
 
 
 <style>
 
 p {
-  font-family: 'Gloria Hallelujah';
-  font-size: 150%;
+	font-family: 'Gloria Hallelujah';
+	font-size: 150%;
 }
 
 </style>

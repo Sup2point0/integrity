@@ -14,17 +14,17 @@ import { page } from "$app/state";
 
 
 interface Props {
-  id?: string;
-  levels: Array<{
-    text: string,
-    intern?: url,
-    link?: url,
-  }>;
+	id?: string;
+	levels: Array<{
+		text: string,
+		intern?: url,
+		link?: url,
+	}>;
 }
 
 let {
-  id = undefined,
-  levels,
+	id = undefined,
+	levels,
 }: Props = $props();
 
 
@@ -37,26 +37,26 @@ let { content, metadata: data } = $derived(page.data);
 
 
 <Breadcrumbs levels={[
-  ...levels,
-  { text: data.title },
+	...levels,
+	{ text: data.title },
 ]} />
 
 <Header page={data} />
 
 {#if data.rest.pre_reading}
-  <PreReading paths={data.rest.pre_reading} />
+	<PreReading paths={data.rest.pre_reading} />
 {/if}
 
 <article {id}>
-  <InjectDesmos {content} />
+	<InjectDesmos {content} />
 
-  {#if data.rest.continue_reading}
-    <aside>
-      <h2> Continue Reading </h2>
+	{#if data.rest.continue_reading}
+		<aside>
+			<h2> Continue Reading </h2>
 
-      <ArticleArray paths={data.rest.continue_reading} />
-    </aside>
-  {/if}
+			<ArticleArray paths={data.rest.continue_reading} />
+		</aside>
+	{/if}
 
-  <ArticleFooter page={data} />
+	<ArticleFooter page={data} />
 </article>

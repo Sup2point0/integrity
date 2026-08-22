@@ -20,44 +20,44 @@ let has_desmos = $state(false);
 let root: HTMLElement;
 
 onMount(() => {
-  let sources = root.querySelectorAll("pre.language-desmos");
+	let sources = root.querySelectorAll("pre.language-desmos");
 
-  for (let source of sources.values()) {
-    has_desmos = true;
-    source.style.display = "none";
+	for (let source of sources.values()) {
+		has_desmos = true;
+		source.style.display = "none";
 
-    let desmos_container = source.parentNode.insertBefore(
-      document.createElement("div"),
-      source.nextSibling,
-    );
+		let desmos_container = source.parentNode.insertBefore(
+			document.createElement("div"),
+			source.nextSibling,
+		);
 
-    let blocks = (
-      source.textContent
-      .split("\n")
-      .map(content => ({
-        kind: "desmos",
-        content,
-      }))
-    );
+		let blocks = (
+			source.textContent
+			.split("\n")
+			.map(content => ({
+				kind: "desmos",
+				content,
+			}))
+		);
 
-    mount(Desmos, {
-      target: desmos_container,
-      props: {
-        options: { expressionsCollapsed: false },
-        blocks,
-        height: "69vh",
-      },
-    });
-  }
+		mount(Desmos, {
+			target: desmos_container,
+			props: {
+				options: { expressionsCollapsed: false },
+				blocks,
+				height: "69vh",
+			},
+		});
+	}
 });
 
 </script>
 
 
 {#if page.data.metadata.flags.includes("desmos") || has_desmos}
-  <DesmosAPI />
+	<DesmosAPI />
 {/if}
 
 <div class="desmos-injector" bind:this={root}>
-  {@render content?.()}
+	{@render content?.()}
 </div>

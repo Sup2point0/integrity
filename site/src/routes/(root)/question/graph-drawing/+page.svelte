@@ -21,155 +21,155 @@ let sections = $derived(page.url.searchParams.getAll("section"));
 
 
 <Breadcrumbs levels={[
-  { text: "Questions", intern: "questions" },
-  { text: "Graph Drawing", intern: "questions/graph-drawing" },
-  { text: question?.shard ?? "?" },
+	{ text: "Questions", intern: "questions" },
+	{ text: "Graph Drawing", intern: "questions/graph-drawing" },
+	{ text: question?.shard ?? "?" },
 ]} copy={true} shard={question?.shard} />
 
 
 <section class="question">
-  <div class="latex">
-    <Katex text={question?.question?.content} />
-  </div>
+	<div class="latex">
+		<Katex text={question?.question?.content} />
+	</div>
 
-  <div class="utils upper">
-    <CopyClicky value={Question.sanitise(question?.question?.content)} />
-  </div>
+	<div class="utils upper">
+		<CopyClicky value={Question.sanitise(question?.question?.content)} />
+	</div>
 
-  <Line width="80%" margin="1rem auto" />
+	<Line width="80%" margin="1rem auto" />
 </section>
 
 <Section title="Info" closed={!sections.includes("info")}>
-  <div class="info">
-    <div class="details">
-      <h4 class="name"> {question?.title ?? "unnamed"} </h4>  
-      <p class="date"> {question?.date_display} </p>
-      
-      {#if question?.desc}
-        <p class="desc"> {@html question.desc} </p>
-      {/if}
-    </div>
+	<div class="info">
+		<div class="details">
+			<h4 class="name"> {question?.title ?? "unnamed"} </h4>  
+			<p class="date"> {question?.date_display} </p>
+			
+			{#if question?.desc}
+				<p class="desc"> {@html question.desc} </p>
+			{/if}
+		</div>
 
-    {#if question?.tags}
-      <div class="tags">
-        {#each question.tags as tag}
-          <Tag {tag} />
-        {/each}
-      </div>
-    {/if}
-  </div>
+		{#if question?.tags}
+			<div class="tags">
+				{#each question.tags as tag}
+					<Tag {tag} />
+				{/each}
+			</div>
+		{/if}
+	</div>
 </Section>
 
 {#if question?.hints}
-  <Section title="Hints" closed={!sections.includes("hints")}>
-    {#each Object.entries(question.hints) as [hint, source]}
-      <Section ctx="inner" title={hint}>
-        <RenderBlock {source} />
-      </Section>
-    {/each}
-  </Section>
+	<Section title="Hints" closed={!sections.includes("hints")}>
+		{#each Object.entries(question.hints) as [hint, source]}
+			<Section ctx="inner" title={hint}>
+				<RenderBlock {source} />
+			</Section>
+		{/each}
+	</Section>
 {/if}
 
 <Section title="Answer" closed={!sections.includes("answer")}>
-  <div class="answer">
-    <Desmos
-      source={question?.answer?.content ?? question?.question?.content}
-      bounds={question?.["graph-bounds"]}
-      height="70vh"
-      ratio={1}
-    />
-  </div>
+	<div class="answer">
+		<Desmos
+			source={question?.answer?.content ?? question?.question?.content}
+			bounds={question?.["graph-bounds"]}
+			height="70vh"
+			ratio={1}
+		/>
+	</div>
 </Section>
 
 {#if question?.solution}
-  <Section title="Solution" closed={!sections.includes("solution")}>
-    {#if Array.isArray(question.solution)}
-      {#each question.solution as source}
-        <RenderBlock {source} />
-      {/each}
+	<Section title="Solution" closed={!sections.includes("solution")}>
+		{#if Array.isArray(question.solution)}
+			{#each question.solution as source}
+				<RenderBlock {source} />
+			{/each}
 
-    {:else}
-      {#each Object.entries(question.solution) as [step, source]}
-        {#if step === "_"}
-          <RenderBlock {source} />
-        {:else}
-          <Section ctx="inner" closed={false} title={step.toUpperCase()}>
-            <RenderBlock {source} />
-          </Section>
-        {/if}
-      {/each}
+		{:else}
+			{#each Object.entries(question.solution) as [step, source]}
+				{#if step === "_"}
+					<RenderBlock {source} />
+				{:else}
+					<Section ctx="inner" closed={false} title={step.toUpperCase()}>
+						<RenderBlock {source} />
+					</Section>
+				{/if}
+			{/each}
 
-    {/if}
-  </Section>
+		{/if}
+	</Section>
 {/if}
 
 
 <style lang="scss">
 
 section.question {
-  padding: 3rem 0 2rem;
-  text-align: center;
-  
-  .latex {
-    font-size: 150%;
-  }
+	padding: 3rem 0 2rem;
+	text-align: center;
+	
+	.latex {
+		font-size: 150%;
+	}
 }
 
 .utils {
-  &.upper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: end;
-    gap: 0.5rem;
-  }
-  
-  &.upper {
-    padding-right: 10%;
-  }
+	&.upper {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: end;
+		gap: 0.5rem;
+	}
+	
+	&.upper {
+		padding-right: 10%;
+	}
 }
 
 .info {
-  padding: 0 2rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: start;
-  
-  .details {
-    h4.name {
-      margin-bottom: 0.4em;
-      font-size: 125%;
-      font-weight: 450;
-    }
+	padding: 0 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: start;
+	
+	.details {
+		h4.name {
+			margin-bottom: 0.4em;
+			font-size: 125%;
+			font-weight: 450;
+		}
 
-    p.date {
-      color: $col-text-deut;
-      font-size: 100%;
-      font-weight: 250;
-    }
+		p.date {
+			color: $col-text-deut;
+			font-size: 100%;
+			font-weight: 250;
+		}
 
-    p.desc {
-      padding-top: 2em;
-    }
-  }
-  
-  .tags {
-    padding: 0.5rem 0 0;
-    height: max-content;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    column-gap: 0.25em;
-    row-gap: 0.2em;
-    font-size: 125%;
-  }
+		p.desc {
+			padding-top: 2em;
+		}
+	}
+	
+	.tags {
+		padding: 0.5rem 0 0;
+		height: max-content;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		column-gap: 0.25em;
+		row-gap: 0.2em;
+		font-size: 125%;
+	}
 }
 
 .answer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 </style>

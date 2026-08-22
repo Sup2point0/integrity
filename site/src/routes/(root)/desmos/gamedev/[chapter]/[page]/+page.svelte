@@ -9,10 +9,10 @@ import { page } from "$app/state";
 
 
 <Breadcrumbs levels={[
-  { text: "Desmos", intern: "desmos" },
-  { text: "Game Development", intern: "desmos/gamedev" },
-  { text: page.data.chapter, intern: `desmos/gamedev/${page.data.chapter.toLowerCase()}` },
-  { text: page.data.title },
+	{ text: "Desmos", intern: "desmos" },
+	{ text: "Game Development", intern: "desmos/gamedev" },
+	{ text: page.data.chapter, intern: `desmos/gamedev/${page.data.chapter.toLowerCase()}` },
+	{ text: page.data.title },
 ]} />
 
 

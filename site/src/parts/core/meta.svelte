@@ -9,9 +9,9 @@ import { base } from "$app/paths";
 
 
 interface Props {
-  title?: string;
-  desc?: string;
-  children?: any;
+	title?: string;
+	desc?: string;
+	children?: any;
 }
 
 let { title, desc, children }: Props = $props();
@@ -20,14 +20,14 @@ let { title, desc, children }: Props = $props();
 
 
 <svelte:head>
-  <title> {title} · Integrity </title>
-  <meta name="description" content="{desc}" />
+	<title> {title} · Integrity </title>
+	<meta name="description" content="{desc}" />
 
-  <meta property="og:site_name" content="Integrity" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{title} · Integrity" />
-  <meta property="og:description" content={desc} />
-  <meta property="og:image" content="{base}/previews/integrity-og.png" />
+	<meta property="og:site_name" content="Integrity" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{title} · Integrity" />
+	<meta property="og:description" content={desc} />
+	<meta property="og:image" content="{base}/previews/integrity-og.png" />
 
-  {@render children?.()}
+	{@render children?.()}
 </svelte:head>

@@ -15,104 +15,104 @@ import { Desmos, Katex } from "#parts/ui";
 
 
 interface Props {
-  question: Question | Partial<Question>;
+	question: Question | Partial<Question>;
 }
 
 let { question }: Props = $props();
 
 
 let options = $derived(
-  question.options
-    ? sample(question.options, { size: Object.keys(question.options).length, replace: false })
-    : []
+	question.options
+		? sample(question.options, { size: Object.keys(question.options).length, replace: false })
+		: []
 );
 
 </script>
 
 
 <div class="answer-cards">
-  {#each options as option}
-    <button
-      class={{
-        correct: (
-          $speedrun.run.state === "correct" && option.index === 0
-        ),
-        incorrect: ($speedrun.run.state !== "correct" && $speedrun.run.answers.has(option.index))
-      }}
-      onclick={() => $speedrun.submit_answer(option.index)}
-      disabled={
-        ($speedrun.run.state === "correct" && option.index !== 0) || undefined
-      }
-    >
-      {#if question.topic === "graph-drawing"}
-        {#key question.shard}
-          <Desmos
-            source={option.latex}
-            options={{ showXAxis: true, showYAxis: true }}
-            controls={false}
-            bounds={question["graph-bounds"]}
-            height="100%"
-            />
-        {/key}
+	{#each options as option}
+		<button
+			class={{
+				correct: (
+					$speedrun.run.state === "correct" && option.index === 0
+				),
+				incorrect: ($speedrun.run.state !== "correct" && $speedrun.run.answers.has(option.index))
+			}}
+			onclick={() => $speedrun.submit_answer(option.index)}
+			disabled={
+				($speedrun.run.state === "correct" && option.index !== 0) || undefined
+			}
+		>
+			{#if question.topic === "graph-drawing"}
+				{#key question.shard}
+					<Desmos
+						source={option.latex}
+						options={{ showXAxis: true, showYAxis: true }}
+						controls={false}
+						bounds={question["graph-bounds"]}
+						height="100%"
+						/>
+				{/key}
 
-      {:else}
-        <Katex text={option.latex} />
+			{:else}
+				<Katex text={option.latex} />
 
-      {/if}
-    </button>
-  {/each}
+			{/if}
+		</button>
+	{/each}
 </div>
 
 
 <style lang="scss">
 
 .answer-cards {
-  width: max-content;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+	width: max-content;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
 }
 
 button {
-  aspect-ratio: 2 / 1;
-  min-width: 16em;
-  max-width: 40vw;
-  min-height: 6em;
-  padding: 0.75em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  @include font-ui;
-  color: $col-text;
-  font-size: 150%;
-  text-decoration: none;
-  background: light-dark(white, black);
-  border: 1px solid $col-line-fallback;
-  border: 1px solid $col-line;
-  border-radius: 0.5em;
-  box-shadow: 0 2px 2px -0.5px $col-line;
+	aspect-ratio: 2 / 1;
+	min-width: 16em;
+	max-width: 40vw;
+	min-height: 6em;
+	padding: 0.75em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	@include font-ui;
+	color: $col-text;
+	font-size: 150%;
+	text-decoration: none;
+	background: light-dark(white, black);
+	border: 1px solid $col-line-fallback;
+	border: 1px solid $col-line;
+	border-radius: 0.5em;
+	box-shadow: 0 2px 2px -0.5px $col-line;
 
-  @include interact(
-    $hover: $col-card-hover,
-    $click: $col-card-click,
-    $t: 0.16,
-  );
-  @include focus-outline;
+	@include interact(
+		$hover: $col-card-hover,
+		$click: $col-card-click,
+		$t: 0.16,
+	);
+	@include focus-outline;
 
-  &.incorrect, &.correct {
-    pointer-events: none;
-    border: none;
-    box-shadow: none;
-  }
+	&.incorrect, &.correct {
+		pointer-events: none;
+		border: none;
+		box-shadow: none;
+	}
 
-  &.incorrect { background: color-mix(in oklch, $col-no, transparent 80%); }
-  &.correct { background: color-mix(in oklch, $col-yes, transparent 75%); }
+	&.incorrect { background: color-mix(in oklch, $col-no, transparent 80%); }
+	&.correct { background: color-mix(in oklch, $col-yes, transparent 75%); }
 
-  &[disabled] {
-    pointer-events: none;
-    opacity: 20%;
-  }
+	&[disabled] {
+		pointer-events: none;
+		opacity: 20%;
+	}
 }
 
 </style>

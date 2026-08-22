@@ -17,17 +17,17 @@ let data = $derived(page.data as Page);
 
 
 <Breadcrumbs levels={[
-  { text: "Desmos", intern: "desmos" },
-  { text: "Library", intern: "desmos/library" },
-  // @ts-ignore
-  { text: data.category!, intern: `desmos/library/${data.category!.toLowerCase()}` },
-  { text: data.title! },
+	{ text: "Desmos", intern: "desmos" },
+	{ text: "Library", intern: "desmos/library" },
+	// @ts-ignore
+	{ text: data.category!, intern: `desmos/library/${data.category!.toLowerCase()}` },
+	{ text: data.title! },
 ]} />
 
 <Header page={data} />
 
 <article>
-  {@render data.content()}
+	{@render data.content()}
 
-  <ArticleFooter page={data} />
+	<ArticleFooter page={data} />
 </article>
