@@ -34,7 +34,7 @@ Desmos can certainly plot simple graphs like $y = x^2$, but it can also do so mu
 
 ### _
 ```desmos
-f\left(x\right) = -\frac{1}{100}x^{3} + \frac{1}{10}x^{2} + \frac{1}{5}x + \sin{x}
+f(x) = -\frac{1}{100}x^{3} + \frac{1}{10}x^{2} + \frac{1}{5}x + \sin{x}
 f'(x)
 ```
 

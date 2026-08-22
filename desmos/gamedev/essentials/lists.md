@@ -62,8 +62,8 @@ Unfortunately, Desmos doesn’t currently support negative indexing.
 ```desmos
 L = \left[ 1, 2, 3 \right]
 
-length\left( L \right)
-L\left[ length\left( L \right) \right]
+length(L)
+L\left[ length(L) \right]
 ```
 
 To access the last element, we can count how many items are in the list by calling the $\operatorname{length}()$ function on it, then use this as the index.

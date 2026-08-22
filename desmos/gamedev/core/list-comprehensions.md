@@ -251,7 +251,7 @@ But the well-known Python data library `pandas` uses this syntax too, so I guess
 ```desmos
 L = \left[ 1,\ 2,\ 3,\ 4,\ 5 \right]
 
-L\left[ L > 2 \right]\left[ \operatorname{mod}\left( L, 2 \right) = 1 \right]
+L\left[ L > 2 \right]\left[ \operatorname{mod}(L, 2) = 1 \right]
 ```
 
 Filtering a list with a conditional produces just another list, so we can of course further filter the output with another condition.
@@ -277,7 +277,7 @@ L > 2
 s = 5 > 2
 
 /text :: Ok, wrap it in parentheses?
-s = \left( 5 > 2 \right)
+s = (5 > 2)
 ```
 
 We’ll touch on this later in [conditionals](conditionals), but there’s (currently) no way for us to obtain a ‘raw’ boolean in Desmos (i.e. literal “true” or “false”).
@@ -302,8 +302,8 @@ Hint: What happens when you square root a non-square number?
 ```desmos
 L = \left[ 1,\ 18,\ 25,\ 7,\ 9,\ 77,\ 64 \right]
 
-/hidden :: f_{resquare}\left( x \right) = \operatorname{round}\left(\sqrt{x}\right)^2
-L\left[ f_{resquare}\left( L \right) = L \right]
+/hidden :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
+L\left[ f_{resquare}(L) = L \right]
 ```
 
 We can check if a number is square by:
@@ -334,7 +334,7 @@ Pythagorean “triples” are *integer* $a, b, c$ combinations for which the abo
 
 ### _
 ```desmos
-f_{pythagTriples}\left( n \right) =
+f_{pythagTriples}(n) =
 ```
 
 We want to write a function $f_\text{pythagTriples}(n)$ which produces all triples with $a < b < c \leq n$
@@ -355,27 +355,27 @@ So, where will we get $a, b, c$ from? We want to *combine* them to find all poss
 
 ### _
 ```desmos
-f_{pythagTriples}\left( n \right) = 
-f_{allTriples}\left( n \right) = \left[ for a=\left[1...n\right],\ b=\left[1...n\right],\ c=\left[1...n\right] \right]
+f_{pythagTriples}(n) = 
+f_{allTriples}(n) = \left[ for a=\left[1...n\right],\ b=\left[1...n\right],\ c=\left[1...n\right] \right]
 ```
 
 That’s right, we’re going to need a 3-dimensional list comprehension; a cartesian product between $A \times B \times C$ (where $X$ denotes the possible values of $x$).
 
 ### _
 ```desmos
-f_{pythagTriples}\left( n \right) = 
+f_{pythagTriples}(n) = 
 
 /text :: Can’t store (a, b, c), unfortunately...
-f_{allTriples}\left( n \right) = \left[ \left( a, b, c \right) for a=\left[1...n\right],\ b=\left[1...n\right],\ c=\left[1...n\right] \right]
+f_{allTriples}(n) = \left[ (a, b, c) for a=\left[1...n\right],\ b=\left[1...n\right],\ c=\left[1...n\right] \right]
 ```
 
 Except – horror! We can’t have points with 3 co-ordinates in the Desmos 2D graphing calculator.
 
 ### _
 ```desmos
-f_{pythagTriples}\left( n \right) = 
+f_{pythagTriples}(n) = 
 
-f_{allTriples}\left( n \right) = \left[ \left( a,\ b \right) for a=\left[1...n\right], b=\left[1...n\right] \right]
+f_{allTriples}(n) = \left[ (a,\ b) for a=\left[1...n\right], b=\left[1...n\right] \right]
 ```
 
 Well, when you hit limitations, and you inevitably will, you’ve gotta find workarounds.
@@ -384,11 +384,11 @@ In this case, let’s only store $a$ and $b$ (since $c$ can be computed from the
 
 ### _
 ```desmos
-f_{pythagTriples}\left( n \right) = 
+f_{pythagTriples}(n) = 
 
-f_{allTriples}\left( n \right) = \left[ \left( a,\ b \right) for a=\left[1...n\right],\ b=\left[1...n\right] \right]
+f_{allTriples}(n) = \left[ (a,\ b) for a=\left[1...n\right],\ b=\left[1...n\right] \right]
 /text :: Now... how to check if it’s square?
-f_{filterTriples}\left( L \right) = L \left[ L.x^2 + L.y^2 = ? \right]
+f_{filterTriples}(L) = L \left[ L.x^2 + L.y^2 = ? \right]
 ```
 
 We’ve got our list of pairs of $(a, b)$. Now we filter them.
@@ -403,25 +403,25 @@ Yes, $L.x$ does look *incredibly* cursed. Desmos and its vectorised operations..
 
 ### _
 ```desmos
-f_{pythagTriples}\left( n \right) = 
+f_{pythagTriples}(n) = 
 
-f_{allTriples}\left( n \right) = \left[ \left( a,\ b \right) for a=\left[1...n\right],\ b=\left[1...n\right] \right]
-f_{filterTriples}\left( L \right) = L \left[ f_{resquare}\left( L.x^2 + L.y^2 \right) = L.x^2 + L.y^2 \right]
+f_{allTriples}(n) = \left[ (a,\ b) for a=\left[1...n\right],\ b=\left[1...n\right] \right]
+f_{filterTriples}(L) = L \left[ f_{resquare}(L.x^2 + L.y^2) = L.x^2 + L.y^2 \right]
 
-/hidden :: f_{resquare}\left( x \right) = \operatorname{round}\left(\sqrt{x}\right)^2
+/hidden :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 ```
 
 Hmm, what’d’y’know, that earlier challenge comes in helpful here! Let’s bring in $f_\text{resquare}()$ and use it to filter the list.
 
 ### _
 ```desmos
-f_{pythagTriples}\left( n \right) = 
+f_{pythagTriples}(n) = 
 
-f_{allTriples}\left( n \right) = \left[ \left( a,\ b \right) for a=\left[1...n\right],\ b=\left[1...n\right] \right]
-f_{filterTriples}\left( L \right) = L \left[ f_{resquare}\left( L.x^2 + L.y^2 \right) = L.x^2 + L.y^2 \right]
-f_{filterInRange}\left( L,\ n \right) = L \left[ L.x^2 + L.y^2 \leq n^2 \right]
+f_{allTriples}(n) = \left[ (a,\ b) for a=\left[1...n\right],\ b=\left[1...n\right] \right]
+f_{filterTriples}(L) = L \left[ f_{resquare}(L.x^2 + L.y^2) = L.x^2 + L.y^2 \right]
+f_{filterInRange}(L,\ n) = L \left[ L.x^2 + L.y^2 \leq n^2 \right]
 
-/hidden :: f_{resquare}\left( x \right) = \operatorname{round}\left(\sqrt{x}\right)^2
+/hidden :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 ```
 
 Finally, remember we have the implicit restriction of $c \leq n$, or equivalently $c^2 \leq n^2$. So we’ll need one more filter $f_\text{filterInRange}()$ after checking the squares too.
@@ -429,18 +429,18 @@ Finally, remember we have the implicit restriction of $c \leq n$, or equivalentl
 ### _
 ```desmos
 /text :: If Desmos complains it "doesn't understand the way = is used", just delete the = and re-type it yourself, not sure why this error's happening ¯\_(ツ)_/¯
-f_{pythagTriples}\left( n \right) = f_{filterInRange}\left( f_{filterTriples}\left( f_{allTriples}\left( n \right) \right),\ n \right)
+f_{pythagTriples}(n) = f_{filterInRange}(f_{filterTriples}(f_{allTriples}(n)),\ n)
 
-f_{allTriples}\left( n \right) = \left[ \left( a,\ b \right) for a=\left[1...n\right],\ b=\left[1...n\right] \right]
-f_{filterTriples}\left( L \right) = L \left[ f_{resquare}\left( L.x^2 + L.y^2 \right) = L.x^2 + L.y^2 \right]
-f_{filterInRange}\left( L,\ n \right) = L \left[ L.x^2 + L.y^2 \leq n^2 \right]
+f_{allTriples}(n) = \left[ (a,\ b) for a=\left[1...n\right],\ b=\left[1...n\right] \right]
+f_{filterTriples}(L) = L \left[ f_{resquare}(L.x^2 + L.y^2) = L.x^2 + L.y^2 \right]
+f_{filterInRange}(L,\ n) = L \left[ L.x^2 + L.y^2 \leq n^2 \right]
 
-/hidden :: f_{resquare}\left( x \right) = \operatorname{round}\left(\sqrt{x}\right)^2
+/hidden :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 
 
 /text :: Lookin’ good!
-f_{pythagTriples}\left( 10 \right)
-f_{pythagTriples}\left( 69 \right)
+f_{pythagTriples}(10)
+f_{pythagTriples}(69)
 ```
 
 All that remains is to combine our 3 functions to complete the definition of $f_\text{pythagTriples}()$!

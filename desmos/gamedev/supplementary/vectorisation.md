@@ -86,7 +86,7 @@ But Desmos is a bit more practical, data-science, graphing-calculator-oriented, 
 
 ### _
 ```desmos
-\sin\left(\left[0,\ \frac{\pi}{6},\ \frac{\pi}{2},\ \pi\right]\right)
+\sin(\left[0,\ \frac{\pi}{6},\ \frac{\pi}{2},\ \pi\right])
 ```
 
 Have a look at this. We’re taking the $\sin()$ of a list... very strange, but you can see how it works, right? It’s just applying $\sin(x)$ to every element $x$ of the list.
@@ -107,14 +107,14 @@ When covering conditionals, I was considering using some list conditions as exam
 
 ### _
 ```desmos
-f\left(l\right)=\left\{empty\left(l\right):\ 0,\ 1\right\}
+f(l)=\left\{empty(l):\ 0,\ 1\right\}
 ```
 
 Let’s take this function, which should return $1$ for a nonempty list, and $0$ for an empty list.
 
 ### _
 ```desmos
-f\left(l\right)=\left\{l=\left[\right]:\ 0,\ 1\right\}
+f(l)=\left\{l=\left[\right]:\ 0,\ 1\right\}
 ```
 
 There’s no $\operatorname{empty}()$ function, so we’ll replace it with a suitable conditional. Let’s compare the input $l$ to the empty list.
@@ -201,7 +201,7 @@ The simplest case is (fairly) straightforward: if you have a function that takes
 ```math
 \begin{align*}
   f(s) &\to f(s)
-  \\ f\left( \begin{bmatrix} p \\ q \\ r \end{bmatrix} \right)
+  \\ f(\begin{bmatrix} p \\ q \\ r \end{bmatrix})
     &\to \begin{bmatrix} f(p) \\ f(q) \\ f(r) \end{bmatrix}
 \end{align*}
 ```
@@ -211,7 +211,7 @@ But these are only the simplest functions. What happens with a function taking m
 
 ### _
 ```desmos
-f_{add}\left(x,\ y\right)=x+y
+f_{add}(x,\ y)=x+y
 ```
 
 The $10 + [1, 2, 3]$ we encountered earlier was, in fact, such an example.

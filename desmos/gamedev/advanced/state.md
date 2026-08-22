@@ -38,9 +38,9 @@ In Desmos, we can mutate the global state via [actions](https://sup2point0.githu
 t = 0
 
 /text :: We get an error when trying to define this action.
-a_{test}\left(\right) = f\left(\right),\ g\left(\right)
-f\left(\right) = t \to 1
-g\left(\right) = t \to 2
+a_{test}() = f(),\ g()
+f() = t \to 1
+g() = t \to 2
 ```
 
 But actions have a critical limitation – one chain of actions cannot contain multiple assignments to the same variable.
@@ -81,9 +81,9 @@ But wait – *are* actions executed in sequence?
 p = 10
 q = 0
 
-a_{test}\left(\right) = f\left(\right),\ g\left(\right)
-f\left(\right) = p \to p + 1
-g\left(\right) = q \to p
+a_{test}() = f(),\ g()
+f() = p \to p + 1
+g() = q \to p
 ```
 
 Let’s experiment! We’ll setup 2 variables, $p$ and $q$.
@@ -105,12 +105,12 @@ p = 10
 q = 0
 
 /text :: What happens when we run this?
-a_{test}\left(\right) = f\left(\right),\ g\left(\right)
-f\left(\right) = p \to p + 1
-g\left(\right) = q \to p
+a_{test}() = f(),\ g()
+f() = p \to p + 1
+g() = q \to p
 
 /text :: Use this to see what happens again
-a_{reset}\left(\right) = p \to 10,\ q \to 0
+a_{reset}() = p \to 10,\ q \to 0
 ```
 
 <aside class="challenge"></aside>
@@ -127,11 +127,11 @@ Does that mean the sub-actions are executing in *reverse* order?
 p = 10
 q = 0
 
-a_{test}\left(\right) = g\left(\right),\ f\left(\right)
-f\left(\right) = p \to p + 1
-g\left(\right) = q \to p
+a_{test}() = g(),\ f()
+f() = p \to p + 1
+g() = q \to p
 
-a_{reset}\left(\right) = p \to 10,\ q \to 0
+a_{reset}() = p \to 10,\ q \to 0
 ```
 
 <aside class="challenge"></aside>
@@ -150,10 +150,10 @@ p = 1
 q = 10
 r = 100
 
-a_{test}\left(\right) = f_{p}\left(\right),\ f_{q}\left(\right),\ f_{r}\left(\right)
-f_{p}\left(\right) = p \to q + r
-f_{q}\left(\right) = q \to r + p
-f_{r}\left(\right) = r \to p + q
+a_{test}() = f_{p}(),\ f_{q}(),\ f_{r}()
+f_{p}() = p \to q + r
+f_{q}() = q \to r + p
+f_{r}() = r \to p + q
 ```
 
 Let’s set up a chain of cyclic assignments to confirm what’s happening. Here, we’ve defined 3 variables $p, q, r$ and we’ll make assignments to each using the other variables.
@@ -164,12 +164,12 @@ p = 1
 q = 10
 r = 100
 
-a_{test}\left(\right) = f_{p}\left(\right),\ f_{q}\left(\right),\ f_{r}\left(\right)
-f_{p}\left(\right) = p \to q + r
-f_{q}\left(\right) = q \to r + p
-f_{r}\left(\right) = r \to p + q
+a_{test}() = f_{p}(),\ f_{q}(),\ f_{r}()
+f_{p}() = p \to q + r
+f_{q}() = q \to r + p
+f_{r}() = r \to p + q
 
-a_{reset}\left(\right) = p \to 1,\ q \to 10,\ r \to 100
+a_{reset}() = p \to 1,\ q \to 10,\ r \to 100
 ```
 
 <aside class="challenge"></aside>

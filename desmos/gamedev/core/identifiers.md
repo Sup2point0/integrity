@@ -12,7 +12,7 @@ update: 2025 July 8
 ### _
 ```desmos
 n = 1
-f\left(x\right) = x^2
+f(x) = x^2
 ```
 
 Variables and functions need names (which we’ll call **identifiers**). So far, we’ve fared fine using single lowercase and uppercase letters, like $n$ and $f(x)$.

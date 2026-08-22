@@ -59,7 +59,7 @@ Can you write a function using a conditional that returns $1$ if its input is ev
 
 ### _
 ```desmos
-/hidden :: f_{isEven}\left( n \right) = \left\{ \operatorname{mod}\left( n,\ 2 \right) = 0 :\ 1,\ -1 \right\}
+/hidden :: f_{isEven}(n) = \left\{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \right\}
 ```
 
 We use the $\operatorname{mod}()$ function to modulo the input. Even numbers give $0$ when modulo-d with $2$, so we can use this check if $s$ is even.
@@ -98,7 +98,7 @@ In case you don’t know, the rules are: If $n$ is even, recurse with $n/2$; if 
 
 ### _
 ```desmos
-f_{collatz}\left( n \right) = \left\{ n=1 :\ 1,\ \right\}
+f_{collatz}(n) = \left\{ n=1 :\ 1,\ \right\}
 ```
 
 With recursive functions, it’s good to start with the ***base case***, the smallest valid input.
@@ -107,9 +107,9 @@ In this case that’s $1$. We’ll use a conditional to check if the input is $1
 
 ### _
 ```desmos
-f_{collatz}\left( n \right) = \left\{ n=1 :\ 1,\ \left\{ f_{isEven}\left( n \right) = 1:\ f_{collatz}\left( \frac{n}{2} \right),\ f_{collatz}\left( 3n+1 \right) \right\} \right\}
+f_{collatz}(n) = \left\{ n=1 :\ 1,\ \left\{ f_{isEven}(n) = 1:\ f_{collatz}(\frac{n}{2}),\ f_{collatz}(3n+1) \right\} \right\}
 
-/hidden :: f_{isEven}\left( n \right) = \left\{ \operatorname{mod}\left( n,\ 2 \right) = 0 :\ 1,\ -1 \right\}
+/hidden :: f_{isEven}(n) = \left\{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \right\}
 ```
 
 What do we put in the other branch? Well, there’s nothing stopping us from using another conditional, so we’ll do exactly that!
@@ -118,12 +118,12 @@ Using the $f_\text{isEven}$ function from before, we’ll check if $n$ is even, 
 
 ### _
 ```desmos
-f_{collatz}\left( k \right)
+f_{collatz}(k)
 k = 50
 
-f_{collatz}\left( n \right) = \left\{ n=1 :\ 1,\ \left\{ f_{isEven}\left( n \right) = 1:\ f_{collatz}\left( \frac{n}{2} \right),\ f_{collatz}\left( 3n+1 \right) \right\} \right\}
+f_{collatz}(n) = \left\{ n=1 :\ 1,\ \left\{ f_{isEven}(n) = 1:\ f_{collatz}(\frac{n}{2}),\ f_{collatz}(3n+1) \right\} \right\}
 
-/hidden :: f_{isEven}\left( n \right) = \left\{ \operatorname{mod}\left( n,\ 2 \right) = 0 :\ 1,\ -1 \right\}
+/hidden :: f_{isEven}(n) = \left\{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \right\}
 ```
 
 <aside></aside>
@@ -131,9 +131,9 @@ Try evaluating the function for some different inputs – at what point does it 
 
 ### _
 ```desmos
-f_{collatz}\left( n \right) = \left\{ n=1 :\ 1,\ f_{isEven}\left( n \right) = 1:\ f_{collatz}\left( \frac{n}{2} \right),\ f_{collatz}\left( 3n+1 \right) \right\}
+f_{collatz}(n) = \left\{ n=1 :\ 1,\ f_{isEven}(n) = 1:\ f_{collatz}(\frac{n}{2}),\ f_{collatz}(3n+1) \right\}
 
-/hidden :: f_{isEven}\left( n \right) = \left\{ \operatorname{mod}\left( n,\ 2 \right) = 0 :\ 1,\ -1 \right\}
+/hidden :: f_{isEven}(n) = \left\{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \right\}
 ```
 
 Desmos even has some syntactic sugar, allowing us to omit the curly braces around the nested conditional:
@@ -147,10 +147,10 @@ Fairly minor, but *incredibly* helpful at scale when you have many different bra
 
 ### _
 ```desmos
-f_{collatz}\left( 1 \right) = 1
-f_{collatz}\left( n \right) = \left\{ f_{isEven}\left( n \right) = 1:\ f_{collatz}\left( \frac{n}{2} \right),\ f_{collatz}\left( 3n+1 \right) \right\}
+f_{collatz}(1) = 1
+f_{collatz}(n) = \left\{ f_{isEven}(n) = 1:\ f_{collatz}(\frac{n}{2}),\ f_{collatz}(3n+1) \right\}
 
-/hidden :: f_{isEven}\left( n \right) = \left\{ \operatorname{mod}\left( n,\ 2 \right) = 0 :\ 1,\ -1 \right\}
+/hidden :: f_{isEven}(n) = \left\{ \operatorname{mod}(n,\ 2) = 0 :\ 1,\ -1 \right\}
 ```
 
 While we’re here, since this is a single-parameter function we can actually extract the base case into a separate definition too.
@@ -166,7 +166,7 @@ Conditions are awesome and all, but we’re still missing something – logical 
 
 ### _
 ```desmos
-\left(1<2\right)+\left(6<9\right)
+(1<2)+(6<9)
 ```
 
 Now, remember how we said we can’t interact with raw booleans in Desmos?

@@ -30,8 +30,8 @@ The easiest example of an operation that returns $\text{undefined}$ is dividing 
 
 ### _
 ```desmos
-f\left( x \right) = \left\{ x < 0:\ 1 \right\}
-f\left( 20 \right)
+f(x) = \left\{ x < 0:\ 1 \right\}
+f(20)
 ```
 
 A conditional without an ‘else’ branch also implicitly returns $\text{undefined}$.
@@ -65,7 +65,7 @@ Take a look at all these operations that include an $\text{undefined}$. As soon 
 
 ### _
 ```desmos
-f_{safeLength}\left( l \right) =
+f_{safeLength}(l) =
 ```
 
 <aside class="challenge"></aside>
@@ -74,7 +74,7 @@ Implement a function $f_\text{safeLength}(l)$ that finds the length of the list 
 
 ### _
 ```desmos
-/hidden :: f_{safeLength}\left( l \right) = \left\{ l = l:\ \operatorname{length}\left( l \right),\ 0 \right\}
+/hidden :: f_{safeLength}(l) = \left\{ l = l:\ \operatorname{length}(l),\ 0 \right\}
 ```
 
 <aside class="solution"></aside>
@@ -83,7 +83,7 @@ We use a conditional expression to check if $l$ is $\text{undefined}$. If it is 
 
 ### _
 ```desmos
-/hidden :: f_{safeLength}\left( l \right) = \left\{ l = l:\ \operatorname{length}\left( l \right),\ 0 \right\}
+/hidden :: f_{safeLength}(l) = \left\{ l = l:\ \operatorname{length}(l),\ 0 \right\}
 
 
 
@@ -97,13 +97,13 @@ Compare this function to directly taking the length of a potentially undefined v
 
 ### _
 ```desmos
-/hidden :: f_{safeLength}\left( l \right) = \left\{ l = l:\ \operatorname{length}\left( l \right),\ 0 \right\}
+/hidden :: f_{safeLength}(l) = \left\{ l = l:\ \operatorname{length}(l),\ 0 \right\}
 
-f_{safeLength}\left( l_{undefined} \right)
-\operatorname{length}\left( l_{undefined} \right)
+f_{safeLength}(l_{undefined})
+\operatorname{length}(l_{undefined})
 
-f_{safeLength}\left( l_{defined} \right)
-\operatorname{length}\left( l_{defined} \right)
+f_{safeLength}(l_{defined})
+\operatorname{length}(l_{defined})
 
 l_{defined} = \left[ 1,\ 2,\ 3 \right]
 l_{undefined} = \frac{0}{0}
