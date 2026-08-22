@@ -2,5 +2,5 @@ task default: :export
 
 
 task :export do
-  ruby "run.rb"
+	ruby "run.rb"
 end
