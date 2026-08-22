@@ -62,7 +62,6 @@ function check_valid(data: Array<any>): boolean
 					ratio={1}
 				/>
 			{:else if question.topic === "cool-graphs"}
-				{@const _ = console.log(question)}
 				<Desmos
 					source={question.desmos}
 					controls={false}

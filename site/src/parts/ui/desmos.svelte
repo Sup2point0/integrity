@@ -13,13 +13,14 @@ import { onMount } from "svelte";
 
 
 interface Props {
-	source?:   string;
+	source:    string | undefined;
 	options?:  object;  // FIXME rename to config
 	controls?: boolean;
 	height?:   string;
 	ratio?:    number;
 	bounds?:   number | {
-		left?: number, right?: number, bottom?: number, top?: number,
+		left?: number, right?: number,
+		bottom?: number, top?: number,
 	};
 	no_delay?: boolean;
 }
@@ -132,9 +133,8 @@ function load_desmos()
 		desmos.setMathBounds(bounds);
 	}
 
-	if (source != undefined) {
-		compile(desmos, source);
-	}
+	// @ts-expect-error: we want diagnostic error if undefined
+	compile(desmos, source);
 }
 
 </script>
