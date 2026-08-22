@@ -3,44 +3,57 @@ import { test, chromium } from "@playwright/test";
 import type { url } from "#scripts/types";
 
 
+const WHITE = `\x1b[0m`;
+const BLACK = `\x1b[30m`;
+const GREY  = `\x1b[90m`;
+
+const PINK   = `\x1b[95m`;
+const RED    = `\x1b[31m`;
+const YELLOW = `\x1b[93m`;
+const GREEN  = `\x1b[92m`;
+const CYAN   = `\x1b[96m`;
+const BLUE   = `\x1b[94m`;
+
+
 let browser = await chromium.launch();
 
 test("crawl-routes", async () =>
 {
+	test.setTimeout(60 * 1000);
+
 	let visited = new Set<url>();
-	let question_pages_visited = 0;
 	let failed_routes: url[] = [];
 
-	let to_visit: {
-		url: url,
-		source: url,
-	}[] = [
+	let to_visit = [
 		{ url: "/",        source: "." },
 		{ url: "/explore", source: "." },
 	];
 
-	let active_workers = 0;
+	let pending_routes = 0;
+	let routes_visited = 0;
+	let questions_visited = 0;
 
-	await Promise.all(Array.from({ length: 4 }, (_, i) =>
+	await Promise.allSettled(Array.from({ length: 4 }, (_, i) =>
 		(async () => {
-			await new Promise(r => setTimeout(r, i * 500));
-			active_workers++;
+			await sleep(i * 500);
 
-			const WORKER = `[worker #${i+1}]`;
-			console.info(`>> ${WORKER} Scanning for links...`);
+			const WORKER = `${PINK}[worker ${i+1}]${WHITE}`;
+			console.info(`${GREY}>> ${WORKER} ${YELLOW}Scanning for links...`);
 
 			let ctx = await browser.newContext();
 			let page = await ctx.newPage();
 
 			while (true) {
-				let next = to_visit.shift();
-				if (!next) {
-					if (active_workers == 1) break;
+				let next = to_visit.pop();
+
+				if (next == undefined) {
+					if (pending_routes === 0) break;
 					
-					/* Other workers might push more targets to the queue, so we'll wait a hot sec before deciding to finish */
-					await new Promise(r => setTimeout(r, 500));
-					next = to_visit.shift();
-					if (!next) break;
+					/* NOTE: Other workers might push more targets to the queue, so we'll wait a hot sec before deciding to finish */
+					await sleep(500);
+
+					next = to_visit.pop();
+					if (next == undefined) break;
 				}
 
 				let { url: target, source } = next;
@@ -48,40 +61,59 @@ test("crawl-routes", async () =>
 				if (visited.has(target)) continue;
 				visited.add(target);
 
-				if (question_pages_visited > 69 && target.includes("?shard=")) continue;
-				if (target.includes("?shard=")) question_pages_visited++;
+				if (questions_visited > 10 && target.includes("?shard=")) continue;
+				if (target.includes("?shard=")) questions_visited++;
 
 				try {
-					console.info(`-- ${WORKER} Visiting: ${target}`);
-					let response = await page.goto(target);
+					console.info(`${GREY}-- ${WORKER} Visiting: ${CYAN}${u(target)}`);
 
-					if (!response?.ok()) throw Error(String(response?.status()));
+					pending_routes++;
+					routes_visited++;
+
+					let response = await page.goto(target, { waitUntil: "networkidle" });
+					if (!response?.ok()) throw Error(response?.status().toString());
 
 					let links = await page.locator("a").evaluateAll(
 						anchors => anchors
 							.map(a => !a.disabled && a.href)
-							.filter(url => url && url.includes("://localhost:") && !url.includes("#"))
+							.filter(url => url != undefined && url.includes("://localhost:") && !url.includes("#"))
 					);
 					to_visit.push(...links.map(url => ({ url, source: target })));
 				}
-				catch {
-					console.error(`!! ${WORKER} Failed: ${target}; linked from: ${source}`);
+				catch (e) {
+					console.error(`${RED}!! ${WORKER} Failed: ${CYAN}${u(target)}${WHITE}; linked from: ${BLUE}${u(source)}${RED}`);
+					console.error(e.message);
+
 					failed_routes.push(target);
 				}
+
+				pending_routes--;
 			}
 
 			await ctx.close();
-			active_workers--;
-			console.info(`>> ${WORKER} Finished scanning.`);
+
+			console.info(`${GREY}>> ${WORKER} ${YELLOW}Finished scanning.`);
 		})()
 	));
 
 	if (failed_routes.length > 0) {
 		console.error(
-			`\n---------------------------------------------------------------------`,
-			`\n!! Failed to access ${failed_routes.length} routes:`,
+			RED,
+			`\n—————————————————————————————————————————————————————————————————————`,
+			`\n!! Failed to access ${failed_routes.length}/${routes_visited} routes:`,
 			`\n\n   `,
 			failed_routes.join("\n    ")
 		);
 	}
 });
+
+
+async function sleep(ms: number): Promise<void>
+{
+	await new Promise(r => setTimeout(r, ms));
+}
+
+function u(url: string): string
+{
+	return url.replace("http://localhost:4173", "");
+}
