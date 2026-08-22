@@ -8,166 +8,167 @@ import type { Shard, Latex, Block } from "./root";
  */
 export class Question
 {
-  /** A collection of the question's key information for use in fuzzy searching. */
-  _match: string[] = [];
+	/** A collection of the question's key information for use in fuzzy searching. */
+	_match: string[] = [];
 
-  shard: Shard;
-  topic!: Topic;
-  difficulty: "based" | "incline" | "manifold" | "chaos" | null = null;
+	shard: Shard;
+	topic!: Topic;
+	difficulty: "based" | "incline" | "manifold" | "chaos" | null = null;
 
-  title?: string;
-  desc?: string;
-  date?: Date;
-  date_display?: string;
+	title?: string;
+	desc?: string;
+	date?: Date;
+	date_display?: string;
 
-  tags: string[] = [];
-  methods: string[] = [];
-  flags: string[] = [];
+	tags: string[] = [];
+	methods: string[] = [];
+	flags: string[] = [];
 
-  /** The question line. */
-  question?: Block;
+	/** The question line. */
+	question?: Block;
 
   /** Expressions to show in a Desmos graph. */
   desmos?: Block;
 
-  /** Extra notes for clarification. */
-  notes?: Block;
+	/** Extra notes for clarification. */
+	notes?: Block;
 
-  /** Answers to choose from for multiple-choice questions. */
-  options?: {
-    index: number,
-    latex: Block[] | string[],
-  };
+	/** Answers to choose from for multiple-choice questions. */
+	options?: {
+		index: number,
+		latex: Block[] | string[],
+	};
 
-  /** Hints for the question. */
-  hints?: {
-    [idx: string]: Block[]
-  };
+	/** Hints for the question. */
+	hints?: {
+		[idx: string]: Block[]
+	};
 
-  /** The short displayed answer. For a multiple-choice question, this defaults to the 1st option. */
-  answer?: Block;
+	/** The short displayed answer. For a multiple-choice question, this defaults to the 1st option. */
+	answer?: Block;
 
-  /** The intended solution. */
-  solution?: Block | Block[];
+	/** The intended solution. */
+	solution?: Block | Block[];
 
-  /** Alternate solutions. */
-  alternates?: Block[];
+	/** Alternate solutions. */
+	alternates?: Block[];
 
-  /** Bounds of the viewport for a graph question. */
-  "graph-bounds"?: number;
+	/** Bounds of the viewport for a graph question. */
+	"graph-bounds"?: number;
 
 
-  /**
-   * Construct a new question from the given JSON data.
-   * 
-   * If the question was constructed manually, set `process` to `false` to disable standardised data cleanup.
-  */
-  constructor(data: any, process = true)
-  {
-    Object.assign(this, data);
+	/**
+	 * Construct a new question from the given JSON data.
+	 * 
+	 * If the question was constructed manually, set `process` to `false` to disable standardised data cleanup.
+	*/
+	constructor(data: any, process = true)
+	{
+		Object.assign(this, data);
 
-    // @ts-expect-error: Literally checking if it's defined
-    if (typeof this.shard === "undefined") {
-      throw new Error(`No shard provided for question: ${data}`);
-    }
+		// @ts-expect-error: Literally checking if it's defined
+		if (typeof this.shard === "undefined") {
+			throw new Error(`No shard provided for question: ${data}`);
+		}
 
-    if (!process) return;
+		if (!process) return;
 
-    if (data.topic != undefined) {
-      // @ts-expect-error: Topic is indexable
-      this.topic = Topic[data.topic.toUpperCase().replaceAll("-", "_")];
-      
-      if (this.topic == undefined) {
-        throw new Error(`Invalid question topic: ${data.topic}, shard: ${data.shard}`);
-      }
-    } else {
-      throw new Error(`No topic provided for question: ${data}`);
-    }
+		if (data.topic != undefined) {
+			// @ts-expect-error: Topic is indexable
+			this.topic = Topic[data.topic.toUpperCase().replaceAll("-", "_")];
+			
+			if (this.topic == undefined) {
+				throw new Error(`Invalid question topic: ${data.topic}, shard: ${data.shard}`);
+			}
+		} else {
+			throw new Error(`No topic provided for question: ${data}`);
+		}
 
-    this.question = data.question && data.question[0];
-    this.date_display = data.date;
+		this.question = data.question && data.question[0];
+		this.desmos = data.desmos && data.desmos[0].content;
+		this.date_display = data.date;
 
-    try {
-      this.date = new Date(data.date);
-    } catch {
-      this.date = new Date();
-    }
+		try {
+			this.date = new Date(data.date);
+		} catch {
+			this.date = new Date();
+		}
 
-    this.answer = Array.isArray(data.answer) ? data.answer[0] : data.answer;
+		this.answer = Array.isArray(data.answer) ? data.answer[0] : data.answer;
 
-    this._match = [
-      this.shard.toLowerCase(),
-      this.title?.toLowerCase(),
-      ...this.tags,
-      ...this.methods,
-    ].filter(Boolean) as string[];
+		this._match = [
+			this.shard.toLowerCase(),
+			this.title?.toLowerCase(),
+			...this.tags,
+			...this.methods,
+		].filter(Boolean) as string[];
 
-    if (this.topic === "graph-drawing") {
-      this.options = data.options[0].content.split("<br><br>").map(
-        // @ts-ignore
-        (latex, index) => ({ index, latex })
-      );
-    }
+		if (this.topic === "graph-drawing") {
+			this.options = data.options[0].content.split("<br><br>").map(
+				// @ts-ignore
+				(latex, index) => ({ index, latex })
+			);
+		}
 
-    if (typeof this.question?.content === "string") {      
-      this.question.content = this.question.content.replaceAll(/\s\s+/g, " ");
-    }
-  }
+		if (typeof this.question?.content === "string") {      
+			this.question.content = this.question.content.replaceAll(/\s\s+/g, " ");
+		}
+	}
 
-  /** Sanitises the LaTeX of the question so that it can easily be injected into Desmos. */
-  static sanitise(latex?: Latex | null): Latex | null
-  {
-    if (typeof latex !== "string") {
-      return null;
-    }
+	/** Sanitises the LaTeX of the question so that it can easily be injected into Desmos. */
+	static sanitise(latex?: Latex | null): Latex | null
+	{
+		if (typeof latex !== "string") {
+			return null;
+		}
 
-    let out = latex;
+		let out = latex;
 
-    // standardise brackets
-    out = out.replaceAll(
-      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)\^([\d])[({]([a-z])[)}]/g,
-      "\\$1\\left($3\\right)^$2"
-    );
-    out = out.replaceAll(
-      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)[({]([a-z])[)}]/g,
-      "\\$1\\left($2\\right)"
-    );
-    out = out.replaceAll(
-      /\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth) x([\\+])/g,
-      "\\$1\\left(x\\right)$2"
-    );
+		// standardise brackets
+		out = out.replaceAll(
+			/\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)\^([\d])[({]([a-z])[)}]/g,
+			"\\$1\\left($3\\right)^$2"
+		);
+		out = out.replaceAll(
+			/\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth)[({]([a-z])[)}]/g,
+			"\\$1\\left($2\\right)"
+		);
+		out = out.replaceAll(
+			/\\(sin|cos|tan|sec|cot|csc|sinh|cosh|tanh|sech|csch|coth) x([\\+])/g,
+			"\\$1\\left(x\\right)$2"
+		);
 
-    // brackets
-    out = out.replaceAll(
-      /\\left\[/g,
-      "\\left("
-    );
-    out = out.replaceAll(
-      /\\right\]/g,
-      "\\right)"
-    );
+		// brackets
+		out = out.replaceAll(
+			/\\left\[/g,
+			"\\left("
+		);
+		out = out.replaceAll(
+			/\\right\]/g,
+			"\\right)"
+		);
 
-    return out;
-  }
+		return out;
+	}
 }
 
 
 /** A dictionary of questions from a single topic. */
 export interface QuestionDictionary
 {
-  [shard: Shard]: Question | undefined;
+	[shard: Shard]: Question | undefined;
 }
 
 /** A collection of questions from a single topic, along with their tags and methods. */
 export interface QuestionCollection
 {
-  questions: QuestionDictionary;
-  tags?: string[];
-  methods?: string[];
+	questions: QuestionDictionary;
+	tags?: string[];
+	methods?: string[];
 }
 
 /** The entire collection of question in Integrity. */
 export interface QuestionsData
 {
-  [topic: string]: QuestionCollection | undefined;
+	[topic: string]: QuestionCollection | undefined;
 }
