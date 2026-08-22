@@ -107,14 +107,14 @@ When covering conditionals, I was considering using some list conditions as exam
 
 ### _
 ```desmos
-f(l)=\left\{empty(l):\ 0,\ 1\right\}
+f(l)=\{empty(l):\ 0,\ 1\}
 ```
 
 Let’s take this function, which should return $1$ for a nonempty list, and $0$ for an empty list.
 
 ### _
 ```desmos
-f(l)=\left\{l=[]:\ 0,\ 1\right\}
+f(l)=\{l=[]:\ 0,\ 1\}
 ```
 
 There’s no $\operatorname{empty}()$ function, so we’ll replace it with a suitable conditional. Let’s compare the input $l$ to the empty list.
@@ -137,7 +137,7 @@ Well, best way to find out is to play around, test things and break stuff. Give 
 
 ### _
 ```desmos
-\left\{[1,\ 2,\ 3]=[1,\ 2,\ 3]:\ 0,\ 1\right\}=?
+\{[1,\ 2,\ 3]=[1,\ 2,\ 3]:\ 0,\ 1\}=?
 ```
 
 A great way to test is to replace the empty list with a nonempty one. Let’s try this expression.
@@ -147,7 +147,7 @@ Without vectorisation, we’d expect it to return $0$ since the lists are equal.
 ### _
 ```desmos
 
-\left\{[1,\ 2,\ 3]=[1,\ 2,\ 3]:\ 0,\ 1\right\}
+\{[1,\ 2,\ 3]=[1,\ 2,\ 3]:\ 0,\ 1\}
 ```
 
 Instead, what do we get? A list with three $0$ values!
