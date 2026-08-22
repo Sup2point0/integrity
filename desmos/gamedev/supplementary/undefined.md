@@ -85,8 +85,6 @@ We use a conditional expression to check if $l$ is $\text{undefined}$. If it is 
 ```desmos
 /hide :: f_{safeLength}(l) = \{ l = l: \operatorname{length}(l), 0 \}
 
-
-
 l_{defined} = [1, 2, 3]
 l_{undefined} = \frac{0}{0}
 ```

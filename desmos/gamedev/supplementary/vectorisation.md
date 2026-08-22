@@ -14,25 +14,6 @@ In this scripture, we look at one of Desmos’s most powerful hidden features �
 ## // Embarrassingly Parallel
 
 ### _
-| table | table |
-| :---- | :---- |
-| entry | entry |
-
-inline $x$ math $\sin(x)$.
-
-block math:
-
-```math
-f(x) = x^2 - 2x + 1
-```
-
-woah!
-
-```
-block
-```
-
-### _
 Lists in Desmos are rather special. They’re given special treatment by the Desmos ecosystem
 
 ### _
@@ -201,7 +182,7 @@ The simplest case is (fairly) straightforward: if you have a function that takes
 ```math
 \begin{align*}
   f(s) &\to f(s)
-  \\ f(\begin{bmatrix} p \\ q \\ r \end{bmatrix})
+  \\ f\left( \begin{bmatrix} p \\ q \\ r \end{bmatrix} \right)
     &\to \begin{bmatrix} f(p) \\ f(q) \\ f(r) \end{bmatrix}
 \end{align*}
 ```

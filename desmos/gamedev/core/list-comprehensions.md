@@ -437,7 +437,6 @@ f_{filterInRange}(L, n) = L [L.x^2 + L.y^2 \leq n^2]
 
 /hide :: f_{resquare}(x) = \operatorname{round}(\sqrt{x})^2
 
-
 % Lookin’ good!
 f_{pythagTriples}(10)
 f_{pythagTriples}(69)

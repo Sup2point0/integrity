@@ -23,7 +23,7 @@ In mathematical notation, when denoting a long sequence of numbers that follow a
 
 ### _
 ```desmos
-[1, \ 2, \ 3, ... , \ 99, \ 100]
+[1, 2, 3, ... , 99, 100]
 ```
 
 Well, Desmos truly is the mathematician’s calculator, so what’d’y’know, this exact syntax works. We just need to wrap the sequence in $[]$ to create a list – this is the only place $\text{...}$ is valid in Desmos.
@@ -89,7 +89,7 @@ Consecutive sequences cover most use cases, but there may be situations where a 
 
 ### _
 ```desmos
-2 \cdot [1, \ 2, \ 3, \ 4, \ 5]
+2 \cdot [1, 2, 3, 4, 5]
 ```
 
 One way to achieve this is to multiply the range by a number. Due to the ways lists interact with operators, using $\cdot$ multiplies each term in the list by the scalar.
@@ -98,12 +98,12 @@ One way to achieve this is to multiply the range by a number. Due to the ways li
 However, this isn’t the most versatile approach since it can’t handle offsets – the entire sequence has to be of the form $t_n = kn$ (where $k$ is the scalar). If you want $t_n = kn + c$ (with the offset by $c$), just scaling a range can’t do that.
 
 ```math
-k \cdot [1, \ 2, \ 3, \ 4, \ 5] \neq [3, \ 5, \ 7, \ 9, \ 11]
+k \cdot [1, 2, 3, 4, 5] \neq [3, 5, 7, 9, 11]
 ```
 
 ### _
 ```desmos
-[3, \ 5, \ ..., \ 11]
+[3, 5, ..., 11]
 ```
 
 In this case, we’ll need the more verbose range syntax. Providing 2 initial terms and an endpoint gives Desmos sufficient information to deduce the rest of the range. It can determine the step from the difference between the first 2 terms, and knows when to stop from the last term.
@@ -113,14 +113,14 @@ We’ll call this expanded syntax an ***inferred* range**, since Desmos is “in
 
 ### _
 ```desmos
-[1, \ 2, \ 4, \ 8, \ ..., \ 256]
+[1, 2, 4, 8, ..., 256]
 ```
 
 Ranges can only construct arithmetic sequences (where the difference between each term remains constant), so there’s no ambiguity here. (Desmos won’t do a cubic interpolation or anything!)
 
 ### _
 ```desmos
-[2, \ 4, \ ..., \ 25]
+[2, 4, ..., 25]
 ```
 
 If your right endpoint is not actually in the sequence, Desmos will round it to the nearest term that is, and will then use that term as the endpoint.
@@ -145,7 +145,7 @@ With simple ranges, Desmos rounds the endpoints, so using non-integer values has
 
 ### _
 ```desmos
-[0, \ 1.5, ..., \ 7.5]
+[0, 1.5, ..., 7.5]
 ```
 
 With inferred ranges, you can use a non-integer value for the step. This can get slightly hairy, but as long as you calculate everything correctly it should still be straightforward.
