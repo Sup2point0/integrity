@@ -36,6 +36,7 @@ The entire site is static, with all interactivity running client-side!
 - [MDsveX](https://mdsvex.pngwn.io) for Markdown
 - [Desmos API](https://www.desmos.com) for Desmos, used with permission kindly provided by Desmos Studio PBC
 - My [*StrangerQuarkdown*](https://github.com/Sup2point0/stranger-quarkdown) framework for preprocessing content
+- My [*Desmost*](https://github.com/Sup2point0/desmost) compiler for programming Desmos in Markdown
 
 ### Fonts
 Fonts from [Google Fonts](https://fonts.google.com).
