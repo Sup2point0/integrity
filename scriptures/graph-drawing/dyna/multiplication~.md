@@ -35,7 +35,7 @@ What does $y = 2\sin(x)$ look like?
 
 ### _
 ```desmos
-/base :: y = \sin{x}
+/line{ opacity: 0.3 } :: y = \sin{x}
 
 y = 2 \sin{x}
 ```
@@ -54,7 +54,7 @@ We’ll then call the scaled graph we get our “final” graph – it’s the f
 
 ### _
 ```desmos
-/base :: y = \sin{x}
+/line{ opacity: 0.3 } :: y = \sin{x}
 
 y = k \sin{x}
 /slider{ min: 0 } :: k = 2
@@ -84,16 +84,16 @@ Firstly, points of interest. Those 2 special values, $k = 1$ and $k = 0$, will b
 
 ### _
 ```desmos
-f\left( x \right) = 3 \sin{x}
+f(x) = 3 \sin{x}
 
 p = \frac{\pi}{2}
-q = f\left( p \right)
-q_1 = f\left( p \right) \cdot 1
-q_0 = f\left( p \right) \cdot 0
+q = f(p)
+q_1 = f(p) \cdot 1
+q_0 = f(p) \cdot 0
 
-/asympt :: x = p
-/label{ text: "Identical to base!", pos: "ABOVE_RIGHT" } :: \left( \frac{\pi}{2}, q_1 \right)
-/label{ text: "Touches `x`-axis!", pos: "BELOW_RIGHT" } :: \left( \frac{\pi}{2}, q_0 \right)
+/line{ style: dotted, opacity: 0.2 } :: x = p
+/label{ text: "Identical to base!", pos: ABOVE_RIGHT } :: (\frac{\pi}{2}, q_1)
+/label{ text: "Touches `x`-axis!", pos: BELOW_RIGHT } :: (\frac{\pi}{2}, q_0)
 ```
 
 Say we have a function $f(x)$, and we evaluate it at a particular point $x = p$ to give $q = f(p)$, our $y$-value.
@@ -118,7 +118,7 @@ But that’s just how reciprocals work, and plus, there are the same number of n
 
 ### _
 ```desmos
-/base :: y = \sin{x}
+/line{ opacity: 0.3 } :: y = \sin{x}
 
 y = k \sin{x}
 /slider{ max: 0 } :: k = -3
@@ -152,9 +152,10 @@ So far, we’ve been scaling a graph by a constant $k$. We pick a value for $k$,
 ### _
 ```desmos
 /viewport{ left: -1, right: 12 }
-y = \sin{x} \ \ \left\{ 0 < x < t \right\}
 
-/animate :: /slider{ min: 0, max: "3 \\pi" } :: t = 0
+y = \sin{x} \ \ \{ 0 < x < t \}
+
+/anim /slider{ min: 0, max: "3\\pi" } :: t = 0
 ```
 
 We’re now going to visualise the graph as actually being ‘drawn out’, by a pen on paper that starts on the left and increases in $x$-value. This is how we’d draw it in real life, of course. For simplicity, we’ll only consider positive $x$ for now.
@@ -162,11 +163,12 @@ We’re now going to visualise the graph as actually being ‘drawn out’, by a
 ### _
 ```desmos
 /viewport{ left: -1, right: 12 }
-/base :: y = \sin{x} \ \ \left\{ 0 < x < t \right\}
-y = k \sin{x} \ \ \left\{ 0 < x < t \right\}
+
+/line{ opacity: 0.3 } :: y = \sin{x} \ \ \{ 0 < x < t \}
+y = k \sin{x} \ \ \{ 0 < x < t \}
 
 /slider{ min: -10, max: 10 } :: k = 3
-/animate :: /slider{ min: 0, max: "3 \\pi" } :: t = 0
+/anim /slider{ min: 0, max: "3 \\pi" } :: t = 0
 ```
 Now you can see what I meant earlier by $k$ being constant – when we start drawing the graph, we have a fixed value of $k$ that determines what the graph we’re about to draw looks like.
 
@@ -176,13 +178,14 @@ But what if $k$ changed *while* we were drawing the graph?
 ### _
 ```desmos
 /viewport{ left: -1, right: 12 }
-/base :: y = \sin{x} \ \ \left\{ 0 < x < 4 \right\}
-y = k_l \sin{x} \ \ \left\{ 0 < x < 4 \right\}
+
+/line{ opacity: 0.3 } :: y = \sin{x} \ \ \{ 0 < x < 4 \}
+y = k_l \sin{x} \ \ \{ 0 < x < 4 \}
 
 k_l = 3
 
-/asympt :: x = 4
-/label{ text: "`k` changes here." } :: \left( 4,\ k_l \sin\left(4\right) \right)
+/line{ style: DASHED, opacity: 0.3 } :: x = 4
+/label{ text: "`k` changes here." } :: (4, k_l \sin(4))
 ```
 
 For instance, say $k$ is initially $3$. We draw the graph from $x = 0$ to $x = 4$, and at this point, suddenly $k$ doubles to $6$. What happens as we continue to draw the graph?
@@ -192,20 +195,21 @@ For instance, say $k$ is initially $3$. We draw the graph from $x = 0$ to $x = 4
 ### _
 ```desmos
 /viewport{ left: -1, right: 12 }
-/base :: y = \sin{x} \ \ \left\{ 0 < x < t \right\}
-y = k_l \sin{x} \ \ \left\{ 0 < x < \min\left(t,\ 4 \right) \right\}
-y = k_r \sin{x} \ \ \left\{ 4 < x < t \right\}
+
+/line{ opacity: 0.3 } :: y = \sin{x} \ \ \{ 0 < x < t \}
+y = k_l \sin{x} \ \ \{ 0 < x < \min(t, 4) \}
+y = k_r \sin{x} \ \ \{ 4 < x < t \}
 
 k_l = 3
 k_r = 6
-k = \left\{ t\ge4:\ 6,\ 3 \right\}
+k = \{ t\ge4:\ 6, 3 \}
 
-/animate :: /slider{ min: 0, max: "3 \\pi" } :: t = 0
+/anim /slider{ min: 0, max: "3 \\pi" } :: t = 0
 
-/asympt :: x = 4
-/hidden :: /label{ text: "`k` doubles here.", pos: "RIGHT" } :: \left( 4,\ -8 \right)
+/line{ style: DASHED, opacity: 0.3 } :: x = 4
+/hide /label{ text: "`k` doubles here.", pos: RIGHT } :: (4, -8)
 
-/hidden :: /label{ text: "`k = ${k}`", pos: "RIGHT" } :: \left( 4,\ 6 \right)
+/hide /label{ text: "`k = ${k}`", pos: RIGHT } :: (4, 6)
 ```
 
 It looks like this. Our scale factor changes partway through, and now there’s a right side of the graph that’s scaled more than the left.
@@ -213,13 +217,14 @@ It looks like this. Our scale factor changes partway through, and now there’s 
 ### _
 ```desmos
 /viewport{ left: -1, right: 12 }
-/asympt :: k = x \ \ \left\{ 0 < x < t \right\}
 
-/label{ text: "`k = ${t}`" } :: \left( t,\ t \right)
-x = t \ \ \left\{ 0 < y < t \right\}
-/label{ text: "`x = ${t}`" } :: \left( t,\ 0 \right)
+/line{ style: DASHED, opacity: 0.3 } :: k = x \ \ \{ 0 < x < t \}
 
-/animate :: /slider{ min: 0, max: "2 \\pi" } :: t = 0
+/label{ text: "`k = ${t}`" } :: (t, t)
+x = t \ \ \{ 0 < y < t \}
+/label{ text: "`x = ${t}`" } :: (t, 0)
+
+/anim /slider{ min: 0, max: "2 \\pi" } :: t = 0
 ```
 
 Hmm, so what if we said that, as we draw the graph, we set $k$ to the current value of $x$?
@@ -229,10 +234,11 @@ i.e. When we’re at $x = 1$, $k = 1$. When $x$ reaches $5$, $k$ too becomes $5$
 ### _
 ```desmos
 /viewport{ left: -1, right: 12 }
-/base :: y = \sin{x} \ \ \left\{ 1 < x < 3\pi \right\}
-/label{ text: "Pen starts here." } :: \left( 1, \sin\left( 1 \right) \right)
 
-/hidden :: k = x
+/line{ opacity: 0.3 } :: y = \sin{x} \ \ \{ 1 < x < 3\pi \}
+/label{ text: "Pen starts here." } :: (1, \sin(1))
+
+/hide :: k = x
 ```
 
 So, let’s start from $x = 1$, meaning $k = 1$. Note that this means we multiply $\sin(x)$ by $1$, which does nothing. So we start at the same point as our original graph of $y = \sin(x)$.
@@ -242,13 +248,14 @@ Now, move our pen to the right, increasing in $x$. As we do so, $k$ increases to
 ### _
 ```desmos
 /viewport{ left: -1, right: 12 }
-/base :: y = \sin{x} \ \ \left\{ 1 < x < t \right\}
-y = k \sin{x} \ \ \left\{ 1 < x < t \right\}
-/label{ text: "k = ${t}" } :: \left( t,\ t \sin\left( t \right) \right)
 
-/hidden :: k = x
+/line{ opacity: 0.3 } :: y = \sin{x} \ \ \{ 1 < x < t \}
+y = k \sin{x} \ \ \{ 1 < x < t \}
+/label{ text: "k = ${t}" } :: (t, t \sin(t))
 
-/text :: Click play!
+/hide :: k = x
+
+% Click play!
 /slider{ min: 1, max: "3 \\pi" } :: t = 0
 ```
 
@@ -259,10 +266,11 @@ At $x = 2$, $k = 2$, so our graph doubles in height; at $x = 3$, $k = 3$, so it 
 ### _
 ```desmos
 /viewport{ left: -1, right: 12 }
-y = k \sin{x} \ \ \left\{ 1 < x < 3\pi \right\}
-/hidden :: k = x
 
-y = x \sin{x} \ \ \left\{ 1 < x < 3\pi \right\}
+y = k \sin{x} \ \ \{ 1 < x < 3\pi \}
+/hide :: k = x
+
+y = x \sin{x} \ \ \{ 1 < x < 3\pi \}
 ```
 
 Guess what we’ve just done. We said $k$ is given by $x$, so $k = x$.
@@ -280,10 +288,11 @@ In essence, it’s the same as scaling $f(x)$ by a constant $k$. The only differ
 ### _
 ```desmos
 /viewport{ left: -1, right: 12 }
-y = k \cdot f\left( x \right) \ \ \left\{ 0 < x < 3\pi \right\}
 
-/hidden :: f\left( x \right) = \sin{x}
-/hidden :: k = x
+y = k \cdot f(x) \ \ \{ 0 < x < 3\pi \}
+
+/hide :: f(x) = \sin{x}
+/hide :: k = x
 ```
 
 Look at the function again:
@@ -299,11 +308,12 @@ So $f(x) = \sin(x)$, and $k = x$.
 ### _
 ```desmos
 /viewport{ left: -1, right: 6 }
-/base :: y = \sin{x} \ \ \left\{ 1 < x < 3\pi \right\}
 
-y = x \sin{x} \ \ \left\{ 1 < x < 3\pi \right\}
+/line{ opacity: 0.3 } :: y = \sin{x} \ \ \{ 1 < x < 3\pi \}
 
-/label{ text: "`0 \cdot \sin\left(0\right) = 0`, pos: "BELOW_RIGHT" } :: \left( 0,\ 0 \right)
+y = x \sin{x} \ \ \{ 1 < x < 3\pi \}
+
+/label{ text: "`0 \cdot \sin(0) = 0`", pos: BELOW_RIGHT } :: (0, 0)
 ```
 
 Let’s go ahead and draw out the rest of that graph, then. Between $0 < x < 1$, we’re scaling the $\sin(x)$ wave down.
@@ -313,12 +323,13 @@ It’ll be a good idea to make use of our anchor point here at $x = 0$, where $y
 ### _
 ```desmos
 /viewport{ left: -1, right: 6 }
-/base :: y = \sin{x} \ \ \left\{ 0 < x < 3\pi \right\}
 
-y = x \sin{x} \ \ \left\{ 0 < x < 3\pi \right\}
+/line{ opacity: 0.3 } :: y = \sin{x} \ \ \{ 0 < x < 3\pi \}
+
+y = x \sin{x} \ \ \{ 0 < x < 3\pi \}
 
 0 < x < 1
-/hidden :: /label{ text: "Final graph is always below original!", pos: "RIGHT" } :: \left( 0,\ -2 \right)
+/hide /label{ text: "Final graph is always below original!", pos: RIGHT } :: (0, -2)
 ```
 
 Now all that’s left is to interpolate between these points. Because we’re scaling down, we know that the new graph must lie **underneath** our base graph.
@@ -326,7 +337,8 @@ Now all that’s left is to interpolate between these points. Because we’re sc
 ### _
 ```desmos
 /viewport{ left: -12, right: 12 }
-y = x \sin{x} \ \ \left\{ 0 < x < 3\pi \right\}
+
+y = x \sin{x} \ \ \{ 0 < x < 3\pi \}
 ```
 
 Looking at the big picture again, what have we got on the right?
@@ -336,12 +348,13 @@ Still a $\sin(x)$ wave, just getting progressively stretched out as $x$ increase
 ### _
 ```desmos
 /viewport{ left: -12, right: 12 }
-y = x \sin{x} \ \ \left\{ 0 < x < 3\pi \right\}
 
-/label{ text: "`y = p`", pos: "ABOVE" } :: \left( 4,\ 4 \sin\left( 4 \right) \right)
-/asympt :: y = 4 \sin\left( 4 \right) \ \ \left\{ 0 < x < 4 \right\}
-/label{ text: "`y = -p`", pos: "ABOVE" } :: \left( -4,\ 4 \sin\left( -4 \right) \right)
-/asympt :: y = 4 \sin\left( -4 \right) \ \ \left\{ -4 < x < 0 \right\}
+y = x \sin{x} \ \ \{ 0 < x < 3\pi \}
+
+/label{ text: "`y = p`", pos: "ABOVE" } :: (4, 4 \sin(4))
+/line{ style: DASHED, opacity: 0.3 } :: y = 4 \sin(4) \ \ \{ 0 < x < 4 \}
+/label{ text: "`y = -p`", pos: "ABOVE" } :: (-4, 4 \sin(-4))
+/line{ style: DASHED, opacity: 0.3 } :: y = 4 \sin(-4) \ \ \{ -4 < x < 0 \}
 ```
 
 Finally, the left half for $x < 0$.
@@ -351,10 +364,11 @@ Remember that scaling by a negative $k$ is as easy as scaling by the positive an
 ### _
 ```desmos
 /viewport{ left: -12, right: 12 }
-y = x \sin{x} \ \ \left\{ 0 < x < 3\pi \right\}
-y = x \sin{x} \ \ \left\{ -t < x < 0 \right\}
 
-/animate :: /slider{ min: 1, max: "3 \\pi" } :: t = 0 
+y = x \sin{x} \ \ \{ 0 < x < 3\pi \}
+y = x \sin{x} \ \ \{ -t < x < 0 \}
+
+/anim /slider{ min: 1, max: "3 \\pi" } :: t = 0 
 ```
 So, moving our pen left from $x = 0$, we’re scaling $\sin(x)$ by the same amount as on the right, but now also reflecting it.
 
@@ -363,7 +377,8 @@ The result is an even graph (symmetrical in the $y$-axis). Multiplying odd funct
 ### _
 ```desmos
 /viewport{ left: -12, right: 12 }
-y = x \sin{x} \ \ \left\{ -3\pi < x < 3\pi \right\}
+
+y = x \sin{x} \ \ \{ -3\pi < x < 3\pi \}
 ```
 
 I hope that wasn’t too difficult to digest. If you’re confused, feel free to take a break and read through it again slowly. Let intuition lead the way.
