@@ -1,9 +1,11 @@
 import { defineConfig } from "@playwright/test";
 
-export default defineConfig({
+
+export default defineConfig(
+{
 	testDir: "tests",
 	webServer: {
-    command: "npm run preview",
-    port: 4173,
-  },
+		command: "npm run preview",
+		port: 4173,
+	},
 });

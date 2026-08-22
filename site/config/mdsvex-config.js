@@ -11,20 +11,20 @@ import { preprocess_desmos } from "./preprocess-desmos.js";
 
 const mdsvex_config =
 {
-  extensions: [".svx", ".md"],
-  remarkPlugins: [
-    remarkFootnotes,
-    remarkIndexFootnotes,
-    remark_alerts,
-    remarkMath,
-    render_katex_blocks,
-    preprocess_desmos,
-  ],
-  rehypePlugins: [
-    rehypeSlug,
-    correct_hast_tree,
-    rehypeKatex,
-  ],
+	extensions: [".svx", ".md"],
+	remarkPlugins: [
+		remarkFootnotes,
+		remarkIndexFootnotes,
+		remark_alerts,
+		remarkMath,
+		render_katex_blocks,
+		preprocess_desmos,
+	],
+	rehypePlugins: [
+		rehypeSlug,
+		correct_hast_tree,
+		rehypeKatex,
+	],
 };
 
 export default mdsvex_config;
