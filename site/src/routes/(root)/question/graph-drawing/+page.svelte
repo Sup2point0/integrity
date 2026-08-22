@@ -73,7 +73,7 @@ let sections = $derived(page.url.searchParams.getAll("section"));
 <Section title="Answer" closed={!sections.includes("answer")}>
   <div class="answer">
     <Desmos
-      blocks={question?.answer ?? question?.question}
+      source={question?.answer?.content ?? question?.question?.content}
       bounds={question?.["graph-bounds"]}
       height="70vh"
       ratio={1}

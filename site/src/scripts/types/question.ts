@@ -27,8 +27,8 @@ export class Question
 	/** The question line. */
 	question?: Block;
 
-  /** Expressions to show in a Desmos graph. */
-  desmos?: Block;
+	/** Desmost source code to compile to a Desmos graph. */
+	desmos?: string;
 
 	/** Extra notes for clarification. */
 	notes?: Block;

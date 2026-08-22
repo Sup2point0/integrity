@@ -47,7 +47,7 @@ let options = $derived(
       {#if question.topic === "graph-drawing"}
         {#key question.shard}
           <Desmos
-            blocks={{ kind: "desmos", content: option.latex }}
+            source={option.latex}
             options={{ showXAxis: true, showYAxis: true }}
             controls={false}
             bounds={question["graph-bounds"]}
