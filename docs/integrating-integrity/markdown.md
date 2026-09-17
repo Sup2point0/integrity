@@ -6,12 +6,12 @@
 | desc = Exploring why Integrity uses both compile-time and runtime Markdown renderering chains
 | index = docs / integrating-integrity
 | date = 2026 February 23
-| update = 2026 March 21
+| update = 2026 September 17
 -->
 
 Today in *Integrating Integrity*, I’ll explain why *Integrity* uses 2 entirely separate pipelines to process, render and display Markdown, instead of just 1.
 
-If you’re unfamiliar, [Markdown]() is a super-simple, super-lightweight, super-*intuitive* markup syntax. In fact, even if you’re not a developer there’s a good chance you’ve used it before – many ‘text posting’ platforms (e.g. Discord, reddit) support or partially support it. For instance, to italicise text, you just wrap it in \*single asterisks* to get *single asterisks*.
+If you’re unfamiliar, [Markdown<sup>↗</sup>](https://www.markdownguide.org/) is a super-simple, super-lightweight, super-*intuitive* markup syntax. In fact, even if you’re not a developer there’s a good chance you’ve used it before – many ‘text posting’ platforms (e.g. Discord, reddit) support or partially support it. For instance, to italicise text, you just wrap it in \*single asterisks\* to get *single asterisks*.
 
 Almost all of Integrity’s content is written in Markdown. This includes this page you’re currently reading, as well as the scriptures, docs, all the other articles, and even the questions themselves.
 
