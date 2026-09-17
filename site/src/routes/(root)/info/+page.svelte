@@ -24,7 +24,6 @@ import { ArticleArray } from "#parts/page";
 		"synopsis.md",
 		"faq.md",
 		"edu.md",
-		"roadmap.md",
 		"changelog.md",
 		".squarkdown/content/privacy.md",
 		".squarkdown/content/~licence.md",
