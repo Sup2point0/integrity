@@ -1,5 +1,5 @@
+***22 August*** Integrity now uses my [*Desmost*](https://github.com/Sup2point0/desmost) compiler for Desmos, meaning richer, faster and more reliable Desmos embeds!
+
 ***July 16*** A whole host of behind-the-scene fixes should mean your experience on *Integrity* is even smoother ;)
 
 ***March 21*** Desmos embeds have (finally!) arrived to all pages on *Integrity*! btw, if you’re interested in some of the engineering behind *Integrity*, I’ve started delving into it in [Integrating Integrity](https://sup2point0.github.io/integrity/docs/integrity) =)
-
-***March 20*** [Workspace](https://sup2point0.github.io/integrity/workspace) has received some long overdue polishing, and now correctly loads definite integrals.

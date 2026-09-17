@@ -4,10 +4,15 @@
 | title = Changelog
 | capt = Not-so-official snapshots into *Integrity’s* history
 | index = info
-| update = 2026 March 21
+| update = 2026 August 22
 -->
 
 <div align="center" style="text-align: center;"> <h2> 2026 </h2> </div>
+
+
+## 22 August
+
+Integrity now uses my [*Desmost*](https://github.com/Sup2point0/desmost) compiler for Desmos, meaning richer, faster and more reliable Desmos embeds!
 
 
 ## 16 July
