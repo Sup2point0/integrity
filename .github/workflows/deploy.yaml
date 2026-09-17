@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '**.yml'
+      - '.github/workflows/deploy.yaml'
       - 'site/package-lock.json'
       - 'changelog.md'
       - 'questions/**/*.md'
@@ -17,58 +17,57 @@ jobs:
         working-directory: './site/'
 
     steps:
-      - name: 'git / checkout'
+      - name: 'Checkout'
         uses: actions/checkout@v7
         with:
           submodules: recursive
 
-      - name: 'ruby / setup / squarkdown'
+      - name: 'Setup Ruby (squarkdown)'
         uses: ruby/setup-ruby@v1
         with:
           working-directory: './.stranger-quarkdown/'
           bundler-cache: true
 
-      - name: 'squarkdown'
+      - name: '› npm run squarkx'
         run: |
           npm run squarkx
 
-      - name: 'ruby / setup / prep'
+      - name: 'Setup Ruby (prep)'
         uses: ruby/setup-ruby@v1
         with:
           working-directory: './site/prep/'
           bundler-cache: true
 
-      - name: 'prep'
+      - name: '› npm run export'
         run: |
           npm run export
 
-      - name: 'node / setup'
-        uses: actions/setup-node@v6
+      - name: 'Setup Node'
+        uses: actions/setup-node@v7
         with:
-          node-version: 26
           cache: 'npm'
           cache-dependency-path: './site/package-lock.json'
 
-      - name: 'svelte / npm install'
+      - name: '› npm ci'
         run: |
           npm ci
 
-      - name: 'svelte / npm audit'
+      - name: '› npm audit'
         run: |
           npm audit --audit-level=moderate
 
-      - name: 'svelte / npm run build'
+      - name: '› npm run build'
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           npm run build
 
-      - name: 'svelte / npm run test'
+      - name: '› npm run test'
         run: |
           npx playwright install
           npm run test
 
-      - name: 'github / upload artifacts'
+      - name: 'Upload Artifact'
         uses: actions/upload-pages-artifact@v3
         with:
           path: './site/build/'
@@ -86,6 +85,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: 'github / deploy'
+      - name: 'Deploy'
         id: deployment
         uses: actions/deploy-pages@v5
