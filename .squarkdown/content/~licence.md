@@ -6,7 +6,7 @@
 | update = 2025 September 15
 -->
 
-The [questions](https://github.com/Sup2point0/integrity/questions/all) and [source code](https://github.com/Sup2point0/integrity) of *Integrity* are licensed under the [MIT Licence](https://github.com/Sup2point0/integrity/blob/main/LICENSE).
+The [questions](https://github.com/Sup2point0/integrity/questions/all) and [source code](https://github.com/Sup2point0/integrity) of *Integrity* are licensed under the [MIT Licence](https://github.com/Sup2point0/integrity/blob/main/LICENCE).
 
 Maths is for everyone, so you’re more than welcome to use and redistribute any of the questions. That being said, if you’re using them in bulk, some credit and/or linking back to *Integrity* would be much appreciated!
 
