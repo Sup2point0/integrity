@@ -91,7 +91,7 @@ function check_valid(data: Array<any>): boolean
 						
 						{#if $search.show.dates && question.date}
 							<p class="date" transition:slide={{ duration: 500 }}>
-								{question.date_display}
+								{question.release_date_raw}
 							</p>
 						{/if}
 					</div>

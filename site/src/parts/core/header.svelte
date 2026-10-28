@@ -22,21 +22,21 @@ let { title, capt, page }: Props = $props();
 <header class="{$userprefs.style}">
 	<div class="info">
 		<h1>
-			<RenderBlock source={title ?? page?.head ?? "Untitled Page"} />
+			<RenderBlock source={title ?? page?.heading ?? "Untitled Page"} />
 		</h1>
 
 		<div class="capt">
-			<RenderBlock source={capt ?? page?.capt ?? ""} />
+			<RenderBlock source={capt ?? page?.caption ?? ""} />
 		</div>
 	</div>
 
 	{#if page}
-		{#if page.update_display}
-			<p class="date"> Last updated <span>{page.update_display}</span> </p>
+		{#if page.last_update_raw}
+			<p class="date"> Last updated <span>{page.last_update_raw}</span> </p>
 			<div style:height="1rem"></div>
 		
-		{:else if page.date_display}
-			<p class="date"> Last updated <span>{page.date_display}</span> </p>
+		{:else if page.release_date_raw}
+			<p class="date"> Last updated <span>{page.release_date_raw}</span> </p>
 			<div style:height="1rem"></div>
 		
 		{:else}

@@ -28,7 +28,7 @@ let { paths }: Props = $props();
 		{@const data = Site.pages[path]}
 
 		{#if i > 0} , {/if}
-		<a href="{base}/{data?.dest}">{data?.head ?? "<Unwritten>"}</a>
+		<a href="{base}/{data?.destination}">{data?.heading ?? "<Unwritten>"}</a>
 	{/each}
 </Banner>
 

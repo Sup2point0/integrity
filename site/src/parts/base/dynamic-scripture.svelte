@@ -222,9 +222,9 @@ function next_subsection()
 		<header>
 			<h1> {data.title} </h1>
 
-			{#if data.desc}
+			{#if data.description}
 				<div class="desc">
-					<RenderBlock source={data.desc} />
+					<RenderBlock source={data.description} />
 				</div>
 			{/if}
 		</header>

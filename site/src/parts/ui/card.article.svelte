@@ -26,21 +26,21 @@ let data = $derived(page ?? (path ? Site.pages[path] : undefined));
 
 
 <a class="article-card" class:invalid={!data}
-	href="{base}/{data?.dest}"
+	href="{base}/{data?.destination}"
 >
 	<div class="info">
 		<h4>
-			{#if data?.head}
-				<RenderBlock source={data!.head} />
+			{#if data?.heading}
+				<RenderBlock source={data!.heading} />
 			{:else}
 				Page Unavailable
 			{/if}
 		</h4>
 		
-		{#if data?.capt}
-			<RenderBlock source={data.capt} />
-			{:else if data?.desc}
-			<RenderBlock source={data.desc} />
+		{#if data?.caption}
+			<RenderBlock source={data.caption} />
+			{:else if data?.description}
+			<RenderBlock source={data.description} />
 		{/if}
 	</div>
 </a>

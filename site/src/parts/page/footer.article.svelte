@@ -20,8 +20,8 @@ let { page }: Props = $props();
 <footer>
 	<p> See an oversight or error? Drop an issue on <a target="_blank" href="https://github.com/Sup2point0/integrity/issues">GitHub<sup>↗</sup></a>. </p>
 
-	{#if page?.date_display}
-		<p> Released on <span>{page.date_display}</span> </p>
+	{#if page?.release_date_raw}
+		<p> Released on <span>{page.release_date_raw}</span> </p>
 	{/if}
 </footer>
 

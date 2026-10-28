@@ -13,7 +13,7 @@ function get_paths_of_tag(tag)
 	return (
 		Object.values(site_pages.tags[tag])
 			.map(path => site_pages.pages[path])
-			.map(page => `/${page.dest}`)
+			.map(page => `/${page.destination}`)
 	);
 }
 
