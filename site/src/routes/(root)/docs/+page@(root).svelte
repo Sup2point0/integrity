@@ -28,6 +28,6 @@ import { ArticleCard } from "#parts/ui";
 	)}
 >
 	<ArticleCard page={{
-		dest: "docs/tags", head: "Tags", capt: "Descriptor tags for questions",
+		destination: "docs/tags", heading: "Tags", caption: "Descriptor tags for questions",
 	}} />
 </ArticleArray>
