@@ -6,7 +6,11 @@ name = "Integrity"
 github = "Sup2point0/integrity"
 
 [errors]
+strict = true
 on-error = "warn"
+file-already-exists = "overwrite"
+# link-broken = "mark-broken"
+link-inactive = "link-to-github"
 
 [paths]
 site = "site/"
@@ -20,8 +24,16 @@ sources = [
 ]
 
 [out]
+file-name = "+page.svx"
 folder = "src/routes/(root)/"
 site-data-path = "src/data/site.json"
+shorter-fields = false
+
+[format]
+inject-head = true
+preserve-heading = false
+preserve-comments = true
+externalise-links = true
 
 [assets]
 folder = "assets/"
