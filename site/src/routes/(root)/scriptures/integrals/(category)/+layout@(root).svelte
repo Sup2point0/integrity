@@ -1,7 +1,6 @@
 <script lang="ts">
 
 import Site from "#scripts/site";
-import { capitalise } from "#scripts/utils";
 import type { Page } from "#scripts/types";
 
 import { Breadcrumbs, Header } from "#parts/core";
@@ -18,7 +17,7 @@ let { children } = $props();
 <Breadcrumbs levels={[
 	{ text: "Scriptures", intern: "scriptures" },
 	{ text: "Integration", intern: "scriptures/integrals" },
-	{ text: capitalise(page.data.title) }
+	{ text: page.data.title }
 ]} />
 
 <Header page={page.data as Page} />

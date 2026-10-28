@@ -118,9 +118,9 @@ onMount(() => {
 	<Header title="Places to Visit" />
 
 	<ArticleArray pages={[
-		Site.pages["docs/fun-facts.md"],
-		{ dest: "trails", head: "Trails", capt: "Statistics of <em>Integrity</em>" },
-		{ dest: "data", head: "Your Data", capt: "Your personal statistics on <em>Integrity</em>" },
+		Site.pages["docs/fun-facts.md"]!,
+		{ destination: "trails", heading: "Trails", caption: "Statistics of <em>Integrity</em>" },
+		{ destination: "data", heading: "Your Data", caption: "Your personal statistics on <em>Integrity</em>" },
 	]} />
 	
 	<div class="centre">
