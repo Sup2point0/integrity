@@ -1,6 +1,6 @@
 # Methods
 <!-- #SQUARK live!
-| dest = scriptures/integrals/methods
+| dest = scriptures/integrals/(category)/methods
 | capt = Methods of Integration
 -->
 

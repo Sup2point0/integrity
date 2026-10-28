@@ -1,6 +1,6 @@
 # Scriptures
 <!-- #SQUARK live!
-| dest = scriptures
+| dest = scriptures/(index)
 | desc = Walkthroughs and showerthoughts on mathematics
 -->
 

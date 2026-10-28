@@ -1,6 +1,6 @@
 # Collections
 <!-- #SQUARK live!
-| dest = scriptures/integrals/collections
+| dest = scriptures/integrals/(category)/collections
 | capt = Lists for Reference
 -->
 

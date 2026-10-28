@@ -1,6 +1,6 @@
 # Integration
 <!-- #SQUARK live!
-| dest = scriptures/integrals
+| dest = scriptures/integrals/(index)
 -->
 
 Welcome, adventurer. You’ve come to a realm of problem-solving, extended contemplation, and boundless creativity.

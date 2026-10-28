@@ -1,6 +1,6 @@
 # Antiderivatives
 <!-- #SQUARK live!
-| dest = scriptures/integrals/antiderivatives
+| dest = scriptures/integrals/(category)/antiderivatives
 | capt = Standard Antiderivatives
 -->
 
