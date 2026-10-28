@@ -2,12 +2,16 @@
 
 import PageContent from "#parts/base/static-page.svelte";
 
+let { children } = $props();
+
 </script>
 
 
-<PageContent levels={[
+<PageContent parent_levels={[
 	{ text: "Docs", intern: "docs" }
-]} />
+]}>
+	{@render children?.()}
+</PageContent>
 
 
 <style lang="scss">
