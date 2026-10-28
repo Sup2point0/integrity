@@ -10,6 +10,11 @@
 <div align="center" style="text-align: center;"> <h2> 2026 </h2> </div>
 
 
+## 22 October
+
+Integrity now uses my updated [*Stranger Quarkdown*](https://github.com/Sup2point0/stranger-quarkdown) framework for compiling Markdown, which also meant significant internal restructing. Hopefully nothing broke!
+
+
 ## 22 August
 
 Integrity now uses my [*Desmost*](https://github.com/Sup2point0/desmost) compiler for Desmos, meaning richer, faster and more reliable Desmos embeds!
