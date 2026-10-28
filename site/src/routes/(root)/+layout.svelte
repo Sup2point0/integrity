@@ -2,7 +2,7 @@
 
 import { userprefs, search } from "#scripts/stores";
 
-import { Nav, Footer } from "#parts/core";
+import { Meta, Nav, Footer } from "#parts/core";
 
 import { page } from "$app/state";
 
@@ -12,6 +12,8 @@ let { children } = $props();
 
 </script>
 
+
+<Meta title={page.data.title} desc={page.data.description} />
 
 <Nav />
 

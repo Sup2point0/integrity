@@ -68,17 +68,19 @@ function sync_duality()
 </script>
 
 
+<svelte:head>
+	{#if $userprefs.style}
+		<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+	{/if}
+</svelte:head>
+
+
 {#if children}
 	{@render children()}
 {:else}
 	<p class="error"> Uh oh, something has gone really, really wrong! </p>
 {/if}
 
-<svelte:head>
-	{#if $userprefs.style}
-		<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
-	{/if}
-</svelte:head>
 
 {#if active}
 	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
