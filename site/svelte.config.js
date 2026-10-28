@@ -3,7 +3,6 @@ import { sveltePreprocess } from "svelte-preprocess";
 import { mdsvex } from "mdsvex";
 
 import mdsvex_config from "./config/mdsvex-config.js";
-import scss_config from "./scss-config.js";
 
 import site_pages from "./src/data/site.json" with { type: "json" };
 import dyna_scriptures from "./src/data/dyna-scriptures.json" with { type: "json" };
@@ -12,7 +11,7 @@ import dyna_scriptures from "./src/data/dyna-scriptures.json" with { type: "json
 function get_paths_of_tag(tag)
 {
 	return (
-		Object.values(site_pages.tags[tag].pages)
+		Object.values(site_pages.tags[tag])
 			.map(path => site_pages.pages[path])
 			.map(page => `/${page.dest}`)
 	);
