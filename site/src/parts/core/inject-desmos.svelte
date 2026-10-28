@@ -54,7 +54,7 @@ onMount(() => {
 </script>
 
 
-{#if page.data.metadata.flags.includes("desmos") || has_desmos}
+{#if page.data.flags?.includes("desmos") || has_desmos}
 	<DesmosAPI />
 {/if}
 

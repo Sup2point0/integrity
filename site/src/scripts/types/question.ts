@@ -16,9 +16,9 @@ export class Question
 	difficulty: "based" | "incline" | "manifold" | "chaos" | null = null;
 
 	title?: string;
-	desc?: string;
+	description?: string;
 	date?: Date;
-	date_display?: string;
+	release_date_raw?: string;
 
 	tags: string[] = [];
 	methods: string[] = [];
@@ -86,7 +86,7 @@ export class Question
 
 		this.question = data.question && data.question[0];
 		this.desmos = data.desmos && data.desmos[0].content;
-		this.date_display = data.date;
+		this.release_date_raw = data.date;
 
 		try {
 			this.date = new Date(data.date);

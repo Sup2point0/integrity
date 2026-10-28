@@ -18,5 +18,5 @@ export function pick_random_scripture(): string
 {
 	let pages = get_list_of_all_scriptures();
 	let page = pages[Math.floor(Math.random() * pages.length)];
-	return page.dest;
+	return page.destination;
 }

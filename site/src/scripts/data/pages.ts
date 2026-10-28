@@ -1,9 +1,9 @@
 import type { Page } from "#scripts/types";
 
 
-import pages_data from "#src/data/site.json" with { type: "json" };
-export const pages = pages_data.pages;
-export const tags = pages_data.tags;
+import site_data from "#src/data/site.json" with { type: "json" };
+export const pages = site_data.pages;
+export const tags = site_data.tags;
 export const scriptures = find_scriptures(pages);
 
 

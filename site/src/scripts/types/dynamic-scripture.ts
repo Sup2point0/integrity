@@ -1,17 +1,18 @@
+import type { Page } from ".";
+
 import type { Block } from "./root";
-import type { Page } from "./page";
 
 
 export class DynamicScripture implements Page
 {
 	path: string;
-	dest: string;
+	destination: string;
 	shard: string;
 
 	/** The exact displayed title of the page. Use `toLowerCase()` for caseless processing. */
 	title: string;
 
-	desc?: Block | Block[];
+	description?: Block | Block[];
 
 	/** The exact displayed name of the chapter the page falls under. Use `toLowerCase()` for caseless processing. Referred to as `topic` for ease of internal preprocessing. */
 	chapter: string;
@@ -25,11 +26,11 @@ export class DynamicScripture implements Page
 	constructor(data: any)
 	{
 		this.path = "";
-		this.dest = data.dest;
+		this.destination = data.dest;  // FIXME -> .destination
 		this.shard = data.shard;
 
 		this.title = data.title;
-		this.desc = data.description;
+		this.description = data.description;
 		this.chapter = data.topic;
 		this.next = data.next;
 		try {
