@@ -6,6 +6,9 @@ import { Breadcrumbs, Header } from "#parts/core";
 import { ArticleArray, Line } from "#parts/page";
 import { Card } from "#parts/ui";
 
+
+let { children } = $props();
+
 </script>
 
 <Breadcrumbs levels={[
@@ -17,7 +20,7 @@ import { Card } from "#parts/ui";
 
 
 <article>
-	{@render $props().children?.()}
+	{@render children?.()}
 </article>
 
 <Line />

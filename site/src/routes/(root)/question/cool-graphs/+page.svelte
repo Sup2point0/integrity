@@ -78,7 +78,7 @@ function pick_col()
 	{ text: question?.shard ?? "?" },
 ]} copy={true} shard={question?.shard} />
 
-<Header title={question?.title} capt={question?.date_display} />
+<Header title={question?.title} capt={question?.release_date_raw} />
 
 <div id="desmos-window"
 	bind:this={self}

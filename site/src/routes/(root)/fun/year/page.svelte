@@ -9,7 +9,7 @@ import { Card, CardsContainer } from "#parts/ui";
 </script>
 
 
-<Meta title={page.title} desc={page.desc} />
+<Meta title={page.title} desc={page.description} />
 
 
 <Breadcrumbs levels={[

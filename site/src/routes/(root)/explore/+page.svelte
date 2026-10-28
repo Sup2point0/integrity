@@ -230,7 +230,7 @@ import { base } from "$app/paths";
 				{@const page = Site.pages[path]}
 
 				{#if page}
-					<Link text={page.title!} intern={page.dest} />
+					<Link text={page.title!} intern={page.destination} />
 				{/if}
 			{/each}
 		</div>
@@ -245,7 +245,7 @@ import { base } from "$app/paths";
 				{@const page = Site.pages[path]}
 
 				{#if page}
-					<Link text={page.title!} intern={page.dest} />
+					<Link text={page.title!} intern={page.destination} />
 				{/if}
 			{/each}
 		</div>

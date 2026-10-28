@@ -189,7 +189,7 @@ for (let q of Site.get_questions_of_topic(Topic.INTEGRALS)) {
 		}
 	}
 
-	if (q.date && q.date_display && q.date_display.split(" ").length > 2) {
+	if (q.date && q.release_date_raw && q.release_date_raw.split(" ").length > 2) {
 		let d = new Intl.DateTimeFormat("en-GB", {
 			day: "2-digit",
 			month: "short",

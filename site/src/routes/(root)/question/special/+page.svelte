@@ -25,7 +25,7 @@ let sections: [string, Block][] = $derived(
 
 
 <!-- FIXME children -->
-<Header title={question?.title} capt={question?.date_display}>
+<Header title={question?.title} capt={question?.release_date_raw}>
 	{#if question?.tags}
 		<div class="tags">
 			{#each question.tags as tag}
@@ -35,9 +35,9 @@ let sections: [string, Block][] = $derived(
 	{/if}
 </Header>
 
-{#if question?.desc}
+{#if question?.description}
 	<article>
-		{#each question.desc as chunk}
+		{#each question.description as chunk}
 			<p>
 				{@html chunk}
 			</p>

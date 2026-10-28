@@ -48,10 +48,10 @@ let sections = $derived(page.url.searchParams.getAll("section"));
 	<div class="info">
 		<div class="details">
 			<h4 class="name"> {question?.title ?? "unnamed"} </h4>  
-			<p class="date"> {question?.date_display} </p>
+			<p class="date"> {question?.release_date_raw} </p>
 			
-			{#if question?.desc}
-				<RenderBlock source={question.desc} />
+			{#if question?.description}
+				<RenderBlock source={question.description} />
 			{/if}
 		</div>
 

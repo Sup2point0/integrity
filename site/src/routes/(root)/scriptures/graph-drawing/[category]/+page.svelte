@@ -14,7 +14,7 @@ let { content, metadata: data } = $derived(page.data);
 </script>
 
 
-<Meta title={data.title} desc={data.desc} />
+<Meta title={data.title} desc={data.description} />
 
 
 <Breadcrumbs levels={[

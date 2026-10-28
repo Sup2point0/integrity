@@ -22,9 +22,9 @@ import { Card } from "#parts/ui";
 
 <div class="browse">
 	{#each get_scriptures_of_topic(Topic.COMPLETE_SQUARE) as page}
-		<Card title={page.head}
-			capt={page.desc}
-			intern={page.dest}
+		<Card title={page.heading}
+			capt={page.description}
+			intern={page.destination}
 			style="row"
 		/>
 	{/each}
