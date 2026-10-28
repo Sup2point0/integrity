@@ -12,7 +12,7 @@ import { page } from "$app/state";
 import { mount, onMount } from "svelte";
 
 
-let { content } = $props();
+let { children } = $props();
 
 
 let has_desmos = $state(false);
@@ -59,5 +59,5 @@ onMount(() => {
 {/if}
 
 <div class="desmos-injector" bind:this={root}>
-	{@render content?.()}
+	{@render children?.()}
 </div>
