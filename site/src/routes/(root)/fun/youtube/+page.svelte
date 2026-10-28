@@ -33,9 +33,9 @@ import { base } from "$app/paths";
 
 				<div class="info">
 					<h2> {channel.name} </h2>
-					<p class="capt"> {channel.caption} </p>
+					<p class="capt"> {channel.capt} </p>
 
-					<RenderBlock source={channel.description} />
+					<RenderBlock source={channel.desc} />
 				</div>
 			</a>
 		{/each}
