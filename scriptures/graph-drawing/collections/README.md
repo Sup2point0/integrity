@@ -1,6 +1,6 @@
 # Collections
 <!-- #SQUARK live!
-| dest = scriptures/graph-drawing/collections
+| dest = scriptures/graph-drawing/(category)/collections/
 | capt = Lists for Reference
 -->
 
