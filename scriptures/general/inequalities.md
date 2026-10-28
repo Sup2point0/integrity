@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = scriptures/general/inequalities
 | capt = Solving inequalities with twin-signed terms
-| index = scriptures / general
+| tags = scriptures / general
 | date = 2025 June 27
 | update = 2026 March 22
 -->

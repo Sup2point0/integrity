@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = desmos/library/functions/random
 | title = Randomisation
-| index = desmos / library / functions
+| tags = desmos / library / functions
 | update = 2025 August 24
 -->
 

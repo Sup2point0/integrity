@@ -1,7 +1,7 @@
 # Standard Integrals
 <!-- #SQUARK live! vect!
 | dest = scriptures/integrals/collections/standard-integrals
-| index = scriptures / integrals / collections
+| tags = scriptures / integrals / collections
 ---
 | continue-reading =
     / scriptures/integrals/collections/everything-anything

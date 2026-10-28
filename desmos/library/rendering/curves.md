@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = desmos/library/rendering/curves
 | title = Curves
-| index = desmos / library / rendering
+| tags = desmos / library / rendering
 | update = 2025 August 25
 -->
 

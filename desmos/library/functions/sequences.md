@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = desmos/library/functions/sequences
 | title = Sequences
-| index = desmos / library / functions
+| tags = desmos / library / functions
 | update = 2025 November 27
 -->
 

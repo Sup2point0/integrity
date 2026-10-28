@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = scriptures/integrals/methods/power-partials
 | capt = Substitution without substitution
-| index = scriptures / integrals / methods
+| tags = scriptures / integrals / methods
 | date = 2025 June 23
 ---
 | example-questions =

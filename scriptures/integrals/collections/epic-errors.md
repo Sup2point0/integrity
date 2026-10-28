@@ -2,7 +2,7 @@
 <!-- #SQUARK live! devx!
 | dest = scriptures/integrals/collections/epic-errors
 | capt = Surprisingly unrare pitfalls in integration
-| index = scriptures / integrals / collections
+| tags = scriptures / integrals / collections
 | date = 2025 January 21
 | update = 2025 September 18
 ---

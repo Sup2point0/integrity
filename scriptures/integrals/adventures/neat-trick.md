@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = scriptures/integrals/adventures/neat-trick
 | capt = Abusing the +c
-| index = scriptures / integrals / adventures
+| tags = scriptures / integrals / adventures
 | date = 2025 January 15
 ---
 | continue-reading =

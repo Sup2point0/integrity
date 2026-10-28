@@ -2,7 +2,7 @@
 <!-- #SQUARK live! dev!
 | dest = scriptures/integrals/antiderivatives/sec-3
 | capt = An unlikely duplication
-| index = scriptures / integrals / antiderivatives
+| tags = scriptures / integrals / antiderivatives
 ---
 | pre-reading =
     / scriptures/integrals/methods/parts.md

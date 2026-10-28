@@ -2,7 +2,7 @@
 <!-- #SQUARK live! archive!
 | dest = scriptures/integrals/adventures/artanh
 | capt = When hoping for the best works out
-| index = scriptures / integrals / adventures
+| tags = scriptures / integrals / adventures
 | date = 2025 June 10
 ---
 | continue-reading =

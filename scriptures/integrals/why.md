@@ -2,7 +2,7 @@
 <!-- #SQUARK live! opin!
 | dest = scriptures/integrals/why
 | capt = Integration is love, integration is life
-| index = scriptures / integrals / general
+| tags = scriptures / integrals / general
 | date = 2025 April 17
 | update = 2026 January 1
 -->

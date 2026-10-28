@@ -1,7 +1,7 @@
 # Why -c?
 <!-- #SQUARK live!
 | dest = scriptures/integrals/adventures/-c
-| index = scriptures / integrals / adventures
+| tags = scriptures / integrals / adventures
 -->
 
 Why $-c$?

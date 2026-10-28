@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = scriptures/integrals/antiderivatives/ln
 | capt = (It’s not actually that difficult.)
-| index = scriptures / integrals / antiderivatives
+| tags = scriptures / integrals / antiderivatives
 | date = 2025 February 11
 ---
 | pre-reading =

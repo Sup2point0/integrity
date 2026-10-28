@@ -2,7 +2,7 @@
 <!-- #SQUARK live! c! simp!
 | dest = scriptures/integrals/antiderivatives/power-rule
 | capt = Introduction to integration
-| index = scriptures / integrals / antiderivatives
+| tags = scriptures / integrals / antiderivatives
 | date = 2025 February 3
 -->
 

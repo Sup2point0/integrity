@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = info/licence
 | capt = Usage of content from Integrity
-| index = info
+| tags = info
 | update = 2025 September 15
 -->
 

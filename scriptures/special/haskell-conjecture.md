@@ -2,7 +2,7 @@
 <!-- #SQUARK live! feat! opin!
 | dest = scriptures/special/haskell-conjecture
 | capt = I’ll show you how you already know much of the Haskell functional programming language!
-| index = scriptures / special
+| tags = scriptures / special
 | date = 31 January 2026
 | update = 1 February 2026
 -->

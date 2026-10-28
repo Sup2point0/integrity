@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = docs/questions
 | desc = How are the questions on Integrity intended to work?
-| index = docs
+| tags = docs
 | date = 2025 May 20
 | clean = line-breaks
 -->

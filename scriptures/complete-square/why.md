@@ -1,7 +1,7 @@
 # Why Complete the Square?
 <!-- #SQUARK live! dev!
 | dest = scriptures/complete-square/why
-| index = scriptures / complete-square
+| tags = scriptures / complete-square
 -->
 
 If you’ve never heard of *completing the square*, it’s a way to rewrite a quadratic of the form

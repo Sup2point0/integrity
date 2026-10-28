@@ -2,7 +2,7 @@
 <!-- #SQUARK live! opin!
 | dest = scriptures/integrals/adventures/what-good
 | capt = On the beauty of integration
-| index = scriptures / integrals / adventures
+| tags = scriptures / integrals / adventures
 | date = 2025 February 4
 | update = 2025 June 27
 ---

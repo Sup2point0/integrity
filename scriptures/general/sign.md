@@ -2,7 +2,7 @@
 <!-- #SQUARK live! feat!
 | dest = scriptures/general/sign
 | capt = The “semicolon missing” of Mathematics
-| index = scriptures / general
+| tags = scriptures / general
 | update = 2026 March 30
 -->
 

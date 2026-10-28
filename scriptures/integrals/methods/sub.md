@@ -2,7 +2,7 @@
 <!-- #SQUARK live! feat! dev!
 | dest = scriptures/integrals/methods/sub
 | capt = Reducing an integral
-| index = scriptures / integrals / methods
+| tags = scriptures / integrals / methods
 -->
 
 At the heart of integration is **substitution**. It is our most powerful and versatile weapon for tackling almost any kind of integral. Pretty much every integral you solve will almost certainly involve some form of substitution. In fact, you’ll come to see that most methods of integration are actually just abstractions upon substitution. Just as chain rule governs the forces of nature, substitution gives rise to the echelons of integration. It truly is the most vital skill for an integrator to nurture.

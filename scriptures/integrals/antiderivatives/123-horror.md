@@ -1,7 +1,7 @@
 # 1, 2, 3, Horror
 <!-- #SQUARK live!
 | dest = scriptures/integrals/antiderivatives/123-horror
-| index = scriptures / integrals / antiderivatives
+| tags = scriptures / integrals / antiderivatives
 | date = 2025 June 5
 | update = 2025 July 4
 -->

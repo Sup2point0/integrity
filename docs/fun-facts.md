@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = docs/fun-facts
 | desc = Some cool little details you may not have noticed about Integrity!
-| index = docs
+| tags = docs
 | update = 2026 February 1
 -->
 

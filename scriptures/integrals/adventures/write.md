@@ -2,7 +2,7 @@
 <!-- #SQUARK live! dev!
 | dest = scriptures/integrals/adventures/write
 | capt = Ponderings on how I write integrals
-| index = scriptures / integrals / adventures
+| tags = scriptures / integrals / adventures
 | date = 2025 April 2
 | update = 2025 September 13
 ---

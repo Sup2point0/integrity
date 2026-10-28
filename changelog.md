@@ -3,7 +3,7 @@
 | dest = info/changelog
 | title = Changelog
 | capt = Not-so-official snapshots into *Integrity’s* history
-| index = info
+| tags = info
 | update = 2026 August 22
 -->
 

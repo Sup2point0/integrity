@@ -1,7 +1,7 @@
 # Fundamental Graphs for Graph Drawing
 <!-- #SQUARK live! vect! devx! dev!
 | dest = scriptures/graph-drawing/collections/standard-graphs
-| index = scriptures / graph-drawing / collections
+| tags = scriptures / graph-drawing / collections
 | update = 2026 April 2
 -->
 

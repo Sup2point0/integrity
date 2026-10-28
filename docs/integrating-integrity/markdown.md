@@ -4,7 +4,7 @@
 | title = Integrity has 2 Markdown renderers
 | capt = Exploring why Integrity uses both compile-time and runtime Markdown and $\LaTeX$ renderering chains
 | desc = Exploring why Integrity uses both compile-time and runtime Markdown renderering chains
-| index = docs / integrating-integrity
+| tags = docs / integrating-integrity
 | date = 2026 February 23
 | update = 2026 September 17
 -->

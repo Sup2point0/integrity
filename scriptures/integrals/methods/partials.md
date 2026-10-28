@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = scriptures/integrals/methods/partials
 | title = Partial Fractions
-| index = scriptures / integrals / methods
+| tags = scriptures / integrals / methods
 | update = 2026 March 30
 ---
 | continue-reading =

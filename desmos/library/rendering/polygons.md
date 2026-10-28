@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = desmos/library/rendering/polygons
 | title = Polygons
-| index = desmos / library / rendering
+| tags = desmos / library / rendering
 | update = 2025 August 25
 -->
 

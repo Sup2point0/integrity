@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = docs/difficulties
 | desc = How are the questions on Integrity assigned a difficulty?
-| index = docs
+| tags = docs
 | date = 2025 June 23
 | update = 2026 March 20
 | clean = breaks

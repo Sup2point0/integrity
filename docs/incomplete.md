@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = docs/integrity/incomplete
 | desc = Life is busy ;-;
-| index = docs / integrating-integrity
+| tags = docs / integrating-integrity
 | date = 2026 January 1
 | update = 2026 March 21
 -->

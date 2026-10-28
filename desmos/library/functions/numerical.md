@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = desmos/library/functions/numerical
 | title = Numerical
-| index = desmos / library / functions
+| tags = desmos / library / functions
 | update = 2025 August 21
 -->
 

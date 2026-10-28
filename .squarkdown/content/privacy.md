@@ -2,7 +2,7 @@
 <!-- #SQUARK live!
 | dest = info/privacy
 | capt = About your data on Integrity
-| index = info
+| tags = info
 | update = 2025 August 25
 -->
 

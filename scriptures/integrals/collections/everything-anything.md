@@ -2,7 +2,7 @@
 <!-- #SQUARK live! feat! c! devx! vect!
 | dest = scriptures/integrals/collections/everything-anything
 | capt = The prime integrator’s standard arsenal
-| index = scriptures / integrals / collections
+| tags = scriptures / integrals / collections
 | date = 2025 April 17
 | update = 2025 December 14
 ---

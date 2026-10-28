@@ -2,7 +2,7 @@
 <!-- #SQUARK live! opin! dev!
 | dest = scriptures/integrals/why-hard
 | capt = You can learn to differentiate in a day, but you can’t learn to integrate in a lifetime.
-| index = scriptures / integrals / general
+| tags = scriptures / integrals / general
 | date = 2025 January 8
 | update = 2025 December 18
 -->

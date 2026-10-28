@@ -3,7 +3,7 @@
 | dest = info/faq
 | capt = Frequently Asked Questions
 | desc = Frequently asked questions about Integrity
-| index = info
+| tags = info
 | update = 2025 December 16
 -->
 

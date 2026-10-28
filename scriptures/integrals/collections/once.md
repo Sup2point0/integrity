@@ -2,7 +2,7 @@
 <!-- #SQUARK live! opin! devx! dev!
 | dest = scriptures/integrals/collections/once
 | capt = Landmarks on the expedition of integration
-| index = scriptures / integrals / collections
+| tags = scriptures / integrals / collections
 | update = 2025 September 18
 ---
 | continue-reading =

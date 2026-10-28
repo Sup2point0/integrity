@@ -6,7 +6,7 @@ name = "Integrity"
 github = "Sup2point0/integrity"
 
 [errors]
-on-error = "kill"
+on-error = "warn"
 
 [paths]
 site = "site/"
@@ -21,7 +21,7 @@ sources = [
 
 [out]
 folder = "src/routes/(root)/"
-site-data-path = "data/site.json"
+site-data-path = "src/data/site.json"
 
 [assets]
 folder = "assets/"

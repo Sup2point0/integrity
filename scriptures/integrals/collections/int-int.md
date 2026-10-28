@@ -2,7 +2,7 @@
 <!-- #SQUARK live! feat! opin! devx!
 | dest = scriptures/integrals/collections/int-int
 | capt = Glossary of the integration homies
-| index = scriptures / integrals / collections
+| tags = scriptures / integrals / collections
 | date = 2025 May 19
 ---
 | continue-reading =

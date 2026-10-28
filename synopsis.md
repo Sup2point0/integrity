@@ -3,7 +3,7 @@
 | dest = info/synopsis
 | capt = All about <em>Integrity</em>
 | desc = Integrity is a collection of maths questions, guides and adventures by Sup#2.0
-| index = info
+| tags = info
 | clean = line-breaks
 -->
 

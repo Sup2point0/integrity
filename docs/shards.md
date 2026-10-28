@@ -5,7 +5,7 @@
 | desc = Explaining the question identifier codes used throughout Integrity
 | head = Shards
 | capt = Question Identifier Codes
-| index = docs
+| tags = docs
 | update = 2025 July 10
 | clean = line-breaks
 -->
