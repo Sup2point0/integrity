@@ -5,56 +5,58 @@ The main displayed content for a static article page.
 
 <script lang="ts">
 
-import type { url } from "#scripts/types";
+import type { Page, url } from "#scripts/types";
 
-import { Meta, Breadcrumbs, Header, InjectDesmos } from "#parts/core";
+import { Breadcrumbs, Header, InjectDesmos } from "#parts/core";
 import { ArticleFooter, ArticleArray, PreReading } from "#parts/page";
 
 import { page } from "$app/state";
+import type { Snippet } from "svelte";
 
 
 interface Props {
 	id?: string;
-	levels: Array<{
+	parent_levels: Array<{
 		text: string,
 		intern?: url,
 		link?: url,
 	}>;
+	children: Snippet;
 }
 
 let {
 	id = undefined,
-	levels,
+	parent_levels,
+	children,
 }: Props = $props();
 
 
-let { content, metadata: data } = $derived(page.data);
+let data = $derived(page.data as Page);
 
 </script>
 
 
-<Meta title={data.title} desc={data.desc} />
-
-
 <Breadcrumbs levels={[
-	...levels,
-	{ text: data.title },
+	...parent_levels,
+	{ text: data.title ?? "" },
 ]} />
 
 <Header page={data} />
 
-{#if data.rest.pre_reading}
-	<PreReading paths={data.rest.pre_reading} />
+{#if data.pre_reading}
+	<PreReading paths={data.pre_reading} />
 {/if}
 
 <article {id}>
-	<InjectDesmos {content} />
+	<InjectDesmos>
+		{@render children?.()}
+	</InjectDesmos>
 
-	{#if data.rest.continue_reading}
+	{#if data.continue_reading}
 		<aside>
 			<h2> Continue Reading </h2>
 
-			<ArticleArray paths={data.rest.continue_reading} />
+			<ArticleArray paths={data.continue_reading} />
 		</aside>
 	{/if}
 
