@@ -20,7 +20,7 @@ import { ArticleArray } from "#parts/page";
 
 
 <section>
-	<ArticleArray paths={Site.index.general.pages.filter(path => Site.index["graph-drawing"].pages.includes(path))} />
+	<ArticleArray paths={Site.tags.general.filter(path => Site.tags["graph-drawing"].includes(path))} />
 </section>
 
 <section>
@@ -34,7 +34,7 @@ import { ArticleArray } from "#parts/page";
 
 <section>
 	<h2> Collections </h2>
-	<ArticleArray paths={Site.index.collections.pages.filter(path => Site.index["graph-drawing"].pages.includes(path))} />
+	<ArticleArray paths={Site.tags.collections.filter(path => Site.tags["graph-drawing"].includes(path))} />
 </section>
 
 

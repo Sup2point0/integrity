@@ -20,7 +20,7 @@ import { ArticleArray } from "#parts/page";
 
 
 <section>
-	<ArticleArray paths={Site.index.general.pages.filter(
-		path => !Site.index.integrals.pages.includes(path)
+	<ArticleArray paths={Site.tags.general.filter(
+		path => !Site.tags.integrals.includes(path)
 	)} />
 </section>

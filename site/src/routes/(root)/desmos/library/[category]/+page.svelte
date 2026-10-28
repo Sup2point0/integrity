@@ -26,7 +26,7 @@ let data = $derived(page.data);
 
 
 <ArticleArray
-	paths={Site.index[data.category.toLowerCase()].pages.filter(path => (
-		Site.index.library.pages.includes(path)
+	paths={Site.tags[data.category.toLowerCase()].filter(path => (
+		Site.tags.library.includes(path)
 	))}
 />

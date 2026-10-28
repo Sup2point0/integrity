@@ -1,6 +1,7 @@
-export type * from "./root";
+import type { PageData } from "stranger-quarkdown";
+export type Page = PageData<"long">;
 
-export type { Page } from "./page";
+export type * from "./root";
 
 export { Topic, TOPIC_DISPLAY_NAMES } from "./topic";
 

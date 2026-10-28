@@ -23,8 +23,8 @@ import { ArticleCard } from "#parts/ui";
 
 
 <ArticleArray
-	paths={Site.index.docs.pages.filter(
-		path => !Site.index["integrating-integrity"].pages.includes(path)
+	paths={Site.tags.docs.filter(
+		path => !Site.tags["integrating-integrity"].includes(path)
 	)}
 >
 	<ArticleCard page={{

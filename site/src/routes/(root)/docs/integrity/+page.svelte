@@ -22,4 +22,4 @@ import { ArticleArray } from "#parts/page";
 <Header title="Integrating *Integrity*" capt="Uncovering the derivation of Integrity" />
 
 
-<ArticleArray paths={Site.index["integrating-integrity"].pages} />
+<ArticleArray paths={Site.tags["integrating-integrity"]} />

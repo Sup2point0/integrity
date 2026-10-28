@@ -9,10 +9,10 @@ import site_pages from "./src/data/site.json" with { type: "json" };
 import dyna_scriptures from "./src/data/dyna-scriptures.json" with { type: "json" };
 
 
-function get_paths_of_index(index)
+function get_paths_of_tag(tag)
 {
 	return (
-		Object.values(site_pages.index[index].pages)
+		Object.values(site_pages.tags[tag].pages)
 			.map(path => site_pages.pages[path])
 			.map(page => `/${page.dest}`)
 	);
@@ -48,8 +48,8 @@ const svelte_config =
 				"/speedrun/finish",
 				"/trails/integrity",
 
-				...get_paths_of_index("graph-drawing"),
-				...get_paths_of_index("library"),
+				...get_paths_of_tag("graph-drawing"),
+				...get_paths_of_tag("library"),
 
 				...(Object.entries(dyna_scriptures).flatMap(
 					([chapter, pages]) => Object.keys(pages).map(

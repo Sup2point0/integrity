@@ -22,5 +22,5 @@ import { ArticleArray } from "#parts/page";
 
 
 <ArticleArray
-	paths={Site.index["desmos-docs"].pages}
+	paths={Site.tags["desmos-docs"]}
 />

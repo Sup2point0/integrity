@@ -20,5 +20,5 @@ import { ArticleArray } from "#parts/page";
 
 
 <section>
-	<ArticleArray paths={Site.index.special.pages} />
+	<ArticleArray paths={Site.tags.special.pages} />
 </section>

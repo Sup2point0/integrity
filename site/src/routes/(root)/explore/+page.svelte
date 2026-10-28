@@ -224,8 +224,8 @@ import { base } from "$app/paths";
 	<section>
 		<h3> Functions </h3>
 		<div class="links">
-			{#each Site.index.library.pages.filter(path => (
-				Site.index.functions.pages.includes(path)
+			{#each Site.tags.library.filter(path => (
+				Site.tags.functions.includes(path)
 			)) as path}
 				{@const page = Site.pages[path]}
 
@@ -239,8 +239,8 @@ import { base } from "$app/paths";
 	<section>
 		<h3> Rendering </h3>
 		<div class="links">
-			{#each Site.index.library.pages.filter(path => (
-				Site.index.rendering.pages.includes(path)
+			{#each Site.tags.library.filter(path => (
+				Site.tags.rendering.includes(path)
 			)) as path}
 				{@const page = Site.pages[path]}
 

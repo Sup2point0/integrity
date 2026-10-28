@@ -9,7 +9,7 @@ export async function load({ url, params })
 	let dest = url.pathname.slice(1);
 	
 	let path = Object.entries(Site.pages).find(
-		([_, data]) => data.dest === dest || `integrity/${data.dest}` === dest
+		([_, page]) => page.destination === dest || `integrity/${page.destination}` === dest
 	)?.at(0);
 
 	if (path == undefined) {

@@ -1,7 +1,7 @@
 export { dyna_scriptures } from "#scripts/data/dyna-scriptures";
 
 import { questions } from "#scripts/data/questions";
-import { pages, index, scriptures } from "#scripts/data/pages";
+import { pages, tags, scriptures } from "#scripts/data/pages";
 import { Topic, TOPIC_DISPLAY_NAMES } from "#scripts/types";
 import type { Question, QuestionsData, Page, url } from "#scripts/types";
 
@@ -12,10 +12,7 @@ interface SiteData
 	root: url;
 
 	pages: Record<string, Page | undefined>;
-	index: Record<string, {
-		route: string | null;
-		pages: string[];
-	}>;
+	tags: Record<string, string[]>;
 	questions: QuestionsData;
 
 	display_topic: (topic: Topic) => string;
@@ -33,7 +30,7 @@ export const Site: SiteData =
 	root: "https://sup2point0.github.io/integrity",
 
 	pages,
-	index,
+	tags,
 	questions,
 
 	display_topic: (topic: Topic | null | undefined): string => {

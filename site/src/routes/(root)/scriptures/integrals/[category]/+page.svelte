@@ -32,6 +32,6 @@ let { content, metadata: data } = $derived(page.data);
 
 <Line />
 
-<ArticleArray paths={(Site.index[data.category]?.pages ?? []).filter(
-	path => Site.index.integrals.pages.includes(path)
+<ArticleArray paths={(Site.tags[data.category] ?? []).filter(
+	path => Site.tags.integrals.includes(path)
 )} />

@@ -3,7 +3,7 @@ import type { Page } from "#scripts/types";
 
 import pages_data from "#src/data/site.json" with { type: "json" };
 export const pages = pages_data.pages;
-export const index = pages_data.index;
+export const tags = pages_data.tags;
 export const scriptures = find_scriptures(pages);
 
 
@@ -21,8 +21,8 @@ function find_scriptures(raw: object): SiteScriptures
 	for (let p of Object.values(raw)) {
 		let page = p as Page;
 
-		if (page.index?.includes("scriptures")) {
-			let topic = page.index[1];
+		if (page.tags?.includes("scriptures")) {
+			let topic = page.tags[1];
 
 			out[topic] ??= [];
 			out[topic].push(page);
