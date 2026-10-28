@@ -1,10 +1,10 @@
 # squark
-~content.svx
+src/routes/(root)/**/+page.svx
+src/routes/(root)/**/+page.ts
 
 site.json
 questions.json
 dyna-scriptures.json
-scss-config.js
 
 # output
 static/
