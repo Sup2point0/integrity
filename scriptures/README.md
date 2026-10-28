@@ -1,6 +1,7 @@
 # Scriptures
 <!-- #SQUARK live!
 | dest = scriptures
+| desc = Walkthroughs and showerthoughts on mathematics
 -->
 
 Welcome to the *Integrity* scriptures. Here you’ll find my walkthroughs, showerthoughts, and adventures in various mathematical topics.

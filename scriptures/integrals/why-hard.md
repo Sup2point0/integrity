@@ -1,10 +1,14 @@
 # Why Is Integration Difficult?
 <!-- #SQUARK live! opin! dev!
-| dest = scriptures/integrals/why-hard
+| dest = scriptures/integrals/general/why-hard
 | capt = You can learn to differentiate in a day, but you can’t learn to integrate in a lifetime.
 | tags = scriptures / integrals / general
 | date = 2025 January 8
 | update = 2025 December 18
+---
+| continue-reading =
+    / scriptures/integrals/why.md
+    / scriptures/integrals/how.md
 -->
 
 The [Fundamental Theorem of Calculus<sup>↗</sup>](https://wikipedia.org/wiki/Fundamental_theorem_of_calculus) says that *integration* and *differentiation* are the inverses of each other. So why is it that integration is extraordinarily, incomparably more difficult[^difficult-nontrivial] than differentiation?

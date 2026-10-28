@@ -1,10 +1,14 @@
 # Why Integrate?
 <!-- #SQUARK live! opin!
-| dest = scriptures/integrals/why
+| dest = scriptures/integrals/general/why
 | capt = Integration is love, integration is life
 | tags = scriptures / integrals / general
 | date = 2025 April 17
 | update = 2026 January 1
+---
+| continue-reading =
+    / scriptures/integrals/why-hard.md
+    / scriptures/integrals/how.md
 -->
 
 **Integration** is one of, if not *the* most, sophisticated of mathematical pleasures. It’s the ultimate adventure of problem-solving, engineering and creativity. It’s an elaborate dance of mathematical warfare. It’s a lifelong journey of learning and experience, upon which we are forever taking finite steps. It is, quite simply, an art.

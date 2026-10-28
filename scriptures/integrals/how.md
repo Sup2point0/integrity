@@ -1,9 +1,13 @@
 # How Do We Integrate?
 <!-- #SQUARK live! dev!
-| dest = scriptures/integrals/how
+| dest = scriptures/integrals/general/how
 | capt = The Art & Strategy of Integration
 | tags = scriptures / integrals / general
 | date = 2025 January 21
+---
+| continue-reading =
+    / scriptures/integrals/why-hard.md
+    / scriptures/integrals/why.md
 -->
 
 Integration is an art. It’s not dissimilar to topics such as programming, organic chemistry, or music theory. For those who haven’t yet started learning it, integration can appear complicated, daunting and perhaps impressive, even. You look at integrals and think “How in the world will I ever be able to integrate that.”
