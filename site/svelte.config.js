@@ -69,7 +69,14 @@ const svelte_config =
 		mdsvex(mdsvex_config),
 		sveltePreprocess({
 			extensions: [".svelte"],
-			scss: scss_config,
+			scss: {
+				prependData: `
+					@use './src/styles/mixins/~fonts.scss' as *;
+					@use './src/styles/mixins/~links.scss' as *;
+					@use './src/styles/mixins/~colours.scss' as *;
+					@use './src/styles/mixins/~interact.scss' as *;
+				`,
+			},
 		}),
 	],
 	
