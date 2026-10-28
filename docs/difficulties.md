@@ -5,7 +5,7 @@
 | tags = docs
 | date = 2025 June 23
 | update = 2026 March 20
-| clean = breaks
+| clean = line-breaks
 -->
 
 One of the most popular feature requests on *Integrity* was assigning difficulty levels to questions.

@@ -1,5 +1,5 @@
 import type { PageData } from "stranger-quarkdown";
-export type Page = PageData<"long">;
+export type Page = PageData<"long">;  // TODO rename to `PageData`?
 
 export type * from "./root";
 
