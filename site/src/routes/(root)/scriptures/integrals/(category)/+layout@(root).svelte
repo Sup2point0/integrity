@@ -1,37 +1,35 @@
-<script>
+<script lang="ts">
 
 import Site from "#scripts/site";
 import { capitalise } from "#scripts/utils";
+import type { Page } from "#scripts/types";
 
-import { Breadcrumbs, Header, Meta } from "#parts/core";
+import { Breadcrumbs, Header } from "#parts/core";
 import { ArticleArray, Line } from "#parts/page";
 
 import { page } from "$app/state";
 
 
-let { content, metadata: data } = $derived(page.data);
+let { children } = $props();
 
 </script>
-
-
-<Meta title={data.title} desc={data.description} />
 
 
 <Breadcrumbs levels={[
 	{ text: "Scriptures", intern: "scriptures" },
 	{ text: "Integration", intern: "scriptures/integrals" },
-	{ text: capitalise(data.title) }
+	{ text: capitalise(page.data.title) }
 ]} />
 
-<Header page={data} />
+<Header page={page.data as Page} />
 
 
 <article>
-	{@render content?.()}
+	{@render children?.()}
 </article>
 
 <Line />
 
-<ArticleArray paths={(Site.tags[data.category] ?? []).filter(
+<ArticleArray paths={(Site.tags[page.data.heading.toLowerCase()] ?? []).filter(
 	path => Site.tags.integrals.includes(path)
 )} />

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 
 import PageContent from "#parts/base/static-page.svelte";
 
@@ -8,17 +8,8 @@ let { children } = $props();
 
 
 <PageContent parent_levels={[
-	{ text: "Info", intern: "info" }
-]} id="faq">
+	{ text: "Scriptures", intern: "scriptures" },
+	{ text: "Special", intern: "scriptures/special" },
+]}>
 	{@render children?.()}
 </PageContent>
-
-
-<style lang="scss">
-
-:global(article#faq h3) {
-	margin-top: 1.5em;
-	color: $col-deut;
-}
-
-</style>

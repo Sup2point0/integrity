@@ -28,7 +28,7 @@ import { ArticleArray } from "#parts/page";
 
 	<!-- TODO -->
 	<ArticleArray pages={[
-		{ dest: "scriptures/graph-drawing/dyna/multiplication", head: "Multiplication as Scaling" },
+		{ destination: "scriptures/graph-drawing/dyna/multiplication", heading: "Multiplication as Scaling" },
 	]} />
 </section>
 
