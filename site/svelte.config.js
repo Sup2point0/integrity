@@ -48,7 +48,6 @@ const svelte_config =
 				"/trails/integrity",
 
 				...get_paths_of_tag("graph-drawing"),
-				...get_paths_of_tag("library"),
 
 				...(Object.entries(dyna_scriptures).flatMap(
 					([chapter, pages]) => Object.keys(pages).map(

@@ -54,7 +54,7 @@ let show_mobile_dropdown = $state(false);
 			<Link text="Your Data" intern="data" />
 		</NavLink>
 
-		<NavLink text="Docs" intern="docs" collapse={true} hot={true}>
+		<NavLink text="Docs" intern="docs" collapse={true}>
 			<Link text="Questions" intern="docs/questions" />
 			<Link text="Integrals" intern="docs/integrals" />
 			<Link text="Difficulties" intern="docs/difficulties" />
@@ -62,7 +62,7 @@ let show_mobile_dropdown = $state(false);
 			<Link text="Tags" intern="docs/tags" />
 			<Link text="Speedrun" intern="docs/speedrun" />
 			<Link text="Fun Facts" intern="docs/fun-facts" />
-			<Link text="Integrating Integrity" intern="docs/integrity" hot={true} />
+			<Link text="Integrating Integrity" intern="docs/integrity" />
 		</NavLink>
 
 		<NavLink text="Scriptures" intern="scriptures">
@@ -120,7 +120,7 @@ let show_mobile_dropdown = $state(false);
 	<NavLink text="Explore" intern="explore" mobile={true} />
 	<NavLink text="Docs" intern="docs" mobile={true} />
 	<NavLink text="Scriptures" intern="scriptures" mobile={true} />
-	<NavLink text="Desmos" intern="desmos" mobile={true} hot={true} />
+	<NavLink text="Desmos" intern="desmos" mobile={true} />
 	<NavLink text="Fun" intern="fun" mobile={true} />
 	<NavLink text="Info" intern="info" mobile={true} />
 	<NavLink text="GitHub" extern="https://github.com/Sup2point0/integrity">
