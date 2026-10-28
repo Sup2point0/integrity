@@ -1,10 +1,11 @@
 <script lang="ts">
 
-import Content from "./~content.svx";
-
 import { Breadcrumbs, Header, Meta } from "#parts/core";
 import { Line } from "#parts/page";
 import { Card, CardsContainer } from "#parts/ui";
+
+
+let { children } = $props();
 
 </script>
 
@@ -21,7 +22,7 @@ import { Card, CardsContainer } from "#parts/ui";
 
 
 <article>
-	<Content />
+	{@render children?.()}
 </article>
 
 <Line />

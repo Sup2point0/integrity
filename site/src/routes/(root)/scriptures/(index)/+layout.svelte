@@ -2,17 +2,11 @@
 
 import Site from "#scripts/site";
 
-import Content from "#src/../../scriptures/README.md";
-
-import { Breadcrumbs, Header, Meta } from "#parts/core";
+import { Breadcrumbs, Header } from "#parts/core";
 import { ArticleArray, Line } from "#parts/page";
 import { Card } from "#parts/ui";
 
 </script>
-
-
-<Meta title="Scriptures" desc="Walkthroughs and showerthoughts on mathematics" />
-
 
 <Breadcrumbs levels={[
 	{ text: "Integrity", link: Site.root },
@@ -23,7 +17,7 @@ import { Card } from "#parts/ui";
 
 
 <article>
-	<Content />
+	{@render $props().children?.()}
 </article>
 
 <Line />
