@@ -4,7 +4,7 @@
 | capt = Frequently Asked Questions
 | desc = Frequently asked questions about Integrity
 | tags = info
-| update = 2025 December 16
+| update = 2026 October 28
 -->
 
 ### What’s *Integrity* for?
@@ -116,6 +116,6 @@ Nope, ofc not ;D
 *Integrity* is an ever-ongoing project. Somehow, I always have more to fix, more to optimise, and more importantly, more to add!
 
 ### Are you still writing questions?
-At time of writing, yes! Just nowhere near as often as I used to, as so many other things are occupying my time.
+At time of writing, not really... too many other things are occupying my time =(
 
-Also, watch out for random dumps of large amounts of questions out of the blue, when I finally get round to copying them from Desmos over to *Integrity* xD
+That being said, do watch out for random dumps of large amounts of questions out of the blue, when I finally get round to copying them from Desmos over to *Integrity* xD
