@@ -1,9 +1,7 @@
-require_relative "../../.stranger-quarkdown/squarkdown/utils/log"
-log "exporting questions..."
-
 require "json"
 require "pathname"
 
+require_relative "colours"
 require_relative "process"
 
 
@@ -14,7 +12,7 @@ def execute(source, dest)
 	i = 1
 
 	source.each do |file|
-		log "#{i}#{GREY} of #{total}: #{WHITE}#{file.parent.basename}#{GREY}/#{BLUE}#{file.basename}"
+		puts "#{YELLOW}#{i}#{GREY} of #{total}: #{WHITE}#{file.parent.basename}#{GREY}/#{BLUE}#{file.basename}"
 		
 		shard = file.basename(".*").to_s
 
@@ -46,17 +44,17 @@ end
 
 
 ## run
-log "finding question files..."
+puts "#{PINK}finding question files..."
 
 ROOT = Pathname(__dir__).parent.parent
 
 questions = (ROOT/"questions").glob("**/*-*.md")
-log success: "found #{questions.length} question files!"
+puts "#{PINK}found #{questions.length} question files!"
 execute(questions, ROOT/"site/src/data/questions.json")
 
 desmos = (ROOT/"desmos/gamedev").glob("*/**/[!~]**.md")
 graphs = (ROOT/"scriptures/graph-drawing/dyna").glob("*~.md")
 scriptures = desmos + graphs
 
-log success: "found #{scriptures.length} dynamic scripture files!"
+puts "#{PINK}found #{scriptures.length} dynamic scripture files!"
 execute(scriptures, ROOT/"site/src/data/dyna-scriptures.json")
