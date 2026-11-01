@@ -7,6 +7,10 @@
   text-decoration: none;
   transition: color 0.12s ease-out;
 
+  &.broken-link {
+    color: $col-no;
+  }
+
   &:hover, &:focus {
     color: $col-deut-fallback;
     color: $col-deut;
@@ -33,6 +37,9 @@
     transform: scaleX(1);
     transform-origin: center;
     transition: all 0.12s ease-out;
+  }
+  &.broken-link::after {
+    background: $col-no;
   }
 
   &:hover, &:focus {
