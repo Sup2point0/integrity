@@ -19,28 +19,12 @@ jobs:
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v7
-        with:
-          submodules: recursive
 
-      - name: 'Setup Ruby (squarkdown)'
-        uses: ruby/setup-ruby@v1
-        with:
-          working-directory: './.stranger-quarkdown/'
-          bundler-cache: true
-
-      - name: '› npm run squarkx'
-        run: |
-          npm run squarkx
-
-      - name: 'Setup Ruby (prep)'
+      - name: 'Setup Ruby'
         uses: ruby/setup-ruby@v1
         with:
           working-directory: './site/prep/'
           bundler-cache: true
-
-      - name: '› npm run export'
-        run: |
-          npm run export
 
       - name: 'Setup Node'
         uses: actions/setup-node@v7
@@ -48,19 +32,19 @@ jobs:
           cache: 'npm'
           cache-dependency-path: './site/package-lock.json'
 
-      - name: '› npm ci'
-        run: |
-          npm ci
-
       - name: '› npm audit'
         run: |
           npm audit --audit-level=moderate
 
-      - name: '› npm run build'
+      - name: '› npm ci'
+        run: |
+          npm ci
+
+      - name: '› npm run buildx'
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
-          npm run build
+          npm run buildx
 
       - name: '› npm run test'
         run: |
