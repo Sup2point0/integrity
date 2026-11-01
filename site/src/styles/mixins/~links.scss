@@ -7,7 +7,7 @@
   text-decoration: none;
   transition: color 0.12s ease-out;
 
-  &.broken-link {
+  &.dead-link {
     color: $col-no;
   }
 
@@ -38,7 +38,7 @@
     transform-origin: center;
     transition: all 0.12s ease-out;
   }
-  &.broken-link::after {
+  &.dead-link::after {
     background: $col-no;
   }
 
