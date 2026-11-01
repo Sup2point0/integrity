@@ -1,11 +1,11 @@
-import { Question } from "#scripts/types";
+import { Question, Topic } from "#scripts/types";
 
 
 export function inject_question(desmos: any, question: Question)
 {
 	switch (question.topic)
 	{
-		case "integrals": {
+		case Topic.INTEGRALS: {
 			let content = Question.sanitise(question.question.content) ?? "error";
 
 			if (!question.flags.includes("definite")) {
@@ -36,9 +36,9 @@ export function inject_question(desmos: any, question: Question)
 	}
 }
 
-export const presets: Record<string, Desmos.ExpressionState[]> =
+export const presets: Record<Topic, Desmos.ExpressionState[]> =
 {
-	"integrals": [
+	[Topic.INTEGRALS]: [
 		{ id: "integrals-title-1", type: "text",
 			text: `== Integrity Indefinite Integral Checker ==`,
 		},
@@ -109,7 +109,7 @@ export const presets: Record<string, Desmos.ExpressionState[]> =
 			text: `If the difference is 0 (or very, very small), your answer is most likely correct!`,
 		},
 	],
-	"complete-square": [
+	[Topic.COMPLETE_SQUARE]: [
 		{ id: "complete-square-title-1", type: "text",
 			text: `== Integrity Completing the Square Checker =="`,
 		},

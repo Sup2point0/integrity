@@ -14,10 +14,11 @@ import { expoIn } from "svelte/easing";
 let comp = $state(false);
 
 let lattice = $state(
-	Array.from({ length: 11 }, (_, x) => Array.from({ length: 10 }, (_, y) => (
-		x === 0 ? false :
-		Math.random() > 0.69 ? true : false
-	)))
+	Array.from({ length: 11 }, (_, x) =>
+		Array.from({ length: 10 }, (_, y) => (
+			x === 0 ? false : Math.random() > 0.69
+		))
+	)
 );
 
 const np = [
