@@ -4,7 +4,6 @@ import { mdsvex } from "mdsvex";
 
 import mdsvex_config from "./config/mdsvex-config.js";
 
-import site_pages from "./src/data/site.json" with { type: "json" };
 import dyna_scriptures from "./src/data/dyna-scriptures.json" with { type: "json" };
 
 
