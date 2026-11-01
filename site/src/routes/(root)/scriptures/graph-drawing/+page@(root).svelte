@@ -3,7 +3,8 @@
 import Site from "#scripts/site";
 
 import { Meta, Breadcrumbs, Header } from "#parts/core";
-import { ArticleArray } from "#parts/page";
+import { Card, CardsContainer } from "#parts/ui";
+import { ArticleArray, Line } from "#parts/page";
 
 </script>
 
@@ -36,6 +37,14 @@ import { ArticleArray } from "#parts/page";
 	<h2> Collections </h2>
 	<ArticleArray paths={Site.tags.collections.filter(path => Site.tags["graph-drawing"].includes(path))} />
 </section>
+
+<Line />
+
+<CardsContainer>
+	<Card title="Collections"
+		intern="scriptures/graph-drawing/collections"
+	/>
+</CardsContainer>
 
 
 <style lang="scss">
