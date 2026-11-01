@@ -38,11 +38,6 @@
 - [Cool Graphs](https://sup2point0.github.io/integrity/questions/cool-graphs)
 - [Completing the Square](https://sup2point0.github.io/integrity/questions/complete-square)
 
-### Tooling
-- Parsing engine to extract questions and content from Markdown files
-- Parsing engine for custom LaTeX-like syntax for controlling Desmos embeds
-
-
 <br>
 
 
@@ -81,7 +76,7 @@ If you want to submit content, I won’t be taking it, since *Integrity* is an i
 If you just want to chat about maths, well, I’m always more than happy to do that >:)
 
 ### Licence
-See [Licence](https://sup2point0.github.io/integrity/info/licence). CC BY-SA for the written content, MIT for the questions and source code.
+See [Licence](https://sup2point0.github.io/integrity/info/licence). **CC BY-SA** for the written content, **MIT** for the questions and source code.
 
 
 <br>
