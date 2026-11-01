@@ -46,7 +46,7 @@ let show_mobile_dropdown = $state(false);
 				window.location.href = `${base}/question/${pick_random_question()}`;
 			}} />
 			<Link text="Random Scripture" action={() => {
-				goto(`/${pick_random_scripture()}`);
+				goto(`${base}/${pick_random_scripture()}`);
 			}} />
 			<Link text="Workspace" intern="workspace" />
 			<Link text="Speedrun" intern="speedrun" dev={true} />
