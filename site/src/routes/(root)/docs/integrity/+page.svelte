@@ -15,7 +15,7 @@ import { ArticleArray } from "#parts/page";
 
 <Breadcrumbs levels={[
 	{ text: "Integrity", link: Site.root },
-	{ text: "Docs", link: "docs" },
+	{ text: "Docs", intern: "docs" },
 	{ text: "Integrating Integrity" },
 ]} />
 
