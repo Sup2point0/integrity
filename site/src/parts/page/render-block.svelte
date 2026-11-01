@@ -19,7 +19,7 @@ import { Desmos, Katex } from "#parts/ui";
 
 interface Props {
 	source?:
-		string | string[]
+		  string | string[]
 		| Block | Block[];
 }
 
@@ -65,13 +65,8 @@ const plugins = [
 		{#each source as each}
 			{@render block(each)}
 		{/each}
-
-	{:else if source}
+	{:else if source != undefined}
 		{@render block(source)}
-
-	{:else}
-		{@const _ = console.warn("Integrity: <RenderBlock> received nothing to render")}
-
 	{/if}
 </div>
 
