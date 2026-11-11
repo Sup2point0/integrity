@@ -24,8 +24,9 @@ jobs:
       - name: 'Setup Ruby'
         uses: ruby/setup-ruby@v1
         with:
-          working-directory: './site/prep/'
+          ruby-version: '3.4'
           bundler-cache: true
+          working-directory: './site/prep/'
 
       - name: 'Setup Node'
         uses: actions/setup-node@v7
