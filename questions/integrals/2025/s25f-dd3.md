@@ -60,11 +60,11 @@ Especially if the limits are $0$ and/or $\infin$.
 ### Reshape
 ```math
 \begin{align*}
-  &\ \int_{-\infty}^{0}\frac{1}{\sqrt{-x}}4^{x}\ dx
-  \\ =&\ \int_{\sqrt{\infty}}^{\sqrt{0}}\frac{1}{t}4^{-t^{2}}\cdot-2t\ dt
-  \\ =&\ -2\int_{\infty}^{0}4^{-t^{2}}\ dt
-  \\ =&\ 2\int_{0}^{\infty}e^{-\left(\ln4\right)t^{2}}\ dt
-  \\ =&\ \int_{-\infty}^{\infty}e^{-\left(t\sqrt{\ln4}\right)^{2}}\ dt
+  &\ \int_{-\infin}^{0}\frac{1}{\sqrt{-x}}4^{x}\ dx
+  \\ =&\ \int_{\sqrt{\infin}}^{\sqrt{0}}\frac{1}{t}4^{-t^{2}}\cdot-2t\ dt
+  \\ =&\ -2\int_{\infin}^{0}4^{-t^{2}}\ dt
+  \\ =&\ 2\int_{0}^{\infin}e^{-\left(\ln4\right)t^{2}}\ dt
+  \\ =&\ \int_{-\infin}^{\infin}e^{-\left(t\sqrt{\ln4}\right)^{2}}\ dt
 \end{align*}
 ```
 
@@ -80,7 +80,7 @@ Especially if the limits are $0$ and/or $\infin$.
 ### Solve
 ```math
 \begin{align*}
-  &= \frac{1}{\sqrt{\ln4}}\int_{-\infty}^{\infty}e^{-v^{2}}\ dv
+  &= \frac{1}{\sqrt{\ln4}}\int_{-\infin}^{\infin}e^{-v^{2}}\ dv
   \\ &= \frac{1}{\sqrt{\ln4}}\sqrt{\pi}
   \\ &= \sqrt{\frac{\pi}{\ln4}}
 \end{align*}

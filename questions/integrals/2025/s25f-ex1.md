@@ -14,7 +14,7 @@ methods:
 
 ## Question
 ```math
-\int_{-\infty}^{\infty}exe^{-x^{2}}\ dx
+\int_{-\infin}^{\infin}exe^{-x^{2}}\ dx
 ```
 
 
@@ -26,8 +26,8 @@ $0$
 
 ```math
 \begin{align*}
-  &\ \int_{-\infty}^{\infty}exe^{-x^{2}}\ dx
-  \\ =&\ e\int_{-\infty}^{\infty}xe^{-x^{2}}\ dx
+  &\ \int_{-\infin}^{\infin}exe^{-x^{2}}\ dx
+  \\ =&\ e\int_{-\infin}^{\infin}xe^{-x^{2}}\ dx
 \end{align*}
 ```
 

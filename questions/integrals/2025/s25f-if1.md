@@ -16,7 +16,7 @@ flags:
 
 ## Question
 ```math
-\int_{1}^{\infty}\frac{\ln\left(x-1\right)}{x^{2}-2x+2}\ dx
+\int_{1}^{\infin}\frac{\ln\left(x-1\right)}{x^{2}-2x+2}\ dx
 ```
 
 
@@ -41,9 +41,9 @@ $0$
 ### Reshape
 ```math
 \begin{align*}
-  &\ \int_{1}^{\infty}\frac{\ln\left(x-1\right)}{x^{2}-2x+2}\ dx
-  \\ =&\ \int_{1}^{\infty}\frac{\ln\left(x-1\right)}{\left(x-1\right)^{2}-1+2}\ dx
-  \\ =&\ \int_{1}^{\infty}\frac{\ln\left(x-1\right)}{\left(x-1\right)^{2}+1}\ dx
+  &\ \int_{1}^{\infin}\frac{\ln\left(x-1\right)}{x^{2}-2x+2}\ dx
+  \\ =&\ \int_{1}^{\infin}\frac{\ln\left(x-1\right)}{\left(x-1\right)^{2}-1+2}\ dx
+  \\ =&\ \int_{1}^{\infin}\frac{\ln\left(x-1\right)}{\left(x-1\right)^{2}+1}\ dx
 \end{align*}
 ```
 
@@ -59,7 +59,7 @@ $0$
 ### Simplify
 ```math
 \begin{align*}
-  &= \int_{\tan^{-1}\left(1-1\right)}^{\tan^{-1}\left(\infty-1\right)}\ln\left(\tan t\right)\ dt
+  &= \int_{\tan^{-1}\left(1-1\right)}^{\tan^{-1}\left(\infin-1\right)}\ln\left(\tan t\right)\ dt
   \\ &= \int_{0}^{\pi/2}\ln\left(\tan t\right)\ dt
   \\ &= \int_{0}^{\pi/2}\ln\left(\sin t\right)-\ln\left(\cos t\right)\ dt
   \\ &= \int_{0}^{\pi/2}\ln\left(\sin t\right)dt-\int_{0}^{\pi/2}\ln\left(\cos t\right)\ dt

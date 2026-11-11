@@ -50,11 +50,11 @@ $0$
 ### Reshape
 ```math
 \begin{align*}
-  &\ \int_{0}^{\infty}\frac{1}{x\ln x}\ dx
-  \\ =&\ \int_{\infty}^{0}\frac{1}{\left(\frac{1}{t}\right)\ln\left(\frac{1}{t}\right)}\cdot-\frac{1}{t^{2}}\ dt
-  \\ =&\ \int_{0}^{\infty}\frac{1}{t^{2}\left(\frac{1}{t}\right)\ln\left(\frac{1}{t}\right)}\ dt
-  \\ =&\ \int_{0}^{\infty}\frac{1}{t\ln\left(t^{-1}\right)}\ dt
-  \\ =&\ -\int_{0}^{\infty}\frac{1}{t\ln\left(t\right)}\ dt
+  &\ \int_{0}^{\infin}\frac{1}{x\ln x}\ dx
+  \\ =&\ \int_{\infin}^{0}\frac{1}{\left(\frac{1}{t}\right)\ln\left(\frac{1}{t}\right)}\cdot-\frac{1}{t^{2}}\ dt
+  \\ =&\ \int_{0}^{\infin}\frac{1}{t^{2}\left(\frac{1}{t}\right)\ln\left(\frac{1}{t}\right)}\ dt
+  \\ =&\ \int_{0}^{\infin}\frac{1}{t\ln\left(t^{-1}\right)}\ dt
+  \\ =&\ -\int_{0}^{\infin}\frac{1}{t\ln\left(t\right)}\ dt
 \end{align*}
 ```
 
@@ -62,7 +62,7 @@ $0$
 
 ```math
 \begin{align*}
-  \int_{0}^{\infty}\frac{1}{x\ln x}\ dx &= -\int_{0}^{\infty}\frac{1}{t\ln\left(t\right)}\ dt
-  \\ \Rightarrow \int_{0}^{\infty}\frac{1}{x\ln x}\ dx &= 0
+  \int_{0}^{\infin}\frac{1}{x\ln x}\ dx &= -\int_{0}^{\infin}\frac{1}{t\ln\left(t\right)}\ dt
+  \\ \Rightarrow \int_{0}^{\infin}\frac{1}{x\ln x}\ dx &= 0
 \end{align*}
 ```

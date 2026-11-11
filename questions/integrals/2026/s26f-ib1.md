@@ -17,7 +17,7 @@ methods:
 
 ## Question
 ```math
-\int_{1}^{\infty}
+\int_{1}^{\infin}
   \frac{\sqrt{\pi}^{\lfloor x \rfloor}}{\lfloor x \rfloor!}
 \ dx
 ```
@@ -51,15 +51,15 @@ Because all terms of $x$ are $\lfloor x \rfloor$, we can convert the integral to
 
 ```math
 \begin{align*}
-  &\ \int_{1}^{\infty} \frac{\sqrt{\pi}^{\lfloor x \rfloor}}{\lfloor x \rfloor!} \ dx
-  \\ =&\ \sum_{n=1}^{\infty}\frac{\sqrt{\pi}^{x}}{x!}
+  &\ \int_{1}^{\infin} \frac{\sqrt{\pi}^{\lfloor x \rfloor}}{\lfloor x \rfloor!} \ dx
+  \\ =&\ \sum_{n=1}^{\infin}\frac{\sqrt{\pi}^{x}}{x!}
 \end{align*}
 ```
 
 Does this look familiar? Let’s expand the summation to start from $n = 0$:
 
 ```math
-= \left(\sum_{n=0}^{\infty}\frac{\sqrt{\pi}^{x}}{x!}\right)-\left.\frac{\pi^{x}}{x!}\right|_{x=0}
+= \left(\sum_{n=0}^{\infin}\frac{\sqrt{\pi}^{x}}{x!}\right)-\left.\frac{\pi^{x}}{x!}\right|_{x=0}
 ```
 
 Now recall the Taylor expansion of $e^x$:

@@ -16,7 +16,7 @@ flags:
 
 ## Question
 ```math
-\int_{0}^{\infty}\frac{1}{x^{\left(1+\ln x\right)}}\ dx
+\int_{0}^{\infin}\frac{1}{x^{\left(1+\ln x\right)}}\ dx
 ```
 
 
@@ -43,10 +43,10 @@ If in doubt, just substitute $\ln{x} = t$.
 ### Reshape
 ```math
 \begin{align*}
-  &\ \int_{0}^{\infty}\frac{1}{x^{\left(1+\ln x\right)}}\ dx
-  \\ =&\ \int_{0}^{\infty}\frac{1}{x}\cdot\frac{1}{x^{\ln x}}\ dx
-  \\ =&\ \int_{0}^{\infty}\frac{1}{x}x^{-\ln x}\ dx
-  \\ =&\ \int_{0}^{\infty}\frac{1}{x}e^{-\left(\ln x\right)^{2}}\ dx
+  &\ \int_{0}^{\infin}\frac{1}{x^{\left(1+\ln x\right)}}\ dx
+  \\ =&\ \int_{0}^{\infin}\frac{1}{x}\cdot\frac{1}{x^{\ln x}}\ dx
+  \\ =&\ \int_{0}^{\infin}\frac{1}{x}x^{-\ln x}\ dx
+  \\ =&\ \int_{0}^{\infin}\frac{1}{x}e^{-\left(\ln x\right)^{2}}\ dx
 \end{align*}
 ```
 
@@ -61,8 +61,8 @@ If in doubt, just substitute $\ln{x} = t$.
 ### Gaussian Integral
 ```math
 \begin{align*}
-  &= \int_{\ln\left(0\right)}^{\ln\left(\infty\right)}e^{-t^{2}}\ dt
-  \\ &= \int_{-\infty}^{\infty}e^{-t^{2}}\ dt
+  &= \int_{\ln\left(0\right)}^{\ln\left(\infin\right)}e^{-t^{2}}\ dt
+  \\ &= \int_{-\infin}^{\infin}e^{-t^{2}}\ dt
   \\ &= \sqrt{\pi}
 \end{align*}
 ```

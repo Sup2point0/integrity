@@ -16,7 +16,7 @@ flags:
 
 ## Question
 ```math
-\int_{0}^{\infty}\frac{\ln x}{\sqrt{x}\left(1+x\right)}\ dx
+\int_{0}^{\infin}\frac{\ln x}{\sqrt{x}\left(1+x\right)}\ dx
 ```
 
 
@@ -53,9 +53,9 @@ $0$
 ### Reshape
 ```math
 \begin{align*}
-  &\ \int_{0}^{\infty}\frac{\ln x}{\sqrt{x}\left(1+x\right)}\ dx
-  \\ =&\ \int_{\sqrt{0}}^{\sqrt{\infty}}\frac{\ln\left(t^{2}\right)}{t\left(1+t^{2}\right)}\cdot2t\ dt
-  \\ =&\ 4\int_{0}^{\infty}\frac{\ln t}{1+t^{2}}\ dt
+  &\ \int_{0}^{\infin}\frac{\ln x}{\sqrt{x}\left(1+x\right)}\ dx
+  \\ =&\ \int_{\sqrt{0}}^{\sqrt{\infin}}\frac{\ln\left(t^{2}\right)}{t\left(1+t^{2}\right)}\cdot2t\ dt
+  \\ =&\ 4\int_{0}^{\infin}\frac{\ln t}{1+t^{2}}\ dt
 \end{align*}
 ```
 
@@ -70,9 +70,9 @@ $0$
 ### Solve
 ```math
 \begin{align*}
-  &= 4\int_{1/0}^{1/\infty}\frac{\ln\left(1/v\right)}{1+1/v^{2}}\cdot-\frac{1}{v^{2}}\ dv
-  \\ &= -4\int_{\infty}^{0}\frac{-\ln v}{v^{2}+1}\ dv
-  \\ &= -4\int_{0}^{\infty}\frac{\ln v}{v^{2}+1}\ dv
+  &= 4\int_{1/0}^{1/\infin}\frac{\ln\left(1/v\right)}{1+1/v^{2}}\cdot-\frac{1}{v^{2}}\ dv
+  \\ &= -4\int_{\infin}^{0}\frac{-\ln v}{v^{2}+1}\ dv
+  \\ &= -4\int_{0}^{\infin}\frac{\ln v}{v^{2}+1}\ dv
 \end{align*}
 ```
 
@@ -80,9 +80,9 @@ Hence
 
 ```math
 \begin{align*}
-  4\int_{0}^{\infty}\frac{\ln t}{1+t^{2}}\ dt
-    &= -4\int_{0}^{\infty}\frac{\ln v}{v^{2}+1}\ dv
-  \\ 4\int_{0}^{\infty}\frac{\ln t}{1+t^{2}}\ dt &= 0
-  \\ \int_{0}^{\infty}\frac{\ln x}{\sqrt{x}\left(1+x\right)}\ dx &= 0
+  4\int_{0}^{\infin}\frac{\ln t}{1+t^{2}}\ dt
+    &= -4\int_{0}^{\infin}\frac{\ln v}{v^{2}+1}\ dv
+  \\ 4\int_{0}^{\infin}\frac{\ln t}{1+t^{2}}\ dt &= 0
+  \\ \int_{0}^{\infin}\frac{\ln x}{\sqrt{x}\left(1+x\right)}\ dx &= 0
 \end{align*}
 ```

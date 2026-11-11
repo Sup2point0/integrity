@@ -50,9 +50,9 @@ $e$
 
 ```math
 \begin{align*}
-  &\ \int_{0}^{\infty}\frac{\pi^{\lfloor x \rfloor}e^{1-\pi}}{\lceil x-1 \rceil!}\ dx
-  \\ =&\ \int_{0}^{\infty}\frac{\pi^{\lfloor x \rfloor}e^{1}e^{-\pi}}{\lceil x-1 \rceil!}\ dx
-  \\ =&\ e\int_{0}^{\infty}\frac{\pi^{\lfloor x \rfloor}e^{-\pi}}{\lceil x-1 \rceil!}\ dx
+  &\ \int_{0}^{\infin}\frac{\pi^{\lfloor x \rfloor}e^{1-\pi}}{\lceil x-1 \rceil!}\ dx
+  \\ =&\ \int_{0}^{\infin}\frac{\pi^{\lfloor x \rfloor}e^{1}e^{-\pi}}{\lceil x-1 \rceil!}\ dx
+  \\ =&\ e\int_{0}^{\infin}\frac{\pi^{\lfloor x \rfloor}e^{-\pi}}{\lceil x-1 \rceil!}\ dx
 \end{align*}
 ```
 
@@ -69,9 +69,9 @@ Which gives
 
 ```math
 \begin{align*}
-  &= e\int_{0}^{\infty}\frac{\pi^{\lfloor x \rfloor}e^{-\pi}}{\lfloor x \rfloor!}\ dx
-  \\ &= e\sum_{n=0}^{\infty}\frac{\pi^{x}e^{-\pi}}{x!}
-  \\ &= e\sum_{n=0}^{\infty}\frac{\lambda^{x}}{x!}e^{-\lambda} \vert_{\lambda=\pi}
+  &= e\int_{0}^{\infin}\frac{\pi^{\lfloor x \rfloor}e^{-\pi}}{\lfloor x \rfloor!}\ dx
+  \\ &= e\sum_{n=0}^{\infin}\frac{\pi^{x}e^{-\pi}}{x!}
+  \\ &= e\sum_{n=0}^{\infin}\frac{\lambda^{x}}{x!}e^{-\lambda} \vert_{\lambda=\pi}
 \end{align*}
 ```
 

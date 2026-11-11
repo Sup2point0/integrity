@@ -83,7 +83,7 @@ The thing that probably jumps out most is the nested integral. Notice that this 
 
 ### Inner Integral
 ```math
-\int_{0}^{\infty}\frac{\ln y}{1+y^{2}}\ dy
+\int_{0}^{\infin}\frac{\ln y}{1+y^{2}}\ dy
 ```
 
 Trying to evaluate this integral indefinitely doesn’t work (you can try exp or trig sub, but they won’t lead anywhere), so there must be a trick for evaluating it definitely. A common trick with definite integrals involving $\ln{x}$ is to substitute $x = 1/t$:
@@ -99,11 +99,11 @@ When we substitute this in (remember to change our limits), something interestin
 
 ```math
 \begin{align*}
-  &= \int_{\infty}^{0}\frac{\ln\left(\frac{1}{t}\right)}{1+\left(\frac{1}{t}\right)^{2}}\cdot-\frac{1}{t^{2}}\ dt
-  \\ &= -\int_{\infty}^{0}\frac{\ln\left(t^{-1}\right)}{1+\frac{1}{t^{2}}}\cdot\frac{1}{t^{2}}\ dt
-  \\ &= -\int_{\infty}^{0}\frac{-\ln t}{t^{2}+1}\ dt
-  \\ &= \int_{\infty}^{0}\frac{\ln t}{1+t^{2}}\ dt
-  \\ &= -\int_{0}^{\infty}\frac{\ln t}{1+t^{2}}\ dt
+  &= \int_{\infin}^{0}\frac{\ln\left(\frac{1}{t}\right)}{1+\left(\frac{1}{t}\right)^{2}}\cdot-\frac{1}{t^{2}}\ dt
+  \\ &= -\int_{\infin}^{0}\frac{\ln\left(t^{-1}\right)}{1+\frac{1}{t^{2}}}\cdot\frac{1}{t^{2}}\ dt
+  \\ &= -\int_{\infin}^{0}\frac{-\ln t}{t^{2}+1}\ dt
+  \\ &= \int_{\infin}^{0}\frac{\ln t}{1+t^{2}}\ dt
+  \\ &= -\int_{0}^{\infin}\frac{\ln t}{1+t^{2}}\ dt
 \end{align*}
 ```
 
@@ -111,7 +111,7 @@ Note that the integrating variable in an integral can be anything – it doesn�
 
 ```math
 \begin{align*}
-  \int_{0}^{\infty}\frac{\ln x}{1+x^{2}}\ dx &= -\int_{0}^{\infty}\frac{\ln t}{1+t^{2}}\ dx
+  \int_{0}^{\infin}\frac{\ln x}{1+x^{2}}\ dx &= -\int_{0}^{\infin}\frac{\ln t}{1+t^{2}}\ dx
   \\ I &= -I
 \end{align*}
 ```
@@ -119,7 +119,7 @@ Note that the integrating variable in an integral can be anything – it doesn�
 What does this tell us? Well, the only real number which equals itself is $0$ – hence the integral must evaluate to $0$.
 
 ```math
-\int_{0}^{\infty}\frac{\ln x}{1+x^{2}}\ dx=0
+\int_{0}^{\infin}\frac{\ln x}{1+x^{2}}\ dx=0
 ```
 
 ### Product Rule
@@ -127,7 +127,7 @@ Well, this certainly simplifies things a lot. Both exponents of $e$ just collaps
 
 ```math
 \begin{align*}
-  &= \int \left[\frac{\cos x+x\sin x}{\cos x}\right]\left[\frac{x^{5}\sec\left(x\right)^{6}}{2\pi}\exp\left(\frac{4}{3}\pi x^{3}\int_{0}^{\infty}\frac{\ln y}{1+y^{2}}\ dy\right)+\frac{x^{3}\sec\left(x\right)^{4}}{\pi}\exp\left(4\pi x^{2}\int_{\infty}^{0}\frac{\ln y}{1+y^{2}}\ dy\right)\right]\ dx
+  &= \int \left[\frac{\cos x+x\sin x}{\cos x}\right]\left[\frac{x^{5}\sec\left(x\right)^{6}}{2\pi}\exp\left(\frac{4}{3}\pi x^{3}\int_{0}^{\infin}\frac{\ln y}{1+y^{2}}\ dy\right)+\frac{x^{3}\sec\left(x\right)^{4}}{\pi}\exp\left(4\pi x^{2}\int_{\infin}^{0}\frac{\ln y}{1+y^{2}}\ dy\right)\right]\ dx
   \\ &= \int \left[\frac{\cos x+x\sin x}{\cos x}\right]\left[\frac{x^{5}\sec\left(x\right)^{6}}{2\pi}e^{0}+\frac{x^{3}\sec\left(x\right)^{4}}{\pi}e^{0}\right]\ dx
   \\ &= \int \left[\frac{\cos x+x\sin x}{\cos x}\right]\left[\frac{x^{5}\sec\left(x\right)^{6}}{2\pi}+\frac{x^{3}\sec\left(x\right)^{4}}{\pi}\right]\ dx
 \end{align*}

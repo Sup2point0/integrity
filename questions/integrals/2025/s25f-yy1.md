@@ -18,7 +18,7 @@ flags:
 
 ## Question
 ```math
-\int_{0}^{\infty}
+\int_{0}^{\infin}
   \left(\frac{8^{x}\ 10^{x}\ 12^{x}}{7^{x}\ 9^{x}\ 11^{x}\ 13^{x}}\right)^{x}
 \ dx
 ```
@@ -52,11 +52,11 @@ The area under a non-normalised normal distribution is $\sqrt{\pi}$.
 ### Reshape
 ```math
 \begin{align*}
-  &\ \int_{0}^{\infty}\left(\frac{8^{x}\ 10^{x}\ 12^{x}}{7^{x}\ 9^{x}\ 11^{x}\ 13^{x}}\right)^{x}\ dx
-  \\ =&\ \int_{0}^{\infty}\left(\frac{e^{\left(\ln8\right)x}\ e^{\left(\ln10\right)x}\ e^{\left(\ln12\right)x}}{e^{\left(\ln7\right)x}\ e^{\left(\ln9\right)x}\ e^{\left(\ln11\right)x}\ e^{\left(\ln13\right)x}}\right)^{x}\ dx
-  \\ =&\ \int_{0}^{\infty}\left(\frac{e^{\left(\ln8+\ln10+\ln12\right)x}}{e^{\left(\ln7+\ln9+\ln11+\ln13\right)x}\ }\right)^{x}\ dx
-  \\ =&\ \int_{0}^{\infty}\left(e^{\left(\ln8+\ln10+\ln12-\ln7-\ln9-\ln11-\ln13\right)x}\right)^{x}\ dx
-  \\ =&\ \int_{0}^{\infty}e^{\left(\ln8+\ln10+\ln12-\ln7-\ln9-\ln11-\ln13\right)x^{2}}\ dx
+  &\ \int_{0}^{\infin}\left(\frac{8^{x}\ 10^{x}\ 12^{x}}{7^{x}\ 9^{x}\ 11^{x}\ 13^{x}}\right)^{x}\ dx
+  \\ =&\ \int_{0}^{\infin}\left(\frac{e^{\left(\ln8\right)x}\ e^{\left(\ln10\right)x}\ e^{\left(\ln12\right)x}}{e^{\left(\ln7\right)x}\ e^{\left(\ln9\right)x}\ e^{\left(\ln11\right)x}\ e^{\left(\ln13\right)x}}\right)^{x}\ dx
+  \\ =&\ \int_{0}^{\infin}\left(\frac{e^{\left(\ln8+\ln10+\ln12\right)x}}{e^{\left(\ln7+\ln9+\ln11+\ln13\right)x}\ }\right)^{x}\ dx
+  \\ =&\ \int_{0}^{\infin}\left(e^{\left(\ln8+\ln10+\ln12-\ln7-\ln9-\ln11-\ln13\right)x}\right)^{x}\ dx
+  \\ =&\ \int_{0}^{\infin}e^{\left(\ln8+\ln10+\ln12-\ln7-\ln9-\ln11-\ln13\right)x^{2}}\ dx
 \end{align*}
 ```
 
@@ -79,7 +79,7 @@ k < 0
 This means we have a gaussian integral:
 
 ```math
-\int_{0}^{\infty}e^{-\lambda x^{2}}\ dx
+\int_{0}^{\infin}e^{-\lambda x^{2}}\ dx
 ```
 
 where
@@ -95,8 +95,8 @@ Hence
 
 ```math
 \begin{align*}
-  \int_{0}^{\infty}e^{-\lambda x^{2}}\ dx &= \int_{0}^{\infty}e^{-\left(\sqrt{\lambda}x\right)^{2}}\ dx
-  \\ &= \frac{1}{2}\int_{-\infty}^{\infty}e^{-\left(\sqrt{\lambda}x\right)^{2}}\ dx
+  \int_{0}^{\infin}e^{-\lambda x^{2}}\ dx &= \int_{0}^{\infin}e^{-\left(\sqrt{\lambda}x\right)^{2}}\ dx
+  \\ &= \frac{1}{2}\int_{-\infin}^{\infin}e^{-\left(\sqrt{\lambda}x\right)^{2}}\ dx
 \end{align*}
 ```
 
@@ -112,8 +112,8 @@ Hence
 ### Solve
 ```math
 \begin{align*}
-  \frac{1}{2}\int_{-\infty}^{\infty}e^{-t^{2}}\cdot\frac{1}{\sqrt{\lambda}}\ dt
-  \\ &= \frac{1}{2\sqrt{\lambda}}\int_{-\infty}^{\infty}e^{-t^{2}}\ dt
+  \frac{1}{2}\int_{-\infin}^{\infin}e^{-t^{2}}\cdot\frac{1}{\sqrt{\lambda}}\ dt
+  \\ &= \frac{1}{2\sqrt{\lambda}}\int_{-\infin}^{\infin}e^{-t^{2}}\ dt
   \\ &= \frac{1}{2\sqrt{\lambda}}\sqrt{\pi}
   \\ &= \frac{1}{2}\sqrt{\frac{\pi}{-k}}
   \\ &= \frac{1}{2}\sqrt{\frac{\pi}{\ln7+\ln9+\ln11+\ln13-\ln8-\ln10-\ln12}}

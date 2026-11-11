@@ -57,8 +57,8 @@ What if you set the whole integral equal to $y$?
 \begin{align*}
   &\ \int_{0}^{1}\sqrt{-\ln x}\ dx
   \\ =&\ \int_{-\ln\left(0\right)}^{-\ln\left(1\right)}\sqrt{t}\cdot-e^{-t}\ dt
-  \\ =&\ -\int_{\infty}^{0}\sqrt{t}e^{-t}\ dt
-  \\ =&\ \int_{0}^{\infty}\sqrt{t}e^{-t}\ dt
+  \\ =&\ -\int_{\infin}^{0}\sqrt{t}e^{-t}\ dt
+  \\ =&\ \int_{0}^{\infin}\sqrt{t}e^{-t}\ dt
 \end{align*}
 ```
 
@@ -74,8 +74,8 @@ What if you set the whole integral equal to $y$?
 ### Solve (2)
 ```math
 \begin{align*}
-  &= \int_{\sqrt{0}}^{\sqrt{\infty}}ve^{-v^{2}}\cdot2v\ dv
-  \\ &= \int_{0}^{\infty}v\cdot2ve^{-v^{2}}\ dv
+  &= \int_{\sqrt{0}}^{\sqrt{\infin}}ve^{-v^{2}}\cdot2v\ dv
+  \\ &= \int_{0}^{\infin}v\cdot2ve^{-v^{2}}\ dv
 \end{align*}
 ```
 
@@ -90,9 +90,9 @@ What if you set the whole integral equal to $y$?
 ### Solve (3)
 ```math
 \begin{align*}
-  &\ \left[fg\right]_{0}^{\infty}-\int_{0}^{\infty}f'g\ dv
-  \\ =&\ \left[ve^{-v^{2}}\right]_{0}^{\infty}-\int_{0}^{\infty}-e^{-v^{2}}\ dv
-  \\ =&\ 0+\frac{1}{2}\int_{-\infty}^{\infty}e^{-v^{2}}\ dv
+  &\ \left[fg\right]_{0}^{\infin}-\int_{0}^{\infin}f'g\ dv
+  \\ =&\ \left[ve^{-v^{2}}\right]_{0}^{\infin}-\int_{0}^{\infin}-e^{-v^{2}}\ dv
+  \\ =&\ 0+\frac{1}{2}\int_{-\infin}^{\infin}e^{-v^{2}}\ dv
   \\ =&\ \frac{\sqrt{\pi}}{2}
 \end{align*}
 ```

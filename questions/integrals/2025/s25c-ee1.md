@@ -55,8 +55,8 @@ For $\int x^2 e^{-x^2} \ dx$, write it as $\int x \cdot xe^{-x^2} \ dx$.
 ### Reshape
 ```math
 \begin{align*}
-  &\ \int_{-\infty}^{\infty}x^{4}e^{-x^{2}}\ dx
-  \\ =&\ \int_{-\infty}^{\infty}x^{3}\cdot xe^{-x^{2}}\ dx
+  &\ \int_{-\infin}^{\infin}x^{4}e^{-x^{2}}\ dx
+  \\ =&\ \int_{-\infin}^{\infin}x^{3}\cdot xe^{-x^{2}}\ dx
 \end{align*}
 ```
 
@@ -73,10 +73,10 @@ For $\int x^2 e^{-x^2} \ dx$, write it as $\int x \cdot xe^{-x^2} \ dx$.
 ### Solve (1)
 ```math
 \begin{align*}
-  &\ fg-\int_{-\infty}^{\infty}f'g\ dx
-  \\ =&\ \left[x^{3}\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infty}^{\infty}-\int_{-\infty}^{\infty}\left(3x^{2}\right)\left(-\frac{1}{2}e^{-x^{2}}\right)\ dx
-  \\ =&\ \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{3}{2}\int_{-\infty}^{\infty}x^{2}e^{-x^{2}}\ dx
-  \\ =&\ \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{3}{2}\int_{-\infty}^{\infty}x\cdot xe^{-x^{2}}\ dx
+  &\ fg-\int_{-\infin}^{\infin}f'g\ dx
+  \\ =&\ \left[x^{3}\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infin}^{\infin}-\int_{-\infin}^{\infin}\left(3x^{2}\right)\left(-\frac{1}{2}e^{-x^{2}}\right)\ dx
+  \\ =&\ \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{3}{2}\int_{-\infin}^{\infin}x^{2}e^{-x^{2}}\ dx
+  \\ =&\ \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{3}{2}\int_{-\infin}^{\infin}x\cdot xe^{-x^{2}}\ dx
 \end{align*}
 ```
 
@@ -93,10 +93,10 @@ For $\int x^2 e^{-x^2} \ dx$, write it as $\int x \cdot xe^{-x^2} \ dx$.
 ### Solve (2)
 ```math
 \begin{align*}
-  &= \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{3}{2}\left(pq-\int_{-\infin}^{\infin}p'q\ dx\right)
-  \\ &= \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{3}{2}\left(\left[x\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infty}^{\infty}-\int_{-\infty}^{\infty}\left(-\frac{1}{2}e^{-x^{2}}\right)\ dx\right)
-  \\ &= \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{3}{2}\left(\left[x\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{1}{2}\int_{-\infty}^{\infty}e^{-x^{2}}\ dx\right)
-  \\ &= \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{3}{2}\left[x\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{3}{4}\int_{-\infty}^{\infty}e^{-x^{2}}\ dx
+  &= \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{3}{2}\left(pq-\int_{-\infin}^{\infin}p'q\ dx\right)
+  \\ &= \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{3}{2}\left(\left[x\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infin}^{\infin}-\int_{-\infin}^{\infin}\left(-\frac{1}{2}e^{-x^{2}}\right)\ dx\right)
+  \\ &= \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{3}{2}\left(\left[x\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{1}{2}\int_{-\infin}^{\infin}e^{-x^{2}}\ dx\right)
+  \\ &= \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{3}{2}\left[x\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{3}{4}\int_{-\infin}^{\infin}e^{-x^{2}}\ dx
 \end{align*}
 ```
 
@@ -131,9 +131,9 @@ Therefore
 
 ```math
 \begin{align*}
-  &\ \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{3}{2}\left[x\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infty}^{\infty}+\frac{3}{4}\int_{-\infty}^{\infty}e^{-x^{2}}\ dx
-  \\ =&\ \left[0-0\right]+\frac{3}{2}\left[0-0\right]+\frac{3}{4}\int_{-\infty}^{\infty}e^{-x^{2}}\ dx
-  \\ =&\ \frac{3}{4}\int_{-\infty}^{\infty}e^{-x^{2}}\ dx
+  &\ \left[-\frac{1}{2}x^{3}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{3}{2}\left[x\cdot-\frac{1}{2}e^{-x^{2}}\right]_{-\infin}^{\infin}+\frac{3}{4}\int_{-\infin}^{\infin}e^{-x^{2}}\ dx
+  \\ =&\ \left[0-0\right]+\frac{3}{2}\left[0-0\right]+\frac{3}{4}\int_{-\infin}^{\infin}e^{-x^{2}}\ dx
+  \\ =&\ \frac{3}{4}\int_{-\infin}^{\infin}e^{-x^{2}}\ dx
 \end{align*}
 ```
 

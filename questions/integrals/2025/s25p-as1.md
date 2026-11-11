@@ -18,7 +18,7 @@ flags:
 
 ## Question
 ```math
-\int_{0}^{\infty}
+\int_{0}^{\infin}
   \frac{\arctan\left(x^{3}\right)}{x^{2}}
 \ dx
 ```
@@ -91,20 +91,20 @@ Take limits and trust in the process!
 ### Evaluate
 ```math
 \begin{align*}
-  &\ \int_{0}^{\infty}\frac{\arctan\left(x^{3}\right)}{x^{2}}\ dx
-  \\ =&\ \left[-\frac{\arctan\left(x^{3}\right)}{x}+\frac{1}{2}\ln\left(x^{2}+1\right)-\frac{1}{4}\ln\left(x^{4}-x^{2}+1\right)+\frac{\sqrt{3}}{2}\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infty}
-  \\ =&\ \left[-\frac{\arctan\left(x^{3}\right)}{x}+\frac{1}{4}\ln\left(\left(x^{2}+1\right)^{2}\right)-\frac{1}{4}\ln\left(x^{4}-x^{2}+1\right)+\frac{\sqrt{3}}{2}\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infty}
-  \\ =&\ \left[-\frac{\arctan\left(x^{3}\right)}{x}+\frac{1}{4}\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)+\frac{\sqrt{3}}{2}\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infty}
-  \\ =&\ \left[-\frac{\arctan\left(x^{3}\right)}{x}\right]_{0}^{\infty}-\frac{1}{4}\left[\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right]_{0}^{\infty}+\frac{\sqrt{3}}{2}\left[\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infty}
+  &\ \int_{0}^{\infin}\frac{\arctan\left(x^{3}\right)}{x^{2}}\ dx
+  \\ =&\ \left[-\frac{\arctan\left(x^{3}\right)}{x}+\frac{1}{2}\ln\left(x^{2}+1\right)-\frac{1}{4}\ln\left(x^{4}-x^{2}+1\right)+\frac{\sqrt{3}}{2}\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infin}
+  \\ =&\ \left[-\frac{\arctan\left(x^{3}\right)}{x}+\frac{1}{4}\ln\left(\left(x^{2}+1\right)^{2}\right)-\frac{1}{4}\ln\left(x^{4}-x^{2}+1\right)+\frac{\sqrt{3}}{2}\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infin}
+  \\ =&\ \left[-\frac{\arctan\left(x^{3}\right)}{x}+\frac{1}{4}\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)+\frac{\sqrt{3}}{2}\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infin}
+  \\ =&\ \left[-\frac{\arctan\left(x^{3}\right)}{x}\right]_{0}^{\infin}-\frac{1}{4}\left[\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right]_{0}^{\infin}+\frac{\sqrt{3}}{2}\left[\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infin}
 \end{align*}
 ```
 
 ### Left
 ```math
 \begin{align*}
-  &\ \left[-\frac{\arctan\left(x^{3}\right)}{x}\right]_{0}^{\infty}
-  \\ =&\ \left[\frac{\frac{3x^{2}}{x^{6}+1}}{1}\right]_{\infty}^{0}
-  \\ =&\ \left[\frac{3x^{2}}{x^{6}+1}\right]_{\infty}^{0}
+  &\ \left[-\frac{\arctan\left(x^{3}\right)}{x}\right]_{0}^{\infin}
+  \\ =&\ \left[\frac{\frac{3x^{2}}{x^{6}+1}}{1}\right]_{\infin}^{0}
+  \\ =&\ \left[\frac{3x^{2}}{x^{6}+1}\right]_{\infin}^{0}
   \\ =&\ \left[0-0\right]
   \\ =&\ 0
 \end{align*}
@@ -113,9 +113,9 @@ Take limits and trust in the process!
 ### Middle
 ```math
 \begin{align*}
-  &\ -\frac{1}{4}\left[\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right]_{0}^{\infty}
-  \\ =&\ -\frac{1}{4}\left[\left(\lim_{x\to\infty}\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\cdot\frac{x^{-4}}{x^{-4}}\right)\right)-\left(\lim_{x\to 0}\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right)\right]
-  \\ =&\ -\frac{1}{4}\left[\left(\lim_{x\to\infty}\ln\left(\frac{1+2x^{-2}+x^{-4}}{1-x^{-2}+x^{-4}}\right)\right)-\left(\lim_{x\to 0}\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right)\right]
+  &\ -\frac{1}{4}\left[\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right]_{0}^{\infin}
+  \\ =&\ -\frac{1}{4}\left[\left(\lim_{x\to\infin}\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\cdot\frac{x^{-4}}{x^{-4}}\right)\right)-\left(\lim_{x\to 0}\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right)\right]
+  \\ =&\ -\frac{1}{4}\left[\left(\lim_{x\to\infin}\ln\left(\frac{1+2x^{-2}+x^{-4}}{1-x^{-2}+x^{-4}}\right)\right)-\left(\lim_{x\to 0}\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right)\right]
   \\ =&\ -\frac{1}{4}\left[\ln\left(\frac{1}{1}\right)-\ln\left(\frac{1}{1}\right)\right]
   \\ =&\ -\frac{1}{4}\left[0-0\right]
   \\ =&\ 0
@@ -125,8 +125,8 @@ Take limits and trust in the process!
 ### Right
 ```math
 \begin{align*}
-  &\ \frac{\sqrt{3}}{2}\left[\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infty}
-  \\ =&\ \frac{\sqrt{3}}{2}\left[\tan^{-1}\left(\infty\right)-\tan^{-1}\left(-\frac{1}{\sqrt{3}}\right)\right]
+  &\ \frac{\sqrt{3}}{2}\left[\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infin}
+  \\ =&\ \frac{\sqrt{3}}{2}\left[\tan^{-1}\left(\infin\right)-\tan^{-1}\left(-\frac{1}{\sqrt{3}}\right)\right]
   \\ =&\ \frac{\sqrt{3}}{2}\left[\frac{\pi}{2}-\left(-\frac{\pi}{6}\right)\right]
   \\ =&\ \frac{\sqrt{3}}{2}\left[\frac{3\pi}{6}+\frac{\pi}{6}\right]
   \\ =&\ \frac{\sqrt{3}}{2}\cdot\frac{4\pi}{2\cdot3}
@@ -137,7 +137,7 @@ Take limits and trust in the process!
 ### Merge
 ```math
 \begin{align*}
-  &\ \left[-\frac{\arctan\left(x^{3}\right)}{x}\right]_{0}^{\infty}-\frac{1}{4}\left[\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right]_{0}^{\infty}+\frac{\sqrt{3}}{2}\left[\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infty}
+  &\ \left[-\frac{\arctan\left(x^{3}\right)}{x}\right]_{0}^{\infin}-\frac{1}{4}\left[\ln\left(\frac{x^{4}+2x^{2}+1}{x^{4}-x^{2}+1}\right)\right]_{0}^{\infin}+\frac{\sqrt{3}}{2}\left[\tan^{-1}\left(\frac{2x^{2}-1}{\sqrt{3}}\right)\right]_{0}^{\infin}
   \\ =&\ 0 + 0 + \frac{\pi}{\sqrt{3}}
   \\ =&\ \frac{\pi}{\sqrt{3}}
 \end{align*}
