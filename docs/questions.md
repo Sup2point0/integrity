@@ -22,9 +22,9 @@ These are unique identifier codes for every question. See [Shards](shards.md) fo
 
 ## Tags
 
-In the question browser you’ll see blue tags under each question, showing the topics / categories they fall into. They’re pretty self-evident – the reason for having them there is more for searching and filtering. For instance, if my friend asks for hyp trig integrals, I can just go to [Integrals](../questions/integrals) and filter by the [`HYP TRIG`]() tag.
+In the question browser you’ll see blue tags under each question, showing the topics / categories they fall into. They’re pretty self-evident – the reason for having them there is more for searching and filtering. For instance, if my friend asks for hyp trig integrals, I can just go to [Integrals](../questions/integrals) and filter by the `HYP TRIG` tag.
 
-For details on what every tag means, see [Tags](tags).
+For details on what every tag means, see [Tags](https://sup2point0.github.io/integrity/docs/tags).
 
 
 <br>

@@ -40,7 +40,7 @@ Differentiation and graph drawing questions are multiple-choice (it’s a lot ea
 Of course, options may intentionally be similar or deceiving!
 
 ### Integration
-Checking integrals programmatically is nontrivial,[^check-solutions] so you’ll have you to check your solution yourself. If you have it identical to my canonical solution, perfect; otherwise, you may need to check if some simplification or rewrite can transform your solution into mine. If it’s wildly different, you’ve probably used a different solution route, so your best bet is to use [Workspace](../workspace?preset=integrals) with the **Integral** preset to check. I recommend enabling **Pause timer on submit** for speedrunning integrals to give yourself time to check, and having Workspace open in a separate tab or window to do so.
+Checking integrals programmatically is nontrivial,[^check-solutions] so you’ll have you to check your solution yourself. If you have it identical to my canonical solution, perfect; otherwise, you may need to check if some simplification or rewrite can transform your solution into mine. If it’s wildly different, you’ve probably used a different solution route, so your best bet is to use [Workspace](https://sup2point0.github.io/integrity/workspace?preset=integrals) with the **Integral** preset to check. I recommend enabling **Pause timer on submit** for speedrunning integrals to give yourself time to check, and having Workspace open in a separate tab or window to do so.
 
 [^check-solutions]: Different methods can yield different but congruent results.
 
