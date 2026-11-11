@@ -7,7 +7,6 @@
 | capt = Question Identifier Codes
 | tags = docs
 | update = 2025 July 10
-| clean = line-breaks
 -->
 
 Each question I devise is designated its own unique identifier deemed a *shard*. They look like this:

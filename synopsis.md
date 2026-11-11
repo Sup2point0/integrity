@@ -4,7 +4,6 @@
 | capt = All about <em>Integrity</em>
 | desc = Integrity is a collection of maths questions, guides and adventures by Sup#2.0
 | tags = info
-| clean = line-breaks
 -->
 
 In late 2024, I came to really enjoy writing my own maths questions,[^write-questions] particularly integrals. So, *Integrity* started out as a place to collect all my maths questions, much like [*Assort*](https://github.com/Sup2point0/Assort) is a repository of all my creations.

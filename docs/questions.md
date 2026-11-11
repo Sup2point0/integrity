@@ -4,7 +4,6 @@
 | desc = How are the questions on Integrity intended to work?
 | tags = docs
 | date = 2025 May 20
-| clean = line-breaks
 -->
 
 The vast majority of questions on *Integrity* are integrals. Some of the stuff we’ll talk about may vary slightly between question topics, but broadly speaking they will apply to all of them.
