@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/deploy.yaml'
       - 'site/package-lock.json'
+      - '.squarkdown/squarkup.toml'
       - 'changelog.md'
       - 'questions/**/*.md'
 
